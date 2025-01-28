@@ -1,0 +1,21 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "apotheosis:affix_loot_entry",
+    "stack": {
+        "count": 1,
+        "id": "aether:sentry_boots"
+    },
+    "weights": {
+        "summit": {
+            "weight": 15
+        },
+        "pinnacle": {
+            "weight": 25
+        }
+    }
+}

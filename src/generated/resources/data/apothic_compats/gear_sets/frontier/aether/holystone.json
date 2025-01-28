@@ -1,0 +1,43 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:holystone_sword"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:holystone_axe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:holystone_pickaxe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:holystone_shovel"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "frontier_melee"
+    ],
+    "weight": 20
+}

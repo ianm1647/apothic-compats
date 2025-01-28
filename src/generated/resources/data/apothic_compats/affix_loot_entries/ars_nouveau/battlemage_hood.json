@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ars_nouveau"
+        }
+    ],
+    "type": "apotheosis:affix_loot_entry",
+    "stack": {
+        "count": 1,
+        "id": "ars_nouveau:battlemage_hood"
+    },
+    "weights": {
+        "ascent": {
+            "weight": 25
+        },
+        "summit": {
+            "weight": 10
+        },
+        "pinnacle": {
+            "weight": 10
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:golden_dart_shooter"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:poison_dart_shooter"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "aether:enchanted_dart_shooter"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "frontier_ranged"
+    ],
+    "weight": 25
+}

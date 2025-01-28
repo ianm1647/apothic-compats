@@ -1,0 +1,109 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "the_bumblezone"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "boots": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:carpenter_bee_boots_1"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:carpenter_bee_boots_2"
+            },
+            "weight": 10
+        }
+    ],
+    "chestplates": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:bumble_bee_chestplate_1"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:bumble_bee_chestplate_2"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:bumble_bee_chestplate_trans_1"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:bumble_bee_chestplate_trans_2"
+            },
+            "weight": 10
+        }
+    ],
+    "helmets": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:stingless_bee_helmet_1"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:stingless_bee_helmet_2"
+            },
+            "weight": 10
+        }
+    ],
+    "leggings": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:honey_bee_leggings_1"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:honey_bee_leggings_2"
+            },
+            "weight": 10
+        }
+    ],
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:stinger_spear"
+            },
+            "weight": 10
+        }
+    ],
+    "offhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "the_bumblezone:honey_crystal_shield"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "frontier_melee"
+    ],
+    "weight": 25
+}

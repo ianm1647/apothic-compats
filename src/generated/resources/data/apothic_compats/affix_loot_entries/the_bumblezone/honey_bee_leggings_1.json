@@ -1,0 +1,21 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "the_bumblezone"
+        }
+    ],
+    "type": "apotheosis:affix_loot_entry",
+    "stack": {
+        "count": 1,
+        "id": "the_bumblezone:honey_bee_leggings_1"
+    },
+    "weights": {
+        "frontier": {
+            "weight": 10
+        },
+        "ascent": {
+            "weight": 10
+        }
+    }
+}
