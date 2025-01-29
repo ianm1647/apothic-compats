@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "mekanismtools"
+        }
+    ],
+    "type": "apotheosis:affix_loot_entry",
+    "stack": {
+        "count": 1,
+        "id": "mekanismtools:lapis_lazuli_leggings"
+    },
+    "weights": {
+        "haven": {
+            "weight": 10
+        },
+        "frontier": {
+            "weight": 10
+        },
+        "ascent": {
+            "weight": 5
+        }
+    }
+}

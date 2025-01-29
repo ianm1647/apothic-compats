@@ -1,0 +1,95 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "mekanismtools"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "boots": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_boots"
+            },
+            "weight": 10
+        }
+    ],
+    "chestplates": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_chestplate"
+            },
+            "weight": 10
+        }
+    ],
+    "helmets": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_helmet"
+            },
+            "weight": 10
+        }
+    ],
+    "leggings": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_leggings"
+            },
+            "weight": 10
+        }
+    ],
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_sword"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_axe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_pickaxe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_shovel"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_paxel"
+            },
+            "weight": 10
+        }
+    ],
+    "offhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:steel_shield"
+            },
+            "weight": 8
+        }
+    ],
+    "tags": [
+        "summit_melee"
+    ],
+    "weight": 10
+}

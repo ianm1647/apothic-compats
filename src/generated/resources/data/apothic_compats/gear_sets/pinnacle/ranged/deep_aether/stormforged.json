@@ -1,0 +1,59 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "boots": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "deep_aether:stormforged_boots"
+            },
+            "weight": 10
+        }
+    ],
+    "chestplates": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "deep_aether:stormforged_chestplate"
+            },
+            "weight": 10
+        }
+    ],
+    "helmets": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "deep_aether:stormforged_helmet"
+            },
+            "weight": 10
+        }
+    ],
+    "leggings": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "deep_aether:stormforged_leggings"
+            },
+            "weight": 10
+        }
+    ],
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "deep_aether:storm_bow"
+            },
+            "weight": 10
+        }
+    ],
+    "quality": 2.5,
+    "tags": [
+        "apotheosis_ranged"
+    ],
+    "weight": 5
+}

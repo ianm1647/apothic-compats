@@ -3,25 +3,15 @@ package ianm1647.apothic_compats;
 import com.mojang.logging.LogUtils;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import ianm1647.apothic_compats.data.RarityProvider;
-import ianm1647.apothic_compats.data.aether.AetherAffixLootProvider;
-import ianm1647.apothic_compats.data.aether.AetherGearSetProvider;
-import ianm1647.apothic_compats.data.aether.AetherInvaderProvider;
-import ianm1647.apothic_compats.data.ars_nouveau.ArsAffixLootProvider;
-import ianm1647.apothic_compats.data.ars_nouveau.ArsGearSetProvider;
-import ianm1647.apothic_compats.data.ars_nouveau.ArsInvaderProvider;
-import ianm1647.apothic_compats.data.deeperdarker.DeeperDarkerAffixLootProvider;
-import ianm1647.apothic_compats.data.deeperdarker.DeeperDarkerGearSetProvider;
-import ianm1647.apothic_compats.data.deeperdarker.DeeperDarkerInvaderProvider;
-import ianm1647.apothic_compats.data.eternal_starlight.StarlightAffixLootProvider;
-import ianm1647.apothic_compats.data.eternal_starlight.StarlightGearSetProvider;
-import ianm1647.apothic_compats.data.eternal_starlight.StarlightInvaderProvider;
-import ianm1647.apothic_compats.data.the_bumblezone.BumblezoneAffixLootProvider;
-import ianm1647.apothic_compats.data.the_bumblezone.BumblezoneGearSetProvider;
-import ianm1647.apothic_compats.data.the_bumblezone.BumblezoneInvaderProvider;
-import ianm1647.apothic_compats.data.twilight.TwilightInvaderProvider;
-import ianm1647.apothic_compats.data.undergarden.UndergardenAffixLootProvider;
-import ianm1647.apothic_compats.data.undergarden.UndergardenGearSetProvider;
-import ianm1647.apothic_compats.data.undergarden.UndergardenInvaderProvider;
+import ianm1647.apothic_compats.data.aether.*;
+import ianm1647.apothic_compats.data.ars_nouveau.*;
+import ianm1647.apothic_compats.data.deep_aether.*;
+import ianm1647.apothic_compats.data.deeperdarker.*;
+import ianm1647.apothic_compats.data.eternal_starlight.*;
+import ianm1647.apothic_compats.data.mekanism.*;
+import ianm1647.apothic_compats.data.the_bumblezone.*;
+import ianm1647.apothic_compats.data.twilight.*;
+import ianm1647.apothic_compats.data.undergarden.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -45,7 +35,6 @@ public class ApothicCompats {
     public void data(GatherDataEvent e) {
         DataGenBuilder.create(MODID)
                 .provider(RarityProvider::new)
-                .provider(TwilightInvaderProvider::new)
 
                 .provider(AetherAffixLootProvider::new)
                 .provider(AetherGearSetProvider::new)
@@ -55,6 +44,9 @@ public class ApothicCompats {
                 .provider(ArsGearSetProvider::new)
                 .provider(ArsInvaderProvider::new)
 
+                .provider(DeepAetherAffixLootProvider::new)
+                .provider(DeepAetherGearSetProvider::new)
+
                 .provider(DeeperDarkerAffixLootProvider::new)
                 .provider(DeeperDarkerGearSetProvider::new)
                 .provider(DeeperDarkerInvaderProvider::new)
@@ -63,9 +55,14 @@ public class ApothicCompats {
                 .provider(StarlightGearSetProvider::new)
                 .provider(StarlightInvaderProvider::new)
 
+                .provider(MekanismAffixLootProvider::new)
+                .provider(MekanismGearSetProvider::new)
+
                 .provider(BumblezoneAffixLootProvider::new)
                 .provider(BumblezoneGearSetProvider::new)
                 .provider(BumblezoneInvaderProvider::new)
+
+                .provider(TwilightInvaderProvider::new)
 
                 .provider(UndergardenAffixLootProvider::new)
                 .provider(UndergardenGearSetProvider::new)

@@ -34,11 +34,14 @@ dependencies {
     //compats
     implementation "curse.maven:twilightforest-227639:$twilight_version"
     implementation "curse.maven:aether-255308:$aether_version"
+    implementation "curse.maven:deepaether-852465:$deepaether_version"
     implementation "curse.maven:arsnouveau-401955:$arsnouveau_version"
     implementation "curse.maven:deeperdarker-659011:$deeperdarker_version"
     implementation "curse.maven:eternalstarlight-1080592:$eternalstarlight_version"
     implementation "curse.maven:bumblezone-362479:$bumblezone_version"
     implementation "curse.maven:undergarden-379849:$undergarden_version"
+    implementation "curse.maven:mekanism-268560:$mekanism_version"
+    implementation "curse.maven:mekanismtools-268567:$mekanismtools_version"
 
     //compat deps
     implementation "curse.maven:owo-532610:$owo_version"

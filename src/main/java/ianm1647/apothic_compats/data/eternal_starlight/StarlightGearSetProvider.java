@@ -45,7 +45,7 @@ public class StarlightGearSetProvider extends GearSetProvider {
 
         // Ascent Sets
 
-        addSet("ascent/eternal_starlight/aethersent", 25, 0, c -> c
+        addSet("ascent/eternal_starlight/aethersent", 15, 0, c -> c
                 .mainhand(new ItemStack(ESItems.RAGE_OF_STARS.get()), 10)
                 .helmet(new ItemStack(ESItems.AETHERSENT_HOOD.get()), 10)
                 .chestplate(new ItemStack(ESItems.AETHERSENT_CAPE.get()), 10)
@@ -53,7 +53,7 @@ public class StarlightGearSetProvider extends GearSetProvider {
                 .boots(new ItemStack(ESItems.AETHERSENT_BOOTS.get()), 10)
                 .tag("ascent_melee"));
 
-        addSet("ascent/ranged/eternal_starlight/aethersent", 25, 0, c -> c
+        addSet("ascent/ranged/eternal_starlight/aethersent", 15, 0, c -> c
                 .mainhand(new ItemStack(ESItems.STARFALL_LONGBOW.get()), 10)
                 .helmet(new ItemStack(ESItems.AETHERSENT_HOOD.get()), 10)
                 .chestplate(new ItemStack(ESItems.AETHERSENT_CAPE.get()), 10)
@@ -63,7 +63,7 @@ public class StarlightGearSetProvider extends GearSetProvider {
 
         // Summit Sets
 
-        addSet("summit/eternal_starlight/swamp_silver", 25, 0, c -> c
+        addSet("summit/eternal_starlight/swamp_silver", 10, 0, c -> c
                 .mainhand(new ItemStack(ESItems.SWAMP_SILVER_SWORD.get()), 10)
                 .mainhand(new ItemStack(ESItems.SWAMP_SILVER_AXE.get()), 10)
                 .mainhand(new ItemStack(ESItems.SWAMP_SILVER_PICKAXE.get()), 10)
@@ -74,19 +74,19 @@ public class StarlightGearSetProvider extends GearSetProvider {
                 .boots(new ItemStack(ESItems.SWAMP_SILVER_BOOTS.get()), 10)
                 .tag("summit_melee"));
 
-        addSet("summit/eternal_starlight/petal", 25, 0, c -> c
+        addSet("summit/eternal_starlight/petal", 10, 0, c -> c
                 .mainhand(new ItemStack(ESItems.MOONRING_GREATSWORD.get()), 10)
                 .mainhand(new ItemStack(ESItems.CRESCENT_SPEAR.get()), 10)
                 .mainhand(new ItemStack(ESItems.PETAL_SCYTHE.get()), 10)
                 .tag("summit_melee"));
 
-        addSet("summit/ranged/eternal_starlight/petal", 25, 0, c -> c
+        addSet("summit/ranged/eternal_starlight/petal", 10, 0, c -> c
                 .mainhand(new ItemStack(ESItems.MOONRING_BOW.get()), 10)
                 .tag("summit_ranged"));
 
         // Pinnacle Sets
 
-        addSet("pinnacle/eternal_starlight/thermal", 25, 0, c -> c
+        addSet("pinnacle/eternal_starlight/thermal", 5, 0, c -> c
                 .mainhand(new ItemStack(ESItems.THERMAL_SPRINGSTONE_SWORD.get()), 10)
                 .mainhand(new ItemStack(ESItems.THERMAL_SPRINGSTONE_AXE.get()), 10)
                 .mainhand(new ItemStack(ESItems.THERMAL_SPRINGSTONE_PICKAXE.get()), 10)
@@ -99,7 +99,7 @@ public class StarlightGearSetProvider extends GearSetProvider {
                 .boots(new ItemStack(ESItems.THERMAL_SPRINGSTONE_BOOTS.get()), 10)
                 .tag("apotheosis_melee"));
 
-        addSet("pinnacle/eternal_starlight/glacite", 25, 0, c -> c
+        addSet("pinnacle/eternal_starlight/glacite", 5, 0, c -> c
                 .mainhand(new ItemStack(ESItems.GLACITE_SWORD.get()), 10)
                 .mainhand(new ItemStack(ESItems.GLACITE_AXE.get()), 10)
                 .mainhand(new ItemStack(ESItems.GLACITE_PICKAXE.get()), 10)

@@ -33,7 +33,7 @@ public class ArsGearSetProvider extends GearSetProvider {
         HolderLookup.RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
         // Frontier Sets
-        addSet("frontier/ars_nouveau/sorcerer", 25, 0, c -> c
+        addSet("frontier/ars_nouveau/sorcerer", 15, 0, c -> c
                 .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
                 .helmet(new ItemStack(ItemsRegistry.SORCERER_HOOD), 10)
                 .chestplate(new ItemStack(ItemsRegistry.SORCERER_ROBES), 10)
@@ -42,7 +42,7 @@ public class ArsGearSetProvider extends GearSetProvider {
                 .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
                 .tag("frontier_melee"));
 
-        addSet("frontier/ars_nouveau/arcanist", 25, 0, c -> c
+        addSet("frontier/ars_nouveau/arcanist", 15, 0, c -> c
                 .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
                 .helmet(new ItemStack(ItemsRegistry.ARCANIST_HOOD), 10)
                 .chestplate(new ItemStack(ItemsRegistry.ARCANIST_ROBES), 10)
@@ -53,7 +53,7 @@ public class ArsGearSetProvider extends GearSetProvider {
 
         // Ascent Sets
 
-        addSet("ascent/ars_nouveau/battlemage", 25, 0, c -> c
+        addSet("ascent/ars_nouveau/battlemage", 15, 0, c -> c
                 .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
                 .helmet(new ItemStack(ItemsRegistry.BATTLEMAGE_HOOD), 10)
                 .chestplate(new ItemStack(ItemsRegistry.BATTLEMAGE_ROBES), 10)

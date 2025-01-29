@@ -1,0 +1,95 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "mekanismtools"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "boots": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_boots"
+            },
+            "weight": 10
+        }
+    ],
+    "chestplates": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_chestplate"
+            },
+            "weight": 10
+        }
+    ],
+    "helmets": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_helmet"
+            },
+            "weight": 10
+        }
+    ],
+    "leggings": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_leggings"
+            },
+            "weight": 10
+        }
+    ],
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_sword"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_axe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_pickaxe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_shovel"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_paxel"
+            },
+            "weight": 10
+        }
+    ],
+    "offhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:bronze_shield"
+            },
+            "weight": 8
+        }
+    ],
+    "tags": [
+        "ascent_melee"
+    ],
+    "weight": 15
+}

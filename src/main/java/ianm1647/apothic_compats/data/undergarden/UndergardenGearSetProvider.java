@@ -56,7 +56,7 @@ public class UndergardenGearSetProvider extends GearSetProvider {
 
         // Ascent Sets
 
-        addSet("ascent/undergarden/froststeel", 25, 0, c -> c
+        addSet("ascent/undergarden/froststeel", 15, 0, c -> c
                 .mainhand(new ItemStack(UGItems.FROSTSTEEL_SWORD.get()), 10)
                 .mainhand(new ItemStack(UGItems.FROSTSTEEL_AXE.get()), 10)
                 .mainhand(new ItemStack(UGItems.FROSTSTEEL_PICKAXE.get()), 10)
@@ -69,7 +69,7 @@ public class UndergardenGearSetProvider extends GearSetProvider {
 
         // Summit Sets
 
-        addSet("summit/undergarden/utherium", 25, 0, c -> c
+        addSet("summit/undergarden/utherium", 10, 0, c -> c
                 .mainhand(new ItemStack(UGItems.UTHERIUM_SWORD.get()), 10)
                 .mainhand(new ItemStack(UGItems.UTHERIUM_AXE.get()), 10)
                 .mainhand(new ItemStack(UGItems.UTHERIUM_PICKAXE.get()), 10)
@@ -80,7 +80,7 @@ public class UndergardenGearSetProvider extends GearSetProvider {
                 .boots(new ItemStack(UGItems.UTHERIUM_BOOTS.get()), 10)
                 .tag("summit_melee"));
 
-        addSet("summit/undergarden/forgotten", 25, 0, c -> c
+        addSet("summit/undergarden/forgotten", 10, 0, c -> c
                 .mainhand(new ItemStack(UGItems.FORGOTTEN_SWORD.get()), 10)
                 .mainhand(new ItemStack(UGItems.FORGOTTEN_AXE.get()), 10)
                 .mainhand(new ItemStack(UGItems.FORGOTTEN_PICKAXE.get()), 10)

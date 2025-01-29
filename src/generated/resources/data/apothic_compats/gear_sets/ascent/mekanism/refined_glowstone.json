@@ -1,0 +1,95 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "mekanismtools"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "boots": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_boots"
+            },
+            "weight": 10
+        }
+    ],
+    "chestplates": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_chestplate"
+            },
+            "weight": 10
+        }
+    ],
+    "helmets": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_helmet"
+            },
+            "weight": 10
+        }
+    ],
+    "leggings": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_leggings"
+            },
+            "weight": 10
+        }
+    ],
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_sword"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_axe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_pickaxe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_shovel"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_paxel"
+            },
+            "weight": 10
+        }
+    ],
+    "offhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "mekanismtools:refined_glowstone_shield"
+            },
+            "weight": 8
+        }
+    ],
+    "tags": [
+        "ascent_melee"
+    ],
+    "weight": 5
+}

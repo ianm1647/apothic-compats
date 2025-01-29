@@ -36,7 +36,7 @@ public class DeeperDarkerGearSetProvider extends GearSetProvider {
         HolderLookup.RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
         // Ascent Sets
-        addSet("ascent/deeperdarker/resonarium", 25, 0, c -> c
+        addSet("ascent/deeperdarker/resonarium", 15, 0, c -> c
                 .mainhand(new ItemStack(DDItems.RESONARIUM_SWORD.get()), 10)
                 .mainhand(new ItemStack(DDItems.RESONARIUM_PICKAXE.get()), 10)
                 .mainhand(new ItemStack(DDItems.RESONARIUM_AXE.get()), 10)
@@ -48,7 +48,7 @@ public class DeeperDarkerGearSetProvider extends GearSetProvider {
                 .tag("ascent_melee"));
 
         // Summit Sets
-        addSet("summit/deeperdarker/warden", 25, 0, c -> c
+        addSet("summit/deeperdarker/warden", 15, 0, c -> c
                 .mainhand(new ItemStack(DDItems.WARDEN_SWORD.get()), 10)
                 .mainhand(new ItemStack(DDItems.WARDEN_PICKAXE.get()), 10)
                 .mainhand(new ItemStack(DDItems.WARDEN_AXE.get()), 10)
