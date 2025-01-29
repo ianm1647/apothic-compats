@@ -1,0 +1,110 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ars_nouveau"
+        }
+    ],
+    "type": "apotheosis:gem",
+    "unique": true,
+    "weights": {
+        "frontier": {
+            "weight": 10
+        },
+        "ascent": {
+            "weight": 10
+        },
+        "summit": {
+            "weight": 10
+        },
+        "pinnacle": {
+            "weight": 10
+        }
+    },
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+            "gem_class": "helmet",
+            "operation": "add_value",
+            "values": {
+                "cracked": 10.0,
+                "chipped": 25.0,
+                "flawed": 50.0,
+                "normal": 75.0,
+                "flawless": 100.0,
+                "perfect": 200.0
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "ars_nouveau:ars_nouveau.perk.mana_regen",
+            "gem_class": "chestplate",
+            "operation": "add_multiplied_total",
+            "values": {
+                "cracked": 0.15,
+                "chipped": 0.25,
+                "flawed": 0.3,
+                "normal": 0.45,
+                "flawless": 0.75,
+                "perfect": 1.25
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "ars_nouveau:ars_nouveau.perk.spell_damage",
+            "gem_class": {
+                "key": "lower_armor",
+                "types": [
+                    "leggings",
+                    "boots"
+                ]
+            },
+            "operation": "add_multiplied_total",
+            "values": {
+                "cracked": 0.15,
+                "chipped": 0.25,
+                "flawed": 0.3,
+                "normal": 0.45,
+                "flawless": 0.75,
+                "perfect": 1.25
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "ars_nouveau:ars_nouveau.perk.warding",
+            "gem_class": "shield",
+            "operation": "add_multiplied_total",
+            "values": {
+                "flawed": 0.05,
+                "normal": 0.1,
+                "flawless": 0.15,
+                "perfect": 0.2
+            }
+        },
+        {
+            "type": "apotheosis:mob_effect",
+            "gem_class": {
+                "key": "light_weapon",
+                "types": [
+                    "melee_weapon",
+                    "trident"
+                ]
+            },
+            "mob_effect": "ars_nouveau:freezing",
+            "target": "attack_target",
+            "values": {
+                "flawless": {
+                    "duration": 240,
+                    "amplifier": 0,
+                    "cooldown": 600
+                },
+                "perfect": {
+                    "duration": 400,
+                    "amplifier": 1,
+                    "cooldown": 300
+                }
+            }
+        }
+    ]
+}

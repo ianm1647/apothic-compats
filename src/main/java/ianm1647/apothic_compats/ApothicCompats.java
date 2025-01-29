@@ -42,6 +42,7 @@ public class ApothicCompats {
 
                 .provider(ArsAffixLootProvider::new)
                 .provider(ArsGearSetProvider::new)
+                .provider(ArsGemProvider::new)
                 .provider(ArsInvaderProvider::new)
 
                 .provider(DeepAetherAffixLootProvider::new)
