@@ -6,16 +6,21 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "undergarden:undergarden"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "undergarden:cloggrum_pickaxe"
     },
     "weights": {
         "frontier": {
-            "weight": 10
+            "weight": 15
         },
         "ascent": {
-            "weight": 10
+            "weight": 25
         }
     }
 }

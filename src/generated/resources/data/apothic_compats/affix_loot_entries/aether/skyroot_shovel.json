@@ -6,20 +6,25 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "aether:the_aether"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "aether:skyroot_shovel"
     },
     "weights": {
-        "frontier": {
+        "haven": {
             "quality": 1.0,
             "weight": 25
         },
-        "ascent": {
+        "frontier": {
             "weight": 10
         },
-        "summit": {
-            "weight": 10
+        "ascent": {
+            "weight": 5
         }
     }
 }

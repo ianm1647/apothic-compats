@@ -6,19 +6,24 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "eternal_starlight:starlight"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "eternal_starlight:mechanical_crossbow"
     },
     "weights": {
         "frontier": {
-            "weight": 10
+            "weight": 5
         },
         "ascent": {
             "weight": 10
         },
         "summit": {
-            "weight": 10
+            "weight": 15
         }
     }
 }

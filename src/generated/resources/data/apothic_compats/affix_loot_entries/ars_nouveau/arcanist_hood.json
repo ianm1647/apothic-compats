@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "minecraft:overworld"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "ars_nouveau:arcanist_hood"
@@ -19,7 +24,7 @@
             "weight": 10
         },
         "summit": {
-            "weight": 10
+            "weight": 5
         }
     }
 }

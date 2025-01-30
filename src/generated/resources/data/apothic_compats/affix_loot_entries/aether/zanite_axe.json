@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "aether:the_aether"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "aether:zanite_axe"
@@ -15,7 +20,7 @@
             "weight": 25
         },
         "summit": {
-            "weight": 25
+            "weight": 15
         },
         "pinnacle": {
             "weight": 5

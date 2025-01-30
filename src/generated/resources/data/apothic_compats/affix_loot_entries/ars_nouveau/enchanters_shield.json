@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "minecraft:overworld"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "ars_nouveau:enchanters_shield"
@@ -18,7 +23,7 @@
             "weight": 10
         },
         "pinnacle": {
-            "weight": 10
+            "weight": 5
         }
     }
 }

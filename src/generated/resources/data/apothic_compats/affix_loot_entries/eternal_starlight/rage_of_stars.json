@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "eternal_starlight:starlight"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "eternal_starlight:rage_of_stars"

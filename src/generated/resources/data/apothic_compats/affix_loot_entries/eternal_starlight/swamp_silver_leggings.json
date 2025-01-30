@@ -6,13 +6,18 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "eternal_starlight:starlight"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "eternal_starlight:swamp_silver_leggings"
     },
     "weights": {
         "ascent": {
-            "weight": 10
+            "weight": 5
         },
         "summit": {
             "weight": 10

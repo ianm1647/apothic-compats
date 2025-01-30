@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "aether:the_aether"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "aether:phoenix_bow"
@@ -17,7 +22,7 @@
         },
         "pinnacle": {
             "quality": 1.0,
-            "weight": 7
+            "weight": 10
         }
     }
 }

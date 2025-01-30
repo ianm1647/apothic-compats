@@ -5,26 +5,33 @@ import com.telepathicgrunt.the_bumblezone.modinit.BzItems;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import quek.undergarden.registry.UGArmorMaterials;
 import quek.undergarden.registry.UGItemTiers;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "undergarden";
+
+    private static ResourceKey<Level> UNDERGARDEN = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("undergarden:undergarden"));
 
     public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
     public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
@@ -35,28 +42,28 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
     }
 
     protected static final TieredWeights CLOGGRUM = TieredWeights.builder()
-            .with(WorldTier.FRONTIER, 10, 0)
-            .with(WorldTier.ASCENT, 10, 0)
+            .with(WorldTier.FRONTIER, 15, 0)
+            .with(WorldTier.ASCENT, 25, 0)
             .build();
 
     protected static final TieredWeights ANCIENT = TieredWeights.builder()
-            .with(WorldTier.FRONTIER, 10, 0)
-            .with(WorldTier.ASCENT, 10, 0)
+            .with(WorldTier.FRONTIER, 15, 0)
+            .with(WorldTier.ASCENT, 25, 0)
             .build();
 
     protected static final TieredWeights FROSTSTEEL = TieredWeights.builder()
-            .with(WorldTier.ASCENT, 10, 0)
-            .with(WorldTier.SUMMIT, 10, 0)
+            .with(WorldTier.ASCENT, 15, 0)
+            .with(WorldTier.SUMMIT, 25, 0)
             .build();
 
     protected static final TieredWeights UTHERIUM = TieredWeights.builder()
-            .with(WorldTier.SUMMIT, 10, 0)
-            .with(WorldTier.PINNACLE, 10, 0)
+            .with(WorldTier.SUMMIT, 15, 0)
+            .with(WorldTier.PINNACLE, 25, 0)
             .build();
 
     protected static final TieredWeights FORGOTTEN = TieredWeights.builder()
-            .with(WorldTier.SUMMIT, 10, 0)
-            .with(WorldTier.PINNACLE, 10, 0)
+            .with(WorldTier.SUMMIT, 15, 0)
+            .with(WorldTier.PINNACLE, 25, 0)
             .build();
 
     @Override
@@ -84,13 +91,13 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
             if (i instanceof TieredItem t) {
                 TieredWeights weights = toolWeights.get(t.getTier());
                 if (weights != null) {
-                    this.addEntry(new AffixLootEntry(weights, new ItemStack(i)));
+                    this.addEntry(weights, new ItemStack(i));
                 }
             }
             else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
                 TieredWeights weights = armorWeights.get(a.getMaterial());
                 if (weights != null) {
-                    this.addEntry(new AffixLootEntry(weights, new ItemStack(i)));
+                    this.addEntry(weights, new ItemStack(i));
                 }
             }
         }
@@ -102,8 +109,8 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
     }
 
 
-    protected void addEntry(AffixLootEntry entry) {
-        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
-        this.addConditionally(key, entry, new ModLoadedCondition(mod));
+    protected void addEntry(TieredWeights weights, ItemStack stack) {
+        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
+        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(UNDERGARDEN), stack, Set.of()), new ModLoadedCondition(mod));
     }
 }

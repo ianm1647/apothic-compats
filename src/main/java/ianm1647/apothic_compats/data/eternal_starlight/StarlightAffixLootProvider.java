@@ -6,24 +6,31 @@ import cn.leolezury.eternalstarlight.common.registry.ESItems;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class StarlightAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "eternal_starlight";
+
+    private static ResourceKey<Level> STARLIGHT = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("eternal_starlight:starlight"));
 
     public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
     public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
@@ -34,17 +41,17 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
     }
 
     protected static final TieredWeights ALCHEMIST = TieredWeights.builder()
-            .with(WorldTier.FRONTIER, 10, 0)
+            .with(WorldTier.FRONTIER, 5, 0)
             .with(WorldTier.ASCENT, 10, 0)
             .build();
 
     protected static final TieredWeights AIR_SAC = TieredWeights.builder()
-            .with(WorldTier.FRONTIER, 10, 0)
+            .with(WorldTier.FRONTIER, 5, 0)
             .with(WorldTier.ASCENT, 10, 0)
             .build();
 
     protected static final TieredWeights AMARAMBER = TieredWeights.builder()
-            .with(WorldTier.FRONTIER, 10, 0)
+            .with(WorldTier.FRONTIER, 5, 0)
             .with(WorldTier.ASCENT, 10, 0)
             .build();
 
@@ -54,29 +61,29 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
             .build();
 
     protected static final TieredWeights SWAMP_SILVER = TieredWeights.builder()
-            .with(WorldTier.ASCENT, 10, 0)
+            .with(WorldTier.ASCENT, 5, 0)
             .with(WorldTier.SUMMIT, 10, 0)
             .build();
 
     protected static final TieredWeights PETAL = TieredWeights.builder()
-            .with(WorldTier.ASCENT, 10, 0)
+            .with(WorldTier.ASCENT, 5, 0)
             .with(WorldTier.SUMMIT, 10, 0)
             .build();
 
     protected static final TieredWeights THERMAL = TieredWeights.builder()
-            .with(WorldTier.SUMMIT, 10, 0)
+            .with(WorldTier.SUMMIT, 5, 0)
             .with(WorldTier.PINNACLE, 10, 0)
             .build();
 
     protected static final TieredWeights GLACITE = TieredWeights.builder()
-            .with(WorldTier.SUMMIT, 10, 0)
+            .with(WorldTier.SUMMIT, 5, 0)
             .with(WorldTier.PINNACLE, 10, 0)
             .build();
 
     protected static final TieredWeights WEAPONS = TieredWeights.builder()
-            .with(WorldTier.FRONTIER, 10, 0)
+            .with(WorldTier.FRONTIER, 5, 0)
             .with(WorldTier.ASCENT, 10, 0)
-            .with(WorldTier.SUMMIT, 10, 0)
+            .with(WorldTier.SUMMIT, 15, 0)
             .build();
 
     @Override
@@ -96,12 +103,12 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
         toolWeights.put(ESItemTiers.PETAL, PETAL);
         toolWeights.put(ESItemTiers.GLACITE, GLACITE);
 
-        addEntry(new AffixLootEntry(WEAPONS, new ItemStack(ESItems.GLACITE_SHIELD.asHolder())));
-        addEntry(new AffixLootEntry(WEAPONS, new ItemStack(ESItems.CRESCENT_SPEAR.asHolder())));
-        addEntry(new AffixLootEntry(WEAPONS, new ItemStack(ESItems.CRYSTAL_CROSSBOW.asHolder())));
-        addEntry(new AffixLootEntry(WEAPONS, new ItemStack(ESItems.MECHANICAL_CROSSBOW.asHolder())));
-        addEntry(new AffixLootEntry(WEAPONS, new ItemStack(ESItems.MOONRING_BOW.asHolder())));
-        addEntry(new AffixLootEntry(WEAPONS, new ItemStack(ESItems.STARFALL_LONGBOW.asHolder())));
+        addEntry(WEAPONS, new ItemStack(ESItems.GLACITE_SHIELD.asHolder()));
+        addEntry(WEAPONS, new ItemStack(ESItems.CRESCENT_SPEAR.asHolder()));
+        addEntry(WEAPONS, new ItemStack(ESItems.CRYSTAL_CROSSBOW.asHolder()));
+        addEntry(WEAPONS, new ItemStack(ESItems.MECHANICAL_CROSSBOW.asHolder()));
+        addEntry(WEAPONS, new ItemStack(ESItems.MOONRING_BOW.asHolder()));
+        addEntry(WEAPONS, new ItemStack(ESItems.STARFALL_LONGBOW.asHolder()));
 
         for (Item i : BuiltInRegistries.ITEM) {
             if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
@@ -116,12 +123,12 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
             if (i instanceof TieredItem t) {
                 TieredWeights weights = toolWeights.get(t.getTier());
                 if (weights != null) {
-                    this.addEntry(new AffixLootEntry(weights, new ItemStack(i)));
+                    this.addEntry(weights, new ItemStack(i));
                 }
             } else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
                 TieredWeights weights = armorWeights.get(a.getMaterial());
                 if (weights != null) {
-                    this.addEntry(new AffixLootEntry(weights, new ItemStack(i)));
+                    this.addEntry(weights, new ItemStack(i));
                 }
             }
         }
@@ -133,8 +140,8 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
     }
 
 
-    protected void addEntry(AffixLootEntry entry) {
-        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
-        this.addConditionally(key, entry, new ModLoadedCondition(mod));
+    protected void addEntry(TieredWeights weights, ItemStack stack) {
+        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
+        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(STARLIGHT), stack, Set.of()), new ModLoadedCondition(mod));
     }
 }

@@ -9,6 +9,7 @@ import dev.shadowsoffire.apotheosis.socket.gem.Gem;
 import dev.shadowsoffire.apotheosis.socket.gem.Purity;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.AttributeBonus;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.MobEffectBonus;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
@@ -16,6 +17,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
 import java.util.concurrent.CompletableFuture;
@@ -37,6 +39,7 @@ public class ArsGemProvider extends GemProvider {
     public void generate() {
         addGem("ars_nouveau/mana", TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY), c -> c
                 .unique()
+                .contstraints(Constraints.forDimension(Level.OVERWORLD))
                 .bonus(LootCategory.HELMET, AttributeBonus.builder()
                         .attr(PerkAttributes.MAX_MANA)
                         .op(AttributeModifier.Operation.ADD_VALUE)

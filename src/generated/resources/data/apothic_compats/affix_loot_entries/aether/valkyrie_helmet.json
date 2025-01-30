@@ -6,13 +6,18 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "aether:the_aether"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "aether:valkyrie_helmet"
     },
     "weights": {
         "summit": {
-            "weight": 15
+            "weight": 10
         },
         "pinnacle": {
             "weight": 25

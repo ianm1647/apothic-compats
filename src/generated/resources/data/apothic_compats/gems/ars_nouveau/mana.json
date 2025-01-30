@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:gem",
+    "constraints": {
+        "dimensions": [
+            "minecraft:overworld"
+        ]
+    },
     "unique": true,
     "weights": {
         "frontier": {

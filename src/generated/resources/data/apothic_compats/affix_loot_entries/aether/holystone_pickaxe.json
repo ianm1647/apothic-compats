@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "aether:the_aether"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "aether:holystone_pickaxe"
@@ -19,7 +24,7 @@
             "weight": 10
         },
         "summit": {
-            "weight": 10
+            "weight": 5
         }
     }
 }

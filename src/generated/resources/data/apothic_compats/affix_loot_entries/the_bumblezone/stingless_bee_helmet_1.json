@@ -6,6 +6,11 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "the_bumblezone:the_bumblezone"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "the_bumblezone:stingless_bee_helmet_1"
@@ -15,7 +20,7 @@
             "weight": 10
         },
         "ascent": {
-            "weight": 10
+            "weight": 5
         }
     }
 }

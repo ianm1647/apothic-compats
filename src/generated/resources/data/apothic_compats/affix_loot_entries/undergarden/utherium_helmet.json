@@ -6,16 +6,21 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "undergarden:undergarden"
+        ]
+    },
     "stack": {
         "count": 1,
         "id": "undergarden:utherium_helmet"
     },
     "weights": {
         "summit": {
-            "weight": 10
+            "weight": 15
         },
         "pinnacle": {
-            "weight": 10
+            "weight": 25
         }
     }
 }
