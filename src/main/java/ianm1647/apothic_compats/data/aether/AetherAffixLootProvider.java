@@ -177,7 +177,7 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
 
     protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
         this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(AETHER), stack, Set.of()), new ModLoadedCondition(mod));
     }
 }

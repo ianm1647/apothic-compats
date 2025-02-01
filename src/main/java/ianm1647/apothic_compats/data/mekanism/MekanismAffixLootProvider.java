@@ -121,7 +121,7 @@ public class MekanismAffixLootProvider extends AffixLootEntryProvider {
 
 
     protected void addEntry(AffixLootEntry entry) {
-        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
         this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

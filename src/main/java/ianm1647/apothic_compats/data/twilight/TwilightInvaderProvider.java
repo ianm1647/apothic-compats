@@ -121,7 +121,7 @@ public class TwilightInvaderProvider extends InvaderProvider {
     }
 
     protected void addAncientBoss (String name, UnaryOperator < Invader.Builder > builder){
-        this.addConditionally(ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID, mod + "/ancient/" + name), builder.apply(Invader.builder()).size(1.0, 1.0).build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+        this.addConditionally(ApothicCompats.loc(mod + "/ancient/" + name), builder.apply(Invader.builder()).size(1.0, 1.0).build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }
 
     private static LootRarity ancientRarity (String path){

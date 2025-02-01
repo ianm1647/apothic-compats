@@ -68,7 +68,7 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
         toolWeights.put(DATiers.STRATUS, STRATUS);
         toolWeights.put(DATiers.STORM, STORMFORGED);
 
-        addEntry(new AffixLootEntry(STORMFORGED, DAItems.STORM_BOW.toStack()));
+        addEntry(STORMFORGED, DAItems.STORM_BOW.toStack());
 
         for (Item i : BuiltInRegistries.ITEM) {
             if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
@@ -108,7 +108,7 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
 
 
     protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
         this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(AETHER), stack, Set.of()), new ModLoadedCondition(mod));
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "apothic_compats:items/gems/mana"
+        "layer0": "apothic_compats:items/gems/ars_nouveau/mana"
     }
 }

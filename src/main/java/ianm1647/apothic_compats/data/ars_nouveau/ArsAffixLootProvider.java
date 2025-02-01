@@ -1,7 +1,5 @@
 package ianm1647.apothic_compats.data.ars_nouveau;
 
-import com.hollingsworth.arsnouveau.common.items.EnchantersShield;
-import com.hollingsworth.arsnouveau.setup.registry.ItemRegistryWrapper;
 import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
@@ -85,7 +83,7 @@ public class ArsAffixLootProvider extends AffixLootEntryProvider {
 
 
     protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID,mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
         this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), stack, Set.of()), new ModLoadedCondition(mod));
     }
 }

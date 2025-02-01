@@ -85,6 +85,6 @@ public class ArsGemProvider extends GemProvider {
     private void addGem(String name, TieredWeights weights, UnaryOperator<Gem.Builder> config) {
         var builder = new Gem.Builder(weights);
         config.apply(builder);
-        this.addConditionally(ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID, name), builder.build(), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc(name), builder.build(), new ModLoadedCondition(mod));
     }
 }

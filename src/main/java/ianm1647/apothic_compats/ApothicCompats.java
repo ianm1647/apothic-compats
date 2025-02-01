@@ -12,9 +12,9 @@ import ianm1647.apothic_compats.data.mekanism.*;
 import ianm1647.apothic_compats.data.the_bumblezone.*;
 import ianm1647.apothic_compats.data.twilight.*;
 import ianm1647.apothic_compats.data.undergarden.*;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -26,7 +26,7 @@ public class ApothicCompats {
     public static final String MODID = "apothic_compats";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
+    public ApothicCompats(IEventBus modEventBus) {
         NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::data);
@@ -37,10 +37,12 @@ public class ApothicCompats {
                 .provider(RarityProvider::new)
 
                 .provider(AetherAffixLootProvider::new)
+                .provider(AetherAffixProvider::new)
                 .provider(AetherGearSetProvider::new)
                 .provider(AetherInvaderProvider::new)
 
                 .provider(ArsAffixLootProvider::new)
+                .provider(ArsAffixProvider::new)
                 .provider(ArsGearSetProvider::new)
                 .provider(ArsGemProvider::new)
                 .provider(ArsInvaderProvider::new)
@@ -49,10 +51,12 @@ public class ApothicCompats {
                 .provider(DeepAetherGearSetProvider::new)
 
                 .provider(DeeperDarkerAffixLootProvider::new)
+                .provider(DeeperDarkerAffixProvider::new)
                 .provider(DeeperDarkerGearSetProvider::new)
                 .provider(DeeperDarkerInvaderProvider::new)
 
                 .provider(StarlightAffixLootProvider::new)
+                .provider(StarlightAffixProvider::new)
                 .provider(StarlightGearSetProvider::new)
                 .provider(StarlightInvaderProvider::new)
 
@@ -60,16 +64,23 @@ public class ApothicCompats {
                 .provider(MekanismGearSetProvider::new)
 
                 .provider(BumblezoneAffixLootProvider::new)
+                .provider(BumblezoneAffixProvider::new)
                 .provider(BumblezoneGearSetProvider::new)
                 .provider(BumblezoneInvaderProvider::new)
 
+                .provider(TwilightAffixProvider::new)
                 .provider(TwilightInvaderProvider::new)
 
                 .provider(UndergardenAffixLootProvider::new)
+                .provider(UndergardenAffixProvider::new)
                 .provider(UndergardenGearSetProvider::new)
                 .provider(UndergardenInvaderProvider::new)
 
                 .build(e);
+    }
+
+    public static ResourceLocation loc(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
     @SubscribeEvent

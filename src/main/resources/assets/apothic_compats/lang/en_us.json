@@ -1,3 +1,103 @@
 {
-  "item.apotheosis.gem.apothic_compats:ars_nouveau/mana": "Mana Gem"
+  "item.apotheosis.gem.apothic_compats:ars_nouveau/mana": "Mana Gem",
+
+  "affix.apothic_compats:melee/mob_effect/inebriation": "Inebriated",
+  "affix.apothic_compats:melee/mob_effect/ancient/inebriation": "Inebriated",
+  "affix.apothic_compats:melee/mob_effect/inebriation.suffix": "of Shaking",
+  "affix.apothic_compats:melee/mob_effect/ancient/inebriation.suffix": "of Shaking",
+
+  "affix.apothic_compats:armor/attribute/mana": "Mana-Touched",
+  "affix.apothic_compats:armor/attribute/ancient/mana": "Mana-Touched",
+  "affix.apothic_compats:armor/attribute/mana.suffix": "of Sorcery",
+  "affix.apothic_compats:armor/attribute/ancient/mana.suffix": "of Sorcery",
+
+  "affix.apothic_compats:melee/mob_effect/freezing": "Freezing",
+  "affix.apothic_compats:melee/mob_effect/ancient/freezing": "Freezing",
+  "affix.apothic_compats:melee/mob_effect/freezing.suffix": "of Ice",
+  "affix.apothic_compats:melee/mob_effect/ancient/freezing.suffix": "of Ice",
+
+  "affix.apothic_compats:melee/mob_effect/blasting": "Blasted",
+  "affix.apothic_compats:melee/mob_effect/ancient/blasting": "Blasted",
+  "affix.apothic_compats:melee/mob_effect/blasting.suffix": "of Explosions",
+  "affix.apothic_compats:melee/mob_effect/ancient/blasting.suffix": "of Explosions",
+
+  "affix.apothic_compats:melee/mob_effect/shocking": "Shocking",
+  "affix.apothic_compats:melee/mob_effect/ancient/shocking": "Shocking",
+  "affix.apothic_compats:melee/mob_effect/shocking.suffix": "of Electricity",
+  "affix.apothic_compats:melee/mob_effect/ancient/shocking.suffix": "of Electricity",
+
+  "affix.apothic_compats:melee/mob_effect/snaring": "Snared",
+  "affix.apothic_compats:melee/mob_effect/ancient/snaring": "Snared",
+  "affix.apothic_compats:melee/mob_effect/snaring.suffix": "of the Snake",
+  "affix.apothic_compats:melee/mob_effect/ancient/snaring.suffix": "of the Snake",
+
+  "affix.apothic_compats:melee/mob_effect/mana_regen": "Mana-Regenerating",
+  "affix.apothic_compats:melee/mob_effect/ancient/mana_regen": "Mana-Regenerating",
+  "affix.apothic_compats:melee/mob_effect/mana_regen.suffix": "of the Archmage",
+  "affix.apothic_compats:melee/mob_effect/ancient/mana_regen.suffix": "of the Archmage",
+
+  "affix.apothic_compats:breaker/mob_effect/sculky": "Sculky",
+  "affix.apothic_compats:breaker/mob_effect/ancient/sculky": "Sculky",
+  "affix.apothic_compats:breaker/mob_effect/sculky.suffix": "of the Infection",
+  "affix.apothic_compats:breaker/mob_effect/ancient/sculky.suffix": "of the Infection",
+
+  "affix.apothic_compats:melee/mob_effect/crystallized": "Crystallized",
+  "affix.apothic_compats:melee/mob_effect/ancient/crystallized": "Crystallized",
+  "affix.apothic_compats:melee/mob_effect/crystallized.suffix": "of Artifacting",
+  "affix.apothic_compats:melee/mob_effect/ancient/crystallized.suffix": "of Artifacting",
+
+  "affix.apothic_compats:melee/mob_effect/paralyzed": "Paralyzing",
+  "affix.apothic_compats:melee/mob_effect/ancient/paralyzed": "Paralyzing",
+  "affix.apothic_compats:melee/mob_effect/paralyzed.suffix": "of Sickness",
+  "affix.apothic_compats:melee/mob_effect/ancient/paralyzed.suffix": "of Sickness",
+
+  "affix.apothic_compats:melee/mob_effect/hidden": "Hiding",
+  "affix.apothic_compats:melee/mob_effect/ancient/hidden": "Hiding",
+  "affix.apothic_compats:melee/mob_effect/hidden.suffix": "of Cloaking",
+  "affix.apothic_compats:melee/mob_effect/ancient/hidden.suffix": "of Cloaking",
+
+  "affix.apothic_compats:melee/mob_effect/hive_protected": "Hive-Protected",
+  "affix.apothic_compats:melee/mob_effect/ancient/hive_protected": "Hive-Protected",
+  "affix.apothic_compats:melee/mob_effect/hive_protected.suffix": "of the Bees",
+  "affix.apothic_compats:melee/mob_effect/ancient/hive_protected.suffix": "of the Bees",
+
+  "affix.apothic_compats:melee/mob_effect/beenergized": "Beenergizing",
+  "affix.apothic_compats:melee/mob_effect/ancient/beenergized": "Beenergizing",
+  "affix.apothic_compats:melee/mob_effect/beenergized.suffix": "of the Queen",
+  "affix.apothic_compats:melee/mob_effect/ancient/beenergized.suffix": "of the Queen",
+
+  "affix.apothic_compats:melee/mob_effect/frosted": "Frosted",
+  "affix.apothic_compats:melee/mob_effect/ancient/frosted": "Frosted",
+  "affix.apothic_compats:melee/mob_effect/frosted.suffix": "of the Frost Giants",
+  "affix.apothic_compats:melee/mob_effect/ancient/frosted.suffix": "of the Frost Giants",
+
+  "affix.apothic_compats:melee/mob_effect/brittle": "Brittle",
+  "affix.apothic_compats:melee/mob_effect/ancient/brittle": "Brittle",
+  "affix.apothic_compats:melee/mob_effect/brittle.suffix": "of the Fragile",
+  "affix.apothic_compats:melee/mob_effect/ancient/brittle.suffix": "of the Fragile",
+
+  "affix.apothic_compats:melee/mob_effect/featherweight": "Featherweight",
+  "affix.apothic_compats:melee/mob_effect/ancient/featherweight": "Featherweight",
+  "affix.apothic_compats:melee/mob_effect/featherweight.suffix": "of the Birds",
+  "affix.apothic_compats:melee/mob_effect/ancient/featherweight.suffix": "of the Birds",
+
+  "affix.apothic_compats:melee/mob_effect/virulence": "Virulence",
+  "affix.apothic_compats:melee/mob_effect/ancient/virulence": "Virulence",
+  "affix.apothic_compats:melee/mob_effect/virulence.suffix": "of Damage",
+  "affix.apothic_compats:melee/mob_effect/ancient/virulence.suffix": "of Damage",
+
+  "affix.apothic_compats:melee/mob_effect/anti_virulence": "Anti-Virulence",
+  "affix.apothic_compats:melee/mob_effect/ancient/anti_virulence": "Anti-Virulence",
+  "affix.apothic_compats:melee/mob_effect/anti_virulence.suffix": "of Aggression",
+  "affix.apothic_compats:melee/mob_effect/ancient/anti_virulence.suffix": "of Aggression",
+
+  "affix.apothic_compats:ranged/mob_effect/virulence": "Virulence",
+  "affix.apothic_compats:ranged/mob_effect/ancient/virulence": "Virulence",
+  "affix.apothic_compats:ranged/mob_effect/virulence.suffix": "of Damage",
+  "affix.apothic_compats:ranged/mob_effect/ancient/virulence.suffix": "of Damage",
+
+  "affix.apothic_compats:ranged/mob_effect/gooey": "Gooey",
+  "affix.apothic_compats:ranged/mob_effect/ancient/gooey": "Gooey",
+  "affix.apothic_compats:ranged/mob_effect/gooey.suffix": "of Stickiness",
+  "affix.apothic_compats:ranged/mob_effect/ancient/gooey.suffix": "of Stickiness"
 }

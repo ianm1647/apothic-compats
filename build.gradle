@@ -42,11 +42,17 @@ dependencies {
     implementation "curse.maven:undergarden-379849:$undergarden_version"
     implementation "curse.maven:mekanism-268560:$mekanism_version"
     implementation "curse.maven:mekanismtools-268567:$mekanismtools_version"
+    implementation "curse.maven:ironspells-855414:$ironspells_version"
 
     //compat deps
     implementation "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
+    implementation "curse.maven:playeranim-658587:$playeranim_version"
+}
+
+jar {
+    exclude('data/apotheosis', 'data/ancientreforging')
 }
 
 base {

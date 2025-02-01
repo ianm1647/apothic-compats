@@ -1,5 +1,4 @@
-// 1.21.1	2025-01-29T18:31:02.2986641	Deep Aether Affix Loot Entries
-5a122c38c6c3f2540b497555f504c1b5b3de62c9 data/apotheosis/affix_loot_entries/storm_bow.json
+// 1.21.1	2025-01-31T16:53:42.4824236	Deep Aether Affix Loot Entries
 85fc15a56049ee848196b759ee442454b74f2dcd data/apothic_compats/affix_loot_entries/deep_aether/skyjade_boots.json
 580d526f0013c35165597205e600de30e0ae77d8 data/apothic_compats/affix_loot_entries/deep_aether/skyjade_chestplate.json
 ae53ec590acb81a3ed10a1aa93dc2d38e4485c1b data/apothic_compats/affix_loot_entries/deep_aether/skyjade_helmet.json
@@ -11,6 +10,7 @@ fcfc432e4901ee76c88565a6e2f674606489cd92 data/apothic_compats/affix_loot_entries
 f88ec932c31e83a2c4b0b15999f553e2453200d9 data/apothic_compats/affix_loot_entries/deep_aether/stormforged_chestplate.json
 94ff517bad7a9fd473640462dc0ba8cc7a0abb0a data/apothic_compats/affix_loot_entries/deep_aether/stormforged_helmet.json
 c967b5fa000e69108623cd4f2f0d8a1c480860fe data/apothic_compats/affix_loot_entries/deep_aether/stormforged_leggings.json
+0c533c51b52a93c23629ef0c468fa35ca21889ba data/apothic_compats/affix_loot_entries/deep_aether/storm_bow.json
 152c7bfd2d1fb8ee06c77da9d32da9dafd30aa32 data/apothic_compats/affix_loot_entries/deep_aether/storm_sword.json
 707b4645da0025f3621db021b16591e23b075cb2 data/apothic_compats/affix_loot_entries/deep_aether/stratus_axe.json
 cb0d3130c048bc428f73daa1cfeb55fb097f48b8 data/apothic_compats/affix_loot_entries/deep_aether/stratus_boots.json

@@ -92,6 +92,6 @@ public class UndergardenGearSetProvider extends GearSetProvider {
 
     @Override
     protected void addSet(String name, int weight, float quality, UnaryOperator<GSBuilder> config) {
-        this.addConditionally(ResourceLocation.fromNamespaceAndPath(ApothicCompats.MODID, name), config.apply(new GSBuilder(weight, quality)).build(), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc(name), config.apply(new GSBuilder(weight, quality)).build(), new ModLoadedCondition(mod));
     }
 }
