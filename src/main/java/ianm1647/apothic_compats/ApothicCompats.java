@@ -1,17 +1,24 @@
 package ianm1647.apothic_compats;
 
-import com.mojang.logging.LogUtils;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
+import ianm1647.apothic_compats.affix.ModAffixRegistry;
+import ianm1647.apothic_compats.data.InvaderSpawnRulesProvider;
 import ianm1647.apothic_compats.data.RarityProvider;
+import ianm1647.apothic_compats.data.ae2.*;
 import ianm1647.apothic_compats.data.aether.*;
+import ianm1647.apothic_compats.data.allthemodium.*;
 import ianm1647.apothic_compats.data.ars_nouveau.*;
+import ianm1647.apothic_compats.data.cataclysm.*;
 import ianm1647.apothic_compats.data.deep_aether.*;
 import ianm1647.apothic_compats.data.deeperdarker.*;
+import ianm1647.apothic_compats.data.farmersdelight.*;
 import ianm1647.apothic_compats.data.eternal_starlight.*;
+import ianm1647.apothic_compats.data.malum.*;
 import ianm1647.apothic_compats.data.mekanism.*;
 import ianm1647.apothic_compats.data.the_bumblezone.*;
 import ianm1647.apothic_compats.data.twilight.*;
 import ianm1647.apothic_compats.data.undergarden.*;
+import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,33 +26,50 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import org.slf4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod(ApothicCompats.MODID)
 public class ApothicCompats {
     public static final String MODID = "apothic_compats";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public ApothicCompats(IEventBus modEventBus) {
         NeoForge.EVENT_BUS.register(this);
+        ModLootCategories.registerLootCategories(modEventBus);
 
+        ModAffixRegistry.registerAffixes();
         modEventBus.addListener(this::data);
     }
 
     public void data(GatherDataEvent e) {
-        DataGenBuilder.create(MODID)
+        DataGenBuilder.create(ApothicCompats.MODID)
                 .provider(RarityProvider::new)
+                .provider(InvaderSpawnRulesProvider::new)
+
+                .provider(Ae2AffixLootProvider::new)
+                .provider(Ae2GearSetProvider::new)
 
                 .provider(AetherAffixLootProvider::new)
                 .provider(AetherAffixProvider::new)
                 .provider(AetherGearSetProvider::new)
                 .provider(AetherInvaderProvider::new)
+                .provider(DartShooterAffixProvider::new)
+
+                .provider(ATMAffixLootProvider::new)
+                .provider(ATMGearSetProvider::new)
+                .provider(ATMInvaderProvider::new)
 
                 .provider(ArsAffixLootProvider::new)
                 .provider(ArsAffixProvider::new)
                 .provider(ArsGearSetProvider::new)
                 .provider(ArsGemProvider::new)
                 .provider(ArsInvaderProvider::new)
+
+                .provider(CataclysmAffixLootProvider::new)
+                .provider(CataclysmGearSetProvider::new)
+                .provider(CataclysmInvaderProvider::new)
 
                 .provider(DeepAetherAffixLootProvider::new)
                 .provider(DeepAetherGearSetProvider::new)
@@ -55,10 +79,17 @@ public class ApothicCompats {
                 .provider(DeeperDarkerGearSetProvider::new)
                 .provider(DeeperDarkerInvaderProvider::new)
 
+                .provider(FarmersDelightAffixLootProvider::new)
+
                 .provider(StarlightAffixLootProvider::new)
                 .provider(StarlightAffixProvider::new)
                 .provider(StarlightGearSetProvider::new)
                 .provider(StarlightInvaderProvider::new)
+
+                .provider(MalumAffixProvider::new)
+                .provider(MalumGemProvider::new)
+                .provider(ScytheAffixProvider::new)
+                .provider(StaffAffixProvider::new)
 
                 .provider(MekanismAffixLootProvider::new)
                 .provider(MekanismGearSetProvider::new)

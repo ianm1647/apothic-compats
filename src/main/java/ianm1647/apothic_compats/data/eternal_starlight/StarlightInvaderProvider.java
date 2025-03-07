@@ -1,7 +1,7 @@
 package ianm1647.apothic_compats.data.eternal_starlight;
 
 import cn.leolezury.eternalstarlight.common.registry.ESEntities;
-import com.ianm1647.ancientreforging.AncientReforging;
+import ianm1647.ancientreforging.AncientReforging;
 import com.kyanite.deeperdarker.content.DDEntities;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;

@@ -1,0 +1,27 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apothic_compats:scythe_thunderstruck",
+    "definition": {
+        "affix_type": "ability",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 7.0,
+            "max": 11.0,
+            "step": 1.0
+        }
+    }
+}

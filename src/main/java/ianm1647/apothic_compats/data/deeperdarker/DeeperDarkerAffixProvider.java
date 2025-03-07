@@ -1,7 +1,7 @@
 package ianm1647.apothic_compats.data.deeperdarker;
 
-import com.aetherteam.aether.effect.AetherEffects;
-import com.ianm1647.ancientreforging.AncientReforging;
+import dev.shadowsoffire.apotheosis.Apoth;
+import ianm1647.ancientreforging.AncientReforging;
 import com.kyanite.deeperdarker.content.DDEffects;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.AffixType;
@@ -10,7 +10,6 @@ import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import dev.shadowsoffire.placebo.util.StepFunction;
@@ -51,7 +50,7 @@ public class DeeperDarkerAffixProvider extends AffixProvider {
 
         this.addMobEffect("breaker", "sculky", DDEffects.SCULK_AFFINITY, MobEffectAffix.Target.BREAK_SELF,b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.BREAKER)
+                .categories(Apoth.LootCategories.BREAKER)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 80, 120, 0, 80)
@@ -61,7 +60,7 @@ public class DeeperDarkerAffixProvider extends AffixProvider {
 
         this.addAncientMobEffect("breaker", "sculky", DDEffects.SCULK_AFFINITY, MobEffectAffix.Target.BREAK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.BREAKER)
+                .categories(Apoth.LootCategories.BREAKER)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));

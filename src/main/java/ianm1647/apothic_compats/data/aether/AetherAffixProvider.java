@@ -1,8 +1,7 @@
 package ianm1647.apothic_compats.data.aether;
 
 import com.aetherteam.aether.effect.AetherEffects;
-import com.hollingsworth.arsnouveau.setup.registry.ModPotions;
-import com.ianm1647.ancientreforging.AncientReforging;
+import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.AffixType;
 import dev.shadowsoffire.apotheosis.affix.AttributeAffix;
@@ -10,10 +9,10 @@ import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import dev.shadowsoffire.placebo.util.StepFunction;
+import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -49,66 +48,66 @@ public class AetherAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addMobEffect("melee", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+        this.addMobEffect("armor", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.HURT_ATTACKER, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.LEGGINGS, Apoth.LootCategories.BOOTS)
                 .stacking()
                 .limit(3)
                 .value(rare, 80, 160, 0, 80)
                 .value(epic, 120, 200, 0, 80)
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
 
-        this.addAncientMobEffect("melee", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+        this.addAncientMobEffect("armor", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.HURT_ATTACKER, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.LEGGINGS, Apoth.LootCategories.BOOTS)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
     }
 
-    private void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
+    public void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
         var builder = new EnchantmentAffix.Builder(enchantment, mode);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/enchantment/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addMobEffect(String type, String name, Holder<MobEffect> effect, MobEffectAffix.Target target, UnaryOperator<MobEffectAffix.Builder> config) {
+    public void addMobEffect(String type, String name, Holder<MobEffect> effect, MobEffectAffix.Target target, UnaryOperator<MobEffectAffix.Builder> config) {
         var builder = new MobEffectAffix.Builder(effect, target);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/mob_effect/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addDamageReduction(String type, String name, DamageReductionAffix.DamageType dType, UnaryOperator<DamageReductionAffix.Builder> config) {
+    public void addDamageReduction(String type, String name, DamageReductionAffix.DamageType dType, UnaryOperator<DamageReductionAffix.Builder> config) {
         var builder = new DamageReductionAffix.Builder(dType);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/dmg_reduction/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
+    public void addAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
         var builder = new AttributeAffix.Builder(attribute, op);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/attribute/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addAncientEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
+    public void addAncientEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
         var builder = new EnchantmentAffix.Builder(enchantment, mode);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/enchantment/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }
 
-    private void addAncientMobEffect(String type, String name, Holder<MobEffect> effect, MobEffectAffix.Target target, UnaryOperator<MobEffectAffix.Builder> config) {
+    public void addAncientMobEffect(String type, String name, Holder<MobEffect> effect, MobEffectAffix.Target target, UnaryOperator<MobEffectAffix.Builder> config) {
         var builder = new MobEffectAffix.Builder(effect, target);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/mob_effect/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }
 
-    private void addAncientDamageReduction(String type, String name, DamageReductionAffix.DamageType dType, UnaryOperator<DamageReductionAffix.Builder> config) {
+    public void addAncientDamageReduction(String type, String name, DamageReductionAffix.DamageType dType, UnaryOperator<DamageReductionAffix.Builder> config) {
         var builder = new DamageReductionAffix.Builder(dType);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/dmg_reduction/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }
 
-    private void addAncientAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
+    public void addAncientAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
         var builder = new AttributeAffix.Builder(attribute, op);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/attribute/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));

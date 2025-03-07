@@ -1,0 +1,122 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "allthemodium"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:invader",
+    "basic_data": {
+        "bonus_loot": [
+            "apotheosis:entity/boss_drops",
+            "apotheosis:entity/rare_boss_drops"
+        ],
+        "constraints": {
+            "dimensions": [
+                "allthemodium:the_other"
+            ]
+        },
+        "name": "use_name_generation",
+        "valid_gear_sets": {
+            "haven": [
+                "#haven_ranged"
+            ],
+            "frontier": [
+                "#frontier_ranged"
+            ],
+            "ascent": [
+                "#ascent_ranged"
+            ],
+            "summit": [
+                "#summit_ranged"
+            ],
+            "pinnacle": [
+                "#pinnacle_ranged"
+            ]
+        },
+        "weights": {
+            "ascent": {
+                "weight": 10
+            },
+            "summit": {
+                "weight": 10
+            },
+            "pinnacle": {
+                "weight": 10
+            }
+        }
+    },
+    "entity": "minecraft:skeleton",
+    "size": {
+        "height": 1.0,
+        "width": 1.0
+    },
+    "stats": {
+        "ancientreforging:ancient": {
+            "attribute_modifiers": [
+                {
+                    "attribute": "minecraft:generic.max_health",
+                    "operation": "add_value",
+                    "value": {
+                        "min": 220.0,
+                        "max": 450.0
+                    }
+                },
+                {
+                    "attribute": "minecraft:generic.movement_speed",
+                    "operation": "add_multiplied_base",
+                    "value": {
+                        "min": 0.5,
+                        "max": 0.8
+                    }
+                },
+                {
+                    "attribute": "apothic_attributes:projectile_damage",
+                    "operation": "add_multiplied_base",
+                    "value": {
+                        "min": 0.9,
+                        "max": 1.8
+                    }
+                },
+                {
+                    "attribute": "minecraft:generic.knockback_resistance",
+                    "operation": "add_value",
+                    "value": 1.0
+                },
+                {
+                    "attribute": "minecraft:generic.armor",
+                    "operation": "add_value",
+                    "value": 20.0
+                },
+                {
+                    "attribute": "minecraft:generic.armor_toughness",
+                    "operation": "add_value",
+                    "value": 25.0
+                },
+                {
+                    "attribute": "minecraft:generic.scale",
+                    "operation": "add_multiplied_total",
+                    "value": {
+                        "min": -0.15,
+                        "max": 0.25
+                    }
+                }
+            ],
+            "effects": [
+                {
+                    "amplifier": 1.0,
+                    "effect": "minecraft:fire_resistance"
+                }
+            ],
+            "enchant_chance": 0.95,
+            "enchantment_levels": {
+                "primary": 40,
+                "secondary": 30
+            }
+        }
+    }
+}

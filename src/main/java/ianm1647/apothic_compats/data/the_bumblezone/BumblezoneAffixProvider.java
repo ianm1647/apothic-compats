@@ -1,16 +1,15 @@
 package ianm1647.apothic_compats.data.the_bumblezone;
 
-import cn.leolezury.eternalstarlight.common.registry.ESMobEffects;
-import com.ianm1647.ancientreforging.AncientReforging;
+import ianm1647.ancientreforging.AncientReforging;
 import com.telepathicgrunt.the_bumblezone.modinit.BzEffects;
 import dev.shadowsoffire.apotheosis.Apotheosis;
+import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.AffixType;
 import dev.shadowsoffire.apotheosis.affix.AttributeAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import dev.shadowsoffire.placebo.util.StepFunction;
@@ -51,56 +50,56 @@ public class BumblezoneAffixProvider extends AffixProvider {
 
         this.addMobEffect("melee", "paralyzed", BzEffects.PARALYZED.holder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(epic, 120, 200, 0, 80)
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
         this.addAncientMobEffect("melee", "paralyzed", BzEffects.PARALYZED.holder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
 
         this.addMobEffect("melee", "hidden", BzEffects.HIDDEN.holder(), MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(epic, 120, 200, 0, 80)
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
         this.addAncientMobEffect("melee", "hidden", BzEffects.HIDDEN.holder(), MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
 
         this.addMobEffect("melee", "hive_protected", BzEffects.PROTECTION_OF_THE_HIVE.holder(), MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(epic, 120, 200, 0, 80)
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
         this.addAncientMobEffect("melee", "hive_protected", BzEffects.PROTECTION_OF_THE_HIVE.holder(), MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
 
         this.addMobEffect("melee", "beenergized", BzEffects.BEENERGIZED.holder(), MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(epic, 120, 200, 0, 80)
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
         this.addAncientMobEffect("melee", "beenergized", BzEffects.BEENERGIZED.holder(), MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));

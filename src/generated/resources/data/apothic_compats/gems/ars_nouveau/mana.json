@@ -30,7 +30,7 @@
         {
             "type": "apotheosis:attribute",
             "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
-            "gem_class": "helmet",
+            "gem_class": "apotheosis:helmet",
             "operation": "add_value",
             "values": {
                 "cracked": 10.0,
@@ -44,7 +44,7 @@
         {
             "type": "apotheosis:attribute",
             "attribute": "ars_nouveau:ars_nouveau.perk.mana_regen",
-            "gem_class": "chestplate",
+            "gem_class": "apotheosis:chestplate",
             "operation": "add_multiplied_total",
             "values": {
                 "cracked": 0.15,
@@ -61,8 +61,8 @@
             "gem_class": {
                 "key": "lower_armor",
                 "types": [
-                    "leggings",
-                    "boots"
+                    "apotheosis:leggings",
+                    "apotheosis:boots"
                 ]
             },
             "operation": "add_multiplied_total",
@@ -78,7 +78,7 @@
         {
             "type": "apotheosis:attribute",
             "attribute": "ars_nouveau:ars_nouveau.perk.warding",
-            "gem_class": "shield",
+            "gem_class": "apotheosis:shield",
             "operation": "add_multiplied_total",
             "values": {
                 "flawed": 0.05,
@@ -92,8 +92,8 @@
             "gem_class": {
                 "key": "light_weapon",
                 "types": [
-                    "melee_weapon",
-                    "trident"
+                    "apotheosis:melee_weapon",
+                    "apotheosis:trident"
                 ]
             },
             "mob_effect": "ars_nouveau:freezing",

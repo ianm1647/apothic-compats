@@ -1,31 +1,27 @@
 package ianm1647.apothic_compats.data.twilight;
 
-import com.ianm1647.ancientreforging.AncientReforging;
-import com.telepathicgrunt.the_bumblezone.modinit.BzEffects;
+import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
+import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.AffixType;
 import dev.shadowsoffire.apotheosis.affix.AttributeAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
-import twilightforest.init.TFEnchantments;
 import twilightforest.init.TFMobEffects;
 
 import java.util.concurrent.CompletableFuture;
@@ -54,7 +50,7 @@ public class TwilightAffixProvider extends AffixProvider {
 
         this.addMobEffect("melee", "frosted", TFMobEffects.FROSTY, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 80, 120, 0, 80)
@@ -63,7 +59,7 @@ public class TwilightAffixProvider extends AffixProvider {
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
         this.addAncientMobEffect("melee", "frosted", TFMobEffects.FROSTY, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));

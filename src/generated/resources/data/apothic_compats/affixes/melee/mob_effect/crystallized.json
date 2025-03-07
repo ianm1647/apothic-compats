@@ -18,8 +18,8 @@
     "stacking_limit": 3,
     "target": "attack_target",
     "types": [
-        "trident",
-        "melee_weapon"
+        "apotheosis:melee_weapon",
+        "apotheosis:trident"
     ],
     "values": {
         "apotheosis:epic": {

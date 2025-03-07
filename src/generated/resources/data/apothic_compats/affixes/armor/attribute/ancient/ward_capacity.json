@@ -1,0 +1,31 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "malum:soul_ward_capacity",
+    "categories": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "ancientreforging:ancient": 15.0
+    }
+}

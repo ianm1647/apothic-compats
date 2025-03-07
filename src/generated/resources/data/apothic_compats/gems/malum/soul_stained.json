@@ -1,0 +1,100 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:gem",
+    "constraints": {
+        "dimensions": [
+            "minecraft:overworld"
+        ]
+    },
+    "unique": true,
+    "weights": {
+        "ascent": {
+            "weight": 10
+        },
+        "summit": {
+            "weight": 10
+        },
+        "pinnacle": {
+            "weight": 10
+        }
+    },
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "malum:spirit_spoils",
+            "gem_class": {
+                "key": "malum_weapon",
+                "types": [
+                    "apothic_compats:scythe",
+                    "apothic_compats:staff"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "cracked": 1.0,
+                "chipped": 2.0,
+                "flawed": 3.0,
+                "normal": 4.0,
+                "flawless": 5.0,
+                "perfect": 6.0
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "malum:scythe_proficiency",
+            "gem_class": {
+                "key": "core_armor",
+                "types": [
+                    "apotheosis:chestplate",
+                    "apotheosis:leggings"
+                ]
+            },
+            "operation": "add_multiplied_base",
+            "values": {
+                "cracked": 0.15,
+                "chipped": 0.25,
+                "flawed": 0.35,
+                "normal": 0.45,
+                "flawless": 0.55,
+                "perfect": 0.65
+            }
+        },
+        {
+            "type": "apotheosis:mob_effect",
+            "gem_class": "apotheosis:melee_weapon",
+            "mob_effect": "malum:ascension",
+            "target": "attack_self",
+            "values": {
+                "cracked": {
+                    "duration": 40,
+                    "amplifier": 0
+                },
+                "chipped": {
+                    "duration": 60,
+                    "amplifier": 0
+                },
+                "flawed": {
+                    "duration": 80,
+                    "amplifier": 1
+                },
+                "normal": {
+                    "duration": 100,
+                    "amplifier": 1
+                },
+                "flawless": {
+                    "duration": 120,
+                    "amplifier": 2
+                },
+                "perfect": {
+                    "duration": 140,
+                    "amplifier": 2
+                }
+            }
+        }
+    ]
+}

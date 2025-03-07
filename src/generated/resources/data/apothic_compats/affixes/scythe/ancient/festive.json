@@ -1,0 +1,27 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apothic_compats:scythe_festive",
+    "definition": {
+        "affix_type": "basic_effect",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 0.09,
+            "max": 0.15,
+            "step": 0.005
+        }
+    }
+}

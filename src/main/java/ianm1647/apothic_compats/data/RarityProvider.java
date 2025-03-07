@@ -1,7 +1,7 @@
 package ianm1647.apothic_compats.data;
 
-import com.ianm1647.ancientreforging.AncientReforging;
-import com.ianm1647.ancientreforging.AncientReforgingRegistry;
+import ianm1647.ancientreforging.AncientReforging;
+import ianm1647.ancientreforging.AncientReforgingRegistry;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.Apoth.Components;
 import dev.shadowsoffire.apotheosis.Apoth.Items;

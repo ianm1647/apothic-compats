@@ -1,9 +1,9 @@
-// 1.21.1	2025-01-31T19:31:53.7449395	The Bumblezone Affixes
-de5b901893a8c111376ce5400bf74dbc7f297fca data/apothic_compats/affixes/melee/mob_effect/ancient/beenergized.json
-cf5bb6603ed7b5cb85ff0df07d2f6cd6d44472e5 data/apothic_compats/affixes/melee/mob_effect/ancient/hidden.json
-1dea8424d5e53e642e4577e0cda8cf3cc7196645 data/apothic_compats/affixes/melee/mob_effect/ancient/hive_protected.json
-067abe4a498f24b23995cc22ea00a3e4d57c0880 data/apothic_compats/affixes/melee/mob_effect/ancient/paralyzed.json
-7c308830c0d6cdf80af99c9654e328626e1f8c9a data/apothic_compats/affixes/melee/mob_effect/beenergized.json
-65fbe175aeaa043ff87fd25362b0665be0063143 data/apothic_compats/affixes/melee/mob_effect/hidden.json
-4fe3787fa34cb40664f0987b7ce87de96ac63f88 data/apothic_compats/affixes/melee/mob_effect/hive_protected.json
-cf4397f823de7df6961641aa57a51e79862d6afc data/apothic_compats/affixes/melee/mob_effect/paralyzed.json
+// 1.21.1	2025-03-07T04:59:21.8766139	The Bumblezone Affixes
+b6e34195305f51500955444de038887e2ea8ac44 data/apothic_compats/affixes/melee/mob_effect/ancient/beenergized.json
+66978941de245c64dea935a893911de523c54555 data/apothic_compats/affixes/melee/mob_effect/ancient/hidden.json
+8754182837663dac0a2cdaea2abb5ee8e7f9e167 data/apothic_compats/affixes/melee/mob_effect/ancient/hive_protected.json
+ab7d23d4948c4c1ca3706647044eeb92988431e6 data/apothic_compats/affixes/melee/mob_effect/ancient/paralyzed.json
+a8d05a9c3998f85f2b788a6558fe5fdfa654dbd2 data/apothic_compats/affixes/melee/mob_effect/beenergized.json
+ad247373bd056702ac4c5be8708d9caa1596069f data/apothic_compats/affixes/melee/mob_effect/hidden.json
+99f1a7403c4b761ce7a1b91df2391e9cb59bd634 data/apothic_compats/affixes/melee/mob_effect/hive_protected.json
+921e461c39a8c4a6384ba4b6ee08a08cdf8f609a data/apothic_compats/affixes/melee/mob_effect/paralyzed.json

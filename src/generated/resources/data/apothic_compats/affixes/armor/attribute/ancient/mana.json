@@ -12,11 +12,11 @@
     "type": "apotheosis:attribute",
     "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
     "categories": [
-        "shield",
-        "chestplate",
-        "helmet",
-        "boots",
-        "leggings"
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots",
+        "apotheosis:shield"
     ],
     "definition": {
         "affix_type": "stat",

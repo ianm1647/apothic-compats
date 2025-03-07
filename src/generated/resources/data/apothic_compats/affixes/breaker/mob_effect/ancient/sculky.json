@@ -22,7 +22,7 @@
     "stacking_limit": 3,
     "target": "break_self",
     "types": [
-        "breaker"
+        "apotheosis:breaker"
     ],
     "values": {
         "ancientreforging:ancient": {

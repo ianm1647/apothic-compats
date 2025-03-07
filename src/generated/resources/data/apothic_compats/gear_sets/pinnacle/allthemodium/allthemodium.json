@@ -1,0 +1,95 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "allthemodium"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "boots": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_boots"
+            },
+            "weight": 10
+        }
+    ],
+    "chestplates": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_chestplate"
+            },
+            "weight": 10
+        }
+    ],
+    "helmets": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_helmet"
+            },
+            "weight": 10
+        }
+    ],
+    "leggings": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_leggings"
+            },
+            "weight": 10
+        }
+    ],
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_sword"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_axe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_pickaxe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_shovel"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:allthemodium_mace"
+            },
+            "weight": 10
+        }
+    ],
+    "offhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "minecraft:shield"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "apotheosis_melee"
+    ],
+    "weight": 5
+}

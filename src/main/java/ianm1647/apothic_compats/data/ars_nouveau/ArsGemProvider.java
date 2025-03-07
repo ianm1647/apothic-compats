@@ -2,9 +2,9 @@ package ianm1647.apothic_compats.data.ars_nouveau;
 
 import com.hollingsworth.arsnouveau.api.perk.PerkAttributes;
 import com.hollingsworth.arsnouveau.setup.registry.ModPotions;
+import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.GemProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.socket.gem.Gem;
 import dev.shadowsoffire.apotheosis.socket.gem.Purity;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.AttributeBonus;
@@ -15,7 +15,6 @@ import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
@@ -40,7 +39,7 @@ public class ArsGemProvider extends GemProvider {
         addGem("ars_nouveau/mana", TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY), c -> c
                 .unique()
                 .contstraints(Constraints.forDimension(Level.OVERWORLD))
-                .bonus(LootCategory.HELMET, AttributeBonus.builder()
+                .bonus(Apoth.LootCategories.HELMET, AttributeBonus.builder()
                         .attr(PerkAttributes.MAX_MANA)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 10)
@@ -49,7 +48,7 @@ public class ArsGemProvider extends GemProvider {
                         .value(Purity.NORMAL, 75)
                         .value(Purity.FLAWLESS, 100)
                         .value(Purity.PERFECT, 200))
-                .bonus(LootCategory.CHESTPLATE, AttributeBonus.builder()
+                .bonus(Apoth.LootCategories.CHESTPLATE, AttributeBonus.builder()
                         .attr(PerkAttributes.MANA_REGEN_BONUS)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                         .value(Purity.CRACKED, 0.15)
@@ -67,7 +66,7 @@ public class ArsGemProvider extends GemProvider {
                         .value(Purity.NORMAL, 0.45)
                         .value(Purity.FLAWLESS, 0.75)
                         .value(Purity.PERFECT, 1.25))
-                .bonus(LootCategory.SHIELD, AttributeBonus.builder()
+                .bonus(Apoth.LootCategories.SHIELD, AttributeBonus.builder()
                         .attr(PerkAttributes.WARDING)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                         .value(Purity.FLAWED, 0.05)

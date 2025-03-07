@@ -1,7 +1,8 @@
 package ianm1647.apothic_compats.data.eternal_starlight;
 
 import cn.leolezury.eternalstarlight.common.registry.ESMobEffects;
-import com.ianm1647.ancientreforging.AncientReforging;
+import dev.shadowsoffire.apotheosis.Apoth;
+import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.AffixType;
 import dev.shadowsoffire.apotheosis.affix.AttributeAffix;
@@ -9,7 +10,6 @@ import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import dev.shadowsoffire.placebo.util.StepFunction;
@@ -50,7 +50,7 @@ public class StarlightAffixProvider extends AffixProvider {
 
         this.addMobEffect("melee", "crystallized", ESMobEffects.CRYSTALLINE_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET,b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(epic, 120, 200, 0, 80)
@@ -58,7 +58,7 @@ public class StarlightAffixProvider extends AffixProvider {
 
         this.addAncientMobEffect("melee", "crystallized", ESMobEffects.CRYSTALLINE_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(LootCategory.MELEE_WEAPON, LootCategory.TRIDENT)
+                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
                 .limit(3)
                 .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));

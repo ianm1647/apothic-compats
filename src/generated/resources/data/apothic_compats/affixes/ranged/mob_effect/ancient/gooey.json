@@ -22,8 +22,8 @@
     "stacking_limit": 3,
     "target": "arrow_target",
     "types": [
-        "trident",
-        "bow"
+        "apotheosis:bow",
+        "apotheosis:trident"
     ],
     "values": {
         "ancientreforging:ancient": {

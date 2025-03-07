@@ -14,13 +14,18 @@ repositories {
     maven { url "https://www.cursemaven.com" }
     maven { url "https://maven.blamejared.com/" }
     maven { url "https://maven.shadowsoffire.dev/releases" }
-    maven { url "https://maven.octo-studios.com/releases" }
+    maven { url "https://maven.theillusivec4.top/" }
+    maven { url "https://maven.architectury.dev"
+        content { includeGroup "dev.architectury" }
+    }
 }
 
 dependencies {
     implementation "dev.shadowsoffire:Apotheosis:$minecraft_version-$apotheosis_version"
     implementation "dev.shadowsoffire:Placebo:$minecraft_version-$placebo_version"
     implementation "dev.shadowsoffire:ApothicAttributes:$minecraft_version-$attributeslib_version"
+    implementation "dev.shadowsoffire:ApothicSpawners:$minecraft_version-$spawners_version"
+    implementation "dev.shadowsoffire:ApothicEnchanting:$minecraft_version-$enchanting_version"
     implementation "vazkii.patchouli:Patchouli:$patchouli_version"
     implementation "top.theillusivec4.curios:curios-neoforge:$curios_version"
 
@@ -30,6 +35,11 @@ dependencies {
     compileOnly "mezz.jei:jei-$minecraft_version-neoforge-api:$jei_version"
 
     runtimeOnly "mezz.jei:jei-$minecraft_version-neoforge:$jei_version"
+    implementation "dev.architectury:architectury-neoforge:$architectury_version"
+
+    // local
+    implementation files('C:\\Users\\ianmc\\OneDrive\\Documents\\Intellij Workspaces\\mod dep jars\\malum.jar')
+    implementation files('C:\\Users\\ianmc\\OneDrive\\Documents\\Intellij Workspaces\\mod dep jars\\lodestone.jar')
 
     //compats
     implementation "curse.maven:twilightforest-227639:$twilight_version"
@@ -42,17 +52,23 @@ dependencies {
     implementation "curse.maven:undergarden-379849:$undergarden_version"
     implementation "curse.maven:mekanism-268560:$mekanism_version"
     implementation "curse.maven:mekanismtools-268567:$mekanismtools_version"
-    implementation "curse.maven:ironspells-855414:$ironspells_version"
+    implementation "curse.maven:allthemodium-364466:$allthemodium_version"
+    implementation "curse.maven:farmersdelight-398521:$farmersdelight_version"
+    //implementation "curse.maven:arselemental-561470:$arselemental_version"
+    implementation "curse.maven:ae2-223794:$ae2_version"
+    implementation "curse.maven:cataclysm-551586:$cataclysm_version"
 
     //compat deps
     implementation "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
-    implementation "curse.maven:playeranim-658587:$playeranim_version"
+    //implementation "curse.maven:alltheores-405593:$alltheores_version"
+    implementation "curse.maven:guideme-1173950:$guideme_version"
+    implementation "curse.maven:lionfish-1001614:$lionfish_version"
 }
 
 jar {
-    exclude('data/apotheosis', 'data/ancientreforging')
+    exclude('data/apotheosis/rarities', 'data/ancientreforging')
 }
 
 base {
@@ -71,7 +87,7 @@ neoForge {
     }
 
     // This line is optional. Access Transformers are automatically detected
-    // accessTransformers.add('src/main/resources/META-INF/accesstransformer.cfg')
+    //accessTransformers.add('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.

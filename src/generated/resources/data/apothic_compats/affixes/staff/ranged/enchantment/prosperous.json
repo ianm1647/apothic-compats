@@ -1,0 +1,32 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:enchantment",
+    "categories": [
+        "apothic_compats:staff"
+    ],
+    "definition": {
+        "affix_type": "ability",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "enchantment": "minecraft:looting",
+    "values": {
+        "apotheosis:epic": {
+            "min": 2.0,
+            "max": 3.0,
+            "step": 0.25
+        },
+        "apotheosis:mythic": {
+            "min": 3.0,
+            "max": 4.0,
+            "step": 0.25
+        }
+    }
+}

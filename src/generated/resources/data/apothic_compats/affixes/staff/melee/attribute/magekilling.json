@@ -1,0 +1,43 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "lodestone:magic_damage",
+    "categories": [
+        "apothic_compats:staff"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "apotheosis:common": {
+            "min": 2.0,
+            "max": 3.0
+        },
+        "apotheosis:uncommon": {
+            "min": 2.0,
+            "max": 3.0
+        },
+        "apotheosis:rare": {
+            "min": 3.0,
+            "max": 5.0
+        },
+        "apotheosis:epic": {
+            "min": 4.0,
+            "max": 6.0
+        },
+        "apotheosis:mythic": {
+            "min": 5.0,
+            "max": 8.0
+        }
+    }
+}

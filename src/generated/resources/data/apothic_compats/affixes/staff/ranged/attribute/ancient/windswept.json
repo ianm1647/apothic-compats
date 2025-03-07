@@ -1,0 +1,31 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "minecraft:generic.movement_speed",
+    "categories": [
+        "apothic_compats:staff"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_multiplied_total",
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 0.4,
+            "max": 0.8
+        }
+    }
+}

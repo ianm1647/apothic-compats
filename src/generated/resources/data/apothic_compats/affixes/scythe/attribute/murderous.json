@@ -1,0 +1,35 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "minecraft:generic.attack_damage",
+    "categories": [
+        "apothic_compats:scythe"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_multiplied_base",
+    "values": {
+        "apotheosis:rare": {
+            "min": 0.15,
+            "max": 0.43
+        },
+        "apotheosis:epic": {
+            "min": 0.18,
+            "max": 0.48
+        },
+        "apotheosis:mythic": {
+            "min": 0.25,
+            "max": 0.55
+        }
+    }
+}

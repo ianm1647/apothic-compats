@@ -139,6 +139,10 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
         itemWeights.put(AetherItems.PHOENIX_BOW.get(), BOWS);
 
+        addEntry(BOWS, new ItemStack(AetherItems.POISON_DART_SHOOTER.get()));
+        addEntry(BOWS, new ItemStack(AetherItems.ENCHANTED_DART_SHOOTER.get()));
+        addEntry(BOWS, new ItemStack(AetherItems.GOLDEN_DART_SHOOTER.get()));
+
         for (Item i : BuiltInRegistries.ITEM) {
             if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
                 continue;

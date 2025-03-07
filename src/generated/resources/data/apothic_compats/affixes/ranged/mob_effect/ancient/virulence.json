@@ -22,8 +22,8 @@
     "stacking_limit": 3,
     "target": "arrow_target",
     "types": [
-        "trident",
-        "melee_weapon"
+        "apotheosis:melee_weapon",
+        "apotheosis:trident"
     ],
     "values": {
         "ancientreforging:ancient": {

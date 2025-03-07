@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "malum:soul_ward_capacity",
+    "categories": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "apotheosis:uncommon": 3.0,
+        "apotheosis:rare": 6.0,
+        "apotheosis:epic": 9.0,
+        "apotheosis:mythic": 12.0
+    }
+}

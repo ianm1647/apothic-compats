@@ -1,0 +1,42 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:mob_effect",
+    "definition": {
+        "affix_type": "basic_effect",
+        "exclusive_set": [
+            "apotheosis:ranged/mob_effect/blighted"
+        ],
+        "weights": {
+            "pinnacle": {
+                "quality": 5.0,
+                "weight": 20
+            }
+        }
+    },
+    "mob_effect": "minecraft:wither",
+    "stack_on_reapply": true,
+    "target": "projectile_target",
+    "types": [
+        "apothic_compats:dart_shooter"
+    ],
+    "values": {
+        "ancientreforging:ancient": {
+            "duration": {
+                "min": 200.0,
+                "max": 400.0,
+                "step": 20.0
+            },
+            "amplifier": 2.0,
+            "cooldown": 20
+        }
+    }
+}

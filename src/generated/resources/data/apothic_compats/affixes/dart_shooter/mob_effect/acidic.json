@@ -1,0 +1,37 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "apotheosis:mob_effect",
+    "definition": {
+        "affix_type": "basic_effect",
+        "exclusive_set": [],
+        "weights": {
+            "pinnacle": {
+                "quality": 5.0,
+                "weight": 20
+            }
+        }
+    },
+    "mob_effect": "apothic_attributes:sundering",
+    "stack_on_reapply": true,
+    "stacking_limit": 4,
+    "target": "projectile_target",
+    "types": [
+        "apothic_compats:dart_shooter"
+    ],
+    "values": {
+        "apotheosis:mythic": {
+            "duration": {
+                "min": 80.0,
+                "max": 160.0,
+                "step": 20.0
+            },
+            "amplifier": 0.0,
+            "cooldown": 40
+        }
+    }
+}

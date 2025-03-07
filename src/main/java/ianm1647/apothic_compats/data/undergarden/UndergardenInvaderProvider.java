@@ -1,6 +1,6 @@
 package ianm1647.apothic_compats.data.undergarden;
 
-import com.ianm1647.ancientreforging.AncientReforging;
+import ianm1647.ancientreforging.AncientReforging;
 import com.telepathicgrunt.the_bumblezone.modinit.BzEntities;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
@@ -86,7 +86,7 @@ public class UndergardenInvaderProvider extends InvaderProvider {
                         .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
         addBoss("sploogie", b -> basicRangedStats(b)
                 .entity(UGEntityTypes.SPLOOGIE.get())
-                .basicData(c -> meleeGear(c)
+                .basicData(c -> rangedGear(c)
                         .name(Component.literal(BasicBossData.NAME_GEN))
                         .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .constraints(Constraints.forDimension(UNDERGARDEN))

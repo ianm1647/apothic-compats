@@ -2,7 +2,7 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
-            "modid": "aether"
+            "modid": "malum"
         }
     ],
     "type": "apotheosis:mob_effect",
@@ -13,19 +13,23 @@
             "weight": 25
         }
     },
-    "mob_effect": "aether:inebriation",
+    "mob_effect": "apothic_attributes:bleeding",
     "stack_on_reapply": true,
     "stacking_limit": 3,
     "target": "attack_target",
     "types": [
-        "trident",
-        "melee_weapon"
+        "apothic_compats:staff"
     ],
     "values": {
+        "apotheosis:uncommon": {
+            "duration": 100.0,
+            "amplifier": 0.0,
+            "cooldown": 80
+        },
         "apotheosis:rare": {
             "duration": {
-                "min": 80.0,
-                "max": 160.0,
+                "min": 100.0,
+                "max": 120.0,
                 "step": 20.0
             },
             "amplifier": 0.0,
@@ -33,8 +37,8 @@
         },
         "apotheosis:epic": {
             "duration": {
-                "min": 120.0,
-                "max": 200.0,
+                "min": 100.0,
+                "max": 120.0,
                 "step": 20.0
             },
             "amplifier": 0.0,
@@ -42,8 +46,8 @@
         },
         "apotheosis:mythic": {
             "duration": {
-                "min": 160.0,
-                "max": 240.0,
+                "min": 100.0,
+                "max": 120.0,
                 "step": 20.0
             },
             "amplifier": {

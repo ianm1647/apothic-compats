@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "farmersdelight"
+        }
+    ],
+    "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "minecraft:the_nether"
+        ]
+    },
+    "stack": {
+        "count": 1,
+        "id": "farmersdelight:diamond_knife"
+    },
+    "weights": {
+        "ascent": {
+            "weight": 25
+        },
+        "summit": {
+            "weight": 25
+        },
+        "pinnacle": {
+            "weight": 5
+        }
+    }
+}

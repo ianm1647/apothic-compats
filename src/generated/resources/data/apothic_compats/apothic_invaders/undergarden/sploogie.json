@@ -19,19 +19,19 @@
         "name": "use_name_generation",
         "valid_gear_sets": {
             "haven": [
-                "#haven_melee"
+                "#haven_ranged"
             ],
             "frontier": [
-                "#frontier_melee"
+                "#frontier_ranged"
             ],
             "ascent": [
-                "#ascent_melee"
+                "#ascent_ranged"
             ],
             "summit": [
-                "#summit_melee"
+                "#summit_ranged"
             ],
             "pinnacle": [
-                "#pinnacle_melee"
+                "#pinnacle_ranged"
             ]
         },
         "weights": {
