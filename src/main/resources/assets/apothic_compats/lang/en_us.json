@@ -10,12 +10,12 @@
   "gem_class.malum_weapon": "Scythes & Staves",
 
   "gem_class.apothic_compats:scythe": "Scythes",
-  "text.apotheosis.category.apothic_compats:scythe": "Scythe",
-  "text.apotheosis.category.apothic_compats:scythe.plural": "Scythes",
+  "loot_category.apothic_compats.scythe": "Scythe",
+  "loot_category.apothic_compats.scythe.plural": "Scythes",
 
   "gem_class.apothic_compats:staff": "Staves",
-  "text.apotheosis.category.apothic_compats:staff": "Staff",
-  "text.apotheosis.category.apothic_compats:staff.plural": "Staves",
+  "loot_category.apothic_compats.staff": "Staff",
+  "loot_category.apothic_compats.staff.plural": "Staves",
 
 
 
