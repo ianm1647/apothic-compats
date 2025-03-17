@@ -28,6 +28,7 @@ dependencies {
     implementation "dev.shadowsoffire:ApothicEnchanting:$minecraft_version-$enchanting_version"
     implementation "vazkii.patchouli:Patchouli:$patchouli_version"
     implementation "top.theillusivec4.curios:curios-neoforge:$curios_version"
+    implementation "snownee.jade:Jade-NeoForge:${minecraft_version}-${jade_version}"
 
     implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
 
@@ -42,6 +43,8 @@ dependencies {
     implementation files('C:\\Users\\ianmc\\OneDrive\\Documents\\Intellij Workspaces\\mod dep jars\\lodestone.jar')
 
     //compats
+    implementation "curse.maven:amendments-896746:$amendments_version"
+    implementation "curse.maven:supplementaries-412082:$supplementaries_version"
     implementation "curse.maven:twilightforest-227639:$twilight_version"
     implementation "curse.maven:aether-255308:$aether_version"
     implementation "curse.maven:deepaether-852465:$deepaether_version"
@@ -59,6 +62,7 @@ dependencies {
     implementation "curse.maven:cataclysm-551586:$cataclysm_version"
 
     //compat deps
+    implementation "curse.maven:moonlight-499980:$moonlight_version"
     implementation "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"

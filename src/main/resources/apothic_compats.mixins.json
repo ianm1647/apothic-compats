@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "ianm1647.apothic_compats.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CandleHolderBlockMixin",
+    "DoubleSkullBlockMixin",
+    "SkullCandleBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
