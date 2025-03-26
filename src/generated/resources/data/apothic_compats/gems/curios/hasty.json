@@ -1,0 +1,97 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:gem",
+    "weights": {
+        "weight": 10
+    },
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:player.block_break_speed",
+            "gem_class": {
+                "key": "head_curios",
+                "types": [
+                    "apothic_compats:head",
+                    "apothic_compats:necklace"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "cracked": 0.5,
+                "chipped": 1.0,
+                "flawed": 1.5,
+                "normal": 2.0,
+                "flawless": 2.5,
+                "perfect": 3.0
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:generic.attack_speed",
+            "gem_class": {
+                "key": "hand_curios",
+                "types": [
+                    "apothic_compats:hands",
+                    "apothic_compats:bracelet",
+                    "apothic_compats:ring"
+                ]
+            },
+            "operation": "add_multiplied_total",
+            "values": {
+                "cracked": 0.075,
+                "chipped": 0.1,
+                "flawed": 0.125,
+                "normal": 0.15,
+                "flawless": 0.175,
+                "perfect": 0.2
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:generic.movement_efficiency",
+            "gem_class": {
+                "key": "body_curios",
+                "types": [
+                    "apothic_compats:body",
+                    "apothic_compats:back",
+                    "apothic_compats:belt",
+                    "apothic_compats:feet"
+                ]
+            },
+            "operation": "add_multiplied_total",
+            "values": {
+                "cracked": 0.1,
+                "chipped": 0.15,
+                "flawed": 0.2,
+                "normal": 0.25,
+                "flawless": 0.3,
+                "perfect": 0.35
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:player.sneaking_speed",
+            "gem_class": {
+                "key": "charm_curio",
+                "types": [
+                    "apothic_compats:charm",
+                    "apothic_compats:curio"
+                ]
+            },
+            "operation": "add_multiplied_total",
+            "values": {
+                "cracked": 0.05,
+                "chipped": 0.1,
+                "flawed": 0.15,
+                "normal": 0.2,
+                "flawless": 0.25,
+                "perfect": 0.3
+            }
+        }
+    ]
+}

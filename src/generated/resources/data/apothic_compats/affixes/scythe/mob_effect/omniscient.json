@@ -9,7 +9,7 @@
     "definition": {
         "affix_type": "basic_effect",
         "exclusive_set": [
-            "apotheosis:scythe/mob_effect/sophisticated"
+            "apothic_compats:scythe/mob_effect/sophisticated"
         ],
         "weights": {
             "pinnacle": {

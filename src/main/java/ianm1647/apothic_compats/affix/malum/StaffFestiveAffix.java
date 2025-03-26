@@ -8,6 +8,7 @@ import dev.shadowsoffire.apotheosis.affix.AffixDefinition;
 import dev.shadowsoffire.apotheosis.affix.AffixInstance;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
+import dev.shadowsoffire.apotheosis.util.IFestiveMarker;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.particles.ParticleTypes;
@@ -71,7 +72,7 @@ public class StaffFestiveAffix extends Affix {
         if (e.getEntity() instanceof Player || e.getEntity().getPersistentData().getBoolean("apoth.no_pinata")) return;
         e.getEntity().getAllSlots().forEach(i -> {
             if (!i.isEmpty()) {
-                i.set(Apoth.Components.FESTIVE_MARKER, true);
+                ((IFestiveMarker) (Object) i).setMarked(true);
             }
         });
     }
@@ -87,7 +88,7 @@ public class StaffFestiveAffix extends Affix {
                 ((ServerLevel) player.level()).sendParticles(ParticleTypes.EXPLOSION_EMITTER, dead.getX(), dead.getY(), dead.getZ(), 2, 1.0D, 0.0D, 0.0D, 0);
                 List<ItemEntity> drops = new ArrayList<>(e.getDrops());
                 for (ItemEntity item : drops) {
-                    if (item.getItem().getOrDefault(Apoth.Components.FESTIVE_MARKER, false)) {
+                    if (((IFestiveMarker) (Object) item.getItem()).isMarked()) {
                         continue;
                     }
                     for (int i = 0; i < 20; i++) {
@@ -106,7 +107,7 @@ public class StaffFestiveAffix extends Affix {
     public static void removeMarker(LivingDropsEvent e) {
         e.getDrops().stream().forEach(ent -> {
             ItemStack s = ent.getItem();
-            s.remove(Apoth.Components.FESTIVE_MARKER);
+            ((IFestiveMarker) (Object) s).setMarked(false);
             ent.setItem(s);
         });
     }

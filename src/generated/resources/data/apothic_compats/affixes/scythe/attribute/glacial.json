@@ -13,7 +13,7 @@
     "definition": {
         "affix_type": "stat",
         "exclusive_set": [
-            "apotheosis:scythe/attribute/infernal"
+            "apothic_compats:scythe/attribute/infernal"
         ],
         "weights": {
             "weight": 25

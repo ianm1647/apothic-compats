@@ -1,0 +1,45 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "minecraft:player.submerged_mining_speed",
+    "categories": [
+        "apothic_compats:hands",
+        "apothic_compats:ring",
+        "apothic_compats:charm"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "apotheosis:common": {
+            "min": 0.05,
+            "max": 0.1
+        },
+        "apotheosis:uncommon": {
+            "min": 0.15,
+            "max": 0.25
+        },
+        "apotheosis:rare": {
+            "min": 0.25,
+            "max": 0.45
+        },
+        "apotheosis:epic": {
+            "min": 0.4,
+            "max": 0.55
+        },
+        "apotheosis:mythic": {
+            "min": 0.55,
+            "max": 0.75
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "minecraft:generic.knockback_resistance",
+    "categories": [
+        "apothic_compats:body",
+        "apothic_compats:back",
+        "apothic_compats:belt"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 0.4,
+            "max": 0.65
+        }
+    }
+}

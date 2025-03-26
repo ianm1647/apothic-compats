@@ -1,0 +1,37 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ars_nouveau"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+    "categories": [
+        "apothic_compats:ring",
+        "apothic_compats:charm",
+        "apothic_compats:bracelet"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 80.0,
+            "max": 90.0
+        }
+    }
+}

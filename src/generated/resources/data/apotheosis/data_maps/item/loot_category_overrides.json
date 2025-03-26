@@ -1,0 +1,12 @@
+{
+    "values": {
+        "#apothic_compats:curio_blacklist": {
+            "replace": true,
+            "value": "apotheosis:none"
+        },
+        "apotheosis:potion_charm": {
+            "replace": true,
+            "value": "apotheosis:none"
+        }
+    }
+}

@@ -460,7 +460,7 @@ public class ScytheAffixProvider extends AffixProvider {
     }
 
     private static DynamicHolder<Affix> afx(String path) {
-        return AffixRegistry.INSTANCE.holder(Apotheosis.loc(path));
+        return AffixRegistry.INSTANCE.holder(ApothicCompats.loc(path));
     }
 
     private static LootRarity rarity(String path) {

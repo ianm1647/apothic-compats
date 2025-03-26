@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "apothic_compats:items/gems/curios/refusal"
+    }
+}

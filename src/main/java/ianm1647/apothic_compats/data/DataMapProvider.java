@@ -1,17 +1,19 @@
 package ianm1647.apothic_compats.data;
 
-import com.aetherteam.aether.data.resources.registries.AetherDimensions;
-import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.ApothDataMapProvider;
+import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.mobs.InvaderSpawnRules;
 import dev.shadowsoffire.apotheosis.mobs.util.SurfaceType;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
+import ianm1647.apothic_compats.util.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
@@ -19,8 +21,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-public class InvaderSpawnRulesProvider extends ApothDataMapProvider {
-    public InvaderSpawnRulesProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class DataMapProvider extends ApothDataMapProvider {
+    public DataMapProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(packOutput, lookupProvider);
     }
 
@@ -94,6 +96,11 @@ public class InvaderSpawnRulesProvider extends ApothDataMapProvider {
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
                 SurfaceType.ANY), false, new ModLoadedCondition(UNDERGARDEN.location().getNamespace()));
+
+        Builder<LootCategory, Item> catOverrides = builder(Apoth.DataMaps.LOOT_CATEGORY_OVERRIDES);
+
+        catOverrides.add(BuiltInRegistries.ITEM.wrapAsHolder(Apoth.Items.POTION_CHARM.value()), Apoth.LootCategories.NONE, true);
+        catOverrides.add(ModTags.Items.CURIO_BLACKLIST, Apoth.LootCategories.NONE, true);
     }
 
     private static ResourceKey<DimensionType> register(String mod, String name) {

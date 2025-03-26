@@ -4,6 +4,11 @@
   "item.apotheosis.gem.apothic_compats:malum/thief": "Thief Gem",
   "item.apotheosis.gem.apothic_compats:malum/etheric": "Etheric Gem",
 
+  "item.apotheosis.gem.apothic_compats:curios/destroyer": "Destroyer Gem",
+  "item.apotheosis.gem.apothic_compats:curios/hardened": "Hardened Gem",
+  "item.apotheosis.gem.apothic_compats:curios/hasty": "Hasty Gem",
+  "item.apotheosis.gem.apothic_compats:curios/refusal": "Refusal Gem",
+
 
 
 
@@ -16,6 +21,37 @@
   "gem_class.apothic_compats:staff": "Staves",
   "loot_category.apothic_compats.staff": "Staff",
   "loot_category.apothic_compats.staff.plural": "Staves",
+
+  "gem_class.head_curios": "Head Curios",
+  "loot_category.apothic_compats.head": "Head Slot",
+  "loot_category.apothic_compats.head.plural": "Head Slots",
+  "loot_category.apothic_compats.necklace": "Necklace Slot",
+  "loot_category.apothic_compats.necklace.plural": "Necklace Slots",
+
+  "gem_class.hand_curios": "Hand Curios",
+  "loot_category.apothic_compats.hands": "Hand Slot",
+  "loot_category.apothic_compats.hands.plural": "Hand Slots",
+  "loot_category.apothic_compats.bracelet": "Bracelet Slot",
+  "loot_category.apothic_compats.bracelet.plural": "Bracelet Slots",
+  "loot_category.apothic_compats.ring": "Ring Slot",
+  "loot_category.apothic_compats.ring.plural": "Ring Slots",
+
+  "gem_class.body_curios": "Body Curios",
+  "loot_category.apothic_compats.body": "Body Slot",
+  "loot_category.apothic_compats.body.plural": "Body Slots",
+  "loot_category.apothic_compats.back": "Back Slot",
+  "loot_category.apothic_compats.back.plural": "Back Slots",
+  "loot_category.apothic_compats.belt": "Belt Slot",
+  "loot_category.apothic_compats.belt.plural": "Belt Slots",
+  "loot_category.apothic_compats.feet": "Feet Slot",
+  "loot_category.apothic_compats.feet.plural": "Feet Slots",
+
+  "gem_class.charm_curio": "Charms & Curios",
+  "loot_category.apothic_compats.charm": "Charm Slot",
+  "loot_category.apothic_compats.charm.plural": "Charm Slots",
+  "loot_category.apothic_compats.curio": "Curio Slot",
+  "loot_category.apothic_compats.curio.plural": "Curio Slots",
+
 
 
 
@@ -150,6 +186,135 @@
   "affix.apothic_compats:ranged/mob_effect/ancient/gooey": "Gooey",
   "affix.apothic_compats:ranged/mob_effect/gooey.suffix": "of Stickiness",
   "affix.apothic_compats:ranged/mob_effect/ancient/gooey.suffix": "of Stickiness",
+
+
+
+
+
+  "affix.apothic_compats:curios/attribute/mana": "Mana-Touched",
+  "affix.apothic_compats:curios/attribute/ancient/mana": "Mana-Touched",
+  "affix.apothic_compats:curios/attribute/mana.suffix": "of Sorcery",
+  "affix.apothic_compats:curios/attribute/ancient/mana.suffix": "of Sorcery",
+
+  "affix.apothic_compats:curios/attribute/spell_damaged": "Spell-Damaged",
+  "affix.apothic_compats:curios/attribute/ancient/spell_damaged": "Spell-Damaged",
+  "affix.apothic_compats:curios/attribute/spell_damaged.suffix": "of Wizardry",
+  "affix.apothic_compats:curios/attribute/ancient/spell_damaged.suffix": "of Wizardry",
+
+  "affix.apothic_compats:curios/attribute/regenerative": "Regenerative",
+  "affix.apothic_compats:curios/attribute/ancient/regenerative": "Regenerative",
+  "affix.apothic_compats:curios/attribute/regenerative.suffix": "of the Queen of Hearts",
+  "affix.apothic_compats:curios/attribute/ancient/regenerative.suffix": "of the Queen of Hearts",
+
+  "affix.apothic_compats:curios/attribute/lucky": "Lucky",
+  "affix.apothic_compats:curios/attribute/lucky.suffix": "of the Serendipitous",
+
+  "affix.apothic_compats:curios/attribute/windswept": "Windswept",
+  "affix.apothic_compats:curios/attribute/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:curios/attribute/aquatic": "Aquatic",
+  "affix.apothic_compats:curios/attribute/aquatic.suffix": "of the Ocean",
+
+  "affix.apothic_compats:curios/attribute/blessed": "Blessed",
+  "affix.apothic_compats:curios/attribute/blessed.suffix": "of Health",
+
+  "affix.apothic_compats:curios/attribute/gravitational": "Gravitational",
+  "affix.apothic_compats:curios/attribute/gravitational.suffix": "of Gravity",
+
+  "affix.apothic_compats:curios/attribute/ironforged": "Ironforged",
+  "affix.apothic_compats:curios/attribute/ironforged.suffix": "of Iron",
+
+  "affix.apothic_compats:curios/attribute/spiritual": "Spiritual",
+  "affix.apothic_compats:curios/attribute/spiritual.suffix": "of the Witch Doctor",
+
+  "affix.apothic_compats:curios/attribute/stalwart": "Stalwart",
+  "affix.apothic_compats:curios/attribute/stalwart.suffix": "of Stubbornness",
+
+  "affix.apothic_compats:curios/attribute/fireproof": "Fireproof",
+  "affix.apothic_compats:curios/attribute/fireproof.suffix": "of Flaming Defense",
+
+  "affix.apothic_compats:curios/attribute/oxygenated": "Oxygenated",
+  "affix.apothic_compats:curios/attribute/oxygenated.suffix": "of the Diver",
+
+  "affix.apothic_compats:curios/attribute/experienced": "Experienced",
+  "affix.apothic_compats:curios/attribute/experienced.suffix": "of the Scholar",
+
+  "affix.apothic_compats:curios/attribute/submerged": "Submerged",
+  "affix.apothic_compats:curios/attribute/submerged.suffix": "of the Seaborn Miner",
+
+  "affix.apothic_compats:curios/attribute/vampiric": "Vampiric",
+  "affix.apothic_compats:curios/attribute/vampiric.suffix": "of Bloodletting",
+
+  "affix.apothic_compats:curios/attribute/murderous": "Murderous",
+  "affix.apothic_compats:curios/attribute/murderous.suffix": "of the Minotaur",
+
+  "affix.apothic_compats:curios/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:curios/attribute/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:curios/attribute/graceful": "Graceful",
+  "affix.apothic_compats:curios/attribute/graceful.suffix": "of the Duelist",
+
+  "affix.apothic_compats:curios/attribute/berserking": "Berserking",
+  "affix.apothic_compats:curios/attribute/berserking.suffix": "of the Berserker",
+
+  "affix.apothic_compats:curios/attribute/ancient/lucky": "Lucky",
+  "affix.apothic_compats:curios/attribute/ancient/lucky.suffix": "of the Serendipitous",
+
+  "affix.apothic_compats:curios/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:curios/attribute/ancient/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:curios/attribute/ancient/aquatic": "Aquatic",
+  "affix.apothic_compats:curios/attribute/ancient/aquatic.suffix": "of the Ocean",
+
+  "affix.apothic_compats:curios/attribute/ancient/blessed": "Blessed",
+  "affix.apothic_compats:curios/attribute/ancient/blessed.suffix": "of Health",
+
+  "affix.apothic_compats:curios/attribute/ancient/gravitational": "Gravitational",
+  "affix.apothic_compats:curios/attribute/ancient/gravitational.suffix": "of Gravity",
+
+  "affix.apothic_compats:curios/attribute/ancient/ironforged": "Ironforged",
+  "affix.apothic_compats:curios/attribute/ancient/ironforged.suffix": "of Iron",
+
+  "affix.apothic_compats:curios/attribute/ancient/spiritual": "Spiritual",
+  "affix.apothic_compats:curios/attribute/ancient/spiritual.suffix": "of the Witch Doctor",
+
+  "affix.apothic_compats:curios/attribute/ancient/stalwart": "Stalwart",
+  "affix.apothic_compats:curios/attribute/ancient/stalwart.suffix": "of Stubbornness",
+
+  "affix.apothic_compats:curios/attribute/ancient/fireproof": "Fireproof",
+  "affix.apothic_compats:curios/attribute/ancient/fireproof.suffix": "of Flaming Defense",
+
+  "affix.apothic_compats:curios/attribute/ancient/oxygenated": "Oxygenated",
+  "affix.apothic_compats:curios/attribute/ancient/oxygenated.suffix": "of the Diver",
+
+  "affix.apothic_compats:curios/attribute/ancient/experienced": "Experienced",
+  "affix.apothic_compats:curios/attribute/ancient/experienced.suffix": "of the Scholar",
+
+  "affix.apothic_compats:curios/attribute/ancient/submerged": "Submerged",
+  "affix.apothic_compats:curios/attribute/ancient/submerged.suffix": "of the Seaborn Miner",
+
+  "affix.apothic_compats:curios/attribute/ancient/vampiric": "Vampiric",
+  "affix.apothic_compats:curios/attribute/ancient/vampiric.suffix": "of Bloodletting",
+
+  "affix.apothic_compats:curios/attribute/ancient/murderous": "Murderous",
+  "affix.apothic_compats:curios/attribute/ancient/murderous.suffix": "of the Minotaur",
+
+  "affix.apothic_compats:curios/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:curios/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:curios/attribute/ancient/graceful": "Graceful",
+  "affix.apothic_compats:curios/attribute/ancient/graceful.suffix": "of the Duelist",
+
+  "affix.apothic_compats:curios/attribute/ancient/berserking": "Berserking",
+  "affix.apothic_compats:curios/attribute/ancient/berserking.suffix": "of the Berserker",
+
+
+
+
+
+
+
+
 
 
 

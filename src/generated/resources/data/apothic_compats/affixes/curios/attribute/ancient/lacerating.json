@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "apothic_attributes:crit_damage",
+    "categories": [
+        "apothic_compats:feet",
+        "apothic_compats:back",
+        "apothic_compats:necklace"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 0.3,
+            "max": 0.65
+        }
+    }
+}

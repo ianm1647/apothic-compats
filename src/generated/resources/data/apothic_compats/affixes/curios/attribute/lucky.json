@@ -1,0 +1,53 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "minecraft:generic.luck",
+    "categories": [
+        "apothic_compats:back",
+        "apothic_compats:belt",
+        "apothic_compats:body",
+        "apothic_compats:bracelet",
+        "apothic_compats:charm",
+        "apothic_compats:curio",
+        "apothic_compats:feet",
+        "apothic_compats:hands",
+        "apothic_compats:head",
+        "apothic_compats:necklace",
+        "apothic_compats:ring"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "apotheosis:uncommon": {
+            "min": 1.0,
+            "max": 1.5,
+            "step": 0.25
+        },
+        "apotheosis:rare": {
+            "min": 2.0,
+            "max": 3.0,
+            "step": 0.25
+        },
+        "apotheosis:epic": {
+            "min": 2.5,
+            "max": 4.0,
+            "step": 0.25
+        },
+        "apotheosis:mythic": {
+            "min": 3.0,
+            "max": 6.0,
+            "step": 0.25
+        }
+    }
+}

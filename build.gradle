@@ -28,7 +28,7 @@ dependencies {
     implementation "dev.shadowsoffire:ApothicEnchanting:$minecraft_version-$enchanting_version"
     implementation "vazkii.patchouli:Patchouli:$patchouli_version"
     implementation "top.theillusivec4.curios:curios-neoforge:$curios_version"
-    implementation "snownee.jade:Jade-NeoForge:${minecraft_version}-${jade_version}"
+    implementation "snownee.jade:Jade-NeoForge:$minecraft_version-$jade_version"
 
     implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
 
@@ -38,11 +38,8 @@ dependencies {
     runtimeOnly "mezz.jei:jei-$minecraft_version-neoforge:$jei_version"
     implementation "dev.architectury:architectury-neoforge:$architectury_version"
 
-    // local
-    implementation files('C:\\Users\\ianmc\\OneDrive\\Documents\\Intellij Workspaces\\mod dep jars\\malum.jar')
-    implementation files('C:\\Users\\ianmc\\OneDrive\\Documents\\Intellij Workspaces\\mod dep jars\\lodestone.jar')
-
     //compats
+    implementation "com.sammy.malum:malum:$minecraft_version-$malum_version"
     implementation "curse.maven:amendments-896746:$amendments_version"
     implementation "curse.maven:supplementaries-412082:$supplementaries_version"
     implementation "curse.maven:twilightforest-227639:$twilight_version"
@@ -62,6 +59,7 @@ dependencies {
     implementation "curse.maven:cataclysm-551586:$cataclysm_version"
 
     //compat deps
+    implementation "team.lodestar.lodestone:lodestone:$minecraft_version-$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
     implementation "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
@@ -69,10 +67,6 @@ dependencies {
     //implementation "curse.maven:alltheores-405593:$alltheores_version"
     implementation "curse.maven:guideme-1173950:$guideme_version"
     implementation "curse.maven:lionfish-1001614:$lionfish_version"
-}
-
-jar {
-    exclude('data/apotheosis/rarities', 'data/ancientreforging')
 }
 
 base {

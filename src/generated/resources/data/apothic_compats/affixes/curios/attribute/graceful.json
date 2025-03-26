@@ -1,0 +1,45 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "minecraft:generic.attack_speed",
+    "categories": [
+        "apothic_compats:hands",
+        "apothic_compats:curio",
+        "apothic_compats:ring"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_multiplied_total",
+    "values": {
+        "apotheosis:common": {
+            "min": 0.1,
+            "max": 0.2
+        },
+        "apotheosis:uncommon": {
+            "min": 0.2,
+            "max": 0.3
+        },
+        "apotheosis:rare": {
+            "min": 0.3,
+            "max": 0.4
+        },
+        "apotheosis:epic": {
+            "min": 0.4,
+            "max": 0.5
+        },
+        "apotheosis:mythic": {
+            "min": 0.45,
+            "max": 0.6
+        }
+    }
+}

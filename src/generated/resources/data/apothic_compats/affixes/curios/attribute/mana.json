@@ -1,0 +1,49 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ars_nouveau"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+    "categories": [
+        "apothic_compats:ring",
+        "apothic_compats:charm",
+        "apothic_compats:bracelet"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "apotheosis:common": {
+            "min": 5.0,
+            "max": 15.0
+        },
+        "apotheosis:uncommon": {
+            "min": 20.0,
+            "max": 30.0
+        },
+        "apotheosis:rare": {
+            "min": 35.0,
+            "max": 45.0
+        },
+        "apotheosis:epic": {
+            "min": 50.0,
+            "max": 60.0
+        },
+        "apotheosis:mythic": {
+            "min": 65.0,
+            "max": 75.0
+        }
+    }
+}

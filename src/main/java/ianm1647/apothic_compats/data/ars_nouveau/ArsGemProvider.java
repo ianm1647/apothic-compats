@@ -78,7 +78,6 @@ public class ArsGemProvider extends GemProvider {
                         .target(MobEffectAffix.Target.ATTACK_TARGET)
                         .value(Purity.FLAWLESS, 240, 0, 600)
                         .value(Purity.PERFECT, 400, 1, 300)));
-
     }
 
     private void addGem(String name, TieredWeights weights, UnaryOperator<Gem.Builder> config) {

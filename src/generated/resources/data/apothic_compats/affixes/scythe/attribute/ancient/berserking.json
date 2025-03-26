@@ -17,7 +17,7 @@
     "definition": {
         "affix_type": "stat",
         "exclusive_set": [
-            "apotheosis:scythe/attribute/vampiric"
+            "apothic_compats:scythe/attribute/vampiric"
         ],
         "weights": {
             "weight": 25
