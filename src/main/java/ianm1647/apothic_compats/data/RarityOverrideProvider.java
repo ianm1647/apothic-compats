@@ -6,6 +6,7 @@ import dev.shadowsoffire.apotheosis.affix.AffixType;
 import dev.shadowsoffire.apotheosis.loot.*;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.AncientReforging;
+import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -334,7 +335,7 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
 
 
     private void addOverride(LootCategory category, UnaryOperator<RarityOverride.Builder> config) {
-        this.add(Apotheosis.loc(Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
+        this.add(ApothicCompats.loc(Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
                 config.apply(new RarityOverride.Builder(category)).build());
     }
 

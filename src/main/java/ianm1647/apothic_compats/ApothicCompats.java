@@ -3,16 +3,17 @@ package ianm1647.apothic_compats;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.apothic_compats.affix.ModAffixRegistry;
-import ianm1647.apothic_compats.data.DataMapProvider;
-import ianm1647.apothic_compats.data.CustomRarityProvider;
-import ianm1647.apothic_compats.data.RarityOverrideProvider;
+import ianm1647.apothic_compats.data.*;
+import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
+import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
+import ianm1647.apothic_compats.data.curios.CuriosProvider;
+import ianm1647.apothic_compats.data.malum.MalumExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.ae2.*;
 import ianm1647.apothic_compats.data.aether.*;
 import ianm1647.apothic_compats.data.allthemodium.*;
 import ianm1647.apothic_compats.data.ars_nouveau.*;
 import ianm1647.apothic_compats.data.cataclysm.*;
 import ianm1647.apothic_compats.data.curios.CuriosAffixProvider;
-import ianm1647.apothic_compats.data.curios.CuriosGemProvider;
 import ianm1647.apothic_compats.data.deep_aether.*;
 import ianm1647.apothic_compats.data.deeperdarker.*;
 import ianm1647.apothic_compats.data.farmersdelight.*;
@@ -24,8 +25,10 @@ import ianm1647.apothic_compats.data.twilight.*;
 import ianm1647.apothic_compats.data.undergarden.*;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import ianm1647.apothic_compats.util.ModSlotGroups;
+import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
@@ -48,6 +51,7 @@ public class ApothicCompats {
 
     public ApothicCompats(IEventBus modEventBus) {
         NeoForge.EVENT_BUS.register(this);
+        Comp.register(modEventBus);
         ModSlotGroups.register(modEventBus);
         ModLootCategories.registerLootCategories(modEventBus);
 
@@ -56,6 +60,18 @@ public class ApothicCompats {
     }
 
     public void data(GatherDataEvent e) {
+        DataGenerator generator = e.getGenerator();
+        PackOutput output = generator.getPackOutput();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
+        ExistingFileHelper helper = e.getExistingFileHelper();
+
+
+        TagProvider.Blocks blockTags = new TagProvider.Blocks(output, lookupProvider, helper);
+        generator.addProvider(e.includeServer(), blockTags);
+        generator.addProvider(e.includeServer(), new TagProvider.Items(output, lookupProvider, blockTags.contentsGetter(), helper));
+        generator.addProvider(e.includeClient(), new ItemModelsProvider(output, helper));
+        generator.addProvider(e.includeServer(), new CuriosProvider(output, helper, lookupProvider));
+
         DataGenBuilder.create(ApothicCompats.MODID)
                 .provider(DynamicRegistryProvider.runSilently(CustomRarityProvider::new))
                 .provider(DataMapProvider::new)
@@ -84,8 +100,9 @@ public class ApothicCompats {
                 .provider(CataclysmGearSetProvider::new)
                 .provider(CataclysmInvaderProvider::new)
 
+                .provider(CuriosAffixLootProvider::new)
                 .provider(CuriosAffixProvider::new)
-                .provider(CuriosGemProvider::new)
+                .provider(CuriosExtraGemBonusProvider::new)
 
                 .provider(DeepAetherAffixLootProvider::new)
                 .provider(DeepAetherGearSetProvider::new)
@@ -103,6 +120,7 @@ public class ApothicCompats {
                 .provider(StarlightInvaderProvider::new)
 
                 .provider(MalumAffixProvider::new)
+                .provider(MalumExtraGemBonusProvider::new)
                 .provider(MalumGemProvider::new)
                 .provider(ScytheAffixProvider::new)
                 .provider(StaffAffixProvider::new)
@@ -124,6 +142,9 @@ public class ApothicCompats {
                 .provider(UndergardenInvaderProvider::new)
 
                 .build(e);
+
+        Object2IntOpenHashMap<String> map = (Object2IntOpenHashMap<String>) DataProvider.FIXED_ORDER_FIELDS;
+        map.put("apothic_compats:ancient", 6);
     }
 
     public static ResourceLocation loc(String path) {

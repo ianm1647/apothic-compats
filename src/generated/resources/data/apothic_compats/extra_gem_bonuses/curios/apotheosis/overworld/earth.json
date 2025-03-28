@@ -1,0 +1,41 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:overworld/earth",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "apothic_attributes:mining_speed",
+            "gem_class": {
+                "key": "curios",
+                "types": [
+                    "apothic_compats:hands",
+                    "apothic_compats:bracelet",
+                    "apothic_compats:ring",
+                    "apothic_compats:body",
+                    "apothic_compats:back",
+                    "apothic_compats:belt",
+                    "apothic_compats:feet",
+                    "apothic_compats:head",
+                    "apothic_compats:necklace",
+                    "apothic_compats:charm",
+                    "apothic_compats:curio"
+                ]
+            },
+            "operation": "add_multiplied_base",
+            "values": {
+                "cracked": 0.1,
+                "chipped": 0.2,
+                "flawed": 0.3,
+                "normal": 0.4,
+                "flawless": 0.5,
+                "perfect": 0.65
+            }
+        }
+    ]
+}

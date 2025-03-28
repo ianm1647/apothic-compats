@@ -8,6 +8,14 @@
     "type": "apotheosis:attribute",
     "attribute": "minecraft:generic.oxygen_bonus",
     "categories": [
+        "apothic_compats:back",
+        "apothic_compats:belt",
+        "apothic_compats:body",
+        "apothic_compats:bracelet",
+        "apothic_compats:charm",
+        "apothic_compats:curio",
+        "apothic_compats:feet",
+        "apothic_compats:hands",
         "apothic_compats:head",
         "apothic_compats:necklace",
         "apothic_compats:ring"

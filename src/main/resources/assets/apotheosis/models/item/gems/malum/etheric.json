@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "apothic_compats:items/gems/malum/etheric"
+        "layer0": "apothic_compats:item/gems/malum/etheric"
     }
 }

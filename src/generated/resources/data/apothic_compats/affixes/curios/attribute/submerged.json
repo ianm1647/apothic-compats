@@ -8,9 +8,17 @@
     "type": "apotheosis:attribute",
     "attribute": "minecraft:player.submerged_mining_speed",
     "categories": [
+        "apothic_compats:back",
+        "apothic_compats:belt",
+        "apothic_compats:body",
+        "apothic_compats:bracelet",
+        "apothic_compats:charm",
+        "apothic_compats:curio",
+        "apothic_compats:feet",
         "apothic_compats:hands",
-        "apothic_compats:ring",
-        "apothic_compats:charm"
+        "apothic_compats:head",
+        "apothic_compats:necklace",
+        "apothic_compats:ring"
     ],
     "definition": {
         "affix_type": "stat",

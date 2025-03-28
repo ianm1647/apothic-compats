@@ -1,0 +1,41 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:the_end/mageslayer",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:generic.knockback_resistance",
+            "gem_class": {
+                "key": "curios",
+                "types": [
+                    "apothic_compats:hands",
+                    "apothic_compats:bracelet",
+                    "apothic_compats:ring",
+                    "apothic_compats:body",
+                    "apothic_compats:back",
+                    "apothic_compats:belt",
+                    "apothic_compats:feet",
+                    "apothic_compats:head",
+                    "apothic_compats:necklace",
+                    "apothic_compats:charm",
+                    "apothic_compats:curio"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "cracked": 0.15,
+                "chipped": 0.25,
+                "flawed": 0.35,
+                "normal": 0.45,
+                "flawless": 0.55,
+                "perfect": 0.7
+            }
+        }
+    ]
+}

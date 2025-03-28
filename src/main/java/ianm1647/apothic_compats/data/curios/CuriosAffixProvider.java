@@ -36,7 +36,8 @@ public class CuriosAffixProvider extends AffixProvider {
 
     public static final LootCategory[] CURIOS = {
             ModLootCategories.BACK, ModLootCategories.BELT, ModLootCategories.BODY, ModLootCategories.BRACELET, ModLootCategories.CHARM,
-            ModLootCategories.CURIO, ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.HEAD, ModLootCategories.NECKLACE, ModLootCategories.RING
+            ModLootCategories.CURIO, ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.HEAD, ModLootCategories.NECKLACE,
+            ModLootCategories.RING
     };
 
     public CuriosAffixProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
@@ -60,7 +61,7 @@ public class CuriosAffixProvider extends AffixProvider {
         //ARS NOUVEAU
         this.addArsAttribute("curios", "mana", PerkAttributes.MAX_MANA, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.RING, ModLootCategories.CHARM, ModLootCategories.BRACELET)
+                .categories(CURIOS)
                 .value(common, 5, 15)
                 .value(uncommon, 20, 30)
                 .value(rare, 35, 45)
@@ -69,12 +70,12 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAncientArsAttribute("curios", "mana", PerkAttributes.MAX_MANA, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.RING, ModLootCategories.CHARM, ModLootCategories.BRACELET)
+                .categories(CURIOS)
                 .value(ancient, 80, 90));
 
         this.addArsAttribute("curios", "spell_damaged", PerkAttributes.SPELL_DAMAGE_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.BACK)
+                .categories(CURIOS)
                 .value(common, 0.05f, 0.1f)
                 .value(uncommon, 0.125f, 0.175f)
                 .value(rare, 0.2f, 0.25f)
@@ -83,12 +84,12 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAncientArsAttribute("curios", "spell_damaged", PerkAttributes.SPELL_DAMAGE_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.BACK)
+                .categories(CURIOS)
                 .value(ancient, 0.425f, 0.475f));
 
         this.addArsAttribute("curios", "regenerative", PerkAttributes.MANA_REGEN_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BODY, ModLootCategories.HEAD, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(common, 0.05f, 0.1f)
                 .value(uncommon, 0.15f, 0.2f)
                 .value(rare, 0.25f, 0.3f)
@@ -97,7 +98,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAncientArsAttribute("curios", "regenerative", PerkAttributes.MANA_REGEN_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BODY, ModLootCategories.HEAD, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(ancient, 0.55f, 0.6f));
 
         // CORE
@@ -113,7 +114,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.RING, ModLootCategories.CURIO)
+                .categories(CURIOS)
                 .value(common, 0.05F, 0.15F)
                 .value(uncommon, 0.1F, 0.2F)
                 .value(rare, 0.15F, 0.25F)
@@ -122,7 +123,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "aquatic", NeoForgeMod.SWIM_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.NECKLACE, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(common, 0.1F, 0.15F)
                 .value(uncommon, 0.15F, 0.2F)
                 .value(rare, 0.25F, 0.3F)
@@ -131,7 +132,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "blessed", Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BRACELET, ModLootCategories.CHARM, ModLootCategories.CURIO)
+                .categories(CURIOS)
                 .step(0.25F)
                 .value(common, 1, 2)
                 .value(uncommon, 2, 3)
@@ -141,7 +142,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "gravitational", Attributes.GRAVITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.BELT, ModLootCategories.BODY)
+                .categories(CURIOS)
                 .step(-0.01F)
                 .value(common, -0.1F, -0.15F)
                 .value(uncommon, -0.1F, -0.2F)
@@ -151,7 +152,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "ironforged", Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BODY, ModLootCategories.HEAD, ModLootCategories.NECKLACE)
+                .categories(CURIOS)
                 .step(0.25F)
                 .value(common, 1, 1.5F)
                 .value(uncommon, 1, 2)
@@ -161,14 +162,14 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "spiritual", ALObjects.Attributes.HEALING_RECEIVED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BRACELET, ModLootCategories.CHARM, ModLootCategories.CURIO)
+                .categories(CURIOS)
                 .value(rare, 0.05F, 0.15F)
                 .value(epic, 0.2F, 0.25F)
                 .value(mythic, 0.2F, 0.35F));
 
         this.addAttribute("curios", "stalwart", Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BODY, ModLootCategories.BACK, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(uncommon, 0.05F, 0.1F)
                 .value(rare, 0.05F, 0.1F)
                 .value(epic, 0.15F, 0.20F)
@@ -176,7 +177,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "fireproof", Attributes.BURNING_TIME, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BELT, ModLootCategories.CHARM, ModLootCategories.HEAD)
+                .categories(CURIOS)
                 .step(-0.05F)
                 .value(uncommon, -0.1F, -0.15F)
                 .value(rare, -0.1F, -0.2F)
@@ -185,7 +186,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "oxygenated", Attributes.OXYGEN_BONUS, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HEAD, ModLootCategories.NECKLACE, ModLootCategories.RING)
+                .categories(CURIOS)
                 .value(uncommon, 0.1F, 0.25F)
                 .value(rare, 0.15F, 0.35F)
                 .value(epic, 0.2F, 0.5F)
@@ -193,7 +194,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.RING, ModLootCategories.BRACELET)
+                .categories(CURIOS)
                 .value(common, 0.15F, 0.25F)
                 .value(uncommon, 0.2F, 0.3F)
                 .value(rare, 0.25F, 0.35F)
@@ -202,7 +203,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.RING, ModLootCategories.CHARM)
+                .categories(CURIOS)
                 .value(common, 0.05F, 0.1F)
                 .value(uncommon, 0.15F, 0.25F)
                 .value(rare, 0.25F, 0.45F)
@@ -212,7 +213,7 @@ public class CuriosAffixProvider extends AffixProvider {
         this.addAttribute("curios", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY)))
-                .categories(ModLootCategories.HANDS, ModLootCategories.NECKLACE, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(common, 0.1F, 0.15F)
                 .value(uncommon, 0.1F, 0.25F)
                 .value(rare, 0.2F, 0.35F)
@@ -221,14 +222,14 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.RING, ModLootCategories.BRACELET)
+                .categories(CURIOS)
                 .value(rare, 0.1F, 0.25F)
                 .value(epic, 0.2F, 0.38F)
                 .value(mythic, 0.3F, 0.5F));
 
         this.addAttribute("curios", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.BACK, ModLootCategories.NECKLACE)
+                .categories(CURIOS)
                 .value(common, 0.05F, 0.15F)
                 .value(uncommon, 0.1F, 0.2F)
                 .value(rare, 0.15F, 0.25F)
@@ -237,7 +238,7 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.CURIO, ModLootCategories.RING)
+                .categories(CURIOS)
                 .value(common, 0.1F, 0.2F)
                 .value(uncommon, 0.2F, 0.3F)
                 .value(rare, 0.3F, 0.4F)
@@ -248,7 +249,7 @@ public class CuriosAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("melee/attribute/vampiric")))
-                .categories(Apoth.LootCategories.MELEE_WEAPON)
+                .categories(CURIOS)
                 .value(common, 0.1F, 0.2F)
                 .value(uncommon, 0.1F, 0.25F)
                 .value(rare, 0.15F, 0.3F)
@@ -263,89 +264,89 @@ public class CuriosAffixProvider extends AffixProvider {
 
         this.addAncientAttribute("curios", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.RING, ModLootCategories.CURIO)
+                .categories(CURIOS)
                 .value(ancient, 0.3F, 0.4F));
 
         this.addAncientAttribute("curios", "aquatic", NeoForgeMod.SWIM_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.NECKLACE, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(ancient, 0.5F, 0.75F));
 
         this.addAncientAttribute("curios", "blessed", Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BRACELET, ModLootCategories.CHARM, ModLootCategories.CURIO)
+                .categories(CURIOS)
                 .step(0.25F)
                 .value(ancient, 6, 10));
 
         this.addAncientAttribute("curios", "gravitational", Attributes.GRAVITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.BELT, ModLootCategories.BODY)
+                .categories(CURIOS)
                 .step(-0.01F)
                 .value(ancient, -0.4F, -0.85F));
 
         this.addAncientAttribute("curios", "ironforged", Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BODY, ModLootCategories.HEAD, ModLootCategories.NECKLACE)
+                .categories(CURIOS)
                 .step(0.25F)
                 .value(ancient, 5, 8));
 
         this.addAncientAttribute("curios", "spiritual", ALObjects.Attributes.HEALING_RECEIVED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BRACELET, ModLootCategories.CHARM, ModLootCategories.CURIO)
+                .categories(CURIOS)
                 .value(ancient, 0.4F, 0.65F));
 
         this.addAncientAttribute("curios", "stalwart", Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BODY, ModLootCategories.BACK, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(ancient, 0.4F, 0.65F));
 
         this.addAncientAttribute("curios", "fireproof", Attributes.BURNING_TIME, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.BELT, ModLootCategories.CHARM, ModLootCategories.HEAD)
+                .categories(CURIOS)
                 .step(-0.05F)
                 .value(ancient, -0.45F, -0.85F));
 
         this.addAncientAttribute("curios", "oxygenated", Attributes.OXYGEN_BONUS, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HEAD, ModLootCategories.NECKLACE, ModLootCategories.RING)
+                .categories(CURIOS)
                 .value(ancient, 0.55F, 0.95F));
 
         this.addAncientAttribute("curios", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.RING, ModLootCategories.BRACELET)
+                .categories(CURIOS)
                 .value(ancient, 0.55F, 0.85F));
 
         this.addAncientAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.RING, ModLootCategories.CHARM)
+                .categories(CURIOS)
                 .value(ancient, 0.65F, 0.95F));
 
         this.addAncientAttribute("curios", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY)))
-                .categories(ModLootCategories.HANDS, ModLootCategories.NECKLACE, ModLootCategories.BELT)
+                .categories(CURIOS)
                 .value(ancient, 0.45F, 0.55F));
 
         this.addAncientAttribute("curios", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.RING, ModLootCategories.BRACELET)
+                .categories(CURIOS)
                 .value(ancient, 0.4F, 0.55F));
 
         this.addAncientAttribute("curios", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.FEET, ModLootCategories.BACK, ModLootCategories.NECKLACE)
+                .categories(CURIOS)
                 .value(ancient, 0.3F, 0.65F));
 
         this.addAncientAttribute("curios", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.HANDS, ModLootCategories.CURIO, ModLootCategories.RING)
+                .categories(CURIOS)
                 .value(ancient, 0.55F, 0.7F));
 
         this.addAncientAttribute("curios", "berserking", ALObjects.Attributes.OVERHEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("melee/attribute/vampiric")))
-                .categories(Apoth.LootCategories.MELEE_WEAPON)
+                .categories(CURIOS)
                 .value(ancient, 0.4F, 0.55F));
 
     }
