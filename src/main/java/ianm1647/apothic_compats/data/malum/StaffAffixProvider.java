@@ -376,7 +376,7 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("staff/thunderstruck"),
-                AffixBuilder.simple(StaffThunderstruckAffix::new)
+                AffixBuilder.categorized(StaffThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .step(1)
                         .value(epic, 3, 6)
@@ -405,7 +405,7 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),
-                AffixBuilder.simple(StaffThunderstruckAffix::new)
+                AffixBuilder.categorized(StaffThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .step(1)
                         .value(ancient, 7, 11)

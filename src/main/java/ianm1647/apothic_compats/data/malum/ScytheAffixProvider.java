@@ -246,7 +246,7 @@ public class ScytheAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("scythe/thunderstruck"),
-                AffixBuilder.simple(ScytheThunderstruckAffix::new)
+                AffixBuilder.categorized(ScytheThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .step(1)
                         .value(epic, 3, 6)
@@ -275,7 +275,7 @@ public class ScytheAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("scythe/ancient/thunderstruck"),
-                AffixBuilder.simple(ScytheThunderstruckAffix::new)
+                AffixBuilder.categorized(ScytheThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .step(1)
                         .value(ancient, 7, 11)

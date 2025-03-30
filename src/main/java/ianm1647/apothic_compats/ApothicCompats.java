@@ -144,7 +144,7 @@ public class ApothicCompats {
                 .build(e);
 
         Object2IntOpenHashMap<String> map = (Object2IntOpenHashMap<String>) DataProvider.FIXED_ORDER_FIELDS;
-        map.put("apothic_compats:ancient", 6);
+        map.put("ancientreforging:ancient", 6);
     }
 
     public static ResourceLocation loc(String path) {

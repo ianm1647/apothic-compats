@@ -5,13 +5,17 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.shadowsoffire.apotheosis.affix.Affix;
 import dev.shadowsoffire.apotheosis.affix.AffixDefinition;
 import dev.shadowsoffire.apotheosis.affix.AffixInstance;
+import dev.shadowsoffire.apotheosis.affix.effect.CleavingAffix;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
+import dev.shadowsoffire.apotheosis.util.DamageSourceExtension;
 import dev.shadowsoffire.apothic_attributes.ApothicAttributes;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -20,19 +24,23 @@ import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class ScytheThunderstruckAffix extends Affix {
 
     public static final Codec<ScytheThunderstruckAffix> CODEC = RecordCodecBuilder.create(inst -> inst
             .group(
                     affixDef(),
+                    LootCategory.SET_CODEC.fieldOf("categories").forGetter(a -> a.categories),
                     LootRarity.mapCodec(StepFunction.CODEC).fieldOf("values").forGetter(a -> a.values))
             .apply(inst, ScytheThunderstruckAffix::new));
 
+    protected final Set<LootCategory> categories;
     protected final Map<LootRarity, StepFunction> values;
 
-    public ScytheThunderstruckAffix(AffixDefinition def, Map<LootRarity, StepFunction> values) {
+    public ScytheThunderstruckAffix(AffixDefinition def, Set<LootCategory> categories, Map<LootRarity, StepFunction> values) {
         super(def);
+        this.categories = categories;
         this.values = values;
     }
 
@@ -60,9 +68,12 @@ public class ScytheThunderstruckAffix extends Affix {
     public void doPostAttack(AffixInstance inst, LivingEntity user, Entity target) {
         if (user.level().isClientSide) return;
         if (ApothicAttributes.getLocalAtkStrength(user) >= 0.98) {
-            List<Entity> nearby = target.level().getEntities(target, new AABB(target.blockPosition()).inflate(6), ScytheCleavingAffix.cleavePredicate(user, target));
+            List<Entity> nearby = target.level().getEntities(target, new AABB(target.blockPosition()).inflate(6), CleavingAffix.cleavePredicate(user, target));
             for (Entity e : nearby) {
-                e.hurt(user.damageSources().mobAttack(user), this.getTrueLevel(inst.getRarity(), inst.level()));
+                DamageSource src = user.damageSources().mobAttack(user);
+                ((DamageSourceExtension) src).addTag(DamageTypeTags.IS_LIGHTNING);
+                ((DamageSourceExtension) src).addTag(DamageTypeTags.BYPASSES_ARMOR);
+                e.hurt(src, this.getTrueLevel(inst.getRarity(), inst.level()));
             }
         }
     }

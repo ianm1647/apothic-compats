@@ -2,33 +2,6 @@
     "type": "apotheosis:rarity_override",
     "category": "apothic_compats:ring",
     "overrides": {
-        "ancientreforging:ancient": [
-            {
-                "type": "apotheosis:affix",
-                "affix_type": "stat"
-            },
-            {
-                "type": "apotheosis:affix",
-                "affix_type": "stat"
-            },
-            {
-                "type": "apotheosis:affix",
-                "affix_type": "stat"
-            },
-            {
-                "type": "apotheosis:chanced",
-                "chance": 0.1,
-                "rule": {
-                    "type": "apotheosis:affix",
-                    "affix_type": "stat"
-                }
-            },
-            {
-                "type": "apotheosis:socket",
-                "min": 2,
-                "max": 3
-            }
-        ],
         "apotheosis:uncommon": [
             {
                 "type": "apotheosis:affix",
@@ -111,6 +84,33 @@
                 "type": "apotheosis:socket",
                 "min": 2,
                 "max": 2
+            }
+        ],
+        "ancientreforging:ancient": [
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:chanced",
+                "chance": 0.1,
+                "rule": {
+                    "type": "apotheosis:affix",
+                    "affix_type": "stat"
+                }
+            },
+            {
+                "type": "apotheosis:socket",
+                "min": 2,
+                "max": 3
             }
         ]
     }

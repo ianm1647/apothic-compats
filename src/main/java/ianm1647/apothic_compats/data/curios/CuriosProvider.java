@@ -15,6 +15,6 @@ public class CuriosProvider extends CuriosDataProvider {
 
     @Override
     public void generate(HolderLookup.Provider registries, ExistingFileHelper fileHelper) {
-        this.createEntities("entities").addPlayer().addSlots("back", "body", "bracelet", "feet");
+        this.createEntities("entities").addPlayer().addSlots("back", "body", "bracelet", "feet", "curio");
     }
 }

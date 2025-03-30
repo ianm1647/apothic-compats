@@ -1,7 +1,5 @@
 package ianm1647.apothic_compats;
 
-import dev.shadowsoffire.apotheosis.Apoth;
-import dev.shadowsoffire.placebo.tabs.TabFillingRegistry;
 import ianm1647.apothic_compats.item.ModCurioItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -47,9 +45,6 @@ public class Comp {
             HEAD_COVER = ITEM.register("head_cover", ModCurioItem::new);
             ORNAMENTED_NECKLACE = ITEM.register("ornamented_necklace", ModCurioItem::new);
             ORNATE_RING = ITEM.register("ornate_ring", ModCurioItem::new);
-
-            ITEM.getEntries().forEach((item) -> TabFillingRegistry.register(Apoth.Tabs.ADVENTURE.getKey(), item.getDelegate()));
-
         }
     }
 }
