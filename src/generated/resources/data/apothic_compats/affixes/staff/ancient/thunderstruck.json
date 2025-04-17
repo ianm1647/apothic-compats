@@ -9,11 +9,15 @@
             "modid": "ancientreforging"
         }
     ],
-    "type": "apothic_compats:staff_thunderstruck",
+    "type": "apotheosis:thunderstruck",
+    "categories": [
+        "apothic_compats:staff"
+    ],
     "definition": {
         "affix_type": "ability",
         "exclusive_set": [],
         "weights": {
+            "quality": 0.1,
             "weight": 25
         }
     },

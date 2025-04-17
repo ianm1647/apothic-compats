@@ -18,11 +18,16 @@
         "affix_type": "stat",
         "exclusive_set": [],
         "weights": {
+            "quality": 0.1,
             "weight": 25
         }
     },
-    "operation": "add_value",
+    "operation": "add_multiplied_total",
     "values": {
-        "ancientreforging:ancient": -12.0
+        "ancientreforging:ancient": {
+            "min": -0.6,
+            "max": -0.65,
+            "step": -0.01
+        }
     }
 }

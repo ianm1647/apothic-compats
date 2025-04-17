@@ -1,5 +1,8 @@
 {
     "values": [
-        "apothic_compats:back_plate"
+        {
+            "id": "apothic_compats:back_plate",
+            "required": false
+        }
     ]
 }

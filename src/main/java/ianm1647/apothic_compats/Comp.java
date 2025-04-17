@@ -11,7 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class Comp {
 
     public static void register(IEventBus bus) {
-        if (ModList.get().isLoaded("curios")) {
+        if (ModList.get().isLoaded("curios") && Config.ENABLE_CUSTOM_CURIOS.isTrue()) {
             Curios.ITEM.register(bus);
         }
     }

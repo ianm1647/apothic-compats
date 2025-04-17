@@ -11,16 +11,18 @@
             "minecraft:overworld"
         ]
     },
-    "unique": true,
     "weights": {
         "ascent": {
-            "weight": 10
+            "quality": 0.1,
+            "weight": 100
         },
         "summit": {
-            "weight": 10
+            "quality": 0.1,
+            "weight": 100
         },
         "pinnacle": {
-            "weight": 10
+            "quality": 0.1,
+            "weight": 100
         }
     },
     "bonuses": [
@@ -66,7 +68,13 @@
         },
         {
             "type": "apotheosis:mob_effect",
-            "gem_class": "apotheosis:melee_weapon",
+            "gem_class": {
+                "key": "light_weapon",
+                "types": [
+                    "apotheosis:melee_weapon",
+                    "apotheosis:trident"
+                ]
+            },
             "mob_effect": "malum:reactive_shielding",
             "target": "attack_self",
             "values": {

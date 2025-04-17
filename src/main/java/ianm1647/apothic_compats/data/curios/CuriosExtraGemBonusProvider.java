@@ -1,12 +1,15 @@
 package ianm1647.apothic_compats.data.curios;
 
 import com.hollingsworth.arsnouveau.api.perk.PerkAttributes;
+import com.sammy.malum.registry.common.AttributeRegistry;
 import dev.shadowsoffire.apotheosis.Apotheosis;
+import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.socket.gem.ExtraGemBonusRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.GemClass;
 import dev.shadowsoffire.apotheosis.socket.gem.GemRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.Purity;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.AttributeBonus;
+import dev.shadowsoffire.apotheosis.socket.gem.bonus.DamageReductionBonus;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.EnchantmentBonus;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.MultiAttrBonus;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.special.AllStatsBonus;
@@ -206,12 +209,10 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.MINING_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.CRACKED, 0.1)
-                        .value(Purity.CHIPPED, 0.2)
-                        .value(Purity.FLAWED, 0.3)
-                        .value(Purity.NORMAL, 0.4)
-                        .value(Purity.FLAWLESS, 0.5)
-                        .value(Purity.PERFECT, 0.65)));
+                        .value(Purity.FLAWED, 0.1)
+                        .value(Purity.NORMAL, 0.15)
+                        .value(Purity.FLAWLESS, 0.2)
+                        .value(Purity.PERFECT, 0.3)));
 
         addBonus(Apotheosis.loc("overworld/royalty"), b -> b
                 .bonus(CURIOS, AllStatsBonus.builder()
@@ -253,6 +254,18 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         ALObjects.Attributes.PROT_SHRED,
                         NeoForgeMod.SWIM_SPEED)));
 
+
+        addBonus(Apotheosis.loc("overworld/verdant_ruin"), b -> b
+                .bonus(CURIOS, AttributeBonus.builder()
+                        .attr(ALObjects.Attributes.COLD_DAMAGE)
+                        .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                        .value(Purity.CRACKED, 0.05)
+                        .value(Purity.CHIPPED, 0.1)
+                        .value(Purity.FLAWED, 0.15)
+                        .value(Purity.NORMAL, 0.2)
+                        .value(Purity.FLAWLESS, 0.25)
+                        .value(Purity.PERFECT, 0.35)));
+
         addBonus(Apotheosis.loc("the_nether/blood_lord"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.LUCK)
@@ -275,6 +288,14 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.FLAWLESS, 0.25)
                         .value(Purity.PERFECT, 0.45)));
 
+        addBonus(Apotheosis.loc("the_nether/molten_breach"), b -> b
+                .bonus(CURIOS, DamageReductionBonus.builder()
+                        .damageType(DamageReductionAffix.DamageType.FIRE)
+                        .value(Purity.FLAWED, 0.025f)
+                        .value(Purity.NORMAL, 0.05f)
+                        .value(Purity.FLAWLESS, 0.075f)
+                        .value(Purity.PERFECT, 0.1f)));
+
         addBonus(Apotheosis.loc("the_end/mageslayer"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.KNOCKBACK_RESISTANCE)
@@ -289,24 +310,20 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
         addTwilightBonus(Apotheosis.loc("twilight/queen"), "twilightforest", b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.ARROW_DAMAGE)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 1.5f)
-                        .value(Purity.CHIPPED, 2.5f)
-                        .value(Purity.FLAWED, 3.5f)
-                        .value(Purity.NORMAL, 4.5f)
-                        .value(Purity.FLAWLESS, 5.5f)
-                        .value(Purity.PERFECT, 7.5f)));
+                        .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                        .value(Purity.FLAWED, 0.15f)
+                        .value(Purity.NORMAL, 0.25f)
+                        .value(Purity.FLAWLESS, 0.35f)
+                        .value(Purity.PERFECT, 0.5f)));
 
         addTwilightBonus(Apotheosis.loc("twilight/forest"), "twilightforest", b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.CRIT_DAMAGE)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 1.5f)
-                        .value(Purity.CHIPPED, 2.5f)
-                        .value(Purity.FLAWED, 3.5f)
-                        .value(Purity.NORMAL, 4.5f)
-                        .value(Purity.FLAWLESS, 5.5f)
-                        .value(Purity.PERFECT, 7.5f)));
+                        .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                        .value(Purity.FLAWED, 0.15f)
+                        .value(Purity.NORMAL, 0.25f)
+                        .value(Purity.FLAWLESS, 0.35f)
+                        .value(Purity.PERFECT, 0.5f)));
 
         addModdedBonus(ApothicCompats.loc("ars_nouveau/mana"), "ars_nouveau", b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
@@ -319,6 +336,37 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.FLAWLESS, 50)
                         .value(Purity.PERFECT, 75)));
 
+        addModdedBonus(ApothicCompats.loc("malum/soul_stained"), "malum", b -> b
+                .bonus(CURIOS, AttributeBonus.builder()
+                        .attr(AttributeRegistry.CHARGE_CAPACITY)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.CRACKED, 1)
+                        .value(Purity.CHIPPED, 2)
+                        .value(Purity.FLAWED, 3)
+                        .value(Purity.NORMAL, 4)
+                        .value(Purity.FLAWLESS, 5)
+                        .value(Purity.PERFECT, 6)));
+
+        addModdedBonus(ApothicCompats.loc("malum/thief"), "malum", b -> b
+                .bonus(CURIOS, AttributeBonus.builder()
+                        .attr(AttributeRegistry.MALIGNANT_CONVERSION)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.CRACKED, 0.15)
+                        .value(Purity.CHIPPED, 0.2)
+                        .value(Purity.FLAWED, 0.25)
+                        .value(Purity.NORMAL, 0.3)
+                        .value(Purity.FLAWLESS, 0.35)
+                        .value(Purity.PERFECT, 0.5)));
+
+        addModdedBonus(ApothicCompats.loc("malum/etheric"), "malum", b -> b
+                .bonus(CURIOS, AttributeBonus.builder()
+                        .attr(AttributeRegistry.SOUL_WARD_CAPACITY)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.FLAWED, 3)
+                        .value(Purity.NORMAL, 6)
+                        .value(Purity.FLAWLESS, 9)
+                        .value(Purity.PERFECT, 12)));
+        
     }
 
     private void addBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {

@@ -22,11 +22,11 @@
 
   "gem_class.malum_weapon": "Scythes & Staves",
 
-  "gem_class.apothic_compats:scythe": "Scythes",
+  "gem_class.scythe": "Scythes",
   "loot_category.apothic_compats.scythe": "Scythe",
   "loot_category.apothic_compats.scythe.plural": "Scythes",
 
-  "gem_class.apothic_compats:staff": "Staves",
+  "gem_class.staff": "Staves",
   "loot_category.apothic_compats.staff": "Staff",
   "loot_category.apothic_compats.staff.plural": "Staves",
 
@@ -470,6 +470,12 @@
   "affix.apothic_compats:staff/ranged/attribute/agile": "Agile",
   "affix.apothic_compats:staff/ranged/attribute/agile.suffix": "of Dexterity",
 
+  "affix.apothic_compats:staff/ranged/attribute/capacious": "Capacious",
+  "affix.apothic_compats:staff/ranged/attribute/capacious.suffix": "of Roominess",
+
+  "affix.apothic_compats:staff/ranged/attribute/ample": "Ample",
+  "affix.apothic_compats:staff/ranged/attribute/ample.suffix": "of Capacity",
+
   "affix.apothic_compats:staff/ranged/mob_effect/ensnaring": "Ensnaring",
   "affix.apothic_compats:staff/ranged/mob_effect/ensnaring.suffix": "of the Predator",
 
@@ -496,6 +502,12 @@
 
   "affix.apothic_compats:staff/ranged/attribute/ancient/agile": "Agile",
   "affix.apothic_compats:staff/ranged/attribute/ancient/agile.suffix": "of Dexterity",
+
+  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious": "Capacious",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious.suffix": "of Roominess",
+
+  "affix.apothic_compats:staff/ranged/attribute/ancient/ample": "Ample",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/ample.suffix": "of Capacity",
 
   "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring": "Ensnaring",
   "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring.suffix": "of the Predator",

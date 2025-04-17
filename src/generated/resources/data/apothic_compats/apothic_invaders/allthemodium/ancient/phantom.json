@@ -40,12 +40,15 @@
         },
         "weights": {
             "ascent": {
+                "quality": 0.1,
                 "weight": 10
             },
             "summit": {
+                "quality": 0.1,
                 "weight": 10
             },
             "pinnacle": {
+                "quality": 0.1,
                 "weight": 10
             }
         }

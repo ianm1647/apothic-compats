@@ -20,6 +20,7 @@
             "apothic_compats:scythe/attribute/glacial"
         ],
         "weights": {
+            "quality": 0.1,
             "weight": 25
         }
     },

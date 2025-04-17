@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:overworld/earth",
+    "bonuses": [
+        {
+            "type": "apotheosis:enchantment",
+            "enchantment": "malum:rebound",
+            "gem_class": "apothic_compats:scythe",
+            "mode": "existing",
+            "values": {
+                "flawed": 1,
+                "normal": 2,
+                "flawless": 3,
+                "perfect": 4
+            }
+        },
+        {
+            "type": "apotheosis:enchantment",
+            "enchantment": "malum:capacitor",
+            "gem_class": "apothic_compats:staff",
+            "mode": "existing",
+            "values": {
+                "flawed": 1,
+                "normal": 2,
+                "flawless": 3,
+                "perfect": 4
+            }
+        }
+    ]
+}

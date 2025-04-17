@@ -68,14 +68,33 @@ public class StaffAffixProvider extends AffixProvider {
 
         */
 
-        this.addAttribute("staff/ranged", "agile", AttributeRegistry.CHARGE_DURATION, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("staff/ranged", "agile", AttributeRegistry.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
-                .value(common, -2)
-                .value(uncommon, -4)
-                .value(rare, -6)
-                .value(epic, -8)
-                .value(mythic, -10));
+                .step(-0.01F)
+                .value(common, -0.15f, -0.2f)
+                .value(uncommon, -0.2f, -0.25f)
+                .value(rare, -0.3f, -0.35f)
+                .value(epic, -0.4f, -0.45f)
+                .value(mythic, -0.5f, -0.55f));
+
+        this.addAttribute("staff/ranged", "capacious", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(common, 0.1f, 0.2f)
+                .value(uncommon, 0.15f, 0.25f)
+                .value(rare, 0.2f, 0.3f)
+                .value(epic, 0.25f, 0.35f)
+                .value(mythic, 0.3f, 0.4f));
+
+        this.addAttribute("staff/ranged", "ample", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(common, 1, 2)
+                .value(uncommon, 2, 3)
+                .value(rare, 4, 6)
+                .value(epic, 6, 8)
+                .value(mythic, 8, 10));
 
         this.addAttribute("staff/ranged", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -141,10 +160,21 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 2, 3)
                 .value(mythic, 3, 4));
 
-        this.addAncientAttribute("staff/ranged", "agile", AttributeRegistry.CHARGE_DURATION, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAncientAttribute("staff/ranged", "agile", AttributeRegistry.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
-                .value(ancient, -12));
+                .step(-0.01F)
+                .value(ancient, -0.6f, -0.65f));
+
+        this.addAncientAttribute("staff/ranged", "capacious", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(ancient, 0.45f, 0.55f));
+
+        this.addAncientAttribute("staff/ranged", "ample", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(ancient, 12, 14));
 
         this.addAncientAttribute("staff/ranged", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -376,8 +406,9 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("staff/thunderstruck"),
-                AffixBuilder.categorized(StaffThunderstruckAffix::new)
+                AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .categories(ModLootCategories.STAFF)
                         .step(1)
                         .value(epic, 3, 6)
                         .value(mythic, 4, 8)
@@ -405,8 +436,9 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),
-                AffixBuilder.categorized(StaffThunderstruckAffix::new)
+                AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .categories(ModLootCategories.STAFF)
                         .step(1)
                         .value(ancient, 7, 11)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));

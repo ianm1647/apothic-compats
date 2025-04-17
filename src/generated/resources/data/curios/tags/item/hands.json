@@ -1,5 +1,8 @@
 {
     "values": [
-        "apothic_compats:showy_gloves"
+        {
+            "id": "apothic_compats:showy_gloves",
+            "required": false
+        }
     ]
 }

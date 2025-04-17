@@ -2,9 +2,7 @@ package ianm1647.apothic_compats.data.malum;
 
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
-import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
-import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
-import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
+import dev.shadowsoffire.apotheosis.affix.effect.*;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
@@ -18,7 +16,6 @@ import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.affix.malum.ScytheCleavingAffix;
 import ianm1647.apothic_compats.affix.malum.ScytheExecutingAffix;
 import ianm1647.apothic_compats.affix.malum.ScytheFestiveAffix;
-import ianm1647.apothic_compats.affix.malum.ScytheThunderstruckAffix;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -246,8 +243,9 @@ public class ScytheAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("scythe/thunderstruck"),
-                AffixBuilder.categorized(ScytheThunderstruckAffix::new)
+                AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .categories(ModLootCategories.SCYTHE)
                         .step(1)
                         .value(epic, 3, 6)
                         .value(mythic, 4, 8)
@@ -275,8 +273,9 @@ public class ScytheAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("scythe/ancient/thunderstruck"),
-                AffixBuilder.categorized(ScytheThunderstruckAffix::new)
+                AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .categories(ModLootCategories.SCYTHE)
                         .step(1)
                         .value(ancient, 7, 11)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));

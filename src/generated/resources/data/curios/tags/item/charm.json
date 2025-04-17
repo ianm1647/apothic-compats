@@ -1,5 +1,8 @@
 {
     "values": [
-        "apothic_compats:fancy_charm"
+        {
+            "id": "apothic_compats:fancy_charm",
+            "required": false
+        }
     ]
 }

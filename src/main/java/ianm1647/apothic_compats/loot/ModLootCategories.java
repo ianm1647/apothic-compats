@@ -22,6 +22,7 @@ public class ModLootCategories {
     public static final DeferredHelper R = DeferredHelper.create(ApothicCompats.MODID);
 
     public static LootCategory DART_SHOOTER;
+
     public static LootCategory SCYTHE;
     public static LootCategory STAFF;
 
@@ -36,8 +37,6 @@ public class ModLootCategories {
     public static LootCategory HEAD;
     public static LootCategory NECKLACE;
     public static LootCategory RING;
-
-    public static LootCategory CURIOS;
 
     public static void registerLootCategories(IEventBus bus) {
         bus.register(R);

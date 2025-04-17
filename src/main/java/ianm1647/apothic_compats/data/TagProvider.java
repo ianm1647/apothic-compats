@@ -4,9 +4,12 @@ import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.util.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -23,17 +26,21 @@ public class TagProvider {
 
         @Override
         protected void addTags(HolderLookup.Provider provider) {
-            tag(CuriosTags.BACK).add(Comp.Curios.BACK_PLATE.value());
-            tag(CuriosTags.BELT).add(Comp.Curios.FLORID_BELT.value());
-            tag(CuriosTags.BODY).add(Comp.Curios.BODY_CHAIN.value());
-            tag(CuriosTags.BRACELET).add(Comp.Curios.FLASHY_BRACELET.value());
-            tag(CuriosTags.CHARM).add(Comp.Curios.FANCY_CHARM.value());
-            tag(CuriosTags.CURIO).add(Comp.Curios.EMBELLISHED_CURIO.value());
-            tag(ModTags.Curios.FEET).add(Comp.Curios.ADORNED_BOOTS.value());
-            tag(CuriosTags.HANDS).add(Comp.Curios.SHOWY_GLOVES.value());
-            tag(CuriosTags.HEAD).add(Comp.Curios.HEAD_COVER.value());
-            tag(CuriosTags.NECKLACE).add(Comp.Curios.ORNAMENTED_NECKLACE.value());
-            tag(CuriosTags.RING).add(Comp.Curios.ORNATE_RING.value());
+            tag(CuriosTags.BACK).addOptional(loc(Comp.Curios.BACK_PLATE.value()));
+            tag(CuriosTags.BELT).addOptional(loc(Comp.Curios.FLORID_BELT.value()));
+            tag(CuriosTags.BODY).addOptional(loc(Comp.Curios.BODY_CHAIN.value()));
+            tag(CuriosTags.BRACELET).addOptional(loc(Comp.Curios.FLASHY_BRACELET.value()));
+            tag(CuriosTags.CHARM).addOptional(loc(Comp.Curios.FANCY_CHARM.value()));
+            tag(CuriosTags.CURIO).addOptional(loc(Comp.Curios.EMBELLISHED_CURIO.value()));
+            tag(ModTags.Curios.FEET).addOptional(loc(Comp.Curios.ADORNED_BOOTS.value()));
+            tag(CuriosTags.HANDS).addOptional(loc(Comp.Curios.SHOWY_GLOVES.value()));
+            tag(CuriosTags.HEAD).addOptional(loc(Comp.Curios.HEAD_COVER.value()));
+            tag(CuriosTags.NECKLACE).addOptional(loc(Comp.Curios.ORNAMENTED_NECKLACE.value()));
+            tag(CuriosTags.RING).addOptional(loc(Comp.Curios.ORNATE_RING.value()));
+        }
+
+        private ResourceLocation loc(Item item) {
+            return BuiltInRegistries.ITEM.getKey(item);
         }
     }
 
@@ -46,4 +53,6 @@ public class TagProvider {
         protected void addTags(HolderLookup.Provider provider) {
         }
     }
+
+
 }

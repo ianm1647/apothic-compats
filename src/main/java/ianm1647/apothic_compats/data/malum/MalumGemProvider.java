@@ -44,7 +44,6 @@ public class MalumGemProvider extends GemProvider {
     @Override
     public void generate() {
         addGem("malum/soul_stained", TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY), c -> c
-                .unique()
                 .contstraints(Constraints.forDimension(Level.OVERWORLD))
                 .bonus(MALUM_WEAPON, AttributeBonus.builder()
                         .attr(AttributeRegistry.SPIRIT_SPOILS)
@@ -64,7 +63,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.NORMAL, 0.45)
                         .value(Purity.FLAWLESS, 0.55)
                         .value(Purity.PERFECT, 0.65))
-                .bonus(Apoth.LootCategories.MELEE_WEAPON, MobEffectBonus.builder()
+                .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
                         .effect(MobEffectRegistry.ASCENSION)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)
@@ -72,10 +71,16 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWED, 80, 1)
                         .value(Purity.NORMAL, 100, 1)
                         .value(Purity.FLAWLESS, 120, 2)
-                        .value(Purity.PERFECT, 140, 2)));
+                        .value(Purity.PERFECT, 140, 2))
+                .bonus(Apoth.LootCategories.HELMET, AttributeBonus.builder()
+                        .attr(AttributeRegistry.GEAS_LIMIT)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.FLAWED, 1)
+                        .value(Purity.NORMAL, 2)
+                        .value(Purity.FLAWLESS, 3)
+                        .value(Purity.PERFECT, 4)));
 
         addGem("malum/thief", TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY), c -> c
-                .unique()
                 .contstraints(Constraints.forDimension(Level.OVERWORLD))
                 .bonus(MALUM_WEAPON, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.LIFE_STEAL)
@@ -95,7 +100,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.NORMAL, 4)
                         .value(Purity.FLAWLESS, 5)
                         .value(Purity.PERFECT, 6))
-                .bonus(Apoth.LootCategories.MELEE_WEAPON, MobEffectBonus.builder()
+                .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
                         .effect(MobEffectRegistry.ECHOING_ARCANA)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)
@@ -120,7 +125,6 @@ public class MalumGemProvider extends GemProvider {
                                 .value(Purity.PERFECT, -9))));
 
         addGem("malum/etheric", TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY), c -> c
-                .unique()
                 .contstraints(Constraints.forDimension(Level.OVERWORLD))
                 .bonus(MALUM_WEAPON, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.FIRE_DAMAGE)
@@ -140,7 +144,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.NORMAL, 0.45)
                         .value(Purity.FLAWLESS, 0.55)
                         .value(Purity.PERFECT, 0.65))
-                .bonus(Apoth.LootCategories.MELEE_WEAPON, MobEffectBonus.builder()
+                .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
                         .effect(MobEffectRegistry.REACTIVE_SHIELDING)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)

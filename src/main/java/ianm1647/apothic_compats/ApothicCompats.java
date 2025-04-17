@@ -1,7 +1,9 @@
 package ianm1647.apothic_compats;
 
+import dev.shadowsoffire.apotheosis.data.RarityProvider;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
+import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.affix.ModAffixRegistry;
 import ianm1647.apothic_compats.data.*;
 import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
@@ -33,7 +35,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -49,8 +53,10 @@ public class ApothicCompats {
     public static final String MODID = "apothic_compats";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-    public ApothicCompats(IEventBus modEventBus) {
+    public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
+        modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
+
         Comp.register(modEventBus);
         ModSlotGroups.register(modEventBus);
         ModLootCategories.registerLootCategories(modEventBus);
@@ -73,7 +79,8 @@ public class ApothicCompats {
         generator.addProvider(e.includeServer(), new CuriosProvider(output, helper, lookupProvider));
 
         DataGenBuilder.create(ApothicCompats.MODID)
-                .provider(DynamicRegistryProvider.runSilently(CustomRarityProvider::new))
+                .provider(DynamicRegistryProvider.runSilently(RarityProvider::new))
+                .provider(DynamicRegistryProvider.runSilently(ARRarityProvider::new))
                 .provider(DataMapProvider::new)
                 .provider(RarityOverrideProvider::new)
 

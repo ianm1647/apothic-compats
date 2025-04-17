@@ -1,5 +1,8 @@
 {
     "values": [
-        "apothic_compats:ornate_ring"
+        {
+            "id": "apothic_compats:ornate_ring",
+            "required": false
+        }
     ]
 }

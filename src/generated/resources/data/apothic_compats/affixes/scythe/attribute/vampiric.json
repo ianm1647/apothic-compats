@@ -16,6 +16,7 @@
             "apothic_compats:scythe/attribute/berserking"
         ],
         "weights": {
+            "quality": 0.1,
             "weight": 25
         }
     },

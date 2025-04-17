@@ -20,6 +20,7 @@
             "apothic_compats:scythe/attribute/infernal"
         ],
         "weights": {
+            "quality": 0.1,
             "weight": 25
         }
     },

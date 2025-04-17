@@ -1,0 +1,43 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apothic_compats:malum/etheric",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "malum:soul_ward_capacity",
+            "gem_class": {
+                "key": "curios",
+                "types": [
+                    "apothic_compats:hands",
+                    "apothic_compats:bracelet",
+                    "apothic_compats:ring",
+                    "apothic_compats:body",
+                    "apothic_compats:back",
+                    "apothic_compats:belt",
+                    "apothic_compats:feet",
+                    "apothic_compats:head",
+                    "apothic_compats:necklace",
+                    "apothic_compats:charm",
+                    "apothic_compats:curio"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "flawed": 3.0,
+                "normal": 6.0,
+                "flawless": 9.0,
+                "perfect": 12.0
+            }
+        }
+    ]
+}

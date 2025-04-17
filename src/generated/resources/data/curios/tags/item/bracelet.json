@@ -1,5 +1,8 @@
 {
     "values": [
-        "apothic_compats:flashy_bracelet"
+        {
+            "id": "apothic_compats:flashy_bracelet",
+            "required": false
+        }
     ]
 }

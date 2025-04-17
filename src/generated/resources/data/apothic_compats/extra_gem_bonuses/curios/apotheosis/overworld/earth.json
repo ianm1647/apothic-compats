@@ -29,12 +29,10 @@
             },
             "operation": "add_multiplied_base",
             "values": {
-                "cracked": 0.1,
-                "chipped": 0.2,
-                "flawed": 0.3,
-                "normal": 0.4,
-                "flawless": 0.5,
-                "perfect": 0.65
+                "flawed": 0.1,
+                "normal": 0.15,
+                "flawless": 0.2,
+                "perfect": 0.3
             }
         }
     ]
