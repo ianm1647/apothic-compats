@@ -75,7 +75,7 @@
                     "apotheosis:trident"
                 ]
             },
-            "mob_effect": "malum:reactive_shielding",
+            "mob_effect": "malum:pyromaniacs_fervor",
             "target": "attack_self",
             "values": {
                 "cracked": {

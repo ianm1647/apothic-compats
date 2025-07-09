@@ -82,12 +82,12 @@ public class MekanismAffixLootProvider extends AffixLootEntryProvider {
         toolWeights.put(MekanismToolsConfig.materials.refinedGlowstone, GLOWSTONE);
         toolWeights.put(MekanismToolsConfig.materials.refinedObsidian, OBSIDIAN);
 
-        addEntry(new AffixLootEntry(LAPIS, ToolsItems.LAPIS_LAZULI_SHIELD.getItemStack()));
-        addEntry(new AffixLootEntry(OSMIUM, ToolsItems.OSMIUM_SHIELD.getItemStack()));
-        addEntry(new AffixLootEntry(BRONZE, ToolsItems.BRONZE_SHIELD.getItemStack()));
-        addEntry(new AffixLootEntry(STEEL, ToolsItems.STEEL_SHIELD.getItemStack()));
-        addEntry(new AffixLootEntry(GLOWSTONE, ToolsItems.REFINED_GLOWSTONE_SHIELD.getItemStack()));
-        addEntry(new AffixLootEntry(OBSIDIAN, ToolsItems.REFINED_OBSIDIAN_SHIELD.getItemStack()));
+        addEntry(new AffixLootEntry(LAPIS, ToolsItems.LAPIS_LAZULI_SHIELD.asStack()));
+        addEntry(new AffixLootEntry(OSMIUM, ToolsItems.OSMIUM_SHIELD.asStack()));
+        addEntry(new AffixLootEntry(BRONZE, ToolsItems.BRONZE_SHIELD.asStack()));
+        addEntry(new AffixLootEntry(STEEL, ToolsItems.STEEL_SHIELD.asStack()));
+        addEntry(new AffixLootEntry(GLOWSTONE, ToolsItems.REFINED_GLOWSTONE_SHIELD.asStack()));
+        addEntry(new AffixLootEntry(OBSIDIAN, ToolsItems.REFINED_OBSIDIAN_SHIELD.asStack()));
 
         for (Item i : BuiltInRegistries.ITEM) {
             if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {

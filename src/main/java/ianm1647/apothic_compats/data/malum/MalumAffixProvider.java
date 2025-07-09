@@ -1,7 +1,7 @@
 package ianm1647.apothic_compats.data.malum;
 
+import com.sammy.malum.registry.common.MalumAttributes;
 import ianm1647.ancientreforging.AncientReforging;
-import com.sammy.malum.registry.common.AttributeRegistry;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
@@ -44,7 +44,7 @@ public class MalumAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addAttribute("armor", "ward_capacity", AttributeRegistry.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("armor", "ward_capacity", MalumAttributes.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(uncommon, 3)
@@ -52,12 +52,12 @@ public class MalumAffixProvider extends AffixProvider {
                 .value(epic, 9)
                 .value(mythic, 12));
 
-        this.addAncientAttribute("armor", "ward_capacity", AttributeRegistry.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAncientAttribute("armor", "ward_capacity", MalumAttributes.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(ancient, 15));
 
-        this.addAttribute("armor", "ward_integrity", AttributeRegistry.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAttribute("armor", "ward_integrity", MalumAttributes.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(uncommon, 0.1f,0.2f)
@@ -65,12 +65,12 @@ public class MalumAffixProvider extends AffixProvider {
                 .value(epic, 0.3f,0.4f)
                 .value(mythic, 0.4f,0.5f));
 
-        this.addAncientAttribute("armor", "ward_integrity", AttributeRegistry.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAncientAttribute("armor", "ward_integrity", MalumAttributes.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(ancient, 0.5f, 0.6f));
 
-        this.addAttribute("armor", "scythe_proficiency", AttributeRegistry.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(uncommon, 0.1f, 0.2f)
@@ -78,12 +78,12 @@ public class MalumAffixProvider extends AffixProvider {
                 .value(epic, 0.3f, 0.4f)
                 .value(mythic, 0.4f, 0.5f));
 
-        this.addAncientAttribute("armor", "scythe_proficiency", AttributeRegistry.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAncientAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(ancient, 0.5f, 0.6f));
 
-        this.addAttribute("armor", "malevolent", AttributeRegistry.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAttribute("armor", "malevolent", MalumAttributes.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(uncommon, 0.05f, 0.15f)
@@ -91,7 +91,7 @@ public class MalumAffixProvider extends AffixProvider {
                 .value(epic, 0.25f, 0.35f)
                 .value(mythic, 0.35f, 0.45f));
 
-        this.addAncientAttribute("armor", "malevolent", AttributeRegistry.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAncientAttribute("armor", "malevolent", MalumAttributes.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(ancient, 0.45f, 0.55f));

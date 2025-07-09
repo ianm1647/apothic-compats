@@ -28,7 +28,7 @@ dependencies {
     implementation "dev.shadowsoffire:ApothicEnchanting:$minecraft_version-$enchanting_version"
     implementation "vazkii.patchouli:Patchouli:$patchouli_version"
     implementation "top.theillusivec4.curios:curios-neoforge:$curios_version"
-    implementation "snownee.jade:Jade-NeoForge:$minecraft_version-$jade_version"
+    implementation "curse.maven:jade-324717:$jade_version"
 
     implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
 
@@ -59,7 +59,6 @@ dependencies {
     implementation "curse.maven:cataclysm-551586:$cataclysm_version"
 
     //compat deps
-    implementation "team.lodestar.lodestone:lodestone:$minecraft_version-$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
     implementation "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"

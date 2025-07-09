@@ -1,6 +1,6 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.registry.common.item.EnchantmentRegistry;
+import com.sammy.malum.registry.common.enchantment.EnchantmentKeys;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.socket.gem.ExtraGemBonusRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.GemClass;
@@ -57,14 +57,14 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
 
         addBonus(Apotheosis.loc("overworld/earth"), b -> b
                 .bonus(ModLootCategories.SCYTHE, EnchantmentBonus.builder()
-                        .enchantment(standaloneHolder(registries, EnchantmentRegistry.REBOUND))
+                        .enchantment(standaloneHolder(registries, EnchantmentKeys.REBOUND))
                         .mode(EnchantmentBonus.Mode.EXISTING)
                         .value(Purity.FLAWED, 1)
                         .value(Purity.NORMAL, 2)
                         .value(Purity.FLAWLESS, 3)
                         .value(Purity.PERFECT, 4))
                 .bonus(ModLootCategories.STAFF, EnchantmentBonus.builder()
-                        .enchantment(standaloneHolder(registries, EnchantmentRegistry.CAPACITOR))
+                        .enchantment(standaloneHolder(registries, EnchantmentKeys.CAPACITOR))
                         .mode(EnchantmentBonus.Mode.EXISTING)
                         .value(Purity.FLAWED, 1)
                         .value(Purity.NORMAL, 2)

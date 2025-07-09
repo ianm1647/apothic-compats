@@ -1,12 +1,6 @@
 {
     "values": {
-        "#apothic_compats:curio_blacklist": {
-            "replace": true,
-            "value": "apotheosis:none"
-        },
-        "apotheosis:potion_charm": {
-            "replace": true,
-            "value": "apotheosis:none"
-        }
+        "minecraft:iron_sword": "apotheosis:melee_weapon",
+        "minecraft:shulker_shell": "apotheosis:none"
     }
 }

@@ -24,11 +24,11 @@ public class CuriosAffixLootProvider extends AffixLootEntryProvider {
     }
 
     protected static final TieredWeights CURIOS = TieredWeights.builder()
-            .with(WorldTier.HAVEN, 25, 0)
-            .with(WorldTier.FRONTIER, 25, 0)
-            .with(WorldTier.ASCENT, 25, 0)
-            .with(WorldTier.SUMMIT, 25, 0)
-            .with(WorldTier.PINNACLE, 25, 0)
+            .with(WorldTier.HAVEN, 100, 5)
+            .with(WorldTier.FRONTIER, 100, 5)
+            .with(WorldTier.ASCENT, 100, 5)
+            .with(WorldTier.SUMMIT, 100, 5)
+            .with(WorldTier.PINNACLE, 100, 5)
             .build();
 
     @Override

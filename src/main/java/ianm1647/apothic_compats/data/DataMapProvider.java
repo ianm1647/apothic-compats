@@ -34,7 +34,7 @@ public class DataMapProvider extends ApothDataMapProvider {
     public static final ResourceKey<DimensionType> UNDERGARDEN = register("undergarden", "undergarden");
 
     @Override
-    protected void gather() {
+    protected void gather(HolderLookup.Provider provider) {
         Builder<InvaderSpawnRules, DimensionType> invaderRules = builder(Apoth.DataMaps.INVADER_SPAWN_RULES);
 
         invaderRules.add(AETHER, new InvaderSpawnRules(

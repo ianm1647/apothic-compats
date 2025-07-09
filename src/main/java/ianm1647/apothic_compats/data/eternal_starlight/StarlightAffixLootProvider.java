@@ -1,6 +1,6 @@
 package ianm1647.apothic_compats.data.eternal_starlight;
 
-import cn.leolezury.eternalstarlight.common.item.weapon.ESItemTiers;
+import cn.leolezury.eternalstarlight.common.item.combat.ESItemTiers;
 import cn.leolezury.eternalstarlight.common.registry.ESArmorMaterials;
 import cn.leolezury.eternalstarlight.common.registry.ESItems;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;

@@ -1,7 +1,7 @@
 package ianm1647.apothic_compats.data.curios;
 
 import com.hollingsworth.arsnouveau.api.perk.PerkAttributes;
-import com.sammy.malum.registry.common.AttributeRegistry;
+import com.sammy.malum.registry.common.MalumAttributes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.socket.gem.ExtraGemBonusRegistry;
@@ -338,7 +338,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addModdedBonus(ApothicCompats.loc("malum/soul_stained"), "malum", b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(AttributeRegistry.CHARGE_CAPACITY)
+                        .attr(MalumAttributes.CHARGE_CAPACITY)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 1)
                         .value(Purity.CHIPPED, 2)
@@ -349,7 +349,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addModdedBonus(ApothicCompats.loc("malum/thief"), "malum", b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(AttributeRegistry.MALIGNANT_CONVERSION)
+                        .attr(MalumAttributes.MALIGNANT_CONVERSION)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 0.15)
                         .value(Purity.CHIPPED, 0.2)
@@ -360,7 +360,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addModdedBonus(ApothicCompats.loc("malum/etheric"), "malum", b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(AttributeRegistry.SOUL_WARD_CAPACITY)
+                        .attr(MalumAttributes.SOUL_WARD_CAPACITY)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.FLAWED, 3)
                         .value(Purity.NORMAL, 6)

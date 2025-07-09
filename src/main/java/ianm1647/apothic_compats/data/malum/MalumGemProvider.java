@@ -1,11 +1,10 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.registry.common.AttributeRegistry;
-import com.sammy.malum.registry.common.MobEffectRegistry;
+import com.sammy.malum.registry.common.MalumAttributes;
+import com.sammy.malum.registry.common.MalumMobEffects;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.GemProvider;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.socket.gem.Gem;
 import dev.shadowsoffire.apotheosis.socket.gem.GemClass;
 import dev.shadowsoffire.apotheosis.socket.gem.Purity;
@@ -46,7 +45,7 @@ public class MalumGemProvider extends GemProvider {
         addGem("malum/soul_stained", TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY), c -> c
                 .contstraints(Constraints.forDimension(Level.OVERWORLD))
                 .bonus(MALUM_WEAPON, AttributeBonus.builder()
-                        .attr(AttributeRegistry.SPIRIT_SPOILS)
+                        .attr(MalumAttributes.SPIRIT_SPOILS)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 1)
                         .value(Purity.CHIPPED, 2)
@@ -55,7 +54,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 5)
                         .value(Purity.PERFECT, 6))
                 .bonus(CORE_ARMOR, AttributeBonus.builder()
-                        .attr(AttributeRegistry.SCYTHE_PROFICIENCY)
+                        .attr(MalumAttributes.SCYTHE_PROFICIENCY)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                         .value(Purity.CRACKED, 0.15)
                         .value(Purity.CHIPPED, 0.25)
@@ -64,7 +63,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 0.55)
                         .value(Purity.PERFECT, 0.65))
                 .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
-                        .effect(MobEffectRegistry.ASCENSION)
+                        .effect(MalumMobEffects.ASCENSION)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)
                         .value(Purity.CHIPPED, 60, 0)
@@ -73,7 +72,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 120, 2)
                         .value(Purity.PERFECT, 140, 2))
                 .bonus(Apoth.LootCategories.HELMET, AttributeBonus.builder()
-                        .attr(AttributeRegistry.GEAS_LIMIT)
+                        .attr(MalumAttributes.GEAS_LIMIT)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.FLAWED, 1)
                         .value(Purity.NORMAL, 2)
@@ -92,7 +91,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 0.25)
                         .value(Purity.PERFECT, 0.3))
                 .bonus(Apoth.LootCategories.HELMET, AttributeBonus.builder()
-                        .attr(AttributeRegistry.CHARGE_CAPACITY)
+                        .attr(MalumAttributes.CHARGE_CAPACITY)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 1)
                         .value(Purity.CHIPPED, 2)
@@ -101,7 +100,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 5)
                         .value(Purity.PERFECT, 6))
                 .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
-                        .effect(MobEffectRegistry.ECHOING_ARCANA)
+                        .effect(MalumMobEffects.ECHOING_ARCANA)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)
                         .value(Purity.CHIPPED, 60, 0)
@@ -112,13 +111,13 @@ public class MalumGemProvider extends GemProvider {
                 .bonus(CORE_ARMOR, MultiAttrBonus.builder()
                         .desc("bonus.apotheosis:multi_attr.desc.and")
                         .modifier(b -> b
-                                .attr(AttributeRegistry.SOUL_WARD_RECOVERY_RATE)
+                                .attr(MalumAttributes.SOUL_WARD_RECOVERY_RATE)
                                 .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                                 .value(Purity.NORMAL, 0.4F)
                                 .value(Purity.FLAWLESS, 0.5F)
                                 .value(Purity.PERFECT, 0.6F))
                         .modifier(b -> b
-                                .attr(AttributeRegistry.SOUL_WARD_CAPACITY)
+                                .attr(MalumAttributes.SOUL_WARD_CAPACITY)
                                 .op(AttributeModifier.Operation.ADD_VALUE)
                                 .value(Purity.NORMAL, -3)
                                 .value(Purity.FLAWLESS, -6)
@@ -136,7 +135,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 5)
                         .value(Purity.PERFECT, 6))
                 .bonus(CORE_ARMOR, AttributeBonus.builder()
-                        .attr(AttributeRegistry.ARCANE_RESONANCE)
+                        .attr(MalumAttributes.ARCANE_RESONANCE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                         .value(Purity.CRACKED, 0.15)
                         .value(Purity.CHIPPED, 0.25)
@@ -145,7 +144,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 0.55)
                         .value(Purity.PERFECT, 0.65))
                 .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
-                        .effect(MobEffectRegistry.REACTIVE_SHIELDING)
+                        .effect(MalumMobEffects.PYROMANIACS_FERVOR)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)
                         .value(Purity.CHIPPED, 60, 0)

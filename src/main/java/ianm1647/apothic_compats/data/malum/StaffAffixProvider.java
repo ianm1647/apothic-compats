@@ -1,6 +1,6 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.registry.common.AttributeRegistry;
+import com.sammy.malum.registry.common.MalumAttributes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
@@ -68,7 +68,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         */
 
-        this.addAttribute("staff/ranged", "agile", AttributeRegistry.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAttribute("staff/ranged", "agile", MalumAttributes.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
                 .step(-0.01F)
@@ -78,7 +78,7 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, -0.4f, -0.45f)
                 .value(mythic, -0.5f, -0.55f));
 
-        this.addAttribute("staff/ranged", "capacious", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAttribute("staff/ranged", "capacious", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
                 .value(common, 0.1f, 0.2f)
@@ -87,7 +87,7 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 0.25f, 0.35f)
                 .value(mythic, 0.3f, 0.4f));
 
-        this.addAttribute("staff/ranged", "ample", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("staff/ranged", "ample", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
                 .value(common, 1, 2)
@@ -160,18 +160,18 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 2, 3)
                 .value(mythic, 3, 4));
 
-        this.addAncientAttribute("staff/ranged", "agile", AttributeRegistry.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAncientAttribute("staff/ranged", "agile", MalumAttributes.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
                 .step(-0.01F)
                 .value(ancient, -0.6f, -0.65f));
 
-        this.addAncientAttribute("staff/ranged", "capacious", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAncientAttribute("staff/ranged", "capacious", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
                 .value(ancient, 0.45f, 0.55f));
 
-        this.addAncientAttribute("staff/ranged", "ample", AttributeRegistry.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAncientAttribute("staff/ranged", "ample", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
                 .value(ancient, 12, 14));

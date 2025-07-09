@@ -11,6 +11,7 @@
         "id": "apothic_compats:embellished_curio"
     },
     "weights": {
-        "weight": 25
+        "quality": 5.0,
+        "weight": 100
     }
 }
