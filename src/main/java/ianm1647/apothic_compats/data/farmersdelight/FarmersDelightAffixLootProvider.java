@@ -2,7 +2,6 @@ package ianm1647.apothic_compats.data.farmersdelight;
 
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
@@ -12,18 +11,15 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import vectorwing.farmersdelight.common.registry.ModItems;
-import vectorwing.farmersdelight.common.registry.ModMaterials;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Predicate;
 
 public class FarmersDelightAffixLootProvider extends AffixLootEntryProvider {
 

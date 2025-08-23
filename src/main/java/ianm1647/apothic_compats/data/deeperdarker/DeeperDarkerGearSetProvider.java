@@ -1,16 +1,12 @@
 package ianm1647.apothic_compats.data.deeperdarker;
 
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import com.kyanite.deeperdarker.content.DDItems;
-import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 

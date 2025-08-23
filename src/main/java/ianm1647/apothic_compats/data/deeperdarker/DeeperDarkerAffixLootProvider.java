@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.deeperdarker;
 
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import com.kyanite.deeperdarker.util.DDArmorMaterials;
 import com.kyanite.deeperdarker.util.DDTiers;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;

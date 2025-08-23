@@ -151,7 +151,7 @@ public class ArsAffixProvider extends AffixProvider {
                 .value(ancient, 200, 360, StepFunction.fromBounds(1, 2, 0.125F), 80));
 
         // RANGED
-        this.addMobEffect("ranged", "mana_regen", ModPotions.MANA_REGEN_EFFECT, MobEffectAffix.Target.ATTACK_SELF, b -> b
+        this.addMobEffect("ranged", "mana_regen", ModPotions.MANA_REGEN_EFFECT, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
                 .stacking()
@@ -161,7 +161,7 @@ public class ArsAffixProvider extends AffixProvider {
                 .value(epic, 100, 120, 0, 80)
                 .value(mythic, 100, 120, StepFunction.fromBounds(0, 1, 0.125F), 80));
 
-        this.addAncientMobEffect("ranged", "mana_regen", ModPotions.MANA_REGEN_EFFECT, MobEffectAffix.Target.ATTACK_SELF, b -> b
+        this.addAncientMobEffect("ranged", "mana_regen", ModPotions.MANA_REGEN_EFFECT, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
                 .stacking()

@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.the_bumblezone;
 
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import com.telepathicgrunt.the_bumblezone.modinit.BzArmorMaterials;
 import com.telepathicgrunt.the_bumblezone.modinit.BzItems;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;

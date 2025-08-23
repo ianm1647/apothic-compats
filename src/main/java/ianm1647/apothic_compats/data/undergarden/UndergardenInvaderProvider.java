@@ -1,7 +1,6 @@
 package ianm1647.apothic_compats.data.undergarden;
 
 import ianm1647.ancientreforging.AncientReforging;
-import com.telepathicgrunt.the_bumblezone.modinit.BzEntities;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
@@ -21,7 +20,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;

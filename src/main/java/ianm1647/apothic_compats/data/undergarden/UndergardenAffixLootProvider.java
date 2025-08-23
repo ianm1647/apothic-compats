@@ -1,7 +1,5 @@
 package ianm1647.apothic_compats.data.undergarden;
 
-import com.telepathicgrunt.the_bumblezone.modinit.BzArmorMaterials;
-import com.telepathicgrunt.the_bumblezone.modinit.BzItems;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;

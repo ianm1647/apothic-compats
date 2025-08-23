@@ -1,14 +1,11 @@
 package ianm1647.apothic_compats.data.the_bumblezone;
 
-import cn.leolezury.eternalstarlight.common.registry.ESItems;
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import com.telepathicgrunt.the_bumblezone.modinit.BzItems;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;

@@ -18,7 +18,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 

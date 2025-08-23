@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-16T17:35:44.4061541	Ars Nouveau Affixes
+// 1.21.1	2025-08-22T21:03:37.9538605	Ars Nouveau Affixes
 01ef8379e3e354ed2bed6997196d1a71bf869788 data/apothic_compats/affixes/armor/attribute/ancient/mana.json
 2ea1f7f878b99bb0a95ee581b393d1d3f9967ca4 data/apothic_compats/affixes/armor/attribute/mana.json
 c9feaa966d495d29906c552689903d22facb8f8c data/apothic_compats/affixes/melee/mob_effect/ancient/blasting.json
@@ -11,5 +11,5 @@ de4420ae7ba1d47518023d307458e11da89371b5 data/apothic_compats/affixes/melee/mob_
 78f4e75eff756ba482d5f95bc33e014772c72d9f data/apothic_compats/affixes/melee/mob_effect/mana_regen.json
 95f68c996b65fb2510d4e63ddc8ccde8ee256456 data/apothic_compats/affixes/melee/mob_effect/shocking.json
 ce2f0a7ea409ed6bcbc998257d1221fcb4b35545 data/apothic_compats/affixes/melee/mob_effect/snaring.json
-df4ac7d539542152250213c4415c2f94bdf9b464 data/apothic_compats/affixes/ranged/mob_effect/ancient/mana_regen.json
-a07485b9cd72eee229de55f0fced7e8d9ee4f1d0 data/apothic_compats/affixes/ranged/mob_effect/mana_regen.json
+afae72ec9d946b526bb93b6377e37a3ecb97afd3 data/apothic_compats/affixes/ranged/mob_effect/ancient/mana_regen.json
+055ee0f3f08b0ff691e273af503105741f8625e7 data/apothic_compats/affixes/ranged/mob_effect/mana_regen.json

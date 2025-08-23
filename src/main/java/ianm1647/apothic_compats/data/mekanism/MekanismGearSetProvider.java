@@ -6,7 +6,6 @@ import mekanism.tools.common.registries.ToolsItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;

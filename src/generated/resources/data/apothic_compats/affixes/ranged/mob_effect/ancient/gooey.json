@@ -21,7 +21,7 @@
     "mob_effect": "undergarden:gooey",
     "stack_on_reapply": true,
     "stacking_limit": 3,
-    "target": "arrow_target",
+    "target": "projectile_target",
     "types": [
         "apotheosis:bow",
         "apotheosis:trident"

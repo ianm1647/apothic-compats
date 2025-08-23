@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.cataclysm;
 
-import com.github.L_Ender.cataclysm.init.ModItems;
 import com.github.L_Ender.cataclysm.items.Tooltier;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;

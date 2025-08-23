@@ -34,7 +34,7 @@ public class ModSlotGroups {
         public static final Holder<EntityEquipmentSlot> RING = slot("ring");
 
         private static Holder<EntityEquipmentSlot> slot(String slot) {
-            return R.<EntityEquipmentSlot, EntityEquipmentSlot>custom(slot, ALObjects.BuiltInRegs.ENTITY_EQUIPMENT_SLOT.key(), () -> new CurioEquipmentSlot(slot));
+            return R.customDH(slot, ALObjects.BuiltInRegs.ENTITY_EQUIPMENT_SLOT.key(), () -> new CurioEquipmentSlot(slot));
         }
 
         public static void bootstrap() {}

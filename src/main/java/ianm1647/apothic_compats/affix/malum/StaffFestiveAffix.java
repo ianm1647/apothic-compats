@@ -2,7 +2,6 @@ package ianm1647.apothic_compats.affix.malum;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.Affix;
 import dev.shadowsoffire.apotheosis.affix.AffixDefinition;
 import dev.shadowsoffire.apotheosis.affix.AffixInstance;

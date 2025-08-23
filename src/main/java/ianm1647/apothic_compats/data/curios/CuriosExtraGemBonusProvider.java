@@ -27,6 +27,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -44,7 +45,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
             ModLootCategories.CHARM, ModLootCategories.CURIO);
 
     @Override
-    public String getName() {
+    public @NotNull String getName() {
         return "Curios Extra Gem Bonuses";
     }
 
@@ -307,7 +308,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.FLAWLESS, 0.55)
                         .value(Purity.PERFECT, 0.7)));
 
-        addTwilightBonus(Apotheosis.loc("twilight/queen"), "twilightforest", b -> b
+        addTwilightBonus(Apotheosis.loc("twilight/queen"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.ARROW_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -316,7 +317,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.FLAWLESS, 0.35f)
                         .value(Purity.PERFECT, 0.5f)));
 
-        addTwilightBonus(Apotheosis.loc("twilight/forest"), "twilightforest", b -> b
+        addTwilightBonus(Apotheosis.loc("twilight/forest"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.CRIT_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
@@ -375,10 +376,10 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
         this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"));
     }
 
-    private void addTwilightBonus(ResourceLocation gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
+    private void addTwilightBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition("twilightforest"));
     }
 
     private void addModdedBonus(ResourceLocation gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {

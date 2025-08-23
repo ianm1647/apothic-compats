@@ -21,9 +21,9 @@
     "mob_effect": "undergarden:virulence",
     "stack_on_reapply": true,
     "stacking_limit": 3,
-    "target": "arrow_target",
+    "target": "projectile_target",
     "types": [
-        "apotheosis:melee_weapon",
+        "apotheosis:bow",
         "apotheosis:trident"
     ],
     "values": {

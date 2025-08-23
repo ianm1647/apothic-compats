@@ -54,7 +54,7 @@ dependencies {
     implementation "curse.maven:mekanismtools-268567:$mekanismtools_version"
     implementation "curse.maven:allthemodium-364466:$allthemodium_version"
     implementation "curse.maven:farmersdelight-398521:$farmersdelight_version"
-    //implementation "curse.maven:arselemental-561470:$arselemental_version"
+    implementation "curse.maven:arselemental-561470:$arselemental_version"
     implementation "curse.maven:ae2-223794:$ae2_version"
     implementation "curse.maven:cataclysm-551586:$cataclysm_version"
 

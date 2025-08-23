@@ -1,8 +1,5 @@
 package ianm1647.apothic_compats.data.allthemodium;
 
-import appeng.items.tools.fluix.FluixToolType;
-import appeng.items.tools.quartz.QuartzToolType;
-import com.thevortex.allthemodium.blocks.UNOB_Block;
 import com.thevortex.allthemodium.material.ATMTier;
 import com.thevortex.allthemodium.registry.ArmorRegistries;
 import com.thevortex.allthemodium.registry.ModRegistry;

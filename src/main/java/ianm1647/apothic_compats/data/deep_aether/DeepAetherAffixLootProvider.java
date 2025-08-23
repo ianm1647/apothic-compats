@@ -1,9 +1,5 @@
 package ianm1647.apothic_compats.data.deep_aether;
 
-import com.aetherteam.aether.item.AetherItems;
-import com.aetherteam.aether.item.combat.AetherArmorMaterials;
-import com.aetherteam.aether.item.combat.AetherItemTiers;
-import com.kyanite.deeperdarker.util.DDArmorMaterials;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
@@ -24,7 +20,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
-import org.checkerframework.checker.units.qual.A;
 
 import java.util.HashMap;
 import java.util.Map;

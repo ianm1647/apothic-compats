@@ -17,7 +17,7 @@
     "mob_effect": "ars_nouveau:mana_regen",
     "stack_on_reapply": true,
     "stacking_limit": 3,
-    "target": "attack_self",
+    "target": "projectile_target",
     "types": [
         "apotheosis:bow",
         "apotheosis:trident"
