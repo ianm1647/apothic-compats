@@ -9,7 +9,10 @@
             "modid": "ancientreforging"
         }
     ],
-    "type": "apothic_compats:staff_festive",
+    "type": "apotheosis:festive",
+    "categories": [
+        "apothic_compats:staff"
+    ],
     "definition": {
         "affix_type": "basic_effect",
         "exclusive_set": [],
@@ -20,9 +23,12 @@
     },
     "values": {
         "ancientreforging:ancient": {
-            "min": 0.09,
-            "max": 0.15,
-            "step": 0.005
+            "chance": {
+                "min": 0.05,
+                "max": 0.1,
+                "step": 0.005
+            },
+            "rolls": 20
         }
     }
 }

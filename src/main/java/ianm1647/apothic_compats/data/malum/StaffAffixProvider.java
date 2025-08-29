@@ -397,12 +397,12 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 200, 600, StepFunction.fromBounds(0, 1, 0.25F), 300)
                 .value(mythic, 200, 800, StepFunction.fromBounds(0, 2, 0.25F), 300));
 
-        this.addConditionally(ApothicCompats.loc("staff/festive"),
-                AffixBuilder.simple(StaffFestiveAffix::new)
+        this.addConditionally(ApothicCompats.loc("scythe/festive"),
+                FestiveAffix.builder()
+                        .categories(ModLootCategories.STAFF)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .step(0.005F)
-                        .value(epic, 0.02F, 0.05F)
-                        .value(mythic, 0.03F, 0.06F)
+                        .value(epic, StepFunction.fromBounds(0.02F, 0.05F, 0.005F), 20)
+                        .value(mythic, StepFunction.fromBounds(0.03F, 0.06F, 0.005F), 20)
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("staff/thunderstruck"),
@@ -429,10 +429,10 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/festive"),
-                AffixBuilder.simple(StaffFestiveAffix::new)
+                FestiveAffix.builder()
+                        .categories(ModLootCategories.STAFF)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .step(0.005F)
-                        .value(ancient, 0.09F, 0.15F)
+                        .value(ancient, StepFunction.fromBounds(0.05F, 0.1F, 0.005F), 20)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),

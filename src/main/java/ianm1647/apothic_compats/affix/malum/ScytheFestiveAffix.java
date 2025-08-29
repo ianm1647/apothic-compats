@@ -3,6 +3,7 @@ package ianm1647.apothic_compats.affix.malum;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import dev.shadowsoffire.apotheosis.affix.Affix;
+import dev.shadowsoffire.apotheosis.affix.AffixBuilder;
 import dev.shadowsoffire.apotheosis.affix.AffixDefinition;
 import dev.shadowsoffire.apotheosis.affix.AffixInstance;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
@@ -20,26 +21,30 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ScytheFestiveAffix extends Affix {
 
     public static Codec<ScytheFestiveAffix> CODEC = RecordCodecBuilder.create(inst -> inst
             .group(
                     affixDef(),
-                    LootRarity.mapCodec(StepFunction.CODEC).fieldOf("values").forGetter(a -> a.values))
+                    LootCategory.SET_CODEC.fieldOf("categories").forGetter(a -> a.categories),
+                    LootRarity.mapCodec(ScytheFestiveAffix.FestiveData.CODEC).fieldOf("values").forGetter(a -> a.values))
             .apply(inst, ScytheFestiveAffix::new));
 
-    protected final Map<LootRarity, StepFunction> values;
+    protected final Set<LootCategory> categories;
+    protected final Map<LootRarity, ScytheFestiveAffix.FestiveData> values;
 
-    public ScytheFestiveAffix(AffixDefinition def, Map<LootRarity, StepFunction> values) {
+    public ScytheFestiveAffix(AffixDefinition def, Set<LootCategory> categories, Map<LootRarity, ScytheFestiveAffix.FestiveData> values) {
         super(def);
+        this.categories = categories;
         this.values = values;
     }
 
@@ -59,16 +64,31 @@ public class ScytheFestiveAffix extends Affix {
 
     @Override
     public boolean canApplyTo(ItemStack stack, LootCategory cat, LootRarity rarity) {
-        return ModLootCategories.isScythe(cat) && this.values.containsKey(rarity);
+        return this.categories.contains(cat) && this.values.containsKey(rarity);
     }
 
     private float getTrueLevel(LootRarity rarity, float level) {
-        return this.values.get(rarity).get(level);
+        return this.values.get(rarity).chance().get(level);
     }
 
     // EventPriority.LOW
     public static void markEquipment(LivingDeathEvent e) {
-        if (e.getEntity() instanceof Player || e.getEntity().getPersistentData().getBoolean("apoth.no_pinata")) return;
+        if (e.getEntity() instanceof Player || e.getEntity().getPersistentData().getBoolean("apoth.no_pinata")) {
+            return;
+        }
+
+        IItemHandler inv = e.getEntity().getCapability(Capabilities.ItemHandler.ENTITY);
+
+        if (inv instanceof IItemHandlerModifiable iihm) {
+            for (int i = 0; i < inv.getSlots(); i++) {
+                ItemStack stack = inv.getStackInSlot(i);
+                if (!stack.isEmpty()) {
+                    ((IFestiveMarker) (Object) stack).setMarked(true);
+                    iihm.setStackInSlot(i, stack);
+                }
+            }
+        }
+
         e.getEntity().getAllSlots().forEach(i -> {
             if (!i.isEmpty()) {
                 ((IFestiveMarker) (Object) i).setMarked(true);
@@ -79,21 +99,27 @@ public class ScytheFestiveAffix extends Affix {
     @Override
     public void modifyEntityLoot(AffixInstance inst, LivingDropsEvent e) {
         LivingEntity dead = e.getEntity();
-        if (dead instanceof Player || dead.getPersistentData().getBoolean("apoth.no_pinata")) return;
+        if (dead instanceof Player || dead.getPersistentData().getBoolean("apoth.no_pinata")) {
+            return;
+        }
         if (e.getSource().getEntity() instanceof Player player && !e.getDrops().isEmpty()) {
             if (inst != null && inst.isValid() && player.level().random.nextFloat() < this.getTrueLevel(inst.rarity().get(), inst.level())) {
                 player.level().playSound(null, dead.getX(), dead.getY(), dead.getZ(), SoundEvents.GENERIC_EXPLODE, SoundSource.BLOCKS, 4.0F,
                         (1.0F + (player.level().random.nextFloat() - player.level().random.nextFloat()) * 0.2F) * 0.7F);
                 ((ServerLevel) player.level()).sendParticles(ParticleTypes.EXPLOSION_EMITTER, dead.getX(), dead.getY(), dead.getZ(), 2, 1.0D, 0.0D, 0.0D, 0);
+
                 List<ItemEntity> drops = new ArrayList<>(e.getDrops());
                 for (ItemEntity item : drops) {
                     if (((IFestiveMarker) (Object) item.getItem()).isMarked()) {
                         continue;
                     }
-                    for (int i = 0; i < 20; i++) {
+
+                    int rolls = this.values.get(inst.rarity().get()).rolls();
+                    for (int i = 0; i < rolls; i++) {
                         e.getDrops().add(new ItemEntity(player.level(), item.getX(), item.getY(), item.getZ(), item.getItem().copy()));
                     }
                 }
+
                 for (ItemEntity item : e.getDrops()) {
                     item.setPos(dead.getX(), dead.getY(), dead.getZ());
                     item.setDeltaMovement(-0.3 + dead.level().random.nextDouble() * 0.6, 0.3 + dead.level().random.nextDouble() * 0.3, -0.3 + dead.level().random.nextDouble() * 0.6);
@@ -115,4 +141,51 @@ public class ScytheFestiveAffix extends Affix {
     public Codec<? extends Affix> getCodec() {
         return CODEC;
     }
+
+    @Override
+    public boolean isLevelIndependent(AffixInstance inst) {
+        return this.values.get(inst.getRarity()).chance.isConstant();
+    }
+
+    public static ScytheFestiveAffix.Builder builder() {
+        return new ScytheFestiveAffix.Builder();
+    }
+
+    /**
+     * Data for the Festive Affix.
+     *
+     * @param chance The chance of the festive affix triggering, as a step function.
+     * @param rolls  The number of extra copies of items to drop when the affix triggers.
+     */
+    public static record FestiveData(StepFunction chance, int rolls) {
+
+        public static final Codec<ScytheFestiveAffix.FestiveData> CODEC = RecordCodecBuilder.create(inst -> inst
+                .group(
+                        StepFunction.CODEC.fieldOf("chance").forGetter(ScytheFestiveAffix.FestiveData::chance),
+                        Codec.INT.fieldOf("rolls").forGetter(ScytheFestiveAffix.FestiveData::rolls))
+                .apply(inst, ScytheFestiveAffix.FestiveData::new));
+    }
+
+    public static class Builder extends AffixBuilder<ScytheFestiveAffix.Builder> {
+
+        protected final Set<LootCategory> categories = new LinkedHashSet<>();
+        protected final Map<LootRarity, ScytheFestiveAffix.FestiveData> values = new HashMap<>();
+
+        public ScytheFestiveAffix.Builder categories(LootCategory... cats) {
+            for (LootCategory cat : cats) {
+                this.categories.add(cat);
+            }
+            return this;
+        }
+
+        public ScytheFestiveAffix.Builder value(LootRarity rarity, StepFunction chance, int rolls) {
+            this.values.put(rarity, new ScytheFestiveAffix.FestiveData(chance, rolls));
+            return this;
+        }
+
+        public ScytheFestiveAffix build() {
+            return new ScytheFestiveAffix(this.definition, this.categories, this.values);
+        }
+    }
+
 }
