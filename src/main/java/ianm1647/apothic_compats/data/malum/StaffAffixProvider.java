@@ -432,7 +432,7 @@ public class StaffAffixProvider extends AffixProvider {
                 FestiveAffix.builder()
                         .categories(ModLootCategories.STAFF)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(ancient, StepFunction.fromBounds(0.05F, 0.1F, 0.005F), 20)
+                        .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),

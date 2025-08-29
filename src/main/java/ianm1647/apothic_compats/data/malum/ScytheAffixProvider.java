@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.malum;
 
-import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
@@ -16,7 +15,6 @@ import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.affix.malum.ScytheCleavingAffix;
 import ianm1647.apothic_compats.affix.malum.ScytheExecutingAffix;
-import ianm1647.apothic_compats.affix.malum.ScytheFestiveAffix;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -270,7 +268,7 @@ public class ScytheAffixProvider extends AffixProvider {
                 FestiveAffix.builder()
                         .categories(ModLootCategories.SCYTHE)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(ancient, StepFunction.fromBounds(0.05F, 0.1F, 0.005F), 20)
+                        .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("scythe/ancient/thunderstruck"),

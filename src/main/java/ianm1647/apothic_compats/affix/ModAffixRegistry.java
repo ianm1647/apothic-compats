@@ -15,11 +15,9 @@ public class ModAffixRegistry {
         if (ModList.get().isLoaded("malum")) {
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("scythe_thunderstruck"), ScytheThunderstruckAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("scythe_executing"), ScytheExecutingAffix.CODEC);
-            AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("scythe_festive"), ScytheFestiveAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("scythe_cleaving"), ScytheCleavingAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("staff_thunderstruck"), StaffThunderstruckAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("staff_executing"), StaffExecutingAffix.CODEC);
-            AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("staff_festive"), StaffFestiveAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("staff_cleaving"), StaffCleavingAffix.CODEC);
         }
 
