@@ -26,9 +26,7 @@
     ],
     "definition": {
         "affix_type": "stat",
-        "exclusive_set": [
-            "apothic_compats:melee/attribute/vampiric"
-        ],
+        "exclusive_set": [],
         "weights": {
             "quality": 0.1,
             "weight": 25

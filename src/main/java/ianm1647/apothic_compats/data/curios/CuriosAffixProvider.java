@@ -245,9 +245,7 @@ public class CuriosAffixProvider extends AffixProvider {
                 .value(mythic, 0.45F, 0.6F));
 
         this.addAttribute("curios", "berserking", ALObjects.Attributes.OVERHEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, d -> d
-                        .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .exclusiveWith(afx("melee/attribute/vampiric")))
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .value(common, 0.1F, 0.2F)
                 .value(uncommon, 0.1F, 0.25F)
@@ -342,9 +340,7 @@ public class CuriosAffixProvider extends AffixProvider {
                 .value(ancient, 0.55F, 0.7F));
 
         this.addAncientAttribute("curios", "berserking", ALObjects.Attributes.OVERHEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, d -> d
-                        .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .exclusiveWith(afx("melee/attribute/vampiric")))
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .value(ancient, 0.4F, 0.55F));
 

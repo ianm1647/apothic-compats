@@ -1,6 +1,6 @@
-// 1.21.1	2025-07-09T21:40:28.494026	Curios Affixes
+// 1.21.1	2025-10-19T16:53:01.5199926	Curios Affixes
 82bb6c29991596a712f536cc5127071ff4d1b216 data/apothic_compats/affixes/curios/attribute/ancient/aquatic.json
-c7e9621ee78c2326a61eaa3eb4872eea7e4c9ded data/apothic_compats/affixes/curios/attribute/ancient/berserking.json
+fd70d1b12d59fe911b9e28c6066e0c2c149790c0 data/apothic_compats/affixes/curios/attribute/ancient/berserking.json
 c278b4ab14a24e35327fdcdfdea4b1ee3ce672b7 data/apothic_compats/affixes/curios/attribute/ancient/blessed.json
 b2ea23a7143c6ed6940962687a04e995234bf07c data/apothic_compats/affixes/curios/attribute/ancient/experienced.json
 50c97a2b34d347e2b5a31721179ade983fabbe34 data/apothic_compats/affixes/curios/attribute/ancient/fireproof.json
@@ -20,7 +20,7 @@ e0092c630d8db71a81ab7dbe53f3d4f71f6652e8 data/apothic_compats/affixes/curios/att
 93470602e9fb4db1ba2bde394e4e2e3364498063 data/apothic_compats/affixes/curios/attribute/ancient/vampiric.json
 e0ccd3ecfe166ba601b79ab266647e95bd953ae6 data/apothic_compats/affixes/curios/attribute/ancient/windswept.json
 d67a274b026c74b3bd0423b265c141006c22ad68 data/apothic_compats/affixes/curios/attribute/aquatic.json
-5bead721256032591e6977ef10fd416d532db7e5 data/apothic_compats/affixes/curios/attribute/berserking.json
+9347bae29d2bc487a12547df986ba0c933cf57f6 data/apothic_compats/affixes/curios/attribute/berserking.json
 89195ba8be1c175c679f9874e00c6aded6cda459 data/apothic_compats/affixes/curios/attribute/blessed.json
 8fabc3da8a390c96c5bad14dfb9083c771bddf37 data/apothic_compats/affixes/curios/attribute/experienced.json
 065fd1de56e2472b9867355a89130cdf80e9bf74 data/apothic_compats/affixes/curios/attribute/fireproof.json
