@@ -1,11 +1,11 @@
-// 1.21.1	2025-08-29T10:41:47.8775876	Malum Staff Affixes
-cc1930d5d468f98e0e842a6972b1777998e8db76 data/apothic_compats/affixes/scythe/festive.json
+// 1.21.1	2025-11-03T13:25:45.996764	Malum Staff Affixes
 02e2643068fc64371242dda98aed7318df445517 data/apothic_compats/affixes/staff/ancient/cleaving.json
 14706646f00a3de4c1cfa2d785ef180075f5770c data/apothic_compats/affixes/staff/ancient/executing.json
 245a13d654ecf45a5de59d1b8a7ced22b6b3e1af data/apothic_compats/affixes/staff/ancient/festive.json
 803df5a5606b0a928bf87859e844df37878c7ebb data/apothic_compats/affixes/staff/ancient/thunderstruck.json
 35b991aa43209cfabd66cec4916a697a39cc97c4 data/apothic_compats/affixes/staff/cleaving.json
 9e3aaadcddb18736750a43f91cd89826c9332c80 data/apothic_compats/affixes/staff/executing.json
+cc1930d5d468f98e0e842a6972b1777998e8db76 data/apothic_compats/affixes/staff/festive.json
 9f31ff644c7eb705cc384c02eb4dd4f4b97ff0a3 data/apothic_compats/affixes/staff/melee/attribute/ancient/berserking.json
 cc21ddb680c1014b7c07a5312ec55ef099224ca3 data/apothic_compats/affixes/staff/melee/attribute/ancient/forceful.json
 d5bbf325bea262aa65ebca361bcaa06ec52d623e data/apothic_compats/affixes/staff/melee/attribute/ancient/giant_slaying.json

@@ -397,7 +397,7 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 200, 600, StepFunction.fromBounds(0, 1, 0.25F), 300)
                 .value(mythic, 200, 800, StepFunction.fromBounds(0, 2, 0.25F), 300));
 
-        this.addConditionally(ApothicCompats.loc("scythe/festive"),
+        this.addConditionally(ApothicCompats.loc("staff/festive"),
                 FestiveAffix.builder()
                         .categories(ModLootCategories.STAFF)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
