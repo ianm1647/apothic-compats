@@ -1,0 +1,32 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:core/lunar",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "lodestone:magic_proficiency",
+            "gem_class": {
+                "key": "malum_weapon",
+                "types": [
+                    "apothic_compats:scythe",
+                    "apothic_compats:staff"
+                ]
+            },
+            "operation": "add_multiplied_base",
+            "values": {
+                "cracked": 0.15,
+                "chipped": 0.2,
+                "flawed": 0.25,
+                "normal": 0.3,
+                "flawless": 0.4,
+                "perfect": 0.5
+            }
+        }
+    ]
+}

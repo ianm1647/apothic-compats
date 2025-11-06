@@ -1,0 +1,32 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:core/breach",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "apothic_attributes:armor_shred",
+            "gem_class": {
+                "key": "malum_weapon",
+                "types": [
+                    "apothic_compats:scythe",
+                    "apothic_compats:staff"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "cracked": 0.02500000037252903,
+                "chipped": 0.05000000074505806,
+                "flawed": 0.07500000298023224,
+                "normal": 0.15000000596046448,
+                "flawless": 0.25,
+                "perfect": 0.4000000059604645
+            }
+        }
+    ]
+}

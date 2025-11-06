@@ -27,52 +27,12 @@
     },
     "bonuses": [
         {
-            "type": "apotheosis:attribute",
-            "attribute": "malum:spirit_spoils",
+            "type": "apotheosis:mob_effect",
             "gem_class": {
                 "key": "malum_weapon",
                 "types": [
                     "apothic_compats:scythe",
                     "apothic_compats:staff"
-                ]
-            },
-            "operation": "add_value",
-            "values": {
-                "cracked": 1.0,
-                "chipped": 2.0,
-                "flawed": 3.0,
-                "normal": 4.0,
-                "flawless": 5.0,
-                "perfect": 6.0
-            }
-        },
-        {
-            "type": "apotheosis:attribute",
-            "attribute": "malum:scythe_proficiency",
-            "gem_class": {
-                "key": "core_armor",
-                "types": [
-                    "apotheosis:chestplate",
-                    "apotheosis:leggings"
-                ]
-            },
-            "operation": "add_multiplied_base",
-            "values": {
-                "cracked": 0.15,
-                "chipped": 0.25,
-                "flawed": 0.35,
-                "normal": 0.45,
-                "flawless": 0.55,
-                "perfect": 0.65
-            }
-        },
-        {
-            "type": "apotheosis:mob_effect",
-            "gem_class": {
-                "key": "light_weapon",
-                "types": [
-                    "apotheosis:melee_weapon",
-                    "apotheosis:trident"
                 ]
             },
             "mob_effect": "malum:ascension",
@@ -102,6 +62,46 @@
                     "duration": 140,
                     "amplifier": 2
                 }
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "malum:scythe_proficiency",
+            "gem_class": {
+                "key": "core_armor",
+                "types": [
+                    "apotheosis:chestplate",
+                    "apotheosis:leggings"
+                ]
+            },
+            "operation": "add_multiplied_base",
+            "values": {
+                "cracked": 0.15,
+                "chipped": 0.25,
+                "flawed": 0.35,
+                "normal": 0.45,
+                "flawless": 0.55,
+                "perfect": 0.65
+            }
+        },
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "malum:spirit_spoils",
+            "gem_class": {
+                "key": "light_weapon",
+                "types": [
+                    "apotheosis:melee_weapon",
+                    "apotheosis:trident"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "cracked": 1.0,
+                "chipped": 2.0,
+                "flawed": 3.0,
+                "normal": 4.0,
+                "flawless": 5.0,
+                "perfect": 6.0
             }
         },
         {

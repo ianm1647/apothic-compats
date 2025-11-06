@@ -48,7 +48,7 @@ public class StarlightAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addMobEffect("melee", "crystallized", ESMobEffects.CRYSTALLINE_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET,b -> b
+        this.addMobEffect("melee", "crystallized", ESMobEffects.CRYSTAL_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET,b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()
@@ -56,7 +56,7 @@ public class StarlightAffixProvider extends AffixProvider {
                 .value(epic, 120, 200, 0, 80)
                 .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
 
-        this.addAncientMobEffect("melee", "crystallized", ESMobEffects.CRYSTALLINE_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
+        this.addAncientMobEffect("melee", "crystallized", ESMobEffects.CRYSTAL_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
                 .stacking()

@@ -20,6 +20,14 @@
 
 
 
+  "gem_class.dart_shooter": "Dart Shooter",
+  "loot_category.apothic_compats.dart_shooter": "Dart Shooter",
+  "loot_category.apothic_compats.dart_shooter.plural": "Dart Shooters",
+
+  "gem_class.potato_cannon": "Potato Cannon",
+  "loot_category.apothic_compats.potato_cannon": "Potato Cannon",
+  "loot_category.apothic_compats.potato_cannon.plural": "Potato Cannons",
+
   "gem_class.malum_weapon": "Scythes & Staves",
 
   "gem_class.scythe": "Scythes",
@@ -384,6 +392,8 @@
   "affix.apothic_compats:staff/ancient/thunderstruck.suffix": "of the Storm",
   "affix.apothic_compats:staff/ancient/thunderstruck.desc": "Your attacks deal %s damage to nearby enemies.",
 
+
+
   "affix.apothic_compats:dart_shooter/magical": "Magical",
   "affix.apothic_compats:dart_shooter/magical.suffix": "of the Arcane",
   "affix.apothic_compats:dart_shooter/magical.desc": "Your darts deal magic damage.",
@@ -463,6 +473,91 @@
 
   "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous": "Prosperous",
   "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous.suffix": "of the Treasure-Seeker",
+
+
+
+  "affix.apothic_compats:potato_cannon/magical": "Magical",
+  "affix.apothic_compats:potato_cannon/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:potato_cannon/magical.desc": "Your darts deal magic damage.",
+
+  "affix.apothic_compats:potato_cannon/ancient/magical": "Magical",
+  "affix.apothic_compats:potato_cannon/ancient/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:potato_cannon/ancient/magical.desc": "Your darts deal magic damage.",
+
+  "affix.apothic_compats:potato_cannon/attribute/elven": "Elven",
+  "affix.apothic_compats:potato_cannon/attribute/elven.suffix": "of the First Archer",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/blighted": "Blighted",
+  "affix.apothic_compats:potato_cannon/mob_effect/blighted.suffix": "of the Blighted Lands",
+
+  "affix.apothic_compats:potato_cannon/attribute/streamlined": "Streamlined",
+  "affix.apothic_compats:potato_cannon/attribute/streamlined.suffix": "of the Sniper",
+
+  "affix.apothic_compats:potato_cannon/attribute/windswept": "Windswept",
+  "affix.apothic_compats:potato_cannon/attribute/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:potato_cannon/attribute/agile": "Agile",
+  "affix.apothic_compats:potato_cannon/attribute/agile.suffix": "of Dexterity",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring": "Ensnaring",
+  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring.suffix": "of the Predator",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/fleeting": "Fleeting",
+  "affix.apothic_compats:potato_cannon/mob_effect/fleeting.suffix": "of the Ranger",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:potato_cannon/mob_effect/shulkers.suffix": "of Levitation",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced.suffix": "of Natural Toxins",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/acidic": "Acidic",
+  "affix.apothic_compats:potato_cannon/mob_effect/acidic.suffix": "of Corrosion",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/grievous": "Grievous",
+  "affix.apothic_compats:potato_cannon/mob_effect/grievous.suffix": "of Wounding",
+
+  "affix.apothic_compats:potato_cannon/enchantment/prosperous": "Prosperous",
+  "affix.apothic_compats:potato_cannon/enchantment/prosperous.suffix": "of the Treasure-Seeker",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/elven": "Elven",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/elven.suffix": "of the First Archer",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted": "Blighted",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined": "Streamlined",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined.suffix": "of the Sniper",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/agile": "Agile",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/agile.suffix": "of Dexterity",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring": "Ensnaring",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring.suffix": "of the Predator",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting": "Fleeting",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting.suffix": "of the Ranger",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers.suffix": "of Levitation",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic": "Acidic",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic.suffix": "of Corrosion",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous": "Grievous",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous.suffix": "of Wounding",
+
+  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed": "Reclaimed",
+  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed.suffix": "of the Redeemer",
+
+
+
 
   "affix.apothic_compats:staff/ranged/attribute/windswept": "Windswept",
   "affix.apothic_compats:staff/ranged/attribute/windswept.suffix": "of the Current",

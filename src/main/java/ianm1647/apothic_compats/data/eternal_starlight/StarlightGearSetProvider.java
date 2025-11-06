@@ -36,7 +36,6 @@ public class StarlightGearSetProvider extends GearSetProvider {
         addSet("frontier/eternal_starlight/amaramber", 25, 0, c -> c
                 .mainhand(new ItemStack(ESItems.AMARAMBER_AXE.get()), 10)
                 .mainhand(new ItemStack(ESItems.AMARAMBER_SHOVEL.get()), 10)
-                .helmet(new ItemStack(ESItems.AMARAMBER_HELMET.get()), 10)
                 .chestplate(new ItemStack(ESItems.AMARAMBER_CHESTPLATE.get()), 10)
                 .tag("frontier_melee"));
 

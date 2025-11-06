@@ -3,6 +3,7 @@ package ianm1647.apothic_compats.loot;
 import com.aetherteam.aether.item.combat.DartShooterItem;
 import com.sammy.malum.common.item.curiosities.weapons.scythe.MalumScytheItem;
 import com.sammy.malum.common.item.curiosities.weapons.staff.AbstractStaffItem;
+import com.simibubi.create.content.equipment.potatoCannon.PotatoCannonItem;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
@@ -22,6 +23,8 @@ public class ModLootCategories {
     public static final DeferredHelper R = DeferredHelper.create(ApothicCompats.MODID);
 
     public static LootCategory DART_SHOOTER;
+
+    public static LootCategory POTATO_CANNON;
 
     public static LootCategory SCYTHE;
     public static LootCategory STAFF;
@@ -43,6 +46,11 @@ public class ModLootCategories {
         if (ModList.get().isLoaded("aether")) {
             DART_SHOOTER = register("dart_shooter",
                     s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
+        }
+
+        if (ModList.get().isLoaded("create")) {
+            POTATO_CANNON = register("potato_cannon",
+                    s -> s.getItem() instanceof PotatoCannonItem, ALObjects.EquipmentSlotGroups.MAINHAND);
         }
 
         if (ModList.get().isLoaded("malum")) {
@@ -69,6 +77,10 @@ public class ModLootCategories {
 
     public static boolean isDartShooter(LootCategory cat) {
         return cat == DART_SHOOTER;
+    }
+
+    public static boolean isPotatoCannon(LootCategory cat) {
+        return cat == POTATO_CANNON;
     }
 
     public static boolean isScythe(LootCategory cat) {

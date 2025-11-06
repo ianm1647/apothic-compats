@@ -13,13 +13,13 @@
     },
     "stack": {
         "count": 1,
-        "id": "eternal_starlight:energy_sword"
+        "id": "eternal_starlight:gravity_pickaxe"
     },
     "weights": {
-        "ascent": {
-            "weight": 5
+        "frontier": {
+            "weight": 10
         },
-        "summit": {
+        "ascent": {
             "weight": 10
         }
     }

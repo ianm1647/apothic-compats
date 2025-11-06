@@ -1,0 +1,32 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:core/brawlers",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:generic.attack_damage",
+            "gem_class": {
+                "key": "malum_weapon",
+                "types": [
+                    "apothic_compats:scythe",
+                    "apothic_compats:staff"
+                ]
+            },
+            "operation": "add_value",
+            "values": {
+                "cracked": 1.0,
+                "chipped": 2.0,
+                "flawed": 3.5,
+                "normal": 5.0,
+                "flawless": 7.0,
+                "perfect": 10.0
+            }
+        }
+    ]
+}

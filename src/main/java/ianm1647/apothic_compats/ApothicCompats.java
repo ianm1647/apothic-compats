@@ -6,6 +6,7 @@ import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.affix.ModAffixRegistry;
 import ianm1647.apothic_compats.data.*;
+import ianm1647.apothic_compats.data.create.PotatoCannonAffixProvider;
 import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
 import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.curios.CuriosProvider;
@@ -25,6 +26,8 @@ import ianm1647.apothic_compats.data.mekanism.*;
 import ianm1647.apothic_compats.data.the_bumblezone.*;
 import ianm1647.apothic_compats.data.twilight.*;
 import ianm1647.apothic_compats.data.undergarden.*;
+import ianm1647.apothic_compats.event.AffixEvents;
+import ianm1647.apothic_compats.event.AttributeEvents;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import ianm1647.apothic_compats.util.ModSlotGroups;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
@@ -55,6 +58,8 @@ public class ApothicCompats {
 
     public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(new AffixEvents());
+        NeoForge.EVENT_BUS.register(new AttributeEvents());
         modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
 
         Comp.register(modEventBus);
@@ -106,6 +111,8 @@ public class ApothicCompats {
                 .provider(CataclysmAffixLootProvider::new)
                 .provider(CataclysmGearSetProvider::new)
                 .provider(CataclysmInvaderProvider::new)
+
+                .provider(PotatoCannonAffixProvider::new)
 
                 .provider(CuriosAffixLootProvider::new)
                 .provider(CuriosAffixProvider::new)

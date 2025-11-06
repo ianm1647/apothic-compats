@@ -1,0 +1,26 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:core/combatant",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "apothic_attributes:projectile_damage",
+            "gem_class": "apothic_compats:staff",
+            "operation": "add_value",
+            "values": {
+                "cracked": 0.1,
+                "chipped": 0.2,
+                "flawed": 0.3,
+                "normal": 0.4,
+                "flawless": 0.5,
+                "perfect": 0.6
+            }
+        }
+    ]
+}

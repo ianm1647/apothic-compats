@@ -1,3 +1,12 @@
-// 1.21.1	2025-07-09T21:40:28.4894371	Malum Extra Gem Bonuses
+// 1.21.1	2025-11-05T21:44:32.2943639	Malum Extra Gem Bonuses
 c9ee76c15cab71065a7cab19f99975b36830c44c data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/ballast.json
+2f2ef771a474431606c368b6b9240d16b56f8ca7 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/brawlers.json
+4736d06d42e64d52ac7175c15521e8279bd2678b data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/breach.json
+1d6daf9a8a8b48e7fc95982ac8dfb3b1bafb531c data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/combatant.json
+e11a1128a638b50d543c1656166897801b12a146 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/lunar.json
+a8dd4a7d7da2fce3466a6d1c9de6557e470e828b data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/slipstream.json
+fda8d948c623f0ef4a9bc0a967a6792d753a5816 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/splendor.json
+a95abbaa96f075e521c93541abf602f1bcb7ca20 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/core/warlord.json
 5458336cf04a838590d681d4eed65dae5f99e443 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/overworld/earth.json
+87c25103ce5f1290fd013f3d2ce3b943033c55d0 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/the_end/mageslayer.json
+7387cae57ded034559bde057f6cb74eb661ed954 data/apothic_compats/extra_gem_bonuses/malum/apotheosis/the_nether/inferno.json

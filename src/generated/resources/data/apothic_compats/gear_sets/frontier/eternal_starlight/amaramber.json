@@ -15,15 +15,6 @@
             "weight": 10
         }
     ],
-    "helmets": [
-        {
-            "stack": {
-                "count": 1,
-                "id": "eternal_starlight:amaramber_helmet"
-            },
-            "weight": 10
-        }
-    ],
     "mainhands": [
         {
             "stack": {

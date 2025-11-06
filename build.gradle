@@ -58,6 +58,8 @@ dependencies {
     implementation "curse.maven:arselemental-561470:$arselemental_version"
     implementation "curse.maven:ae2-223794:$ae2_version"
     implementation "curse.maven:cataclysm-551586:$cataclysm_version"
+    implementation "curse.maven:create-328085:$create_version"
+    implementation "curse.maven:immersiveengineering-231951:$ie_version"
 
     //compat deps
     implementation "curse.maven:moonlight-499980:$moonlight_version"
