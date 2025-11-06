@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.data.malum;
 
+import com.sammy.malum.MalumMod;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
@@ -27,6 +28,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
+import team.lodestar.lodestone.registry.common.LodestoneAttributes;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -51,6 +53,23 @@ public class ScytheAffixProvider extends AffixProvider {
         LootRarity epic = rarity("epic");
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
+
+        this.addAttribute("scythe", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.SCYTHE)
+                .value(uncommon, 0.05F, 0.25F)
+                .value(rare, 0.15F, 0.35F)
+                .value(epic, 0.18F, 0.48F)
+                .value(mythic, 0.25F, 0.55F));
+
+        this.addAttribute("curios", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.SCYTHE)
+                .value(common, 1F, 3F)
+                .value(uncommon, 2F, 4F)
+                .value(rare, 3F, 5F)
+                .value(epic, 4F, 6F)
+                .value(mythic, 5F, 7F));
 
         this.addAttribute("scythe", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
@@ -290,6 +309,16 @@ public class ScytheAffixProvider extends AffixProvider {
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, 0.35F, 0.6F)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addAncientAttribute("scythe", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.SCYTHE)
+                .value(ancient, 0.5F, 0.95F));
+
+        this.addAncientAttribute("curios", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.SCYTHE)
+                .value(ancient, 6F, 9F));
 
         this.addAncientAttribute("scythe", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d

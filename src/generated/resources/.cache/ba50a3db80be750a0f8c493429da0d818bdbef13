@@ -1,4 +1,8 @@
-// 1.21.1	2025-07-09T21:40:28.4945391	Malum Affixes
+// 1.21.1	2025-11-06T14:55:53.4155538	Malum Affixes
+fa360f1eb566778c060bdfc4b67d9ce3c5253112 data/apothic_compats/affixes/armor/attribute/abjured.json
+61f836ecde25ff4602038327847577048fa162be data/apothic_compats/affixes/armor/attribute/adept.json
+ef545de61456635748464b965185f2b3b87cd94c data/apothic_compats/affixes/armor/attribute/ancient/abjured.json
+6b6aeee6493edc970b95261f023e6efc10e69ae4 data/apothic_compats/affixes/armor/attribute/ancient/adept.json
 e11f2cde8b3b0649948c3a6267ddd3fd3ca4e4b6 data/apothic_compats/affixes/armor/attribute/ancient/malevolent.json
 40fb00f10fcd55bfea99ed9878792d6043ee77aa data/apothic_compats/affixes/armor/attribute/ancient/scythe_proficiency.json
 40b2badea5e5e06bbdfff27920702efbee09e819 data/apothic_compats/affixes/armor/attribute/ancient/ward_capacity.json

@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.data.malum;
 
+import com.sammy.malum.MalumMod;
 import com.sammy.malum.registry.common.MalumAttributes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
@@ -62,7 +63,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         ***
 
-        STAFF RANGED ATTRIBUTES
+        MALUM ATTRIBUTES
 
         ***
 
@@ -96,6 +97,59 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 6, 8)
                 .value(mythic, 8, 10));
 
+        this.addAttribute("staff/melee", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(uncommon, 0.05F, 0.25F)
+                .value(rare, 0.15F, 0.35F)
+                .value(epic, 0.18F, 0.48F)
+                .value(mythic, 0.25F, 0.55F));
+
+        this.addAttribute("staff/melee", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(common, 1F, 3F)
+                .value(uncommon, 2F, 4F)
+                .value(rare, 3F, 5F)
+                .value(epic, 4F, 6F)
+                .value(mythic, 5F, 7F));
+
+        this.addAncientAttribute("staff/ranged", "agile", MalumAttributes.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .step(-0.01F)
+                .value(ancient, -0.6f, -0.65f));
+
+        this.addAncientAttribute("staff/ranged", "capacious", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(ancient, 0.45f, 0.55f));
+
+        this.addAncientAttribute("staff/ranged", "ample", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(ancient, 12, 14));
+
+        this.addAncientAttribute("staff/melee", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(ancient, 0.5F, 0.95F));
+
+        this.addAncientAttribute("staff/melee", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ModLootCategories.STAFF)
+                .value(ancient, 6F, 9F));
+
+        /*
+
+        ***
+
+        STAFF RANGED ATTRIBUTES
+
+        ***
+
+        */
+
         this.addAttribute("staff/ranged", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ModLootCategories.STAFF)
@@ -104,6 +158,8 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(rare, 0.15F, 0.3F)
                 .value(epic, 0.15F, 0.35F)
                 .value(mythic, 0.2F, 0.4F));
+
+
 
         this.addMobEffect("staff/ranged", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -159,22 +215,6 @@ public class StaffAffixProvider extends AffixProvider {
                 .step(0.25F)
                 .value(epic, 2, 3)
                 .value(mythic, 3, 4));
-
-        this.addAncientAttribute("staff/ranged", "agile", MalumAttributes.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
-                .step(-0.01F)
-                .value(ancient, -0.6f, -0.65f));
-
-        this.addAncientAttribute("staff/ranged", "capacious", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
-                .value(ancient, 0.45f, 0.55f));
-
-        this.addAncientAttribute("staff/ranged", "ample", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
-                .value(ancient, 12, 14));
 
         this.addAncientAttribute("staff/ranged", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

@@ -28,6 +28,8 @@ public class ModLootCategories {
 
     public static LootCategory SCYTHE;
     public static LootCategory STAFF;
+    public static LootCategory BROOCH;
+    public static LootCategory RUNE;
 
     public static LootCategory BACK;
     public static LootCategory BELT;
@@ -58,6 +60,8 @@ public class ModLootCategories {
                     s -> s.getItem() instanceof MalumScytheItem, ALObjects.EquipmentSlotGroups.MAINHAND);
             STAFF = register("staff",
                     s -> s.getItem() instanceof AbstractStaffItem, ALObjects.EquipmentSlotGroups.MAINHAND);
+            BROOCH = register("brooch", s -> s.is(ModTags.Curios.BROOCH), ModSlotGroups.Groups.BROOCH);
+            RUNE = register("rune", s -> s.is(ModTags.Curios.RUNE), ModSlotGroups.Groups.RUNE);
         }
 
         if (ModList.get().isLoaded("curios")) {

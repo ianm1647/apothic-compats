@@ -1,4 +1,6 @@
-// 1.21.1	2025-08-29T10:41:47.8805948	Malum Scythe Affixes
+// 1.21.1	2025-11-06T15:24:15.337845	Malum Scythe Affixes
+b0a51dfafffdd91949217cd71b029c5b1c416746 data/apothic_compats/affixes/curios/attribute/ancient/mystic.json
+94d7779391a48f3a2e405f85100192a58283b378 data/apothic_compats/affixes/curios/attribute/mystic.json
 55677a52680d0e5c39869f53ec05815dc0f33c84 data/apothic_compats/affixes/scythe/ancient/cleaving.json
 6dbbc8b04f178c41d064103cd9ffa898482593d5 data/apothic_compats/affixes/scythe/ancient/executing.json
 bb64c813883ed32789fb32d4b25ac5af22e3d8e6 data/apothic_compats/affixes/scythe/ancient/festive.json
@@ -15,6 +17,7 @@ f5d89da96b8941c22ae18090d640869a92dd3b23 data/apothic_compats/affixes/scythe/att
 d575967531039965d4d8d315700a57bf5b46cbd5 data/apothic_compats/affixes/scythe/attribute/ancient/murderous.json
 c7452ffaca49e4b0027522ba46f440dc58904234 data/apothic_compats/affixes/scythe/attribute/ancient/piercing.json
 72d6b013cef09134120e21109a409940d8800bb1 data/apothic_compats/affixes/scythe/attribute/ancient/vampiric.json
+629140a21d08bf5e440b4075c9ede5841ecacb09 data/apothic_compats/affixes/scythe/attribute/ancient/vandalous.json
 8335fd8f9db1e7775b345624fd355befe9a1987d data/apothic_compats/affixes/scythe/attribute/ancient/violent.json
 f917c850f65623ededba3051cd03cbe660e76805 data/apothic_compats/affixes/scythe/attribute/berserking.json
 b453b93bc49de1a3ab190ec9942a044be2ae8390 data/apothic_compats/affixes/scythe/attribute/forceful.json
@@ -28,6 +31,7 @@ eef58898197f2d75ad9f4183b38c744f6066cc3c data/apothic_compats/affixes/scythe/att
 94d381727b03b3e8e2547445ee2d66cab190846c data/apothic_compats/affixes/scythe/attribute/murderous.json
 b774e8dd3951fab37d7cda026c43a0081ccd1730 data/apothic_compats/affixes/scythe/attribute/piercing.json
 4e2c1d6012fac8bcc9bb58fc4488690c83d51689 data/apothic_compats/affixes/scythe/attribute/vampiric.json
+3c3009394acf57bd66bdadc444e2b15b73051a65 data/apothic_compats/affixes/scythe/attribute/vandalous.json
 da8b365dc7374f7ea547db670b8075c43e257d0c data/apothic_compats/affixes/scythe/attribute/violent.json
 8cd26922d0f5294849ef3fc76715caa7769e2f68 data/apothic_compats/affixes/scythe/cleaving.json
 6201b605939e6b9ca2ec05dc29e26b740b3f36e9 data/apothic_compats/affixes/scythe/executing.json

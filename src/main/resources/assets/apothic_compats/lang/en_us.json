@@ -82,6 +82,16 @@
   "affix.apothic_compats:armor/attribute/ward_integrity.suffix": "of Souls",
   "affix.apothic_compats:armor/attribute/ancient/ward_integrity.suffix": "of Souls",
 
+  "affix.apothic_compats:armor/attribute/abjured": "Abjured",
+  "affix.apothic_compats:armor/attribute/ancient/abjured": "Abjured",
+  "affix.apothic_compats:armor/attribute/abjured.suffix": "of Reluctance",
+  "affix.apothic_compats:armor/attribute/ancient/abjured.suffix": "of Reluctance",
+
+  "affix.apothic_compats:armor/attribute/adept": "Adept",
+  "affix.apothic_compats:armor/attribute/ancient/adept": "Adept",
+  "affix.apothic_compats:armor/attribute/adept.suffix": "of Skillfulness",
+  "affix.apothic_compats:armor/attribute/ancient/adept.suffix": "of Skillfulness",
+
   "affix.apothic_compats:armor/attribute/scythe_proficiency": "Reaping",
   "affix.apothic_compats:armor/attribute/ancient/scythe_proficiency": "Reaping",
   "affix.apothic_compats:armor/attribute/scythe_proficiency.suffix": "of the Spirit",
@@ -216,6 +226,26 @@
   "affix.apothic_compats:curios/attribute/regenerative.suffix": "of the Queen of Hearts",
   "affix.apothic_compats:curios/attribute/ancient/regenerative.suffix": "of the Queen of Hearts",
 
+  "affix.apothic_compats:curios/attribute/abjured": "Abjured",
+  "affix.apothic_compats:curios/attribute/ancient/abjured": "Abjured",
+  "affix.apothic_compats:curios/attribute/abjured.suffix": "of Reluctance",
+  "affix.apothic_compats:curios/attribute/ancient/abjured.suffix": "of Reluctance",
+
+  "affix.apothic_compats:curios/attribute/vandalous": "Vandalous",
+  "affix.apothic_compats:curios/attribute/ancient/vandalous": "Vandalous",
+  "affix.apothic_compats:curios/attribute/vandalous.suffix": "of the Sly",
+  "affix.apothic_compats:curios/attribute/ancient/vandalous.suffix": "of the Sly",
+
+  "affix.apothic_compats:curios/attribute/mystic": "Mystic",
+  "affix.apothic_compats:curios/attribute/ancient/mystic": "Mystic",
+  "affix.apothic_compats:curios/attribute/mystic.suffix": "of Thaumaturgy",
+  "affix.apothic_compats:curios/attribute/ancient/mystic.suffix": "of Thaumaturgy",
+
+  "affix.apothic_compats:curios/attribute/adept": "Adept",
+  "affix.apothic_compats:curios/attribute/ancient/adept": "Adept",
+  "affix.apothic_compats:curios/attribute/adept.suffix": "of Skillfulness",
+  "affix.apothic_compats:curios/attribute/ancient/adept.suffix": "of Skillfulness",
+
   "affix.apothic_compats:curios/attribute/lucky": "Lucky",
   "affix.apothic_compats:curios/attribute/lucky.suffix": "of the Serendipitous",
 
@@ -252,11 +282,17 @@
   "affix.apothic_compats:curios/attribute/submerged": "Submerged",
   "affix.apothic_compats:curios/attribute/submerged.suffix": "of the Seaborn Miner",
 
+  "affix.apothic_compats:curios/attribute/adamantine": "Adamantine",
+  "affix.apothic_compats:curios/attribute/adamantine.suffix": "of Adamantine",
+
   "affix.apothic_compats:curios/attribute/vampiric": "Vampiric",
   "affix.apothic_compats:curios/attribute/vampiric.suffix": "of Bloodletting",
 
   "affix.apothic_compats:curios/attribute/murderous": "Murderous",
   "affix.apothic_compats:curios/attribute/murderous.suffix": "of the Minotaur",
+
+  "affix.apothic_compats:curios/attribute/intricate": "Intricate",
+  "affix.apothic_compats:curios/attribute/intricate.suffix": "of Critical Thinking",
 
   "affix.apothic_compats:curios/attribute/lacerating": "Lacerating",
   "affix.apothic_compats:curios/attribute/lacerating.suffix": "of Surgical Precision",
@@ -266,6 +302,9 @@
 
   "affix.apothic_compats:curios/attribute/berserking": "Berserking",
   "affix.apothic_compats:curios/attribute/berserking.suffix": "of the Berserker",
+
+  "affix.apothic_compats:curios/attribute/destructive": "Destructive",
+  "affix.apothic_compats:curios/attribute/destructive.suffix": "of Quarrying",
 
   "affix.apothic_compats:curios/attribute/ancient/lucky": "Lucky",
   "affix.apothic_compats:curios/attribute/ancient/lucky.suffix": "of the Serendipitous",
@@ -303,11 +342,17 @@
   "affix.apothic_compats:curios/attribute/ancient/submerged": "Submerged",
   "affix.apothic_compats:curios/attribute/ancient/submerged.suffix": "of the Seaborn Miner",
 
+  "affix.apothic_compats:curios/attribute/ancient/adamantine": "Adamantine",
+  "affix.apothic_compats:curios/attribute/ancient/adamantine.suffix": "of Adamantine",
+
   "affix.apothic_compats:curios/attribute/ancient/vampiric": "Vampiric",
   "affix.apothic_compats:curios/attribute/ancient/vampiric.suffix": "of Bloodletting",
 
   "affix.apothic_compats:curios/attribute/ancient/murderous": "Murderous",
   "affix.apothic_compats:curios/attribute/ancient/murderous.suffix": "of the Minotaur",
+
+  "affix.apothic_compats:curios/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:curios/attribute/ancient/intricate.suffix": "of Critical Thinking",
 
   "affix.apothic_compats:curios/attribute/ancient/lacerating": "Lacerating",
   "affix.apothic_compats:curios/attribute/ancient/lacerating.suffix": "of Surgical Precision",
@@ -317,6 +362,9 @@
 
   "affix.apothic_compats:curios/attribute/ancient/berserking": "Berserking",
   "affix.apothic_compats:curios/attribute/ancient/berserking.suffix": "of the Berserker",
+
+  "affix.apothic_compats:curios/attribute/ancient/destructive": "Destructive",
+  "affix.apothic_compats:curios/attribute/ancient/destructive.suffix": "of Quarrying",
 
 
 
@@ -558,6 +606,15 @@
 
 
 
+  "affix.apothic_compats:staff/melee/attribute/vandalous": "Vandalous",
+  "affix.apothic_compats:staff/melee/attribute/ancient/vandalous": "Vandalous",
+  "affix.apothic_compats:staff/melee/attribute/vandalous.suffix": "of the Sly",
+  "affix.apothic_compats:staff/melee/attribute/ancient/vandalous.suffix": "of the Sly",
+
+  "affix.apothic_compats:staff/melee/attribute/mystic": "Mystic",
+  "affix.apothic_compats:staff/melee/attribute/ancient/mystic": "Mystic",
+  "affix.apothic_compats:staff/melee/attribute/mystic.suffix": "of Thaumaturgy",
+  "affix.apothic_compats:staff/melee/attribute/ancient/mystic.suffix": "of Thaumaturgy",
 
   "affix.apothic_compats:staff/ranged/attribute/windswept": "Windswept",
   "affix.apothic_compats:staff/ranged/attribute/windswept.suffix": "of the Current",
@@ -786,6 +843,18 @@
 
   "affix.apothic_compats:staff/melee/mob_effect/ancient/weakening": "Weakening",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/weakening.suffix": "of Weakness",
+
+
+
+  "affix.apothic_compats:scythe/melee/attribute/vandalous": "Vandalous",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/vandalous": "Vandalous",
+  "affix.apothic_compats:scythe/melee/attribute/vandalous.suffix": "of the Sly",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/vandalous.suffix": "of the Sly",
+
+  "affix.apothic_compats:scythe/melee/attribute/mystic": "Mystic",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/mystic": "Mystic",
+  "affix.apothic_compats:scythe/melee/attribute/mystic.suffix": "of Thaumaturgy",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/mystic.suffix": "of Thaumaturgy",
 
   "affix.apothic_compats:scythe/attribute/violent": "Violent",
   "affix.apothic_compats:scythe/attribute/violent.suffix": "of Slaying",

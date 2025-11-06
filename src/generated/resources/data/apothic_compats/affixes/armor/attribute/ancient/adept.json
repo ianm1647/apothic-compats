@@ -1,0 +1,35 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "lodestone:magic_proficiency",
+    "categories": [
+        "apotheosis:helmet",
+        "apotheosis:chestplate",
+        "apotheosis:leggings",
+        "apotheosis:boots"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "quality": 0.1,
+            "weight": 25
+        }
+    },
+    "operation": "add_multiplied_base",
+    "values": {
+        "ancientreforging:ancient": {
+            "min": 0.6,
+            "max": 0.7
+        }
+    }
+}

@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.data.malum;
 
+import com.sammy.malum.MalumMod;
 import com.sammy.malum.registry.common.MalumAttributes;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
@@ -19,6 +20,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
+import team.lodestar.lodestone.registry.common.LodestoneAttributes;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -69,6 +71,31 @@ public class MalumAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(ARMOR)
                 .value(ancient, 0.5f, 0.6f));
+
+        this.addAttribute("armor", "abjured", LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ARMOR)
+                .value(uncommon, 0.05f,0.15f)
+                .value(rare, 0.15f,0.25f)
+                .value(epic, 0.25f,0.35f)
+                .value(mythic, 0.35f,0.45f));
+
+        this.addAncientAttribute("armor", "abjured", LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ARMOR)
+                .value(ancient, 0.45f,0.55f));
+
+        this.addAttribute("armor", "adept", LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ARMOR)
+                .value(rare, 0.3F, 0.4F)
+                .value(epic, 0.4F, 0.5F)
+                .value(mythic, 0.5F, 0.6F));
+
+        this.addAncientAttribute("armor", "adept", LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(ARMOR)
+                .value(ancient, 0.6F, 0.7F));
 
         this.addAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

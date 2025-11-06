@@ -1,0 +1,40 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "lodestone:magic_damage",
+    "categories": [
+        "apothic_compats:scythe"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "quality": 0.1,
+            "weight": 25
+        }
+    },
+    "operation": "add_multiplied_base",
+    "values": {
+        "apotheosis:uncommon": {
+            "min": 0.05,
+            "max": 0.25
+        },
+        "apotheosis:rare": {
+            "min": 0.15,
+            "max": 0.35
+        },
+        "apotheosis:epic": {
+            "min": 0.18,
+            "max": 0.48
+        },
+        "apotheosis:mythic": {
+            "min": 0.25,
+            "max": 0.55
+        }
+    }
+}

@@ -33,6 +33,9 @@ public class ModSlotGroups {
         public static final Holder<EntityEquipmentSlot> NECKLACE = slot("necklace");
         public static final Holder<EntityEquipmentSlot> RING = slot("ring");
 
+        public static final Holder<EntityEquipmentSlot> BROOCH = slot("brooch");
+        public static final Holder<EntityEquipmentSlot> RUNE = slot("rune");
+
         private static Holder<EntityEquipmentSlot> slot(String slot) {
             return R.customDH(slot, ALObjects.BuiltInRegs.ENTITY_EQUIPMENT_SLOT.key(), () -> new CurioEquipmentSlot(slot));
         }
@@ -52,6 +55,9 @@ public class ModSlotGroups {
         public static final EntitySlotGroup HEAD = group("head", HolderSet.direct(Slots.HEAD));
         public static final EntitySlotGroup NECKLACE = group("necklace", HolderSet.direct(Slots.NECKLACE));
         public static final EntitySlotGroup RING = group("ring", HolderSet.direct(Slots.RING));
+
+        public static final EntitySlotGroup BROOCH = group("brooch", HolderSet.direct(Slots.BROOCH));
+        public static final EntitySlotGroup RUNE = group("rune", HolderSet.direct(Slots.RUNE));
 
         public static final EntitySlotGroup CURIOS = group("curios", HolderSet.direct(
                 Slots.BACK, Slots.BELT, Slots.BODY, Slots.BRACELET, Slots.CHARM,

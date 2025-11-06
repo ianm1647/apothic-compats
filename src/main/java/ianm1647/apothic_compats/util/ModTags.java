@@ -11,6 +11,8 @@ public class ModTags {
     public static class Curios {
         public static final TagKey<Item> FEET = CuriosTags.createItemTag("feet");
 
+        public static final TagKey<Item> BROOCH = CuriosTags.createItemTag("brooch");
+        public static final TagKey<Item> RUNE = CuriosTags.createItemTag("rune");
     }
 
     public static class Items {

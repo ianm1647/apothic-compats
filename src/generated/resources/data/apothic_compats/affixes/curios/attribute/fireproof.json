@@ -18,7 +18,9 @@
         "apothic_compats:hands",
         "apothic_compats:head",
         "apothic_compats:necklace",
-        "apothic_compats:ring"
+        "apothic_compats:ring",
+        "apothic_compats:brooch",
+        "apothic_compats:rune"
     ],
     "definition": {
         "affix_type": "stat",

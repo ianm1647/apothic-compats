@@ -1,2 +1,8 @@
-// 1.21.1	2025-07-09T21:40:28.4711717	Curios for apothic_compats
-d4cb591f14e0a48f78c5ebe924b4b86f90acef1b data/apothic_compats/curios/entities/entities.json
+// 1.21.1	2025-11-06T10:14:59.4042478	Curios for apothic_compats
+916f9dcdaf272f5a1ad64366e842e34b54965e33 data/apothic_compats/curios/entities/entities.json
+387a82c911eb172cbb6b10e0dd9fb8b15efc1ca2 data/apothic_compats/curios/slots/back.json
+387a82c911eb172cbb6b10e0dd9fb8b15efc1ca2 data/apothic_compats/curios/slots/body.json
+6f8d614fef8949efcb7bebf26c1dc67a838a7c17 data/apothic_compats/curios/slots/bracelet.json
+1c4d2079d4bcabd24dcea0ff8f8a487f310a9a41 data/apothic_compats/curios/slots/charm.json
+387a82c911eb172cbb6b10e0dd9fb8b15efc1ca2 data/apothic_compats/curios/slots/curio.json
+6f8d614fef8949efcb7bebf26c1dc67a838a7c17 data/apothic_compats/curios/slots/feet.json
