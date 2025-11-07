@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.MalumMod;
 import com.sammy.malum.registry.common.MalumAttributes;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;

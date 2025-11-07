@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.MalumMod;
 import com.sammy.malum.registry.common.MalumAttributes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
@@ -55,7 +54,6 @@ public class StaffAffixProvider extends AffixProvider {
         LootRarity epic = rarity("epic");
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
-
 
         HolderLookup.RegistryLookup<Enchantment> enchants = this.lookupProvider.join().lookup(Registries.ENCHANTMENT).get();
 
@@ -158,8 +156,6 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(rare, 0.15F, 0.3F)
                 .value(epic, 0.15F, 0.35F)
                 .value(mythic, 0.2F, 0.4F));
-
-
 
         this.addMobEffect("staff/ranged", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -462,7 +458,8 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("staff/executing"),
-                AffixBuilder.simple(StaffExecutingAffix::new)
+                AffixBuilder.categorized(ExecutingAffix::new)
+                        .categories(ModLootCategories.STAFF)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(epic, 0.10F, 0.20F)
                         .value(mythic, 0.15F, 0.25F)
@@ -490,7 +487,8 @@ public class StaffAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/executing"),
-                AffixBuilder.simple(StaffExecutingAffix::new)
+                AffixBuilder.categorized(ExecutingAffix::new)
+                        .categories(ModLootCategories.STAFF)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, 0.35F, 0.6F)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));

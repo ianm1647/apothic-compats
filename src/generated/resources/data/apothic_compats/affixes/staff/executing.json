@@ -5,7 +5,10 @@
             "modid": "malum"
         }
     ],
-    "type": "apothic_compats:staff_executing",
+    "type": "apotheosis:executing",
+    "categories": [
+        "apothic_compats:staff"
+    ],
     "definition": {
         "affix_type": "ability",
         "exclusive_set": [],

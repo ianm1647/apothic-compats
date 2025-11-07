@@ -70,7 +70,13 @@
 
 
 
+  "affix.apothic_compats:melee/bloodied": "Bloody",
+  "affix.apothic_compats:melee/bloodied.suffix": "of Flesh",
+  "affix.apothic_compats:melee/bloodied.desc": "You deal up to %s more damage the lower your health is.",
 
+  "affix.apothic_compats:melee/ancient/bloodied": "Bloody",
+  "affix.apothic_compats:melee/ancient/bloodied.suffix": "of Flesh",
+  "affix.apothic_compats:melee/ancient/bloodied.desc": "You deal up to %s more damage the lower your health is.",
 
   "affix.apothic_compats:armor/attribute/ward_capacity": "Warded",
   "affix.apothic_compats:armor/attribute/ancient/ward_capacity": "Warded",

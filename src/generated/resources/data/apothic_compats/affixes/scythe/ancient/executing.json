@@ -9,7 +9,10 @@
             "modid": "ancientreforging"
         }
     ],
-    "type": "apothic_compats:scythe_executing",
+    "type": "apotheosis:executing",
+    "categories": [
+        "apothic_compats:scythe"
+    ],
     "definition": {
         "affix_type": "ability",
         "exclusive_set": [],

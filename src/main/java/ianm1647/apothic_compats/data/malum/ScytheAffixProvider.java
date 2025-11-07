@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.MalumMod;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
@@ -15,7 +14,6 @@ import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.affix.malum.ScytheCleavingAffix;
-import ianm1647.apothic_compats.affix.malum.ScytheExecutingAffix;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -277,7 +275,8 @@ public class ScytheAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("scythe/executing"),
-                AffixBuilder.simple(ScytheExecutingAffix::new)
+                AffixBuilder.categorized(ExecutingAffix::new)
+                        .categories(ModLootCategories.SCYTHE)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(epic, 0.10F, 0.20F)
                         .value(mythic, 0.15F, 0.25F)
@@ -305,7 +304,8 @@ public class ScytheAffixProvider extends AffixProvider {
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("scythe/ancient/executing"),
-                AffixBuilder.simple(ScytheExecutingAffix::new)
+                AffixBuilder.categorized(ExecutingAffix::new)
+                        .categories(ModLootCategories.SCYTHE)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, 0.35F, 0.6F)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));

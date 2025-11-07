@@ -76,7 +76,6 @@ public class ApothicCompats {
         CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
         ExistingFileHelper helper = e.getExistingFileHelper();
 
-
         TagProvider.Blocks blockTags = new TagProvider.Blocks(output, lookupProvider, helper);
         generator.addProvider(e.includeServer(), blockTags);
         generator.addProvider(e.includeServer(), new TagProvider.Items(output, lookupProvider, blockTags.contentsGetter(), helper));

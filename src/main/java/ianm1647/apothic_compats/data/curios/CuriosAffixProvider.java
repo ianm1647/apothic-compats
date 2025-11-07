@@ -39,7 +39,7 @@ public class CuriosAffixProvider extends AffixProvider {
     public static final LootCategory[] CURIOS = {
             ModLootCategories.BACK, ModLootCategories.BELT, ModLootCategories.BODY, ModLootCategories.BRACELET, ModLootCategories.CHARM,
             ModLootCategories.CURIO, ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.HEAD, ModLootCategories.NECKLACE,
-            ModLootCategories.RING, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
+            ModLootCategories.RING
     };
 
     public CuriosAffixProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

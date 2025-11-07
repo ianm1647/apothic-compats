@@ -1,8 +1,8 @@
-// 1.21.1	2025-11-06T15:24:15.337845	Malum Scythe Affixes
+// 1.21.1	2025-11-07T15:03:36.4976227	Malum Scythe Affixes
 b0a51dfafffdd91949217cd71b029c5b1c416746 data/apothic_compats/affixes/curios/attribute/ancient/mystic.json
 94d7779391a48f3a2e405f85100192a58283b378 data/apothic_compats/affixes/curios/attribute/mystic.json
 55677a52680d0e5c39869f53ec05815dc0f33c84 data/apothic_compats/affixes/scythe/ancient/cleaving.json
-6dbbc8b04f178c41d064103cd9ffa898482593d5 data/apothic_compats/affixes/scythe/ancient/executing.json
+193c9ff454e02c3afc8b1b1edad73cb20c22a0bd data/apothic_compats/affixes/scythe/ancient/executing.json
 bb64c813883ed32789fb32d4b25ac5af22e3d8e6 data/apothic_compats/affixes/scythe/ancient/festive.json
 a193be7b8c9186310ee514deffab8fe148933103 data/apothic_compats/affixes/scythe/ancient/thunderstruck.json
 3507b997338cd1f7068646506794a45f86878a36 data/apothic_compats/affixes/scythe/attribute/ancient/berserking.json
@@ -34,7 +34,7 @@ b774e8dd3951fab37d7cda026c43a0081ccd1730 data/apothic_compats/affixes/scythe/att
 3c3009394acf57bd66bdadc444e2b15b73051a65 data/apothic_compats/affixes/scythe/attribute/vandalous.json
 da8b365dc7374f7ea547db670b8075c43e257d0c data/apothic_compats/affixes/scythe/attribute/violent.json
 8cd26922d0f5294849ef3fc76715caa7769e2f68 data/apothic_compats/affixes/scythe/cleaving.json
-6201b605939e6b9ca2ec05dc29e26b740b3f36e9 data/apothic_compats/affixes/scythe/executing.json
+6592ba0c18729b841dc09e1b6d71c2616f4668db data/apothic_compats/affixes/scythe/executing.json
 61dff1dd481044f2c5aa4aa7046ad882a038139a data/apothic_compats/affixes/scythe/festive.json
 52c9ebdeb82a53ce083d638f1826c64323901e72 data/apothic_compats/affixes/scythe/mob_effect/ancient/bloodletting.json
 ae50788db2aab1062e7dff1acc6b8127f1c1204d data/apothic_compats/affixes/scythe/mob_effect/ancient/caustic.json
