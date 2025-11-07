@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-09T21:40:28.4975788	Curios Extra Gem Bonuses
+// 1.21.1	2025-11-06T17:52:20.9070074	Curios Extra Gem Bonuses
 0e32d4d7550e82a2faf5fb9928b44671e4480493 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/ballast.json
 d076a53a5180d8bbbc6cdcd238dc05eff34f068b data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/brawlers.json
 ad3c6b8b41b50fb5ea61be3c70ed47781c53fffb data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/breach.json
@@ -6,7 +6,7 @@ ad3c6b8b41b50fb5ea61be3c70ed47781c53fffb data/apothic_compats/extra_gem_bonuses/
 7e8d4e7034c3e0595a8c463b77a89d4ae7769cc3 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/guardian.json
 dd3bccf67beddd21a87e9521ee3065af2b5dac70 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/lightning.json
 88d27dceff58c6baefe86ba4f23611aba7469aa5 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/lunar.json
-52872096ae8e3c59c16709d8cad50ab6d2947547 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/samurai.json
+3617424aa3445f5bb1b92d9dd396c6124b51366e data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/samurai.json
 642bef975a244812819a0014ef81913f9ecc17e4 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/slipstream.json
 69d1acfc49126ab13a334b5f76baf6066795736f data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/solar.json
 52ab419050e3c4b318ec2382fef0e2fa1f044f62 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/core/splendor.json
@@ -20,7 +20,7 @@ c433599d5421c4eb86da29e388f0159c15b12158 data/apothic_compats/extra_gem_bonuses/
 e87c0e0d91d3ad1a03a4ee8045fbb4ef2170b73f data/apothic_compats/extra_gem_bonuses/curios/apotheosis/the_nether/inferno.json
 e7c1687f34f4d91d21cff76bfe55070644c4c4bd data/apothic_compats/extra_gem_bonuses/curios/apotheosis/the_nether/molten_breach.json
 803ce33de25c045e1aaa25b642f0a1b67d25e1bf data/apothic_compats/extra_gem_bonuses/curios/apotheosis/twilight/forest.json
-64c886e1f9e178358e4183f0dd11d551a4ebbf77 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/twilight/queen.json
+960a480add0713c10df4bcc0b1ad77dca06a0bd2 data/apothic_compats/extra_gem_bonuses/curios/apotheosis/twilight/queen.json
 2dffe11cea11ab47797d1845fd3df2010e5e4cf4 data/apothic_compats/extra_gem_bonuses/curios/ars_nouveau/mana.json
 bb0b4a1b22dc2b9b4768ad0692df83117bc94aec data/apothic_compats/extra_gem_bonuses/curios/malum/etheric.json
 eba4edaf4fc187a813ab179c7e0ec54d86dd1ae7 data/apothic_compats/extra_gem_bonuses/curios/malum/soul_stained.json

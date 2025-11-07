@@ -2,17 +2,34 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
-            "modid": "malum"
+            "modid": "curios"
         },
         {
             "type": "neoforge:mod_loaded",
-            "modid": "ancientreforging"
+            "modid": "ars_nouveau"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
         }
     ],
     "type": "apotheosis:attribute",
     "attribute": "lodestone:magic_damage",
     "categories": [
-        "apothic_compats:scythe"
+        "apothic_compats:back",
+        "apothic_compats:belt",
+        "apothic_compats:body",
+        "apothic_compats:bracelet",
+        "apothic_compats:charm",
+        "apothic_compats:curio",
+        "apothic_compats:feet",
+        "apothic_compats:hands",
+        "apothic_compats:head",
+        "apothic_compats:necklace",
+        "apothic_compats:ring",
+        "apothic_compats:brooch",
+        "apothic_compats:rune",
+        "apothic_compats:an_focus"
     ],
     "definition": {
         "affix_type": "stat",
@@ -22,11 +39,11 @@
             "weight": 25
         }
     },
-    "operation": "add_value",
+    "operation": "add_multiplied_base",
     "values": {
         "ancientreforging:ancient": {
-            "min": 6.0,
-            "max": 9.0
+            "min": 4.0,
+            "max": 6.0
         }
     }
 }

@@ -24,7 +24,8 @@
         "apothic_compats:necklace",
         "apothic_compats:ring",
         "apothic_compats:brooch",
-        "apothic_compats:rune"
+        "apothic_compats:rune",
+        "apothic_compats:an_focus"
     ],
     "definition": {
         "affix_type": "stat",
@@ -37,8 +38,8 @@
     "operation": "add_multiplied_total",
     "values": {
         "ancientreforging:ancient": {
-            "min": 0.55,
-            "max": 0.85
+            "min": 0.35,
+            "max": 0.55
         }
     }
 }

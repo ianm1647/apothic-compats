@@ -1,6 +1,7 @@
 package ianm1647.apothic_compats.loot;
 
 import com.aetherteam.aether.item.combat.DartShooterItem;
+import com.hollingsworth.arsnouveau.api.item.ArsNouveauCurio;
 import com.sammy.malum.common.item.curiosities.weapons.scythe.MalumScytheItem;
 import com.sammy.malum.common.item.curiosities.weapons.staff.AbstractStaffItem;
 import com.simibubi.create.content.equipment.potatoCannon.PotatoCannonItem;
@@ -28,8 +29,6 @@ public class ModLootCategories {
 
     public static LootCategory SCYTHE;
     public static LootCategory STAFF;
-    public static LootCategory BROOCH;
-    public static LootCategory RUNE;
 
     public static LootCategory BACK;
     public static LootCategory BELT;
@@ -43,11 +42,21 @@ public class ModLootCategories {
     public static LootCategory NECKLACE;
     public static LootCategory RING;
 
+    public static LootCategory AN_FOCUS;
+
+    public static LootCategory BROOCH;
+    public static LootCategory RUNE;
+
     public static void registerLootCategories(IEventBus bus) {
         bus.register(R);
         if (ModList.get().isLoaded("aether")) {
             DART_SHOOTER = register("dart_shooter",
                     s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
+        }
+
+        if (ModList.get().isLoaded("ars_nouveau")) {
+            AN_FOCUS = register("an_focus",
+                    s -> s.is(ModTags.Curios.AN_FOCUS), ModSlotGroups.Groups.AN_FOCUS);
         }
 
         if (ModList.get().isLoaded("create")) {

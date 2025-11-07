@@ -20,7 +20,8 @@
         "apothic_compats:necklace",
         "apothic_compats:ring",
         "apothic_compats:brooch",
-        "apothic_compats:rune"
+        "apothic_compats:rune",
+        "apothic_compats:an_focus"
     ],
     "definition": {
         "affix_type": "stat",
@@ -33,24 +34,24 @@
     "operation": "add_multiplied_total",
     "values": {
         "apotheosis:common": {
+            "min": 0.05,
+            "max": 0.15
+        },
+        "apotheosis:uncommon": {
+            "min": 0.1,
+            "max": 0.2
+        },
+        "apotheosis:rare": {
             "min": 0.15,
             "max": 0.25
         },
-        "apotheosis:uncommon": {
+        "apotheosis:epic": {
             "min": 0.2,
             "max": 0.3
         },
-        "apotheosis:rare": {
+        "apotheosis:mythic": {
             "min": 0.25,
             "max": 0.35
-        },
-        "apotheosis:epic": {
-            "min": 0.3,
-            "max": 0.5
-        },
-        "apotheosis:mythic": {
-            "min": 0.45,
-            "max": 0.65
         }
     }
 }

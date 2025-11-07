@@ -246,6 +246,11 @@
   "affix.apothic_compats:curios/attribute/adept.suffix": "of Skillfulness",
   "affix.apothic_compats:curios/attribute/ancient/adept.suffix": "of Skillfulness",
 
+  "affix.apothic_compats:curios/attribute/scythe_proficiency": "Reaping",
+  "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency": "Reaping",
+  "affix.apothic_compats:curios/attribute/scythe_proficiency.suffix": "of the Spirit",
+  "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency.suffix": "of the Spirit",
+
   "affix.apothic_compats:curios/attribute/lucky": "Lucky",
   "affix.apothic_compats:curios/attribute/lucky.suffix": "of the Serendipitous",
 

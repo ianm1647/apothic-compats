@@ -133,12 +133,12 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.ARMOR_SHRED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.1)
-                        .value(Purity.CHIPPED, 0.2)
-                        .value(Purity.FLAWED, 0.3)
-                        .value(Purity.NORMAL, 0.4)
-                        .value(Purity.FLAWLESS, 0.5)
-                        .value(Purity.PERFECT, 0.6)));
+                        .value(Purity.CRACKED, 0.05)
+                        .value(Purity.CHIPPED, 0.1)
+                        .value(Purity.FLAWED, 0.15)
+                        .value(Purity.NORMAL, 0.2)
+                        .value(Purity.FLAWLESS, 0.25)
+                        .value(Purity.PERFECT, 0.3)));
 
         addBonus(Apotheosis.loc("core/slipstream"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
@@ -310,7 +310,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addTwilightBonus(Apotheosis.loc("twilight/queen"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(ALObjects.Attributes.ARROW_DAMAGE)
+                        .attr(ALObjects.Attributes.PROJECTILE_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                         .value(Purity.FLAWED, 0.15f)
                         .value(Purity.NORMAL, 0.25f)

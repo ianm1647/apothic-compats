@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.util;
 
+import com.aetherteam.aether.inventory.AetherAccessorySlots;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.apothic_attributes.compat.CurioEquipmentSlot;
 import dev.shadowsoffire.apothic_attributes.modifiers.EntityEquipmentSlot;
@@ -33,6 +34,8 @@ public class ModSlotGroups {
         public static final Holder<EntityEquipmentSlot> NECKLACE = slot("necklace");
         public static final Holder<EntityEquipmentSlot> RING = slot("ring");
 
+        public static final Holder<EntityEquipmentSlot> AN_FOCUS = slot("an_focus");
+
         public static final Holder<EntityEquipmentSlot> BROOCH = slot("brooch");
         public static final Holder<EntityEquipmentSlot> RUNE = slot("rune");
 
@@ -55,6 +58,8 @@ public class ModSlotGroups {
         public static final EntitySlotGroup HEAD = group("head", HolderSet.direct(Slots.HEAD));
         public static final EntitySlotGroup NECKLACE = group("necklace", HolderSet.direct(Slots.NECKLACE));
         public static final EntitySlotGroup RING = group("ring", HolderSet.direct(Slots.RING));
+
+        public static final EntitySlotGroup AN_FOCUS = group("an_focus", HolderSet.direct(Slots.AN_FOCUS));
 
         public static final EntitySlotGroup BROOCH = group("brooch", HolderSet.direct(Slots.BROOCH));
         public static final EntitySlotGroup RUNE = group("rune", HolderSet.direct(Slots.RUNE));

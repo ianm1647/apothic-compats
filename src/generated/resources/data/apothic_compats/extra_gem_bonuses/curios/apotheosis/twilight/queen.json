@@ -14,7 +14,7 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "apothic_attributes:arrow_damage",
+            "attribute": "apothic_attributes:projectile_damage",
             "gem_class": {
                 "key": "curios",
                 "types": [

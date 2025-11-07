@@ -39,7 +39,7 @@ public class CuriosAffixProvider extends AffixProvider {
     public static final LootCategory[] CURIOS = {
             ModLootCategories.BACK, ModLootCategories.BELT, ModLootCategories.BODY, ModLootCategories.BRACELET, ModLootCategories.CHARM,
             ModLootCategories.CURIO, ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.HEAD, ModLootCategories.NECKLACE,
-            ModLootCategories.RING, ModLootCategories.BROOCH, ModLootCategories.RUNE
+            ModLootCategories.RING, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
     };
 
     public CuriosAffixProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
@@ -283,11 +283,11 @@ public class CuriosAffixProvider extends AffixProvider {
         this.addAttribute("curios", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.15F, 0.25F)
-                .value(uncommon, 0.2F, 0.3F)
-                .value(rare, 0.25F, 0.35F)
-                .value(epic, 0.3F, 0.5F)
-                .value(mythic, 0.45F, 0.65F));
+                .value(common, 0.05F, 0.15F)
+                .value(uncommon, 0.1F, 0.2F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.2F, 0.3F)
+                .value(mythic, 0.25F, 0.35F));
 
         this.addAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -419,7 +419,7 @@ public class CuriosAffixProvider extends AffixProvider {
         this.addAncientAttribute("curios", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.55F, 0.85F));
+                .value(ancient, 0.35F, 0.55F));
 
         this.addAncientAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

@@ -2,13 +2,30 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        },
+        {
+            "type": "neoforge:mod_loaded",
             "modid": "malum"
         }
     ],
     "type": "apotheosis:attribute",
     "attribute": "lodestone:magic_damage",
     "categories": [
-        "apothic_compats:scythe"
+        "apothic_compats:back",
+        "apothic_compats:belt",
+        "apothic_compats:body",
+        "apothic_compats:bracelet",
+        "apothic_compats:charm",
+        "apothic_compats:curio",
+        "apothic_compats:feet",
+        "apothic_compats:hands",
+        "apothic_compats:head",
+        "apothic_compats:necklace",
+        "apothic_compats:ring",
+        "apothic_compats:brooch",
+        "apothic_compats:rune",
+        "apothic_compats:an_focus"
     ],
     "definition": {
         "affix_type": "stat",
@@ -18,27 +35,27 @@
             "weight": 25
         }
     },
-    "operation": "add_value",
+    "operation": "add_multiplied_base",
     "values": {
         "apotheosis:common": {
-            "min": 1.0,
-            "max": 3.0
+            "min": 0.5,
+            "max": 1.5
         },
         "apotheosis:uncommon": {
-            "min": 2.0,
-            "max": 4.0
+            "min": 1.0,
+            "max": 2.0
         },
         "apotheosis:rare": {
-            "min": 3.0,
-            "max": 5.0
+            "min": 1.5,
+            "max": 2.5
         },
         "apotheosis:epic": {
-            "min": 4.0,
-            "max": 6.0
+            "min": 2.0,
+            "max": 3.0
         },
         "apotheosis:mythic": {
-            "min": 5.0,
-            "max": 7.0
+            "min": 2.5,
+            "max": 3.5
         }
     }
 }
