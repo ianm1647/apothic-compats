@@ -1,6 +1,7 @@
 package ianm1647.apothic_compats;
 
 import dev.shadowsoffire.apotheosis.data.RarityProvider;
+import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
@@ -31,11 +32,15 @@ import ianm1647.apothic_compats.event.AttributeEvents;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import ianm1647.apothic_compats.util.ModSlotGroups;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -44,12 +49,14 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.BiConsumer;
 
 @Mod(ApothicCompats.MODID)
 public class ApothicCompats {

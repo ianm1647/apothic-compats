@@ -54,11 +54,6 @@ public class ModLootCategories {
                     s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
         }
 
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            AN_FOCUS = register("an_focus",
-                    s -> s.is(ModTags.Curios.AN_FOCUS), ModSlotGroups.Groups.AN_FOCUS);
-        }
-
         if (ModList.get().isLoaded("create")) {
             POTATO_CANNON = register("potato_cannon",
                     s -> s.getItem() instanceof PotatoCannonItem, ALObjects.EquipmentSlotGroups.MAINHAND);
@@ -69,8 +64,6 @@ public class ModLootCategories {
                     s -> s.getItem() instanceof MalumScytheItem, ALObjects.EquipmentSlotGroups.MAINHAND);
             STAFF = register("staff",
                     s -> s.getItem() instanceof AbstractStaffItem, ALObjects.EquipmentSlotGroups.MAINHAND);
-            BROOCH = register("brooch", s -> s.is(ModTags.Curios.BROOCH), ModSlotGroups.Groups.BROOCH);
-            RUNE = register("rune", s -> s.is(ModTags.Curios.RUNE), ModSlotGroups.Groups.RUNE);
         }
 
         if (ModList.get().isLoaded("curios")) {
@@ -85,6 +78,10 @@ public class ModLootCategories {
             HEAD = register("head", s -> s.is(CuriosTags.HEAD), ModSlotGroups.Groups.HEAD);
             NECKLACE = register("necklace", s -> s.is(CuriosTags.NECKLACE), ModSlotGroups.Groups.NECKLACE);
             RING = register("ring", s -> s.is(CuriosTags.RING), ModSlotGroups.Groups.RING);
+
+            AN_FOCUS = register("an_focus", s -> s.is(ModTags.Curios.AN_FOCUS), ModSlotGroups.Groups.AN_FOCUS);
+            BROOCH = register("brooch", s -> s.is(ModTags.Curios.BROOCH), ModSlotGroups.Groups.BROOCH);
+            RUNE = register("rune", s -> s.is(ModTags.Curios.RUNE), ModSlotGroups.Groups.RUNE);
         }
     }
 

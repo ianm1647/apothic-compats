@@ -16,7 +16,7 @@ public class Comp {
         }
     }
 
-    public class Curios {
+    public static class Curios {
         public static DeferredRegister<Item> ITEM;
 
         public static Holder<Item> BACK_PLATE;

@@ -25,10 +25,15 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 import team.lodestar.lodestone.registry.common.LodestoneAttributes;
+import top.theillusivec4.curios.Curios;
+import top.theillusivec4.curios.api.CurioAttributeModifiers;
+import top.theillusivec4.curios.api.SlotAttribute;
+import top.theillusivec4.curios.common.CuriosRegistry;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -39,7 +44,7 @@ public class CuriosAffixProvider extends AffixProvider {
     public static final LootCategory[] CURIOS = {
             ModLootCategories.BACK, ModLootCategories.BELT, ModLootCategories.BODY, ModLootCategories.BRACELET, ModLootCategories.CHARM,
             ModLootCategories.CURIO, ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.HEAD, ModLootCategories.NECKLACE,
-            ModLootCategories.RING
+            ModLootCategories.RING, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
     };
 
     public CuriosAffixProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

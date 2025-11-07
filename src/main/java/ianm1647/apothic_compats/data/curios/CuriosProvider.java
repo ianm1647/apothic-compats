@@ -37,5 +37,6 @@ public class CuriosProvider extends CuriosDataProvider {
         createEntities("entities")
                 .addPlayer()
                 .addSlots("back", "body", "bracelet", "feet", "curio", "charm");
+
     }
 }
