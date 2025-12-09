@@ -75,7 +75,7 @@
                     "apotheosis:trident"
                 ]
             },
-            "mob_effect": "malum:pyromaniacs_fervor",
+            "mob_effect": "malum:fiery_embrace",
             "target": "attack_self",
             "values": {
                 "cracked": {

@@ -144,7 +144,7 @@ public class MalumGemProvider extends GemProvider {
                         .value(Purity.FLAWLESS, 0.55)
                         .value(Purity.PERFECT, 0.65))
                 .bonus(LIGHT_WEAPON, MobEffectBonus.builder()
-                        .effect(MalumMobEffects.PYROMANIACS_FERVOR)
+                        .effect(MalumMobEffects.FIERY_EMBRACE)
                         .target(MobEffectAffix.Target.ATTACK_SELF)
                         .value(Purity.CRACKED, 40, 0)
                         .value(Purity.CHIPPED, 60, 0)

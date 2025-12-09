@@ -40,7 +40,7 @@ dependencies {
     implementation "dev.architectury:architectury-neoforge:$architectury_version"
 
     //compats
-    implementation "com.sammy.malum:malum:$minecraft_version-$malum_version"
+    implementation "curse.maven:malum-484064:$malum_version"
     implementation "curse.maven:amendments-896746:$amendments_version"
     implementation "curse.maven:supplementaries-412082:$supplementaries_version"
     implementation "curse.maven:twilightforest-227639:$twilight_version"
@@ -62,6 +62,7 @@ dependencies {
     implementation "curse.maven:immersiveengineering-231951:$ie_version"
 
     //compat deps
+    implementation "curse.maven:lodestone-616457:$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
     implementation "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
