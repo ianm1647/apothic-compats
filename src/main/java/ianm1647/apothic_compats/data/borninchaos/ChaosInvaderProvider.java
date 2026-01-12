@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.borninchaos;
 
-import com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
@@ -14,7 +13,6 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.util.ModTags;
 import net.mcreator.borninchaosv.init.BornInChaosV1ModEntities;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -30,7 +28,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
 
 public class ChaosInvaderProvider extends InvaderProvider {
-    String mod = "borninchaos";
+    String mod = "born_in_chaos_v1";
 
     public ChaosInvaderProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
