@@ -55,12 +55,17 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
             .with(WorldTier.ASCENT, 10, 0)
             .build();
 
+    protected static final TieredWeights MALARITE = TieredWeights.builder()
+            .with(WorldTier.ASCENT, 5, 0)
+            .with(WorldTier.SUMMIT, 10, 0)
+            .build();
+
     protected static final TieredWeights AETHERSENT = TieredWeights.builder()
             .with(WorldTier.FRONTIER, 10, 0)
             .with(WorldTier.ASCENT, 10, 0)
             .build();
 
-    protected static final TieredWeights SWAMP_SILVER = TieredWeights.builder()
+    protected static final TieredWeights DEEPSILVER = TieredWeights.builder()
             .with(WorldTier.ASCENT, 5, 0)
             .with(WorldTier.SUMMIT, 10, 0)
             .build();
@@ -71,11 +76,26 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
             .build();
 
     protected static final TieredWeights THERMAL = TieredWeights.builder()
+            .with(WorldTier.ASCENT, 5, 0)
+            .with(WorldTier.SUMMIT, 10, 0)
+            .build();
+
+    protected static final TieredWeights GLACITE = TieredWeights.builder()
+            .with(WorldTier.ASCENT, 5, 0)
+            .with(WorldTier.SUMMIT, 10, 0)
+            .build();
+
+    protected static final TieredWeights STARFIRE = TieredWeights.builder()
             .with(WorldTier.SUMMIT, 5, 0)
             .with(WorldTier.PINNACLE, 10, 0)
             .build();
 
-    protected static final TieredWeights GLACITE = TieredWeights.builder()
+    protected static final TieredWeights STARLIT_DIAMOND = TieredWeights.builder()
+            .with(WorldTier.SUMMIT, 5, 0)
+            .with(WorldTier.PINNACLE, 10, 0)
+            .build();
+
+    protected static final TieredWeights FLOWGLAZE = TieredWeights.builder()
             .with(WorldTier.SUMMIT, 5, 0)
             .with(WorldTier.PINNACLE, 10, 0)
             .build();
@@ -92,16 +112,20 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
         armorWeights.put(ESArmorMaterials.AIR_SAC.asHolder(), AIR_SAC);
         armorWeights.put(ESArmorMaterials.AMARAMBER.asHolder(), AMARAMBER);
         armorWeights.put(ESArmorMaterials.AETHERSENT.asHolder(), AETHERSENT);
-        armorWeights.put(ESArmorMaterials.SWAMP_SILVER.asHolder(), SWAMP_SILVER);
+        armorWeights.put(ESArmorMaterials.DEEPSILVER.asHolder(), DEEPSILVER);
         armorWeights.put(ESArmorMaterials.THERMAL_SPRINGSTONE.asHolder(), THERMAL);
         armorWeights.put(ESArmorMaterials.GLACITE.asHolder(), GLACITE);
 
         toolWeights.put(ESItemTiers.AMARAMBER, AMARAMBER);
         toolWeights.put(ESItemTiers.AETHERSENT, AETHERSENT);
-        toolWeights.put(ESItemTiers.SWAMP_SILVER, SWAMP_SILVER);
+        toolWeights.put(ESItemTiers.DEEPSILVER, DEEPSILVER);
+        toolWeights.put(ESItemTiers.MALARITE, MALARITE);
         toolWeights.put(ESItemTiers.THERMAL_SPRINGSTONE, THERMAL);
         toolWeights.put(ESItemTiers.PETAL, PETAL);
         toolWeights.put(ESItemTiers.GLACITE, GLACITE);
+        toolWeights.put(ESItemTiers.STARLIT_DIAMOND, STARLIT_DIAMOND);
+        toolWeights.put(ESItemTiers.STARFIRE, STARFIRE);
+        toolWeights.put(ESItemTiers.FLOWGLAZE, FLOWGLAZE);
 
         addEntry(WEAPONS, new ItemStack(ESItems.GLACITE_SHIELD.asHolder()));
         addEntry(WEAPONS, new ItemStack(ESItems.CRESCENT_SPEAR.asHolder()));

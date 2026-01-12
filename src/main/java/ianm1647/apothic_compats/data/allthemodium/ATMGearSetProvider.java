@@ -45,7 +45,7 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ModRegistry.ALLTHEMODIUM_CHESTPLATE), 10)
                 .leggings(new ItemStack(ModRegistry.ALLTHEMODIUM_LEGGINGS), 10)
                 .boots(new ItemStack(ModRegistry.ALLTHEMODIUM_BOOTS), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/ranged/allthemodium/allthemodium", 5, 0, c -> c
                 .mainhand(new ItemStack(ModRegistry.ATM_BOW), 10)
@@ -54,7 +54,7 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ModRegistry.ALLTHEMODIUM_CHESTPLATE), 10)
                 .leggings(new ItemStack(ModRegistry.ALLTHEMODIUM_LEGGINGS), 10)
                 .boots(new ItemStack(ModRegistry.ALLTHEMODIUM_BOOTS), 10)
-                .tag("apotheosis_ranged"));
+                .tag("pinnacle_ranged"));
 
         addSet("pinnacle/allthemodium/vibranium", 3, 0, c -> c
                 .mainhand(new ItemStack(ModRegistry.VIB_SWORD), 10)
@@ -67,7 +67,7 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ModRegistry.VIBRANIUM_CHESTPLATE), 10)
                 .leggings(new ItemStack(ModRegistry.VIBRANIUM_LEGGINGS), 10)
                 .boots(new ItemStack(ModRegistry.VIBRANIUM_BOOTS), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/allthemodium/unobtainium", 1, 0, c -> c
                 .mainhand(new ItemStack(ModRegistry.UNO_SWORD), 10)
@@ -80,7 +80,7 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ModRegistry.UNOBTAINIUM_CHESTPLATE), 10)
                 .leggings(new ItemStack(ModRegistry.UNOBTAINIUM_LEGGINGS), 10)
                 .boots(new ItemStack(ModRegistry.UNOBTAINIUM_BOOTS), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/ranged/allthemodium/unobtainium", 1, 0, c -> c
                 .mainhand(new ItemStack(ModRegistry.UNO_BOW), 10)
@@ -89,7 +89,7 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ModRegistry.UNOBTAINIUM_CHESTPLATE), 10)
                 .leggings(new ItemStack(ModRegistry.UNOBTAINIUM_LEGGINGS), 10)
                 .boots(new ItemStack(ModRegistry.UNOBTAINIUM_BOOTS), 10)
-                .tag("apotheosis_ranged"));
+                .tag("pinnacle_ranged"));
     }
 
     @Override

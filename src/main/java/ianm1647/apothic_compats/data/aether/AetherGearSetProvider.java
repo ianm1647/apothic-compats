@@ -93,21 +93,21 @@ public class AetherGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(AetherItems.VALKYRIE_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(AetherItems.VALKYRIE_LEGGINGS.value()), 10)
                 .boots(new ItemStack(AetherItems.VALKYRIE_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/aether/obsidian", 5, 2.5F, c -> c
                 .helmet(new ItemStack(AetherItems.OBSIDIAN_HELMET.value()), 10)
                 .chestplate(new ItemStack(AetherItems.OBSIDIAN_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(AetherItems.OBSIDIAN_LEGGINGS.value()), 10)
                 .boots(new ItemStack(AetherItems.OBSIDIAN_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/aether/neptune", 5, 2.5F, c -> c
                 .helmet(new ItemStack(AetherItems.NEPTUNE_HELMET.value()), 10)
                 .chestplate(new ItemStack(AetherItems.NEPTUNE_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(AetherItems.NEPTUNE_LEGGINGS.value()), 10)
                 .boots(new ItemStack(AetherItems.NEPTUNE_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/aether/phoenix", 5, 2.5F, c -> c
                 .mainhand(new ItemStack(AetherItems.FLAMING_SWORD.value()), 10)
@@ -115,7 +115,7 @@ public class AetherGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(AetherItems.PHOENIX_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(AetherItems.PHOENIX_LEGGINGS.value()), 10)
                 .boots(new ItemStack(AetherItems.PHOENIX_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/ranged/aether/phoenix", 5, 2.5F, c -> c
                 .mainhand(new ItemStack(AetherItems.PHOENIX_BOW.value()), 10)
@@ -123,7 +123,7 @@ public class AetherGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(AetherItems.PHOENIX_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(AetherItems.PHOENIX_LEGGINGS.value()), 10)
                 .boots(new ItemStack(AetherItems.PHOENIX_BOOTS.value()), 10)
-                .tag("apotheosis_ranged"));
+                .tag("pinnacle_ranged"));
 
         addSet("pinnacle/aether/boss_crate", 5, 2.5F, c -> c
                 .mainhand(new ItemStack(AetherItems.CANDY_CANE_SWORD.value()), 10)
@@ -132,7 +132,7 @@ public class AetherGearSetProvider extends GearSetProvider {
                 .mainhand(new ItemStack(AetherItems.LIGHTNING_SWORD.value()), 10)
                 .mainhand(new ItemStack(AetherItems.LIGHTNING_KNIFE.value()), 10)
                 .boots(new ItemStack(AetherItems.SENTRY_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
     }
 
     @Override

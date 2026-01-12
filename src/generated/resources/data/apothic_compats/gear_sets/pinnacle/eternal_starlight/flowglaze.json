@@ -1,0 +1,59 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "eternal_starlight"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:flowglaze_sword"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:flowglaze_axe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:flowglaze_pickaxe"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:flowglaze_shovel"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:flowglaze_scythe"
+            },
+            "weight": 10
+        }
+    ],
+    "offhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:flowglaze_shield"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "pinnacle_melee"
+    ],
+    "weight": 5
+}

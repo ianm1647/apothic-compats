@@ -91,7 +91,7 @@ public class MekanismGearSetProvider extends GearSetProvider {
 
         // Pinnacle Sets
 
-        addSet("ascent/mekanism/refined_glowstone", 5, 0, c -> c
+        addSet("pinnacle/mekanism/refined_glowstone", 5, 0, c -> c
                 .mainhand(new ItemStack(ToolsItems.REFINED_GLOWSTONE_SWORD.get()), 10)
                 .mainhand(new ItemStack(ToolsItems.REFINED_GLOWSTONE_AXE.get()), 10)
                 .mainhand(new ItemStack(ToolsItems.REFINED_GLOWSTONE_PICKAXE.get()), 10)
@@ -102,9 +102,9 @@ public class MekanismGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ToolsItems.REFINED_GLOWSTONE_CHESTPLATE.get()), 10)
                 .leggings(new ItemStack(ToolsItems.REFINED_GLOWSTONE_LEGGINGS.get()), 10)
                 .boots(new ItemStack(ToolsItems.REFINED_GLOWSTONE_BOOTS.get()), 10)
-                .tag("ascent_melee"));
+                .tag("pinnacle_melee"));
 
-        addSet("ascent/mekanism/refined_obsidian", 5, 0, c -> c
+        addSet("pinnacle/mekanism/refined_obsidian", 5, 0, c -> c
                 .mainhand(new ItemStack(ToolsItems.REFINED_OBSIDIAN_SWORD.get()), 10)
                 .mainhand(new ItemStack(ToolsItems.REFINED_OBSIDIAN_AXE.get()), 10)
                 .mainhand(new ItemStack(ToolsItems.REFINED_OBSIDIAN_PICKAXE.get()), 10)
@@ -115,7 +115,7 @@ public class MekanismGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(ToolsItems.REFINED_OBSIDIAN_CHESTPLATE.get()), 10)
                 .leggings(new ItemStack(ToolsItems.REFINED_OBSIDIAN_LEGGINGS.get()), 10)
                 .boots(new ItemStack(ToolsItems.REFINED_OBSIDIAN_BOOTS.get()), 10)
-                .tag("ascent_melee"));
+                .tag("pinnacle_melee"));
 
     }
 

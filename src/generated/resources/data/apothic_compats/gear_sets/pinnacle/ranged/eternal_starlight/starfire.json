@@ -1,0 +1,22 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "eternal_starlight"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:starfire_crossbow"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "pinnacle_ranged"
+    ],
+    "weight": 5
+}

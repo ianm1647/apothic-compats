@@ -2,20 +2,14 @@ package ianm1647.apothic_compats.data.malum;
 
 import com.sammy.malum.registry.common.MalumAttributes;
 import com.sammy.malum.registry.common.enchantment.EnchantmentKeys;
-import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.Apotheosis;
-import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.socket.gem.ExtraGemBonusRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.GemClass;
 import dev.shadowsoffire.apotheosis.socket.gem.GemRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.Purity;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.AttributeBonus;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.EnchantmentBonus;
-import dev.shadowsoffire.apotheosis.socket.gem.bonus.MobEffectBonus;
 import dev.shadowsoffire.apotheosis.socket.gem.bonus.MultiAttrBonus;
-import dev.shadowsoffire.apotheosis.tiers.Constraints;
-import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
-import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import dev.shadowsoffire.apotheosis.util.ApothMiscUtil;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
@@ -30,7 +24,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import team.lodestar.lodestone.registry.common.LodestoneAttributes;
 

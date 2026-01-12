@@ -16,10 +16,10 @@
         "id": "eternal_starlight:thermal_springstone_chestplate"
     },
     "weights": {
-        "summit": {
+        "ascent": {
             "weight": 5
         },
-        "pinnacle": {
+        "summit": {
             "weight": 10
         }
     }

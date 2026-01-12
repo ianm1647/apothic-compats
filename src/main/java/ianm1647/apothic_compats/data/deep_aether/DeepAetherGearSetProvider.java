@@ -55,7 +55,7 @@ public class DeepAetherGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(DAItems.STRATUS_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(DAItems.STRATUS_LEGGINGS.value()), 10)
                 .boots(new ItemStack(DAItems.STRATUS_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/deep_aether/stormforged", 5, 2.5F, c -> c
                 .mainhand(new ItemStack(DAItems.STORM_SWORD.value()), 10)
@@ -63,7 +63,7 @@ public class DeepAetherGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(DAItems.STORMFORGED_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(DAItems.STORMFORGED_LEGGINGS.value()), 10)
                 .boots(new ItemStack(DAItems.STORMFORGED_BOOTS.value()), 10)
-                .tag("apotheosis_melee"));
+                .tag("pinnacle_melee"));
 
         addSet("pinnacle/ranged/deep_aether/stormforged", 5, 2.5F, c -> c
                 .mainhand(new ItemStack(DAItems.STORM_BOW.value()), 10)
@@ -71,7 +71,7 @@ public class DeepAetherGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(DAItems.STORMFORGED_CHESTPLATE.value()), 10)
                 .leggings(new ItemStack(DAItems.STORMFORGED_LEGGINGS.value()), 10)
                 .boots(new ItemStack(DAItems.STORMFORGED_BOOTS.value()), 10)
-                .tag("apotheosis_ranged"));
+                .tag("pinnacle_ranged"));
     }
 
     @Override

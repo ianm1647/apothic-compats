@@ -106,9 +106,10 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
 
     protected static final TieredWeights BOWS = TieredWeights.builder()
-        .with(WorldTier.SUMMIT, 7, 1)
-        .with(WorldTier.PINNACLE, 10, 1)
-        .build();
+            .with(WorldTier.SUMMIT, 7, 1)
+            .with(WorldTier.PINNACLE, 10, 1)
+            .build();
+
     protected static final TieredWeights SHIELDS = TieredWeights.builder()
             .with(WorldTier.SUMMIT, 7, 1)
             .with(WorldTier.PINNACLE, 10, 1)

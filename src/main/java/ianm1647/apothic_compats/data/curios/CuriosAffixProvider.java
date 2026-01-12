@@ -25,15 +25,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 import team.lodestar.lodestone.registry.common.LodestoneAttributes;
-import top.theillusivec4.curios.Curios;
-import top.theillusivec4.curios.api.CurioAttributeModifiers;
-import top.theillusivec4.curios.api.SlotAttribute;
-import top.theillusivec4.curios.common.CuriosRegistry;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;

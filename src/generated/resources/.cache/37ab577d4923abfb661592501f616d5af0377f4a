@@ -1,0 +1,7 @@
+// 1.21.1	2026-01-12T14:38:35.1405648	Tags for minecraft:worldgen/biome mod id apothic_compats
+5f2bf4e145ad91bf48c738899ff092dd1ebe9887 data/apothic_compats/tags/worldgen/biome/is_abyssal_chasm.json
+a3e415b0663ff9bea18693734e1de25cf9843e70 data/apothic_compats/tags/worldgen/biome/is_candy_cavity.json
+5ca29933ba0b8f0c7c1c27427df3645c2cffc1f6 data/apothic_compats/tags/worldgen/biome/is_forlorn_hollows.json
+e40e0f011232b81a91fdb0453e16af48720d5300 data/apothic_compats/tags/worldgen/biome/is_magnetic_caves.json
+e0d276cc1c03a7eb65e2f33466a2e98385e77f18 data/apothic_compats/tags/worldgen/biome/is_primordial_caves.json
+cb1356bb3e1bc8613fbe34976bc08739d9b74890 data/apothic_compats/tags/worldgen/biome/is_toxic_caves.json

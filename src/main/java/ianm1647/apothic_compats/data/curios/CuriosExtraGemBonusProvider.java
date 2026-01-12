@@ -16,7 +16,6 @@ import dev.shadowsoffire.apotheosis.socket.gem.bonus.special.AllStatsBonus;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -29,7 +28,6 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.jetbrains.annotations.NotNull;
-import top.theillusivec4.curios.api.SlotAttribute;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
