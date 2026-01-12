@@ -1,0 +1,1021 @@
+{
+  "item.apothic_compats.back_plate": "Placa Dorsal",
+  "item.apothic_compats.florid_belt": "Cinto Florido",
+  "item.apothic_compats.body_chain": "Corrente Corporal",
+  "item.apothic_compats.flashy_bracelet": "Bracelete Vistoso",
+  "item.apothic_compats.fancy_charm": "Amuleto Elegante",
+  "item.apothic_compats.embellished_curio": "Curio Adornado",
+  "item.apothic_compats.adorned_boots": "Botas Adornadas",
+  "item.apothic_compats.showy_gloves": "Luvas Vistosas",
+  "item.apothic_compats.head_cover": "Cobertura de Cabeça",
+  "item.apothic_compats.ornamented_necklace": "Colar Ornamentado",
+  "item.apothic_compats.ornate_ring": "Anel Ornado",
+
+
+  "item.apotheosis.gem.apothic_compats:ars_nouveau/mana": "Gema de Mana",
+  "item.apotheosis.gem.apothic_compats:malum/soul_stained": "Gema Manchada de Alma",
+  "item.apotheosis.gem.apothic_compats:malum/thief": "Gema do Ladrão",
+  "item.apotheosis.gem.apothic_compats:malum/etheric": "Gema Etérea",
+
+
+
+
+  "gem_class.dart_shooter": "Lançador de Dardos",
+  "loot_category.apothic_compats.dart_shooter": "Lançador de Dardos",
+  "loot_category.apothic_compats.dart_shooter.plural": "Lançadores de Dardos",
+
+  "gem_class.potato_cannon": "Canhão de Batata",
+  "loot_category.apothic_compats.potato_cannon": "Canhão de Batata",
+  "loot_category.apothic_compats.potato_cannon.plural": "Canhões de Batata",
+
+  "gem_class.malum_weapon": "Foices e Cajados",
+
+  "gem_class.scythe": "Foices",
+  "loot_category.apothic_compats.scythe": "Foice",
+  "loot_category.apothic_compats.scythe.plural": "Foices",
+
+  "gem_class.staff": "Cajados",
+  "loot_category.apothic_compats.staff": "Cajado",
+  "loot_category.apothic_compats.staff.plural": "Cajados",
+
+  "gem_class.curios": "Curios",
+  "loot_category.apothic_compats.head": "Cabeça",
+  "loot_category.apothic_compats.head.plural": "Cabeças",
+  "loot_category.apothic_compats.necklace": "Colar",
+  "loot_category.apothic_compats.necklace.plural": "Colares",
+  "loot_category.apothic_compats.hands": "Mão",
+  "loot_category.apothic_compats.hands.plural": "Mãos",
+  "loot_category.apothic_compats.bracelet": "Bracelete",
+  "loot_category.apothic_compats.bracelet.plural": "Braceletes",
+  "loot_category.apothic_compats.ring": "Anel",
+  "loot_category.apothic_compats.ring.plural": "Anéis",
+  "loot_category.apothic_compats.body": "Corpo",
+  "loot_category.apothic_compats.body.plural": "Corpos",
+  "loot_category.apothic_compats.back": "Costas",
+  "loot_category.apothic_compats.back.plural": "Costas",
+  "loot_category.apothic_compats.belt": "Cinto",
+  "loot_category.apothic_compats.belt.plural": "Cintos",
+  "loot_category.apothic_compats.feet": "Pés",
+  "loot_category.apothic_compats.feet.plural": "Pés",
+  "loot_category.apothic_compats.charm": "Amuleto",
+  "loot_category.apothic_compats.charm.plural": "Amuletos",
+  "loot_category.apothic_compats.curio": "Curio",
+  "loot_category.apothic_compats.curio.plural": "Curios",
+
+
+
+
+
+
+
+
+
+  "affix.apothic_compats:melee/bloodied": "Sangrento",
+  "affix.apothic_compats:melee/bloodied.suffix": "da Carne",
+  "affix.apothic_compats:melee/bloodied.desc": "Você causa até %s a mais de dano quanto menor for sua vida.",
+
+  "affix.apothic_compats:melee/ancient/bloodied": "Sangrento",
+  "affix.apothic_compats:melee/ancient/bloodied.suffix": "da Carne",
+  "affix.apothic_compats:melee/ancient/bloodied.desc": "Você causa até %s a mais de dano quanto menor for sua vida.",
+
+  "affix.apothic_compats:armor/attribute/ward_capacity": "Guarnecido",
+  "affix.apothic_compats:armor/attribute/ancient/ward_capacity": "Guarnecido",
+  "affix.apothic_compats:armor/attribute/ward_capacity.suffix": "das Manchas",
+  "affix.apothic_compats:armor/attribute/ancient/ward_capacity.suffix": "das Manchas",
+
+  "affix.apothic_compats:armor/attribute/ward_integrity": "Integral",
+  "affix.apothic_compats:armor/attribute/ancient/ward_integrity": "Integral",
+  "affix.apothic_compats:armor/attribute/ward_integrity.suffix": "das Almas",
+  "affix.apothic_compats:armor/attribute/ancient/ward_integrity.suffix": "das Almas",
+
+  "affix.apothic_compats:armor/attribute/abjured": "Abjurado",
+  "affix.apothic_compats:armor/attribute/ancient/abjured": "Abjurado",
+  "affix.apothic_compats:armor/attribute/abjured.suffix": "da Relutância",
+  "affix.apothic_compats:armor/attribute/ancient/abjured.suffix": "da Relutância",
+
+  "affix.apothic_compats:armor/attribute/adept": "Adepto",
+  "affix.apothic_compats:armor/attribute/ancient/adept": "Adepto",
+  "affix.apothic_compats:armor/attribute/adept.suffix": "da Habilidade",
+  "affix.apothic_compats:armor/attribute/ancient/adept.suffix": "da Habilidade",
+
+  "affix.apothic_compats:armor/attribute/scythe_proficiency": "Ceifador",
+  "affix.apothic_compats:armor/attribute/ancient/scythe_proficiency": "Ceifador",
+  "affix.apothic_compats:armor/attribute/scythe_proficiency.suffix": "do Espírito",
+  "affix.apothic_compats:armor/attribute/ancient/scythe_proficiency.suffix": "do Espírito",
+
+  "affix.apothic_compats:armor/attribute/malevolent": "Malevolente",
+  "affix.apothic_compats:armor/attribute/ancient/malevolent": "Malevolente",
+  "affix.apothic_compats:armor/attribute/malevolent.suffix": "da Realeza Vil",
+  "affix.apothic_compats:armor/attribute/ancient/malevolent.suffix": "da Realeza Vil",
+
+  "affix.apothic_compats:armor/mob_effect/inebriation": "Inebriado",
+  "affix.apothic_compats:armor/mob_effect/ancient/inebriation": "Inebriado",
+  "affix.apothic_compats:armor/mob_effect/inebriation.suffix": "do Tremor",
+  "affix.apothic_compats:armor/mob_effect/ancient/inebriation.suffix": "do Tremor",
+
+  "affix.apothic_compats:armor/attribute/mana": "Tocado por Mana",
+  "affix.apothic_compats:armor/attribute/ancient/mana": "Tocado por Mana",
+  "affix.apothic_compats:armor/attribute/mana.suffix": "da Feitiçaria",
+  "affix.apothic_compats:armor/attribute/ancient/mana.suffix": "da Feitiçaria",
+
+  "affix.apothic_compats:melee/mob_effect/freezing": "Congelante",
+  "affix.apothic_compats:melee/mob_effect/ancient/freezing": "Congelante",
+  "affix.apothic_compats:melee/mob_effect/freezing.suffix": "do Gelo",
+  "affix.apothic_compats:melee/mob_effect/ancient/freezing.suffix": "do Gelo",
+
+  "affix.apothic_compats:melee/mob_effect/blasting": "Detonante",
+  "affix.apothic_compats:melee/mob_effect/ancient/blasting": "Detonante",
+  "affix.apothic_compats:melee/mob_effect/blasting.suffix": "das Explosões",
+  "affix.apothic_compats:melee/mob_effect/ancient/blasting.suffix": "das Explosões",
+
+  "affix.apothic_compats:melee/mob_effect/shocking": "Choque",
+  "affix.apothic_compats:melee/mob_effect/ancient/shocking": "Choque",
+  "affix.apothic_compats:melee/mob_effect/shocking.suffix": "da Eletricidade",
+  "affix.apothic_compats:melee/mob_effect/ancient/shocking.suffix": "da Eletricidade",
+
+  "affix.apothic_compats:melee/mob_effect/snaring": "Enlaçado",
+  "affix.apothic_compats:melee/mob_effect/ancient/snaring": "Enlaçado",
+  "affix.apothic_compats:melee/mob_effect/snaring.suffix": "da Cobra",
+  "affix.apothic_compats:melee/mob_effect/ancient/snaring.suffix": "da Cobra",
+
+  "affix.apothic_compats:melee/mob_effect/mana_regen": "Regenerador de Mana",
+  "affix.apothic_compats:melee/mob_effect/ancient/mana_regen": "Regenerador de Mana",
+  "affix.apothic_compats:melee/mob_effect/mana_regen.suffix": "do Arquimago",
+  "affix.apothic_compats:melee/mob_effect/ancient/mana_regen.suffix": "do Arquimago",
+
+  "affix.apothic_compats:breaker/mob_effect/sculky": "de Sculk",
+  "affix.apothic_compats:breaker/mob_effect/ancient/sculky": "de Sculk",
+  "affix.apothic_compats:breaker/mob_effect/sculky.suffix": "da Infecção",
+  "affix.apothic_compats:breaker/mob_effect/ancient/sculky.suffix": "da Infecção",
+
+  "affix.apothic_compats:melee/mob_effect/crystallized": "Cristalizado",
+  "affix.apothic_compats:melee/mob_effect/ancient/crystallized": "Cristalizado",
+  "affix.apothic_compats:melee/mob_effect/crystallized.suffix": "da Artefação",
+  "affix.apothic_compats:melee/mob_effect/ancient/crystallized.suffix": "da Artefação",
+
+  "affix.apothic_compats:melee/mob_effect/paralyzed": "Paralisante",
+  "affix.apothic_compats:melee/mob_effect/ancient/paralyzed": "Paralisante",
+  "affix.apothic_compats:melee/mob_effect/paralyzed.suffix": "da Doença",
+  "affix.apothic_compats:melee/mob_effect/ancient/paralyzed.suffix": "da Doença",
+
+  "affix.apothic_compats:melee/mob_effect/hidden": "Furtivo",
+  "affix.apothic_compats:melee/mob_effect/ancient/hidden": "Furtivo",
+  "affix.apothic_compats:melee/mob_effect/hidden.suffix": "da Camuflagem",
+  "affix.apothic_compats:melee/mob_effect/ancient/hidden.suffix": "da Camuflagem",
+
+  "affix.apothic_compats:melee/mob_effect/hive_protected": "Protegido pela Colmeia",
+  "affix.apothic_compats:melee/mob_effect/ancient/hive_protected": "Protegido pela Colmeia",
+  "affix.apothic_compats:melee/mob_effect/hive_protected.suffix": "das Abelhas",
+  "affix.apothic_compats:melee/mob_effect/ancient/hive_protected.suffix": "das Abelhas",
+
+  "affix.apothic_compats:melee/mob_effect/beenergized": "Abenergizante",
+  "affix.apothic_compats:melee/mob_effect/ancient/beenergized": "Abenergizante",
+  "affix.apothic_compats:melee/mob_effect/beenergized.suffix": "da Rainha",
+  "affix.apothic_compats:melee/mob_effect/ancient/beenergized.suffix": "da Rainha",
+
+  "affix.apothic_compats:melee/mob_effect/frosted": "Geado",
+  "affix.apothic_compats:melee/mob_effect/ancient/frosted": "Geado",
+  "affix.apothic_compats:melee/mob_effect/frosted.suffix": "dos Gigantes de Gelo",
+  "affix.apothic_compats:melee/mob_effect/ancient/frosted.suffix": "dos Gigantes de Gelo",
+
+  "affix.apothic_compats:melee/mob_effect/brittle": "Frágil",
+  "affix.apothic_compats:melee/mob_effect/ancient/brittle": "Frágil",
+  "affix.apothic_compats:melee/mob_effect/brittle.suffix": "do Frágil",
+  "affix.apothic_compats:melee/mob_effect/ancient/brittle.suffix": "do Frágil",
+
+  "affix.apothic_compats:melee/mob_effect/featherweight": "Peso-Pena",
+  "affix.apothic_compats:melee/mob_effect/ancient/featherweight": "Peso-Pena",
+  "affix.apothic_compats:melee/mob_effect/featherweight.suffix": "dos Pássaros",
+  "affix.apothic_compats:melee/mob_effect/ancient/featherweight.suffix": "dos Pássaros",
+
+  "affix.apothic_compats:melee/mob_effect/virulence": "Virulência",
+  "affix.apothic_compats:melee/mob_effect/ancient/virulence": "Virulência",
+  "affix.apothic_compats:melee/mob_effect/virulence.suffix": "do Dano",
+  "affix.apothic_compats:melee/mob_effect/ancient/virulence.suffix": "do Dano",
+
+  "affix.apothic_compats:melee/mob_effect/anti_virulence": "Antivirulência",
+  "affix.apothic_compats:melee/mob_effect/ancient/anti_virulence": "Antivirulência",
+  "affix.apothic_compats:melee/mob_effect/anti_virulence.suffix": "da Agressão",
+  "affix.apothic_compats:melee/mob_effect/ancient/anti_virulence.suffix": "da Agressão",
+
+  "affix.apothic_compats:ranged/mob_effect/mana_regen": "Regenerador de Mana",
+  "affix.apothic_compats:ranged/mob_effect/ancient/mana_regen": "Regenerador de Mana",
+  "affix.apothic_compats:ranged/mob_effect/mana_regen.suffix": "do Arquimago",
+  "affix.apothic_compats:ranged/mob_effect/ancient/mana_regen.suffix": "do Arquimago",
+
+  "affix.apothic_compats:ranged/mob_effect/virulence": "Virulência",
+  "affix.apothic_compats:ranged/mob_effect/ancient/virulence": "Virulência",
+  "affix.apothic_compats:ranged/mob_effect/virulence.suffix": "do Dano",
+  "affix.apothic_compats:ranged/mob_effect/ancient/virulence.suffix": "do Dano",
+
+  "affix.apothic_compats:ranged/mob_effect/gooey": "Pegajoso",
+  "affix.apothic_compats:ranged/mob_effect/ancient/gooey": "Pegajoso",
+  "affix.apothic_compats:ranged/mob_effect/gooey.suffix": "da Aderência",
+  "affix.apothic_compats:ranged/mob_effect/ancient/gooey.suffix": "da Aderência",
+
+
+
+
+
+  "affix.apothic_compats:curios/attribute/mana": "Tocado por Mana",
+  "affix.apothic_compats:curios/attribute/ancient/mana": "Tocado por Mana",
+  "affix.apothic_compats:curios/attribute/mana.suffix": "da Feitiçaria",
+  "affix.apothic_compats:curios/attribute/ancient/mana.suffix": "da Feitiçaria",
+
+  "affix.apothic_compats:curios/attribute/spell_damaged": "Enfeitiçado",
+  "affix.apothic_compats:curios/attribute/ancient/spell_damaged": "Enfeitiçado",
+  "affix.apothic_compats:curios/attribute/spell_damaged.suffix": "da Bruxaria",
+  "affix.apothic_compats:curios/attribute/ancient/spell_damaged.suffix": "da Bruxaria",
+
+  "affix.apothic_compats:curios/attribute/regenerative": "Regenerativo",
+  "affix.apothic_compats:curios/attribute/ancient/regenerative": "Regenerativo",
+  "affix.apothic_compats:curios/attribute/regenerative.suffix": "da Rainha de Copas",
+  "affix.apothic_compats:curios/attribute/ancient/regenerative.suffix": "da Rainha de Copas",
+
+  "affix.apothic_compats:curios/attribute/abjured": "Abjurado",
+  "affix.apothic_compats:curios/attribute/ancient/abjured": "Abjurado",
+  "affix.apothic_compats:curios/attribute/abjured.suffix": "da Relutância",
+  "affix.apothic_compats:curios/attribute/ancient/abjured.suffix": "da Relutância",
+
+  "affix.apothic_compats:curios/attribute/vandalous": "Vândalo",
+  "affix.apothic_compats:curios/attribute/ancient/vandalous": "Vândalo",
+  "affix.apothic_compats:curios/attribute/vandalous.suffix": "do Sorrateiro",
+  "affix.apothic_compats:curios/attribute/ancient/vandalous.suffix": "do Sorrateiro",
+
+  "affix.apothic_compats:curios/attribute/mystic": "Místico",
+  "affix.apothic_compats:curios/attribute/ancient/mystic": "Místico",
+  "affix.apothic_compats:curios/attribute/mystic.suffix": "da Taumaturgia",
+  "affix.apothic_compats:curios/attribute/ancient/mystic.suffix": "da Taumaturgia",
+
+  "affix.apothic_compats:curios/attribute/adept": "Adepto",
+  "affix.apothic_compats:curios/attribute/ancient/adept": "Adepto",
+  "affix.apothic_compats:curios/attribute/adept.suffix": "da Habilidade",
+  "affix.apothic_compats:curios/attribute/ancient/adept.suffix": "da Habilidade",
+
+  "affix.apothic_compats:curios/attribute/scythe_proficiency": "Ceifador",
+  "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency": "Ceifador",
+  "affix.apothic_compats:curios/attribute/scythe_proficiency.suffix": "do Espírito",
+  "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency.suffix": "do Espírito",
+
+  "affix.apothic_compats:curios/attribute/lucky": "Sortudo",
+  "affix.apothic_compats:curios/attribute/lucky.suffix": "do Afortunado",
+
+  "affix.apothic_compats:curios/attribute/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:curios/attribute/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:curios/attribute/aquatic": "Aquático",
+  "affix.apothic_compats:curios/attribute/aquatic.suffix": "do Oceano",
+
+  "affix.apothic_compats:curios/attribute/blessed": "Abençoado",
+  "affix.apothic_compats:curios/attribute/blessed.suffix": "da Saúde",
+
+  "affix.apothic_compats:curios/attribute/gravitational": "Gravitacional",
+  "affix.apothic_compats:curios/attribute/gravitational.suffix": "da Gravidade",
+
+  "affix.apothic_compats:curios/attribute/ironforged": "Forjado em Ferro",
+  "affix.apothic_compats:curios/attribute/ironforged.suffix": "do Ferro",
+
+  "affix.apothic_compats:curios/attribute/spiritual": "Espiritual",
+  "affix.apothic_compats:curios/attribute/spiritual.suffix": "do Curandeiro",
+
+  "affix.apothic_compats:curios/attribute/stalwart": "Robusto",
+  "affix.apothic_compats:curios/attribute/stalwart.suffix": "da Teimosia",
+
+  "affix.apothic_compats:curios/attribute/fireproof": "À Prova de Fogo",
+  "affix.apothic_compats:curios/attribute/fireproof.suffix": "da Defesa Flamejante",
+
+  "affix.apothic_compats:curios/attribute/oxygenated": "Oxigenado",
+  "affix.apothic_compats:curios/attribute/oxygenated.suffix": "do Mergulhador",
+
+  "affix.apothic_compats:curios/attribute/experienced": "Experiente",
+  "affix.apothic_compats:curios/attribute/experienced.suffix": "do Estudioso",
+
+  "affix.apothic_compats:curios/attribute/submerged": "Submerso",
+  "affix.apothic_compats:curios/attribute/submerged.suffix": "do Minerador Submarino",
+
+  "affix.apothic_compats:curios/attribute/adamantine": "Adamantino",
+  "affix.apothic_compats:curios/attribute/adamantine.suffix": "de Adamantino",
+
+  "affix.apothic_compats:curios/attribute/vampiric": "Vampírico",
+  "affix.apothic_compats:curios/attribute/vampiric.suffix": "da Sangria",
+
+  "affix.apothic_compats:curios/attribute/murderous": "Assassino",
+  "affix.apothic_compats:curios/attribute/murderous.suffix": "do Minotauro",
+
+  "affix.apothic_compats:curios/attribute/intricate": "Intricado",
+  "affix.apothic_compats:curios/attribute/intricate.suffix": "do Pensamento Crítico",
+
+  "affix.apothic_compats:curios/attribute/lacerating": "Dilacerante",
+  "affix.apothic_compats:curios/attribute/lacerating.suffix": "da Precisão Cirúrgica",
+
+  "affix.apothic_compats:curios/attribute/graceful": "Gracioso",
+  "affix.apothic_compats:curios/attribute/graceful.suffix": "do Duelista",
+
+  "affix.apothic_compats:curios/attribute/berserking": "Berserker",
+  "affix.apothic_compats:curios/attribute/berserking.suffix": "do Berserker",
+
+  "affix.apothic_compats:curios/attribute/destructive": "Destrutivo",
+  "affix.apothic_compats:curios/attribute/destructive.suffix": "da Extração",
+
+  "affix.apothic_compats:curios/attribute/ancient/lucky": "Sortudo",
+  "affix.apothic_compats:curios/attribute/ancient/lucky.suffix": "do Afortunado",
+
+  "affix.apothic_compats:curios/attribute/ancient/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:curios/attribute/ancient/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:curios/attribute/ancient/aquatic": "Aquático",
+  "affix.apothic_compats:curios/attribute/ancient/aquatic.suffix": "do Oceano",
+
+  "affix.apothic_compats:curios/attribute/ancient/blessed": "Abençoado",
+  "affix.apothic_compats:curios/attribute/ancient/blessed.suffix": "da Saúde",
+
+  "affix.apothic_compats:curios/attribute/ancient/gravitational": "Gravitacional",
+  "affix.apothic_compats:curios/attribute/ancient/gravitational.suffix": "da Gravidade",
+
+  "affix.apothic_compats:curios/attribute/ancient/ironforged": "Forjado em Ferro",
+  "affix.apothic_compats:curios/attribute/ancient/ironforged.suffix": "do Ferro",
+
+  "affix.apothic_compats:curios/attribute/ancient/spiritual": "Espiritual",
+  "affix.apothic_compats:curios/attribute/ancient/spiritual.suffix": "do Curandeiro",
+
+  "affix.apothic_compats:curios/attribute/ancient/stalwart": "Robusto",
+  "affix.apothic_compats:curios/attribute/ancient/stalwart.suffix": "da Teimosia",
+
+  "affix.apothic_compats:curios/attribute/ancient/fireproof": "À Prova de Fogo",
+  "affix.apothic_compats:curios/attribute/ancient/fireproof.suffix": "da Defesa Flamejante",
+
+  "affix.apothic_compats:curios/attribute/ancient/oxygenated": "Oxigenado",
+  "affix.apothic_compats:curios/attribute/ancient/oxygenated.suffix": "do Mergulhador",
+
+  "affix.apothic_compats:curios/attribute/ancient/experienced": "Experiente",
+  "affix.apothic_compats:curios/attribute/ancient/experienced.suffix": "do Estudioso",
+
+  "affix.apothic_compats:curios/attribute/ancient/submerged": "Submerso",
+  "affix.apothic_compats:curios/attribute/ancient/submerged.suffix": "do Minerador Submarino",
+
+  "affix.apothic_compats:curios/attribute/ancient/adamantine": "Adamantino",
+  "affix.apothic_compats:curios/attribute/ancient/adamantine.suffix": "de Adamantino",
+
+  "affix.apothic_compats:curios/attribute/ancient/vampiric": "Vampírico",
+  "affix.apothic_compats:curios/attribute/ancient/vampiric.suffix": "da Sangria",
+
+  "affix.apothic_compats:curios/attribute/ancient/murderous": "Assassino",
+  "affix.apothic_compats:curios/attribute/ancient/murderous.suffix": "do Minotauro",
+
+  "affix.apothic_compats:curios/attribute/ancient/intricate": "Intricado",
+  "affix.apothic_compats:curios/attribute/ancient/intricate.suffix": "do Pensamento Crítico",
+
+  "affix.apothic_compats:curios/attribute/ancient/lacerating": "Dilacerante",
+  "affix.apothic_compats:curios/attribute/ancient/lacerating.suffix": "da Precisão Cirúrgica",
+
+  "affix.apothic_compats:curios/attribute/ancient/graceful": "Gracioso",
+  "affix.apothic_compats:curios/attribute/ancient/graceful.suffix": "do Duelista",
+
+  "affix.apothic_compats:curios/attribute/ancient/berserking": "Berserker",
+  "affix.apothic_compats:curios/attribute/ancient/berserking.suffix": "do Berserker",
+
+  "affix.apothic_compats:curios/attribute/ancient/destructive": "Destrutivo",
+  "affix.apothic_compats:curios/attribute/ancient/destructive.suffix": "da Extração",
+
+
+
+
+
+
+
+
+
+
+
+  "affix.apothic_compats:scythe/cleaving": "Fendedor",
+  "affix.apothic_compats:scythe/cleaving.suffix": "do Açougueiro",
+  "affix.apothic_compats:scythe/cleaving.desc": "Ataques têm %s%% de chance de acertar até %s inimigos próximos.",
+
+  "affix.apothic_compats:scythe/festive": "Festivo",
+  "affix.apothic_compats:scythe/festive.suffix": "da Festa",
+  "affix.apothic_compats:scythe/festive.desc": "Inimigos mortos têm %s%% de chance de ser uma Piñata de Espólios",
+
+  "affix.apothic_compats:scythe/executing": "Executor",
+  "affix.apothic_compats:scythe/executing.suffix": "do Carrasco",
+  "affix.apothic_compats:scythe/executing.desc": "Inimigos com menos de %s%% da vida máxima serão executados.",
+
+  "affix.apothic_compats:scythe/thunderstruck": "Fulminante",
+  "affix.apothic_compats:scythe/thunderstruck.suffix": "da Tempestade",
+  "affix.apothic_compats:scythe/thunderstruck.desc": "Seus ataques causam %s de dano a inimigos próximos.",
+
+  "affix.apothic_compats:scythe/ancient/cleaving": "Fendedor",
+  "affix.apothic_compats:scythe/ancient/cleaving.suffix": "do Açougueiro",
+  "affix.apothic_compats:scythe/ancient/cleaving.desc": "Ataques têm %s%% de chance de acertar até %s inimigos próximos.",
+
+  "affix.apothic_compats:scythe/ancient/festive": "Festivo",
+  "affix.apothic_compats:scythe/ancient/festive.suffix": "da Festa",
+  "affix.apothic_compats:scythe/ancient/festive.desc": "Inimigos mortos têm %s%% de chance de ser uma Piñata de Espólios",
+
+  "affix.apothic_compats:scythe/ancient/executing": "Executor",
+  "affix.apothic_compats:scythe/ancient/executing.suffix": "do Carrasco",
+  "affix.apothic_compats:scythe/ancient/executing.desc": "Inimigos com menos de %s%% da vida máxima serão executados.",
+
+  "affix.apothic_compats:scythe/ancient/thunderstruck": "Fulminante",
+  "affix.apothic_compats:scythe/ancient/thunderstruck.suffix": "da Tempestade",
+  "affix.apothic_compats:scythe/ancient/thunderstruck.desc": "Seus ataques causam %s de dano a inimigos próximos.",
+
+  "affix.apothic_compats:staff/cleaving": "Fendedor",
+  "affix.apothic_compats:staff/cleaving.suffix": "do Açougueiro",
+  "affix.apothic_compats:staff/cleaving.desc": "Ataques têm %s%% de chance de acertar até %s inimigos próximos.",
+
+  "affix.apothic_compats:staff/festive": "Festivo",
+  "affix.apothic_compats:staff/festive.suffix": "da Festa",
+  "affix.apothic_compats:staff/festive.desc": "Inimigos mortos têm %s%% de chance de ser uma Piñata de Espólios",
+
+  "affix.apothic_compats:staff/executing": "Executor",
+  "affix.apothic_compats:staff/executing.suffix": "do Carrasco",
+  "affix.apothic_compats:staff/executing.desc": "Inimigos com menos de %s%% da vida máxima serão executados.",
+
+  "affix.apothic_compats:staff/thunderstruck": "Fulminante",
+  "affix.apothic_compats:staff/thunderstruck.suffix": "da Tempestade",
+  "affix.apothic_compats:staff/thunderstruck.desc": "Seus ataques causam %s de dano a inimigos próximos.",
+
+  "affix.apothic_compats:staff/ancient/cleaving": "Fendedor",
+  "affix.apothic_compats:staff/ancient/cleaving.suffix": "do Açougueiro",
+  "affix.apothic_compats:staff/ancient/cleaving.desc": "Ataques têm %s%% de chance de acertar até %s inimigos próximos.",
+
+  "affix.apothic_compats:staff/ancient/festive": "Festivo",
+  "affix.apothic_compats:staff/ancient/festive.suffix": "da Festa",
+  "affix.apothic_compats:staff/ancient/festive.desc": "Inimigos mortos têm %s%% de chance de ser uma Piñata de Espólios",
+
+  "affix.apothic_compats:staff/ancient/executing": "Executor",
+  "affix.apothic_compats:staff/ancient/executing.suffix": "do Carrasco",
+  "affix.apothic_compats:staff/ancient/executing.desc": "Inimigos com menos de %s%% da vida máxima serão executados.",
+
+  "affix.apothic_compats:staff/ancient/thunderstruck": "Fulminante",
+  "affix.apothic_compats:staff/ancient/thunderstruck.suffix": "da Tempestade",
+  "affix.apothic_compats:staff/ancient/thunderstruck.desc": "Seus ataques causam %s de dano a inimigos próximos.",
+
+
+
+  "affix.apothic_compats:dart_shooter/magical": "Mágico",
+  "affix.apothic_compats:dart_shooter/magical.suffix": "do Arcano",
+  "affix.apothic_compats:dart_shooter/magical.desc": "Seus dardos causam dano mágico.",
+
+  "affix.apothic_compats:dart_shooter/ancient/magical": "Mágico",
+  "affix.apothic_compats:dart_shooter/ancient/magical.suffix": "do Arcano",
+  "affix.apothic_compats:dart_shooter/ancient/magical.desc": "Seus dardos causam dano mágico.",
+
+  "affix.apothic_compats:dart_shooter/attribute/elven": "Élfico",
+  "affix.apothic_compats:dart_shooter/attribute/elven.suffix": "do Primeiro Arqueiro",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/blighted": "Fenecido",
+  "affix.apothic_compats:dart_shooter/mob_effect/blighted.suffix": "das Terras Fenecidas",
+
+  "affix.apothic_compats:dart_shooter/attribute/streamlined": "Aerodinâmico",
+  "affix.apothic_compats:dart_shooter/attribute/streamlined.suffix": "do Atirador",
+
+  "affix.apothic_compats:dart_shooter/attribute/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:dart_shooter/attribute/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:dart_shooter/attribute/agile": "Ágil",
+  "affix.apothic_compats:dart_shooter/attribute/agile.suffix": "da Destreza",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ensnaring": "Enlaçador",
+  "affix.apothic_compats:dart_shooter/mob_effect/ensnaring.suffix": "do Predador",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/fleeting": "Fugaz",
+  "affix.apothic_compats:dart_shooter/mob_effect/fleeting.suffix": "do Patrulheiro",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/shulkers": "Tocado por Shulk",
+  "affix.apothic_compats:dart_shooter/mob_effect/shulkers.suffix": "da Levitação",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ivy_laced": "Com Hera",
+  "affix.apothic_compats:dart_shooter/mob_effect/ivy_laced.suffix": "das Toxinas Naturais",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/acidic": "Ácido",
+  "affix.apothic_compats:dart_shooter/mob_effect/acidic.suffix": "da Corrosão",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/grievous": "Grave",
+  "affix.apothic_compats:dart_shooter/mob_effect/grievous.suffix": "da Ferida",
+
+  "affix.apothic_compats:dart_shooter/enchantment/prosperous": "Próspero",
+  "affix.apothic_compats:dart_shooter/enchantment/prosperous.suffix": "do Caçador de Tesouros",
+
+  "affix.apothic_compats:dart_shooter/attribute/ancient/elven": "Élfico",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/elven.suffix": "do Primeiro Arqueiro",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/blighted": "Fenecido",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/blighted.suffix": "das Terras Fenecidas",
+
+  "affix.apothic_compats:dart_shooter/attribute/ancient/streamlined": "Aerodinâmico",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/streamlined.suffix": "do Atirador de Elite",
+
+  "affix.apothic_compats:dart_shooter/attribute/ancient/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:dart_shooter/attribute/ancient/agile": "Ágil",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/agile.suffix": "da Destreza",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring": "Enlaçador",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring.suffix": "do Predador",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/fleeting": "Fugaz",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/fleeting.suffix": "do Patrulheiro",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/shulkers": "Tocado por Shulk",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/shulkers.suffix": "da Levitação",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ivy_laced": "Com Hera",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ivy_laced.suffix": "das Toxinas Naturais",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/acidic": "Ácido",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/acidic.suffix": "da Corrosão",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/grievous": "Grave",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/grievous.suffix": "da Ferida",
+
+  "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous": "Próspero",
+  "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous.suffix": "do Caçador de Tesouros",
+
+
+
+  "affix.apothic_compats:potato_cannon/magical": "Mágico",
+  "affix.apothic_compats:potato_cannon/magical.suffix": "do Arcano",
+  "affix.apothic_compats:potato_cannon/magical.desc": "Seus dardos causam dano mágico.",
+
+  "affix.apothic_compats:potato_cannon/ancient/magical": "Mágico",
+  "affix.apothic_compats:potato_cannon/ancient/magical.suffix": "do Arcano",
+  "affix.apothic_compats:potato_cannon/ancient/magical.desc": "Seus dardos causam dano mágico.",
+
+  "affix.apothic_compats:potato_cannon/attribute/elven": "Élfico",
+  "affix.apothic_compats:potato_cannon/attribute/elven.suffix": "do Primeiro Arqueiro",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/blighted": "Fenecido",
+  "affix.apothic_compats:potato_cannon/mob_effect/blighted.suffix": "das Terras Fenecidas",
+
+  "affix.apothic_compats:potato_cannon/attribute/streamlined": "Aerodinâmico",
+  "affix.apothic_compats:potato_cannon/attribute/streamlined.suffix": "do Atirador de Elite",
+
+  "affix.apothic_compats:potato_cannon/attribute/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:potato_cannon/attribute/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:potato_cannon/attribute/agile": "Ágil",
+  "affix.apothic_compats:potato_cannon/attribute/agile.suffix": "da Destreza",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring": "Enlaçador",
+  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring.suffix": "do Predador",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/fleeting": "Fugaz",
+  "affix.apothic_compats:potato_cannon/mob_effect/fleeting.suffix": "do Patrulheiro",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/shulkers": "Tocado por Shulk",
+  "affix.apothic_compats:potato_cannon/mob_effect/shulkers.suffix": "da Levitação",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced": "Com Hera",
+  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced.suffix": "das Toxinas Naturais",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/acidic": "Ácido",
+  "affix.apothic_compats:potato_cannon/mob_effect/acidic.suffix": "da Corrosão",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/grievous": "Grave",
+  "affix.apothic_compats:potato_cannon/mob_effect/grievous.suffix": "da Ferida",
+
+  "affix.apothic_compats:potato_cannon/enchantment/prosperous": "Próspero",
+  "affix.apothic_compats:potato_cannon/enchantment/prosperous.suffix": "do Caçador de Tesouros",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/elven": "Élfico",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/elven.suffix": "do Primeiro Arqueiro",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted": "Fenecido",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted.suffix": "das Terras Fenecidas",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined": "Aerodinâmico",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined.suffix": "do Atirador de Elite",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:potato_cannon/attribute/ancient/agile": "Ágil",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/agile.suffix": "da Destreza",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring": "Enlaçador",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring.suffix": "do Predador",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting": "Fugaz",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting.suffix": "do Patrulheiro",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers": "Tocado por Shulk",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers.suffix": "da Levitação",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced": "Com Hera",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced.suffix": "das Toxinas Naturais",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic": "Ácido",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic.suffix": "da Corrosão",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous": "Grave",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous.suffix": "da Ferida",
+
+  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed": "Recuperado",
+  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed.suffix": "do Redentor",
+
+
+
+  "affix.apothic_compats:staff/melee/attribute/vandalous": "Vândalo",
+  "affix.apothic_compats:staff/melee/attribute/ancient/vandalous": "Vândalo",
+  "affix.apothic_compats:staff/melee/attribute/vandalous.suffix": "do Sorrateiro",
+  "affix.apothic_compats:staff/melee/attribute/ancient/vandalous.suffix": "do Sorrateiro",
+
+  "affix.apothic_compats:staff/melee/attribute/mystic": "Místico",
+  "affix.apothic_compats:staff/melee/attribute/ancient/mystic": "Místico",
+  "affix.apothic_compats:staff/melee/attribute/mystic.suffix": "da Taumaturgia",
+  "affix.apothic_compats:staff/melee/attribute/ancient/mystic.suffix": "da Taumaturgia",
+
+  "affix.apothic_compats:staff/ranged/attribute/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:staff/ranged/attribute/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:staff/ranged/attribute/agile": "Ágil",
+  "affix.apothic_compats:staff/ranged/attribute/agile.suffix": "da Destreza",
+
+  "affix.apothic_compats:staff/ranged/attribute/capacious": "Espaçoso",
+  "affix.apothic_compats:staff/ranged/attribute/capacious.suffix": "do Espaço",
+
+  "affix.apothic_compats:staff/ranged/attribute/ample": "Amplo",
+  "affix.apothic_compats:staff/ranged/attribute/ample.suffix": "da Capacidade",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ensnaring": "Enlaçador",
+  "affix.apothic_compats:staff/ranged/mob_effect/ensnaring.suffix": "do Predador",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/fleeting": "Fugaz",
+  "affix.apothic_compats:staff/ranged/mob_effect/fleeting.suffix": "do Patrulheiro",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/shulkers": "Tocado por Shulk",
+  "affix.apothic_compats:staff/ranged/mob_effect/shulkers.suffix": "da Levitação",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ivy_laced": "Com Hera",
+  "affix.apothic_compats:staff/ranged/mob_effect/ivy_laced.suffix": "das Toxinas Naturais",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/acidic": "Ácido",
+  "affix.apothic_compats:staff/ranged/mob_effect/acidic.suffix": "da Corrosão",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/grievous": "Grave",
+  "affix.apothic_compats:staff/ranged/mob_effect/grievous.suffix": "da Ferida",
+
+  "affix.apothic_compats:staff/ranged/enchantment/prosperous": "Próspero",
+  "affix.apothic_compats:staff/ranged/enchantment/prosperous.suffix": "do Caçador de Tesouros",
+
+  "affix.apothic_compats:staff/ranged/attribute/ancient/windswept": "Varrido pelo Vento",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/windswept.suffix": "da Correnteza",
+
+  "affix.apothic_compats:staff/ranged/attribute/ancient/agile": "Ágil",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/agile.suffix": "da Destreza",
+
+  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious": "Espaçoso",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious.suffix": "do Espaço",
+
+  "affix.apothic_compats:staff/ranged/attribute/ancient/ample": "Amplo",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/ample.suffix": "da Capacidade",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring": "Enlaçador",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring.suffix": "do Predador",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/fleeting": "Fugaz",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/fleeting.suffix": "do Patrulheiro",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/shulkers": "Tocado por Shulk",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/shulkers.suffix": "da Levitação",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ivy_laced": "Com Hera",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ivy_laced.suffix": "das Toxinas Naturais",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/acidic": "Ácido",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/acidic.suffix": "da Corrosão",
+
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/grievous": "Grave",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/grievous.suffix": "da Ferida",
+
+  "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous": "Próspero",
+  "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous.suffix": "do Caçador de Tesouros",
+
+  "affix.apothic_compats:staff/melee/attribute/violent": "Violento",
+  "affix.apothic_compats:staff/melee/attribute/violent.suffix": "da Matança",
+
+  "affix.apothic_compats:staff/melee/attribute/wizarding": "Feiticeiro",
+  "affix.apothic_compats:staff/melee/attribute/wizarding.suffix": "do Mago",
+
+  "affix.apothic_compats:staff/melee/attribute/magekilling": "Mata-Magos",
+  "affix.apothic_compats:staff/melee/attribute/magekilling.suffix": "do Guerreiro Mágico",
+
+  "affix.apothic_compats:staff/melee/attribute/graceful": "Gracioso",
+  "affix.apothic_compats:staff/melee/attribute/graceful.suffix": "do Duelista",
+
+  "affix.apothic_compats:staff/melee/attribute/forceful": "Vigoroso",
+  "affix.apothic_compats:staff/melee/attribute/forceful.suffix": "do Touro",
+
+  "affix.apothic_compats:staff/melee/attribute/elongated": "Alongado",
+  "affix.apothic_compats:staff/melee/attribute/elongated.suffix": "de Batalhas Distantes",
+
+  "affix.apothic_compats:staff/melee/attribute/intricate": "Intricado",
+  "affix.apothic_compats:staff/melee/attribute/intricate.suffix": "do Pensamento Crítico",
+
+  "affix.apothic_compats:staff/melee/attribute/lacerating": "Dilacerante",
+  "affix.apothic_compats:staff/melee/attribute/lacerating.suffix": "da Precisão Cirúrgica",
+
+  "affix.apothic_compats:staff/melee/attribute/glacial": "Glacial",
+  "affix.apothic_compats:staff/melee/attribute/glacial.suffix": "das Terras Gélidas",
+
+  "affix.apothic_compats:staff/melee/attribute/infernal": "Infernal",
+  "affix.apothic_compats:staff/melee/attribute/infernal.suffix": "do Sol",
+
+  "affix.apothic_compats:staff/melee/attribute/vampiric": "Vampírico",
+  "affix.apothic_compats:staff/melee/attribute/vampiric.suffix": "da Sangria",
+
+  "affix.apothic_compats:staff/melee/attribute/piercing": "Perfurante",
+  "affix.apothic_compats:staff/melee/attribute/piercing.suffix": "do Fendedor",
+
+  "affix.apothic_compats:staff/melee/attribute/shredding": "Triturador",
+  "affix.apothic_compats:staff/melee/attribute/shredding.suffix": "da Penetração",
+
+  "affix.apothic_compats:staff/melee/attribute/giant_slaying": "Matador de Gigantes",
+  "affix.apothic_compats:staff/melee/attribute/giant_slaying.suffix": "de Golpes Colossais",
+
+  "affix.apothic_compats:staff/melee/attribute/berserking": "Berserker",
+  "affix.apothic_compats:staff/melee/attribute/berserking.suffix": "do Berserker",
+
+  "affix.apothic_compats:staff/melee/attribute/annihilating": "Aniquilador",
+  "affix.apothic_compats:staff/melee/attribute/annihilating.suffix": "do Titã",
+
+  "affix.apothic_compats:staff/melee/attribute/decimating": "Dizimador",
+  "affix.apothic_compats:staff/melee/attribute/decimating.suffix": "do Rei-Deus",
+
+  "affix.apothic_compats:staff/melee/attribute/murderous": "Assassino",
+  "affix.apothic_compats:staff/melee/attribute/murderous.suffix": "do Minotauro",
+
+  "affix.apothic_compats:staff/melee/attribute/lengthy": "Longo",
+  "affix.apothic_compats:staff/melee/attribute/lengthy.suffix": "de Alcance Extremo",
+
+  "affix.apothic_compats:staff/melee/attribute/nullifying": "Nulificador",
+  "affix.apothic_compats:staff/melee/attribute/nullifying.suffix": "do Quebra-Magos",
+
+  "affix.apothic_compats:staff/melee/attribute/spellbreaking": "Quebra-Feitiço",
+  "affix.apothic_compats:staff/melee/attribute/spellbreaking.suffix": "do Golem de Petricita",
+
+  "affix.apothic_compats:staff/melee/mob_effect/omniscient": "Onisciente",
+  "affix.apothic_compats:staff/melee/mob_effect/omniscient.suffix": "do Grande Sábio",
+
+  "affix.apothic_compats:staff/melee/mob_effect/bloodletting": "Cáustico",
+  "affix.apothic_compats:staff/melee/mob_effect/bloodletting.suffix": "do Matador",
+
+  "affix.apothic_compats:staff/melee/mob_effect/caustic": "Cáustico",
+  "affix.apothic_compats:staff/melee/mob_effect/caustic.suffix": "do Reino Cáustico",
+
+  "affix.apothic_compats:staff/melee/mob_effect/sophisticated": "Sofisticado",
+  "affix.apothic_compats:staff/melee/mob_effect/sophisticated.suffix": "da Biblioteca Ancestral",
+
+  "affix.apothic_compats:staff/melee/mob_effect/elusive": "Elusivo",
+  "affix.apothic_compats:staff/melee/mob_effect/elusive.suffix": "da Evasão",
+
+  "affix.apothic_compats:staff/melee/mob_effect/weakening": "Enfraquecedor",
+  "affix.apothic_compats:staff/melee/mob_effect/weakening.suffix": "da Fraqueza",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/violent": "Violento",
+  "affix.apothic_compats:staff/melee/attribute/ancient/violent.suffix": "da Matança",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/wizarding": "Feiticeiro",
+  "affix.apothic_compats:staff/melee/attribute/ancient/wizarding.suffix": "do Mago",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/magekilling": "Mata-Magos",
+  "affix.apothic_compats:staff/melee/attribute/ancient/magekilling.suffix": "do Guerreiro Mágico",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/graceful": "Gracioso",
+  "affix.apothic_compats:staff/melee/attribute/ancient/graceful.suffix": "do Duelista",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/forceful": "Vigoroso",
+  "affix.apothic_compats:staff/melee/attribute/ancient/forceful.suffix": "do Touro",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/elongated": "Alongado",
+  "affix.apothic_compats:staff/melee/attribute/ancient/elongated.suffix": "de Batalhas Distantes",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/intricate": "Intricado",
+  "affix.apothic_compats:staff/melee/attribute/ancient/intricate.suffix": "do Pensamento Crítico",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/lacerating": "Dilacerante",
+  "affix.apothic_compats:staff/melee/attribute/ancient/lacerating.suffix": "da Precisão Cirúrgica",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/glacial": "Glacial",
+  "affix.apothic_compats:staff/melee/attribute/ancient/glacial.suffix": "das Terras Gélidas",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/infernal": "Infernal",
+  "affix.apothic_compats:staff/melee/attribute/ancient/infernal.suffix": "do Sol",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/vampiric": "Vampírico",
+  "affix.apothic_compats:staff/melee/attribute/ancient/vampiric.suffix": "da Sangria",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/piercing": "Perfurante",
+  "affix.apothic_compats:staff/melee/attribute/ancient/piercing.suffix": "do Fendedor",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/shredding": "Triturador",
+  "affix.apothic_compats:staff/melee/attribute/ancient/shredding.suffix": "da Penetração",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/giant_slaying": "Matador de Gigantes",
+  "affix.apothic_compats:staff/melee/attribute/ancient/giant_slaying.suffix": "de Golpes Colossais",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/berserking": "Berserker",
+  "affix.apothic_compats:staff/melee/attribute/ancient/berserking.suffix": "do Berserker",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/annihilating": "Aniquilador",
+  "affix.apothic_compats:staff/melee/attribute/ancient/annihilating.suffix": "do Titã",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/decimating": "Dizimador",
+  "affix.apothic_compats:staff/melee/attribute/ancient/decimating.suffix": "do Rei-Deus",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/murderous": "Assassino",
+  "affix.apothic_compats:staff/melee/attribute/ancient/murderous.suffix": "do Minotauro",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/lengthy": "Longo",
+  "affix.apothic_compats:staff/melee/attribute/ancient/lengthy.suffix": "de Alcance Extremo",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/nullifying": "Nulificador",
+  "affix.apothic_compats:staff/melee/attribute/ancient/nullifying.suffix": "do Quebra-Magos",
+
+  "affix.apothic_compats:staff/melee/attribute/ancient/spellbreaking": "Quebra-Feitiço",
+  "affix.apothic_compats:staff/melee/attribute/ancient/spellbreaking.suffix": "do Golem de Petricita",
+
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/omniscient": "Onisciente",
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/omniscient.suffix": "do Grande Sábio",
+
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/bloodletting": "Cáustico",
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/bloodletting.suffix": "do Matador",
+
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/caustic": "Cáustico",
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/caustic.suffix": "do Reino Cáustico",
+
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/sophisticated": "Sofisticado",
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/sophisticated.suffix": "da Biblioteca Ancestral",
+
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/elusive": "Elusivo",
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/elusive.suffix": "da Evasão",
+
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/weakening": "Enfraquecedor",
+  "affix.apothic_compats:staff/melee/mob_effect/ancient/weakening.suffix": "da Fraqueza",
+
+
+
+  "affix.apothic_compats:scythe/melee/attribute/vandalous": "Vândalo",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/vandalous": "Vândalo",
+  "affix.apothic_compats:scythe/melee/attribute/vandalous.suffix": "do Sorrateiro",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/vandalous.suffix": "do Sorrateiro",
+
+  "affix.apothic_compats:scythe/melee/attribute/mystic": "Místico",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/mystic": "Místico",
+  "affix.apothic_compats:scythe/melee/attribute/mystic.suffix": "da Taumaturgia",
+  "affix.apothic_compats:scythe/melee/attribute/ancient/mystic.suffix": "da Taumaturgia",
+
+  "affix.apothic_compats:scythe/attribute/violent": "Violento",
+  "affix.apothic_compats:scythe/attribute/violent.suffix": "da Matança",
+
+  "affix.apothic_compats:scythe/attribute/graceful": "Gracioso",
+  "affix.apothic_compats:scythe/attribute/graceful.suffix": "do Duelista",
+
+  "affix.apothic_compats:scythe/attribute/forceful": "Vigoroso",
+  "affix.apothic_compats:scythe/attribute/forceful.suffix": "do Touro",
+
+  "affix.apothic_compats:scythe/attribute/elongated": "Alongado",
+  "affix.apothic_compats:scythe/attribute/elongated.suffix": "de Batalhas Distantes",
+
+  "affix.apothic_compats:scythe/attribute/intricate": "Intricado",
+  "affix.apothic_compats:scythe/attribute/intricate.suffix": "do Pensamento Crítico",
+
+  "affix.apothic_compats:scythe/attribute/lacerating": "Dilacerante",
+  "affix.apothic_compats:scythe/attribute/lacerating.suffix": "da Precisão Cirúrgica",
+
+  "affix.apothic_compats:scythe/attribute/glacial": "Glacial",
+  "affix.apothic_compats:scythe/attribute/glacial.suffix": "das Terras Gélidas",
+
+  "affix.apothic_compats:scythe/attribute/infernal": "Infernal",
+  "affix.apothic_compats:scythe/attribute/infernal.suffix": "do Sol",
+
+  "affix.apothic_compats:scythe/attribute/vampiric": "Vampírico",
+  "affix.apothic_compats:scythe/attribute/vampiric.suffix": "da Sangria",
+
+  "affix.apothic_compats:scythe/attribute/piercing": "Perfurante",
+  "affix.apothic_compats:scythe/attribute/piercing.suffix": "do Fendedor",
+
+  "affix.apothic_compats:scythe/attribute/shredding": "Triturador",
+  "affix.apothic_compats:scythe/attribute/shredding.suffix": "da Penetração",
+
+  "affix.apothic_compats:scythe/attribute/giant_slaying": "Matador de Gigantes",
+  "affix.apothic_compats:scythe/attribute/giant_slaying.suffix": "de Golpes Colossais",
+
+  "affix.apothic_compats:scythe/attribute/berserking": "Berserker",
+  "affix.apothic_compats:scythe/attribute/berserking.suffix": "do Berserker",
+
+  "affix.apothic_compats:scythe/attribute/annihilating": "Aniquilador",
+  "affix.apothic_compats:scythe/attribute/annihilating.suffix": "do Titã",
+
+  "affix.apothic_compats:scythe/attribute/decimating": "Dizimador",
+  "affix.apothic_compats:scythe/attribute/decimating.suffix": "do Rei-Deus",
+
+  "affix.apothic_compats:scythe/attribute/murderous": "Assassino",
+  "affix.apothic_compats:scythe/attribute/murderous.suffix": "do Minotauro",
+
+  "affix.apothic_compats:scythe/attribute/lengthy": "Longo",
+  "affix.apothic_compats:scythe/attribute/lengthy.suffix": "de Alcance Extremo",
+
+  "affix.apothic_compats:scythe/attribute/nullifying": "Nulificador",
+  "affix.apothic_compats:scythe/attribute/nullifying.suffix": "do Quebra-Magos",
+
+  "affix.apothic_compats:scythe/attribute/spellbreaking": "Quebra-Feitiço",
+  "affix.apothic_compats:scythe/attribute/spellbreaking.suffix": "do Golem de Petricita",
+
+  "affix.apothic_compats:scythe/mob_effect/omniscient": "Onisciente",
+  "affix.apothic_compats:scythe/mob_effect/omniscient.suffix": "do Grande Sábio",
+
+  "affix.apothic_compats:scythe/mob_effect/bloodletting": "Cáustico",
+  "affix.apothic_compats:scythe/mob_effect/bloodletting.suffix": "do Matador",
+
+  "affix.apothic_compats:scythe/mob_effect/caustic": "Cáustico",
+  "affix.apothic_compats:scythe/mob_effect/caustic.suffix": "do Reino Cáustico",
+
+  "affix.apothic_compats:scythe/mob_effect/sophisticated": "Sofisticado",
+  "affix.apothic_compats:scythe/mob_effect/sophisticated.suffix": "da Biblioteca Ancestral",
+
+  "affix.apothic_compats:scythe/mob_effect/elusive": "Elusivo",
+  "affix.apothic_compats:scythe/mob_effect/elusive.suffix": "da Evasão",
+
+  "affix.apothic_compats:scythe/mob_effect/weakening": "Enfraquecedor",
+  "affix.apothic_compats:scythe/mob_effect/weakening.suffix": "da Fraqueza",
+
+  "affix.apothic_compats:scythe/attribute/ancient/violent": "Violento",
+  "affix.apothic_compats:scythe/attribute/ancient/violent.suffix": "da Matança",
+
+  "affix.apothic_compats:scythe/attribute/ancient/graceful": "Gracioso",
+  "affix.apothic_compats:scythe/attribute/ancient/graceful.suffix": "do Duelista",
+
+  "affix.apothic_compats:scythe/attribute/ancient/forceful": "Vigoroso",
+  "affix.apothic_compats:scythe/attribute/ancient/forceful.suffix": "do Touro",
+
+  "affix.apothic_compats:scythe/attribute/ancient/elongated": "Alongado",
+  "affix.apothic_compats:scythe/attribute/ancient/elongated.suffix": "de Batalhas Distantes",
+
+  "affix.apothic_compats:scythe/attribute/ancient/intricate": "Intricado",
+  "affix.apothic_compats:scythe/attribute/ancient/intricate.suffix": "do Pensamento Crítico",
+
+  "affix.apothic_compats:scythe/attribute/ancient/lacerating": "Dilacerante",
+  "affix.apothic_compats:scythe/attribute/ancient/lacerating.suffix": "da Precisão Cirúrgica",
+
+  "affix.apothic_compats:scythe/attribute/ancient/glacial": "Glacial",
+  "affix.apothic_compats:scythe/attribute/ancient/glacial.suffix": "das Terras Gélidas",
+
+  "affix.apothic_compats:scythe/attribute/ancient/infernal": "Infernal",
+  "affix.apothic_compats:scythe/attribute/ancient/infernal.suffix": "do Sol",
+
+  "affix.apothic_compats:scythe/attribute/ancient/vampiric": "Vampírico",
+  "affix.apothic_compats:scythe/attribute/ancient/vampiric.suffix": "da Sangria",
+
+  "affix.apothic_compats:scythe/attribute/ancient/piercing": "Perfurante",
+  "affix.apothic_compats:scythe/attribute/ancient/piercing.suffix": "do Fendedor",
+
+  "affix.apothic_compats:scythe/attribute/ancient/shredding": "Triturador",
+  "affix.apothic_compats:scythe/attribute/ancient/shredding.suffix": "da Penetração",
+
+  "affix.apothic_compats:scythe/attribute/ancient/giant_slaying": "Matador de Gigantes",
+  "affix.apothic_compats:scythe/attribute/ancient/giant_slaying.suffix": "de Golpes Colossais",
+
+  "affix.apothic_compats:scythe/attribute/ancient/berserking": "Berserker",
+  "affix.apothic_compats:scythe/attribute/ancient/berserking.suffix": "do Berserker",
+
+  "affix.apothic_compats:scythe/attribute/ancient/annihilating": "Aniquilador",
+  "affix.apothic_compats:scythe/attribute/ancient/annihilating.suffix": "do Titã",
+
+  "affix.apothic_compats:scythe/attribute/ancient/decimating": "Dizimador",
+  "affix.apothic_compats:scythe/attribute/ancient/decimating.suffix": "do Rei-Deus",
+
+  "affix.apothic_compats:scythe/attribute/ancient/murderous": "Assassino",
+  "affix.apothic_compats:scythe/attribute/ancient/murderous.suffix": "do Minotauro",
+
+  "affix.apothic_compats:scythe/attribute/ancient/lengthy": "Longo",
+  "affix.apothic_compats:scythe/attribute/ancient/lengthy.suffix": "do Alcance Extremo",
+
+  "affix.apothic_compats:scythe/attribute/ancient/nullifying": "Nulificador",
+  "affix.apothic_compats:scythe/attribute/ancient/nullifying.suffix": "do Quebra-Magos",
+
+  "affix.apothic_compats:scythe/attribute/ancient/spellbreaking": "Quebra-Feitiço",
+  "affix.apothic_compats:scythe/attribute/ancient/spellbreaking.suffix": "do Golem de Petricita",
+
+  "affix.apothic_compats:scythe/mob_effect/ancient/omniscient": "Onisciente",
+  "affix.apothic_compats:scythe/mob_effect/ancient/omniscient.suffix": "do Grande Sábio",
+
+  "affix.apothic_compats:scythe/mob_effect/ancient/bloodletting": "Cáustico",
+  "affix.apothic_compats:scythe/mob_effect/ancient/bloodletting.suffix": "do Matador",
+
+  "affix.apothic_compats:scythe/mob_effect/ancient/caustic": "Cáustico",
+  "affix.apothic_compats:scythe/mob_effect/ancient/caustic.suffix": "do Reino Cáustico",
+
+  "affix.apothic_compats:scythe/mob_effect/ancient/sophisticated": "Sofisticado",
+  "affix.apothic_compats:scythe/mob_effect/ancient/sophisticated.suffix": "da Biblioteca Ancestral",
+
+  "affix.apothic_compats:scythe/mob_effect/ancient/elusive": "Elusivo",
+  "affix.apothic_compats:scythe/mob_effect/ancient/elusive.suffix": "da Evasão",
+
+  "affix.apothic_compats:scythe/mob_effect/ancient/weakening": "Enfraquecedor",
+  "affix.apothic_compats:scythe/mob_effect/ancient/weakening.suffix": "da Fraqueza"
+
+  
+}
