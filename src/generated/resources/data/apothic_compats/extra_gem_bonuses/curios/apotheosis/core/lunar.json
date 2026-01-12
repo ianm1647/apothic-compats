@@ -9,8 +9,8 @@
     "gem": "apotheosis:core/lunar",
     "bonuses": [
         {
-            "type": "apotheosis:enchantment",
-            "enchantment": "minecraft:looting",
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:generic.luck",
             "gem_class": {
                 "key": "curios",
                 "types": [
@@ -27,12 +27,12 @@
                     "apothic_compats:curio"
                 ]
             },
-            "mode": "existing",
+            "operation": "add_value",
             "values": {
-                "flawed": 1,
-                "normal": 2,
-                "flawless": 3,
-                "perfect": 4
+                "flawed": 2.0,
+                "normal": 4.0,
+                "flawless": 6.0,
+                "perfect": 8.0
             }
         }
     ]

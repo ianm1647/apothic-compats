@@ -121,13 +121,13 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.PERFECT, 0.3)));
 
         addBonus(Apotheosis.loc("core/lunar"), b -> b
-                .bonus(CURIOS, EnchantmentBonus.builder()
-                        .enchantment(enchants.getOrThrow(Enchantments.LOOTING))
-                        .mode(EnchantmentBonus.Mode.EXISTING)
-                        .value(Purity.FLAWED, 1)
-                        .value(Purity.NORMAL, 2)
-                        .value(Purity.FLAWLESS, 3)
-                        .value(Purity.PERFECT, 4)));
+                .bonus(CURIOS, AttributeBonus.builder()
+                        .attr(Attributes.LUCK)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.FLAWED, 2)
+                        .value(Purity.NORMAL, 4)
+                        .value(Purity.FLAWLESS, 6)
+                        .value(Purity.PERFECT, 8)));
 
         addBonus(Apotheosis.loc("core/samurai"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
@@ -269,14 +269,14 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addBonus(Apotheosis.loc("the_nether/blood_lord"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(Attributes.LUCK)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 1)
-                        .value(Purity.CHIPPED, 2)
-                        .value(Purity.FLAWED, 3)
-                        .value(Purity.NORMAL, 4)
-                        .value(Purity.FLAWLESS, 5)
-                        .value(Purity.PERFECT, 8)));
+                        .attr(Attributes.BURNING_TIME)
+                        .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                        .value(Purity.CRACKED, -0.1f)
+                        .value(Purity.CHIPPED, -0.15f)
+                        .value(Purity.FLAWED, -0.2f)
+                        .value(Purity.NORMAL, -0.25f)
+                        .value(Purity.FLAWLESS, -0.35f)
+                        .value(Purity.PERFECT, -0.5f)));
 
         addBonus(Apotheosis.loc("the_nether/inferno"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()

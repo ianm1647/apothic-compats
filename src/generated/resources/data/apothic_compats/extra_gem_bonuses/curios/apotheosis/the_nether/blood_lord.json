@@ -10,7 +10,7 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "minecraft:generic.luck",
+            "attribute": "minecraft:generic.burning_time",
             "gem_class": {
                 "key": "curios",
                 "types": [
@@ -27,14 +27,14 @@
                     "apothic_compats:curio"
                 ]
             },
-            "operation": "add_value",
+            "operation": "add_multiplied_base",
             "values": {
-                "cracked": 1.0,
-                "chipped": 2.0,
-                "flawed": 3.0,
-                "normal": 4.0,
-                "flawless": 5.0,
-                "perfect": 8.0
+                "cracked": -0.10000000149011612,
+                "chipped": -0.15000000596046448,
+                "flawed": -0.20000000298023224,
+                "normal": -0.25,
+                "flawless": -0.3499999940395355,
+                "perfect": -0.5
             }
         }
     ]
