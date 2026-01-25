@@ -10,6 +10,7 @@ import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 
 import java.util.concurrent.CompletableFuture;
@@ -48,7 +49,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.BACK, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -75,7 +78,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.BELT, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -102,7 +107,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.BODY, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -129,7 +136,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.BRACELET, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -156,7 +165,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.CHARM, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -183,7 +194,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.CURIO, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -210,7 +223,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.FEET, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -237,7 +252,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.HANDS, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -264,7 +281,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.HEAD, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -291,7 +310,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.NECKLACE, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -318,7 +339,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
-                        .rule(new LootRule.SocketLootRule(2, 2)))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.RING, b -> b
                 .override(ancient, c -> c
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
                         .rule(new LootRule.AffixLootRule(AffixType.STAT))
@@ -336,6 +359,11 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
     private void addOverride(LootCategory category, UnaryOperator<RarityOverride.Builder> config) {
         this.add(ApothicCompats.loc(Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
                 config.apply(RarityOverride.builder(category)).build());
+    }
+
+    private void addAncientOverride(LootCategory category, UnaryOperator<RarityOverride.Builder> config) {
+        this.addConditionally(ApothicCompats.loc("ancient/" + Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
+                config.apply(RarityOverride.builder(category)).build(), new ModLoadedCondition("ancientreforging"));
     }
 
     private static LootRarity rarity(String path) {

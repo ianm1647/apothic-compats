@@ -66,7 +66,6 @@ dependencies {
     implementation "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
 
-
     //compat deps
     implementation "curse.maven:lodestone-616457:$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
