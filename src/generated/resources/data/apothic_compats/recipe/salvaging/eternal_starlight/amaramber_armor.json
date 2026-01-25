@@ -1,0 +1,27 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "eternal_starlight"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "eternal_starlight:amaramber_mask"
+        },
+        {
+            "item": "eternal_starlight:amaramber_chestplate"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:aethersent_ingot"
+            }
+        }
+    ]
+}

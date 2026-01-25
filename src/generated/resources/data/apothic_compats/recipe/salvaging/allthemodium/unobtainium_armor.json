@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "allthemodium"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "allthemodium:unobtainium_helmet"
+        },
+        {
+            "item": "allthemodium:unobtainium_chestplate"
+        },
+        {
+            "item": "allthemodium:unobtainium_leggings"
+        },
+        {
+            "item": "allthemodium:unobtainium_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 2,
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:unobtainium_ingot"
+            }
+        }
+    ]
+}

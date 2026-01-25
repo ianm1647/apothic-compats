@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "twilightforest:ironwood_axe"
+        },
+        {
+            "item": "twilightforest:ironwood_pickaxe"
+        },
+        {
+            "item": "twilightforest:ironwood_shovel"
+        },
+        {
+            "item": "twilightforest:ironwood_sword"
+        },
+        {
+            "item": "twilightforest:ironwood_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "twilightforest:ironwood_ingot"
+            }
+        }
+    ]
+}

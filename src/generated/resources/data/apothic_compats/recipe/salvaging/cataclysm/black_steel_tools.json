@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "cataclysm"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "cataclysm:black_steel_axe"
+        },
+        {
+            "item": "cataclysm:black_steel_pickaxe"
+        },
+        {
+            "item": "cataclysm:black_steel_shovel"
+        },
+        {
+            "item": "cataclysm:black_steel_sword"
+        },
+        {
+            "item": "cataclysm:black_steel_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "cataclysm:black_steel_ingot"
+            }
+        }
+    ]
+}

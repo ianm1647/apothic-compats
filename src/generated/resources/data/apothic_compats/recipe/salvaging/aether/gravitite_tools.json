@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "aether:gravitite_axe"
+        },
+        {
+            "item": "aether:gravitite_pickaxe"
+        },
+        {
+            "item": "aether:gravitite_shovel"
+        },
+        {
+            "item": "aether:gravitite_sword"
+        },
+        {
+            "item": "aether:gravitite_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "aether:enchanted_gravitite"
+            }
+        }
+    ]
+}

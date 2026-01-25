@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "allthemodium"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "allthemodium:vibranium_axe"
+        },
+        {
+            "item": "allthemodium:vibranium_pickaxe"
+        },
+        {
+            "item": "allthemodium:vibranium_shovel"
+        },
+        {
+            "item": "allthemodium:vibranium_sword"
+        },
+        {
+            "item": "allthemodium:vibranium_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 2,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:vibranium_ingot"
+            }
+        }
+    ]
+}

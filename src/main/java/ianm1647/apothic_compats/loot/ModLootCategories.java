@@ -1,7 +1,6 @@
 package ianm1647.apothic_compats.loot;
 
 import com.aetherteam.aether.item.combat.DartShooterItem;
-import com.hollingsworth.arsnouveau.api.item.ArsNouveauCurio;
 import com.sammy.malum.common.item.curiosities.weapons.scythe.MalumScytheItem;
 import com.sammy.malum.common.item.curiosities.weapons.staff.AbstractStaffItem;
 import com.simibubi.create.content.equipment.potatoCannon.PotatoCannonItem;
@@ -49,6 +48,7 @@ public class ModLootCategories {
 
     public static void registerLootCategories(IEventBus bus) {
         bus.register(R);
+
         if (ModList.get().isLoaded("aether")) {
             DART_SHOOTER = register("dart_shooter",
                     s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);

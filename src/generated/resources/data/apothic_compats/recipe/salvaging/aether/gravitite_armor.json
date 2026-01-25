@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "aether:gravitite_helmet"
+        },
+        {
+            "item": "aether:gravitite_chestplate"
+        },
+        {
+            "item": "aether:gravitite_leggings"
+        },
+        {
+            "item": "aether:gravitite_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "aether:enchanted_gravitite"
+            }
+        }
+    ]
+}

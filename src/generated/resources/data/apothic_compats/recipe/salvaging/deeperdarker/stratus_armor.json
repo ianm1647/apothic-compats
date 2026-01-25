@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "deeperdarker"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "deeperdarker:resonarium_helmet"
+        },
+        {
+            "item": "deeperdarker:resonarium_chestplate"
+        },
+        {
+            "item": "deeperdarker:resonarium_leggings"
+        },
+        {
+            "item": "deeperdarker:resonarium_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 2,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "deeperdarker:resonarium_plate"
+            }
+        }
+    ]
+}

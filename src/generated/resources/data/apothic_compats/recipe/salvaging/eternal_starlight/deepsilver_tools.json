@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "eternal_starlight"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "eternal_starlight:deepsilver_axe"
+        },
+        {
+            "item": "eternal_starlight:deepsilver_pickaxe"
+        },
+        {
+            "item": "eternal_starlight:deepsilver_shovel"
+        },
+        {
+            "item": "eternal_starlight:deepsilver_sword"
+        },
+        {
+            "item": "eternal_starlight:deepsilver_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "eternal_starlight:deepsilver_ingot"
+            }
+        }
+    ]
+}

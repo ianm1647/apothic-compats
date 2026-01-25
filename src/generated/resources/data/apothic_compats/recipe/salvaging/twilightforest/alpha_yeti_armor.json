@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "twilightforest:yeti_helmet"
+        },
+        {
+            "item": "twilightforest:yeti_chestplate"
+        },
+        {
+            "item": "twilightforest:yeti_leggings"
+        },
+        {
+            "item": "twilightforest:yeti_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "twilightforest:alpha_yeti_fur"
+            }
+        }
+    ]
+}

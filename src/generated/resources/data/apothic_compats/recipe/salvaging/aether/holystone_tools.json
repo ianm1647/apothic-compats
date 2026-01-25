@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "aether"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "aether:holystone_axe"
+        },
+        {
+            "item": "aether:holystone_pickaxe"
+        },
+        {
+            "item": "aether:holystone_shovel"
+        },
+        {
+            "item": "aether:holystone_sword"
+        },
+        {
+            "item": "aether:holystone_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "aether:holystone"
+            }
+        }
+    ]
+}

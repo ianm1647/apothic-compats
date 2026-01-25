@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "deeperdarker"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "deeperdarker:resonarium_axe"
+        },
+        {
+            "item": "deeperdarker:resonarium_pickaxe"
+        },
+        {
+            "item": "deeperdarker:resonarium_shovel"
+        },
+        {
+            "item": "deeperdarker:resonarium_sword"
+        },
+        {
+            "item": "deeperdarker:resonarium_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 2,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "deeperdarker:resonarium_plate"
+            }
+        }
+    ]
+}

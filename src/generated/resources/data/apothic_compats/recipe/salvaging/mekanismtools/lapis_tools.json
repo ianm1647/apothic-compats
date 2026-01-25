@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "mekanismtools"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "mekanismtools:lapis_lazuli_axe"
+        },
+        {
+            "item": "mekanismtools:lapis_lazuli_pickaxe"
+        },
+        {
+            "item": "mekanismtools:lapis_lazuli_shovel"
+        },
+        {
+            "item": "mekanismtools:lapis_lazuli_sword"
+        },
+        {
+            "item": "mekanismtools:lapis_lazuli_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "minecraft:lapis_lazuli"
+            }
+        }
+    ]
+}

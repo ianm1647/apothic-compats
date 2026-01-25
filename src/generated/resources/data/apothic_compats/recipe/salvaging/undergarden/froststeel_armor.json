@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "undergarden"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "undergarden:froststeel_helmet"
+        },
+        {
+            "item": "undergarden:froststeel_chestplate"
+        },
+        {
+            "item": "undergarden:froststeel_leggings"
+        },
+        {
+            "item": "undergarden:froststeel_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "undergarden:froststeel_ingot"
+            }
+        }
+    ]
+}

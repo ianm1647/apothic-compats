@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "allthemodium"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "allthemodium:unobtainium_axe"
+        },
+        {
+            "item": "allthemodium:unobtainium_pickaxe"
+        },
+        {
+            "item": "allthemodium:unobtainium_shovel"
+        },
+        {
+            "item": "allthemodium:unobtainium_sword"
+        },
+        {
+            "item": "allthemodium:unobtainium_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 2,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "allthemodium:unobtainium_ingot"
+            }
+        }
+    ]
+}

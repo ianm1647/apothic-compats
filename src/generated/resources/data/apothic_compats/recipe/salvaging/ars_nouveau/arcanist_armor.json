@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ars_nouveau"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "ars_nouveau:arcanist_hood"
+        },
+        {
+            "item": "ars_nouveau:arcanist_robes"
+        },
+        {
+            "item": "ars_nouveau:arcanist_leggings"
+        },
+        {
+            "item": "ars_nouveau:arcanist_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "ars_nouveau:magebloom_fiber"
+            }
+        }
+    ]
+}

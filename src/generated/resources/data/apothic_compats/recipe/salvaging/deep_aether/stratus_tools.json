@@ -1,0 +1,36 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "deep_aether"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "deep_aether:stratus_axe"
+        },
+        {
+            "item": "deep_aether:stratus_pickaxe"
+        },
+        {
+            "item": "deep_aether:stratus_shovel"
+        },
+        {
+            "item": "deep_aether:stratus_sword"
+        },
+        {
+            "item": "deep_aether:stratus_hoe"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 1,
+            "min_count": 0,
+            "stack": {
+                "count": 1,
+                "id": "deep_aether:stratus_ingot"
+            }
+        }
+    ]
+}

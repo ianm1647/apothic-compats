@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "twilightforest:steeleaf_helmet"
+        },
+        {
+            "item": "twilightforest:steeleaf_chestplate"
+        },
+        {
+            "item": "twilightforest:steeleaf_leggings"
+        },
+        {
+            "item": "twilightforest:steeleaf_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "twilightforest:steeleaf_ingot"
+            }
+        }
+    ]
+}

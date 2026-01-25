@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "type": "apotheosis:salvaging",
+    "input": [
+        {
+            "item": "twilightforest:knightmetal_helmet"
+        },
+        {
+            "item": "twilightforest:knightmetal_chestplate"
+        },
+        {
+            "item": "twilightforest:knightmetal_leggings"
+        },
+        {
+            "item": "twilightforest:knightmetal_boots"
+        }
+    ],
+    "outputs": [
+        {
+            "max_count": 3,
+            "min_count": 1,
+            "stack": {
+                "count": 1,
+                "id": "twilightforest:knightmetal_ingot"
+            }
+        }
+    ]
+}

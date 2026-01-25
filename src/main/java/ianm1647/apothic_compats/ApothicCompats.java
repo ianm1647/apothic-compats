@@ -93,6 +93,7 @@ public class ApothicCompats {
                 .provider(DynamicRegistryProvider.runSilently(ARRarityProvider::new))
                 .provider(DataMapProvider::new)
                 .provider(RarityOverrideProvider::new)
+                .provider(RecipeProvider::new)
 
                 .provider(Ae2AffixLootProvider::new)
                 .provider(Ae2GearSetProvider::new)
