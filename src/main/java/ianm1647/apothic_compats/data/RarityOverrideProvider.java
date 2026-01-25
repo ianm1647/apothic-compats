@@ -349,6 +349,93 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
                         .rule(new LootRule.ChancedLootRule(0.1F, new LootRule.AffixLootRule(AffixType.STAT)))
                         .rule(new LootRule.SocketLootRule(2, 3))));
 
+        addOverride(ModLootCategories.AN_FOCUS, b -> b
+                .override(uncommon, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.5F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(0, 1)))
+                .override(rare, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.15F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(1, 1)))
+                .override(epic, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.5F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(1, 2)))
+                .override(mythic, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.AN_FOCUS, b -> b
+                .override(ancient, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.1F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(2, 3))));
+
+        addOverride(ModLootCategories.BROOCH, b -> b
+                .override(uncommon, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.5F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(0, 1)))
+                .override(rare, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.15F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(1, 1)))
+                .override(epic, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.5F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(1, 2)))
+                .override(mythic, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.BROOCH, b -> b
+                .override(ancient, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.1F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(2, 3))));
+
+        addOverride(ModLootCategories.RUNE, b -> b
+                .override(uncommon, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.5F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(0, 1)))
+                .override(rare, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.15F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(1, 1)))
+                .override(epic, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.5F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(1, 2)))
+                .override(mythic, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.SocketLootRule(2, 2))));
+
+        addAncientOverride(ModLootCategories.RUNE, b -> b
+                .override(ancient, c -> c
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.AffixLootRule(AffixType.STAT))
+                        .rule(new LootRule.ChancedLootRule(0.1F, new LootRule.AffixLootRule(AffixType.STAT)))
+                        .rule(new LootRule.SocketLootRule(2, 3))));
+
     }
 
     @Override
@@ -357,12 +444,12 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
     }
 
     private void addOverride(LootCategory category, UnaryOperator<RarityOverride.Builder> config) {
-        this.add(ApothicCompats.loc(Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
+        this.add(ApothicCompats.loc("curios/" + Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).getPath()),
                 config.apply(RarityOverride.builder(category)).build());
     }
 
     private void addAncientOverride(LootCategory category, UnaryOperator<RarityOverride.Builder> config) {
-        this.addConditionally(ApothicCompats.loc("ancient/" + Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
+        this.addConditionally(ApothicCompats.loc("curios/ancient/" + Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).getPath()),
                 config.apply(RarityOverride.builder(category)).build(), new ModLoadedCondition("ancientreforging"));
     }
 
