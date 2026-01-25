@@ -20,11 +20,9 @@ import net.neoforged.neoforge.event.entity.EntityInvulnerabilityCheckEvent;
 import java.util.Set;
 
 public class MagicalDartAffix extends Affix {
-    public static final Codec<MagicalDartAffix> CODEC = RecordCodecBuilder.create((inst) -> {
-        return inst.group(affixDef(), PlaceboCodecs.setOf(LootRarity.CODEC).fieldOf("rarities").forGetter((a) -> {
-            return a.rarities;
-        })).apply(inst, MagicalDartAffix::new);
-    });
+    public static final Codec<MagicalDartAffix> CODEC = RecordCodecBuilder.create((inst) -> inst
+            .group(affixDef(), PlaceboCodecs.setOf(LootRarity.CODEC).fieldOf("rarities").forGetter((a) -> a.rarities))
+            .apply(inst, MagicalDartAffix::new));
     protected Set<LootRarity> rarities;
 
     public MagicalDartAffix(AffixDefinition def, Set<LootRarity> rarities) {

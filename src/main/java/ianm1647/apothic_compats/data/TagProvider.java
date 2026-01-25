@@ -22,8 +22,8 @@ import java.util.concurrent.CompletableFuture;
 
 public class TagProvider {
     public static class Items extends ItemTagsProvider {
-        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, CompletableFuture<TagsProvider.TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
-            super(output, provider, blockTags, ApothicCompats.MODID, existingFileHelper);
+        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, CompletableFuture<TagsProvider.TagLookup<Block>> blockTags, ExistingFileHelper helper) {
+            super(output, provider, blockTags, ApothicCompats.MODID, helper);
         }
 
         @Override

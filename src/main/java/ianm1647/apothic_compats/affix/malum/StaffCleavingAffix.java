@@ -32,11 +32,9 @@ import java.util.List;
 import java.util.Map;
 
 public class StaffCleavingAffix extends Affix {
-    public static final Codec<StaffCleavingAffix> CODEC = RecordCodecBuilder.create((inst) -> {
-        return inst.group(affixDef(), LootRarity.mapCodec(StaffCleavingAffix.CleaveValues.CODEC).fieldOf("values").forGetter((a) -> {
-            return a.values;
-        })).apply(inst, StaffCleavingAffix::new);
-    });
+    public static final Codec<StaffCleavingAffix> CODEC = RecordCodecBuilder.create((inst) -> inst
+            .group(affixDef(), LootRarity.mapCodec(CleaveValues.CODEC).fieldOf("values").forGetter((a) -> a.values))
+            .apply(inst, StaffCleavingAffix::new));
     protected final Map<LootRarity, StaffCleavingAffix.CleaveValues> values;
     private static boolean cleaving = false;
 

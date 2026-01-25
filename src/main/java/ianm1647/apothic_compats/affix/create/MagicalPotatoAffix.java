@@ -20,11 +20,9 @@ import net.neoforged.neoforge.event.entity.EntityInvulnerabilityCheckEvent;
 import java.util.Set;
 
 public class MagicalPotatoAffix extends Affix {
-    public static final Codec<MagicalPotatoAffix> CODEC = RecordCodecBuilder.create((inst) -> {
-        return inst.group(affixDef(), PlaceboCodecs.setOf(LootRarity.CODEC).fieldOf("rarities").forGetter((a) -> {
-            return a.rarities;
-        })).apply(inst, MagicalPotatoAffix::new);
-    });
+    public static final Codec<MagicalPotatoAffix> CODEC = RecordCodecBuilder.create((inst) -> inst
+            .group(affixDef(), PlaceboCodecs.setOf(LootRarity.CODEC).fieldOf("rarities").forGetter((a) -> a.rarities))
+            .apply(inst, MagicalPotatoAffix::new));
     protected Set<LootRarity> rarities;
 
     public MagicalPotatoAffix(AffixDefinition def, Set<LootRarity> rarities) {

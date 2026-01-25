@@ -333,10 +333,9 @@ public class RarityOverrideProvider extends DynamicRegistryProvider<RarityOverri
         return "Rarity Overrides";
     }
 
-
     private void addOverride(LootCategory category, UnaryOperator<RarityOverride.Builder> config) {
         this.add(ApothicCompats.loc(Apoth.BuiltInRegs.LOOT_CATEGORY.getKey(category).toString().replace(':', '/')),
-                config.apply(new RarityOverride.Builder(category)).build());
+                config.apply(RarityOverride.builder(category)).build());
     }
 
     private static LootRarity rarity(String path) {

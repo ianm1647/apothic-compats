@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.util;
 
-import com.aetherteam.aether.inventory.AetherAccessorySlots;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.apothic_attributes.compat.CurioEquipmentSlot;
 import dev.shadowsoffire.apothic_attributes.modifiers.EntityEquipmentSlot;

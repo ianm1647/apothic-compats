@@ -29,9 +29,7 @@ import java.util.Set;
 public class ScytheThunderstruckAffix extends Affix {
 
     public static final Codec<ScytheThunderstruckAffix> CODEC = RecordCodecBuilder.create(inst -> inst
-            .group(
-                    affixDef(),
-                    LootCategory.SET_CODEC.fieldOf("categories").forGetter(a -> a.categories),
+            .group(affixDef(), LootCategory.SET_CODEC.fieldOf("categories").forGetter(a -> a.categories),
                     LootRarity.mapCodec(StepFunction.CODEC).fieldOf("values").forGetter(a -> a.values))
             .apply(inst, ScytheThunderstruckAffix::new));
 
