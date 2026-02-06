@@ -1,6 +1,6 @@
 {
     "type": "apotheosis:rarity_override",
-    "category": "apothic_compats:belt",
+    "category": "apothic_compats:back",
     "overrides": {
         "apotheosis:uncommon": [
             {
@@ -84,6 +84,33 @@
                 "type": "apotheosis:socket",
                 "min": 2,
                 "max": 2
+            }
+        ],
+        "ancientreforging:ancient": [
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:chanced",
+                "chance": 0.1,
+                "rule": {
+                    "type": "apotheosis:affix",
+                    "affix_type": "stat"
+                }
+            },
+            {
+                "type": "apotheosis:socket",
+                "min": 2,
+                "max": 3
             }
         ]
     }

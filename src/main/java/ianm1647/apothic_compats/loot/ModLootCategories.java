@@ -16,6 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import top.theillusivec4.curios.api.CuriosTags;
+import top.theillusivec4.curios.api.type.capability.ICurio;
 
 import java.util.function.Predicate;
 
@@ -67,21 +68,21 @@ public class ModLootCategories {
         }
 
         if (ModList.get().isLoaded("curios")) {
-            BACK = register("back", s -> s.is(CuriosTags.BACK), ModSlotGroups.Groups.BACK);
-            BELT = register("belt", s -> s.is(CuriosTags.BELT), ModSlotGroups.Groups.BELT);
-            BODY = register("body", s -> s.is(CuriosTags.BODY), ModSlotGroups.Groups.BODY);
-            BRACELET = register("bracelet", s -> s.is(CuriosTags.BRACELET), ModSlotGroups.Groups.BRACELET);
-            CHARM = register("charm", s -> s.is(CuriosTags.CHARM), ModSlotGroups.Groups.CHARM);
-            CURIO = register("curio", s -> s.is(CuriosTags.CURIO), ModSlotGroups.Groups.CURIO);
-            FEET = register("feet", s -> s.is(ModTags.Curios.FEET), ModSlotGroups.Groups.FEET);
-            HANDS = register("hands", s -> s.is(CuriosTags.HANDS), ModSlotGroups.Groups.HANDS);
-            HEAD = register("head", s -> s.is(CuriosTags.HEAD), ModSlotGroups.Groups.HEAD);
-            NECKLACE = register("necklace", s -> s.is(CuriosTags.NECKLACE), ModSlotGroups.Groups.NECKLACE);
-            RING = register("ring", s -> s.is(CuriosTags.RING), ModSlotGroups.Groups.RING);
+            BACK = register("back", s -> s.is(CuriosTags.BACK) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.BACK);
+            BELT = register("belt", s -> s.is(CuriosTags.BELT) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.BELT);
+            BODY = register("body", s -> s.is(CuriosTags.BODY) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.BODY);
+            BRACELET = register("bracelet", s -> s.is(CuriosTags.BRACELET) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.BRACELET);
+            CHARM = register("charm", s -> s.is(CuriosTags.CHARM) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.CHARM);
+            CURIO = register("curio", s -> s.is(CuriosTags.CURIO) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.CURIO);
+            FEET = register("feet", s -> s.is(ModTags.Curios.FEET) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.FEET);
+            HANDS = register("hands", s -> s.is(CuriosTags.HANDS) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.HANDS);
+            HEAD = register("head", s -> s.is(CuriosTags.HEAD) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.HEAD);
+            NECKLACE = register("necklace", s -> s.is(CuriosTags.NECKLACE) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.NECKLACE);
+            RING = register("ring", s -> s.is(CuriosTags.RING) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.RING);
 
-            AN_FOCUS = register("an_focus", s -> s.is(ModTags.Curios.AN_FOCUS), ModSlotGroups.Groups.AN_FOCUS);
-            BROOCH = register("brooch", s -> s.is(ModTags.Curios.BROOCH), ModSlotGroups.Groups.BROOCH);
-            RUNE = register("rune", s -> s.is(ModTags.Curios.RUNE), ModSlotGroups.Groups.RUNE);
+            AN_FOCUS = register("an_focus", s -> s.is(ModTags.Curios.AN_FOCUS) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.AN_FOCUS);
+            BROOCH = register("brooch", s -> s.is(ModTags.Curios.BROOCH) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.BROOCH);
+            RUNE = register("rune", s -> s.is(ModTags.Curios.RUNE) | s.getItem() instanceof ICurio, ModSlotGroups.Groups.RUNE);
         }
     }
 
