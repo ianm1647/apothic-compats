@@ -10,16 +10,31 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "apothic_compats:ring_slots",
-            "gem_class": "apothic_compats:brooch",
-            "operation": "add_value",
+            "attribute": "minecraft:generic.attack_speed",
+            "gem_class": {
+                "key": "curios",
+                "types": [
+                    "apothic_compats:hands",
+                    "apothic_compats:bracelet",
+                    "apothic_compats:ring",
+                    "apothic_compats:body",
+                    "apothic_compats:back",
+                    "apothic_compats:belt",
+                    "apothic_compats:feet",
+                    "apothic_compats:head",
+                    "apothic_compats:necklace",
+                    "apothic_compats:charm",
+                    "apothic_compats:curio"
+                ]
+            },
+            "operation": "add_multiplied_total",
             "values": {
-                "cracked": 1.0,
-                "chipped": 2.0,
-                "flawed": 3.0,
-                "normal": 4.0,
-                "flawless": 5.0,
-                "perfect": 6.0
+                "cracked": 0.075,
+                "chipped": 0.1,
+                "flawed": 0.125,
+                "normal": 0.15,
+                "flawless": 0.175,
+                "perfect": 0.2
             }
         }
     ]

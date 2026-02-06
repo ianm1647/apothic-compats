@@ -17,7 +17,7 @@
     "definition": {
         "affix_type": "stat",
         "exclusive_set": [
-            "apotheosis:staff/melee/attribute/vampiric"
+            "apothic_compats:staff/melee/attribute/vampiric"
         ],
         "weights": {
             "quality": 0.1,

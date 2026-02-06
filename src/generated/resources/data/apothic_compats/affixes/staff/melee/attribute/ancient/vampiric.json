@@ -17,7 +17,7 @@
     "definition": {
         "affix_type": "stat",
         "exclusive_set": [
-            "apotheosis:staff/melee/attribute/berserking"
+            "apothic_compats:staff/melee/attribute/berserking"
         ],
         "weights": {
             "quality": 0.1,

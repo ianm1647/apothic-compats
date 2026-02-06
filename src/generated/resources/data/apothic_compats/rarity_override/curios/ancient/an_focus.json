@@ -1,0 +1,39 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "apotheosis:rarity_override",
+    "category": "apothic_compats:an_focus",
+    "overrides": {
+        "ancientreforging:ancient": [
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:affix",
+                "affix_type": "stat"
+            },
+            {
+                "type": "apotheosis:chanced",
+                "chance": 0.1,
+                "rule": {
+                    "type": "apotheosis:affix",
+                    "affix_type": "stat"
+                }
+            },
+            {
+                "type": "apotheosis:socket",
+                "min": 2,
+                "max": 3
+            }
+        ]
+    }
+}

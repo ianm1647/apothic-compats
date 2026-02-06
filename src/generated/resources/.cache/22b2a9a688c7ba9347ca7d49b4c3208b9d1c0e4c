@@ -1,8 +1,10 @@
-// 1.21.1	2026-01-25T17:14:15.5040994	Rarity Overrides
+// 1.21.1	2026-02-05T18:01:22.9302405	Rarity Overrides
+1e5ab3390576d062c2f86389abcabb6f7daf7c8c data/apothic_compats/rarity_override/curios/ancient/an_focus.json
 9c0476b54678cda4f48b429ecf71c22182346648 data/apothic_compats/rarity_override/curios/ancient/back.json
 e362f78ee512faa0740779e1f6a5328fe88583bc data/apothic_compats/rarity_override/curios/ancient/belt.json
 cc1adf15e2aaac6eab19194c701335b0fc4cc588 data/apothic_compats/rarity_override/curios/ancient/body.json
 b3f0981913fcb6fa1adb2f7a5a551439defb0b44 data/apothic_compats/rarity_override/curios/ancient/bracelet.json
+c005c640126523464da05e9a562e7703deca64a5 data/apothic_compats/rarity_override/curios/ancient/brooch.json
 94c41741f132813af56aafdcbf2461933e13a409 data/apothic_compats/rarity_override/curios/ancient/charm.json
 6c02b982b599e9b88315858c8b74a8e3be64acb9 data/apothic_compats/rarity_override/curios/ancient/curio.json
 6955ae4a26b39ecbc3c3644dc867e9310cba79b5 data/apothic_compats/rarity_override/curios/ancient/feet.json
@@ -10,10 +12,13 @@ b3f0981913fcb6fa1adb2f7a5a551439defb0b44 data/apothic_compats/rarity_override/cu
 9f8ce38de5dd1f1cc58cecee775388eed72026f5 data/apothic_compats/rarity_override/curios/ancient/head.json
 558424c4610da1929f79a8dd45952fb927397c1f data/apothic_compats/rarity_override/curios/ancient/necklace.json
 2417c3562ba381e619a399f9f200e13ad8955ab5 data/apothic_compats/rarity_override/curios/ancient/ring.json
+27a06803f7c792989ea854a245c14bbc2608dbaf data/apothic_compats/rarity_override/curios/ancient/rune.json
+9ec896bfa79656fa10607ab5e0ea73af829909f4 data/apothic_compats/rarity_override/curios/an_focus.json
 59caa096084402043703932a9e3c882bc3ea9ec1 data/apothic_compats/rarity_override/curios/back.json
 2015514b0182f8f7dcf22177a38d99fab180b411 data/apothic_compats/rarity_override/curios/belt.json
 3a74af9cc2d83ccd08b44c60f54a2183e86799b1 data/apothic_compats/rarity_override/curios/body.json
 ac991f7c4975b72e2d47230b0e359e7a3494398a data/apothic_compats/rarity_override/curios/bracelet.json
+7670b4ec780cb1adce6f97e9c9312413767124cd data/apothic_compats/rarity_override/curios/brooch.json
 033d322253f10747d44b7732453464f3c99723ea data/apothic_compats/rarity_override/curios/charm.json
 f4750768740c3b63444fd485d4504cd70ab732f1 data/apothic_compats/rarity_override/curios/curio.json
 24a2f6f86cd6c1660119716cb62dd47acd6a7e84 data/apothic_compats/rarity_override/curios/feet.json
@@ -21,3 +26,4 @@ f4750768740c3b63444fd485d4504cd70ab732f1 data/apothic_compats/rarity_override/cu
 051c1c4f1fec0f35d03f5d97584be838badd2b4e data/apothic_compats/rarity_override/curios/head.json
 343f477685e7b7d8dde3021389cdcb14ac7b55b4 data/apothic_compats/rarity_override/curios/necklace.json
 a44b6d274614737004f3cb1688d9e849338e5a87 data/apothic_compats/rarity_override/curios/ring.json
+2789b20f328b6014c7bb1928ff79be13d7eb2eb4 data/apothic_compats/rarity_override/curios/rune.json

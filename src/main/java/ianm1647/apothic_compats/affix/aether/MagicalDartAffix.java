@@ -37,9 +37,7 @@ public class MagicalDartAffix extends Affix {
     public static void modifyIncomingDamageTags(EntityInvulnerabilityCheckEvent e) {
         Entity var2 = e.getSource().getDirectEntity();
         if (var2 instanceof AbstractDart dart) {
-            if (AffixHelper.streamAffixes(dart).anyMatch((a) -> {
-                return a.getAffix() instanceof MagicalDartAffix;
-            })) {
+            if (AffixHelper.streamAffixes(dart).anyMatch((a) -> a.getAffix() instanceof MagicalDartAffix)) {
                 DamageSourceExtension ext = (DamageSourceExtension)e.getSource();
                 ext.addTag(Tags.DamageTypes.IS_MAGIC);
                 ext.addTag(DamageTypeTags.BYPASSES_ARMOR);
