@@ -28,7 +28,10 @@
                     "apothic_compats:head",
                     "apothic_compats:necklace",
                     "apothic_compats:charm",
-                    "apothic_compats:curio"
+                    "apothic_compats:curio",
+                    "apothic_compats:brooch",
+                    "apothic_compats:rune",
+                    "apothic_compats:an_focus"
                 ]
             },
             "operation": "add_value",

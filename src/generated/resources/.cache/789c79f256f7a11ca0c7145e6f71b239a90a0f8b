@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-07T15:23:23.8126017	Curios Affixes
+// 1.21.1	2026-02-06T09:51:48.4905503	Curios Affixes
 683d5121811099f484354bcdb2726213103f9122 data/apothic_compats/affixes/curios/attribute/abjured.json
 d8fc54c963ea672d9ed4b03bbdc5da2e93c84e5b data/apothic_compats/affixes/curios/attribute/adamantine.json
 885fbd14754aa8f8364c1e17b456470580a7a8ab data/apothic_compats/affixes/curios/attribute/adept.json
@@ -19,7 +19,7 @@ b610219014b5430fc41911c41e8a17c405a46a63 data/apothic_compats/affixes/curios/att
 e69b8db6d9f5204aacbad6175d9e390d5a5d462e data/apothic_compats/affixes/curios/attribute/ancient/lucky.json
 1b924b7ff3bdcda766ea08e56b883a0d3bde6365 data/apothic_compats/affixes/curios/attribute/ancient/mana.json
 0f209b86c090f894fe8f1c2ab104dbbfd95b366e data/apothic_compats/affixes/curios/attribute/ancient/murderous.json
-ce2c89de6f47ae3d8d490958aa761d6bfcad8dfa data/apothic_compats/affixes/curios/attribute/ancient/mystic.json
+d5714aa322ca37c7934a8b0098e8e9346d6e3e0a data/apothic_compats/affixes/curios/attribute/ancient/mystic.json
 c0289e87f5ea508f83f2fde547fd8cf9e83d044f data/apothic_compats/affixes/curios/attribute/ancient/oxygenated.json
 b1dbdc6834d70f8322ac88c9e1a7b628987b1084 data/apothic_compats/affixes/curios/attribute/ancient/regenerative.json
 3b5fc61c1d97d51ce1ab90aa19cd28cea1fc0dfc data/apothic_compats/affixes/curios/attribute/ancient/scythe_proficiency.json
@@ -44,7 +44,7 @@ ded0054511063c0567298c5086f2ad7ee8f700a1 data/apothic_compats/affixes/curios/att
 01f2541b84f0bd07796d85173114b6d5757ca2b9 data/apothic_compats/affixes/curios/attribute/lucky.json
 3188f4c3dee1e7e670395154af36fabf74d5c0b4 data/apothic_compats/affixes/curios/attribute/mana.json
 0716735e6c9c354d4f2fce2545797cbe29c8de51 data/apothic_compats/affixes/curios/attribute/murderous.json
-be96360f064350009160dd9a82a656d3cfe35682 data/apothic_compats/affixes/curios/attribute/mystic.json
+730a75810a54c63c62d86c5b0201eb639914f206 data/apothic_compats/affixes/curios/attribute/mystic.json
 6eb8078c34f0f7ca2c7da40af9b84e7f55dbed2d data/apothic_compats/affixes/curios/attribute/oxygenated.json
 74c747ced211e9a45603bee1b5c7ee7a609fca95 data/apothic_compats/affixes/curios/attribute/regenerative.json
 1fc8a7ea7db3b4e8e319a5033ffaaea6979311cf data/apothic_compats/affixes/curios/attribute/scythe_proficiency.json

@@ -133,16 +133,16 @@ public class CuriosAffixProvider extends AffixProvider {
         this.addModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.5F, 1.5F)
-                .value(uncommon, 1F, 2F)
-                .value(rare, 1.5F, 2.5F)
-                .value(epic, 2F, 3F)
-                .value(mythic, 2.5F, 3.5F));
+                .value(common, 0.05F, 0.1F)
+                .value(uncommon, 0.1F, 0.15F)
+                .value(rare, 0.15F, 0.2F)
+                .value(epic, 0.2F, 0.25F)
+                .value(mythic, 0.25F, 0.35F));
 
         this.addAncientModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 4F, 6F));
+                .value(ancient, 0.35F, 0.55F));
 
         this.addModdedAttribute("curios", "adept", MalumMod.MALUM, LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

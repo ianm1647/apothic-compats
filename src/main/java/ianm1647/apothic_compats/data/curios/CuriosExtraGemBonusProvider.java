@@ -37,10 +37,10 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
     }
 
     public static final GemClass CURIOS = new GemClass("curios",
-            ModLootCategories.HANDS, ModLootCategories.BRACELET, ModLootCategories.RING,
-            ModLootCategories.BODY, ModLootCategories.BACK, ModLootCategories.BELT,
-            ModLootCategories.FEET, ModLootCategories.HEAD, ModLootCategories.NECKLACE,
-            ModLootCategories.CHARM, ModLootCategories.CURIO);
+            ModLootCategories.HANDS, ModLootCategories.BRACELET, ModLootCategories.RING, ModLootCategories.BODY, ModLootCategories.BACK,
+            ModLootCategories.BELT, ModLootCategories.FEET, ModLootCategories.HEAD, ModLootCategories.NECKLACE, ModLootCategories.CHARM,
+            ModLootCategories.CURIO, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
+    );
 
     @Override
     public @NotNull String getName() {
