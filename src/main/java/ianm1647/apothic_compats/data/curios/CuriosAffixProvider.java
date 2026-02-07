@@ -480,7 +480,7 @@ public class CuriosAffixProvider extends AffixProvider {
     public void addAncientModdedAttribute(String type, String name, String modid, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
         var builder = new AttributeAffix.Builder(attribute, op);
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/attribute/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(ArsNouveau.MODID), new ModLoadedCondition(modid));
+        this.addConditionally(ApothicCompats.loc(type + "/attribute/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID), new ModLoadedCondition(modid));
     }
 
     private static DynamicHolder<Affix> afx(String path) {
