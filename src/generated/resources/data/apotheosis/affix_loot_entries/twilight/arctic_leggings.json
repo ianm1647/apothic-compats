@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "type": "apotheosis:affix_loot_entry",
+    "constraints": {
+        "dimensions": [
+            "twilightforest:twilight_forest"
+        ]
+    },
+    "stack": {
+        "count": 1,
+        "id": "twilightforest:arctic_leggings"
+    },
+    "weights": {
+        "ascent": {
+            "weight": 25
+        },
+        "summit": {
+            "weight": 25
+        },
+        "pinnacle": {
+            "weight": 5
+        }
+    }
+}

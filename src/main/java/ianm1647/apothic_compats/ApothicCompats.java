@@ -162,6 +162,7 @@ public class ApothicCompats {
                 .provider(BumblezoneGearSetProvider::new)
                 .provider(BumblezoneInvaderProvider::new)
 
+                .provider(TwilightAffixLootProvider::new)
                 .provider(TwilightAffixProvider::new)
                 .provider(TwilightInvaderProvider::new)
 

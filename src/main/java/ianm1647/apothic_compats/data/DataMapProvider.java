@@ -6,7 +6,6 @@ import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.mobs.InvaderSpawnRules;
 import dev.shadowsoffire.apotheosis.mobs.util.SurfaceType;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
-import ianm1647.apothic_compats.loot.ModLootCategories;
 import ianm1647.apothic_compats.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
