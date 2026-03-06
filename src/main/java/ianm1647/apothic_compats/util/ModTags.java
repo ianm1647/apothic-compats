@@ -21,6 +21,7 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> CURIOS_FILTER = itemTag("curios_filter");
         public static final TagKey<Item> CURIO_BLACKLIST = itemTag("curio_blacklist");
 
         private static TagKey<Item> itemTag(String path) {

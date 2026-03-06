@@ -1,6 +1,8 @@
 package ianm1647.apothic_compats.data;
 
 import com.github.alexmodguy.alexscaves.server.level.biome.ACBiomeRegistry;
+import com.hollingsworth.arsnouveau.common.datagen.ANCurioProvider;
+import com.sammy.malum.registry.common.MalumTags;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.util.ModTags;
@@ -39,6 +41,22 @@ public class TagProvider {
             tag(CuriosTags.HEAD).addOptional(loc(Comp.Curios.HEAD_COVER.value()));
             tag(CuriosTags.NECKLACE).addOptional(loc(Comp.Curios.ORNAMENTED_NECKLACE.value()));
             tag(CuriosTags.RING).addOptional(loc(Comp.Curios.ORNATE_RING.value()));
+
+            tag(ModTags.Items.CURIOS_FILTER)
+                    .addTag(CuriosTags.BACK)
+                    .addTag(CuriosTags.BELT)
+                    .addTag(CuriosTags.BODY)
+                    .addTag(CuriosTags.BRACELET)
+                    .addTag(CuriosTags.CHARM)
+                    .addTag(CuriosTags.CURIO)
+                    .addTag(ModTags.Curios.FEET)
+                    .addTag(CuriosTags.HANDS)
+                    .addTag(CuriosTags.HEAD)
+                    .addTag(CuriosTags.NECKLACE)
+                    .addTag(CuriosTags.RING)
+                    .addOptionalTag(MalumTags.ItemTags.RUNE_CURIO)
+                    .addOptionalTag(MalumTags.ItemTags.BROOCH_CURIO)
+                    .addOptionalTag(ResourceLocation.fromNamespaceAndPath("curios", "an_focus"));
         }
 
         private ResourceLocation loc(Item item) {

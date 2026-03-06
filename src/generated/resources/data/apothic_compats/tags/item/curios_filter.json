@@ -1,0 +1,27 @@
+{
+    "values": [
+        "#curios:back",
+        "#curios:belt",
+        "#curios:body",
+        "#curios:bracelet",
+        "#curios:charm",
+        "#curios:curio",
+        "#curios:feet",
+        "#curios:hands",
+        "#curios:head",
+        "#curios:necklace",
+        "#curios:ring",
+        {
+            "id": "#curios:rune",
+            "required": false
+        },
+        {
+            "id": "#curios:brooch",
+            "required": false
+        },
+        {
+            "id": "#curios:an_focus",
+            "required": false
+        }
+    ]
+}
