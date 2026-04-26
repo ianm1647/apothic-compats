@@ -271,7 +271,7 @@ public class CuriosAffixProvider extends AffixProvider {
                 .value(epic, 0.2F, 0.5F)
                 .value(mythic, 0.35F, 0.85F));
 
-        this.addAttribute("curios", "destructive", ALObjects.Attributes.MINING_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAttribute("curios", "destructive", Attributes.BLOCK_BREAK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .value(common, 0.05F, 0.15F)
@@ -411,7 +411,7 @@ public class CuriosAffixProvider extends AffixProvider {
                 .categories(CURIOS)
                 .value(ancient, 0.55F, 0.95F));
 
-        this.addAncientAttribute("curios", "destructive", ALObjects.Attributes.MINING_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAncientAttribute("curios", "destructive", Attributes.BLOCK_BREAK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .value(ancient, 0.35F, 0.45F));

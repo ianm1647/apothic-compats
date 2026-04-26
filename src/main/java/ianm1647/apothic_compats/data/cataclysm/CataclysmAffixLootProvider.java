@@ -12,7 +12,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
@@ -26,10 +26,6 @@ public class CataclysmAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "cataclysm";
 
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
-
     public CataclysmAffixLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
@@ -41,31 +37,7 @@ public class CataclysmAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        toolWeights.put(Tooltier.BLACK_STEEL, BLACK_STEEL);
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-        }
+        //toolWeights.put(Tooltier.BLACK_STEEL, BLACK_STEEL);
     }
 
     @Override
@@ -73,9 +45,20 @@ public class CataclysmAffixLootProvider extends AffixLootEntryProvider {
         return "Cataclysm Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(tool)));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(piece)));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        Identifier key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

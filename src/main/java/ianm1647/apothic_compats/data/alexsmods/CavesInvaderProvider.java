@@ -1,10 +1,5 @@
 package ianm1647.apothic_compats.data.alexsmods;
 
-import com.github.alexmodguy.alexscaves.server.entity.ACEntityRegistry;
-import com.github.alexmodguy.alexscaves.server.level.biome.ACBiomeRarity;
-import com.github.alexmodguy.alexscaves.server.level.biome.ACBiomeRegistry;
-import com.github.alexmodguy.alexscaves.server.misc.ACTagRegistry;
-import com.github.alexthe666.alexsmobs.entity.AMEntityRegistry;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
@@ -48,282 +43,282 @@ public class CavesInvaderProvider extends InvaderProvider {
 
     @Override
     public void generate() {
-        HolderLookup.Provider registries = this.lookupProvider.join();
-        HolderLookup.RegistryLookup<Biome> biomes = registries.lookup(Registries.BIOME).get();
-
-        addBoss("teletor", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.TELETOR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("magnetron", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.MAGNETRON.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("ferrouslime", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.FERROUSLIME.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("vallumraptor", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.VALLUMRAPTOR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("grottoceratops", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.GROTTOCERATOPS.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("tremorsaurus", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.TREMORSAURUS.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("brainiac", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.BRAINIAC.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("gammaroach", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.GAMMAROACH.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("gossamer", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.GAMMAROACH.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("deep_one", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.DEEP_ONE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("deep_one_knight", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.DEEP_ONE_KNIGHT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("deep_one_mage", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.DEEP_ONE_MAGE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("underzealot", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.UNDERZEALOT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("watcher", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.WATCHER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("corrodent", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.CORRODENT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("caniac", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.CANIAC.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("gummy_bear", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.GUMMY_BEAR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("licowitch", b -> basicRangedStats(b)
-                .entity(ACEntityRegistry.LICOWITCH.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-
-        //TODO: ANCIENT
-
-        addAncientBoss("teletor", b -> ancientMeleeStats(b)
-                .entity(ACEntityRegistry.TELETOR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("magnetron", b -> ancientMeleeStats(b)
-                .entity(ACEntityRegistry.MAGNETRON.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("vallumraptor", b -> ancientMeleeStats(b)
-                .entity(ACEntityRegistry.VALLUMRAPTOR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("tremorsaurus", b -> ancientMeleeStats(b)
-                .entity(ACEntityRegistry.TREMORSAURUS.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("brainiac", b -> ancientMeleeStats(b)
-                .entity(ACEntityRegistry.BRAINIAC.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("tremorzilla", b -> ancientMeleeStats(b)
-                .entity(ACEntityRegistry.TREMORZILLA.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("deep_one_knight", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.DEEP_ONE_KNIGHT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("deep_one_mage", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.DEEP_ONE_MAGE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("watcher", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.WATCHER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("forsaken", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.FORSAKEN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("caniac", b -> basicMeleeStats(b)
-                .entity(ACEntityRegistry.CANIAC.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("licowitch", b -> basicRangedStats(b)
-                .entity(ACEntityRegistry.LICOWITCH.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
+//        HolderLookup.Provider registries = this.lookupProvider.join();
+//        HolderLookup.RegistryLookup<Biome> biomes = registries.lookup(Registries.BIOME).get();
+//
+//        addBoss("teletor", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.TELETOR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("magnetron", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.MAGNETRON.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("ferrouslime", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.FERROUSLIME.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("vallumraptor", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.VALLUMRAPTOR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("grottoceratops", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.GROTTOCERATOPS.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("tremorsaurus", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.TREMORSAURUS.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("brainiac", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.BRAINIAC.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("gammaroach", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.GAMMAROACH.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("gossamer", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.GAMMAROACH.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("deep_one", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.DEEP_ONE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("deep_one_knight", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.DEEP_ONE_KNIGHT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("deep_one_mage", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.DEEP_ONE_MAGE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("underzealot", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.UNDERZEALOT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("watcher", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.WATCHER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("corrodent", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.CORRODENT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("caniac", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.CANIAC.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("gummy_bear", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.GUMMY_BEAR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("licowitch", b -> basicRangedStats(b)
+//                .entity(ACEntityRegistry.LICOWITCH.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//
+//        //TODO: ANCIENT
+//
+//        addAncientBoss("teletor", b -> ancientMeleeStats(b)
+//                .entity(ACEntityRegistry.TELETOR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("magnetron", b -> ancientMeleeStats(b)
+//                .entity(ACEntityRegistry.MAGNETRON.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_MAGNETIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("vallumraptor", b -> ancientMeleeStats(b)
+//                .entity(ACEntityRegistry.VALLUMRAPTOR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("tremorsaurus", b -> ancientMeleeStats(b)
+//                .entity(ACEntityRegistry.TREMORSAURUS.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_PRIMORDIAL_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("brainiac", b -> ancientMeleeStats(b)
+//                .entity(ACEntityRegistry.BRAINIAC.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("tremorzilla", b -> ancientMeleeStats(b)
+//                .entity(ACEntityRegistry.TREMORZILLA.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_TOXIC_CAVES))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("deep_one_knight", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.DEEP_ONE_KNIGHT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("deep_one_mage", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.DEEP_ONE_MAGE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_ABYSSAL_CHASM))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("watcher", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.WATCHER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("forsaken", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.FORSAKEN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_FORLORN_HOLLOWS))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("caniac", b -> basicMeleeStats(b)
+//                .entity(ACEntityRegistry.CANIAC.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("licowitch", b -> basicRangedStats(b)
+//                .entity(ACEntityRegistry.LICOWITCH.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .constraints(Constraints.forBiomes(biomes, ModTags.Biomes.IS_CANDY_CAVITY))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
     }
 
     protected static Invader.Builder ancientMeleeStats(Invader.Builder builder) {

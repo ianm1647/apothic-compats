@@ -41,223 +41,223 @@ public class ChaosInvaderProvider extends InvaderProvider {
 
     @Override
     public void generate() {
-        addBoss("bone_imp", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.BONE_IMP.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.NETHER))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("skeleton_thrasher", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.SKELETON_THRASHER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("bonescaller", b -> basicRangedStats(b)
-                .entity(BornInChaosV1ModEntities.BONESCALLER.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("supreme_bonescaller", b -> basicRangedStats(b)
-                .entity(BornInChaosV1ModEntities.SUPREME_BONESCALLER.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("lifestealer", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.LIFESTEALER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("door_knight", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.DOOR_KNIGHT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("zombie_clown", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.ZOMBIE_CLOWN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("zombie_lumberjack", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.ZOMBIE_LUMBERJACK.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("zombie_bruiser", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.ZOMBIE_BRUISER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("fallen_chaos_knight", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.FALLEN_CHAOS_KNIGHT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("bloody_gladfly", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.BLOODY_GADFLY.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("mother_spider", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.MOTHER_SPIDER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("dread_hound", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.DREAD_HOUND.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("dire_hound_leader", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.DIRE_HOUND_LEADER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("dark_vortex", b -> basicRangedStats(b)
-                .entity(BornInChaosV1ModEntities.DARK_VORTEX.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("missionary", b -> basicRangedStats(b)
-                .entity(BornInChaosV1ModEntities.MISSIONER.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("pumpkin_spirit", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.PUMPKIN_SPIRIT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("krampus_henchman", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.KRAMPUS_HENCHMAN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("sir_pumpkinhead", b -> basicMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.SIR_PUMPKINHEAD.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        //TODO: ANCIENT
-
-        addAncientBoss("supreme_bonescaller", b -> ancientRangedStats(b)
-                .entity(BornInChaosV1ModEntities.SUPREME_BONESCALLER.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("lifestealer", b -> ancientMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.LIFESTEALER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("zombie_bruiser", b -> ancientMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.ZOMBIE_BRUISER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("fallen_chaos_knight", b -> ancientMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.FALLEN_CHAOS_KNIGHT.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("dire_hound_leader", b -> ancientMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.DIRE_HOUND_LEADER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("missionary", b -> ancientRangedStats(b)
-                .entity(BornInChaosV1ModEntities.MISSIONER.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("krampus", b -> ancientRangedStats(b)
-                .entity(BornInChaosV1ModEntities.KRAMPUS.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("sir_pumpkinhead", b -> ancientMeleeStats(b)
-                .entity(BornInChaosV1ModEntities.SIR_PUMPKINHEAD.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("bone_imp", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.BONE_IMP.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.NETHER))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("skeleton_thrasher", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.SKELETON_THRASHER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("bonescaller", b -> basicRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.BONESCALLER.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("supreme_bonescaller", b -> basicRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.SUPREME_BONESCALLER.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("lifestealer", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.LIFESTEALER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("door_knight", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.DOOR_KNIGHT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("zombie_clown", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.ZOMBIE_CLOWN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("zombie_lumberjack", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.ZOMBIE_LUMBERJACK.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("zombie_bruiser", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.ZOMBIE_BRUISER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("fallen_chaos_knight", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.FALLEN_CHAOS_KNIGHT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("bloody_gladfly", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.BLOODY_GADFLY.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("mother_spider", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.MOTHER_SPIDER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("dread_hound", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.DREAD_HOUND.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("dire_hound_leader", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.DIRE_HOUND_LEADER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("dark_vortex", b -> basicRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.DARK_VORTEX.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("missionary", b -> basicRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.MISSIONER.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("pumpkin_spirit", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.PUMPKIN_SPIRIT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("krampus_henchman", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.KRAMPUS_HENCHMAN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("sir_pumpkinhead", b -> basicMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.SIR_PUMPKINHEAD.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        //TODO: ANCIENT
+//
+//        addAncientBoss("supreme_bonescaller", b -> ancientRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.SUPREME_BONESCALLER.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("lifestealer", b -> ancientMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.LIFESTEALER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("zombie_bruiser", b -> ancientMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.ZOMBIE_BRUISER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("fallen_chaos_knight", b -> ancientMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.FALLEN_CHAOS_KNIGHT.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("dire_hound_leader", b -> ancientMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.DIRE_HOUND_LEADER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("missionary", b -> ancientRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.MISSIONER.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("krampus", b -> ancientRangedStats(b)
+//                .entity(BornInChaosV1ModEntities.KRAMPUS.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("sir_pumpkinhead", b -> ancientMeleeStats(b)
+//                .entity(BornInChaosV1ModEntities.SIR_PUMPKINHEAD.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
 
     }
 

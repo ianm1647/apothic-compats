@@ -31,35 +31,35 @@ public class ArsGearSetProvider extends GearSetProvider {
         HolderLookup.Provider registries = this.lookupProvider.join();
         HolderLookup.RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
-        // Frontier Sets
-        addSet("frontier/ars_nouveau/sorcerer", 15, 0, c -> c
-                .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
-                .helmet(new ItemStack(ItemsRegistry.SORCERER_HOOD), 10)
-                .chestplate(new ItemStack(ItemsRegistry.SORCERER_ROBES), 10)
-                .leggings(new ItemStack(ItemsRegistry.SORCERER_LEGGINGS), 10)
-                .boots(new ItemStack(ItemsRegistry.SORCERER_BOOTS), 10)
-                .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
-                .tag("frontier_melee"));
-
-        addSet("frontier/ars_nouveau/arcanist", 15, 0, c -> c
-                .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
-                .helmet(new ItemStack(ItemsRegistry.ARCANIST_HOOD), 10)
-                .chestplate(new ItemStack(ItemsRegistry.ARCANIST_ROBES), 10)
-                .leggings(new ItemStack(ItemsRegistry.ARCANIST_LEGGINGS), 10)
-                .boots(new ItemStack(ItemsRegistry.ARCANIST_BOOTS), 10)
-                .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
-                .tag("frontier_melee"));
-
-        // Ascent Sets
-
-        addSet("ascent/ars_nouveau/battlemage", 15, 0, c -> c
-                .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
-                .helmet(new ItemStack(ItemsRegistry.BATTLEMAGE_HOOD), 10)
-                .chestplate(new ItemStack(ItemsRegistry.BATTLEMAGE_ROBES), 10)
-                .leggings(new ItemStack(ItemsRegistry.BATTLEMAGE_LEGGINGS), 10)
-                .boots(new ItemStack(ItemsRegistry.BATTLEMAGE_BOOTS), 10)
-                .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
-                .tag("ascent_melee"));
+//        // Frontier Sets
+//        addSet("frontier/ars_nouveau/sorcerer", 15, 0, c -> c
+//                .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
+//                .helmet(new ItemStack(ItemsRegistry.SORCERER_HOOD), 10)
+//                .chestplate(new ItemStack(ItemsRegistry.SORCERER_ROBES), 10)
+//                .leggings(new ItemStack(ItemsRegistry.SORCERER_LEGGINGS), 10)
+//                .boots(new ItemStack(ItemsRegistry.SORCERER_BOOTS), 10)
+//                .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
+//                .tag("frontier_melee"));
+//
+//        addSet("frontier/ars_nouveau/arcanist", 15, 0, c -> c
+//                .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
+//                .helmet(new ItemStack(ItemsRegistry.ARCANIST_HOOD), 10)
+//                .chestplate(new ItemStack(ItemsRegistry.ARCANIST_ROBES), 10)
+//                .leggings(new ItemStack(ItemsRegistry.ARCANIST_LEGGINGS), 10)
+//                .boots(new ItemStack(ItemsRegistry.ARCANIST_BOOTS), 10)
+//                .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
+//                .tag("frontier_melee"));
+//
+//        // Ascent Sets
+//
+//        addSet("ascent/ars_nouveau/battlemage", 15, 0, c -> c
+//                .mainhand(new ItemStack(ItemsRegistry.ENCHANTERS_SWORD), 10)
+//                .helmet(new ItemStack(ItemsRegistry.BATTLEMAGE_HOOD), 10)
+//                .chestplate(new ItemStack(ItemsRegistry.BATTLEMAGE_ROBES), 10)
+//                .leggings(new ItemStack(ItemsRegistry.BATTLEMAGE_LEGGINGS), 10)
+//                .boots(new ItemStack(ItemsRegistry.BATTLEMAGE_BOOTS), 10)
+//                .offhand(new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD), 10)
+//                .tag("ascent_melee"));
     }
 
     @Override

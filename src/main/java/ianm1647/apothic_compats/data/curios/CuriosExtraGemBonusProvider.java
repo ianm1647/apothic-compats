@@ -19,7 +19,7 @@ import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -206,7 +206,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addBonus(Apotheosis.loc("overworld/earth"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(ALObjects.Attributes.MINING_SPEED)
+                        .attr(Attributes.BLOCK_BREAK_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                         .value(Purity.FLAWED, 0.1)
                         .value(Purity.NORMAL, 0.15)
@@ -227,6 +227,7 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         Attributes.ATTACK_DAMAGE,
                         Attributes.ATTACK_KNOCKBACK,
                         Attributes.ATTACK_SPEED,
+                        Attributes.BLOCK_BREAK_SPEED,
                         Attributes.ARMOR,
                         Attributes.ARMOR_TOUGHNESS,
                         Attributes.LUCK,
@@ -247,7 +248,6 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         ALObjects.Attributes.GHOST_HEALTH,
                         ALObjects.Attributes.HEALING_RECEIVED,
                         ALObjects.Attributes.LIFE_STEAL,
-                        ALObjects.Attributes.MINING_SPEED,
                         ALObjects.Attributes.OVERHEAL,
                         ALObjects.Attributes.PROT_PIERCE,
                         ALObjects.Attributes.PROT_SHRED,
@@ -324,63 +324,63 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.FLAWLESS, 0.35f)
                         .value(Purity.PERFECT, 0.5f)));
 
-        addModdedBonus(ApothicCompats.loc("ars_nouveau/mana"), "ars_nouveau", b -> b
-                .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(PerkAttributes.MAX_MANA)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 10)
-                        .value(Purity.CHIPPED, 20)
-                        .value(Purity.FLAWED, 30)
-                        .value(Purity.NORMAL, 40)
-                        .value(Purity.FLAWLESS, 50)
-                        .value(Purity.PERFECT, 75)));
-
-        addModdedBonus(ApothicCompats.loc("malum/soul_stained"), "malum", b -> b
-                .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(MalumAttributes.CHARGE_CAPACITY)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 1)
-                        .value(Purity.CHIPPED, 2)
-                        .value(Purity.FLAWED, 3)
-                        .value(Purity.NORMAL, 4)
-                        .value(Purity.FLAWLESS, 5)
-                        .value(Purity.PERFECT, 6)));
-
-        addModdedBonus(ApothicCompats.loc("malum/thief"), "malum", b -> b
-                .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(MalumAttributes.MALIGNANT_CONVERSION)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 0.15)
-                        .value(Purity.CHIPPED, 0.2)
-                        .value(Purity.FLAWED, 0.25)
-                        .value(Purity.NORMAL, 0.3)
-                        .value(Purity.FLAWLESS, 0.35)
-                        .value(Purity.PERFECT, 0.5)));
-
-        addModdedBonus(ApothicCompats.loc("malum/etheric"), "malum", b -> b
-                .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(MalumAttributes.SOUL_WARD_CAPACITY)
-                        .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.FLAWED, 3)
-                        .value(Purity.NORMAL, 6)
-                        .value(Purity.FLAWLESS, 9)
-                        .value(Purity.PERFECT, 12)));
+//        addModdedBonus(ApothicCompats.loc("ars_nouveau/mana"), "ars_nouveau", b -> b
+//                .bonus(CURIOS, AttributeBonus.builder()
+//                        .attr(PerkAttributes.MAX_MANA)
+//                        .op(AttributeModifier.Operation.ADD_VALUE)
+//                        .value(Purity.CRACKED, 10)
+//                        .value(Purity.CHIPPED, 20)
+//                        .value(Purity.FLAWED, 30)
+//                        .value(Purity.NORMAL, 40)
+//                        .value(Purity.FLAWLESS, 50)
+//                        .value(Purity.PERFECT, 75)));
+//
+//        addModdedBonus(ApothicCompats.loc("malum/soul_stained"), "malum", b -> b
+//                .bonus(CURIOS, AttributeBonus.builder()
+//                        .attr(MalumAttributes.CHARGE_CAPACITY)
+//                        .op(AttributeModifier.Operation.ADD_VALUE)
+//                        .value(Purity.CRACKED, 1)
+//                        .value(Purity.CHIPPED, 2)
+//                        .value(Purity.FLAWED, 3)
+//                        .value(Purity.NORMAL, 4)
+//                        .value(Purity.FLAWLESS, 5)
+//                        .value(Purity.PERFECT, 6)));
+//
+//        addModdedBonus(ApothicCompats.loc("malum/thief"), "malum", b -> b
+//                .bonus(CURIOS, AttributeBonus.builder()
+//                        .attr(MalumAttributes.MALIGNANT_CONVERSION)
+//                        .op(AttributeModifier.Operation.ADD_VALUE)
+//                        .value(Purity.CRACKED, 0.15)
+//                        .value(Purity.CHIPPED, 0.2)
+//                        .value(Purity.FLAWED, 0.25)
+//                        .value(Purity.NORMAL, 0.3)
+//                        .value(Purity.FLAWLESS, 0.35)
+//                        .value(Purity.PERFECT, 0.5)));
+//
+//        addModdedBonus(ApothicCompats.loc("malum/etheric"), "malum", b -> b
+//                .bonus(CURIOS, AttributeBonus.builder()
+//                        .attr(MalumAttributes.SOUL_WARD_CAPACITY)
+//                        .op(AttributeModifier.Operation.ADD_VALUE)
+//                        .value(Purity.FLAWED, 3)
+//                        .value(Purity.NORMAL, 6)
+//                        .value(Purity.FLAWLESS, 9)
+//                        .value(Purity.PERFECT, 12)));
         
     }
 
-    private void addBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
+    private void addBonus(Identifier gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"));
     }
 
-    private void addTwilightBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
+    private void addTwilightBonus(Identifier gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition("twilightforest"));
     }
 
-    private void addModdedBonus(ResourceLocation gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
+    private void addModdedBonus(Identifier gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc("curios/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition(mod));

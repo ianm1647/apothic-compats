@@ -1,36 +1,23 @@
 package ianm1647.apothic_compats.data.allthemodium;
 
-import com.thevortex.allthemodium.material.ATMTier;
-import com.thevortex.allthemodium.registry.ArmorRegistries;
-import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
-import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
-import net.minecraft.core.Holder;
+import net.allthemods.allthemodium.core.registry.ATMItems;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ATMAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "allthemodium";
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public ATMAffixLootProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries);
@@ -48,43 +35,46 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(ArmorRegistries.ATM, ALLTHEMODIUM);
-        armorWeights.put(ArmorRegistries.VIB, VIBRANIUM);
-        armorWeights.put(ArmorRegistries.UNOB, UNOBTAINIUM);
+        addTools(ALLTHEMODIUM,
+                ATMItems.ALLTHEMODIUM_SWORD.get(),
+                ATMItems.ALLTHEMODIUM_PICKAXE.get(),
+                ATMItems.ALLTHEMODIUM_AXE.get(),
+                ATMItems.ALLTHEMODIUM_SHOVEL.get(),
+                ATMItems.ALLTHEMODIUM_MACE.get(),
+                ATMItems.ALLTHEMODIUM_BOW.get());
 
-        toolWeights.put(ATMTier.ALLTHEMODIUM, ALLTHEMODIUM);
-        toolWeights.put(ATMTier.VIBRANIUM, VIBRANIUM);
-        toolWeights.put(ATMTier.UNOBTAINIUM, UNOBTAINIUM);
+        addTools(VIBRANIUM,
+                ATMItems.VIBRANIUM_SWORD.get(),
+                ATMItems.VIBRANIUM_PICKAXE.get(),
+                ATMItems.VIBRANIUM_AXE.get(),
+                ATMItems.VIBRANIUM_SHOVEL.get(),
+                ATMItems.VIBRANIUM_MACE.get());
 
-        addEntry(ALLTHEMODIUM, ModRegistry.ATM_MACE.get().getDefaultInstance());
-        addEntry(ALLTHEMODIUM, ModRegistry.ATM_BOW.get().getDefaultInstance());
-        addEntry(VIBRANIUM, ModRegistry.VIB_MACE.get().getDefaultInstance());
-        addEntry(UNOBTAINIUM, ModRegistry.UNO_MACE.get().getDefaultInstance());
-        addEntry(UNOBTAINIUM, ModRegistry.UNO_BOW.get().getDefaultInstance());
+        addTools(UNOBTAINIUM,
+                ATMItems.UNOBTAINIUM_SWORD.get(),
+                ATMItems.UNOBTAINIUM_PICKAXE.get(),
+                ATMItems.UNOBTAINIUM_AXE.get(),
+                ATMItems.UNOBTAINIUM_SHOVEL.get(),
+                ATMItems.UNOBTAINIUM_MACE.get(),
+                ATMItems.UNOBTAINIUM_CROSSBOW.get());
 
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
+        addArmor(ALLTHEMODIUM,
+                ATMItems.ALLTHEMODIUM_HELMET.get(),
+                ATMItems.ALLTHEMODIUM_CHESTPLATE.get(),
+                ATMItems.ALLTHEMODIUM_LEGGINGS.get(),
+                ATMItems.ALLTHEMODIUM_BOOTS.get());
 
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
+        addArmor(VIBRANIUM,
+                ATMItems.VIBRANIUM_HELMET.get(),
+                ATMItems.VIBRANIUM_CHESTPLATE.get(),
+                ATMItems.VIBRANIUM_LEGGINGS.get(),
+                ATMItems.VIBRANIUM_BOOTS.get());
 
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-        }
+        addArmor(UNOBTAINIUM,
+                ATMItems.UNOBTAINIUM_HELMET.get(),
+                ATMItems.UNOBTAINIUM_CHESTPLATE.get(),
+                ATMItems.UNOBTAINIUM_LEGGINGS.get(),
+                ATMItems.UNOBTAINIUM_BOOTS.get());
     }
 
     @Override
@@ -92,9 +82,20 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
         return "Allthemodium Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(tool)));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(piece)));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        Identifier key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

@@ -139,7 +139,7 @@ public class AetherGearSetProvider extends GearSetProvider {
 
     @Override
     protected void addSet(String name, int weight, float quality, UnaryOperator<GSBuilder> config) {
-        this.add(AncientReforging.loc(name), config.apply(new GSBuilder(weight, quality)).build());
+        this.addConditionally(AncientReforging.loc(name), config.apply(new GSBuilder(weight, quality)).build(), new ModLoadedCondition(mod));
     }
 
 }

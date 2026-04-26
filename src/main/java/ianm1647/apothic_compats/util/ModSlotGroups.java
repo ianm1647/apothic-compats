@@ -9,6 +9,9 @@ import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.neoforged.bus.api.IEventBus;
+import top.theillusivec4.curios.api.CuriosSlotTypes;
+import top.theillusivec4.curios.common.inventory.CurioSlot;
+import top.theillusivec4.curios.common.slot.SlotType;
 
 public class ModSlotGroups {
 
@@ -39,7 +42,7 @@ public class ModSlotGroups {
         public static final Holder<EntityEquipmentSlot> RUNE = slot("rune");
 
         private static Holder<EntityEquipmentSlot> slot(String slot) {
-            return R.customDH(slot, ALObjects.BuiltInRegs.ENTITY_EQUIPMENT_SLOT.key(), () -> new CurioEquipmentSlot(slot));
+            return R.custom(slot, ALObjects.BuiltInRegs.ENTITY_EQUIPMENT_SLOT.key(), () -> new SlotType());
         }
 
         public static void bootstrap() {}

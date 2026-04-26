@@ -31,14 +31,14 @@ public class CataclysmGearSetProvider extends GearSetProvider {
         HolderLookup.Provider registries = this.lookupProvider.join();
         HolderLookup.RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
-        // Ascent Sets
-        addSet("ascent/cataclysm/black_steel", 10, 0, c -> c
-                .mainhand(new ItemStack(ModItems.BLACK_STEEL_SWORD.asItem()), 10)
-                .mainhand(new ItemStack(ModItems.BLACK_STEEL_AXE.asItem()), 10)
-                .mainhand(new ItemStack(ModItems.BLACK_STEEL_PICKAXE.asItem()), 10)
-                .mainhand(new ItemStack(ModItems.BLACK_STEEL_SHOVEL.asItem()), 10)
-                .offhand(new ItemStack(ModItems.BLACK_STEEL_TARGE.asItem()), 10)
-                .tag("ascent_melee"));
+//        // Ascent Sets
+//        addSet("ascent/cataclysm/black_steel", 10, 0, c -> c
+//                .mainhand(new ItemStack(ModItems.BLACK_STEEL_SWORD.asItem()), 10)
+//                .mainhand(new ItemStack(ModItems.BLACK_STEEL_AXE.asItem()), 10)
+//                .mainhand(new ItemStack(ModItems.BLACK_STEEL_PICKAXE.asItem()), 10)
+//                .mainhand(new ItemStack(ModItems.BLACK_STEEL_SHOVEL.asItem()), 10)
+//                .offhand(new ItemStack(ModItems.BLACK_STEEL_TARGE.asItem()), 10)
+//                .tag("ascent_melee"));
     }
 
     @Override

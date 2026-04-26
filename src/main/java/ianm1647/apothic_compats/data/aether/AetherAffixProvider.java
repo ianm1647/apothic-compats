@@ -48,21 +48,21 @@ public class AetherAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addMobEffect("armor", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.HURT_ATTACKER, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.LEGGINGS, Apoth.LootCategories.BOOTS)
-                .stacking()
-                .limit(3)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-
-        this.addAncientMobEffect("armor", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.HURT_ATTACKER, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.LEGGINGS, Apoth.LootCategories.BOOTS)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//        this.addMobEffect("armor", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.HURT_ATTACKER, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.LEGGINGS, Apoth.LootCategories.BOOTS)
+//                .stacking()
+//                .limit(3)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//
+//        this.addAncientMobEffect("armor", "inebriation", AetherEffects.INEBRIATION, MobEffectAffix.Target.HURT_ATTACKER, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.LEGGINGS, Apoth.LootCategories.BOOTS)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
     }
 
     public void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {

@@ -17,8 +17,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -34,7 +34,7 @@ public class ATMInvaderProvider extends InvaderProvider {
 
     String mod = "allthemodium";
 
-    private static ResourceKey<Level> OTHER = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("allthemodium:the_other"));
+    private static ResourceKey<Level> OTHER = ResourceKey.create(Registries.DIMENSION, Identifier.parse("allthemodium:the_other"));
 
 
     public ATMInvaderProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
