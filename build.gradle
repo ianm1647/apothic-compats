@@ -1,12 +1,22 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.141'
     id 'idea'
-    id 'net.neoforged.moddev' version '2.0.76'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
 }
 
 version = mod_version
 group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
 
 repositories {
     mavenLocal()
@@ -27,92 +37,73 @@ dependencies {
     implementation "dev.shadowsoffire:ApothicSpawners:$minecraft_version-$spawners_version"
     implementation "dev.shadowsoffire:ApothicEnchanting:$minecraft_version-$enchanting_version"
     implementation "dev.shadowsoffire:GatewaysToEternity:$minecraft_version-$gateways_version"
-    implementation "vazkii.patchouli:Patchouli:$patchouli_version"
-    implementation "top.theillusivec4.curios:curios-neoforge:$curios_version"
-    implementation "curse.maven:jade-324717:$jade_version"
+    implementation "vazkii.patchouli:patchouli-neoforge:$patchouli_version"
+    implementation "top.theillusivec4.curios:curios-neoforge:$curios_version+$minecraft_version"
+    implementation "snownee.jade:Jade-NeoForge:$minecraft_version-$jade_version"
 
-    implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
+    implementation files('../ancientreforging/build/libs/ancientreforging-1.9.jar')
+    //implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
 
     compileOnly "mezz.jei:jei-$minecraft_version-common-api:$jei_version"
     compileOnly "mezz.jei:jei-$minecraft_version-neoforge-api:$jei_version"
 
     runtimeOnly "mezz.jei:jei-$minecraft_version-neoforge:$jei_version"
-    implementation "dev.architectury:architectury-neoforge:$architectury_version"
+    compileOnly "dev.architectury:architectury-neoforge:$architectury_version"
 
     //compats
-    implementation "curse.maven:malum-484064:$malum_version"
-    implementation "curse.maven:amendments-896746:$amendments_version"
-    implementation "curse.maven:supplementaries-412082:$supplementaries_version"
-    implementation "curse.maven:twilightforest-227639:$twilight_version"
-    implementation "curse.maven:aether-255308:$aether_version"
-    implementation "curse.maven:deepaether-852465:$deepaether_version"
-    implementation "curse.maven:arsnouveau-401955:$arsnouveau_version"
-    implementation "curse.maven:deeperdarker-659011:$deeperdarker_version"
-    implementation "curse.maven:eternalstarlight-1080592:$eternalstarlight_version"
-    implementation "curse.maven:bumblezone-362479:$bumblezone_version"
-    implementation "curse.maven:undergarden-379849:$undergarden_version"
-    implementation "curse.maven:mekanism-268560:$mekanism_version"
-    implementation "curse.maven:mekanismtools-268567:$mekanismtools_version"
-    implementation "curse.maven:allthemodium-364466:$allthemodium_version"
-    implementation "curse.maven:farmersdelight-398521:$farmersdelight_version"
-    implementation "curse.maven:arselemental-561470:$arselemental_version"
-    implementation "curse.maven:ae2-223794:$ae2_version"
-    implementation "curse.maven:cataclysm-551586:$cataclysm_version"
-    implementation "curse.maven:create-328085:$create_version"
-    implementation "curse.maven:immersiveengineering-231951:$ie_version"
-    //implementation "curse.maven:alexsmobs-1415721:$alexsmobs_version"
-    //implementation "curse.maven:alexscaves-1420348:$alexscaves_version"
-    implementation "curse.maven:borninchaos-686437:$borninchaos_version"
-    implementation "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
-    implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
-    implementation "curse.maven:tacz-1353462:$tacz_version"
+    compileOnly "curse.maven:malum-484064:$malum_version"
+    compileOnly "curse.maven:amendments-896746:$amendments_version"
+    compileOnly "curse.maven:supplementaries-412082:$supplementaries_version"
+    compileOnly "curse.maven:twilightforest-227639:$twilight_version"
+    compileOnly "curse.maven:aether-255308:$aether_version"
+    compileOnly "curse.maven:deepaether-852465:$deepaether_version"
+    compileOnly "curse.maven:arsnouveau-401955:$arsnouveau_version"
+    compileOnly "curse.maven:deeperdarker-659011:$deeperdarker_version"
+    compileOnly "curse.maven:eternalstarlight-1080592:$eternalstarlight_version"
+    compileOnly "curse.maven:bumblezone-362479:$bumblezone_version"
+    compileOnly "curse.maven:undergarden-379849:$undergarden_version"
+    compileOnly "curse.maven:mekanism-268560:$mekanism_version"
+    compileOnly "curse.maven:mekanismtools-268567:$mekanismtools_version"
+    compileOnly "curse.maven:allthemodium-364466:$allthemodium_version"
+    compileOnly "curse.maven:farmersdelight-398521:$farmersdelight_version"
+    compileOnly "curse.maven:arselemental-561470:$arselemental_version"
+    compileOnly "curse.maven:ae2-223794:$ae2_version"
+    compileOnly "curse.maven:cataclysm-551586:$cataclysm_version"
+    compileOnly "curse.maven:create-328085:$create_version"
+    compileOnly "curse.maven:immersiveengineering-231951:$ie_version"
+    compileOnly "curse.maven:borninchaos-686437:$borninchaos_version"
+    compileOnly "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
+    compileOnly "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
 
-    implementation files('../Citadel/build/libs/citadel-1.21.1-2.7.1.jar')
-    implementation files('../AlexsMobs/build/libs/alexsmobs-1.22.9.jar')
-    implementation files('../AlexsCaves/build/libs/alexscaves-2.0.2.jar')
+    //implementation "curse.maven:citadel-neoforge-1512529:$citadel_version"
+    //implementation "curse.maven:alexs-mobs-neoforge-1512535:$alexsmobs_version"
+
+    compileOnly files('../Citadel/build/libs/citadel-1.21.1-2.7.1.jar')
+    compileOnly files('../AlexsMobs/build/libs/alexsmobs-1.22.9.jar')
+    compileOnly files('../AlexsCaves/build/libs/alexscaves-2.0.2.jar')
 
     //compat deps
-    implementation "curse.maven:lodestone-616457:$lodestone_version"
-    implementation "curse.maven:moonlight-499980:$moonlight_version"
-    implementation "curse.maven:owo-532610:$owo_version"
-    implementation "curse.maven:geckolib-388172:$geckolib_version"
-    implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
-    implementation "curse.maven:guideme-1173950:$guideme_version"
-    implementation "curse.maven:lionfish-1001614:$lionfish_version"
-    //implementation "curse.maven:citadel-1415723:$citadel_version"
-    implementation "curse.maven:yacl-667299:$yacl_version"
-    implementation "curse.maven:gunsmithlib-1264058:$gunsmithlib_version"
+    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
+    compileOnly "curse.maven:moonlight-499980:$moonlight_version"
+    compileOnly "curse.maven:owo-532610:$owo_version"
+    compileOnly "curse.maven:geckolib-388172:$geckolib_version"
+    compileOnly "curse.maven:resourcefullib-570073:$resourcefullib_version"
+    compileOnly "curse.maven:guideme-1173950:$guideme_version"
+    compileOnly "curse.maven:lionfish-1001614:$lionfish_version"
+    compileOnly "curse.maven:yacl-667299:$yacl_version"
 }
 
 base {
     archivesName = mod_id
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
-
-jar {
-    exclude('.cache/**')
-}
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
-    // Specify the version of NeoForge to use.
     version = project.neo_version
-
-    parchment {
-        mappingsVersion = project.parchment_mappings_version
-        minecraftVersion = project.parchment_minecraft_version
-    }
-
-    // This line is optional. Access Transformers are automatically detected
-    //accessTransformers.add('src/main/resources/META-INF/accesstransformer.cfg')
-
-    // Default run configurations.
-    // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
             client()
-
-            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
@@ -122,81 +113,54 @@ neoForge {
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
-        // This run config launches GameTestServer and runs all registered gametests, then exits.
-        // By default, the server will crash when no gametests are provided.
-        // The gametest system is also enabled by default for other run configs under the /test command.
         gameTestServer {
             type = "gameTestServer"
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
         data {
-            data()
-
-            // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
-            // gameDirectory = project.file('run-data')
-
-            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
+            clientData()
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
 
-        // applies to all the run configs above
         configureEach {
-            // Recommended logging data for a userdev environment
-            // The markers can be added/remove as needed separated by commas.
-            // "SCAN": For mods scan.
-            // "REGISTRIES": For firing of registry events.
-            // "REGISTRYDUMP": For getting the contents of all registries.
             systemProperty 'forge.logging.markers', 'REGISTRIES'
-
-            // Recommended logging level for the console
-            // You can set various levels here.
-            // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             logLevel = org.slf4j.event.Level.DEBUG
         }
     }
 
     mods {
-        // define mod <-> source bindings
-        // these are used to tell the game which sources are for which mod
-        // mostly optional in a single mod project
-        // but multi mod projects should define one per mod
         "${mod_id}" {
             sourceSet(sourceSets.main)
         }
     }
 }
 
-// Include resources generated by data generators.
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
 
-// This block of code expands all declared replace properties in the specified resource targets.
-// A missing property will result in an error. Properties are expanded using ${} Groovy notation.
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
-    var replaceProperties = [minecraft_version      : minecraft_version,
-                             minecraft_version_range: minecraft_version_range,
-                             neo_version            : neo_version,
-                             neo_version_range      : neo_version_range,
-                             loader_version_range   : loader_version_range,
-                             mod_id                 : mod_id,
-                             mod_name               : mod_name,
-                             mod_license            : mod_license,
-                             mod_version            : mod_version,
-                             mod_authors            : mod_authors,
-                             mod_description        : mod_description]
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description
+    ]
     inputs.properties replaceProperties
     expand replaceProperties
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
 }
 
-// Include the output of "generateModMetadata" as an input directory for the build
-// this works with both building through Gradle and the IDE.
 sourceSets.main.resources.srcDir generateModMetadata
-// To avoid having to run "generateModMetadata" manually, make it run on every project reload
 neoForge.ideSyncTask generateModMetadata
 
-// Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {
         register('mavenJava', MavenPublication) {
@@ -210,7 +174,10 @@ publishing {
     }
 }
 
-// IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
 idea {
     module {
         downloadSources = true

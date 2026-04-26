@@ -4,7 +4,6 @@ import dev.shadowsoffire.apotheosis.data.RarityProvider;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
-import ianm1647.apothic_compats.affix.ModAffixRegistry;
 import ianm1647.apothic_compats.data.*;
 import ianm1647.apothic_compats.data.alexsmods.CavesInvaderProvider;
 import ianm1647.apothic_compats.data.alexsmods.MobsInvaderProvider;
@@ -12,7 +11,6 @@ import ianm1647.apothic_compats.data.borninchaos.ChaosInvaderProvider;
 import ianm1647.apothic_compats.data.create.PotatoCannonAffixProvider;
 import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
 import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
-import ianm1647.apothic_compats.data.curios.CuriosProvider;
 import ianm1647.apothic_compats.data.friendsandfoes.FAFInvaderProvider;
 import ianm1647.apothic_compats.data.malum.MalumExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.ae2.*;
@@ -36,25 +34,19 @@ import ianm1647.apothic_compats.event.AttributeEvents;
 import ianm1647.apothic_compats.loot.ModLootCategories;
 import ianm1647.apothic_compats.util.ModSlotGroups;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
-import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.concurrent.CompletableFuture;
 
 @Mod(ApothicCompats.MODID)
 public class ApothicCompats {
@@ -71,26 +63,26 @@ public class ApothicCompats {
         ModSlotGroups.register(modEventBus);
         ModLootCategories.registerLootCategories(modEventBus);
 
-        ModAffixRegistry.registerAffixes();
+        //ModAffixRegistry.registerAffixes();
         modEventBus.addListener(this::data);
     }
 
     public void data(GatherDataEvent e) {
-        DataGenerator generator = e.getGenerator();
-        PackOutput output = generator.getPackOutput();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
-        ExistingFileHelper helper = e.getExistingFileHelper();
-
-        TagProvider.Blocks blockTags = new TagProvider.Blocks(output, lookupProvider, helper);
-        generator.addProvider(e.includeServer(), blockTags);
-        generator.addProvider(e.includeServer(), new TagProvider.Items(output, lookupProvider, blockTags.contentsGetter(), helper));
-        generator.addProvider(e.includeServer(), new TagProvider.Biomes(output, lookupProvider, helper));
-        generator.addProvider(e.includeClient(), new ItemModelsProvider(output, helper));
-        generator.addProvider(e.includeServer(), new CuriosProvider(output, helper, lookupProvider));
+//        DataGenerator generator = e.getGenerator();
+//        PackOutput output = generator.getPackOutput();
+//        CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
+//        ExistingFileHelper helper = e.getExistingFileHelper();
+//
+//        TagProvider.Blocks blockTags = new TagProvider.Blocks(output, lookupProvider, helper);
+//        generator.addProvider(true, blockTags);
+//        generator.addProvider(true, new TagProvider.Items(output, lookupProvider, blockTags.contentsGetter(), helper));
+//        generator.addProvider(true, new TagProvider.Biomes(output, lookupProvider, helper));
+//        generator.addProvider(true, new ItemModelsProvider(output, helper));
+//        generator.addProvider(true, new CuriosProvider(output, helper, lookupProvider));
 
         DataGenBuilder.create(ApothicCompats.MODID)
-                .provider(DynamicRegistryProvider.runSilently(RarityProvider::new))
-                .provider(DynamicRegistryProvider.runSilently(ARRarityProvider::new))
+                .provider(DynamicRegistryProvider.runSilently((DataGenBuilder.DataProviderFactory<RarityProvider>)RarityProvider::new))
+                .provider(DynamicRegistryProvider.runSilently((DataGenBuilder.DataProviderFactory<ARRarityProvider>)ARRarityProvider::new))
                 .provider(DataMapProvider::new)
                 .provider(RarityOverrideProvider::new)
                 .provider(RecipeProvider::new)
@@ -177,8 +169,8 @@ public class ApothicCompats {
         map.put("ancientreforging:ancient", 6);
     }
 
-    public static ResourceLocation loc(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    public static Identifier loc(String path) {
+        return Identifier.fromNamespaceAndPath(MODID, path);
     }
 
     @SubscribeEvent

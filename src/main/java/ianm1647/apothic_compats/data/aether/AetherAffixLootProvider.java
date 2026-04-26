@@ -1,40 +1,26 @@
 package ianm1647.apothic_compats.data.aether;
 
-import com.aetherteam.aether.item.AetherItems;
-import com.aetherteam.aether.item.combat.AetherArmorMaterials;
-import com.aetherteam.aether.item.combat.AetherItemTiers;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
-import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
-import ianm1647.apothic_compats.ApothicCompats;
-import net.minecraft.core.Holder;
+import ianm1647.ancientreforging.AncientReforging;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "aether";
 
-    private static ResourceKey<Level> AETHER = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("aether:the_aether"));
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
+    private static ResourceKey<Level> AETHER = ResourceKey.create(Registries.DIMENSION, Identifier.parse("aether:the_aether"));
 
     public AetherAffixLootProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries);
@@ -117,61 +103,31 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(AetherArmorMaterials.ZANITE, ZANITE);
-        armorWeights.put(AetherArmorMaterials.GRAVITITE, GRAVITITE);
-        armorWeights.put(AetherArmorMaterials.VALKYRIE, VALKYRIE);
-        armorWeights.put(AetherArmorMaterials.OBSIDIAN, OBSIDIAN);
-        armorWeights.put(AetherArmorMaterials.NEPTUNE, NEPTUNE);
-        armorWeights.put(AetherArmorMaterials.PHOENIX, PHOENIX);
-        armorWeights.put(AetherArmorMaterials.SENTRY, SENTRY);
-
-        toolWeights.put(AetherItemTiers.SKYROOT, SKYROOT);
-        toolWeights.put(AetherItemTiers.HOLYSTONE, HOLYSTONE);
-        toolWeights.put(AetherItemTiers.ZANITE, ZANITE);
-        toolWeights.put(AetherItemTiers.GRAVITITE, GRAVITITE);
-        toolWeights.put(AetherItemTiers.VALKYRIE, VALKYRIE);
-
-        toolWeights.put(AetherItemTiers.CANDY_CANE, CANDY_CANE);
-        toolWeights.put(AetherItemTiers.VAMPIRE, VAMPIRE);
-        toolWeights.put(AetherItemTiers.HOLY, HOLY);
-        toolWeights.put(AetherItemTiers.LIGHTNING, LIGHTNING);
-        toolWeights.put(AetherItemTiers.FLAMING, FLAMING);
-
-        itemWeights.put(AetherItems.PHOENIX_BOW.get(), BOWS);
-
-        addEntry(BOWS, new ItemStack(AetherItems.POISON_DART_SHOOTER.get()));
-        addEntry(BOWS, new ItemStack(AetherItems.ENCHANTED_DART_SHOOTER.get()));
-        addEntry(BOWS, new ItemStack(AetherItems.GOLDEN_DART_SHOOTER.get()));
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-            else if (i instanceof Item t) {
-                TieredWeights weights = itemWeights.get(t);
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-        }
+//        armorWeights.put(AetherArmorMaterials.ZANITE, ZANITE);
+//        armorWeights.put(AetherArmorMaterials.GRAVITITE, GRAVITITE);
+//        armorWeights.put(AetherArmorMaterials.VALKYRIE, VALKYRIE);
+//        armorWeights.put(AetherArmorMaterials.OBSIDIAN, OBSIDIAN);
+//        armorWeights.put(AetherArmorMaterials.NEPTUNE, NEPTUNE);
+//        armorWeights.put(AetherArmorMaterials.PHOENIX, PHOENIX);
+//        armorWeights.put(AetherArmorMaterials.SENTRY, SENTRY);
+//
+//        toolWeights.put(AetherItemTiers.SKYROOT, SKYROOT);
+//        toolWeights.put(AetherItemTiers.HOLYSTONE, HOLYSTONE);
+//        toolWeights.put(AetherItemTiers.ZANITE, ZANITE);
+//        toolWeights.put(AetherItemTiers.GRAVITITE, GRAVITITE);
+//        toolWeights.put(AetherItemTiers.VALKYRIE, VALKYRIE);
+//
+//        toolWeights.put(AetherItemTiers.CANDY_CANE, CANDY_CANE);
+//        toolWeights.put(AetherItemTiers.VAMPIRE, VAMPIRE);
+//        toolWeights.put(AetherItemTiers.HOLY, HOLY);
+//        toolWeights.put(AetherItemTiers.LIGHTNING, LIGHTNING);
+//        toolWeights.put(AetherItemTiers.FLAMING, FLAMING);
+//
+//        itemWeights.put(AetherItems.PHOENIX_BOW.get(), BOWS);
+//
+//        addEntry(BOWS, new ItemStack(AetherItems.POISON_DART_SHOOTER.get()));
+//        addEntry(BOWS, new ItemStack(AetherItems.ENCHANTED_DART_SHOOTER.get()));
+//        addEntry(BOWS, new ItemStack(AetherItems.GOLDEN_DART_SHOOTER.get()));
     }
 
     @Override
@@ -179,9 +135,19 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
         return "Aether Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(tool)));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(AETHER), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(piece)));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        this.add(AncientReforging.loc(BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath()), entry);
     }
 }

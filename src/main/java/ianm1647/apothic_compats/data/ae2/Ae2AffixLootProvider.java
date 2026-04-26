@@ -1,35 +1,20 @@
 package ianm1647.apothic_compats.data.ae2;
 
-import appeng.items.tools.fluix.FluixToolType;
-import appeng.items.tools.quartz.QuartzToolType;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
-import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
-import ianm1647.apothic_compats.ApothicCompats;
-import net.minecraft.core.Holder;
+import ianm1647.ancientreforging.AncientReforging;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.Level;
-import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class Ae2AffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "ae2";
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public Ae2AffixLootProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries);
@@ -50,27 +35,9 @@ public class Ae2AffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        toolWeights.put(QuartzToolType.NETHER.getToolTier(), QUARTZ);
-        toolWeights.put(QuartzToolType.CERTUS.getToolTier(), CERTUS);
-        toolWeights.put(FluixToolType.FLUIX.getToolTier(), FLUIX);
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-        }
+//        toolWeights.put(QuartzToolType.NETHER.getToolTier(), QUARTZ);
+//        toolWeights.put(QuartzToolType.CERTUS.getToolTier(), CERTUS);
+//        toolWeights.put(FluixToolType.FLUIX.getToolTier(), FLUIX);
     }
 
     @Override
@@ -79,8 +46,19 @@ public class Ae2AffixLootProvider extends AffixLootEntryProvider {
     }
 
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(tool)));
+        }
+    }
+
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(piece)));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        this.add(AncientReforging.loc(BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath()), entry);
     }
 }

@@ -1,6 +1,7 @@
 package ianm1647.apothic_compats.data.deep_aether;
 
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import ianm1647.apothic_compats.ApothicCompats;
 import io.github.razordevs.deep_aether.init.DAItems;
 import net.minecraft.core.HolderLookup.Provider;
@@ -9,6 +10,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
 import java.util.concurrent.CompletableFuture;

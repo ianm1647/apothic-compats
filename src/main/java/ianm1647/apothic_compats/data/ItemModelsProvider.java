@@ -7,8 +7,8 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ItemModelsProvider extends ItemModelProvider {
-    public ItemModelsProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, ApothicCompats.MODID, existingFileHelper);
+    public ItemModelsProvider(PackOutput output) {
+        super(output, ApothicCompats.MODID);
     }
 
     @Override
