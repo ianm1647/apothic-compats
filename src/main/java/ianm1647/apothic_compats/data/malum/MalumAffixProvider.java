@@ -1,6 +1,6 @@
 package ianm1647.apothic_compats.data.malum;
 
-import com.sammy.malum.registry.common.MalumAttributes;
+import dev.shadowsoffire.placebo.dynreg.DynamicHolder;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
@@ -8,7 +8,6 @@ import dev.shadowsoffire.apotheosis.affix.effect.*;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
-import dev.shadowsoffire.placebo.reload.DynamicHolder;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -19,7 +18,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
-import team.lodestar.lodestone.registry.common.LodestoneAttributes;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -38,89 +36,89 @@ public class MalumAffixProvider extends AffixProvider {
 
     @Override
     public void generate() {
-        LootRarity common = rarity("common");
-        LootRarity uncommon = rarity("uncommon");
-        LootRarity rare = rarity("rare");
-        LootRarity epic = rarity("epic");
-        LootRarity mythic = rarity("mythic");
-        LootRarity ancient = ancientRarity("ancient");
-
-        this.addAttribute("armor", "ward_capacity", MalumAttributes.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(uncommon, 3)
-                .value(rare, 6)
-                .value(epic, 9)
-                .value(mythic, 12));
-
-        this.addAncientAttribute("armor", "ward_capacity", MalumAttributes.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(ancient, 15));
-
-        this.addAttribute("armor", "ward_integrity", MalumAttributes.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(uncommon, 0.1f,0.2f)
-                .value(rare, 0.2f,0.3f)
-                .value(epic, 0.3f,0.4f)
-                .value(mythic, 0.4f,0.5f));
-
-        this.addAncientAttribute("armor", "ward_integrity", MalumAttributes.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(ancient, 0.5f, 0.6f));
-
-        this.addAttribute("armor", "abjured", LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(uncommon, 0.05f,0.15f)
-                .value(rare, 0.15f,0.25f)
-                .value(epic, 0.25f,0.35f)
-                .value(mythic, 0.35f,0.45f));
-
-        this.addAncientAttribute("armor", "abjured", LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(ancient, 0.45f,0.55f));
-
-        this.addAttribute("armor", "adept", LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(rare, 0.3F, 0.4F)
-                .value(epic, 0.4F, 0.5F)
-                .value(mythic, 0.5F, 0.6F));
-
-        this.addAncientAttribute("armor", "adept", LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(ancient, 0.6F, 0.7F));
-
-        this.addAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(uncommon, 0.1f, 0.2f)
-                .value(rare, 0.2f, 0.3f)
-                .value(epic, 0.3f, 0.4f)
-                .value(mythic, 0.4f, 0.5f));
-
-        this.addAncientAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(ancient, 0.5f, 0.6f));
-
-        this.addAttribute("armor", "malevolent", MalumAttributes.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(uncommon, 0.05f, 0.15f)
-                .value(rare, 0.15f, 0.25f)
-                .value(epic, 0.25f, 0.35f)
-                .value(mythic, 0.35f, 0.45f));
-
-        this.addAncientAttribute("armor", "malevolent", MalumAttributes.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ARMOR)
-                .value(ancient, 0.45f, 0.55f));
+//        LootRarity common = rarity("common");
+//        LootRarity uncommon = rarity("uncommon");
+//        LootRarity rare = rarity("rare");
+//        LootRarity epic = rarity("epic");
+//        LootRarity mythic = rarity("mythic");
+//        LootRarity ancient = ancientRarity("ancient");
+//
+//        this.addAttribute("armor", "ward_capacity", MalumAttributes.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(uncommon, 3)
+//                .value(rare, 6)
+//                .value(epic, 9)
+//                .value(mythic, 12));
+//
+//        this.addAncientAttribute("armor", "ward_capacity", MalumAttributes.SOUL_WARD_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(ancient, 15));
+//
+//        this.addAttribute("armor", "ward_integrity", MalumAttributes.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(uncommon, 0.1f,0.2f)
+//                .value(rare, 0.2f,0.3f)
+//                .value(epic, 0.3f,0.4f)
+//                .value(mythic, 0.4f,0.5f));
+//
+//        this.addAncientAttribute("armor", "ward_integrity", MalumAttributes.SOUL_WARD_INTEGRITY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(ancient, 0.5f, 0.6f));
+//
+//        this.addAttribute("armor", "abjured", LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(uncommon, 0.05f,0.15f)
+//                .value(rare, 0.15f,0.25f)
+//                .value(epic, 0.25f,0.35f)
+//                .value(mythic, 0.35f,0.45f));
+//
+//        this.addAncientAttribute("armor", "abjured", LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(ancient, 0.45f,0.55f));
+//
+//        this.addAttribute("armor", "adept", LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(rare, 0.3F, 0.4F)
+//                .value(epic, 0.4F, 0.5F)
+//                .value(mythic, 0.5F, 0.6F));
+//
+//        this.addAncientAttribute("armor", "adept", LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(ancient, 0.6F, 0.7F));
+//
+//        this.addAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(uncommon, 0.1f, 0.2f)
+//                .value(rare, 0.2f, 0.3f)
+//                .value(epic, 0.3f, 0.4f)
+//                .value(mythic, 0.4f, 0.5f));
+//
+//        this.addAncientAttribute("armor", "scythe_proficiency", MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(ancient, 0.5f, 0.6f));
+//
+//        this.addAttribute("armor", "malevolent", MalumAttributes.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(uncommon, 0.05f, 0.15f)
+//                .value(rare, 0.15f, 0.25f)
+//                .value(epic, 0.25f, 0.35f)
+//                .value(mythic, 0.35f, 0.45f));
+//
+//        this.addAncientAttribute("armor", "malevolent", MalumAttributes.MALIGNANT_CONVERSION, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(ARMOR)
+//                .value(ancient, 0.45f, 0.55f));
 
     }
 

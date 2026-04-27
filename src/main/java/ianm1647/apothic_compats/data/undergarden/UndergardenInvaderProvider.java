@@ -17,15 +17,14 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
-import quek.undergarden.registry.UGEntityTypes;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -34,7 +33,7 @@ public class UndergardenInvaderProvider extends InvaderProvider {
 
     String mod = "undergarden";
 
-    private static ResourceKey<Level> UNDERGARDEN = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("undergarden:undergarden"));
+    private static ResourceKey<Level> UNDERGARDEN = ResourceKey.create(Registries.DIMENSION, Identifier.parse("undergarden:undergarden"));
 
     public UndergardenInvaderProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -47,114 +46,114 @@ public class UndergardenInvaderProvider extends InvaderProvider {
 
     @Override
     public void generate() {
-        addBoss("brute", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.BRUTE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("rotbeast", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.ROTBEAST.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("rotwalker", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.ROTWALKER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("dweller", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.DWELLER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("forgotten", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.FORGOTTEN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("sploogie", b -> basicRangedStats(b)
-                .entity(UGEntityTypes.SPLOOGIE.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("nargoyle", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.NARGOYLE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("stoneborn", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.STONEBORN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("forgotten_guardian", b -> basicMeleeStats(b)
-                .entity(UGEntityTypes.FORGOTTEN_GUARDIAN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        // TODO ANCIENT
-
-        addAncientBoss("brute", b -> ancientMeleeStats(b)
-                .entity(UGEntityTypes.BRUTE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addAncientBoss("rotbeast", b -> ancientMeleeStats(b)
-                .entity(UGEntityTypes.ROTBEAST.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addAncientBoss("rotwalker", b -> ancientMeleeStats(b)
-                .entity(UGEntityTypes.ROTWALKER.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addAncientBoss("forgotten", b -> ancientMeleeStats(b)
-                .entity(UGEntityTypes.FORGOTTEN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addAncientBoss("nargoyle", b -> ancientMeleeStats(b)
-                .entity(UGEntityTypes.NARGOYLE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addAncientBoss("forgotten_guardian", b -> ancientMeleeStats(b)
-                .entity(UGEntityTypes.FORGOTTEN_GUARDIAN.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(UNDERGARDEN))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("brute", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.BRUTE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("rotbeast", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.ROTBEAST.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("rotwalker", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.ROTWALKER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("dweller", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.DWELLER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("forgotten", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.FORGOTTEN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("sploogie", b -> basicRangedStats(b)
+//                .entity(UGEntityTypes.SPLOOGIE.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("nargoyle", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.NARGOYLE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("stoneborn", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.STONEBORN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("forgotten_guardian", b -> basicMeleeStats(b)
+//                .entity(UGEntityTypes.FORGOTTEN_GUARDIAN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        // TODO ANCIENT
+//
+//        addAncientBoss("brute", b -> ancientMeleeStats(b)
+//                .entity(UGEntityTypes.BRUTE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addAncientBoss("rotbeast", b -> ancientMeleeStats(b)
+//                .entity(UGEntityTypes.ROTBEAST.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addAncientBoss("rotwalker", b -> ancientMeleeStats(b)
+//                .entity(UGEntityTypes.ROTWALKER.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addAncientBoss("forgotten", b -> ancientMeleeStats(b)
+//                .entity(UGEntityTypes.FORGOTTEN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addAncientBoss("nargoyle", b -> ancientMeleeStats(b)
+//                .entity(UGEntityTypes.NARGOYLE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addAncientBoss("forgotten_guardian", b -> ancientMeleeStats(b)
+//                .entity(UGEntityTypes.FORGOTTEN_GUARDIAN.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(UNDERGARDEN))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
 
     }
 

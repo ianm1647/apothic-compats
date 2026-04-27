@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.ars_nouveau;
 
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;

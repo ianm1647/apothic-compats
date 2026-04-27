@@ -18,8 +18,8 @@ import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -27,7 +27,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
-import twilightforest.init.TFEntities;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -36,7 +35,7 @@ public class TwilightInvaderProvider extends InvaderProvider {
 
     String mod = "twilightforest";
 
-    private static ResourceKey<Level> TWILIGHT_FOREST = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("twilightforest:twilight_forest"));
+    private static ResourceKey<Level> TWILIGHT_FOREST = ResourceKey.create(Registries.DIMENSION, Identifier.parse("twilightforest:twilight_forest"));
 
     public TwilightInvaderProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries);
@@ -51,38 +50,39 @@ public class TwilightInvaderProvider extends InvaderProvider {
     public void generate() {
         HolderLookup.Provider registries = this.lookupProvider.join();
         HolderLookup.RegistryLookup<Biome> biomes = registries.lookup(Registries.BIOME).get();
+//
+//        addAncientBoss("carminite_golem", b -> ancientMeleeStats(b)
+//            .entity(TFEntities.CARMINITE_GOLEM.value())
+//            .basicData(c -> meleeGear(c)
+//                .name(Component.literal(BasicBossData.NAME_GEN))
+//                .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
+//                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("goblin_knight", b -> ancientMeleeStats(b)
+//            .entity(TFEntities.LOWER_GOBLIN_KNIGHT.value())
+//            .basicData(c -> meleeGear(c)
+//                .name(Component.literal(BasicBossData.NAME_GEN))
+//                .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
+//                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("helmet_crab", b -> ancientMeleeStats(b)
+//            .entity(TFEntities.HELMET_CRAB.value())
+//            .basicData(c -> meleeGear(c)
+//                .name(Component.literal(BasicBossData.NAME_GEN))
+//                .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 2, 0.55F))
+//                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
+//                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addAncientBoss("skeleton_druid", b -> ancientRangedStats(b)
+//            .entity(TFEntities.SKELETON_DRUID.value())
+//            .basicData(c -> rangedGear(c)
+//                .name(Component.literal(BasicBossData.NAME_GEN))
+//                .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
+//                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS)));
 
-        addAncientBoss("carminite_golem", b -> ancientMeleeStats(b)
-            .entity(TFEntities.CARMINITE_GOLEM.value())
-            .basicData(c -> meleeGear(c)
-                .name(Component.literal(BasicBossData.NAME_GEN))
-                .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
-                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("goblin_knight", b -> ancientMeleeStats(b)
-            .entity(TFEntities.LOWER_GOBLIN_KNIGHT.value())
-            .basicData(c -> meleeGear(c)
-                .name(Component.literal(BasicBossData.NAME_GEN))
-                .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
-                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("helmet_crab", b -> ancientMeleeStats(b)
-            .entity(TFEntities.HELMET_CRAB.value())
-            .basicData(c -> meleeGear(c)
-                .name(Component.literal(BasicBossData.NAME_GEN))
-                .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 2, 0.55F))
-                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
-                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addAncientBoss("skeleton_druid", b -> ancientRangedStats(b)
-            .entity(TFEntities.SKELETON_DRUID.value())
-            .basicData(c -> rangedGear(c)
-                .name(Component.literal(BasicBossData.NAME_GEN))
-                .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                .constraints(Constraints.forDimension(TWILIGHT_FOREST))
-                .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS)));
     }
 
     protected static Invader.Builder ancientMeleeStats(Invader.Builder builder) {

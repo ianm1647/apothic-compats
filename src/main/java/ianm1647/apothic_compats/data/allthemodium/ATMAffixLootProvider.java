@@ -2,6 +2,7 @@ package ianm1647.apothic_compats.data.allthemodium;
 
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
@@ -13,6 +14,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ATMAffixLootProvider extends AffixLootEntryProvider {

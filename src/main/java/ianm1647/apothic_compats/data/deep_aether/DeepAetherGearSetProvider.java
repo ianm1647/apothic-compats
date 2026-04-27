@@ -3,7 +3,6 @@ package ianm1647.apothic_compats.data.deep_aether;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import ianm1647.apothic_compats.ApothicCompats;
-import io.github.razordevs.deep_aether.init.DAItems;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.HolderLookup.RegistryLookup;
 import net.minecraft.core.registries.Registries;
@@ -34,46 +33,48 @@ public class DeepAetherGearSetProvider extends GearSetProvider {
         Provider registries = this.lookupProvider.join();
         RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
-        // Summit Sets
-        addSet("summit/deep_aether/skyjade", 25, 0, c -> c
-                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_SWORD.value()), 10)
-                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_AXE.value()), 10)
-                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_PICKAXE.value()), 10)
-                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_SHOVEL.value()), 10)
-                .helmet(new ItemStack(DAItems.SKYJADE_HELMET.value()), 10)
-                .chestplate(new ItemStack(DAItems.SKYJADE_CHESTPLATE.value()), 10)
-                .leggings(new ItemStack(DAItems.SKYJADE_LEGGINGS.value()), 10)
-                .boots(new ItemStack(DAItems.SKYJADE_BOOTS.value()), 10)
-                .tag("summit_melee"));
+//        // Summit Sets
+//        addSet("summit/deep_aether/skyjade", 25, 0, c -> c
+//                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_SWORD.value()), 10)
+//                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_AXE.value()), 10)
+//                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_PICKAXE.value()), 10)
+//                .mainhand(new ItemStack(DAItems.SKYJADE_TOOLS_SHOVEL.value()), 10)
+//                .helmet(new ItemStack(DAItems.SKYJADE_HELMET.value()), 10)
+//                .chestplate(new ItemStack(DAItems.SKYJADE_CHESTPLATE.value()), 10)
+//                .leggings(new ItemStack(DAItems.SKYJADE_LEGGINGS.value()), 10)
+//                .boots(new ItemStack(DAItems.SKYJADE_BOOTS.value()), 10)
+//                .tag("summit_melee"));
+//
+//        // Pinnacle Sets
+//
+//        addSet("pinnacle/deep_aether/stratus", 15, 2.5F, c -> c
+//                .mainhand(new ItemStack(DAItems.STRATUS_SWORD.value()), 10)
+//                .mainhand(new ItemStack(DAItems.STRATUS_AXE.value()), 10)
+//                .mainhand(new ItemStack(DAItems.STRATUS_PICKAXE.value()), 10)
+//                .mainhand(new ItemStack(DAItems.STRATUS_SHOVEL.value()), 10)
+//                .helmet(new ItemStack(DAItems.STRATUS_HELMET.value()), 10)
+//                .chestplate(new ItemStack(DAItems.STRATUS_CHESTPLATE.value()), 10)
+//                .leggings(new ItemStack(DAItems.STRATUS_LEGGINGS.value()), 10)
+//                .boots(new ItemStack(DAItems.STRATUS_BOOTS.value()), 10)
+//                .tag("pinnacle_melee"));
+//
+//        addSet("pinnacle/deep_aether/stormforged", 5, 2.5F, c -> c
+//                .mainhand(new ItemStack(DAItems.STORM_SWORD.value()), 10)
+//                .helmet(new ItemStack(DAItems.STORMFORGED_HELMET.value()), 10)
+//                .chestplate(new ItemStack(DAItems.STORMFORGED_CHESTPLATE.value()), 10)
+//                .leggings(new ItemStack(DAItems.STORMFORGED_LEGGINGS.value()), 10)
+//                .boots(new ItemStack(DAItems.STORMFORGED_BOOTS.value()), 10)
+//                .tag("pinnacle_melee"));
+//
+//        addSet("pinnacle/ranged/deep_aether/stormforged", 5, 2.5F, c -> c
+//                .mainhand(new ItemStack(DAItems.STORM_BOW.value()), 10)
+//                .helmet(new ItemStack(DAItems.STORMFORGED_HELMET.value()), 10)
+//                .chestplate(new ItemStack(DAItems.STORMFORGED_CHESTPLATE.value()), 10)
+//                .leggings(new ItemStack(DAItems.STORMFORGED_LEGGINGS.value()), 10)
+//                .boots(new ItemStack(DAItems.STORMFORGED_BOOTS.value()), 10)
+//                .tag("pinnacle_ranged"));
 
-        // Pinnacle Sets
 
-        addSet("pinnacle/deep_aether/stratus", 15, 2.5F, c -> c
-                .mainhand(new ItemStack(DAItems.STRATUS_SWORD.value()), 10)
-                .mainhand(new ItemStack(DAItems.STRATUS_AXE.value()), 10)
-                .mainhand(new ItemStack(DAItems.STRATUS_PICKAXE.value()), 10)
-                .mainhand(new ItemStack(DAItems.STRATUS_SHOVEL.value()), 10)
-                .helmet(new ItemStack(DAItems.STRATUS_HELMET.value()), 10)
-                .chestplate(new ItemStack(DAItems.STRATUS_CHESTPLATE.value()), 10)
-                .leggings(new ItemStack(DAItems.STRATUS_LEGGINGS.value()), 10)
-                .boots(new ItemStack(DAItems.STRATUS_BOOTS.value()), 10)
-                .tag("pinnacle_melee"));
-
-        addSet("pinnacle/deep_aether/stormforged", 5, 2.5F, c -> c
-                .mainhand(new ItemStack(DAItems.STORM_SWORD.value()), 10)
-                .helmet(new ItemStack(DAItems.STORMFORGED_HELMET.value()), 10)
-                .chestplate(new ItemStack(DAItems.STORMFORGED_CHESTPLATE.value()), 10)
-                .leggings(new ItemStack(DAItems.STORMFORGED_LEGGINGS.value()), 10)
-                .boots(new ItemStack(DAItems.STORMFORGED_BOOTS.value()), 10)
-                .tag("pinnacle_melee"));
-
-        addSet("pinnacle/ranged/deep_aether/stormforged", 5, 2.5F, c -> c
-                .mainhand(new ItemStack(DAItems.STORM_BOW.value()), 10)
-                .helmet(new ItemStack(DAItems.STORMFORGED_HELMET.value()), 10)
-                .chestplate(new ItemStack(DAItems.STORMFORGED_CHESTPLATE.value()), 10)
-                .leggings(new ItemStack(DAItems.STORMFORGED_LEGGINGS.value()), 10)
-                .boots(new ItemStack(DAItems.STORMFORGED_BOOTS.value()), 10)
-                .tag("pinnacle_ranged"));
     }
 
     @Override

@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.mowziesmobs;
 
-import com.bobmowzie.mowziesmobs.server.entity.EntityHandler;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
@@ -41,58 +40,58 @@ public class MowzieInvaderProvider extends InvaderProvider {
 
     @Override
     public void generate() {
-        addBoss("umvuthana", b -> basicMeleeStats(b)
-                .entity(EntityHandler.UMVUTHANA_MINION.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("umvuthana_raptor", b -> basicMeleeStats(b)
-                .entity(EntityHandler.UMVUTHANA_RAPTOR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("umvuthana_crane", b -> basicMeleeStats(b)
-                .entity(EntityHandler.UMVUTHANA_CRANE.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        addBoss("naga", b -> basicRangedStats(b)
-                .entity(EntityHandler.NAGA.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-
-        //TODO: ANCIENT
-
-
-        addAncientBoss("umvuthana_raptor", b -> ancientMeleeStats(b)
-                .entity(EntityHandler.UMVUTHANA_RAPTOR.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-
-        addAncientBoss("naga", b -> ancientRangedStats(b)
-                .entity(EntityHandler.NAGA.get())
-                .basicData(c -> rangedGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("umvuthana", b -> basicMeleeStats(b)
+//                .entity(EntityHandler.UMVUTHANA_MINION.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("umvuthana_raptor", b -> basicMeleeStats(b)
+//                .entity(EntityHandler.UMVUTHANA_RAPTOR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("umvuthana_crane", b -> basicMeleeStats(b)
+//                .entity(EntityHandler.UMVUTHANA_CRANE.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        addBoss("naga", b -> basicRangedStats(b)
+//                .entity(EntityHandler.NAGA.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//
+//        //TODO: ANCIENT
+//
+//
+//        addAncientBoss("umvuthana_raptor", b -> ancientMeleeStats(b)
+//                .entity(EntityHandler.UMVUTHANA_RAPTOR.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//
+//        addAncientBoss("naga", b -> ancientRangedStats(b)
+//                .entity(EntityHandler.NAGA.get())
+//                .basicData(c -> rangedGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
     }
 
     protected static Invader.Builder ancientMeleeStats(Invader.Builder builder) {

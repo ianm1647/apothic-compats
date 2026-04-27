@@ -22,7 +22,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
-import quek.undergarden.registry.UGEffects;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -41,108 +40,108 @@ public class UndergardenAffixProvider extends AffixProvider {
 
     @Override
     public void generate() {
-        LootRarity common = rarity("common");
-        LootRarity uncommon = rarity("uncommon");
-        LootRarity rare = rarity("rare");
-        LootRarity epic = rarity("epic");
-        LootRarity mythic = rarity("mythic");
-        LootRarity ancient = ancientRarity("ancient");
-
-        this.addMobEffect("melee", "brittle", UGEffects.BRITTLENESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-        this.addAncientMobEffect("melee", "brittle", UGEffects.BRITTLENESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
-
-        this.addMobEffect("melee", "featherweight", UGEffects.FEATHERWEIGHT, MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-        this.addAncientMobEffect("melee", "featherweight", UGEffects.FEATHERWEIGHT, MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
-
-        this.addMobEffect("melee", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-        this.addAncientMobEffect("melee", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
-
-        this.addMobEffect("melee", "anti_virulence", UGEffects.VIRULENT_RESISTANCE, MobEffectAffix.Target.ATTACK_SELF, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-        this.addAncientMobEffect("melee", "anti_virulence", UGEffects.VIRULENT_RESISTANCE, MobEffectAffix.Target.ATTACK_SELF, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
-
-        this.addMobEffect("ranged", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-        this.addAncientMobEffect("ranged", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
-
-        this.addMobEffect("ranged", "gooey", UGEffects.GOOEY, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-        this.addAncientMobEffect("ranged", "gooey", UGEffects.GOOEY, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//        LootRarity common = rarity("common");
+//        LootRarity uncommon = rarity("uncommon");
+//        LootRarity rare = rarity("rare");
+//        LootRarity epic = rarity("epic");
+//        LootRarity mythic = rarity("mythic");
+//        LootRarity ancient = ancientRarity("ancient");
+//
+//        this.addMobEffect("melee", "brittle", UGEffects.BRITTLENESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//        this.addAncientMobEffect("melee", "brittle", UGEffects.BRITTLENESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//
+//        this.addMobEffect("melee", "featherweight", UGEffects.FEATHERWEIGHT, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//        this.addAncientMobEffect("melee", "featherweight", UGEffects.FEATHERWEIGHT, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//
+//        this.addMobEffect("melee", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//        this.addAncientMobEffect("melee", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//
+//        this.addMobEffect("melee", "anti_virulence", UGEffects.VIRULENT_RESISTANCE, MobEffectAffix.Target.ATTACK_SELF, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//        this.addAncientMobEffect("melee", "anti_virulence", UGEffects.VIRULENT_RESISTANCE, MobEffectAffix.Target.ATTACK_SELF, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//
+//        this.addMobEffect("ranged", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//        this.addAncientMobEffect("ranged", "virulence", UGEffects.VIRULENCE, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//
+//        this.addMobEffect("ranged", "gooey", UGEffects.GOOEY, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//        this.addAncientMobEffect("ranged", "gooey", UGEffects.GOOEY, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.BOW, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
 
     }
 

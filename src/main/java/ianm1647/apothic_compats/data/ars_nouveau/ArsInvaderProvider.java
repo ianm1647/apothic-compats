@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.ars_nouveau;
 
-import com.hollingsworth.arsnouveau.setup.registry.ModEntities;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;

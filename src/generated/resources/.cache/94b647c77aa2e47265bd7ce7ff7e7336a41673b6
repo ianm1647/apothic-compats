@@ -1,8 +1,13 @@
-// 1.21.1	2026-02-06T10:41:44.4970565	Curios for apothic_compats
-916f9dcdaf272f5a1ad64366e842e34b54965e33 data/apothic_compats/curios/entities/entities.json
-387a82c911eb172cbb6b10e0dd9fb8b15efc1ca2 data/apothic_compats/curios/slots/back.json
-387a82c911eb172cbb6b10e0dd9fb8b15efc1ca2 data/apothic_compats/curios/slots/body.json
-6f8d614fef8949efcb7bebf26c1dc67a838a7c17 data/apothic_compats/curios/slots/bracelet.json
-1c4d2079d4bcabd24dcea0ff8f8a487f310a9a41 data/apothic_compats/curios/slots/charm.json
-387a82c911eb172cbb6b10e0dd9fb8b15efc1ca2 data/apothic_compats/curios/slots/curio.json
-6f8d614fef8949efcb7bebf26c1dc67a838a7c17 data/apothic_compats/curios/slots/feet.json
+// 26.1.2	2026-04-27T15:33:04.305363404	Curios for apothic_compats
+a479abb2af4ec72eee897909f9392508aa8ca081 data/apothic_compats/curios/entities/entities.json
+3ac8cdcff08b9ceaa2c43e0126b6e284f1dc5b02 data/apothic_compats/curios/slots/back.json
+3ac8cdcff08b9ceaa2c43e0126b6e284f1dc5b02 data/apothic_compats/curios/slots/belt.json
+3ac8cdcff08b9ceaa2c43e0126b6e284f1dc5b02 data/apothic_compats/curios/slots/body.json
+9aeb6706ecba0048529ed055fb606a82ba930732 data/apothic_compats/curios/slots/bracelet.json
+dfbdd7081e4ab3a9baf6e79e80119dcf2f61d9c2 data/apothic_compats/curios/slots/charm.json
+3ac8cdcff08b9ceaa2c43e0126b6e284f1dc5b02 data/apothic_compats/curios/slots/curio.json
+9aeb6706ecba0048529ed055fb606a82ba930732 data/apothic_compats/curios/slots/feet.json
+9aeb6706ecba0048529ed055fb606a82ba930732 data/apothic_compats/curios/slots/hands.json
+3ac8cdcff08b9ceaa2c43e0126b6e284f1dc5b02 data/apothic_compats/curios/slots/head.json
+3ac8cdcff08b9ceaa2c43e0126b6e284f1dc5b02 data/apothic_compats/curios/slots/necklace.json
+9aeb6706ecba0048529ed055fb606a82ba930732 data/apothic_compats/curios/slots/ring.json

@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    }
+  ],
+  "stack": {
+    "id": "allthemodium:allthemodium_chestplate"
+  },
+  "weights": {
+    "pinnacle": {
+      "weight": 5
+    }
+  }
+}

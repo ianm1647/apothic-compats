@@ -13,7 +13,6 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
-import net.mcreator.borninchaosv.init.BornInChaosV1ModEntities;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;

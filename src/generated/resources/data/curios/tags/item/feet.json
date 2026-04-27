@@ -1,8 +1,8 @@
 {
-    "values": [
-        {
-            "id": "apothic_compats:adorned_boots",
-            "required": false
-        }
-    ]
+  "values": [
+    {
+      "id": "apothic_compats:adorned_boots",
+      "required": false
+    }
+  ]
 }

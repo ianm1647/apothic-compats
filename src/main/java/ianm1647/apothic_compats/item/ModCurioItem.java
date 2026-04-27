@@ -6,8 +6,9 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 public class ModCurioItem extends Item implements ICurioItem {
-    public ModCurioItem() {
-        super(new Item.Properties().stacksTo(1));
+
+    public ModCurioItem(Properties properties) {
+        super(properties);
     }
 
     public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack) {

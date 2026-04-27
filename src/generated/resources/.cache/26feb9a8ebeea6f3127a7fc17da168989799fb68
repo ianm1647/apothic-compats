@@ -1,13 +1,13 @@
-// 1.21.1	2026-03-05T23:33:48.7305334	Tags for minecraft:item mod id apothic_compats
-0c1c1ee39a897661b38f56f093b975307e0730e9 data/apothic_compats/tags/item/curios_filter.json
-ba9dc184d2f9dc131de9657febb42e94883d7ab2 data/curios/tags/item/back.json
-714536bd9502b6299c97f76d52abca7b4603d063 data/curios/tags/item/belt.json
-b77c15962c2555a3d256eebe0f08e27c1ebd3ea3 data/curios/tags/item/body.json
-2f60505e08a8e18578a6793188ae5098ebadf0ae data/curios/tags/item/bracelet.json
-25c7da6f825ddc04c8ec47b8962608be1f36d746 data/curios/tags/item/charm.json
-c70506c6e959f9a2a4707c5c94b661bc2fdf4a3e data/curios/tags/item/curio.json
-5dd682c6e5860af6a18f5619316b605963d4a6e4 data/curios/tags/item/feet.json
-e8bc5d43891ba42c1669fd0467ae4763a595467b data/curios/tags/item/hands.json
-9d680f314bdd09eb26b3827749c2e8f4438f135d data/curios/tags/item/head.json
-774733d04a3192fdc5b2516f7f58bc07fd5b7b9a data/curios/tags/item/necklace.json
-dfaf569c6497f33f50ade77285610cff37826ded data/curios/tags/item/ring.json
+// 26.1.2	2026-04-26T03:30:38.928738646	Tags for minecraft:item mod id apothic_compats
+a0e077dfc4e42295de700f961656005401f1b5aa data/apothic_compats/tags/item/curios_filter.json
+5443b298866cec71d478531a0a4b7d255936f3d0 data/curios/tags/item/back.json
+d7c394e38c716af6b162285d1e730f54d69923cd data/curios/tags/item/belt.json
+fd59d3a3f3f60f38cd4b960a6e4f9474991b23a0 data/curios/tags/item/body.json
+9567fe97d427c7310fe5bb61f7142ed429dcc958 data/curios/tags/item/bracelet.json
+9c06b58029d00d154d2a7ea0b19db2dcf71d3051 data/curios/tags/item/charm.json
+e2f61518a63f2b2e035da18cf8d0aaaf637f6db3 data/curios/tags/item/curio.json
+49a129f97bb66cdd291cd09c04c98985e0e98286 data/curios/tags/item/feet.json
+6fc9c9dcc265625a49b4db7f38bd6d64087a1191 data/curios/tags/item/hands.json
+d299d4b25303791feaa1a518038262dc1a7f65f8 data/curios/tags/item/head.json
+1e36e2718426e9aee4b8b516c0c40da5b4b27366 data/curios/tags/item/necklace.json
+a5c071b9b2e98682e24a32ea8dfb6ffce14bbef3 data/curios/tags/item/ring.json

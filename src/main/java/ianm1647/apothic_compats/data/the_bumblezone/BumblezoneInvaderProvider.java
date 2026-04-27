@@ -1,7 +1,6 @@
 package ianm1647.apothic_compats.data.the_bumblezone;
 
 import ianm1647.ancientreforging.AncientReforging;
-import com.telepathicgrunt.the_bumblezone.modinit.BzEntities;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
@@ -18,8 +17,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -35,7 +34,7 @@ public class BumblezoneInvaderProvider extends InvaderProvider {
 
     String mod = "the_bumblezone";
 
-    private static ResourceKey<Level> BUMBLEZONE = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("the_bumblezone:the_bumblezone"));
+    private static ResourceKey<Level> BUMBLEZONE = ResourceKey.create(Registries.DIMENSION, Identifier.parse("the_bumblezone:the_bumblezone"));
 
     public BumblezoneInvaderProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -48,30 +47,30 @@ public class BumblezoneInvaderProvider extends InvaderProvider {
 
     @Override
     public void generate() {
-        addBoss("bee", b -> basicMeleeStats(b)
-                .entity(EntityType.BEE)
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(BUMBLEZONE))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("beehemoth", b -> basicMeleeStats(b)
-                .entity(BzEntities.BEEHEMOTH.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(BUMBLEZONE))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-
-        // TODO ANCIENT
-
-        addAncientBoss("beehemoth", b -> ancientMeleeStats(b)
-                .entity(BzEntities.BEEHEMOTH.get())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(BUMBLEZONE))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("bee", b -> basicMeleeStats(b)
+//                .entity(EntityType.BEE)
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(BUMBLEZONE))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//        addBoss("beehemoth", b -> basicMeleeStats(b)
+//                .entity(BzEntities.BEEHEMOTH.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(BUMBLEZONE))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+//
+//        // TODO ANCIENT
+//
+//        addAncientBoss("beehemoth", b -> ancientMeleeStats(b)
+//                .entity(BzEntities.BEEHEMOTH.get())
+//                .basicData(c -> meleeGear(c)
+//                        .name(Component.literal(BasicBossData.NAME_GEN))
+//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+//                        .constraints(Constraints.forDimension(BUMBLEZONE))
+//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
 
 
     }

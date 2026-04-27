@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.cataclysm;
 
-import com.github.L_Ender.cataclysm.init.ModEntities;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;

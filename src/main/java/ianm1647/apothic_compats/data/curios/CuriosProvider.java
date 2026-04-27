@@ -32,10 +32,25 @@ public class CuriosProvider extends CuriosDataProvider {
         createSlot("charm")
                 .size(4)
                 .addCosmetic(false);
+        createSlot("ring")
+                .size(2)
+                .addCosmetic(false);
+        createSlot("head")
+                .size(1)
+                .addCosmetic(false);
+        createSlot("necklace")
+                .size(1)
+                .addCosmetic(false);
+        createSlot("hands")
+                .size(2)
+                .addCosmetic(false);
+        createSlot("belt")
+                .size(1)
+                .addCosmetic(false);
 
         createEntities("entities")
                 .addPlayer()
-                .addSlots("back", "body", "bracelet", "feet", "curio", "charm");
+                .addSlots("back", "body", "bracelet", "feet", "curio", "charm", "ring", "head", "necklace", "hands", "belt");
 
     }
 }

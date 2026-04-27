@@ -5,48 +5,31 @@ import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.data.*;
-import ianm1647.apothic_compats.data.alexsmods.CavesInvaderProvider;
-import ianm1647.apothic_compats.data.alexsmods.MobsInvaderProvider;
-import ianm1647.apothic_compats.data.borninchaos.ChaosInvaderProvider;
-import ianm1647.apothic_compats.data.create.PotatoCannonAffixProvider;
 import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
 import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
-import ianm1647.apothic_compats.data.friendsandfoes.FAFInvaderProvider;
-import ianm1647.apothic_compats.data.malum.MalumExtraGemBonusProvider;
-import ianm1647.apothic_compats.data.ae2.*;
-import ianm1647.apothic_compats.data.aether.*;
+import ianm1647.apothic_compats.data.curios.CuriosProvider;
 import ianm1647.apothic_compats.data.allthemodium.*;
-import ianm1647.apothic_compats.data.ars_nouveau.*;
-import ianm1647.apothic_compats.data.cataclysm.*;
 import ianm1647.apothic_compats.data.curios.CuriosAffixProvider;
-import ianm1647.apothic_compats.data.deep_aether.*;
-import ianm1647.apothic_compats.data.deeperdarker.*;
-import ianm1647.apothic_compats.data.farmersdelight.*;
-import ianm1647.apothic_compats.data.eternal_starlight.*;
-import ianm1647.apothic_compats.data.malum.*;
-import ianm1647.apothic_compats.data.mekanism.*;
-import ianm1647.apothic_compats.data.mowziesmobs.MowzieInvaderProvider;
-import ianm1647.apothic_compats.data.the_bumblezone.*;
-import ianm1647.apothic_compats.data.twilight.*;
-import ianm1647.apothic_compats.data.undergarden.*;
+import ianm1647.apothic_compats.data.friendsandfoes.FAFInvaderProvider;
 import ianm1647.apothic_compats.event.AffixEvents;
-import ianm1647.apothic_compats.event.AttributeEvents;
-import ianm1647.apothic_compats.loot.ModLootCategories;
-import ianm1647.apothic_compats.util.ModSlotGroups;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.concurrent.CompletableFuture;
 
 @Mod(ApothicCompats.MODID)
 public class ApothicCompats {
@@ -54,31 +37,24 @@ public class ApothicCompats {
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
-        NeoForge.EVENT_BUS.register(this);
-        NeoForge.EVENT_BUS.register(new AffixEvents());
-        NeoForge.EVENT_BUS.register(new AttributeEvents());
+        //modEventBus.register(new AffixEvents());
         modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
 
-        Comp.register(modEventBus);
-        ModSlotGroups.register(modEventBus);
-        ModLootCategories.registerLootCategories(modEventBus);
-
+        Comp.bootstrap(modEventBus);
         //ModAffixRegistry.registerAffixes();
-        modEventBus.addListener(this::data);
+
+        modEventBus.register(this);
     }
 
-    public void data(GatherDataEvent e) {
-//        DataGenerator generator = e.getGenerator();
-//        PackOutput output = generator.getPackOutput();
-//        CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
-//        ExistingFileHelper helper = e.getExistingFileHelper();
-//
-//        TagProvider.Blocks blockTags = new TagProvider.Blocks(output, lookupProvider, helper);
-//        generator.addProvider(true, blockTags);
-//        generator.addProvider(true, new TagProvider.Items(output, lookupProvider, blockTags.contentsGetter(), helper));
-//        generator.addProvider(true, new TagProvider.Biomes(output, lookupProvider, helper));
+    @SubscribeEvent
+    public void data(GatherDataEvent.Client e) {
+        DataGenerator generator = e.getGenerator();
+        PackOutput output = generator.getPackOutput();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
+
+        generator.addProvider(true, new TagProvider.Items(output, lookupProvider));
 //        generator.addProvider(true, new ItemModelsProvider(output, helper));
-//        generator.addProvider(true, new CuriosProvider(output, helper, lookupProvider));
+        generator.addProvider(true, new CuriosProvider(output, lookupProvider));
 
         DataGenBuilder.create(ApothicCompats.MODID)
                 .provider(DynamicRegistryProvider.runSilently((DataGenBuilder.DataProviderFactory<RarityProvider>)RarityProvider::new))
@@ -87,81 +63,81 @@ public class ApothicCompats {
                 .provider(RarityOverrideProvider::new)
                 .provider(RecipeProvider::new)
 
-                .provider(Ae2AffixLootProvider::new)
-                .provider(Ae2GearSetProvider::new)
-
-                .provider(AetherAffixLootProvider::new)
-                .provider(AetherAffixProvider::new)
-                .provider(AetherGearSetProvider::new)
-                .provider(AetherInvaderProvider::new)
-                .provider(DartShooterAffixProvider::new)
-
-                .provider(CavesInvaderProvider::new)
-                .provider(MobsInvaderProvider::new)
+//                .provider(Ae2AffixLootProvider::new)
+//                .provider(Ae2GearSetProvider::new)
+//
+//                .provider(AetherAffixLootProvider::new)
+//                .provider(AetherAffixProvider::new)
+//                .provider(AetherGearSetProvider::new)
+//                .provider(AetherInvaderProvider::new)
+//                .provider(DartShooterAffixProvider::new)
+//
+//                .provider(CavesInvaderProvider::new)
+//                .provider(MobsInvaderProvider::new)
 
                 .provider(ATMAffixLootProvider::new)
                 .provider(ATMGearSetProvider::new)
                 .provider(ATMInvaderProvider::new)
 
-                .provider(ArsAffixLootProvider::new)
-                .provider(ArsAffixProvider::new)
-                .provider(ArsGearSetProvider::new)
-                .provider(ArsGemProvider::new)
-                .provider(ArsInvaderProvider::new)
-
-                .provider(ChaosInvaderProvider::new)
-
-                .provider(CataclysmAffixLootProvider::new)
-                .provider(CataclysmGearSetProvider::new)
-                .provider(CataclysmInvaderProvider::new)
-
-                .provider(PotatoCannonAffixProvider::new)
+//                .provider(ArsAffixLootProvider::new)
+//                .provider(ArsAffixProvider::new)
+//                .provider(ArsGearSetProvider::new)
+//                .provider(ArsGemProvider::new)
+//                .provider(ArsInvaderProvider::new)
+//
+//                .provider(ChaosInvaderProvider::new)
+//
+//                .provider(CataclysmAffixLootProvider::new)
+//                .provider(CataclysmGearSetProvider::new)
+//                .provider(CataclysmInvaderProvider::new)
+//
+//                .provider(PotatoCannonAffixProvider::new)
 
                 .provider(CuriosAffixLootProvider::new)
                 .provider(CuriosAffixProvider::new)
                 .provider(CuriosExtraGemBonusProvider::new)
 
-                .provider(DeepAetherAffixLootProvider::new)
-                .provider(DeepAetherGearSetProvider::new)
+//                .provider(DeepAetherAffixLootProvider::new)
+//                .provider(DeepAetherGearSetProvider::new)
+//
+//                .provider(DeeperDarkerAffixLootProvider::new)
+//                .provider(DeeperDarkerAffixProvider::new)
+//                .provider(DeeperDarkerGearSetProvider::new)
+//                .provider(DeeperDarkerInvaderProvider::new)
 
-                .provider(DeeperDarkerAffixLootProvider::new)
-                .provider(DeeperDarkerAffixProvider::new)
-                .provider(DeeperDarkerGearSetProvider::new)
-                .provider(DeeperDarkerInvaderProvider::new)
-
-                .provider(FarmersDelightAffixLootProvider::new)
-
+//                .provider(FarmersDelightAffixLootProvider::new)
+//
                 .provider(FAFInvaderProvider::new)
-
-                .provider(StarlightAffixLootProvider::new)
-                .provider(StarlightAffixProvider::new)
-                .provider(StarlightGearSetProvider::new)
-                .provider(StarlightInvaderProvider::new)
-
-                .provider(MalumAffixProvider::new)
-                .provider(MalumExtraGemBonusProvider::new)
-                .provider(MalumGemProvider::new)
-                .provider(ScytheAffixProvider::new)
-                .provider(StaffAffixProvider::new)
-
-                .provider(MekanismAffixLootProvider::new)
-                .provider(MekanismGearSetProvider::new)
-
-                .provider(MowzieInvaderProvider::new)
-
-                .provider(BumblezoneAffixLootProvider::new)
-                .provider(BumblezoneAffixProvider::new)
-                .provider(BumblezoneGearSetProvider::new)
-                .provider(BumblezoneInvaderProvider::new)
-
-                .provider(TwilightAffixLootProvider::new)
-                .provider(TwilightAffixProvider::new)
-                .provider(TwilightInvaderProvider::new)
-
-                .provider(UndergardenAffixLootProvider::new)
-                .provider(UndergardenAffixProvider::new)
-                .provider(UndergardenGearSetProvider::new)
-                .provider(UndergardenInvaderProvider::new)
+//
+//                .provider(StarlightAffixLootProvider::new)
+//                .provider(StarlightAffixProvider::new)
+//                .provider(StarlightGearSetProvider::new)
+//                .provider(StarlightInvaderProvider::new)
+//
+//                .provider(MalumAffixProvider::new)
+//                .provider(MalumExtraGemBonusProvider::new)
+//                .provider(MalumGemProvider::new)
+//                .provider(ScytheAffixProvider::new)
+//                .provider(StaffAffixProvider::new)
+//
+//                .provider(MekanismAffixLootProvider::new)
+//                .provider(MekanismGearSetProvider::new)
+//
+//                .provider(MowzieInvaderProvider::new)
+//
+//                .provider(BumblezoneAffixLootProvider::new)
+//                .provider(BumblezoneAffixProvider::new)
+//                .provider(BumblezoneGearSetProvider::new)
+//                .provider(BumblezoneInvaderProvider::new)
+//
+//                .provider(TwilightAffixLootProvider::new)
+//                .provider(TwilightAffixProvider::new)
+//                .provider(TwilightInvaderProvider::new)
+//
+//                .provider(UndergardenAffixLootProvider::new)
+//                .provider(UndergardenAffixProvider::new)
+//                .provider(UndergardenGearSetProvider::new)
+//                .provider(UndergardenInvaderProvider::new)
 
                 .build(e);
 
@@ -173,9 +149,7 @@ public class ApothicCompats {
         return Identifier.fromNamespaceAndPath(MODID, path);
     }
 
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Apothic Compats is starting...");
     }
 }

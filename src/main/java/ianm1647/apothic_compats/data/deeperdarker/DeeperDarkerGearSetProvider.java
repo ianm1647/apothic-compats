@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.deeperdarker;
 
-import com.kyanite.deeperdarker.content.DDItems;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;
@@ -31,29 +30,29 @@ public class DeeperDarkerGearSetProvider extends GearSetProvider {
         HolderLookup.Provider registries = this.lookupProvider.join();
         HolderLookup.RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
-        // Ascent Sets
-        addSet("ascent/deeperdarker/resonarium", 15, 0, c -> c
-                .mainhand(new ItemStack(DDItems.RESONARIUM_SWORD.get()), 10)
-                .mainhand(new ItemStack(DDItems.RESONARIUM_PICKAXE.get()), 10)
-                .mainhand(new ItemStack(DDItems.RESONARIUM_AXE.get()), 10)
-                .mainhand(new ItemStack(DDItems.RESONARIUM_SHOVEL.get()), 10)
-                .helmet(new ItemStack(DDItems.RESONARIUM_HELMET.get()), 10)
-                .chestplate(new ItemStack(DDItems.RESONARIUM_CHESTPLATE.get()), 10)
-                .leggings(new ItemStack(DDItems.RESONARIUM_LEGGINGS.get()), 10)
-                .boots(new ItemStack(DDItems.RESONARIUM_BOOTS.get()), 10)
-                .tag("ascent_melee"));
-
-        // Summit Sets
-        addSet("summit/deeperdarker/warden", 15, 0, c -> c
-                .mainhand(new ItemStack(DDItems.WARDEN_SWORD.get()), 10)
-                .mainhand(new ItemStack(DDItems.WARDEN_PICKAXE.get()), 10)
-                .mainhand(new ItemStack(DDItems.WARDEN_AXE.get()), 10)
-                .mainhand(new ItemStack(DDItems.WARDEN_SHOVEL.get()), 10)
-                .helmet(new ItemStack(DDItems.WARDEN_HELMET.get()), 10)
-                .chestplate(new ItemStack(DDItems.WARDEN_CHESTPLATE.get()), 10)
-                .leggings(new ItemStack(DDItems.WARDEN_LEGGINGS.get()), 10)
-                .boots(new ItemStack(DDItems.WARDEN_BOOTS.get()), 10)
-                .tag("summit_melee"));
+//        // Ascent Sets
+//        addSet("ascent/deeperdarker/resonarium", 15, 0, c -> c
+//                .mainhand(new ItemStack(DDItems.RESONARIUM_SWORD.get()), 10)
+//                .mainhand(new ItemStack(DDItems.RESONARIUM_PICKAXE.get()), 10)
+//                .mainhand(new ItemStack(DDItems.RESONARIUM_AXE.get()), 10)
+//                .mainhand(new ItemStack(DDItems.RESONARIUM_SHOVEL.get()), 10)
+//                .helmet(new ItemStack(DDItems.RESONARIUM_HELMET.get()), 10)
+//                .chestplate(new ItemStack(DDItems.RESONARIUM_CHESTPLATE.get()), 10)
+//                .leggings(new ItemStack(DDItems.RESONARIUM_LEGGINGS.get()), 10)
+//                .boots(new ItemStack(DDItems.RESONARIUM_BOOTS.get()), 10)
+//                .tag("ascent_melee"));
+//
+//        // Summit Sets
+//        addSet("summit/deeperdarker/warden", 15, 0, c -> c
+//                .mainhand(new ItemStack(DDItems.WARDEN_SWORD.get()), 10)
+//                .mainhand(new ItemStack(DDItems.WARDEN_PICKAXE.get()), 10)
+//                .mainhand(new ItemStack(DDItems.WARDEN_AXE.get()), 10)
+//                .mainhand(new ItemStack(DDItems.WARDEN_SHOVEL.get()), 10)
+//                .helmet(new ItemStack(DDItems.WARDEN_HELMET.get()), 10)
+//                .chestplate(new ItemStack(DDItems.WARDEN_CHESTPLATE.get()), 10)
+//                .leggings(new ItemStack(DDItems.WARDEN_LEGGINGS.get()), 10)
+//                .boots(new ItemStack(DDItems.WARDEN_BOOTS.get()), 10)
+//                .tag("summit_melee"));
     }
 
     @Override

@@ -2,6 +2,7 @@ package ianm1647.apothic_compats.data.aether;
 
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.ancientreforging.AncientReforging;
@@ -16,6 +17,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class AetherAffixLootProvider extends AffixLootEntryProvider {
@@ -139,13 +141,13 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
     protected void addTools(TieredWeights weights, Item... tools) {
         for (Item tool : tools) {
-            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(tool)));
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(AETHER), new ItemStackTemplate(tool), Set.of()));
         }
     }
 
     protected void addArmor(TieredWeights weights, Item... pieces) {
         for (Item piece : pieces) {
-            this.addEntry(new AffixLootEntry(weights, new ItemStackTemplate(piece)));
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(AETHER), new ItemStackTemplate(piece), Set.of()));
         }
     }
 

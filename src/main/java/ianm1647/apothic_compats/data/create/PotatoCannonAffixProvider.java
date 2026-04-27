@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.create;
 
-import com.simibubi.create.AllEnchantments;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
@@ -13,11 +12,10 @@ import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import dev.shadowsoffire.apotheosis.util.ApothMiscUtil;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
-import dev.shadowsoffire.placebo.reload.DynamicHolder;
+import dev.shadowsoffire.placebo.dynreg.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

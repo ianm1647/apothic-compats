@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.aether;
 
-import com.aetherteam.aether.entity.AetherEntityTypes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apoth;

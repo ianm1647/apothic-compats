@@ -11,8 +11,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
@@ -45,7 +45,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
-                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(AETHER.location().getNamespace()));
+                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(AETHER.identifier().getNamespace()));
 
         invaderRules.add(OTHER, new InvaderSpawnRules(
                 Map.of(
@@ -55,7 +55,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
-                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(OTHER.location().getNamespace()));
+                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(OTHER.identifier().getNamespace()));
 
         invaderRules.add(STARLIGHT, new InvaderSpawnRules(
                 Map.of(
@@ -65,7 +65,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
-                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(STARLIGHT.location().getNamespace()));
+                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(STARLIGHT.identifier().getNamespace()));
 
         invaderRules.add(OTHERSIDE, new InvaderSpawnRules(
                 Map.of(
@@ -75,7 +75,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
-                SurfaceType.ANY), false, new ModLoadedCondition(OTHERSIDE.location().getNamespace()));
+                SurfaceType.ANY), false, new ModLoadedCondition(OTHERSIDE.identifier().getNamespace()));
 
         invaderRules.add(BUMBLEZONE, new InvaderSpawnRules(
                 Map.of(
@@ -85,7 +85,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
-                SurfaceType.ANY), false, new ModLoadedCondition(BUMBLEZONE.location().getNamespace()));
+                SurfaceType.ANY), false, new ModLoadedCondition(BUMBLEZONE.identifier().getNamespace()));
 
         invaderRules.add(UNDERGARDEN, new InvaderSpawnRules(
                 Map.of(
@@ -95,7 +95,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
                 Optional.empty(),
-                SurfaceType.ANY), false, new ModLoadedCondition(UNDERGARDEN.location().getNamespace()));
+                SurfaceType.ANY), false, new ModLoadedCondition(UNDERGARDEN.identifier().getNamespace()));
 
         Builder<LootCategory, Item> catOverrides = builder(Apoth.DataMaps.LOOT_CATEGORY_OVERRIDES);
 
@@ -104,6 +104,6 @@ public class DataMapProvider extends ApothDataMapProvider {
     }
 
     private static ResourceKey<DimensionType> register(String mod, String name) {
-        return ResourceKey.create(Registries.DIMENSION_TYPE, ResourceLocation.fromNamespaceAndPath(mod, name));
+        return ResourceKey.create(Registries.DIMENSION_TYPE, Identifier.fromNamespaceAndPath(mod, name));
     }
 }

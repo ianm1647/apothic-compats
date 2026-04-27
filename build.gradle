@@ -51,46 +51,47 @@ dependencies {
     compileOnly "dev.architectury:architectury-neoforge:$architectury_version"
 
     //compats
-    compileOnly "curse.maven:malum-484064:$malum_version"
-    compileOnly "curse.maven:amendments-896746:$amendments_version"
-    compileOnly "curse.maven:supplementaries-412082:$supplementaries_version"
-    compileOnly "curse.maven:twilightforest-227639:$twilight_version"
-    compileOnly "curse.maven:aether-255308:$aether_version"
-    compileOnly "curse.maven:deepaether-852465:$deepaether_version"
-    compileOnly "curse.maven:arsnouveau-401955:$arsnouveau_version"
-    compileOnly "curse.maven:deeperdarker-659011:$deeperdarker_version"
-    compileOnly "curse.maven:eternalstarlight-1080592:$eternalstarlight_version"
-    compileOnly "curse.maven:bumblezone-362479:$bumblezone_version"
-    compileOnly "curse.maven:undergarden-379849:$undergarden_version"
-    compileOnly "curse.maven:mekanism-268560:$mekanism_version"
-    compileOnly "curse.maven:mekanismtools-268567:$mekanismtools_version"
+//    compileOnly "curse.maven:malum-484064:$malum_version"
+//    compileOnly "curse.maven:amendments-896746:$amendments_version"
+//    compileOnly "curse.maven:supplementaries-412082:$supplementaries_version"
+//    compileOnly "curse.maven:twilightforest-227639:$twilight_version"
+//    compileOnly "curse.maven:aether-255308:$aether_version"
+//    compileOnly "curse.maven:deepaether-852465:$deepaether_version"
+//    compileOnly "curse.maven:arsnouveau-401955:$arsnouveau_version"
+//    compileOnly "curse.maven:deeperdarker-659011:$deeperdarker_version"
+//    compileOnly "curse.maven:eternalstarlight-1080592:$eternalstarlight_version"
+//    compileOnly "curse.maven:bumblezone-362479:$bumblezone_version"
+//    compileOnly "curse.maven:undergarden-379849:$undergarden_version"
+//    compileOnly "curse.maven:mekanism-268560:$mekanism_version"
+//    compileOnly "curse.maven:mekanismtools-268567:$mekanismtools_version"
     implementation "curse.maven:allthemodium-364466:$allthemodium_version"
-    compileOnly "curse.maven:farmersdelight-398521:$farmersdelight_version"
-    compileOnly "curse.maven:arselemental-561470:$arselemental_version"
-    compileOnly "curse.maven:ae2-223794:$ae2_version"
-    compileOnly "curse.maven:cataclysm-551586:$cataclysm_version"
-    compileOnly "curse.maven:create-328085:$create_version"
-    compileOnly "curse.maven:immersiveengineering-231951:$ie_version"
-    compileOnly "curse.maven:borninchaos-686437:$borninchaos_version"
-    compileOnly "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
+    implementation "curse.maven:ato-405593:$alltheores_version"
+//    compileOnly "curse.maven:farmersdelight-398521:$farmersdelight_version"
+//    compileOnly "curse.maven:arselemental-561470:$arselemental_version"
+//    compileOnly "curse.maven:ae2-223794:$ae2_version"
+//    compileOnly "curse.maven:cataclysm-551586:$cataclysm_version"
+//    compileOnly "curse.maven:create-328085:$create_version"
+//    compileOnly "curse.maven:immersiveengineering-231951:$ie_version"
+//    compileOnly "curse.maven:borninchaos-686437:$borninchaos_version"
+//    compileOnly "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
 
     //implementation "curse.maven:citadel-neoforge-1512529:$citadel_version"
     //implementation "curse.maven:alexs-mobs-neoforge-1512535:$alexsmobs_version"
 
-    compileOnly files('../Citadel/build/libs/citadel-1.21.1-2.7.1.jar')
-    compileOnly files('../AlexsMobs/build/libs/alexsmobs-1.22.9.jar')
-    compileOnly files('../AlexsCaves/build/libs/alexscaves-2.0.2.jar')
+//    compileOnly files('../Citadel/build/libs/citadel-1.21.1-2.7.1.jar')
+//    compileOnly files('../AlexsMobs/build/libs/alexsmobs-1.22.9.jar')
+//    compileOnly files('../AlexsCaves/build/libs/alexscaves-2.0.2.jar')
 
     //compat deps
-    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
-    compileOnly "curse.maven:moonlight-499980:$moonlight_version"
-    compileOnly "curse.maven:owo-532610:$owo_version"
+//    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
+//    compileOnly "curse.maven:moonlight-499980:$moonlight_version"
+//    compileOnly "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
-    compileOnly "curse.maven:resourcefullib-570073:$resourcefullib_version"
+    implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
     implementation "curse.maven:guideme-1173950:$guideme_version"
-    compileOnly "curse.maven:lionfish-1001614:$lionfish_version"
-    compileOnly "curse.maven:yacl-667299:$yacl_version"
+//    compileOnly "curse.maven:lionfish-1001614:$lionfish_version"
+//    compileOnly "curse.maven:yacl-667299:$yacl_version"
 }
 
 base {

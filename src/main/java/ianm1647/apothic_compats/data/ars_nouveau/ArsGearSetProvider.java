@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.ars_nouveau;
 
-import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;

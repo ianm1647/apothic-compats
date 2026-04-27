@@ -1,7 +1,5 @@
 package ianm1647.apothic_compats.data.curios;
 
-import com.hollingsworth.arsnouveau.api.perk.PerkAttributes;
-import com.sammy.malum.registry.common.MalumAttributes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.socket.gem.ExtraGemBonusRegistry;
@@ -15,7 +13,7 @@ import dev.shadowsoffire.apotheosis.socket.gem.bonus.special.AllStatsBonus;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp.LootCategories.Curios;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -37,9 +35,9 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
     }
 
     public static final GemClass CURIOS = new GemClass("curios",
-            ModLootCategories.HANDS, ModLootCategories.BRACELET, ModLootCategories.RING, ModLootCategories.BODY, ModLootCategories.BACK,
-            ModLootCategories.BELT, ModLootCategories.FEET, ModLootCategories.HEAD, ModLootCategories.NECKLACE, ModLootCategories.CHARM,
-            ModLootCategories.CURIO, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
+            Curios.BACK, Curios.BELT, Curios.BODY, Curios.BRACELET, Curios.CHARM,
+            Curios.CURIO, Curios.FEET, Curios.HANDS, Curios.HEAD, Curios.NECKLACE,
+            Curios.RING, Curios.BROOCH, Curios.RUNE, Curios.AN_FOCUS
     );
 
     @Override
@@ -56,23 +54,23 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.ATTACK_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.075)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.125)
-                        .value(Purity.NORMAL, 0.15)
-                        .value(Purity.FLAWLESS, 0.175)
-                        .value(Purity.PERFECT, 0.2)));
+                        .value(Purity.CRACKED, 0.015)
+                        .value(Purity.CHIPPED, 0.025)
+                        .value(Purity.FLAWED, 0.035)
+                        .value(Purity.NORMAL, 0.045)
+                        .value(Purity.FLAWLESS, 0.05)
+                        .value(Purity.PERFECT, 0.075)));
 
         addBonus(Apotheosis.loc("core/brawlers"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.ATTACK_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 1)
-                        .value(Purity.CHIPPED, 2)
-                        .value(Purity.FLAWED, 3)
-                        .value(Purity.NORMAL, 4)
-                        .value(Purity.FLAWLESS, 5)
-                        .value(Purity.PERFECT, 6)));
+                        .value(Purity.CRACKED, 0.5)
+                        .value(Purity.CHIPPED, 1)
+                        .value(Purity.FLAWED, 1.5)
+                        .value(Purity.NORMAL, 2)
+                        .value(Purity.FLAWLESS, 2.5)
+                        .value(Purity.PERFECT, 3)));
 
         addBonus(Apotheosis.loc("core/breach"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
@@ -83,93 +81,93 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                         .value(Purity.FLAWED, 2)
                         .value(Purity.NORMAL, 2.5)
                         .value(Purity.FLAWLESS, 3)
-                        .value(Purity.PERFECT, 5)));
+                        .value(Purity.PERFECT, 4)));
 
         addBonus(Apotheosis.loc("core/combatant"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.CRIT_CHANCE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.FLAWED, 0.05)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.FLAWED, 0.25)
-                        .value(Purity.NORMAL, 0.3)
-                        .value(Purity.FLAWLESS, 0.35)
-                        .value(Purity.PERFECT, 0.4)));
+                        .value(Purity.FLAWED, 0.02)
+                        .value(Purity.FLAWED, 0.04)
+                        .value(Purity.FLAWED, 0.06)
+                        .value(Purity.NORMAL, 0.08)
+                        .value(Purity.FLAWLESS, 0.1)
+                        .value(Purity.PERFECT, 0.12)));
 
         addBonus(Apotheosis.loc("core/guardian"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.KNOCKBACK_RESISTANCE)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.2)
-                        .value(Purity.FLAWLESS, 0.25)
-                        .value(Purity.PERFECT, 0.3)));
+                        .value(Purity.CHIPPED, 0.06)
+                        .value(Purity.FLAWED, 0.07)
+                        .value(Purity.NORMAL, 0.08)
+                        .value(Purity.FLAWLESS, 0.09)
+                        .value(Purity.PERFECT, 0.1)));
 
         addBonus(Apotheosis.loc("core/lightning"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.SNEAKING_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.2)
-                        .value(Purity.FLAWLESS, 0.25)
-                        .value(Purity.PERFECT, 0.3)));
+                        .value(Purity.CRACKED, 0.025)
+                        .value(Purity.CHIPPED, 0.05)
+                        .value(Purity.FLAWED, 0.075)
+                        .value(Purity.NORMAL, 0.1)
+                        .value(Purity.FLAWLESS, 0.125)
+                        .value(Purity.PERFECT, 0.15)));
 
         addBonus(Apotheosis.loc("core/lunar"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.LUCK)
                         .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.FLAWED, 2)
-                        .value(Purity.NORMAL, 4)
-                        .value(Purity.FLAWLESS, 6)
-                        .value(Purity.PERFECT, 8)));
+                        .value(Purity.FLAWED, 1)
+                        .value(Purity.NORMAL, 2)
+                        .value(Purity.FLAWLESS, 3)
+                        .value(Purity.PERFECT, 4)));
 
         addBonus(Apotheosis.loc("core/samurai"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.ARMOR_SHRED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.2)
-                        .value(Purity.FLAWLESS, 0.25)
-                        .value(Purity.PERFECT, 0.3)));
+                        .value(Purity.CRACKED, 0.01)
+                        .value(Purity.CHIPPED, 0.03)
+                        .value(Purity.FLAWED, 0.05)
+                        .value(Purity.NORMAL, 0.07)
+                        .value(Purity.FLAWLESS, 0.09)
+                        .value(Purity.PERFECT, 0.1)));
 
         addBonus(Apotheosis.loc("core/slipstream"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.MOVEMENT_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.1)
-                        .value(Purity.CHIPPED, 0.15)
-                        .value(Purity.FLAWED, 0.2)
-                        .value(Purity.NORMAL, 0.25)
-                        .value(Purity.FLAWLESS, 0.3)
-                        .value(Purity.PERFECT, 0.35)));
+                        .value(Purity.CRACKED, 0.05)
+                        .value(Purity.CHIPPED, 0.075)
+                        .value(Purity.FLAWED, 0.1)
+                        .value(Purity.NORMAL, 0.125)
+                        .value(Purity.FLAWLESS, 0.15)
+                        .value(Purity.PERFECT, 0.2)));
 
         addBonus(Apotheosis.loc("core/solar"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.PROT_PIERCE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.125)
-                        .value(Purity.FLAWED, 0.2)
-                        .value(Purity.NORMAL, 0.275)
-                        .value(Purity.FLAWLESS, 0.35)
-                        .value(Purity.PERFECT, 0.425)));
+                        .value(Purity.CRACKED, 0.02)
+                        .value(Purity.CHIPPED, 0.04)
+                        .value(Purity.FLAWED, 0.06)
+                        .value(Purity.NORMAL, 0.8)
+                        .value(Purity.FLAWLESS, 0.1)
+                        .value(Purity.PERFECT, 0.12)));
 
         addBonus(Apotheosis.loc("core/splendor"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.HEALING_RECEIVED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.25)
-                        .value(Purity.FLAWLESS, 0.35)
-                        .value(Purity.PERFECT, 0.45)));
+                        .value(Purity.CRACKED, 0.025)
+                        .value(Purity.CHIPPED, 0.05)
+                        .value(Purity.FLAWED, 0.075)
+                        .value(Purity.NORMAL, 0.1)
+                        .value(Purity.FLAWLESS, 0.125)
+                        .value(Purity.PERFECT, 0.15)));
 
         addBonus(Apotheosis.loc("core/tyrannical"), b -> b
                 .bonus(CURIOS, MultiAttrBonus.builder()
@@ -178,11 +176,11 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                                 .attr(ALObjects.Attributes.EXPERIENCE_GAINED)
                                 .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                                 .value(Purity.CRACKED, 0.1f)
-                                .value(Purity.CHIPPED, 0.15f)
-                                .value(Purity.FLAWED, 0.2f)
-                                .value(Purity.NORMAL, 0.35f)
-                                .value(Purity.FLAWLESS, 0.5f)
-                                .value(Purity.PERFECT, 0.65f))
+                                .value(Purity.CHIPPED, 0.125f)
+                                .value(Purity.FLAWED, 0.15f)
+                                .value(Purity.NORMAL, 0.175f)
+                                .value(Purity.FLAWLESS, 0.2f)
+                                .value(Purity.PERFECT, 0.25f))
                         .modifier(a -> a
                                 .attr(Attributes.LUCK)
                                 .op(AttributeModifier.Operation.ADD_VALUE)
@@ -191,35 +189,35 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                                 .value(Purity.FLAWED, -3)
                                 .value(Purity.NORMAL, -4)
                                 .value(Purity.FLAWLESS, -5)
-                                .value(Purity.PERFECT, -7))));
+                                .value(Purity.PERFECT, -6))));
 
         addBonus(Apotheosis.loc("core/warlord"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.ATTACK_KNOCKBACK)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.2)
-                        .value(Purity.FLAWLESS, 0.25)
-                        .value(Purity.PERFECT, 0.45)));
+                        .value(Purity.CRACKED, 0.025)
+                        .value(Purity.CHIPPED, 0.05)
+                        .value(Purity.FLAWED, 0.075)
+                        .value(Purity.NORMAL, 0.1)
+                        .value(Purity.FLAWLESS, 0.125)
+                        .value(Purity.PERFECT, 0.15)));
 
         addBonus(Apotheosis.loc("overworld/earth"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.BLOCK_BREAK_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.FLAWED, 0.1)
-                        .value(Purity.NORMAL, 0.15)
-                        .value(Purity.FLAWLESS, 0.2)
-                        .value(Purity.PERFECT, 0.3)));
+                        .value(Purity.FLAWED, 0.05)
+                        .value(Purity.NORMAL, 0.075)
+                        .value(Purity.FLAWLESS, 0.1)
+                        .value(Purity.PERFECT, 0.125)));
 
         addBonus(Apotheosis.loc("overworld/royalty"), b -> b
                 .bonus(CURIOS, AllStatsBonus.builder()
                 .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
-                .value(Purity.FLAWED, 0.025F)
-                .value(Purity.NORMAL, 0.05F)
-                .value(Purity.FLAWLESS, 0.075F)
-                .value(Purity.PERFECT, 0.1F)
+                .value(Purity.FLAWED, 0.01F)
+                .value(Purity.NORMAL, 0.015F)
+                .value(Purity.FLAWLESS, 0.02F)
+                .value(Purity.PERFECT, 0.025F)
                 .attributes(
                         Attributes.MAX_HEALTH,
                         Attributes.KNOCKBACK_RESISTANCE,
@@ -258,34 +256,34 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.COLD_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.1)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.2)
-                        .value(Purity.FLAWLESS, 0.25)
-                        .value(Purity.PERFECT, 0.35)));
+                        .value(Purity.CRACKED, 0.02)
+                        .value(Purity.CHIPPED, 0.04)
+                        .value(Purity.FLAWED, 0.06)
+                        .value(Purity.NORMAL, 0.08)
+                        .value(Purity.FLAWLESS, 0.1)
+                        .value(Purity.PERFECT, 0.12)));
 
         addBonus(Apotheosis.loc("the_nether/blood_lord"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(Attributes.BURNING_TIME)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.CRACKED, -0.1f)
-                        .value(Purity.CHIPPED, -0.15f)
-                        .value(Purity.FLAWED, -0.2f)
-                        .value(Purity.NORMAL, -0.25f)
-                        .value(Purity.FLAWLESS, -0.35f)
-                        .value(Purity.PERFECT, -0.5f)));
+                        .value(Purity.CRACKED, -0.05f)
+                        .value(Purity.CHIPPED, -0.075f)
+                        .value(Purity.FLAWED, -0.1f)
+                        .value(Purity.NORMAL, -0.125f)
+                        .value(Purity.FLAWLESS, -0.15f)
+                        .value(Purity.PERFECT, -0.175f)));
 
         addBonus(Apotheosis.loc("the_nether/inferno"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.LIFE_STEAL)
                         .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 0.05)
-                        .value(Purity.CHIPPED, 0.10)
-                        .value(Purity.FLAWED, 0.15)
-                        .value(Purity.NORMAL, 0.20)
-                        .value(Purity.FLAWLESS, 0.25)
-                        .value(Purity.PERFECT, 0.45)));
+                        .value(Purity.CRACKED, 0.03)
+                        .value(Purity.CHIPPED, 0.04)
+                        .value(Purity.FLAWED, 0.05)
+                        .value(Purity.NORMAL, 0.06)
+                        .value(Purity.FLAWLESS, 0.07)
+                        .value(Purity.PERFECT, 0.08)));
 
         addBonus(Apotheosis.loc("the_nether/molten_breach"), b -> b
                 .bonus(CURIOS, DamageReductionBonus.builder()
@@ -297,32 +295,32 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
 
         addBonus(Apotheosis.loc("the_end/mageslayer"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
-                        .attr(Attributes.KNOCKBACK_RESISTANCE)
+                        .attr(ALObjects.Attributes.ARMOR_PIERCE)
                         .op(AttributeModifier.Operation.ADD_VALUE)
-                        .value(Purity.CRACKED, 0.15)
-                        .value(Purity.CHIPPED, 0.25)
-                        .value(Purity.FLAWED, 0.35)
-                        .value(Purity.NORMAL, 0.45)
-                        .value(Purity.FLAWLESS, 0.55)
-                        .value(Purity.PERFECT, 0.7)));
+                        .value(Purity.CRACKED, 0.02)
+                        .value(Purity.CHIPPED, 0.04)
+                        .value(Purity.FLAWED, 0.06)
+                        .value(Purity.NORMAL, 0.08)
+                        .value(Purity.FLAWLESS, 0.1)
+                        .value(Purity.PERFECT, 0.12)));
 
         addTwilightBonus(Apotheosis.loc("twilight/queen"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.PROJECTILE_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.FLAWED, 0.15f)
-                        .value(Purity.NORMAL, 0.25f)
-                        .value(Purity.FLAWLESS, 0.35f)
-                        .value(Purity.PERFECT, 0.5f)));
+                        .value(Purity.FLAWED, 0.03f)
+                        .value(Purity.NORMAL, 0.06f)
+                        .value(Purity.FLAWLESS, 0.9f)
+                        .value(Purity.PERFECT, 0.12f)));
 
         addTwilightBonus(Apotheosis.loc("twilight/forest"), b -> b
                 .bonus(CURIOS, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.CRIT_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.FLAWED, 0.15f)
-                        .value(Purity.NORMAL, 0.25f)
-                        .value(Purity.FLAWLESS, 0.35f)
-                        .value(Purity.PERFECT, 0.5f)));
+                        .value(Purity.FLAWED, 0.05f)
+                        .value(Purity.NORMAL, 0.075f)
+                        .value(Purity.FLAWLESS, 0.1f)
+                        .value(Purity.PERFECT, 0.125f)));
 
 //        addModdedBonus(ApothicCompats.loc("ars_nouveau/mana"), "ars_nouveau", b -> b
 //                .bonus(CURIOS, AttributeBonus.builder()

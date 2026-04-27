@@ -1,8 +1,8 @@
 {
-    "values": [
-        {
-            "id": "apothic_compats:florid_belt",
-            "required": false
-        }
-    ]
+  "values": [
+    {
+      "id": "apothic_compats:florid_belt",
+      "required": false
+    }
+  ]
 }

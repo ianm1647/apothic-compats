@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.cataclysm;
 
-import com.github.L_Ender.cataclysm.init.ModItems;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;

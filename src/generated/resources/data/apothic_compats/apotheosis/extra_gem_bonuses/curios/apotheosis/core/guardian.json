@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "curios"
+    }
+  ],
+  "gem": "apotheosis:core/guardian",
+  "bonuses": [
+    {
+      "type": "apotheosis:attribute",
+      "attribute": "minecraft:knockback_resistance",
+      "gem_class": {
+        "key": "curios",
+        "types": [
+          "apothic_compats:back",
+          "apothic_compats:belt",
+          "apothic_compats:body",
+          "apothic_compats:bracelet",
+          "apothic_compats:charm",
+          "apothic_compats:curio",
+          "apothic_compats:feet",
+          "apothic_compats:hands",
+          "apothic_compats:head",
+          "apothic_compats:necklace",
+          "apothic_compats:ring",
+          "apothic_compats:brooch",
+          "apothic_compats:rune",
+          "apothic_compats:an_focus"
+        ]
+      },
+      "operation": "add_value",
+      "values": {
+        "cracked": 0.05,
+        "chipped": 0.06,
+        "flawed": 0.07,
+        "normal": 0.08,
+        "flawless": 0.09,
+        "perfect": 0.1
+      }
+    }
+  ]
+}

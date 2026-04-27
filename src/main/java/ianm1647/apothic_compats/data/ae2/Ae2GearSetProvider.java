@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.ae2;
 
-import appeng.core.definitions.AEItems;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;

@@ -1,13 +1,18 @@
 {
-    "entities": [
-        "minecraft:player"
-    ],
-    "slots": [
-        "back",
-        "body",
-        "bracelet",
-        "feet",
-        "curio",
-        "charm"
-    ]
+  "entities": [
+    "#curios:player_like"
+  ],
+  "slots": [
+    "back",
+    "body",
+    "bracelet",
+    "feet",
+    "curio",
+    "charm",
+    "ring",
+    "head",
+    "necklace",
+    "hands",
+    "belt"
+  ]
 }

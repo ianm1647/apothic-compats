@@ -2,7 +2,6 @@ package ianm1647.apothic_compats.data.deeperdarker;
 
 import dev.shadowsoffire.apotheosis.Apoth;
 import ianm1647.ancientreforging.AncientReforging;
-import com.kyanite.deeperdarker.content.DDEffects;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.AffixType;
 import dev.shadowsoffire.apotheosis.affix.AttributeAffix;
@@ -48,22 +47,23 @@ public class DeeperDarkerAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addMobEffect("breaker", "sculky", DDEffects.SCULK_AFFINITY, MobEffectAffix.Target.BREAK_SELF,b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BREAKER)
-                .stacking()
-                .limit(3)
-                .value(uncommon, 80, 120, 0, 80)
-                .value(rare, 80, 160, 0, 80)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-
-        this.addAncientMobEffect("breaker", "sculky", DDEffects.SCULK_AFFINITY, MobEffectAffix.Target.BREAK_SELF, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BREAKER)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//        this.addMobEffect("breaker", "sculky", DDEffects.SCULK_AFFINITY, MobEffectAffix.Target.BREAK_SELF,b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.BREAKER)
+//                .stacking()
+//                .limit(3)
+//                .value(uncommon, 80, 120, 0, 80)
+//                .value(rare, 80, 160, 0, 80)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//
+//        this.addAncientMobEffect("breaker", "sculky", DDEffects.SCULK_AFFINITY, MobEffectAffix.Target.BREAK_SELF, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.BREAKER)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//
     }
 
     private void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {

@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.eternal_starlight;
 
-import cn.leolezury.eternalstarlight.common.registry.ESMobEffects;
 import dev.shadowsoffire.apotheosis.Apoth;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
@@ -48,20 +47,20 @@ public class StarlightAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addMobEffect("melee", "crystallized", ESMobEffects.CRYSTAL_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET,b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(epic, 120, 200, 0, 80)
-                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
-
-        this.addAncientMobEffect("melee", "crystallized", ESMobEffects.CRYSTAL_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
-                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
-                .stacking()
-                .limit(3)
-                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
+//        this.addMobEffect("melee", "crystallized", ESMobEffects.CRYSTAL_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET,b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(epic, 120, 200, 0, 80)
+//                .value(mythic, 160, 240, StepFunction.fromBounds(0, 1, 0.125F), 80));
+//
+//        this.addAncientMobEffect("melee", "crystallized", ESMobEffects.CRYSTAL_INFECTION.asHolder(), MobEffectAffix.Target.ATTACK_TARGET, b -> b
+//                .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+//                .categories(Apoth.LootCategories.MELEE_WEAPON, Apoth.LootCategories.TRIDENT)
+//                .stacking()
+//                .limit(3)
+//                .value(ancient, 200, 280, StepFunction.fromBounds(1, 2, 0.125F), 80));
     }
 
     private void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {

@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "curios"
+    }
+  ],
+  "stack": {
+    "id": "apothic_compats:flashy_bracelet"
+  },
+  "weights": {
+    "quality": 5.0,
+    "weight": 20
+  }
+}

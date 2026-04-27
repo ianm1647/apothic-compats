@@ -1,7 +1,5 @@
 package ianm1647.apothic_compats.data.ars_nouveau;
 
-import com.hollingsworth.arsnouveau.api.perk.PerkAttributes;
-import com.hollingsworth.arsnouveau.setup.registry.ModPotions;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.GemProvider;

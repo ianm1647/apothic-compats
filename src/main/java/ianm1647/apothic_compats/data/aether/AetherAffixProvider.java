@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.aether;
 
-import com.aetherteam.aether.effect.AetherEffects;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.AffixType;

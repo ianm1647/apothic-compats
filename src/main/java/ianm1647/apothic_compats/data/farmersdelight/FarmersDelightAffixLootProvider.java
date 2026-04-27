@@ -10,12 +10,11 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,10 +24,6 @@ import java.util.concurrent.CompletableFuture;
 public class FarmersDelightAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "farmersdelight";
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public FarmersDelightAffixLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -57,10 +52,10 @@ public class FarmersDelightAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        addEntry(IRON, new ItemStack(ModItems.IRON_KNIFE.get()));
-        addEntry(DIAMOND, new ItemStack(ModItems.DIAMOND_KNIFE.get()));
-        addNetherEntry(DIAMOND, new ItemStack(ModItems.DIAMOND_KNIFE.get()));
-        addNetherEntry(NETHERITE, new ItemStack(ModItems.NETHERITE_KNIFE.get()));
+//        addTools(IRON, new ItemStack(ModItems.IRON_KNIFE.get()));
+//        addTools(DIAMOND, new ItemStack(ModItems.DIAMOND_KNIFE.get()));
+//        addNetherTools(DIAMOND, new ItemStack(ModItems.DIAMOND_KNIFE.get()));
+//        addNetherTools(NETHERITE, new ItemStack(ModItems.NETHERITE_KNIFE.get()));
     }
 
     @Override
@@ -68,14 +63,20 @@ public class FarmersDelightAffixLootProvider extends AffixLootEntryProvider {
         return "Farmers Delight Affix Loot Entries";
     }
 
-
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStackTemplate(tool), Set.of()));
+        }
     }
 
-    protected void addNetherEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/nether/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.NETHER), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addNetherTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.NETHER), new ItemStackTemplate(tool), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        Identifier key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }
