@@ -1,0 +1,33 @@
+{
+  "mainhands": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "ae2:nether_quartz_sword"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "ae2:nether_quartz_axe"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "ae2:nether_quartz_pickaxe"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "ae2:nether_quartz_shovel"
+      },
+      "weight": 10
+    }
+  ],
+  "weight": 25
+}

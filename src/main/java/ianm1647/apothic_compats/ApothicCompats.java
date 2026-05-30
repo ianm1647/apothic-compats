@@ -5,6 +5,9 @@ import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.data.*;
+import ianm1647.apothic_compats.data.ae2.Ae2AffixLootProvider;
+import ianm1647.apothic_compats.data.ae2.Ae2GearSetProvider;
+import ianm1647.apothic_compats.data.alexsmods.MobsInvaderProvider;
 import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
 import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.curios.CuriosProvider;
@@ -63,8 +66,8 @@ public class ApothicCompats {
                 .provider(RarityOverrideProvider::new)
                 .provider(RecipeProvider::new)
 
-//                .provider(Ae2AffixLootProvider::new)
-//                .provider(Ae2GearSetProvider::new)
+                .provider(Ae2AffixLootProvider::new)
+                .provider(Ae2GearSetProvider::new)
 //
 //                .provider(AetherAffixLootProvider::new)
 //                .provider(AetherAffixProvider::new)
@@ -73,7 +76,7 @@ public class ApothicCompats {
 //                .provider(DartShooterAffixProvider::new)
 //
 //                .provider(CavesInvaderProvider::new)
-//                .provider(MobsInvaderProvider::new)
+                .provider(MobsInvaderProvider::new)
 
                 .provider(ATMAffixLootProvider::new)
                 .provider(ATMGearSetProvider::new)

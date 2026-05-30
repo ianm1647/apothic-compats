@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "stack": {
+    "id": "ae2:fluix_axe"
+  },
+  "weights": {
+    "ascent": {
+      "weight": 10
+    },
+    "summit": {
+      "weight": 10
+    }
+  }
+}

@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.data.alexsmods;
 
+import com.github.alexthe666.alexsmobs.entity.AMEntityRegistry;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.InvaderProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
@@ -43,192 +44,192 @@ public class MobsInvaderProvider extends InvaderProvider {
 
     @Override
     public void generate() {
-//        HolderLookup.Provider registries = this.lookupProvider.join();
-//        HolderLookup.RegistryLookup<Biome> biomes = registries.lookup(Registries.BIOME).get();
-//
-//        addBoss("grizzly_bear", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.GRIZZLY_BEAR.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("gorilla", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.GORILLA.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("guster", b -> basicRangedStats(b)
-//                .entity(AMEntityRegistry.GUSTER.get())
-//                .basicData(c -> rangedGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("rocky_roller", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.ROCKY_ROLLER.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("bunfungus", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.BUNFUNGUS.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .constraints(Constraints.forBiomes(biomes, Tags.Biomes.IS_MUSHROOM))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("tarantula_hawk", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.TARANTULA_HAWK.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("skreecher", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.SKREECHER.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("froststalker", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.FROSTSTALKER.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("murmur", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.MURMUR.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("warped_mosco", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.WARPED_MOSCO.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.NETHER))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("straddler", b -> basicRangedStats(b)
-//                .entity(AMEntityRegistry.STRADDLER.get())
-//                .basicData(c -> rangedGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.NETHER))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("dropbear", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.DROPBEAR.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.NETHER))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("crimson_mosquito", b -> basicRangedStats(b)
-//                .entity(AMEntityRegistry.CRIMSON_MOSQUITO.get())
-//                .basicData(c -> rangedGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.NETHER))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("enderiophage", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.ENDERIOPHAGE.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.END))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addBoss("cosmaw", b -> basicMeleeStats(b)
-//                .entity(AMEntityRegistry.COSMAW.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.END))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//
-//
-//
-//        //TODO: ANCIENT
-//
-//
-//        addAncientBoss("grizzly_bear", b -> ancientMeleeStats(b)
-//                .entity(AMEntityRegistry.GRIZZLY_BEAR.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addAncientBoss("guster", b -> ancientRangedStats(b)
-//                .entity(AMEntityRegistry.GUSTER.get())
-//                .basicData(c -> rangedGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addAncientBoss("bunfungus", b -> ancientMeleeStats(b)
-//                .entity(AMEntityRegistry.BUNFUNGUS.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .constraints(Constraints.forBiomes(biomes, Tags.Biomes.IS_MUSHROOM))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addAncientBoss("murmur", b -> ancientMeleeStats(b)
-//                .entity(AMEntityRegistry.MURMUR.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addAncientBoss("warped_mosco", b -> ancientMeleeStats(b)
-//                .entity(AMEntityRegistry.WARPED_MOSCO.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.NETHER))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addAncientBoss("dropbear", b -> ancientMeleeStats(b)
-//                .entity(AMEntityRegistry.DROPBEAR.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.NETHER))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-//
-//        addAncientBoss("enderiophage", b -> ancientMeleeStats(b)
-//                .entity(AMEntityRegistry.ENDERIOPHAGE.get())
-//                .basicData(c -> meleeGear(c)
-//                        .name(Component.literal(BasicBossData.NAME_GEN))
-//                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
-//                        .constraints(Constraints.forDimension(Level.END))
-//                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+        HolderLookup.Provider registries = this.lookupProvider.join();
+        HolderLookup.RegistryLookup<Biome> biomes = registries.lookup(Registries.BIOME).get();
+
+        addBoss("grizzly_bear", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.GRIZZLY_BEAR.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("gorilla", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.GORILLA.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("guster", b -> basicRangedStats(b)
+                .entity(AMEntityRegistry.GUSTER.get())
+                .basicData(c -> rangedGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("rocky_roller", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.ROCKY_ROLLER.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("bunfungus", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.BUNFUNGUS.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .constraints(Constraints.forBiomes(biomes, Tags.Biomes.IS_MUSHROOM))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("tarantula_hawk", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.TARANTULA_HAWK.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.FRONTIER, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("skreecher", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.SKREECHER.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("froststalker", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.FROSTSTALKER.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("murmur", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.MURMUR.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("warped_mosco", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.WARPED_MOSCO.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.NETHER))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("straddler", b -> basicRangedStats(b)
+                .entity(AMEntityRegistry.STRADDLER.get())
+                .basicData(c -> rangedGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.NETHER))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("dropbear", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.DROPBEAR.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.NETHER))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("crimson_mosquito", b -> basicRangedStats(b)
+                .entity(AMEntityRegistry.CRIMSON_MOSQUITO.get())
+                .basicData(c -> rangedGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.NETHER))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("enderiophage", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.ENDERIOPHAGE.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.END))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addBoss("cosmaw", b -> basicMeleeStats(b)
+                .entity(AMEntityRegistry.COSMAW.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.END))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+
+
+
+        //TODO: ANCIENT
+
+
+        addAncientBoss("grizzly_bear", b -> ancientMeleeStats(b)
+                .entity(AMEntityRegistry.GRIZZLY_BEAR.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addAncientBoss("guster", b -> ancientRangedStats(b)
+                .entity(AMEntityRegistry.GUSTER.get())
+                .basicData(c -> rangedGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addAncientBoss("bunfungus", b -> ancientMeleeStats(b)
+                .entity(AMEntityRegistry.BUNFUNGUS.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .constraints(Constraints.forBiomes(biomes, Tags.Biomes.IS_MUSHROOM))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addAncientBoss("murmur", b -> ancientMeleeStats(b)
+                .entity(AMEntityRegistry.MURMUR.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.OVERWORLD))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addAncientBoss("warped_mosco", b -> ancientMeleeStats(b)
+                .entity(AMEntityRegistry.WARPED_MOSCO.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.NETHER))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addAncientBoss("dropbear", b -> ancientMeleeStats(b)
+                .entity(AMEntityRegistry.DROPBEAR.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.NETHER))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
+
+        addAncientBoss("enderiophage", b -> ancientMeleeStats(b)
+                .entity(AMEntityRegistry.ENDERIOPHAGE.get())
+                .basicData(c -> meleeGear(c)
+                        .name(Component.literal(BasicBossData.NAME_GEN))
+                        .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
+                        .constraints(Constraints.forDimension(Level.END))
+                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
     }
 
     protected static Invader.Builder ancientMeleeStats(Invader.Builder builder) {

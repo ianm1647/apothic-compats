@@ -11,14 +11,12 @@
   "item.apothic_compats.ornamented_necklace": "Ornamented Necklace",
   "item.apothic_compats.ornate_ring": "Ornate Ring",
 
-
   "item.apotheosis.gem.apothic_compats:ars_nouveau/mana": "Mana Gem",
   "item.apotheosis.gem.apothic_compats:malum/soul_stained": "Soul Stained Gem",
   "item.apotheosis.gem.apothic_compats:malum/thief": "Thief Gem",
   "item.apotheosis.gem.apothic_compats:malum/etheric": "Etheric Gem",
 
-
-
+  "curios.modifiers.feet": "When on feet",
 
   "gem_class.dart_shooter": "Dart Shooter",
   "loot_category.apothic_compats.dart_shooter": "Dart Shooter",

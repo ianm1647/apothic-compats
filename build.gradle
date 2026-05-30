@@ -41,8 +41,7 @@ dependencies {
     implementation "top.theillusivec4.curios:curios-neoforge:$curios_version+$minecraft_version"
     implementation "snownee.jade:Jade-NeoForge:$minecraft_version-$jade_version"
 
-    implementation files('../ancientreforging/build/libs/ancientreforging-1.9.jar')
-    //implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
+    implementation "curse.maven:ancientreforging-985468:$ancientreforging_version"
 
     compileOnly "mezz.jei:jei-$minecraft_version-common-api:$jei_version"
     compileOnly "mezz.jei:jei-$minecraft_version-neoforge-api:$jei_version"
@@ -68,7 +67,7 @@ dependencies {
     implementation "curse.maven:ato-405593:$alltheores_version"
 //    compileOnly "curse.maven:farmersdelight-398521:$farmersdelight_version"
 //    compileOnly "curse.maven:arselemental-561470:$arselemental_version"
-//    compileOnly "curse.maven:ae2-223794:$ae2_version"
+    implementation "curse.maven:ae2-223794:$ae2_version"
 //    compileOnly "curse.maven:cataclysm-551586:$cataclysm_version"
 //    compileOnly "curse.maven:create-328085:$create_version"
 //    compileOnly "curse.maven:immersiveengineering-231951:$ie_version"
@@ -76,11 +75,8 @@ dependencies {
 //    compileOnly "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
 
-    //implementation "curse.maven:citadel-neoforge-1512529:$citadel_version"
-    //implementation "curse.maven:alexs-mobs-neoforge-1512535:$alexsmobs_version"
-
-//    compileOnly files('../Citadel/build/libs/citadel-1.21.1-2.7.1.jar')
-//    compileOnly files('../AlexsMobs/build/libs/alexsmobs-1.22.9.jar')
+    implementation "curse.maven:alexs-mobs-neoforge-1512535:$alexsmobs_version"
+    implementation "curse.maven:citadel-neoforge-1512529:$citadel_version"
 //    compileOnly files('../AlexsCaves/build/libs/alexscaves-2.0.2.jar')
 
     //compat deps

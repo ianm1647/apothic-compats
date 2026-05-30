@@ -1,5 +1,8 @@
 package ianm1647.apothic_compats.data.ae2;
 
+import appeng.core.ConventionTags;
+import appeng.core.definitions.AEItems;
+import appeng.items.tools.fluix.FluixToolType;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
@@ -38,9 +41,9 @@ public class Ae2AffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-//        toolWeights.put(QuartzToolType.NETHER.getToolTier(), QUARTZ);
-//        toolWeights.put(QuartzToolType.CERTUS.getToolTier(), CERTUS);
-//        toolWeights.put(FluixToolType.FLUIX.getToolTier(), FLUIX);
+        addTools(QUARTZ, AEItems.NETHER_QUARTZ_SWORD.get(), AEItems.NETHER_QUARTZ_AXE.get(), AEItems.NETHER_QUARTZ_PICK.get(), AEItems.NETHER_QUARTZ_SHOVEL.get());
+        addTools(CERTUS, AEItems.CERTUS_QUARTZ_SWORD.get(), AEItems.CERTUS_QUARTZ_AXE.get(), AEItems.CERTUS_QUARTZ_PICK.get(), AEItems.CERTUS_QUARTZ_SHOVEL.get());
+        addTools(FLUIX, AEItems.FLUIX_SWORD.get(), AEItems.FLUIX_AXE.get(), AEItems.FLUIX_PICK.get(), AEItems.FLUIX_SHOVEL.get());
     }
 
     @Override
