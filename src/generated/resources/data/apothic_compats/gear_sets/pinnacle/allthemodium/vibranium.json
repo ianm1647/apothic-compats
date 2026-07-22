@@ -79,15 +79,6 @@
             "weight": 10
         }
     ],
-    "offhands": [
-        {
-            "stack": {
-                "count": 1,
-                "id": "allthemodium:vibranium_shield"
-            },
-            "weight": 10
-        }
-    ],
     "tags": [
         "pinnacle_melee"
     ],

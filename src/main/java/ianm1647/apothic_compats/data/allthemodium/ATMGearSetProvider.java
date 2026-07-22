@@ -47,22 +47,12 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .boots(new ItemStack(ModRegistry.ALLTHEMODIUM_BOOTS), 10)
                 .tag("pinnacle_melee"));
 
-        addSet("pinnacle/ranged/allthemodium/allthemodium", 5, 0, c -> c
-                .mainhand(new ItemStack(ModRegistry.ATM_BOW), 10)
-                .offhand(new ItemStack(Items.SHIELD), 10)
-                .helmet(new ItemStack(ModRegistry.ALLTHEMODIUM_HELMET), 10)
-                .chestplate(new ItemStack(ModRegistry.ALLTHEMODIUM_CHESTPLATE), 10)
-                .leggings(new ItemStack(ModRegistry.ALLTHEMODIUM_LEGGINGS), 10)
-                .boots(new ItemStack(ModRegistry.ALLTHEMODIUM_BOOTS), 10)
-                .tag("pinnacle_ranged"));
-
         addSet("pinnacle/allthemodium/vibranium", 3, 0, c -> c
                 .mainhand(new ItemStack(ModRegistry.VIB_SWORD), 10)
                 .mainhand(new ItemStack(ModRegistry.VIB_AXE), 10)
                 .mainhand(new ItemStack(ModRegistry.VIB_PICKAXE), 10)
                 .mainhand(new ItemStack(ModRegistry.VIB_SHOVEL), 10)
                 .mainhand(new ItemStack(ModRegistry.VIB_MACE), 10)
-                .offhand(new ItemStack(ModRegistry.VIB_SHIELD), 10)
                 .helmet(new ItemStack(ModRegistry.VIBRANIUM_HELMET), 10)
                 .chestplate(new ItemStack(ModRegistry.VIBRANIUM_CHESTPLATE), 10)
                 .leggings(new ItemStack(ModRegistry.VIBRANIUM_LEGGINGS), 10)
@@ -81,15 +71,6 @@ public class ATMGearSetProvider extends GearSetProvider {
                 .leggings(new ItemStack(ModRegistry.UNOBTAINIUM_LEGGINGS), 10)
                 .boots(new ItemStack(ModRegistry.UNOBTAINIUM_BOOTS), 10)
                 .tag("pinnacle_melee"));
-
-        addSet("pinnacle/ranged/allthemodium/unobtainium", 1, 0, c -> c
-                .mainhand(new ItemStack(ModRegistry.UNO_BOW), 10)
-                .offhand(new ItemStack(Items.SHIELD), 10)
-                .helmet(new ItemStack(ModRegistry.UNOBTAINIUM_HELMET), 10)
-                .chestplate(new ItemStack(ModRegistry.UNOBTAINIUM_CHESTPLATE), 10)
-                .leggings(new ItemStack(ModRegistry.UNOBTAINIUM_LEGGINGS), 10)
-                .boots(new ItemStack(ModRegistry.UNOBTAINIUM_BOOTS), 10)
-                .tag("pinnacle_ranged"));
     }
 
     @Override

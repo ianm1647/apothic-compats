@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-06T10:41:44.5382786	Deeper Darker Affix Loot Entries
+// 1.21.1	2026-07-21T22:12:39.3193033	Deeper Darker Affix Loot Entries
 a1ae5b8af32a6f2257a63bee9611a3fb36fa9985 data/apothic_compats/affix_loot_entries/deeperdarker/resonarium_axe.json
 1816b4ee4a7c9edb0ebd93b611acb18d8989af9f data/apothic_compats/affix_loot_entries/deeperdarker/resonarium_boots.json
 3eef339d7ba65ca923c1aa8a84e7835e3ec60f99 data/apothic_compats/affix_loot_entries/deeperdarker/resonarium_chestplate.json
@@ -11,7 +11,6 @@ c7d5eac2a6ceb12dfe9c5ea3b2a05c4c9eb5e09b data/apothic_compats/affix_loot_entries
 c53f7cbb6cb76eed7d1031707ff14b7b40ed6159 data/apothic_compats/affix_loot_entries/deeperdarker/warden_boots.json
 c41774ae9b2510d0afc183d58fc4fe7d3b09b869 data/apothic_compats/affix_loot_entries/deeperdarker/warden_chestplate.json
 ef8c9cbb3c864b34be19ec45de9e44ecd329a357 data/apothic_compats/affix_loot_entries/deeperdarker/warden_helmet.json
-129ca7d931a0a4dba6cea13e1645d3ee0f9101f6 data/apothic_compats/affix_loot_entries/deeperdarker/warden_hoe.json
 6be7dfa3c2677797a987a27d25fbf11ab0453812 data/apothic_compats/affix_loot_entries/deeperdarker/warden_leggings.json
 26709e8b833eecaf4981019519fd883de7c846ca data/apothic_compats/affix_loot_entries/deeperdarker/warden_pickaxe.json
 e0f53cae6a07f9981a4323e599263acebbd4c0d8 data/apothic_compats/affix_loot_entries/deeperdarker/warden_shovel.json

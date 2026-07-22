@@ -57,10 +57,8 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
         toolWeights.put(ATMTier.UNOBTAINIUM, UNOBTAINIUM);
 
         addEntry(ALLTHEMODIUM, ModRegistry.ATM_MACE.get().getDefaultInstance());
-        addEntry(ALLTHEMODIUM, ModRegistry.ATM_BOW.get().getDefaultInstance());
         addEntry(VIBRANIUM, ModRegistry.VIB_MACE.get().getDefaultInstance());
         addEntry(UNOBTAINIUM, ModRegistry.UNO_MACE.get().getDefaultInstance());
-        addEntry(UNOBTAINIUM, ModRegistry.UNO_BOW.get().getDefaultInstance());
 
         for (Item i : BuiltInRegistries.ITEM) {
             if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
