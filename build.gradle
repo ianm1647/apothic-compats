@@ -60,8 +60,8 @@ dependencies {
     implementation "curse.maven:cataclysm-551586:$cataclysm_version"
     implementation "curse.maven:create-328085:$create_version"
     implementation "curse.maven:immersiveengineering-231951:$ie_version"
-    implementation "curse.maven:alexsmobs-1415721:$alexsmobs_version"
-    implementation "curse.maven:alexscaves-1420348:$alexscaves_version"
+    compileOnly "curse.maven:alexsmobs-1415721:$alexsmobs_version"
+    compileOnly "curse.maven:alexscaves-1420348:$alexscaves_version"
     implementation "curse.maven:borninchaos-686437:$borninchaos_version"
     implementation "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
@@ -74,7 +74,7 @@ dependencies {
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
     implementation "curse.maven:guideme-1173950:$guideme_version"
     implementation "curse.maven:lionfish-1001614:$lionfish_version"
-    implementation "curse.maven:citadel-1415723:$citadel_version"
+    compileOnly "curse.maven:citadel-1415723:$citadel_version"
     implementation "curse.maven:yacl-667299:$yacl_version"
 }
 

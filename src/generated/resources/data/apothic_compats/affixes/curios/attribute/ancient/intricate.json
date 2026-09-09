@@ -37,9 +37,9 @@
     },
     "operation": "add_value",
     "values": {
-        "apotheosis:mythic": {
-            "min": 0.35,
-            "max": 0.45
+        "ancientreforging:ancient": {
+            "min": 0.08,
+            "max": 0.09
         }
     }
 }

@@ -36,12 +36,10 @@
             },
             "operation": "add_value",
             "values": {
-                "cracked": 1.0,
-                "chipped": 2.0,
-                "flawed": 3.0,
-                "normal": 4.0,
-                "flawless": 5.0,
-                "perfect": 6.0
+                "flawed": 1.0,
+                "normal": 2.0,
+                "flawless": 3.0,
+                "perfect": 4.0
             }
         }
     ]

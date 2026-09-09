@@ -10,7 +10,7 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "apothic_attributes:mining_speed",
+            "attribute": "minecraft:player.block_break_speed",
             "gem_class": {
                 "key": "curios",
                 "types": [
@@ -32,10 +32,10 @@
             },
             "operation": "add_multiplied_base",
             "values": {
-                "flawed": 0.1,
-                "normal": 0.15,
-                "flawless": 0.2,
-                "perfect": 0.3
+                "flawed": 0.02,
+                "normal": 0.03,
+                "flawless": 0.04,
+                "perfect": 0.05
             }
         }
     ]

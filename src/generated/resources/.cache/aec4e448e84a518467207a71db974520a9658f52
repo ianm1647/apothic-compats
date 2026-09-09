@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-06T10:41:44.5443284	Cataclysm Invaders
+// 1.21.1	2026-09-04T14:04:00.3257952	Cataclysm Invaders
 9e4f68d790cc85f76fef1a06f3955447bba7a006 data/apothic_compats/apothic_invaders/cataclysm/amethyst_crab.json
 185f5a0a354fb17c69a48d3dae189a8c5bf15197 data/apothic_compats/apothic_invaders/cataclysm/ancient/berserker.json
 8ab16d953bba745606665312871f642272bb29c5 data/apothic_compats/apothic_invaders/cataclysm/ancient/coralssus.json
@@ -23,7 +23,6 @@ cec2dd13f997c081a4f51fd515fb667aa589a936 data/apothic_compats/apothic_invaders/c
 cfeedf384d66ab49fa1843de931afb067875560b data/apothic_compats/apothic_invaders/cataclysm/ender_golem.json
 c64ce2c4d24a036a623147d179a27136e3e23758 data/apothic_compats/apothic_invaders/cataclysm/koboleton.json
 5e7e2db09719b0b58e4c4d174090623c69c5a5dc data/apothic_compats/apothic_invaders/cataclysm/ministrosity.json
-a05d2f53310525bc7e823ff04dadc8241fef55b1 data/apothic_compats/apothic_invaders/cataclysm/modern_remnant.json
 a4bb722d4410ad7d3966a3bd6945aa411c88241f data/apothic_compats/apothic_invaders/cataclysm/prowler.json
 5ba761139cebf13e790f1c8e1663ebf37e0a1419 data/apothic_compats/apothic_invaders/cataclysm/revenant.json
 6bd42561b434b39a347994fb2598b2544630cc58 data/apothic_compats/apothic_invaders/cataclysm/royal_draugr.json

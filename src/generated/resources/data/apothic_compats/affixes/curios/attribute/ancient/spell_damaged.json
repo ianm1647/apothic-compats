@@ -42,8 +42,8 @@
     "operation": "add_multiplied_total",
     "values": {
         "ancientreforging:ancient": {
-            "min": 0.425,
-            "max": 0.475
+            "min": 0.06,
+            "max": 0.1
         }
     }
 }

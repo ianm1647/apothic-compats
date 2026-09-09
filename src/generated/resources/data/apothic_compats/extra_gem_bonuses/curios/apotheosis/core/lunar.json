@@ -32,10 +32,10 @@
             },
             "operation": "add_value",
             "values": {
-                "flawed": 2.0,
-                "normal": 4.0,
-                "flawless": 6.0,
-                "perfect": 8.0
+                "flawed": 1.0,
+                "normal": 2.0,
+                "flawless": 3.0,
+                "perfect": 4.0
             }
         }
     ]

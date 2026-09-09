@@ -10,7 +10,7 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "minecraft:generic.knockback_resistance",
+            "attribute": "apothic_attributes:armor_pierce",
             "gem_class": {
                 "key": "curios",
                 "types": [
@@ -32,12 +32,9 @@
             },
             "operation": "add_value",
             "values": {
-                "cracked": 0.15,
-                "chipped": 0.25,
-                "flawed": 0.35,
-                "normal": 0.45,
-                "flawless": 0.55,
-                "perfect": 0.7
+                "normal": 1.0,
+                "flawless": 2.0,
+                "perfect": 3.0
             }
         }
     ]

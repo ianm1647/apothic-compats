@@ -36,10 +36,10 @@
             },
             "operation": "add_multiplied_base",
             "values": {
-                "flawed": 0.15000000596046448,
-                "normal": 0.25,
-                "flawless": 0.3499999940395355,
-                "perfect": 0.5
+                "flawed": 0.019999999552965164,
+                "normal": 0.03999999910593033,
+                "flawless": 0.05999999865889549,
+                "perfect": 0.07999999821186066
             }
         }
     ]

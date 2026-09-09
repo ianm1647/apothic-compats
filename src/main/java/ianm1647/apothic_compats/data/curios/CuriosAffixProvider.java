@@ -64,112 +64,112 @@ public class CuriosAffixProvider extends AffixProvider {
         this.addModdedAttribute("curios", "mana", ArsNouveau.MODID, PerkAttributes.MAX_MANA, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 5, 15)
-                .value(uncommon, 20, 30)
-                .value(rare, 35, 45)
-                .value(epic, 50, 60)
-                .value(mythic, 65, 75));
+                .value(common, 2, 5)
+                .value(uncommon, 6, 9)
+                .value(rare, 10, 14)
+                .value(epic, 15, 20)
+                .value(mythic, 21, 27));
 
         this.addAncientModdedAttribute("curios", "mana", ArsNouveau.MODID, PerkAttributes.MAX_MANA, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 80, 90));
+                .value(ancient, 28, 35));
 
         this.addModdedAttribute("curios", "spell_damaged", ArsNouveau.MODID, PerkAttributes.SPELL_DAMAGE_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05f, 0.1f)
-                .value(uncommon, 0.125f, 0.175f)
-                .value(rare, 0.2f, 0.25f)
-                .value(epic, 0.275f, 0.325f)
-                .value(mythic, 0.35f, 0.4f));
+                .value(common, 0.01f, 0.02f)
+                .value(uncommon, 0.02f, 0.03f)
+                .value(rare, 0.03f, 0.04f)
+                .value(epic, 0.04f, 0.05f)
+                .value(mythic, 0.05f, 0.06f));
 
         this.addAncientModdedAttribute("curios", "spell_damaged", ArsNouveau.MODID, PerkAttributes.SPELL_DAMAGE_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.425f, 0.475f));
+                .value(ancient, 0.06f, 0.1f));
 
         this.addModdedAttribute("curios", "regenerative", ArsNouveau.MODID, PerkAttributes.MANA_REGEN_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05f, 0.1f)
-                .value(uncommon, 0.15f, 0.2f)
-                .value(rare, 0.25f, 0.3f)
-                .value(epic, 0.35f, 0.4f)
-                .value(mythic, 0.45f, 0.5f));
+                .value(common, 0.02f, 0.04f)
+                .value(uncommon, 0.03f, 0.05f)
+                .value(rare, 0.04f, 0.06f)
+                .value(epic, 0.05f, 0.07f)
+                .value(mythic, 0.06f, 0.08f));
 
         this.addAncientModdedAttribute("curios", "regenerative", ArsNouveau.MODID, PerkAttributes.MANA_REGEN_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.55f, 0.6f));
+                .value(ancient, 0.07f, 0.09f));
 
         // MALUM
         this.addModdedAttribute("curios", "abjured", MalumMod.MALUM, LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(uncommon, 0.05f,0.1f)
-                .value(rare, 0.1f,0.15f)
-                .value(epic, 0.15f,0.2f)
-                .value(mythic, 0.2f,0.25f));
+                .value(uncommon, 0.01f,0.03f)
+                .value(rare, 0.02f,0.04f)
+                .value(epic, 0.03f,0.05f)
+                .value(mythic, 0.04f,0.06f));
 
         this.addAncientModdedAttribute("curios", "abjured", MalumMod.MALUM, LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.25f,0.35f));
+                .value(ancient, 0.06f,0.8f));
 
         this.addModdedAttribute("curios", "vandalous", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(uncommon, 0.05f,0.1f)
-                .value(rare, 0.1f,0.15f)
-                .value(epic, 0.15f,0.2f)
-                .value(mythic, 0.2f,0.25f));
+                .value(uncommon, 0.02f,0.05f)
+                .value(rare, 0.03f,0.06f)
+                .value(epic, 0.04f,0.07f)
+                .value(mythic, 0.05f,0.08f));
 
         this.addAncientModdedAttribute("curios", "vandalous", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.25f,0.35f));
+                .value(ancient, 0.06f,0.1f));
 
-        this.addModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.1F)
-                .value(uncommon, 0.1F, 0.15F)
-                .value(rare, 0.15F, 0.2F)
-                .value(epic, 0.2F, 0.25F)
-                .value(mythic, 0.25F, 0.35F));
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
-        this.addAncientModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAncientModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.35F, 0.55F));
+                .value(ancient, 0.06F, 0.07F));
 
         this.addModdedAttribute("curios", "adept", MalumMod.MALUM, LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.1F)
-                .value(uncommon, 0.1F, 0.15F)
-                .value(rare, 0.15F, 0.2F)
-                .value(epic, 0.2F, 0.25F)
-                .value(mythic, 0.25F, 0.3F));
+                .value(common, 0.01f, 0.03f)
+                .value(uncommon, 0.02f, 0.04f)
+                .value(rare, 0.03f, 0.05f)
+                .value(epic, 0.04f, 0.06f)
+                .value(mythic, 0.05f, 0.07f));
 
         this.addAncientModdedAttribute("curios", "adept", MalumMod.MALUM, LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.35F, 0.4F));
+                .value(ancient, 0.6F, 0.8F));
 
         this.addModdedAttribute("curios", "scythe_proficiency", MalumMod.MALUM, MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(uncommon, 0.1f, 0.2f)
-                .value(rare, 0.2f, 0.3f)
-                .value(epic, 0.3f, 0.4f)
-                .value(mythic, 0.4f, 0.5f));
+                .value(uncommon, 0.01f, 0.02f)
+                .value(rare, 0.02f, 0.03f)
+                .value(epic, 0.03f, 0.04f)
+                .value(mythic, 0.04f, 0.05f));
 
         this.addAncientModdedAttribute("curios", "scythe_proficiency", MalumMod.MALUM, MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.5f, 0.6f));
+                .value(ancient, 0.05f, 0.06f));
 
 
 
@@ -179,284 +179,278 @@ public class CuriosAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(0.25F)
-                .value(uncommon, 1F, 1.5F)
-                .value(rare, 2F, 3F)
-                .value(epic, 2.5F, 4F)
-                .value(mythic, 3F, 6F));
+                .value(rare, 1F, 2F)
+                .value(epic, 2F, 3F)
+                .value(mythic, 3F, 4F));
 
         this.addAttribute("curios", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.15F)
-                .value(uncommon, 0.1F, 0.2F)
-                .value(rare, 0.15F, 0.25F)
-                .value(epic, 0.2F, 0.3F)
-                .value(mythic, 0.25F, 0.35F));
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
         this.addAttribute("curios", "aquatic", NeoForgeMod.SWIM_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.1F, 0.15F)
-                .value(uncommon, 0.15F, 0.2F)
-                .value(rare, 0.25F, 0.3F)
-                .value(epic, 0.35F, 0.4F)
-                .value(mythic, 0.45F, 0.5F));
+                .value(common, 0.02F, 0.03F)
+                .value(uncommon, 0.03F, 0.04F)
+                .value(rare, 0.04F, 0.05F)
+                .value(epic, 0.05F, 0.06F)
+                .value(mythic, 0.06F, 0.07F));
 
         this.addAttribute("curios", "blessed", Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(0.25F)
-                .value(common, 1, 2)
-                .value(uncommon, 2, 3)
-                .value(rare, 3, 4)
-                .value(epic, 4, 5)
-                .value(mythic, 5, 6));
+                .value(uncommon, 1, 2)
+                .value(rare, 2, 3)
+                .value(epic, 3, 4)
+                .value(mythic, 4, 5));
 
         this.addAttribute("curios", "gravitational", Attributes.GRAVITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(-0.01F)
-                .value(common, -0.1F, -0.15F)
-                .value(uncommon, -0.1F, -0.2F)
-                .value(rare, -0.15F, -0.25F)
-                .value(epic, -0.2F, -0.3F)
-                .value(mythic, -0.25F, -0.4F));
+                .value(common, -0.02F, -0.04F)
+                .value(uncommon, -0.03F, -0.05F)
+                .value(rare, -0.04F, -0.06F)
+                .value(epic, -0.05F, -0.07F)
+                .value(mythic, -0.06F, -0.08F));
 
         this.addAttribute("curios", "ironforged", Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(0.25F)
-                .value(common, 1, 1.5F)
-                .value(uncommon, 1, 2)
-                .value(rare, 2, 4)
-                .value(epic, 3, 4)
-                .value(mythic, 3, 5));
+                .value(rare, 1, 2)
+                .value(epic, 2, 3)
+                .value(mythic, 3, 4));
 
         this.addAttribute("curios", "adamantine", Attributes.ARMOR, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(rare, 0.05F, 0.15F)
-                .value(epic, 0.1F, 0.25F)
-                .value(mythic, 0.2F, 0.35F));
+                .value(rare, 0.02F, 0.03F)
+                .value(epic, 0.03F, 0.04F)
+                .value(mythic, 0.04F, 0.05F));
 
         this.addAttribute("curios", "spiritual", ALObjects.Attributes.HEALING_RECEIVED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(rare, 0.05F, 0.15F)
-                .value(epic, 0.2F, 0.25F)
-                .value(mythic, 0.2F, 0.35F));
+                .value(rare, 0.01F, 0.02F)
+                .value(epic, 0.02F, 0.03F)
+                .value(mythic, 0.03F, 0.04F));
 
         this.addAttribute("curios", "stalwart", Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(uncommon, 0.05F, 0.1F)
-                .value(rare, 0.05F, 0.1F)
-                .value(epic, 0.15F, 0.20F)
-                .value(mythic, 0.25F, 0.35F));
+                .value(uncommon, 0.03F, 0.04F)
+                .value(rare, 0.04F, 0.05F)
+                .value(epic, 0.05F, 0.06F)
+                .value(mythic, 0.06F, 0.07F));
 
         this.addAttribute("curios", "fireproof", Attributes.BURNING_TIME, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .step(-0.05F)
-                .value(uncommon, -0.1F, -0.15F)
-                .value(rare, -0.1F, -0.2F)
-                .value(epic, -0.15F, -0.45F)
-                .value(mythic, -0.35F, -0.65F));
+                .step(-0.01F)
+                .value(uncommon, -0.01F, -0.02F)
+                .value(rare, -0.03F, -0.04F)
+                .value(epic, -0.05F, -0.06F)
+                .value(mythic, -0.07F, -0.08F));
 
         this.addAttribute("curios", "oxygenated", Attributes.OXYGEN_BONUS, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(uncommon, 0.1F, 0.25F)
-                .value(rare, 0.15F, 0.35F)
-                .value(epic, 0.2F, 0.5F)
-                .value(mythic, 0.35F, 0.85F));
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
-        this.addAttribute("curios", "destructive", ALObjects.Attributes.MINING_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAttribute("curios", "destructive", Attributes.BLOCK_BREAK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.15F)
-                .value(uncommon, 0.1F, 0.2F)
-                .value(rare, 0.15F, 0.25F)
-                .value(epic, 0.2F, 0.3F)
-                .value(mythic, 0.25F, 0.35F));
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
         this.addAttribute("curios", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.15F)
-                .value(uncommon, 0.1F, 0.2F)
-                .value(rare, 0.15F, 0.25F)
-                .value(epic, 0.2F, 0.3F)
-                .value(mythic, 0.25F, 0.35F));
+                .value(common, 0.02F, 0.03F)
+                .value(uncommon, 0.03F, 0.04F)
+                .value(rare, 0.04F, 0.05F)
+                .value(epic, 0.05F, 0.06F)
+                .value(mythic, 0.06F, 0.07F));
 
-        this.addAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.1F)
-                .value(uncommon, 0.15F, 0.25F)
-                .value(rare, 0.25F, 0.45F)
-                .value(epic, 0.4F, 0.55F)
-                .value(mythic, 0.55F, 0.75F));
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
         this.addAttribute("curios", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY)))
                 .categories(CURIOS)
-                .value(common, 0.1F, 0.15F)
-                .value(uncommon, 0.1F, 0.25F)
-                .value(rare, 0.2F, 0.35F)
-                .value(epic, 0.25F, 0.4F)
-                .value(mythic, 0.35F, 0.45F));
+                .value(uncommon, 0.01F, 0.02F)
+                .value(rare, 0.02F, 0.03F)
+                .value(epic, 0.03F, 0.04F)
+                .value(mythic, 0.04F, 0.05F));
 
-        this.addAttribute("curios", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAttribute("curios", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(rare, 0.1F, 0.25F)
-                .value(epic, 0.2F, 0.38F)
-                .value(mythic, 0.3F, 0.5F));
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
         this.addAttribute("curios", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.15F)
-                .value(uncommon, 0.1F, 0.2F)
-                .value(rare, 0.15F, 0.25F)
-                .value(epic, 0.15F, 0.35F)
-                .value(mythic, 0.25F, 0.45F));
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
         this.addAttribute("curios", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.05F, 0.15F)
-                .value(uncommon, 0.1F, 0.2F)
-                .value(rare, 0.15F, 0.25F)
-                .value(epic, 0.2F, 0.3F)
-                .value(mythic, 0.25F, 0.35F));
+                .value(common, 0.03F, 0.04F)
+                .value(uncommon, 0.04F, 0.05F)
+                .value(rare, 0.05F, 0.06F)
+                .value(epic, 0.06F, 0.07F)
+                .value(mythic, 0.07F, 0.08F));
 
         this.addAttribute("curios", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.1F, 0.2F)
-                .value(uncommon, 0.2F, 0.3F)
-                .value(rare, 0.3F, 0.4F)
-                .value(epic, 0.4F, 0.5F)
-                .value(mythic, 0.45F, 0.6F));
+                .value(common, 0.02F, 0.03F)
+                .value(uncommon, 0.04F, 0.05F)
+                .value(rare, 0.06F, 0.07F)
+                .value(epic, 0.08F, 0.09F)
+                .value(mythic, 0.09F, 0.1F));
 
         this.addAttribute("curios", "berserking", ALObjects.Attributes.OVERHEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(common, 0.1F, 0.2F)
-                .value(uncommon, 0.1F, 0.25F)
-                .value(rare, 0.15F, 0.3F)
-                .value(epic, 0.2F, 0.4F)
-                .value(mythic, 0.35F, 0.5F));
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.02F, 0.03F)
+                .value(rare, 0.03F, 0.04F)
+                .value(epic, 0.04F, 0.05F)
+                .value(mythic, 0.05F, 0.06F));
 
         this.addAncientAttribute("curios", "lucky", Attributes.LUCK, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(0.25F)
-                .value(ancient, 6F, 12F));
+                .value(ancient, 4F, 6F));
 
         this.addAncientAttribute("curios", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.3F, 0.4F));
+                .value(ancient, 0.06f, 0.07f));
 
         this.addAncientAttribute("curios", "aquatic", NeoForgeMod.SWIM_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.5F, 0.75F));
+                .value(ancient, 0.07f, 0.08f));
 
         this.addAncientAttribute("curios", "blessed", Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(0.25F)
-                .value(ancient, 6, 10));
+                .value(ancient, 5, 7));
 
         this.addAncientAttribute("curios", "gravitational", Attributes.GRAVITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(-0.01F)
-                .value(ancient, -0.4F, -0.85F));
+                .value(ancient, -0.07f, -0.09f));
 
         this.addAncientAttribute("curios", "ironforged", Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .step(0.25F)
-                .value(ancient, 5, 8));
+                .value(ancient, 4, 6));
 
         this.addAncientAttribute("curios", "adamantine", Attributes.ARMOR, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.3F, 0.45F));
+                .value(ancient, 0.05f, 0.06f));
 
         this.addAncientAttribute("curios", "spiritual", ALObjects.Attributes.HEALING_RECEIVED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.4F, 0.65F));
+                .value(ancient, 0.04f, 0.05f));
 
         this.addAncientAttribute("curios", "stalwart", Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.4F, 0.65F));
+                .value(ancient, 0.07f, 0.08f));
 
         this.addAncientAttribute("curios", "fireproof", Attributes.BURNING_TIME, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .step(-0.05F)
-                .value(ancient, -0.45F, -0.85F));
+                .step(-0.01F)
+                .value(ancient, -0.09f, -0.1f));
 
         this.addAncientAttribute("curios", "oxygenated", Attributes.OXYGEN_BONUS, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.55F, 0.95F));
+                .value(ancient, 0.06f, 0.07f));
 
-        this.addAncientAttribute("curios", "destructive", ALObjects.Attributes.MINING_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAncientAttribute("curios", "destructive", Attributes.BLOCK_BREAK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.35F, 0.45F));
+                .value(ancient, 0.06f, 0.07f));
 
         this.addAncientAttribute("curios", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.35F, 0.55F));
+                .value(ancient, 0.07f, 0.08f));
 
-        this.addAncientAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAncientAttribute("curios", "submerged", Attributes.SUBMERGED_MINING_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.65F, 0.95F));
+                .value(ancient, 0.06f, 0.07f));
 
         this.addAncientAttribute("curios", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY)))
                 .categories(CURIOS)
-                .value(ancient, 0.45F, 0.55F));
+                .value(ancient, 0.05f, 0.06f));
 
-        this.addAncientAttribute("curios", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAncientAttribute("curios", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.4F, 0.55F));
+                .value(ancient, 0.06f, 0.07f));
 
         this.addAncientAttribute("curios", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.3F, 0.65F));
+                .value(ancient, 0.06f, 0.07f));
 
         this.addAncientAttribute("curios", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(mythic, 0.35F, 0.45F));
+                .value(ancient, 0.08f, 0.09f));
 
         this.addAncientAttribute("curios", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.55F, 0.7F));
+                .value(ancient, 0.1f, 0.11f));
 
         this.addAncientAttribute("curios", "berserking", ALObjects.Attributes.OVERHEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
-                .value(ancient, 0.4F, 0.55F));
-
+                .value(ancient, 0.06f, 0.07f));
     }
 
     public void addAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {

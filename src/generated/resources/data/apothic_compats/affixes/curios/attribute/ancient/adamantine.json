@@ -38,8 +38,8 @@
     "operation": "add_multiplied_base",
     "values": {
         "ancientreforging:ancient": {
-            "min": 0.3,
-            "max": 0.45
+            "min": 0.05,
+            "max": 0.06
         }
     }
 }

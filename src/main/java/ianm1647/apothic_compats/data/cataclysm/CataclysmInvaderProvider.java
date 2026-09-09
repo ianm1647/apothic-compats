@@ -91,13 +91,6 @@ public class CataclysmInvaderProvider extends InvaderProvider {
                         .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .constraints(Constraints.forDimension(Level.OVERWORLD))
                         .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
-        addBoss("modern_remnant", b -> basicMeleeStats(b)
-                .entity(ModEntities.MODERN_REMNANT.value())
-                .basicData(c -> meleeGear(c)
-                        .name(Component.literal(BasicBossData.NAME_GEN))
-                        .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                        .constraints(Constraints.forDimension(Level.OVERWORLD))
-                        .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
         addBoss("koboleton", b -> basicMeleeStats(b)
                 .entity(ModEntities.KOBOLETON.value())
                 .basicData(c -> meleeGear(c)

@@ -38,9 +38,9 @@
     "operation": "add_multiplied_base",
     "values": {
         "ancientreforging:ancient": {
-            "min": -0.45,
-            "max": -0.85,
-            "step": -0.05
+            "min": -0.09,
+            "max": -0.1,
+            "step": -0.01
         }
     }
 }

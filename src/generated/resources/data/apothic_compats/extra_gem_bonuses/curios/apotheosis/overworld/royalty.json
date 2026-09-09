@@ -17,6 +17,7 @@
                 "minecraft:generic.attack_damage",
                 "minecraft:generic.attack_knockback",
                 "minecraft:generic.attack_speed",
+                "minecraft:player.block_break_speed",
                 "minecraft:generic.armor",
                 "minecraft:generic.armor_toughness",
                 "minecraft:generic.luck",
@@ -37,7 +38,6 @@
                 "apothic_attributes:ghost_health",
                 "apothic_attributes:healing_received",
                 "apothic_attributes:life_steal",
-                "apothic_attributes:mining_speed",
                 "apothic_attributes:overheal",
                 "apothic_attributes:prot_pierce",
                 "apothic_attributes:prot_shred",
@@ -64,10 +64,10 @@
             },
             "operation": "add_multiplied_total",
             "values": {
-                "flawed": 0.025,
-                "normal": 0.05,
-                "flawless": 0.075,
-                "perfect": 0.1
+                "flawed": 0.01,
+                "normal": 0.015,
+                "flawless": 0.02,
+                "perfect": 0.025
             }
         }
     ]

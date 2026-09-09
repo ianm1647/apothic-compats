@@ -38,8 +38,8 @@
     "operation": "add_value",
     "values": {
         "ancientreforging:ancient": {
-            "min": 0.45,
-            "max": 0.55
+            "min": 0.05,
+            "max": 0.06
         }
     }
 }

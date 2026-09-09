@@ -32,12 +32,12 @@
             },
             "operation": "add_multiplied_total",
             "values": {
-                "cracked": 0.05,
-                "chipped": 0.1,
-                "flawed": 0.15,
-                "normal": 0.25,
-                "flawless": 0.35,
-                "perfect": 0.45
+                "cracked": 0.025,
+                "chipped": 0.05,
+                "flawed": 0.075,
+                "normal": 0.1,
+                "flawless": 0.125,
+                "perfect": 0.15
             }
         }
     ]

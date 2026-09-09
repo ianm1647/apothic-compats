@@ -32,10 +32,10 @@
             },
             "operation": "add_multiplied_total",
             "values": {
-                "flawed": 0.25,
-                "normal": 0.3,
-                "flawless": 0.35,
-                "perfect": 0.4
+                "flawed": 0.06,
+                "normal": 0.08,
+                "flawless": 0.1,
+                "perfect": 0.12
             }
         }
     ]

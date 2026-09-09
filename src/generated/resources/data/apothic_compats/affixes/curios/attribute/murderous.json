@@ -31,19 +31,19 @@
             "weight": 25
         }
     },
-    "operation": "add_multiplied_base",
+    "operation": "add_multiplied_total",
     "values": {
         "apotheosis:rare": {
-            "min": 0.1,
-            "max": 0.25
+            "min": 0.03,
+            "max": 0.04
         },
         "apotheosis:epic": {
-            "min": 0.2,
-            "max": 0.38
+            "min": 0.04,
+            "max": 0.05
         },
         "apotheosis:mythic": {
-            "min": 0.3,
-            "max": 0.5
+            "min": 0.05,
+            "max": 0.06
         }
     }
 }
