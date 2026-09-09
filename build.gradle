@@ -56,11 +56,12 @@ dependencies {
 //    compileOnly "curse.maven:twilightforest-227639:$twilight_version"
 //    compileOnly "curse.maven:aether-255308:$aether_version"
 //    compileOnly "curse.maven:deepaether-852465:$deepaether_version"
+    implementation "curse.maven:aether-ii-223796:$aetherii_version"
 //    compileOnly "curse.maven:arsnouveau-401955:$arsnouveau_version"
 //    compileOnly "curse.maven:deeperdarker-659011:$deeperdarker_version"
 //    compileOnly "curse.maven:eternalstarlight-1080592:$eternalstarlight_version"
 //    compileOnly "curse.maven:bumblezone-362479:$bumblezone_version"
-//    compileOnly "curse.maven:undergarden-379849:$undergarden_version"
+    implementation "curse.maven:undergarden-379849:$undergarden_version"
 //    compileOnly "curse.maven:mekanism-268560:$mekanism_version"
 //    compileOnly "curse.maven:mekanismtools-268567:$mekanismtools_version"
     implementation "curse.maven:allthemodium-364466:$allthemodium_version"
@@ -77,7 +78,7 @@ dependencies {
 
     implementation "curse.maven:alexs-mobs-neoforge-1512535:$alexsmobs_version"
     implementation "curse.maven:citadel-neoforge-1512529:$citadel_version"
-//    compileOnly files('../AlexsCaves/build/libs/alexscaves-2.0.2.jar')
+    implementation "curse.maven:alexs-caves-neoforge-1590315:$alexscaves_version"
 
     //compat deps
 //    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
