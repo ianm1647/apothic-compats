@@ -2,11 +2,13 @@ package ianm1647.apothic_compats.data.allthemodium;
 
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
+import net.allthemods.allthemodium.core.registry.ATMItems;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.HolderLookup.RegistryLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
@@ -32,63 +34,63 @@ public class ATMGearSetProvider extends GearSetProvider {
         Provider registries = this.lookupProvider.join();
         RegistryLookup<Enchantment> enchants = registries.lookup(Registries.ENCHANTMENT).get();
 
-//        // Pinnacle Sets
-//        addSet("pinnacle/allthemodium/allthemodium", 5, 0, c -> c
-//                .mainhand(new ItemStack(ModRegistry.ATM_SWORD), 10)
-//                .mainhand(new ItemStack(ModRegistry.ATM_AXE), 10)
-//                .mainhand(new ItemStack(ModRegistry.ATM_PICKAXE), 10)
-//                .mainhand(new ItemStack(ModRegistry.ATM_SHOVEL), 10)
-//                .mainhand(new ItemStack(ModRegistry.ATM_MACE), 10)
-//                .offhand(new ItemStack(Items.SHIELD), 10)
-//                .helmet(new ItemStack(ModRegistry.ALLTHEMODIUM_HELMET), 10)
-//                .chestplate(new ItemStack(ModRegistry.ALLTHEMODIUM_CHESTPLATE), 10)
-//                .leggings(new ItemStack(ModRegistry.ALLTHEMODIUM_LEGGINGS), 10)
-//                .boots(new ItemStack(ModRegistry.ALLTHEMODIUM_BOOTS), 10)
-//                .tag("pinnacle_melee"));
-//
-//        addSet("pinnacle/ranged/allthemodium/allthemodium", 5, 0, c -> c
-//                .mainhand(new ItemStack(ModRegistry.ATM_BOW), 10)
-//                .offhand(new ItemStack(Items.SHIELD), 10)
-//                .helmet(new ItemStack(ModRegistry.ALLTHEMODIUM_HELMET), 10)
-//                .chestplate(new ItemStack(ModRegistry.ALLTHEMODIUM_CHESTPLATE), 10)
-//                .leggings(new ItemStack(ModRegistry.ALLTHEMODIUM_LEGGINGS), 10)
-//                .boots(new ItemStack(ModRegistry.ALLTHEMODIUM_BOOTS), 10)
-//                .tag("pinnacle_ranged"));
-//
-//        addSet("pinnacle/allthemodium/vibranium", 3, 0, c -> c
-//                .mainhand(new ItemStack(ModRegistry.VIB_SWORD), 10)
-//                .mainhand(new ItemStack(ModRegistry.VIB_AXE), 10)
-//                .mainhand(new ItemStack(ModRegistry.VIB_PICKAXE), 10)
-//                .mainhand(new ItemStack(ModRegistry.VIB_SHOVEL), 10)
-//                .mainhand(new ItemStack(ModRegistry.VIB_MACE), 10)
-//                .offhand(new ItemStack(ModRegistry.VIB_SHIELD), 10)
-//                .helmet(new ItemStack(ModRegistry.VIBRANIUM_HELMET), 10)
-//                .chestplate(new ItemStack(ModRegistry.VIBRANIUM_CHESTPLATE), 10)
-//                .leggings(new ItemStack(ModRegistry.VIBRANIUM_LEGGINGS), 10)
-//                .boots(new ItemStack(ModRegistry.VIBRANIUM_BOOTS), 10)
-//                .tag("pinnacle_melee"));
-//
-//        addSet("pinnacle/allthemodium/unobtainium", 1, 0, c -> c
-//                .mainhand(new ItemStack(ModRegistry.UNO_SWORD), 10)
-//                .mainhand(new ItemStack(ModRegistry.UNO_AXE), 10)
-//                .mainhand(new ItemStack(ModRegistry.UNO_PICKAXE), 10)
-//                .mainhand(new ItemStack(ModRegistry.UNO_SHOVEL), 10)
-//                .mainhand(new ItemStack(ModRegistry.UNO_MACE), 10)
-//                .offhand(new ItemStack(Items.SHIELD), 10)
-//                .helmet(new ItemStack(ModRegistry.UNOBTAINIUM_HELMET), 10)
-//                .chestplate(new ItemStack(ModRegistry.UNOBTAINIUM_CHESTPLATE), 10)
-//                .leggings(new ItemStack(ModRegistry.UNOBTAINIUM_LEGGINGS), 10)
-//                .boots(new ItemStack(ModRegistry.UNOBTAINIUM_BOOTS), 10)
-//                .tag("pinnacle_melee"));
-//
-//        addSet("pinnacle/ranged/allthemodium/unobtainium", 1, 0, c -> c
-//                .mainhand(new ItemStack(ModRegistry.UNO_BOW), 10)
-//                .offhand(new ItemStack(Items.SHIELD), 10)
-//                .helmet(new ItemStack(ModRegistry.UNOBTAINIUM_HELMET), 10)
-//                .chestplate(new ItemStack(ModRegistry.UNOBTAINIUM_CHESTPLATE), 10)
-//                .leggings(new ItemStack(ModRegistry.UNOBTAINIUM_LEGGINGS), 10)
-//                .boots(new ItemStack(ModRegistry.UNOBTAINIUM_BOOTS), 10)
-//                .tag("pinnacle_ranged"));
+        // Pinnacle Sets
+        addSet("pinnacle/allthemodium/allthemodium", 5, 0, c -> c
+                .mainhand(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_SWORD), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_AXE), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_PICKAXE), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_SHOVEL), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_MACE), 10)
+                .offhand(new ItemStackTemplate(Items.SHIELD), 10)
+                .helmet(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_HELMET), 10)
+                .chestplate(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_CHESTPLATE), 10)
+                .leggings(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_LEGGINGS), 10)
+                .boots(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_BOOTS), 10)
+                .tag("pinnacle_melee"));
+
+        addSet("pinnacle/ranged/allthemodium/allthemodium", 5, 0, c -> c
+                .mainhand(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_BOW), 10)
+                .offhand(new ItemStackTemplate(Items.SHIELD), 10)
+                .helmet(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_HELMET), 10)
+                .chestplate(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_CHESTPLATE), 10)
+                .leggings(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_LEGGINGS), 10)
+                .boots(new ItemStackTemplate(ATMItems.ALLTHEMODIUM_BOOTS), 10)
+                .tag("pinnacle_ranged"));
+
+        addSet("pinnacle/allthemodium/vibranium", 3, 0, c -> c
+                .mainhand(new ItemStackTemplate(ATMItems.VIBRANIUM_SWORD), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.VIBRANIUM_AXE), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.VIBRANIUM_PICKAXE), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.VIBRANIUM_SHOVEL), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.VIBRANIUM_MACE), 10)
+                .offhand(new ItemStackTemplate(ATMItems.VIBRANIUM_SHIELD), 10)
+                .helmet(new ItemStackTemplate(ATMItems.VIBRANIUM_HELMET), 10)
+                .chestplate(new ItemStackTemplate(ATMItems.VIBRANIUM_CHESTPLATE), 10)
+                .leggings(new ItemStackTemplate(ATMItems.VIBRANIUM_LEGGINGS), 10)
+                .boots(new ItemStackTemplate(ATMItems.VIBRANIUM_BOOTS), 10)
+                .tag("pinnacle_melee"));
+
+        addSet("pinnacle/allthemodium/unobtainium", 1, 0, c -> c
+                .mainhand(new ItemStackTemplate(ATMItems.UNOBTAINIUM_SWORD), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.UNOBTAINIUM_AXE), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.UNOBTAINIUM_PICKAXE), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.UNOBTAINIUM_SHOVEL), 10)
+                .mainhand(new ItemStackTemplate(ATMItems.UNOBTAINIUM_MACE), 10)
+                .offhand(new ItemStackTemplate(Items.SHIELD), 10)
+                .helmet(new ItemStackTemplate(ATMItems.UNOBTAINIUM_HELMET), 10)
+                .chestplate(new ItemStackTemplate(ATMItems.UNOBTAINIUM_CHESTPLATE), 10)
+                .leggings(new ItemStackTemplate(ATMItems.UNOBTAINIUM_LEGGINGS), 10)
+                .boots(new ItemStackTemplate(ATMItems.UNOBTAINIUM_BOOTS), 10)
+                .tag("pinnacle_melee"));
+
+        addSet("pinnacle/ranged/allthemodium/unobtainium", 1, 0, c -> c
+                .mainhand(new ItemStackTemplate(ATMItems.UNOBTAINIUM_CROSSBOW), 10)
+                .offhand(new ItemStackTemplate(Items.SHIELD), 10)
+                .helmet(new ItemStackTemplate(ATMItems.UNOBTAINIUM_HELMET), 10)
+                .chestplate(new ItemStackTemplate(ATMItems.UNOBTAINIUM_CHESTPLATE), 10)
+                .leggings(new ItemStackTemplate(ATMItems.UNOBTAINIUM_LEGGINGS), 10)
+                .boots(new ItemStackTemplate(ATMItems.UNOBTAINIUM_BOOTS), 10)
+                .tag("pinnacle_ranged"));
     }
 
     @Override

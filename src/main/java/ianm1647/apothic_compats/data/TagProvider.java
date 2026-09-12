@@ -5,8 +5,11 @@ import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
@@ -62,21 +65,21 @@ public class TagProvider {
         }
     }
 
-//    public static class Biomes extends BiomeTagsProvider {
-//        public Biomes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
-//            super(output, lookupProvider, ApothicCompats.MODID);
-//        }
-//
-//        @Override
-//        protected void addTags(HolderLookup.Provider provider) {
-//            tag(ModTags.Biomes.IS_MAGNETIC_CAVES).addOptional(Identifier.fromNamespaceAndPath("alexscaves", "magnetic_caves"));
-//            tag(ModTags.Biomes.IS_ABYSSAL_CHASM).addOptional(Identifier.fromNamespaceAndPath("alexscaves", "abyssal_chasm"));
-//            tag(ModTags.Biomes.IS_CANDY_CAVITY).addOptional(Identifier.fromNamespaceAndPath("alexscaves", "candy_cavity"));
-//            tag(ModTags.Biomes.IS_FORLORN_HOLLOWS).addOptional(Identifier.fromNamespaceAndPath("alexscaves", "forlorn_hollows"));
-//            tag(ModTags.Biomes.IS_PRIMORDIAL_CAVES).addOptional(Identifier.fromNamespaceAndPath("alexscaves", "primordial_caves"));
-//            tag(ModTags.Biomes.IS_TOXIC_CAVES).addOptional(Identifier.fromNamespaceAndPath("alexscaves", "toxic_caves"));
-//        }
-//    }
+    public static class Biomes extends BiomeTagsProvider {
+        public Biomes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+            super(output, lookupProvider, ApothicCompats.MODID);
+        }
+
+        @Override
+        protected void addTags(HolderLookup.Provider provider) {
+            tag(ModTags.Biomes.IS_MAGNETIC_CAVES).addOptional(ResourceKey.create(Registries.BIOME, Identifier.fromNamespaceAndPath("alexscaves", "magnetic_caves")));
+            tag(ModTags.Biomes.IS_ABYSSAL_CHASM).addOptional(ResourceKey.create(Registries.BIOME,Identifier.fromNamespaceAndPath("alexscaves", "abyssal_chasm")));
+            tag(ModTags.Biomes.IS_CANDY_CAVITY).addOptional(ResourceKey.create(Registries.BIOME,Identifier.fromNamespaceAndPath("alexscaves", "candy_cavity")));
+            tag(ModTags.Biomes.IS_FORLORN_HOLLOWS).addOptional(ResourceKey.create(Registries.BIOME,Identifier.fromNamespaceAndPath("alexscaves", "forlorn_hollows")));
+            tag(ModTags.Biomes.IS_PRIMORDIAL_CAVES).addOptional(ResourceKey.create(Registries.BIOME,Identifier.fromNamespaceAndPath("alexscaves", "primordial_caves")));
+            tag(ModTags.Biomes.IS_TOXIC_CAVES).addOptional(ResourceKey.create(Registries.BIOME,Identifier.fromNamespaceAndPath("alexscaves", "toxic_caves")));
+        }
+    }
 
 
 }

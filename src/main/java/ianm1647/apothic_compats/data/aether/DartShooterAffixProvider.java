@@ -247,7 +247,7 @@ public class DartShooterAffixProvider extends AffixProvider {
 //                .step(0.25F)
 //                .value(ancient, 10, 14));
 //
-//
+
 //    }
 
     private void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {

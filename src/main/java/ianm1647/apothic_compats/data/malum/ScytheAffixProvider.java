@@ -57,7 +57,7 @@ public class ScytheAffixProvider extends AffixProvider {
 //                .value(epic, 0.18F, 0.48F)
 //                .value(mythic, 0.25F, 0.55F));
 //
-//        this.addAttribute("curios", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+//        this.addAttribute("scythe", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(ModLootCategories.SCYTHE)
 //                .value(common, 1F, 3F)
@@ -312,7 +312,7 @@ public class ScytheAffixProvider extends AffixProvider {
 //                .categories(ModLootCategories.SCYTHE)
 //                .value(ancient, 0.5F, 0.95F));
 //
-//        this.addAncientAttribute("curios", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+//        this.addAncientAttribute("scythe", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(ModLootCategories.SCYTHE)
 //                .value(ancient, 6F, 9F));

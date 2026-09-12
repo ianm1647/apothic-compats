@@ -75,20 +75,22 @@ dependencies {
 //    compileOnly "curse.maven:borninchaos-686437:$borninchaos_version"
 //    compileOnly "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
-
-    implementation "curse.maven:alexs-mobs-neoforge-1512535:$alexsmobs_version"
-    implementation "curse.maven:citadel-neoforge-1512529:$citadel_version"
-    implementation "curse.maven:alexs-caves-neoforge-1590315:$alexscaves_version"
+    implementation "curse.maven:alexs-mobs-continued-1635121:$alexsmobs_version"
+    implementation "curse.maven:alexs-caves-continued-1645389:$alexscaves_version"
+    implementation "curse.maven:irons-artifice-1650193:$ironsartifice_version"
 
     //compat deps
 //    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
-//    compileOnly "curse.maven:moonlight-499980:$moonlight_version"
+    implementation "curse.maven:moonlight-499980:$moonlight_version"
 //    compileOnly "curse.maven:owo-532610:$owo_version"
     implementation "curse.maven:geckolib-388172:$geckolib_version"
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
     implementation "curse.maven:guideme-1173950:$guideme_version"
 //    compileOnly "curse.maven:lionfish-1001614:$lionfish_version"
-//    compileOnly "curse.maven:yacl-667299:$yacl_version"
+    implementation "curse.maven:yacl-667299:$yacl_version"
+    implementation "curse.maven:codxlib-1633207:$codxlib_version"
+
+
 }
 
 base {

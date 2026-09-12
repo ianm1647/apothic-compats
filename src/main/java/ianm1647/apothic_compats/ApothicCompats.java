@@ -5,16 +5,13 @@ import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.data.*;
-import ianm1647.apothic_compats.data.ae2.Ae2AffixLootProvider;
-import ianm1647.apothic_compats.data.ae2.Ae2GearSetProvider;
-import ianm1647.apothic_compats.data.alexsmods.MobsInvaderProvider;
-import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
-import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
-import ianm1647.apothic_compats.data.curios.CuriosProvider;
+import ianm1647.apothic_compats.data.ae2.*;
+import ianm1647.apothic_compats.data.alexsmods.*;
+import ianm1647.apothic_compats.data.curios.*;
 import ianm1647.apothic_compats.data.allthemodium.*;
-import ianm1647.apothic_compats.data.curios.CuriosAffixProvider;
-import ianm1647.apothic_compats.data.friendsandfoes.FAFInvaderProvider;
-import ianm1647.apothic_compats.event.AffixEvents;
+import ianm1647.apothic_compats.data.friendsandfoes.*;
+import ianm1647.apothic_compats.data.irons_artifice.ArtificeAffixProvider;
+import ianm1647.apothic_compats.data.undergarden.*;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -56,7 +53,7 @@ public class ApothicCompats {
         CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
 
         generator.addProvider(true, new TagProvider.Items(output, lookupProvider));
-//        generator.addProvider(true, new ItemModelsProvider(output, helper));
+        generator.addProvider(true, new TagProvider.Biomes(output, lookupProvider));
         generator.addProvider(true, new CuriosProvider(output, lookupProvider));
 
         DataGenBuilder.create(ApothicCompats.MODID)
@@ -65,9 +62,12 @@ public class ApothicCompats {
                 .provider(DataMapProvider::new)
                 .provider(RarityOverrideProvider::new)
                 .provider(RecipeProvider::new)
+                .provider(ModelsProvider::new)
 
                 .provider(Ae2AffixLootProvider::new)
                 .provider(Ae2GearSetProvider::new)
+
+                .provider(ArtificeAffixProvider::new)
 //
 //                .provider(AetherAffixLootProvider::new)
 //                .provider(AetherAffixProvider::new)
@@ -75,7 +75,7 @@ public class ApothicCompats {
 //                .provider(AetherInvaderProvider::new)
 //                .provider(DartShooterAffixProvider::new)
 //
-//                .provider(CavesInvaderProvider::new)
+                .provider(CavesInvaderProvider::new)
                 .provider(MobsInvaderProvider::new)
 
                 .provider(ATMAffixLootProvider::new)
@@ -137,10 +137,10 @@ public class ApothicCompats {
 //                .provider(TwilightAffixProvider::new)
 //                .provider(TwilightInvaderProvider::new)
 //
-//                .provider(UndergardenAffixLootProvider::new)
-//                .provider(UndergardenAffixProvider::new)
-//                .provider(UndergardenGearSetProvider::new)
-//                .provider(UndergardenInvaderProvider::new)
+                .provider(UndergardenAffixLootProvider::new)
+                .provider(UndergardenAffixProvider::new)
+                .provider(UndergardenGearSetProvider::new)
+                .provider(UndergardenInvaderProvider::new)
 
                 .build(e);
 

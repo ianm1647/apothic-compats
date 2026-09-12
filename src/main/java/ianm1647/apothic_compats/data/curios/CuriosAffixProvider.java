@@ -59,112 +59,112 @@ public class CuriosAffixProvider extends AffixProvider {
 //        this.addModdedAttribute("curios", "mana", ArsNouveau.MODID, PerkAttributes.MAX_MANA, AttributeModifier.Operation.ADD_VALUE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(common, 5, 15)
-//                .value(uncommon, 20, 30)
-//                .value(rare, 35, 45)
-//                .value(epic, 50, 60)
-//                .value(mythic, 65, 75));
+//                .value(common, 2, 5)
+//                .value(uncommon, 6, 9)
+//                .value(rare, 10, 14)
+//                .value(epic, 15, 20)
+//                .value(mythic, 21, 27));
 //
 //        this.addAncientModdedAttribute("curios", "mana", ArsNouveau.MODID, PerkAttributes.MAX_MANA, AttributeModifier.Operation.ADD_VALUE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 80, 90));
+//                .value(ancient, 28, 35));
 //
 //        this.addModdedAttribute("curios", "spell_damaged", ArsNouveau.MODID, PerkAttributes.SPELL_DAMAGE_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(common, 0.05f, 0.1f)
-//                .value(uncommon, 0.125f, 0.175f)
-//                .value(rare, 0.2f, 0.25f)
-//                .value(epic, 0.275f, 0.325f)
-//                .value(mythic, 0.35f, 0.4f));
+//                .value(common, 0.01f, 0.02f)
+//                .value(uncommon, 0.02f, 0.03f)
+//                .value(rare, 0.03f, 0.04f)
+//                .value(epic, 0.04f, 0.05f)
+//                .value(mythic, 0.05f, 0.06f));
 //
 //        this.addAncientModdedAttribute("curios", "spell_damaged", ArsNouveau.MODID, PerkAttributes.SPELL_DAMAGE_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.425f, 0.475f));
+//                .value(ancient, 0.06f, 0.1f));
 //
 //        this.addModdedAttribute("curios", "regenerative", ArsNouveau.MODID, PerkAttributes.MANA_REGEN_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(common, 0.05f, 0.1f)
-//                .value(uncommon, 0.15f, 0.2f)
-//                .value(rare, 0.25f, 0.3f)
-//                .value(epic, 0.35f, 0.4f)
-//                .value(mythic, 0.45f, 0.5f));
+//                .value(common, 0.02f, 0.04f)
+//                .value(uncommon, 0.03f, 0.05f)
+//                .value(rare, 0.04f, 0.06f)
+//                .value(epic, 0.05f, 0.07f)
+//                .value(mythic, 0.06f, 0.08f));
 //
 //        this.addAncientModdedAttribute("curios", "regenerative", ArsNouveau.MODID, PerkAttributes.MANA_REGEN_BONUS, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.55f, 0.6f));
+//                .value(ancient, 0.07f, 0.09f));
 //
 //        // MALUM
 //        this.addModdedAttribute("curios", "abjured", MalumMod.MALUM, LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(uncommon, 0.05f,0.1f)
-//                .value(rare, 0.1f,0.15f)
-//                .value(epic, 0.15f,0.2f)
-//                .value(mythic, 0.2f,0.25f));
+//                .value(uncommon, 0.01f,0.03f)
+//                .value(rare, 0.02f,0.04f)
+//                .value(epic, 0.03f,0.05f)
+//                .value(mythic, 0.04f,0.06f));
 //
 //        this.addAncientModdedAttribute("curios", "abjured", MalumMod.MALUM, LodestoneAttributes.MAGIC_RESISTANCE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.25f,0.35f));
+//                .value(ancient, 0.06f,0.8f));
 //
 //        this.addModdedAttribute("curios", "vandalous", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(uncommon, 0.05f,0.1f)
-//                .value(rare, 0.1f,0.15f)
-//                .value(epic, 0.15f,0.2f)
-//                .value(mythic, 0.2f,0.25f));
+//                .value(uncommon, 0.02f,0.05f)
+//                .value(rare, 0.03f,0.06f)
+//                .value(epic, 0.04f,0.07f)
+//                .value(mythic, 0.05f,0.08f));
 //
 //        this.addAncientModdedAttribute("curios", "vandalous", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.25f,0.35f));
+//                .value(ancient, 0.06f,0.1f));
 //
-//        this.addModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//        this.addModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(common, 0.05F, 0.1F)
-//                .value(uncommon, 0.1F, 0.15F)
-//                .value(rare, 0.15F, 0.2F)
-//                .value(epic, 0.2F, 0.25F)
-//                .value(mythic, 0.25F, 0.35F));
+//                .value(common, 0.01F, 0.02F)
+//                .value(uncommon, 0.02F, 0.03F)
+//                .value(rare, 0.03F, 0.04F)
+//                .value(epic, 0.04F, 0.05F)
+//                .value(mythic, 0.05F, 0.06F));
 //
-//        this.addAncientModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+//        this.addAncientModdedAttribute("curios", "mystic", MalumMod.MALUM, LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.35F, 0.55F));
+//                .value(ancient, 0.06F, 0.07F));
 //
 //        this.addModdedAttribute("curios", "adept", MalumMod.MALUM, LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(common, 0.05F, 0.1F)
-//                .value(uncommon, 0.1F, 0.15F)
-//                .value(rare, 0.15F, 0.2F)
-//                .value(epic, 0.2F, 0.25F)
-//                .value(mythic, 0.25F, 0.3F));
+//                .value(common, 0.01f, 0.03f)
+//                .value(uncommon, 0.02f, 0.04f)
+//                .value(rare, 0.03f, 0.05f)
+//                .value(epic, 0.04f, 0.06f)
+//                .value(mythic, 0.05f, 0.07f));
 //
 //        this.addAncientModdedAttribute("curios", "adept", MalumMod.MALUM, LodestoneAttributes.MAGIC_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.35F, 0.4F));
+//                .value(ancient, 0.6F, 0.8F));
 //
 //        this.addModdedAttribute("curios", "scythe_proficiency", MalumMod.MALUM, MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(uncommon, 0.1f, 0.2f)
-//                .value(rare, 0.2f, 0.3f)
-//                .value(epic, 0.3f, 0.4f)
-//                .value(mythic, 0.4f, 0.5f));
+//                .value(uncommon, 0.01f, 0.02f)
+//                .value(rare, 0.02f, 0.03f)
+//                .value(epic, 0.03f, 0.04f)
+//                .value(mythic, 0.04f, 0.05f));
 //
 //        this.addAncientModdedAttribute("curios", "scythe_proficiency", MalumMod.MALUM, MalumAttributes.SCYTHE_PROFICIENCY, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
 //                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
 //                .categories(CURIOS)
-//                .value(ancient, 0.5f, 0.6f));
+//                .value(ancient, 0.05f, 0.06f));
 
 
 

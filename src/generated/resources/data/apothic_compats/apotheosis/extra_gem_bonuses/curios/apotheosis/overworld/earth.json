@@ -31,10 +31,10 @@
       },
       "operation": "add_multiplied_base",
       "values": {
-        "flawed": 0.05,
-        "normal": 0.075,
-        "flawless": 0.1,
-        "perfect": 0.125
+        "flawed": 0.02,
+        "normal": 0.03,
+        "flawless": 0.04,
+        "perfect": 0.05
       }
     }
   ]

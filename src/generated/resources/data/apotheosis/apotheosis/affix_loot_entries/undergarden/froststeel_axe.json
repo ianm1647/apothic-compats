@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "undergarden:undergarden"
+    ]
+  },
+  "stack": {
+    "id": "undergarden:froststeel_axe"
+  },
+  "weights": {
+    "ascent": {
+      "weight": 15
+    },
+    "summit": {
+      "weight": 25
+    }
+  }
+}

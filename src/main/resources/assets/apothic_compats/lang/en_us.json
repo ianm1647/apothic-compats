@@ -1020,7 +1020,79 @@
   "affix.apothic_compats:scythe/mob_effect/ancient/elusive.suffix": "of Evasion",
 
   "affix.apothic_compats:scythe/mob_effect/ancient/weakening": "Weakening",
-  "affix.apothic_compats:scythe/mob_effect/ancient/weakening.suffix": "of Weakness"
+  "affix.apothic_compats:scythe/mob_effect/ancient/weakening.suffix": "of Weakness",
 
-  
+
+
+
+  "affix.apothic_compats:gun/attribute/elven": "Elven",
+  "affix.apothic_compats:gun/attribute/elven.suffix": "of the First Archer",
+  "affix.apothic_compats:gun/attribute/ancient/elven": "Elven",
+  "affix.apothic_compats:gun/attribute/ancient/elven.suffix": "of the First Archer",
+
+  "affix.apothic_compats:gun/attribute/experienced": "Experienced",
+  "affix.apothic_compats:gun/attribute/experienced.suffix": "of the Scholar",
+  "affix.apothic_compats:gun/attribute/ancient/experienced": "Experienced",
+  "affix.apothic_compats:gun/attribute/ancient/experienced.suffix": "of the Scholar",
+
+  "affix.apothic_compats:gun/attribute/piercing": "Piercing",
+  "affix.apothic_compats:gun/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:gun/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:gun/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:gun/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:gun/attribute/lacerating.suffix": "of Surgical Precision",
+  "affix.apothic_compats:gun/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:gun/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:gun/attribute/intricate": "Intricate",
+  "affix.apothic_compats:gun/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:gun/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:gun/attribute/ancient/intricate.suffix": "of Critical Thinking",
+
+  "affix.apothic_compats:gun/attribute/windswept": "Windswept",
+  "affix.apothic_compats:gun/attribute/windswept.suffix": "of the Current",
+  "affix.apothic_compats:gun/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:gun/attribute/ancient/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:gun/mob_effect/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:gun/mob_effect/shulkers.suffix": "of Levitation",
+  "affix.apothic_compats:gun/mob_effect/ancient/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:gun/mob_effect/ancient/shulkers.suffix": "of Levitation",
+
+  "affix.apothic_compats:gun/mob_effect/acidic": "Acidic",
+  "affix.apothic_compats:gun/mob_effect/acidic.suffix": "of Corrosion",
+  "affix.apothic_compats:gun/mob_effect/ancient/acidic": "Acidic",
+  "affix.apothic_compats:gun/mob_effect/ancient/acidic.suffix": "of Corrosion",
+
+  "affix.apothic_compats:gun/mob_effect/ensnaring": "Ensnaring",
+  "affix.apothic_compats:gun/mob_effect/ensnaring.suffix": "of the Predator",
+  "affix.apothic_compats:gun/mob_effect/ancient/ensnaring": "Ensnaring",
+  "affix.apothic_compats:gun/mob_effect/ancient/ensnaring.suffix": "of the Predator",
+
+  "affix.apothic_compats:gun/mob_effect/fleeting": "Fleeting",
+  "affix.apothic_compats:gun/mob_effect/fleeting.suffix": "of the Ranger",
+  "affix.apothic_compats:gun/mob_effect/ancient/fleeting": "Fleeting",
+  "affix.apothic_compats:gun/mob_effect/ancient/fleeting.suffix": "of the Ranger",
+
+  "affix.apothic_compats:gun/mob_effect/grievous": "Grievous",
+  "affix.apothic_compats:gun/mob_effect/grievous.suffix": "of Wounding",
+  "affix.apothic_compats:gun/mob_effect/ancient/grievous": "Grievous",
+  "affix.apothic_compats:gun/mob_effect/ancient/grievous.suffix": "of Wounding",
+
+  "affix.apothic_compats:gun/mob_effect/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:gun/mob_effect/ivy_laced.suffix": "of Natural Toxins",
+  "affix.apothic_compats:gun/mob_effect/ancient/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:gun/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
+
+  "affix.apothic_compats:gun/mob_effect/blighted": "Blighted",
+  "affix.apothic_compats:gun/mob_effect/blighted.suffix": "of the Blighted Lands",
+  "affix.apothic_compats:gun/mob_effect/ancient/blighted": "Blighted",
+  "affix.apothic_compats:gun/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
+
+  "affix.apotheosis:ranged/mob_effect/deathbound": "Deathbound",
+  "affix.apotheosis:ranged/mob_effect/deathbound.suffix": "of the Witherlord",
+  "affix.apotheosis:ranged/mob_effect/ancient/deathbound": "Deathbound",
+  "affix.apotheosis:ranged/mob_effect/ancient/deathbound.suffix": "of the Witherlord"
+
 }

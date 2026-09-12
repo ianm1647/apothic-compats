@@ -1,30 +1,27 @@
 package ianm1647.apothic_compats;
 
 import dev.shadowsoffire.apotheosis.Apoth;
-import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.apothic_attributes.compat.CurioEquipmentSlot;
 import dev.shadowsoffire.apothic_attributes.modifiers.EntityEquipmentSlot;
 import dev.shadowsoffire.apothic_attributes.modifiers.EntitySlotGroup;
 import dev.shadowsoffire.placebo.registry.DeferredHelper;
-import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.item.ModCurioItem;
 import ianm1647.apothic_compats.util.ModTags;
+import io.redspace.irons_artifice.item.GunItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
-import top.theillusivec4.curios.api.CuriosTags;
 
 import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
 
 public class Comp {
 
-    private static final DeferredHelper R = DeferredHelper.create(ApothicCompats.MODID);
+    public static final DeferredHelper R = DeferredHelper.create(ApothicCompats.MODID);
 
     public static class Curios {
         public static final Holder<Item> BACK_PLATE = R.item("back_plate", ModCurioItem::new, p -> p.stacksTo(1));
@@ -47,6 +44,13 @@ public class Comp {
         public static class Aether {
 //            public static LootCategory DART_SHOOTER = category("dart_shooter",
 //                    s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
+
+            public static void bootstrap() {}
+        }
+
+        public static class Artifice {
+            public static LootCategory GUN = category("gun",
+                    s -> s.getItem() instanceof GunItem, ALObjects.EquipmentSlotGroups.MAINHAND);
 
             public static void bootstrap() {}
         }
@@ -98,6 +102,9 @@ public class Comp {
             }
             if (ModList.get().isLoaded("aether")) {
                 Aether.bootstrap();
+            }
+            if (ModList.get().isLoaded("irons_artifice")) {
+                Artifice.bootstrap();
             }
             if (ModList.get().isLoaded("create")) {
                 Create.bootstrap();

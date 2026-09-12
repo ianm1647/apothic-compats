@@ -1,0 +1,13 @@
+// 26.1.2	2026-09-10T19:07:48.3043334	Undergarden Affixes
+a0922162a9b732990f4b6ac8e4a6f71dd9186450 data/apothic_compats/apotheosis/affixes/melee/mob_effect/ancient/anti_virulence.json
+0b7593649a2ba2e7b60e03e373de2aba60d96e04 data/apothic_compats/apotheosis/affixes/melee/mob_effect/ancient/brittle.json
+86062c9c6317a0fe335267a520ac1adafbd2a239 data/apothic_compats/apotheosis/affixes/melee/mob_effect/ancient/featherweight.json
+d8e1c9028d9de3291b7b9def9ac4d25a9b9dbf44 data/apothic_compats/apotheosis/affixes/melee/mob_effect/ancient/virulence.json
+37107e448d67ea55d4fd6678fb49cf65d34b0d1a data/apothic_compats/apotheosis/affixes/melee/mob_effect/anti_virulence.json
+13c283ec081a6014d9d30a92d2a7706a36c46c92 data/apothic_compats/apotheosis/affixes/melee/mob_effect/brittle.json
+e91de52ad20f0c21260a99f452c00b2e545c61c1 data/apothic_compats/apotheosis/affixes/melee/mob_effect/featherweight.json
+e53937c864e61f4009b5397a75acc94be3842487 data/apothic_compats/apotheosis/affixes/melee/mob_effect/virulence.json
+bbc0c30cc403d655797ecce86c76a1147c9bb8b6 data/apothic_compats/apotheosis/affixes/ranged/mob_effect/ancient/gooey.json
+c013ed1b38b2879d0a11fdeff75eaaa22de9e00f data/apothic_compats/apotheosis/affixes/ranged/mob_effect/ancient/virulence.json
+8bd247e557c64afd9a12de4c7ca0d07714f117f7 data/apothic_compats/apotheosis/affixes/ranged/mob_effect/gooey.json
+14e9e2c33b7089689e6c9778da67f89a24f0a29b data/apothic_compats/apotheosis/affixes/ranged/mob_effect/virulence.json

@@ -3,12 +3,9 @@ package ianm1647.apothic_compats.data.undergarden;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
-import ianm1647.apothic_compats.ApothicCompats;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -18,9 +15,10 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
+import quek.undergarden.registry.UGArmorMaterials;
+import quek.undergarden.registry.UGItemTiers;
+import quek.undergarden.registry.UGItems;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
@@ -61,16 +59,15 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-//        armorWeights.put(UGArmorMaterials.CLOGGRUM, CLOGGRUM);
-//        armorWeights.put(UGArmorMaterials.ANCIENT, ANCIENT);
-//        armorWeights.put(UGArmorMaterials.FROSTSTEEL, FROSTSTEEL);
-//        armorWeights.put(UGArmorMaterials.UTHERIUM, UTHERIUM);
-//
-//        toolWeights.put(UGItemTiers.CLOGGRUM, CLOGGRUM);
-//        toolWeights.put(UGItemTiers.FROSTSTEEL, FROSTSTEEL);
-//        toolWeights.put(UGItemTiers.UTHERIUM, UTHERIUM);
-//        toolWeights.put(UGItemTiers.FORGOTTEN, FORGOTTEN);
+        this.addArmor(CLOGGRUM, UGItems.CLOGGRUM_HELMET.get(), UGItems.CLOGGRUM_CHESTPLATE.get(), UGItems.CLOGGRUM_LEGGINGS.get(), UGItems.CLOGGRUM_BOOTS.get());
+        this.addArmor(ANCIENT, UGItems.ANCIENT_HELMET.get(), UGItems.ANCIENT_CHESTPLATE.get(), UGItems.ANCIENT_LEGGINGS.get());
+        this.addArmor(FROSTSTEEL, UGItems.FROSTSTEEL_HELMET.get(), UGItems.FROSTSTEEL_CHESTPLATE.get(), UGItems.FROSTSTEEL_LEGGINGS.get(), UGItems.FROSTSTEEL_BOOTS.get());
+        this.addArmor(UTHERIUM, UGItems.UTHERIUM_HELMET.get(), UGItems.UTHERIUM_CHESTPLATE.get(), UGItems.UTHERIUM_LEGGINGS.get(), UGItems.UTHERIUM_BOOTS.get());
 
+        this.addTools(CLOGGRUM, UGItems.CLOGGRUM_SWORD.get(), UGItems.CLOGGRUM_PICKAXE.get(), UGItems.CLOGGRUM_AXE.get(), UGItems.CLOGGRUM_SHOVEL.get());
+        this.addTools(FROSTSTEEL, UGItems.FROSTSTEEL_SWORD.get(), UGItems.FROSTSTEEL_PICKAXE.get(), UGItems.FROSTSTEEL_AXE.get(), UGItems.FROSTSTEEL_SHOVEL.get());
+        this.addTools(UTHERIUM, UGItems.UTHERIUM_SWORD.get(), UGItems.UTHERIUM_PICKAXE.get(), UGItems.UTHERIUM_AXE.get(), UGItems.UTHERIUM_SHOVEL.get());
+        this.addTools(FORGOTTEN, UGItems.FORGOTTEN_SWORD.get(), UGItems.FORGOTTEN_PICKAXE.get(), UGItems.FORGOTTEN_AXE.get(), UGItems.FORGOTTEN_SHOVEL.get());
     }
 
     @Override
