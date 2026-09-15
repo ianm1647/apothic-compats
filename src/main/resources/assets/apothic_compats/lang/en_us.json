@@ -16,6 +16,9 @@
   "item.apotheosis.gem.apothic_compats:malum/thief": "Thief Gem",
   "item.apotheosis.gem.apothic_compats:malum/etheric": "Etheric Gem",
 
+  "affix.apothic_compats.target.bullet_self": "On bullet hit, gain %s",
+  "affix.apothic_compats.target.bullet_target": "On bullet hit, inflict %s",
+
   "curios.modifiers.feet": "When on feet",
 
   "gem_class.dart_shooter": "Dart Shooter",

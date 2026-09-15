@@ -5,7 +5,7 @@
       "modid": "irons_artifice"
     }
   ],
-  "type": "apotheosis:mob_effect",
+  "type": "apothic_compats:bullet_mob_effect",
   "definition": {
     "affix_type": "basic_effect",
     "exclusive_set": [],
@@ -15,7 +15,7 @@
     }
   },
   "mob_effect": "minecraft:wither",
-  "target": "projectile_target",
+  "target": "bullet_target",
   "types": [
     "apothic_compats:gun"
   ],

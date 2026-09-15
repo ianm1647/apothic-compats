@@ -1,4 +1,4 @@
-// 26.1.2	2026-09-10T23:18:19.3086011	Iron's Artifice Affixes
+// 26.1.2	2026-09-13T16:37:09.1685166	Iron's Artifice Affixes
 ea6a92a589b252d2d7bc4b645fb5da43d1072027 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/elven.json
 f9a1e508365c4e9dc24b63b82ffc9108e3391ec3 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/windswept.json
 206eb4561fd3faa532c488e209c0f1712739081e data/apothic_compats/apotheosis/affixes/gun/attribute/elven.json
@@ -7,19 +7,19 @@ f9a1e508365c4e9dc24b63b82ffc9108e3391ec3 data/apothic_compats/apotheosis/affixes
 4b27755ac741f93e9a6f535354fc5289c2c9d193 data/apothic_compats/apotheosis/affixes/gun/attribute/lacerating.json
 bf925be511e8df8170be214143b735ffc7d48fce data/apothic_compats/apotheosis/affixes/gun/attribute/piercing.json
 f72bfdff5766ad5324417823bb038a61b3ad2cdc data/apothic_compats/apotheosis/affixes/gun/attribute/windswept.json
-b5d12b354603feee83ffd69769527d425b958da5 data/apothic_compats/apotheosis/affixes/gun/mob_effect/acidic.json
-780e1cad1df9dcfb98f54660280aaf2de9fc0eea data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/acidic.json
-81ef9594d92cb76ce45c06a9d4d878ab3be934db data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/blighted.json
-9bcd6cc15ead31a1a6153ab1f4da0f9065667267 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/deathbound.json
-d1470005382dab03c9b1ac4d24a5ed5c7ad16823 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/ensnaring.json
-5ed2b4877de5efb2f766d25aead6492ee5c565e5 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/fleeting.json
-1745ff1028caf1fcd648e0af80f402aa3789b5eb data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/grievous.json
-137d3c149312e99e086e59ac8bbec3ef4df7588e data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/ivy_laced.json
-4086c640e6be9457640bd7dc1f6d8ae44dfa400e data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/shulkers.json
-2be8351e58808162d9c5a42bad7b9062786fe94f data/apothic_compats/apotheosis/affixes/gun/mob_effect/blighted.json
-7c0b928a50a545e79d984a97c5d62d2d1e037fb5 data/apothic_compats/apotheosis/affixes/gun/mob_effect/deathbound.json
-db4a32175f3c1d2588e56bec40f16e53c6e16ed4 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ensnaring.json
-14f3ef05bcc9042c8e1828f132b6eeaa9021897d data/apothic_compats/apotheosis/affixes/gun/mob_effect/fleeting.json
-4341f2488d82ad2ba7d9f965ff763ff0695030b1 data/apothic_compats/apotheosis/affixes/gun/mob_effect/grievous.json
-28ad4ee19db580cd9f20195fa857fa66924cd5c8 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ivy_laced.json
-5d563264c0d0ac178d4efa9114eb24943058ceaf data/apothic_compats/apotheosis/affixes/gun/mob_effect/shulkers.json
+2d5b94d3e3ce6cc896bc29b0378ad575471e7220 data/apothic_compats/apotheosis/affixes/gun/mob_effect/acidic.json
+000bb3f89af3fec34c4d484e5a6986cbe802e788 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/acidic.json
+f67a39e8427f0461e2750011946a12667b4bac31 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/blighted.json
+402df9a1599f1525098ea593e868161959bbd337 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/deathbound.json
+df42db04845493319bdf50ac7dd010f8fb0f1dac data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/ensnaring.json
+770c277bc7e967839d59029e8e76b26c61c2e31a data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/fleeting.json
+34a602491f90851018adefc4b4c21c71df21cb38 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/grievous.json
+d513ae65cf18b84a6f5e247c4e06e875b3be5710 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/ivy_laced.json
+8eb0f3c36de20033ed59dba5848623ad05493dd9 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/shulkers.json
+bc6b8d0cef1dc9597200599f82c26463aedbe02b data/apothic_compats/apotheosis/affixes/gun/mob_effect/blighted.json
+5c7d3491c627263c1f1c36a732e48af19578abb2 data/apothic_compats/apotheosis/affixes/gun/mob_effect/deathbound.json
+c8b43300ebfb6d712c96641efa5deb5c388a3d52 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ensnaring.json
+2e9cb8fdc58cde58ede863b47d4e2aee54cad2b3 data/apothic_compats/apotheosis/affixes/gun/mob_effect/fleeting.json
+4fb6cbd5f84d527008aeb7aa02c1e43ff1d32c9e data/apothic_compats/apotheosis/affixes/gun/mob_effect/grievous.json
+8fd1ec412f3df6904cd8456d4f66b574c509feaf data/apothic_compats/apotheosis/affixes/gun/mob_effect/ivy_laced.json
+93d3f82db4cd4acecad500b7d97d197550c276ae data/apothic_compats/apotheosis/affixes/gun/mob_effect/shulkers.json

@@ -1,6 +1,7 @@
 package ianm1647.apothic_compats.data.irons_artifice;
 
 import dev.shadowsoffire.apotheosis.affix.*;
+import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
@@ -10,12 +11,12 @@ import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
 import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
-import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
+import ianm1647.apothic_compats.affix.irons_artifice.BulletModifierAffix;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -107,13 +108,13 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 0.15F, 0.35F)
                 .value(mythic, 0.2F, 0.4F));
 
-        this.addMobEffect("gun", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "shulkers", MobEffects.LEVITATION, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(epic, 20, 80, StepFunction.fromBounds(0, 1, 0.25F), 140)
                 .value(mythic, 20, 100, StepFunction.fromBounds(0, 2, 0.25F), 140));
 
-        this.addMobEffect("gun", "acidic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "acidic", ALObjects.MobEffects.SUNDERING, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
                 .categories(Comp.LootCategories.Artifice.GUN)
@@ -121,7 +122,7 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .limit(4)
                 .value(mythic, 80, 160, 0, 40));
 
-        this.addMobEffect("gun", "ensnaring", MobEffects.SLOWNESS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "ensnaring", MobEffects.SLOWNESS, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(uncommon, 40, 80, 0, 160)
@@ -129,7 +130,7 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 40, 120, StepFunction.fromBounds(0, 1, 0.25F), 160)
                 .value(mythic, 80, 160, StepFunction.fromBounds(0, 2, 0.25F), 160));
 
-        this.addMobEffect("gun", "fleeting", MobEffects.SPEED, MobEffectAffix.Target.PROJECTILE_SELF, b -> b
+        this.addMobEffect("gun", "fleeting", MobEffects.SPEED, BulletModifierAffix.Target.BULLET_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(uncommon, 100, 200, 0, 0)
@@ -137,7 +138,7 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 100, 200, StepFunction.fromBounds(0, 1, 0.25F), 0)
                 .value(mythic, 100, 300, StepFunction.fromBounds(0, 2, 0.25F), 0));
 
-        this.addMobEffect("gun", "grievous", ALObjects.MobEffects.GRIEVOUS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "grievous", ALObjects.MobEffects.GRIEVOUS, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(uncommon, 200, 200, 0, 500)
@@ -145,7 +146,7 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 200, 300, StepFunction.fromBounds(0, 1, 0.25F), 400)
                 .value(mythic, 200, 300, StepFunction.fromBounds(0, 2, 0.25F), 400));
 
-        this.addMobEffect("gun", "ivy_laced", MobEffects.POISON, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "ivy_laced", MobEffects.POISON, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .stacking()
@@ -154,13 +155,13 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 100, 160, StepFunction.fromBounds(0, 1, 0.25F), 40)
                 .value(mythic, 100, 200, StepFunction.fromBounds(0, 2, 0.25F), 40));
 
-        this.addMobEffect("gun", "blighted", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "blighted", MobEffects.WITHER, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(epic, 160, 200, StepFunction.fromBounds(0, 1, 0.25F), 300)
                 .value(mythic, 160, 200, StepFunction.fromBounds(0, 3, 0.25F), 300));
 
-        this.addMobEffect("gun", "deathbound", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addMobEffect("gun", "deathbound", MobEffects.WITHER, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("gun/mob_effect/blighted")))
@@ -200,45 +201,45 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 0.4F, 0.8F));
 
-        this.addAncientMobEffect("gun", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "shulkers", MobEffects.LEVITATION, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 40, 200, StepFunction.fromBounds(0, 3, 0.5F), 70));
 
-        this.addAncientMobEffect("gun", "acidic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "acidic", ALObjects.MobEffects.SUNDERING, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .stacking()
                 .value(ancient, 160, 320, 0, 30));
 
-        this.addAncientMobEffect("gun", "ensnaring", MobEffects.SLOWNESS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "ensnaring", MobEffects.SLOWNESS, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 150, 350, StepFunction.fromBounds(0, 3, 0.25F), 80));
 
-        this.addAncientMobEffect("gun", "fleeting", MobEffects.SPEED, MobEffectAffix.Target.PROJECTILE_SELF, b -> b
+        this.addAncientMobEffect("gun", "fleeting", MobEffects.SPEED, BulletModifierAffix.Target.BULLET_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 200, 500, StepFunction.fromBounds(0, 2, 0.25F), 0));
 
-        this.addAncientMobEffect("gun", "grievous", ALObjects.MobEffects.GRIEVOUS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "grievous", ALObjects.MobEffects.GRIEVOUS, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 400, 600, StepFunction.fromBounds(0, 3, 0.5F), 200));
 
-        this.addAncientMobEffect("gun", "ivy_laced", MobEffects.POISON, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "ivy_laced", MobEffects.POISON, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .stacking()
                 .value(ancient, 200, 400, StepFunction.fromBounds(0, 3, 0.5F), 20));
 
-        this.addAncientMobEffect("gun", "blighted", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "blighted", MobEffects.WITHER, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 320, 500, StepFunction.fromBounds(0, 4, 0.5F), 100));
 
-        this.addAncientMobEffect("gun", "deathbound", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
+        this.addAncientMobEffect("gun", "deathbound", MobEffects.WITHER, BulletModifierAffix.Target.BULLET_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("gun/mob_effect/blighted")))
@@ -254,8 +255,8 @@ public class ArtificeAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc(type + "/enchantment/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addMobEffect(String type, String name, Holder<MobEffect> effect, MobEffectAffix.Target target, UnaryOperator<MobEffectAffix.Builder> config) {
-        var builder = new MobEffectAffix.Builder(effect, target);
+    private void addMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
+        var builder = new BulletModifierAffix.Builder(effect, target);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/mob_effect/" + name), builder.build(), new ModLoadedCondition(mod));
     }
@@ -278,8 +279,8 @@ public class ArtificeAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc(type + "/enchantment/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }
 
-    private void addAncientMobEffect(String type, String name, Holder<MobEffect> effect, MobEffectAffix.Target target, UnaryOperator<MobEffectAffix.Builder> config) {
-        var builder = new MobEffectAffix.Builder(effect, target);
+    private void addAncientMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
+        var builder = new BulletModifierAffix.Builder(effect, target);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/mob_effect/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }

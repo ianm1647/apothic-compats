@@ -4,6 +4,7 @@ import dev.shadowsoffire.apotheosis.data.RarityProvider;
 import dev.shadowsoffire.placebo.datagen.DataGenBuilder;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.ancientreforging.data.ARRarityProvider;
+import ianm1647.apothic_compats.affix.ModAffixRegistry;
 import ianm1647.apothic_compats.data.*;
 import ianm1647.apothic_compats.data.ae2.*;
 import ianm1647.apothic_compats.data.alexsmods.*;
@@ -41,7 +42,7 @@ public class ApothicCompats {
         modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
 
         Comp.bootstrap(modEventBus);
-        //ModAffixRegistry.registerAffixes();
+        ModAffixRegistry.registerAffixes();
 
         modEventBus.register(this);
     }
