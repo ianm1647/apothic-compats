@@ -54,8 +54,6 @@ dependencies {
 //    compileOnly "curse.maven:amendments-896746:$amendments_version"
 //    compileOnly "curse.maven:supplementaries-412082:$supplementaries_version"
 //    compileOnly "curse.maven:twilightforest-227639:$twilight_version"
-//    compileOnly "curse.maven:aether-255308:$aether_version"
-//    compileOnly "curse.maven:deepaether-852465:$deepaether_version"
     implementation "curse.maven:aether-ii-223796:$aetherii_version"
 //    compileOnly "curse.maven:arsnouveau-401955:$arsnouveau_version"
 //    compileOnly "curse.maven:deeperdarker-659011:$deeperdarker_version"

@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aetherii"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "aether_ii:holystone_axe",
+    "aether_ii:holystone_pickaxe",
+    "aether_ii:holystone_shovel",
+    "aether_ii:holystone_shortsword"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "aether_ii:holystone"
+      }
+    }
+  ]
+}

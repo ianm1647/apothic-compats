@@ -7,11 +7,12 @@ import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.affix.ModAffixRegistry;
 import ianm1647.apothic_compats.data.*;
 import ianm1647.apothic_compats.data.ae2.*;
+import ianm1647.apothic_compats.data.aetherii.*;
 import ianm1647.apothic_compats.data.alexsmods.*;
 import ianm1647.apothic_compats.data.curios.*;
 import ianm1647.apothic_compats.data.allthemodium.*;
 import ianm1647.apothic_compats.data.friendsandfoes.*;
-import ianm1647.apothic_compats.data.irons_artifice.ArtificeAffixProvider;
+import ianm1647.apothic_compats.data.irons_artifice.*;
 import ianm1647.apothic_compats.data.undergarden.*;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
@@ -69,13 +70,13 @@ public class ApothicCompats {
                 .provider(Ae2GearSetProvider::new)
 
                 .provider(ArtificeAffixProvider::new)
-//
-//                .provider(AetherAffixLootProvider::new)
-//                .provider(AetherAffixProvider::new)
-//                .provider(AetherGearSetProvider::new)
-//                .provider(AetherInvaderProvider::new)
+
+                .provider(AetherIIAffixLootProvider::new)
+                .provider(AetherIIAffixProvider::new)
+                .provider(AetherIIGearSetProvider::new)
+                .provider(AetherIIInvaderProvider::new)
 //                .provider(DartShooterAffixProvider::new)
-//
+
                 .provider(CavesInvaderProvider::new)
                 .provider(MobsInvaderProvider::new)
 
@@ -83,61 +84,12 @@ public class ApothicCompats {
                 .provider(ATMGearSetProvider::new)
                 .provider(ATMInvaderProvider::new)
 
-//                .provider(ArsAffixLootProvider::new)
-//                .provider(ArsAffixProvider::new)
-//                .provider(ArsGearSetProvider::new)
-//                .provider(ArsGemProvider::new)
-//                .provider(ArsInvaderProvider::new)
-//
-//                .provider(ChaosInvaderProvider::new)
-//
-//                .provider(CataclysmAffixLootProvider::new)
-//                .provider(CataclysmGearSetProvider::new)
-//                .provider(CataclysmInvaderProvider::new)
-//
-//                .provider(PotatoCannonAffixProvider::new)
-
                 .provider(CuriosAffixLootProvider::new)
                 .provider(CuriosAffixProvider::new)
                 .provider(CuriosExtraGemBonusProvider::new)
 
-//                .provider(DeepAetherAffixLootProvider::new)
-//                .provider(DeepAetherGearSetProvider::new)
-//
-//                .provider(DeeperDarkerAffixLootProvider::new)
-//                .provider(DeeperDarkerAffixProvider::new)
-//                .provider(DeeperDarkerGearSetProvider::new)
-//                .provider(DeeperDarkerInvaderProvider::new)
-
-//                .provider(FarmersDelightAffixLootProvider::new)
-//
                 .provider(FAFInvaderProvider::new)
-//
-//                .provider(StarlightAffixLootProvider::new)
-//                .provider(StarlightAffixProvider::new)
-//                .provider(StarlightGearSetProvider::new)
-//                .provider(StarlightInvaderProvider::new)
-//
-//                .provider(MalumAffixProvider::new)
-//                .provider(MalumExtraGemBonusProvider::new)
-//                .provider(MalumGemProvider::new)
-//                .provider(ScytheAffixProvider::new)
-//                .provider(StaffAffixProvider::new)
-//
-//                .provider(MekanismAffixLootProvider::new)
-//                .provider(MekanismGearSetProvider::new)
-//
-//                .provider(MowzieInvaderProvider::new)
-//
-//                .provider(BumblezoneAffixLootProvider::new)
-//                .provider(BumblezoneAffixProvider::new)
-//                .provider(BumblezoneGearSetProvider::new)
-//                .provider(BumblezoneInvaderProvider::new)
-//
-//                .provider(TwilightAffixLootProvider::new)
-//                .provider(TwilightAffixProvider::new)
-//                .provider(TwilightInvaderProvider::new)
-//
+
                 .provider(UndergardenAffixLootProvider::new)
                 .provider(UndergardenAffixProvider::new)
                 .provider(UndergardenGearSetProvider::new)

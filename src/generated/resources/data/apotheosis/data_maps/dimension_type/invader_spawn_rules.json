@@ -1,10 +1,10 @@
 {
   "values": {
-    "aether:the_aether": {
+    "aetherii:the_aether": {
       "neoforge:conditions": [
         {
           "type": "neoforge:mod_loaded",
-          "modid": "aether"
+          "modid": "aetherii"
         }
       ],
       "spawn_chances": {

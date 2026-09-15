@@ -4,6 +4,10 @@
       "replace": true,
       "value": "apotheosis:none"
     },
+    "aether_ii:dart_shooter": {
+      "replace": true,
+      "value": "apotheosis:bow"
+    },
     "apotheosis:potion_charm": {
       "replace": true,
       "value": "apotheosis:none"

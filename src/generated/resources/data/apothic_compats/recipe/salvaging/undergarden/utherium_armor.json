@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "undergarden:utherium_helmet",
+    "undergarden:utherium_chestplate",
+    "undergarden:utherium_leggings",
+    "undergarden:utherium_boots"
+  ],
+  "outputs": [
+    {
+      "max_count": 3,
+      "min_count": 1,
+      "stack": {
+        "id": "undergarden:utherium_crystal"
+      }
+    }
+  ]
+}

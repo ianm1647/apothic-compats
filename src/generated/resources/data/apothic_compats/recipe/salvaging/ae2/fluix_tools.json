@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "ae2:fluix_axe",
+    "ae2:fluix_pickaxe",
+    "ae2:fluix_shovel",
+    "ae2:fluix_sword",
+    "ae2:fluix_hoe"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "ae2:fluix_crystal"
+      }
+    }
+  ]
+}

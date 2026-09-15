@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "undergarden:forgotten_axe",
+    "undergarden:forgotten_pickaxe",
+    "undergarden:forgotten_shovel",
+    "undergarden:forgotten_sword",
+    "undergarden:forgotten_hoe"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "undergarden:forgotten_ingot"
+      }
+    }
+  ]
+}

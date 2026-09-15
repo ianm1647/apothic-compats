@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "undergarden:utherium_axe",
+    "undergarden:utherium_pickaxe",
+    "undergarden:utherium_sword",
+    "undergarden:utherium_shovel",
+    "undergarden:utherium_hoe"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "undergarden:utherium_crystal"
+      }
+    }
+  ]
+}

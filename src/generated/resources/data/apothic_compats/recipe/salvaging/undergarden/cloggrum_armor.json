@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "undergarden:cloggrum_helmet",
+    "undergarden:cloggrum_chestplate",
+    "undergarden:cloggrum_leggings",
+    "undergarden:cloggrum_boots"
+  ],
+  "outputs": [
+    {
+      "max_count": 3,
+      "min_count": 1,
+      "stack": {
+        "id": "undergarden:cloggrum_ingot"
+      }
+    }
+  ]
+}

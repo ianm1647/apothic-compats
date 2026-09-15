@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "undergarden:froststeel_axe",
+    "undergarden:froststeel_pickaxe",
+    "undergarden:froststeel_shovel",
+    "undergarden:froststeel_sword",
+    "undergarden:froststeel_hoe"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "undergarden:froststeel_ingot"
+      }
+    }
+  ]
+}

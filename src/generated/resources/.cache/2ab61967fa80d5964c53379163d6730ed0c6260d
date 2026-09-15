@@ -1,11 +1,15 @@
-// 26.1.2	2026-09-13T16:37:09.1685166	Iron's Artifice Affixes
+// 26.1.2	2026-09-15T16:19:48.7726001	Iron's Artifice Affixes
 ea6a92a589b252d2d7bc4b645fb5da43d1072027 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/elven.json
+bd123acec694848a2723e6ae4dc3ca09a2acd7e8 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/experienced.json
+d5c7f9fbee7e9fa8083aea483fb51aa46e8885c6 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/intricate.json
+3453a007a7294fcffde08e2023217e510e8b4a31 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/lacerating.json
+288a15cb15e6182698e71c6bf62cba7b5205dfa2 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/piercing.json
 f9a1e508365c4e9dc24b63b82ffc9108e3391ec3 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/windswept.json
 206eb4561fd3faa532c488e209c0f1712739081e data/apothic_compats/apotheosis/affixes/gun/attribute/elven.json
-3ac27294fb27689089ab6e6fd187f364cf653166 data/apothic_compats/apotheosis/affixes/gun/attribute/experienced.json
-2ddd0c082b3d346dd305f69b41a125ca8705ca3b data/apothic_compats/apotheosis/affixes/gun/attribute/intricate.json
-4b27755ac741f93e9a6f535354fc5289c2c9d193 data/apothic_compats/apotheosis/affixes/gun/attribute/lacerating.json
-bf925be511e8df8170be214143b735ffc7d48fce data/apothic_compats/apotheosis/affixes/gun/attribute/piercing.json
+60c959b72e7f7dcde3fe5faa50acf815d281f1c2 data/apothic_compats/apotheosis/affixes/gun/attribute/experienced.json
+81ba52177a6fa81aaca0256abd86746c6c9f6de8 data/apothic_compats/apotheosis/affixes/gun/attribute/intricate.json
+aa0ed37add0b017568d5f3a53831348006b58f12 data/apothic_compats/apotheosis/affixes/gun/attribute/lacerating.json
+73c26e87b21b2a4c0c3ecb788a3b7658b6a3a6bd data/apothic_compats/apotheosis/affixes/gun/attribute/piercing.json
 f72bfdff5766ad5324417823bb038a61b3ad2cdc data/apothic_compats/apotheosis/affixes/gun/attribute/windswept.json
 2d5b94d3e3ce6cc896bc29b0378ad575471e7220 data/apothic_compats/apotheosis/affixes/gun/mob_effect/acidic.json
 000bb3f89af3fec34c4d484e5a6986cbe802e788 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/acidic.json

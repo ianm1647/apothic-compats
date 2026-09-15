@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats;
 
+import com.aetherteam.aetherii.item.equipment.weapons.DartShooterItem;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
@@ -42,31 +43,19 @@ public class Comp {
     public static class LootCategories {
 
         public static class Aether {
-//            public static LootCategory DART_SHOOTER = category("dart_shooter",
-//                    s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
+            public static LootCategory DART_SHOOTER = category("dart_shooter",
+                    s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
 
             public static void bootstrap() {}
+
+            public static boolean isDartShooter(LootCategory cat) {
+                return cat == DART_SHOOTER;
+            }
         }
 
         public static class Artifice {
             public static LootCategory GUN = category("gun",
                     s -> s.getItem() instanceof GunItem, ALObjects.EquipmentSlotGroups.MAINHAND);
-
-            public static void bootstrap() {}
-        }
-
-        public static class Create {
-//            public static LootCategory POTATO_CANNON = category("potato_cannon",
-//                    s -> s.getItem() instanceof PotatoCannonItem, ALObjects.EquipmentSlotGroups.MAINHAND);
-
-            public static void bootstrap() {}
-        }
-
-        public static class Malum {
-//            public static LootCategory SCYTHE = category("scythe",
-//                    s -> s.getItem() instanceof MalumScytheItem, ALObjects.EquipmentSlotGroups.MAINHAND);
-//            public static LootCategory STAFF = category("staff",
-//                    s -> s.getItem() instanceof AbstractStaffItem, ALObjects.EquipmentSlotGroups.MAINHAND);
 
             public static void bootstrap() {}
         }
@@ -105,12 +94,6 @@ public class Comp {
             }
             if (ModList.get().isLoaded("irons_artifice")) {
                 Artifice.bootstrap();
-            }
-            if (ModList.get().isLoaded("create")) {
-                Create.bootstrap();
-            }
-            if (ModList.get().isLoaded("malum")) {
-                Malum.bootstrap();
             }
         }
     }
