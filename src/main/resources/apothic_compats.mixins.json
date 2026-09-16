@@ -2,8 +2,7 @@
   "required": true,
   "package": "ianm1647.apothic_compats.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
   },

@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether_ii:aether_holy_isles"
+    ]
+  },
+  "stack": {
+    "id": "aether_ii:zanite_hammer"
+  },
+  "weights": {
+    "ascent": {
+      "weight": 25
+    },
+    "summit": {
+      "weight": 15
+    },
+    "pinnacle": {
+      "weight": 5
+    }
+  }
+}

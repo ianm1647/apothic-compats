@@ -1,4 +1,5 @@
-// 26.1.2	2026-09-15T16:19:48.7726001	Iron's Artifice Affixes
+// 26.1.2	2026-09-15T21:34:09.6443299	Iron's Artifice Affixes
+acae11b511353bd42bd6ac6f2b54f6c545faeab1 data/apothic_compats/apotheosis/affixes/gun/ancient/infinite.json
 ea6a92a589b252d2d7bc4b645fb5da43d1072027 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/elven.json
 bd123acec694848a2723e6ae4dc3ca09a2acd7e8 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/experienced.json
 d5c7f9fbee7e9fa8083aea483fb51aa46e8885c6 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/intricate.json
@@ -11,6 +12,7 @@ f9a1e508365c4e9dc24b63b82ffc9108e3391ec3 data/apothic_compats/apotheosis/affixes
 aa0ed37add0b017568d5f3a53831348006b58f12 data/apothic_compats/apotheosis/affixes/gun/attribute/lacerating.json
 73c26e87b21b2a4c0c3ecb788a3b7658b6a3a6bd data/apothic_compats/apotheosis/affixes/gun/attribute/piercing.json
 f72bfdff5766ad5324417823bb038a61b3ad2cdc data/apothic_compats/apotheosis/affixes/gun/attribute/windswept.json
+f67afe797761ab4582746bffe62e1539147da0b4 data/apothic_compats/apotheosis/affixes/gun/infinite.json
 2d5b94d3e3ce6cc896bc29b0378ad575471e7220 data/apothic_compats/apotheosis/affixes/gun/mob_effect/acidic.json
 000bb3f89af3fec34c4d484e5a6986cbe802e788 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/acidic.json
 f67a39e8427f0461e2750011946a12667b4bac31 data/apothic_compats/apotheosis/affixes/gun/mob_effect/ancient/blighted.json

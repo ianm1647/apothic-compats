@@ -20,8 +20,7 @@ public class ModelsProvider extends ModelProvider {
     }
 
     private void generateItems(ItemModelGenerators itemModels) {
-        Comp.R.getRegisteredObjects(Registries.ITEM).forEach((item) -> {
-            itemModels.generateFlatItem(item.value(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        });
+        Comp.R.getRegisteredObjects(Registries.ITEM).forEach((item) ->
+                itemModels.generateFlatItem(item.value(), ModelTemplates.FLAT_HANDHELD_ITEM));
     }
 }

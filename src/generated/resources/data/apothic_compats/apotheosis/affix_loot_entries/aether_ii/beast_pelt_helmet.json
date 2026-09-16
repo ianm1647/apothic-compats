@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether_ii:aether_holy_isles"
+    ]
+  },
+  "stack": {
+    "id": "aether_ii:beast_pelt_helmet"
+  },
+  "weights": {
+    "haven": {
+      "quality": 1.0,
+      "weight": 10
+    },
+    "frontier": {
+      "weight": 25
+    }
+  }
+}

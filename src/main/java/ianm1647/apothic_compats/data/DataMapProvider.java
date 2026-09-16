@@ -29,7 +29,7 @@ public class DataMapProvider extends ApothDataMapProvider {
         super(packOutput, lookupProvider);
     }
 
-    public static final ResourceKey<DimensionType> AETHER = register("aetherii", "the_aether");
+    public static final ResourceKey<DimensionType> AETHER = register("aether_ii", "aether_holy_isles");
     public static final ResourceKey<DimensionType> OTHER = register("allthemodium", "the_other");
     public static final ResourceKey<DimensionType> STARLIGHT = register("eternal_starlight", "starlight");
     public static final ResourceKey<DimensionType> OTHERSIDE = register("deeperdarker", "otherside");
@@ -102,7 +102,6 @@ public class DataMapProvider extends ApothDataMapProvider {
 
         Builder<LootCategory, Item> catOverrides = builder(Apoth.DataMaps.LOOT_CATEGORY_OVERRIDES);
 
-        catOverrides.add(BuiltInRegistries.ITEM.wrapAsHolder(AetherIIItems.DART_SHOOTER.value()), Apoth.LootCategories.BOW, true);
         catOverrides.add(BuiltInRegistries.ITEM.wrapAsHolder(Apoth.Items.POTION_CHARM.value()), Apoth.LootCategories.NONE, true);
         catOverrides.add(ModTags.Items.CURIO_BLACKLIST, Apoth.LootCategories.NONE, true);
     }

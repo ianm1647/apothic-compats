@@ -1028,6 +1028,10 @@
 
 
 
+  "affix.apothic_compats:gun/infinite": "Never-ending",
+  "affix.apothic_compats:gun/infinite.suffix": "of Infinity",
+  "affix.apothic_compats:gun/infinite.desc": "Your bullets are infinite.",
+
   "affix.apothic_compats:gun/attribute/elven": "Elven",
   "affix.apothic_compats:gun/attribute/elven.suffix": "of the First Archer",
   "affix.apothic_compats:gun/attribute/ancient/elven": "Elven",

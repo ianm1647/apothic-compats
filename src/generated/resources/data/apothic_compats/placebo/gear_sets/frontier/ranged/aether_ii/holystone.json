@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "boots": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:burrukai_plate_boots"
+      },
+      "weight": 10
+    }
+  ],
+  "chestplates": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:burrukai_plate_chestplate"
+      },
+      "weight": 10
+    }
+  ],
+  "helmets": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:burrukai_plate_helmet"
+      },
+      "weight": 10
+    }
+  ],
+  "leggings": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:burrukai_plate_leggings"
+      },
+      "weight": 10
+    }
+  ],
+  "mainhands": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:holystone_crossbow"
+      },
+      "weight": 10
+    }
+  ],
+  "weight": 20
+}

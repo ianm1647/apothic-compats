@@ -7,13 +7,14 @@ import ianm1647.ancientreforging.data.ARRarityProvider;
 import ianm1647.apothic_compats.affix.ModAffixRegistry;
 import ianm1647.apothic_compats.data.*;
 import ianm1647.apothic_compats.data.ae2.*;
-import ianm1647.apothic_compats.data.aetherii.*;
+import ianm1647.apothic_compats.data.aether_ii.*;
 import ianm1647.apothic_compats.data.alexsmods.*;
 import ianm1647.apothic_compats.data.curios.*;
 import ianm1647.apothic_compats.data.allthemodium.*;
 import ianm1647.apothic_compats.data.friendsandfoes.*;
 import ianm1647.apothic_compats.data.irons_artifice.*;
 import ianm1647.apothic_compats.data.undergarden.*;
+import ianm1647.apothic_compats.event.AffixEvents;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -25,6 +26,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
@@ -39,7 +41,7 @@ public class ApothicCompats {
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
-        //modEventBus.register(new AffixEvents());
+        NeoForge.EVENT_BUS.register(new AffixEvents());
         modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
 
         Comp.bootstrap(modEventBus);
@@ -75,7 +77,6 @@ public class ApothicCompats {
                 .provider(AetherIIAffixProvider::new)
                 .provider(AetherIIGearSetProvider::new)
                 .provider(AetherIIInvaderProvider::new)
-//                .provider(DartShooterAffixProvider::new)
 
                 .provider(CavesInvaderProvider::new)
                 .provider(MobsInvaderProvider::new)

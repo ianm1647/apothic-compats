@@ -1,1 +1,12 @@
-// 26.1.2	2026-09-15T16:09:50.9009267	Aether II Gear Sets
+// 26.1.2	2026-09-15T20:36:43.212261	Aether II Gear Sets
+428b4f289be0d63f7104e9ec0ec466da943e0e72 data/apothic_compats/placebo/gear_sets/ascent/aether_ii/zanite.json
+da67d3656236a128564f5531d4d2bc54c1540d4c data/apothic_compats/placebo/gear_sets/ascent/ranged/aether_ii/zanite.json
+3bef528dc332c8f83b9ff3259be725d0d24c1ccc data/apothic_compats/placebo/gear_sets/frontier/aether_ii/holystone.json
+62c21e61a851e3b7a0cf1a87e43027f38da6c868 data/apothic_compats/placebo/gear_sets/frontier/aether_ii/skyroot.json
+0782e7497efb2cef57ebf9d99dcede2b46a875a6 data/apothic_compats/placebo/gear_sets/frontier/ranged/aether_ii/holystone.json
+39a0b76f4e7e7c74dd18afb39202f67083f4a5aa data/apothic_compats/placebo/gear_sets/frontier/ranged/aether_ii/skyroot.json
+bdcda1c344029f74d69392a558b8ccecda948dc3 data/apothic_compats/placebo/gear_sets/pinnacle/aether_ii/neptune.json
+faae1af34cf8fafc1ec5820258523fe31e6a93ac data/apothic_compats/placebo/gear_sets/summit/aether_ii/arkenium.json
+86b054ba1090b9c3e659c93b436285c1cc52a0cd data/apothic_compats/placebo/gear_sets/summit/aether_ii/gravitite.json
+a6d94614dbc8d485852eb44e1b2cbaae5f49f368 data/apothic_compats/placebo/gear_sets/summit/ranged/aether_ii/arkenium.json
+681f99879b44059c099bf33a23974bfbf7833074 data/apothic_compats/placebo/gear_sets/summit/ranged/aether_ii/gravitite.json

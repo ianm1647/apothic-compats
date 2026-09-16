@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether_ii:aether_holy_isles"
+    ]
+  },
+  "stack": {
+    "id": "aether_ii:arkenium_axe"
+  },
+  "weights": {
+    "ascent": {
+      "weight": 15
+    },
+    "summit": {
+      "weight": 25
+    },
+    "pinnacle": {
+      "weight": 15
+    }
+  }
+}

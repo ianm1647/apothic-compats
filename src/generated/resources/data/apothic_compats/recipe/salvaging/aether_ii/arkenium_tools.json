@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "aether_ii:arkenium_shortsword",
+    "aether_ii:arkenium_pike",
+    "aether_ii:arkenium_hammer",
+    "aether_ii:arkenium_crossbow",
+    "aether_ii:arkenium_shovel",
+    "aether_ii:arkenium_pickaxe",
+    "aether_ii:arkenium_axe",
+    "aether_ii:arkenium_trowel",
+    "aether_ii:arkenium_shield"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "aether_ii:arkenium_plate"
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "boots": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_boots"
+      },
+      "weight": 10
+    }
+  ],
+  "chestplates": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_chestplate"
+      },
+      "weight": 10
+    }
+  ],
+  "helmets": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_helmet"
+      },
+      "weight": 10
+    }
+  ],
+  "leggings": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_leggings"
+      },
+      "weight": 10
+    }
+  ],
+  "mainhands": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_shortsword"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_pike"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_hammer"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_axe"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_pickaxe"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_shovel"
+      },
+      "weight": 10
+    }
+  ],
+  "offhands": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:gravitite_shield"
+      },
+      "weight": 10
+    }
+  ],
+  "quality": 2.5,
+  "weight": 10
+}

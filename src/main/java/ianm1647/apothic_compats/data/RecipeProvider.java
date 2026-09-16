@@ -26,7 +26,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class RecipeProvider extends LegacyRecipeProvider {
     String ae2 = "ae2";
-    String aetherii = "aetherii";
+    String aetherii = "aether_ii";
     String atm = "allthemodium";
     String undergarden = "undergarden";
 
@@ -53,17 +53,64 @@ public class RecipeProvider extends LegacyRecipeProvider {
 
     private void genAether() {
         addSalvaging("skyroot_tools", aetherii, new SalvagingRecipe.OutputData(AetherIIBlocks.SKYROOT_PLANKS.asItem(), 0, 1),
-                AetherIIItems.SKYROOT_AXE.get(), AetherIIItems.SKYROOT_PICKAXE.get(), AetherIIItems.SKYROOT_SHOVEL.get(), AetherIIItems.SKYROOT_SHORTSWORD.get());
+                AetherIIItems.SKYROOT_SHORTSWORD.get(),
+                AetherIIItems.SKYROOT_PIKE.get(),
+                AetherIIItems.SKYROOT_HAMMER.get(),
+                AetherIIItems.SKYROOT_CROSSBOW.get(),
+                AetherIIItems.SKYROOT_SHOVEL.get(),
+                AetherIIItems.SKYROOT_PICKAXE.get(),
+                AetherIIItems.SKYROOT_AXE.get(),
+                AetherIIItems.SKYROOT_TROWEL.get(),
+                AetherIIItems.SKYROOT_SHIELD.get());
+
         addSalvaging("holystone_tools", aetherii, new SalvagingRecipe.OutputData(AetherIIBlocks.HOLYSTONE.asItem(), 0, 1),
-                AetherIIItems.HOLYSTONE_AXE.get(), AetherIIItems.HOLYSTONE_PICKAXE.get(), AetherIIItems.HOLYSTONE_SHOVEL.get(), AetherIIItems.HOLYSTONE_SHORTSWORD.get());
+                AetherIIItems.HOLYSTONE_SHORTSWORD.get(),
+                AetherIIItems.HOLYSTONE_PIKE.get(),
+                AetherIIItems.HOLYSTONE_HAMMER.get(),
+                AetherIIItems.HOLYSTONE_CROSSBOW.get(),
+                AetherIIItems.HOLYSTONE_SHOVEL.get(),
+                AetherIIItems.HOLYSTONE_PICKAXE.get(),
+                AetherIIItems.HOLYSTONE_AXE.get(),
+                AetherIIItems.HOLYSTONE_TROWEL.get());
+
         addSalvaging("zanite_tools", aetherii, new SalvagingRecipe.OutputData(AetherIIItems.ZANITE_GEMSTONE.get(), 0, 1),
-                AetherIIItems.ZANITE_AXE.get(), AetherIIItems.ZANITE_PICKAXE.get(), AetherIIItems.ZANITE_SHOVEL.get(), AetherIIItems.ZANITE_SHORTSWORD.get());
-        addSalvaging("gravitite_tools", aetherii, new SalvagingRecipe.OutputData(AetherIIBlocks.GRAVITITE_BLOCK.asItem(), 0, 1),
-                AetherIIItems.GRAVITITE_AXE.get(), AetherIIItems.GRAVITITE_PICKAXE.get(), AetherIIItems.GRAVITITE_SHOVEL.get(), AetherIIItems.GRAVITITE_SHORTSWORD.get());
+                AetherIIItems.ZANITE_SHORTSWORD.get(),
+                AetherIIItems.ZANITE_PIKE.get(),
+                AetherIIItems.ZANITE_HAMMER.get(),
+                AetherIIItems.ZANITE_CROSSBOW.get(),
+                AetherIIItems.ZANITE_SHOVEL.get(),
+                AetherIIItems.ZANITE_PICKAXE.get(),
+                AetherIIItems.ZANITE_AXE.get(),
+                AetherIIItems.ZANITE_TROWEL.get(),
+                AetherIIItems.ZANITE_SHIELD.get());
+
+        addSalvaging("arkenium_tools", aetherii, new SalvagingRecipe.OutputData(AetherIIItems.ARKENIUM_PLATE.asItem(), 0, 1),
+                AetherIIItems.ARKENIUM_SHORTSWORD.get(),
+                AetherIIItems.ARKENIUM_PIKE.get(),
+                AetherIIItems.ARKENIUM_HAMMER.get(),
+                AetherIIItems.ARKENIUM_CROSSBOW.get(),
+                AetherIIItems.ARKENIUM_SHOVEL.get(),
+                AetherIIItems.ARKENIUM_PICKAXE.get(),
+                AetherIIItems.ARKENIUM_AXE.get(),
+                AetherIIItems.ARKENIUM_TROWEL.get(),
+                AetherIIItems.ARKENIUM_SHIELD.get());
+
+        addSalvaging("gravitite_tools", aetherii, new SalvagingRecipe.OutputData(AetherIIItems.GRAVITITE_PLATE.asItem(), 0, 1),
+                AetherIIItems.GRAVITITE_SHORTSWORD.get(),
+                AetherIIItems.GRAVITITE_PIKE.get(),
+                AetherIIItems.GRAVITITE_HAMMER.get(),
+                AetherIIItems.GRAVITITE_CROSSBOW.get(),
+                AetherIIItems.GRAVITITE_SHOVEL.get(),
+                AetherIIItems.GRAVITITE_PICKAXE.get(),
+                AetherIIItems.GRAVITITE_AXE.get(),
+                AetherIIItems.GRAVITITE_TROWEL.get(),
+                AetherIIItems.GRAVITITE_SHIELD.get());
 
         addSalvaging("zanite_armor", aetherii, new SalvagingRecipe.OutputData(AetherIIItems.ZANITE_GEMSTONE.get(), 1, 3),
                 AetherIIItems.ZANITE_HELMET.get(), AetherIIItems.ZANITE_CHESTPLATE.get(), AetherIIItems.ZANITE_LEGGINGS.get(), AetherIIItems.ZANITE_BOOTS.get());
-        addSalvaging("gravitite_armor", aetherii, new SalvagingRecipe.OutputData(AetherIIBlocks.GRAVITITE_BLOCK.asItem(), 1, 3),
+        addSalvaging("arkenium_armor", aetherii, new SalvagingRecipe.OutputData(AetherIIItems.ARKENIUM_PLATE.get(), 1, 3),
+                AetherIIItems.ARKENIUM_HELMET.get(), AetherIIItems.ARKENIUM_CHESTPLATE.get(), AetherIIItems.ARKENIUM_LEGGINGS.get(), AetherIIItems.ARKENIUM_BOOTS.get());
+        addSalvaging("gravitite_armor", aetherii, new SalvagingRecipe.OutputData(AetherIIItems.GRAVITITE_PLATE.asItem(), 1, 3),
                 AetherIIItems.GRAVITITE_HELMET.get(), AetherIIItems.GRAVITITE_CHESTPLATE.get(), AetherIIItems.GRAVITITE_LEGGINGS.get(), AetherIIItems.GRAVITITE_BOOTS.get());
     }
 

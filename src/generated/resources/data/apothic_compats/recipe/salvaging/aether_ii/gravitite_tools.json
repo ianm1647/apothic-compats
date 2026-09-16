@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "type": "apotheosis:salvaging",
+  "input": [
+    "aether_ii:gravitite_shortsword",
+    "aether_ii:gravitite_pike",
+    "aether_ii:gravitite_hammer",
+    "aether_ii:gravitite_crossbow",
+    "aether_ii:gravitite_shovel",
+    "aether_ii:gravitite_pickaxe",
+    "aether_ii:gravitite_axe",
+    "aether_ii:gravitite_trowel",
+    "aether_ii:gravitite_shield"
+  ],
+  "outputs": [
+    {
+      "max_count": 1,
+      "min_count": 0,
+      "stack": {
+        "id": "aether_ii:gravitite_plate"
+      }
+    }
+  ]
+}

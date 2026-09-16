@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "constraints": {
+    "dimensions": [
+      "aether_ii:aether_holy_isles"
+    ]
+  },
+  "stack": {
+    "id": "aether_ii:burrukai_plate_boots"
+  },
+  "weights": {
+    "frontier": {
+      "weight": 10
+    },
+    "ascent": {
+      "weight": 25
+    }
+  }
+}

@@ -6,6 +6,7 @@ import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
+import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -88,7 +89,7 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
     }
 
     protected void addEntry(AffixLootEntry entry) {
-        Identifier key = Apotheosis.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath());
+        Identifier key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stackTemplate().item().value()).getPath());
         this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

@@ -4,6 +4,7 @@ import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
+import dev.shadowsoffire.apotheosis.util.ApothMiscUtil;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.dynreg.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
@@ -17,6 +18,7 @@ import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.irons_artifice.BulletModifierAffix;
+import ianm1647.apothic_compats.affix.irons_artifice.InfiniteAmmoAffix;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -26,9 +28,11 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
 
@@ -170,6 +174,13 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .limit(4)
                 .value(mythic, 100, 200, 1, 40));
 
+        this.addConditionally(ApothicCompats.loc("gun/infinite"), new InfiniteAmmoAffix(
+                AffixDefinition.builder(AffixType.ABILITY)
+                        .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .build(),
+                Set.of(Comp.LootCategories.Artifice.GUN),
+                linkedSet(mythic)), new ModLoadedCondition(mod));
+
         this.addAncientAttribute("gun", "elven", ALObjects.Attributes.PROJECTILE_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
@@ -247,6 +258,13 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .stacking()
                 .value(ancient, 200, 400, 2, 20));
 
+        this.addConditionally(ApothicCompats.loc("gun/ancient/infinite"), new InfiniteAmmoAffix(
+                AffixDefinition.builder(AffixType.ABILITY)
+                        .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .build(),
+                Set.of(Comp.LootCategories.Artifice.GUN),
+                linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
     }
 
     private void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
@@ -307,5 +325,9 @@ public class ArtificeAffixProvider extends AffixProvider {
 
     private static LootRarity ancientRarity(String path) {
         return Preconditions.checkNotNull(RarityRegistry.INSTANCE.getValue(AncientReforging.loc(path)));
+    }
+
+    private static Set<LootRarity> linkedSet(LootRarity... rarities) {
+        return ApothMiscUtil.linkedSet(rarities);
     }
 }

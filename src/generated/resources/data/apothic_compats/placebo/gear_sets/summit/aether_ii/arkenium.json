@@ -1,0 +1,99 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether_ii"
+    }
+  ],
+  "boots": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_boots"
+      },
+      "weight": 10
+    }
+  ],
+  "chestplates": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_chestplate"
+      },
+      "weight": 10
+    }
+  ],
+  "helmets": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_helmet"
+      },
+      "weight": 10
+    }
+  ],
+  "leggings": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_leggings"
+      },
+      "weight": 10
+    }
+  ],
+  "mainhands": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_shortsword"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_pike"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_hammer"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_axe"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_pickaxe"
+      },
+      "weight": 10
+    },
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_shovel"
+      },
+      "weight": 10
+    }
+  ],
+  "offhands": [
+    {
+      "stack": {
+        "count": 1,
+        "id": "aether_ii:arkenium_shield"
+      },
+      "weight": 10
+    }
+  ],
+  "quality": 2.5,
+  "weight": 10
+}

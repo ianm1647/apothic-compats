@@ -134,14 +134,14 @@ public class BulletModifierAffix extends Affix {
                 case BULLET_SELF -> {
                     if (bullet.getOwner() instanceof LivingEntity owner) {
                         components.getOrCreate(ShotComponents.POST_HIT_EFFECTS).getOrCreate(EffectPostHit.class, () -> new EffectPostHit(data.duration.getInt(level), data.amplifier.getInt(level), this.effect)).addDuration(80);
-                        gunProfile.baseProfile().applyFrom(components);
-                        this.applyEffect(owner, rarity, level, bullet);
+                        components.applyFrom(gunProfile.baseProfile());
+                        this.applyEffect(owner, rarity, level);
                     }
                 }
                 case BULLET_TARGET -> {
                     components.getOrCreate(ShotComponents.POST_HIT_EFFECTS).getOrCreate(EffectPostHit.class, () -> new EffectPostHit(data.duration.getInt(level), data.amplifier.getInt(level), this.effect)).addDuration(80);
-                    gunProfile.baseProfile().applyFrom(components);
-                    this.applyEffect(target, rarity, level, bullet);
+                    components.applyFrom(gunProfile.baseProfile());
+                    this.applyEffect(target, rarity, level);
                 }
                 default -> {}
             }
@@ -153,7 +153,7 @@ public class BulletModifierAffix extends Affix {
         return data.cooldown;
     }
 
-    private void applyEffect(LivingEntity target, LootRarity rarity, float level, Bullet bullet) {
+    private void applyEffect(LivingEntity target, LootRarity rarity, float level) {
         if (target.level().isClientSide()) {
             return;
         }
