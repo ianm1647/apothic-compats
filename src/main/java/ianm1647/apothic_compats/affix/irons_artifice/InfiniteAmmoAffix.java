@@ -46,7 +46,7 @@ public class InfiniteAmmoAffix extends Affix {
     }
 
     public static void preventAmmoConsumption(AmmoEvent.Consume event) {
-        if (AffixHelper.streamAffixes(event.getEntity().getActiveItem()).anyMatch(a -> a.getAffix() instanceof InfiniteAmmoAffix)) {
+        if (AffixHelper.streamAffixes(event.getShotProfile().itemStack()).anyMatch(a -> a.getAffix() instanceof InfiniteAmmoAffix)) {
             if (event.getAmmoToConsume() > 0) {
                 LivingEntity shooter = event.getEntity();
                 event.setCanceled(true);
