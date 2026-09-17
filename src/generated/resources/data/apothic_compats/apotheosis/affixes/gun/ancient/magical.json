@@ -9,13 +9,13 @@
       "modid": "ancientreforging"
     }
   ],
-  "type": "apothic_compats:infinite_ammo",
+  "type": "apothic_compats:magic_bullet",
   "definition": {
     "affix_type": "ability",
     "exclusive_set": [],
     "weights": {
       "quality": 0.1,
-      "weight": 10
+      "weight": 25
     }
   },
   "rarities": [

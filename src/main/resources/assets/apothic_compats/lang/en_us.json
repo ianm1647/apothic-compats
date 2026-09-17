@@ -1032,6 +1032,34 @@
   "affix.apothic_compats:gun/infinite.suffix": "of Infinity",
   "affix.apothic_compats:gun/infinite.desc": "Your bullets are infinite.",
 
+  "affix.apothic_compats:gun/ancient/infinite": "Never-ending",
+  "affix.apothic_compats:gun/ancient/infinite.suffix": "of Infinity",
+  "affix.apothic_compats:gun/ancient/infinite.desc": "Your bullets are infinite.",
+
+  "affix.apothic_compats:gun/festive": "Festive",
+  "affix.apothic_compats:gun/festive.suffix": "of Partying",
+  "affix.apothic_compats:gun/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+
+  "affix.apothic_compats:gun/ancient/festive": "Festive",
+  "affix.apothic_compats:gun/ancient/festive.suffix": "of Partying",
+  "affix.apothic_compats:gun/ancient/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+
+  "affix.apothic_compats:gun/magical": "Magical",
+  "affix.apothic_compats:gun/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:gun/magical.desc": "Your bullets deal magic damage.",
+
+  "affix.apothic_compats:gun/ancient/magical": "Magical",
+  "affix.apothic_compats:gun/ancient/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:gun/ancient/magical.desc": "Your bullets deal magic damage.",
+
+  "affix.apothic_compats:gun/multishot": "Abundant",
+  "affix.apothic_compats:gun/multishot.suffix": "of Multiplied Bullets",
+  "affix.apothic_compats:gun/multishot.desc": "Your gun shoots %s extra bullets.",
+
+  "affix.apothic_compats:gun/ancient/multishot": "Abundant",
+  "affix.apothic_compats:gun/ancient/multishot.suffix": "of Multiplied Bullets",
+  "affix.apothic_compats:gun/ancient/multishot.desc": "Your gun shoots %s extra bullets.",
+
   "affix.apothic_compats:gun/attribute/elven": "Elven",
   "affix.apothic_compats:gun/attribute/elven.suffix": "of the First Archer",
   "affix.apothic_compats:gun/attribute/ancient/elven": "Elven",

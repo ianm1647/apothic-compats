@@ -21,6 +21,9 @@ sourceSets.main.resources {
 repositories {
     mavenLocal()
 
+    maven { url "https://code.redspace.io/snapshots"}
+    maven { url "https://code.redspace.io/releases"}
+    maven { url "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
     maven { url "https://www.cursemaven.com" }
     maven { url "https://maven.blamejared.com/" }
     maven { url "https://maven.shadowsoffire.dev/releases" }
@@ -50,6 +53,8 @@ dependencies {
     compileOnly "dev.architectury:architectury-neoforge:$architectury_version"
 
     //compats
+    implementation "io.redspace:irons_artifice:$ironsartifice_version"
+
 //    compileOnly "curse.maven:malum-484064:$malum_version"
 //    compileOnly "curse.maven:amendments-896746:$amendments_version"
 //    compileOnly "curse.maven:supplementaries-412082:$supplementaries_version"
@@ -75,13 +80,14 @@ dependencies {
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
     implementation "curse.maven:alexs-mobs-continued-1635121:$alexsmobs_version"
     implementation "curse.maven:alexs-caves-continued-1645389:$alexscaves_version"
-    implementation "curse.maven:irons-artifice-1650193:$ironsartifice_version"
+//    implementation "curse.maven:irons-artifice-1650193:$ironsartifice_version"
 
     //compat deps
+    implementation "com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+
 //    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
 //    compileOnly "curse.maven:owo-532610:$owo_version"
-    implementation "curse.maven:geckolib-388172:$geckolib_version"
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
     implementation "curse.maven:guideme-1173950:$guideme_version"
 //    compileOnly "curse.maven:lionfish-1001614:$lionfish_version"

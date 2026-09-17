@@ -11,12 +11,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.HitResult;
 
-public class EffectPostHit implements PostHitEffect {
+public class MobEffectPostHit implements PostHitEffect {
     private int durationTicks;
     private int amplifier;
     public Holder<MobEffect> effect;
 
-    public EffectPostHit(int durationTicks, int amplifier, Holder<MobEffect> effect) {
+    public MobEffectPostHit(int durationTicks, int amplifier, Holder<MobEffect> effect) {
         this.durationTicks = durationTicks;
         this.amplifier = amplifier;
         this.effect = effect;

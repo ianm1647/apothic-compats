@@ -1,7 +1,7 @@
 package ianm1647.apothic_compats.data.irons_artifice;
 
 import dev.shadowsoffire.apotheosis.affix.*;
-import dev.shadowsoffire.apotheosis.affix.effect.MobEffectAffix;
+import dev.shadowsoffire.apotheosis.affix.effect.*;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import dev.shadowsoffire.apotheosis.util.ApothMiscUtil;
@@ -10,15 +10,12 @@ import dev.shadowsoffire.placebo.dynreg.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import dev.shadowsoffire.apotheosis.Apotheosis;
-import dev.shadowsoffire.apotheosis.affix.effect.DamageReductionAffix;
-import dev.shadowsoffire.apotheosis.affix.effect.EnchantmentAffix;
 import dev.shadowsoffire.apotheosis.data.AffixProvider;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
-import ianm1647.apothic_compats.affix.irons_artifice.BulletModifierAffix;
-import ianm1647.apothic_compats.affix.irons_artifice.InfiniteAmmoAffix;
+import ianm1647.apothic_compats.affix.irons_artifice.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -28,7 +25,6 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 
@@ -174,11 +170,37 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .limit(4)
                 .value(mythic, 100, 200, 1, 40));
 
-        this.addConditionally(ApothicCompats.loc("gun/infinite"), new InfiniteAmmoAffix(
+        this.addConditionally(ApothicCompats.loc("gun/telepathic"), new TelepathicGunAffix(
+                        AffixDefinition.builder(AffixType.BASIC_EFFECT)
+                                .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                                .build(),
+                        linkedSet(rare, epic, mythic)), new ModLoadedCondition(mod));
+
+        this.addConditionally(ApothicCompats.loc("gun/festive"),
+                FestiveAffix.builder()
+                        .categories(Comp.LootCategories.Artifice.GUN)
+                        .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(epic, StepFunction.fromBounds(0.02F, 0.05F, 0.005F), 20)
+                        .value(mythic, StepFunction.fromBounds(0.03F, 0.06F, 0.005F), 20)
+                        .build(), new ModLoadedCondition(mod));
+
+        this.addConditionally(ApothicCompats.loc("gun/magical"), new MagicalBulletAffix(
                 AffixDefinition.builder(AffixType.ABILITY)
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .build(),
-                Set.of(Comp.LootCategories.Artifice.GUN),
+                linkedSet(rare, epic, mythic)), new ModLoadedCondition(mod));
+
+        this.addConditionally(ApothicCompats.loc("gun/multishot"),
+                AffixBuilder.simple(MultiShotAffix::new)
+                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(epic, 1)
+                        .value(mythic, 2)
+                        .build(), new ModLoadedCondition(mod));
+
+        this.addConditionally(ApothicCompats.loc("gun/infinite"), new InfiniteAmmoAffix(
+                AffixDefinition.builder(AffixType.ABILITY)
+                        .weights(TieredWeights.forAllTiers(5, DEFAULT_QUALITY))
+                        .build(),
                 linkedSet(mythic)), new ModLoadedCondition(mod));
 
         this.addAncientAttribute("gun", "elven", ALObjects.Attributes.PROJECTILE_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
@@ -258,11 +280,35 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .stacking()
                 .value(ancient, 200, 400, 2, 20));
 
-        this.addConditionally(ApothicCompats.loc("gun/ancient/infinite"), new InfiniteAmmoAffix(
+        this.addConditionally(ApothicCompats.loc("gun/ancient/telepathic"), new TelepathicGunAffix(
+                        AffixDefinition.builder(AffixType.BASIC_EFFECT)
+                                .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                                .build(),
+                        linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("gun/ancient/festive"),
+                FestiveAffix.builder()
+                        .categories(Comp.LootCategories.Artifice.GUN)
+                        .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
+                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("gun/ancient/magical"), new MagicalBulletAffix(
                 AffixDefinition.builder(AffixType.ABILITY)
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .build(),
-                Set.of(Comp.LootCategories.Artifice.GUN),
+                linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("gun/ancient/multishot"),
+                AffixBuilder.simple(MultiShotAffix::new)
+                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(ancient, 3)
+                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("gun/ancient/infinite"), new InfiniteAmmoAffix(
+                AffixDefinition.builder(AffixType.ABILITY)
+                        .weights(TieredWeights.forAllTiers(10, DEFAULT_QUALITY))
+                        .build(),
                 linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
     }

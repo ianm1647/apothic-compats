@@ -5,20 +5,23 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
+import dev.shadowsoffire.apotheosis.affix.*;
+import io.redspace.irons_artifice.api.GunShootEvent;
 import io.redspace.irons_artifice.data.ShotComponentMap;
+import io.redspace.irons_artifice.data.ShotComponentTemplate;
 import io.redspace.irons_artifice.data.ShotComponents;
 import io.redspace.irons_artifice.entity.Bullet;
 import io.redspace.irons_artifice.gun.GunProfile;
+import io.redspace.irons_artifice.gun.ShotProfile;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.EventHooks;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
-import dev.shadowsoffire.apotheosis.affix.Affix;
-import dev.shadowsoffire.apotheosis.affix.AffixBuilder;
-import dev.shadowsoffire.apotheosis.affix.AffixDefinition;
-import dev.shadowsoffire.apotheosis.affix.AffixInstance;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.mixin.LivingEntityInvoker;
@@ -40,6 +43,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.HitResult.Type;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 
+@EventBusSubscriber
 public class BulletModifierAffix extends Affix {
 
     public static final Codec<BulletModifierAffix> CODEC = RecordCodecBuilder.create(inst -> inst
@@ -126,24 +130,17 @@ public class BulletModifierAffix extends Affix {
     @Override
     public void onProjectileImpact(float level, LootRarity rarity, Projectile proj, HitResult res, Type type) {
         if (type == Type.ENTITY && ((EntityHitResult) res).getEntity() instanceof LivingEntity target && proj instanceof Bullet bullet) {
-            GunProfile gunProfile = bullet.getProfile().gun();
-            ShotComponentMap components = bullet.getProfile().gun().baseProfile();
-            EffectData data = this.values.get(rarity);
-
             switch (this.target) {
                 case BULLET_SELF -> {
                     if (bullet.getOwner() instanceof LivingEntity owner) {
-                        components.getOrCreate(ShotComponents.POST_HIT_EFFECTS).getOrCreate(EffectPostHit.class, () -> new EffectPostHit(data.duration.getInt(level), data.amplifier.getInt(level), this.effect)).addDuration(80);
-                        components.applyFrom(gunProfile.baseProfile());
                         this.applyEffect(owner, rarity, level);
                     }
                 }
                 case BULLET_TARGET -> {
-                    components.getOrCreate(ShotComponents.POST_HIT_EFFECTS).getOrCreate(EffectPostHit.class, () -> new EffectPostHit(data.duration.getInt(level), data.amplifier.getInt(level), this.effect)).addDuration(80);
-                    components.applyFrom(gunProfile.baseProfile());
                     this.applyEffect(target, rarity, level);
                 }
-                default -> {}
+                default -> {
+                }
             }
         }
     }
@@ -226,10 +223,6 @@ public class BulletModifierAffix extends Affix {
         }
     }
 
-    /**
-     * This enum is used to specify when a potion is applied.
-     * The naming scheme is "<event>_<target>", so attack_self applies to yourself when you attack.
-     */
     public static enum Target {
         BULLET_SELF("bullet_self"),
         BULLET_TARGET("bullet_target");

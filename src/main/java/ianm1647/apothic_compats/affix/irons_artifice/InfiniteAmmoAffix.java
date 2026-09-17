@@ -11,6 +11,7 @@ import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.placebo.codec.PlaceboCodecs;
 import dev.shadowsoffire.placebo.util.StepFunction;
+import ianm1647.apothic_compats.Comp;
 import io.redspace.irons_artifice.api.AmmoEvent;
 import io.redspace.irons_artifice.data.PlayableSound;
 import io.redspace.irons_artifice.entity.Bullet;
@@ -32,16 +33,13 @@ public class InfiniteAmmoAffix extends Affix {
     public static final Codec<InfiniteAmmoAffix> CODEC = RecordCodecBuilder.create(inst -> inst
             .group(
                     affixDef(),
-                    LootCategory.SET_CODEC.fieldOf("categories").forGetter(a -> a.categories),
                     PlaceboCodecs.setOf(LootRarity.CODEC).fieldOf("rarities").forGetter(a -> a.rarities))
             .apply(inst, InfiniteAmmoAffix::new));
 
-    protected final Set<LootCategory> categories;
     protected final Set<LootRarity> rarities;
 
-    public InfiniteAmmoAffix(AffixDefinition definition, Set<LootCategory> categories, Set<LootRarity> rarities) {
+    public InfiniteAmmoAffix(AffixDefinition definition, Set<LootRarity> rarities) {
         super(definition);
-        this.categories = categories;
         this.rarities = rarities;
     }
 
@@ -57,16 +55,11 @@ public class InfiniteAmmoAffix extends Affix {
 
     @Override
     public boolean canApplyTo(ItemStack stack, LootCategory cat, LootRarity rarity) {
-        return this.categories.add(cat) && this.rarities.contains(rarity);
+        return Comp.LootCategories.Artifice.isGun(cat) && this.rarities.contains(rarity);
     }
 
     @Override
     public Codec<? extends Affix> getCodec() {
         return CODEC;
-    }
-
-    @Override
-    public boolean isLevelIndependent(AffixInstance inst) {
-        return true;
     }
 }

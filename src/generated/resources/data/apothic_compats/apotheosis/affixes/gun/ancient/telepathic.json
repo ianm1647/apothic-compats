@@ -9,13 +9,13 @@
       "modid": "ancientreforging"
     }
   ],
-  "type": "apothic_compats:infinite_ammo",
+  "type": "apothic_compats:telepathic",
   "definition": {
-    "affix_type": "ability",
+    "affix_type": "basic_effect",
     "exclusive_set": [],
     "weights": {
       "quality": 0.1,
-      "weight": 10
+      "weight": 25
     }
   },
   "rarities": [

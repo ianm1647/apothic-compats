@@ -6,15 +6,12 @@
     }
   ],
   "type": "apothic_compats:infinite_ammo",
-  "categories": [
-    "apothic_compats:gun"
-  ],
   "definition": {
     "affix_type": "ability",
     "exclusive_set": [],
     "weights": {
       "quality": 0.1,
-      "weight": 25
+      "weight": 5
     }
   },
   "rarities": [

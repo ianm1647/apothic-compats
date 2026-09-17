@@ -9,16 +9,16 @@
       "modid": "ancientreforging"
     }
   ],
-  "type": "apothic_compats:infinite_ammo",
+  "type": "apothic_compats:double_shot",
   "definition": {
     "affix_type": "ability",
     "exclusive_set": [],
     "weights": {
       "quality": 0.1,
-      "weight": 10
+      "weight": 25
     }
   },
-  "rarities": [
-    "ancientreforging:ancient"
-  ]
+  "values": {
+    "ancientreforging:ancient": 3.0
+  }
 }

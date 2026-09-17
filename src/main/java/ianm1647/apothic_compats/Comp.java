@@ -42,22 +42,15 @@ public class Comp {
 
     public static class LootCategories {
 
-        public static class Aether {
-            public static LootCategory DART_SHOOTER = category("dart_shooter",
-                    s -> s.getItem() instanceof DartShooterItem, ALObjects.EquipmentSlotGroups.MAINHAND);
-
-            public static void bootstrap() {}
-
-            public static boolean isDartShooter(LootCategory cat) {
-                return cat == DART_SHOOTER;
-            }
-        }
-
         public static class Artifice {
             public static LootCategory GUN = category("gun",
                     s -> s.getItem() instanceof GunItem, ALObjects.EquipmentSlotGroups.MAINHAND);
 
             public static void bootstrap() {}
+
+            public static boolean isGun(LootCategory cat) {
+                return cat == GUN;
+            }
         }
 
         public static class Curios {
@@ -88,9 +81,6 @@ public class Comp {
         private static void bootstrap() {
             if (ModList.get().isLoaded("curios")) {
                 Curios.bootstrap();
-            }
-            if (ModList.get().isLoaded("aether")) {
-                Aether.bootstrap();
             }
             if (ModList.get().isLoaded("irons_artifice")) {
                 Artifice.bootstrap();
