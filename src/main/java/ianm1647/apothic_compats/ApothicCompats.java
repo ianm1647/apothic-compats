@@ -14,7 +14,8 @@ import ianm1647.apothic_compats.data.allthemodium.*;
 import ianm1647.apothic_compats.data.friendsandfoes.*;
 import ianm1647.apothic_compats.data.irons_artifice.*;
 import ianm1647.apothic_compats.data.undergarden.*;
-import ianm1647.apothic_compats.event.AffixEvents;
+import ianm1647.apothic_compats.event.ArtificeAffixEvents;
+import ianm1647.apothic_compats.event.ArtificeAttributeEvents;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -24,6 +25,7 @@ import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
@@ -41,13 +43,18 @@ public class ApothicCompats {
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
-        NeoForge.EVENT_BUS.register(new AffixEvents());
         modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
 
         Comp.bootstrap(modEventBus);
         ModAffixRegistry.registerAffixes();
 
         modEventBus.register(this);
+
+        if (ModList.get().isLoaded("irons_artifice")) {
+            modEventBus.addListener(ArtificeAttributeEvents::applyAttribs);
+            NeoForge.EVENT_BUS.register(new ArtificeAffixEvents());
+            NeoForge.EVENT_BUS.register(new ArtificeAttributeEvents());
+        }
     }
 
     @SubscribeEvent

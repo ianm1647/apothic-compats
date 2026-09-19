@@ -1,8 +1,5 @@
 package ianm1647.apothic_compats.event;
 
-import dev.shadowsoffire.apotheosis.affix.AffixHelper;
-import dev.shadowsoffire.apotheosis.affix.AffixInstance;
-import dev.shadowsoffire.apotheosis.affix.effect.TelepathicAffix;
 import ianm1647.apothic_compats.affix.irons_artifice.MultiShotAffix;
 import ianm1647.apothic_compats.affix.irons_artifice.InfiniteAmmoAffix;
 import ianm1647.apothic_compats.affix.irons_artifice.MagicalBulletAffix;
@@ -14,7 +11,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityInvulnerabilityCheckEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
 
-public class AffixEvents {
+public class ArtificeAffixEvents {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void gunShootEvents(GunShootEvent.Pre e) {

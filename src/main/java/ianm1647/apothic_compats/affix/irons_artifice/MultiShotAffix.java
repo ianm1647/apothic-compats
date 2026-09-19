@@ -54,7 +54,7 @@ public class MultiShotAffix extends Affix {
     public static void multiplyBullets(GunShootEvent.Pre event) {
         ShotProfile profile = event.getShotProfile();
         ItemStack weapon = profile.itemStack();
-        Map<DynamicHolder<Affix>, AffixInstance> inst = AffixHelper.getAffixes(weapon);
+        var inst = AffixHelper.getAffixes(weapon);
 
         inst.values().forEach((a) -> {
             if (a.getAffix() instanceof MultiShotAffix affix) {

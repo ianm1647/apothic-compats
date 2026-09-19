@@ -7,12 +7,11 @@ import java.util.Set;
 
 import dev.shadowsoffire.apotheosis.affix.*;
 import io.redspace.irons_artifice.api.GunShootEvent;
-import io.redspace.irons_artifice.data.ShotComponentMap;
-import io.redspace.irons_artifice.data.ShotComponentTemplate;
-import io.redspace.irons_artifice.data.ShotComponents;
+import io.redspace.irons_artifice.data.*;
 import io.redspace.irons_artifice.entity.Bullet;
 import io.redspace.irons_artifice.gun.GunProfile;
 import io.redspace.irons_artifice.gun.ShotProfile;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

@@ -53,7 +53,7 @@ dependencies {
     compileOnly "dev.architectury:architectury-neoforge:$architectury_version"
 
     //compats
-    implementation "io.redspace:irons_artifice:$ironsartifice_version"
+    implementation "io.redspace:irons_artifice:$minecraft_version-$ironsartifice_version"
 
 //    compileOnly "curse.maven:malum-484064:$malum_version"
 //    compileOnly "curse.maven:amendments-896746:$amendments_version"
