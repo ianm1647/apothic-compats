@@ -81,15 +81,6 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 9, 10)
                 .value(mythic, 20, 40));
 
-        this.addAttribute("gun", "agile", Comp.Attributes.Artifice.FIRE_RATE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Apoth.LootCategories.BOW)
-                .value(common, 0.2F, 0.4F)
-                .value(uncommon, 0.2F, 0.4F)
-                .value(rare, 0.3F, 0.5F)
-                .value(epic, 0.5F, 0.6F)
-                .value(mythic, 0.5F, 0.65F));
-
         this.addAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)

@@ -39,9 +39,7 @@ public class Comp {
             public static final Holder<Attribute> FIRE_RATE =
                     R.attribute("fire_rate", () -> new RangedAttribute("apothic_compats:fire_rate", 0.0D, 0.0D, 1000.0D).setSyncable(true));
             public static final Holder<Attribute> AMMO_CONSUME_CHANCE =
-                    R.attribute("ammo_consume_chance", () -> new PercentageAttribute("apothic_compats:ammo_consume_chance", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> ACCELERATING =
-                    R.attribute("accelerating", () -> new RangedAttribute("apothic_compats:accelerating", 0.0D, 0.0D, 1000.0D).setSyncable(true));
+                    R.attribute("ammo_consume_chance", () -> new RangedAttribute("apothic_compats:ammo_consume_chance", 0.0D, 0.0D, 1000.0D).setSyncable(true));
 
             public static final Holder<Attribute> GUN_DAMAGE =
                     R.attribute("gun_damage", () -> new RangedAttribute("apothic_compats:gun_damage", 0.0D, 0.0D, 1000.0D).setSyncable(true));

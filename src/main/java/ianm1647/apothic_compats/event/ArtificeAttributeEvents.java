@@ -12,7 +12,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
@@ -51,10 +50,70 @@ public class ArtificeAttributeEvents {
                 double rate = attribute.getValue() - 1;
                 addValue(profile, ShotComponents.FIRE_RATE, rate);
             }
+            attribute = player.getAttribute(Artifice.AMMO_CONSUME_CHANCE);
+            if (attribute != null) {
+                double chance = attribute.getValue() - 1;
+                addValue(profile, ShotComponents.AMMO_CONSUME_CHANCE, chance);
+            }
             attribute = player.getAttribute(Artifice.GUN_DAMAGE);
             if (attribute != null) {
-                double rate = attribute.getValue();
-                addValue(profile, ShotComponents.DAMAGE, rate);
+                double damage = attribute.getValue();
+                addValue(profile, ShotComponents.DAMAGE, damage);
+            }
+            attribute = player.getAttribute(Artifice.BULLET_SPEED);
+            if (attribute != null) {
+                double damage = attribute.getValue();
+                addValue(profile, ShotComponents.BULLET_SPEED, damage);
+            }
+            attribute = player.getAttribute(Artifice.BULLET_GRAVITY);
+            if (attribute != null) {
+                double damage = attribute.getValue() - 0.05;
+                addValue(profile, ShotComponents.GRAVITY, damage);
+            }
+            attribute = player.getAttribute(Artifice.BULLET_KNOCKBACK);
+            if (attribute != null) {
+                double damage = attribute.getValue();
+                addValue(profile, ShotComponents.KNOCKBACK, damage);
+            }
+            attribute = player.getAttribute(Artifice.BULLET_DRAG);
+            if (attribute != null) {
+                double damage = attribute.getValue() - 0.98;
+                addValue(profile, ShotComponents.BULLET_DRAG, damage);
+            }
+            attribute = player.getAttribute(Artifice.UNDERWATER_DRAG);
+            if (attribute != null) {
+                double damage = attribute.getValue() - 0.95;
+                addValue(profile, ShotComponents.UNDERWATER_DRAG, damage);
+            }
+            attribute = player.getAttribute(Artifice.BLOCK_DAMAGE);
+            if (attribute != null) {
+                double block = attribute.getValue() - 1;
+                addValue(profile, ShotComponents.BLOCK_DAMAGE_MULTIPLIER, block);
+            }
+            attribute = player.getAttribute(Artifice.RELOAD_SPEED);
+            if (attribute != null) {
+                double speed = attribute.getValue() - 1;
+                addValue(profile, ShotComponents.RELOAD_SPEED_MULTIPLIER, speed);
+            }
+            attribute = player.getAttribute(Artifice.BULLET_PIERCE);
+            if (attribute != null) {
+                double pierce = attribute.getValue();
+                addValue(profile, ShotComponents.PIERCING, pierce);
+            }
+            attribute = player.getAttribute(Artifice.LEECH);
+            if (attribute != null) {
+                double leech = attribute.getValue();
+                addValue(profile, ShotComponents.LEECH, leech);
+            }
+            attribute = player.getAttribute(Artifice.GUN_RECOIL);
+            if (attribute != null) {
+                double recoil = attribute.getValue() - 1;
+                addValue(profile, ShotComponents.CAMERA_RECOIL_MULTIPLIER, recoil);
+            }
+            attribute = player.getAttribute(Artifice.BLOWBACK);
+            if (attribute != null) {
+                double blowback = attribute.getValue();
+                addValue(profile, ShotComponents.CHARACTER_BLOWBACK, blowback);
             }
         }
     }
@@ -72,7 +131,6 @@ public class ArtificeAttributeEvents {
                     Artifice.FIRE_DELAY,
                     Artifice.FIRE_RATE,
                     Artifice.AMMO_CONSUME_CHANCE,
-                    Artifice.ACCELERATING,
                     Artifice.GUN_DAMAGE,
                     Artifice.BULLET_SPEED,
                     Artifice.BULLET_GRAVITY,
