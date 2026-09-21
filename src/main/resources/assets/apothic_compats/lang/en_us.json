@@ -71,13 +71,6 @@
 
 
 
-
-
-
-
-
-
-
   "affix.apothic_compats:melee/bloodied": "Bloody",
   "affix.apothic_compats:melee/bloodied.suffix": "of Flesh",
   "affix.apothic_compats:melee/bloodied.desc": "You deal up to %s more damage the lower your health is.",
@@ -220,8 +213,6 @@
   "affix.apothic_compats:ranged/mob_effect/ancient/gooey": "Gooey",
   "affix.apothic_compats:ranged/mob_effect/gooey.suffix": "of Stickiness",
   "affix.apothic_compats:ranged/mob_effect/ancient/gooey.suffix": "of Stickiness",
-
-
 
 
 
@@ -384,14 +375,6 @@
 
   "affix.apothic_compats:curios/attribute/ancient/destructive": "Destructive",
   "affix.apothic_compats:curios/attribute/ancient/destructive.suffix": "of Quarrying",
-
-
-
-
-
-
-
-
 
 
 
@@ -1027,6 +1010,14 @@
 
 
 
+  "apothic_compats:bullet_spread": "Bullet Spread",
+  "apothic_compats:fire_rate": "Fire Rate",
+  "apothic_compats:gun_damage": "Gun Damage",
+  "apothic_compats:bullet_knockback": "Bullet Knockback",
+  "apothic_compats:reload_speed": "Reload Speed",
+  "apothic_compats:bullet_pierce": "Bullet Piercing",
+  "apothic_compats:bullet_leech": "Leech",
+  "apothic_compats:gun_recoil": "Gun Recoil",
 
   "affix.apothic_compats:gun/infinite": "Never-ending",
   "affix.apothic_compats:gun/infinite.suffix": "of Infinity",

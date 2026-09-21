@@ -4,7 +4,9 @@ import ianm1647.apothic_compats.Comp.Attributes.Artifice;
 import io.redspace.irons_artifice.api.ComposeShotEvent;
 import io.redspace.irons_artifice.data.*;
 import io.redspace.irons_artifice.gun.ShotProfile;
+import io.redspace.irons_artifice.item.GunplayManager;
 import net.minecraft.core.Holder;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -64,6 +66,18 @@ public class ArtificeAttributeEvents {
                 multiplyValue(profile, component, value);
             } else if (hasAddValue) {
                 addValue(profile, component, value);
+            }
+        }
+    }
+
+    private static void fromGunToPlayer(Holder<Attribute> attribute, ComponentType<Value> component, ShotProfile profile, Player player) {
+        AttributeInstance inst = player.getAttribute(attribute);
+        double componentValue = profile.peek(component).base();
+        if (inst != null) {
+            if (player.getMainHandItem().is(profile.itemStack().getItem())) {
+                inst.addOrUpdateTransientModifier(new AttributeModifier(Identifier.parse(attribute.getRegisteredName()), componentValue, AttributeModifier.Operation.ADD_VALUE));
+            } else {
+                inst.removeModifier(Identifier.parse(attribute.getRegisteredName()));
             }
         }
     }
