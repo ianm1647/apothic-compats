@@ -14,7 +14,7 @@
                 "summit": 0.025,
                 "pinnacle": 0.03
             },
-            "surface_type": "needs_sky"
+            "surface_type": "needs_sky_or_same_vertical_slice"
         },
         "allthemodium:the_other": {
             "neoforge:conditions": [
@@ -30,7 +30,7 @@
                 "summit": 0.025,
                 "pinnacle": 0.03
             },
-            "surface_type": "needs_sky"
+            "surface_type": "needs_sky_or_same_vertical_slice"
         },
         "deeperdarker:otherside": {
             "neoforge:conditions": [
@@ -62,7 +62,7 @@
                 "summit": 0.025,
                 "pinnacle": 0.03
             },
-            "surface_type": "needs_sky"
+            "surface_type": "needs_sky_or_same_vertical_slice"
         },
         "the_bumblezone:the_bumblezone": {
             "neoforge:conditions": [
