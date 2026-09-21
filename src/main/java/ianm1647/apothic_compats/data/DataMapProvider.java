@@ -44,8 +44,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.ASCENT, 0.018F,
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
-                Optional.empty(),
-                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(AETHER.location().getNamespace()));
+                SurfaceType.NEEDS_SKY_OR_SAME_VERTICAL_SLICE), false, new ModLoadedCondition(AETHER.location().getNamespace()));
 
         invaderRules.add(OTHER, new InvaderSpawnRules(
                 Map.of(
@@ -54,8 +53,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.ASCENT, 0.018F,
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
-                Optional.empty(),
-                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(OTHER.location().getNamespace()));
+                SurfaceType.NEEDS_SKY_OR_SAME_VERTICAL_SLICE), false, new ModLoadedCondition(OTHER.location().getNamespace()));
 
         invaderRules.add(STARLIGHT, new InvaderSpawnRules(
                 Map.of(
@@ -64,8 +62,7 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.ASCENT, 0.018F,
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
-                Optional.empty(),
-                SurfaceType.NEEDS_SKY), false, new ModLoadedCondition(STARLIGHT.location().getNamespace()));
+                SurfaceType.NEEDS_SKY_OR_SAME_VERTICAL_SLICE), false, new ModLoadedCondition(STARLIGHT.location().getNamespace()));
 
         invaderRules.add(OTHERSIDE, new InvaderSpawnRules(
                 Map.of(
@@ -74,7 +71,6 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.ASCENT, 0.018F,
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
-                Optional.empty(),
                 SurfaceType.ANY), false, new ModLoadedCondition(OTHERSIDE.location().getNamespace()));
 
         invaderRules.add(BUMBLEZONE, new InvaderSpawnRules(
@@ -84,7 +80,6 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.ASCENT, 0.018F,
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
-                Optional.empty(),
                 SurfaceType.ANY), false, new ModLoadedCondition(BUMBLEZONE.location().getNamespace()));
 
         invaderRules.add(UNDERGARDEN, new InvaderSpawnRules(
@@ -94,7 +89,6 @@ public class DataMapProvider extends ApothDataMapProvider {
                         WorldTier.ASCENT, 0.018F,
                         WorldTier.SUMMIT, 0.025F,
                         WorldTier.PINNACLE, 0.03F),
-                Optional.empty(),
                 SurfaceType.ANY), false, new ModLoadedCondition(UNDERGARDEN.location().getNamespace()));
 
         Builder<LootCategory, Item> catOverrides = builder(Apoth.DataMaps.LOOT_CATEGORY_OVERRIDES);
