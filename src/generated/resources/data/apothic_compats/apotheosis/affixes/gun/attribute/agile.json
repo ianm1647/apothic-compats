@@ -6,7 +6,7 @@
     }
   ],
   "type": "apotheosis:attribute",
-  "attribute": "apothic_compats:gun_damage",
+  "attribute": "apothic_compats:fire_rate",
   "categories": [
     "apothic_compats:gun"
   ],
@@ -18,27 +18,27 @@
       "weight": 25
     }
   },
-  "operation": "add_value",
+  "operation": "add_multiplied_total",
   "values": {
     "apotheosis:common": {
-      "min": 2.0,
-      "max": 3.0
+      "min": 0.2,
+      "max": 0.3
     },
     "apotheosis:uncommon": {
-      "min": 4.0,
-      "max": 5.0
+      "min": 0.3,
+      "max": 0.4
     },
     "apotheosis:rare": {
-      "min": 6.0,
-      "max": 7.0
+      "min": 0.4,
+      "max": 0.5
     },
     "apotheosis:epic": {
-      "min": 8.0,
-      "max": 9.0
+      "min": 0.5,
+      "max": 0.6
     },
     "apotheosis:mythic": {
-      "min": 10.0,
-      "max": 12.0
+      "min": 0.6,
+      "max": 0.7
     }
   }
 }

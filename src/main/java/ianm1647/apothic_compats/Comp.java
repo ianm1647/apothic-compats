@@ -9,6 +9,7 @@ import dev.shadowsoffire.apothic_attributes.modifiers.EntitySlotGroup;
 import dev.shadowsoffire.placebo.registry.DeferredHelper;
 import ianm1647.apothic_compats.item.ModCurioItem;
 import ianm1647.apothic_compats.util.ModTags;
+import io.redspace.irons_artifice.data.ShotComponents;
 import io.redspace.irons_artifice.item.GunItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
@@ -28,45 +29,22 @@ public class Comp {
 
     public static class Attributes {
         public static class Artifice {
-            public static final Holder<Attribute> PROJECTILE_COUNT =
-                    R.attribute("projectile_count", () -> new RangedAttribute("apothic_compats:projectile_count", 0.0D, 0.0D, 1000.0D).setSyncable(true));
             public static final Holder<Attribute> BULLET_SPREAD =
-                    R.attribute("bullet_spread", () -> new RangedAttribute("apothic_compats:bullet_spread", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> IN_AIR_PENALTY =
-                    R.attribute("in_air_penalty", () -> new RangedAttribute("apothic_compats:in_air_penalty", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> FIRE_DELAY =
-                    R.attribute("fire_delay", () -> new RangedAttribute("apothic_compats:fire_delay", 0.0D, 0.0D, 1000.0D).setSyncable(true));
+                    R.attribute("bullet_spread", () -> new RangedAttribute("apothic_compats:bullet_spread", ShotComponents.SPREAD.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> FIRE_RATE =
-                    R.attribute("fire_rate", () -> new RangedAttribute("apothic_compats:fire_rate", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> AMMO_CONSUME_CHANCE =
-                    R.attribute("ammo_consume_chance", () -> new RangedAttribute("apothic_compats:ammo_consume_chance", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-
+                    R.attribute("fire_rate", () -> new RangedAttribute("apothic_compats:fire_rate", ShotComponents.FIRE_RATE.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> GUN_DAMAGE =
-                    R.attribute("gun_damage", () -> new RangedAttribute("apothic_compats:gun_damage", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> BULLET_SPEED =
-                    R.attribute("bullet_speed", () -> new RangedAttribute("apothic_compats:bullet_speed", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> BULLET_GRAVITY =
-                    R.attribute("bullet_gravity", () -> new RangedAttribute("apothic_compats:bullet_gravity", 0.05D, 0.0D, 1000.0D).setSyncable(true));
+                    R.attribute("gun_damage", () -> new RangedAttribute("apothic_compats:gun_damage", ShotComponents.DAMAGE.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> BULLET_KNOCKBACK =
-                    R.attribute("bullet_knockback", () -> new RangedAttribute("apothic_compats:bullet_knockback", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> BULLET_DRAG =
-                    R.attribute("bullet_drag", () -> new RangedAttribute("apothic_compats:bullet_drag", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> UNDERWATER_DRAG =
-                    R.attribute("underwater_drag", () -> new RangedAttribute("apothic_compats:underwater_drag", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> BLOCK_DAMAGE =
-                    R.attribute("block_damage", () -> new RangedAttribute("apothic_compats:block_damage", 0.0D, 0.0D, 1000.0D).setSyncable(true));
+                    R.attribute("bullet_knockback", () -> new RangedAttribute("apothic_compats:bullet_knockback", ShotComponents.KNOCKBACK.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> RELOAD_SPEED =
-                    R.attribute("reload_speed", () -> new RangedAttribute("apothic_compats:reload_speed", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-
+                    R.attribute("reload_speed", () -> new RangedAttribute("apothic_compats:reload_speed", ShotComponents.RELOAD_SPEED_MULTIPLIER.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> BULLET_PIERCE =
-                    R.attribute("bullet_pierce", () -> new RangedAttribute("apothic_compats:bullet_pierce", 0.0D, 0.0D, 1000.0D).setSyncable(true));
+                    R.attribute("bullet_pierce", () -> new RangedAttribute("apothic_compats:bullet_pierce", ShotComponents.PIERCING.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> LEECH =
-                    R.attribute("bullet_leech", () -> new RangedAttribute("apothic_compats:bullet_leech", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-
+                    R.attribute("bullet_leech", () -> new RangedAttribute("apothic_compats:bullet_leech", ShotComponents.LEECH.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> GUN_RECOIL =
-                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", 0.0D, 0.0D, 1000.0D).setSyncable(true));
-            public static final Holder<Attribute> BLOWBACK =
-                    R.attribute("blowback", () -> new RangedAttribute("apothic_compats:blowback", 0.0D, 0.0D, 1000.0D).setSyncable(true));
+                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", ShotComponents.CAMERA_RECOIL_MULTIPLIER.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
 
             public static void bootstrap() {}
         }

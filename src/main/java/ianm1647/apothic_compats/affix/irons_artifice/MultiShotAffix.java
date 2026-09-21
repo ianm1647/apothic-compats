@@ -11,6 +11,7 @@ import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.placebo.dynreg.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.apothic_compats.Comp;
+import io.redspace.irons_artifice.api.ComposeShotEvent;
 import io.redspace.irons_artifice.api.GunShootEvent;
 import io.redspace.irons_artifice.data.ShotComponentMap;
 import io.redspace.irons_artifice.data.ShotComponentTemplate;
@@ -51,7 +52,7 @@ public class MultiShotAffix extends Affix {
         return Component.translatable("affix." + this.id() + ".desc", fmt(this.getTrueLevel(inst.getRarity(), inst.level())));
     }
 
-    public static void multiplyBullets(GunShootEvent.Pre event) {
+    public static void multiplyBullets(ComposeShotEvent event) {
         ShotProfile profile = event.getShotProfile();
         ItemStack weapon = profile.itemStack();
         var inst = AffixHelper.getAffixes(weapon);

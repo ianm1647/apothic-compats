@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.irons_artifice;
 
-import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
@@ -54,32 +53,32 @@ public class ArtificeAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addAttribute("gun", "bulleted", Comp.Attributes.Artifice.PROJECTILE_COUNT, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("gun", "murderous", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(common, 1)
-                .value(uncommon, 1)
-                .value(rare, 2)
-                .value(epic, 2)
-                .value(mythic, 3));
-
-        this.addAttribute("gun", "elven", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Artifice.GUN)
-                .value(common, 0.1F, 0.2F)
-                .value(uncommon, 0.3F, 0.4F)
-                .value(rare, 0.5F, 0.6F)
-                .value(epic, 0.7F,  0.8F)
-                .value(mythic, 0.9F, 1.0F));
+                .value(common, 0.05F, 0.1F)
+                .value(uncommon, 0.15F, 0.2F)
+                .value(rare, 0.25F, 0.3F)
+                .value(epic, 0.35F,  0.4F)
+                .value(mythic, 0.45F, 0.5F));
 
         this.addAttribute("gun", "violent", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(common, 3, 4)
-                .value(uncommon, 5, 6)
-                .value(rare, 7, 8)
-                .value(epic, 9, 10)
-                .value(mythic, 20, 40));
+                .value(common, 2, 3)
+                .value(uncommon, 4, 5)
+                .value(rare, 6, 7)
+                .value(epic, 8, 9)
+                .value(mythic, 10, 12));
+
+        this.addAttribute("gun", "agile", Comp.Attributes.Artifice.FIRE_RATE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(common,0.2f , 0.3f)
+                .value(uncommon, 0.3f, 0.4f)
+                .value(rare, 0.4f, 0.5f)
+                .value(epic, 0.5f, 0.6f)
+                .value(mythic, 0.6f, 0.7f));
 
         this.addAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

@@ -1,22 +1,22 @@
-// 26.1.2	2026-09-19T16:58:51.0239006	Iron's Artifice Affixes
+// 26.1.2	2026-09-20T17:24:30.958676	Iron's Artifice Affixes
 32db9f9415c8d3c635bd96ba369b38dbc9cb12b0 data/apothic_compats/apotheosis/affixes/gun/ancient/festive.json
 76be301cd8cbdef2833791648d73e0b263c50f93 data/apothic_compats/apotheosis/affixes/gun/ancient/infinite.json
 e03f33e5a9183ccbc5e92a272bd8a85938e44769 data/apothic_compats/apotheosis/affixes/gun/ancient/magical.json
 8bd91516f30ec4380a16f8f1e9e9f838a4184104 data/apothic_compats/apotheosis/affixes/gun/ancient/multishot.json
 d2ba378d5343dacde6341a253685992b554c6fd2 data/apothic_compats/apotheosis/affixes/gun/ancient/telepathic.json
+b0af3621510a686536784cdf233cf0f8a28f3ebd data/apothic_compats/apotheosis/affixes/gun/attribute/agile.json
 ea6a92a589b252d2d7bc4b645fb5da43d1072027 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/elven.json
 bd123acec694848a2723e6ae4dc3ca09a2acd7e8 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/experienced.json
 d5c7f9fbee7e9fa8083aea483fb51aa46e8885c6 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/intricate.json
 3453a007a7294fcffde08e2023217e510e8b4a31 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/lacerating.json
 288a15cb15e6182698e71c6bf62cba7b5205dfa2 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/piercing.json
 f9a1e508365c4e9dc24b63b82ffc9108e3391ec3 data/apothic_compats/apotheosis/affixes/gun/attribute/ancient/windswept.json
-03121d0211bc65ee06ad36cd962c36d29ac71ef7 data/apothic_compats/apotheosis/affixes/gun/attribute/bulleted.json
-82d4a91ec6cd0158b71221db34787ba12218f1f3 data/apothic_compats/apotheosis/affixes/gun/attribute/elven.json
 60c959b72e7f7dcde3fe5faa50acf815d281f1c2 data/apothic_compats/apotheosis/affixes/gun/attribute/experienced.json
 81ba52177a6fa81aaca0256abd86746c6c9f6de8 data/apothic_compats/apotheosis/affixes/gun/attribute/intricate.json
 aa0ed37add0b017568d5f3a53831348006b58f12 data/apothic_compats/apotheosis/affixes/gun/attribute/lacerating.json
+b320fea7f7d522529ee80bbcab3ed92c611654fa data/apothic_compats/apotheosis/affixes/gun/attribute/murderous.json
 73c26e87b21b2a4c0c3ecb788a3b7658b6a3a6bd data/apothic_compats/apotheosis/affixes/gun/attribute/piercing.json
-8eb32a7411a41e7367b52a6f23199b2c655796a8 data/apothic_compats/apotheosis/affixes/gun/attribute/violent.json
+58b3380c0215a2e4eca2ccd1fe32da6d1e7723a4 data/apothic_compats/apotheosis/affixes/gun/attribute/violent.json
 f72bfdff5766ad5324417823bb038a61b3ad2cdc data/apothic_compats/apotheosis/affixes/gun/attribute/windswept.json
 8db3cb8c4f40a0b272010ce5b10f88b282aaa883 data/apothic_compats/apotheosis/affixes/gun/festive.json
 c82494b8cf38992c3ad253f5614cb82fcd7f88ce data/apothic_compats/apotheosis/affixes/gun/infinite.json
