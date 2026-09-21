@@ -1,13 +1,10 @@
 package ianm1647.apothic_compats.data.ae2;
 
-import appeng.core.ConventionTags;
 import appeng.core.definitions.AEItems;
-import appeng.items.tools.fluix.FluixToolType;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
-import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;

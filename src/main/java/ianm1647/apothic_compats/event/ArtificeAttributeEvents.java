@@ -4,7 +4,6 @@ import ianm1647.apothic_compats.Comp.Attributes.Artifice;
 import io.redspace.irons_artifice.api.ComposeShotEvent;
 import io.redspace.irons_artifice.data.*;
 import io.redspace.irons_artifice.gun.ShotProfile;
-import io.redspace.irons_artifice.item.GunplayManager;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
@@ -35,30 +34,27 @@ public class ArtificeAttributeEvents {
     }
 
     public static void applyAttribs(EntityAttributeModificationEvent e) {
-        e.getTypes().forEach(type -> {
-            addAll(type, e::add,
-                    Artifice.BULLET_SPREAD,
-                    Artifice.FIRE_RATE,
-                    Artifice.GUN_DAMAGE,
-                    Artifice.BULLET_KNOCKBACK,
-                    Artifice.RELOAD_SPEED,
-                    Artifice.BULLET_PIERCE,
-                    Artifice.LEECH,
-                    Artifice.GUN_RECOIL);
-        });
+        e.getTypes().forEach(type ->
+                addAll(type, e::add,
+                        Artifice.BULLET_SPREAD,
+                        Artifice.FIRE_RATE,
+                        Artifice.GUN_DAMAGE,
+                        Artifice.BULLET_KNOCKBACK,
+                        Artifice.RELOAD_SPEED,
+                        Artifice.BULLET_PIERCE,
+                        Artifice.LEECH,
+                        Artifice.GUN_RECOIL));
     }
 
     private static void addAttribute(Holder<Attribute> attribute, ComponentType<Value> component, int offset, ShotProfile profile, Player player) {
         AttributeInstance inst = player.getAttribute(attribute);
         if (inst != null) {
-            boolean hasMultiplyBase = inst.getModifiers().stream()
-                    .anyMatch(modifier ->
-                            modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_BASE ||
-                                    modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+            boolean hasMultiplyBase = inst.getModifiers().stream().anyMatch(modifier ->
+                    modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_BASE ||
+                            modifier.operation() == AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
 
-            boolean hasAddValue = inst.getModifiers().stream()
-                    .anyMatch(modifier ->
-                            modifier.operation() == AttributeModifier.Operation.ADD_VALUE);
+            boolean hasAddValue = inst.getModifiers().stream().anyMatch(modifier ->
+                    modifier.operation() == AttributeModifier.Operation.ADD_VALUE);
 
             double value = inst.getValue() - offset;
 

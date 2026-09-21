@@ -6,7 +6,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
-import top.theillusivec4.curios.api.CuriosTags;
 
 public class ModTags {
 

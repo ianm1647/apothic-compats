@@ -9,7 +9,6 @@ import dev.shadowsoffire.apothic_attributes.modifiers.EntitySlotGroup;
 import dev.shadowsoffire.placebo.registry.DeferredHelper;
 import ianm1647.apothic_compats.item.ModCurioItem;
 import ianm1647.apothic_compats.util.ModTags;
-import io.redspace.irons_artifice.data.ShotComponents;
 import io.redspace.irons_artifice.item.GunItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
@@ -19,7 +18,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
-import net.neoforged.neoforge.common.PercentageAttribute;
 
 import java.util.function.Predicate;
 
@@ -30,21 +28,21 @@ public class Comp {
     public static class Attributes {
         public static class Artifice {
             public static final Holder<Attribute> BULLET_SPREAD =
-                    R.attribute("bullet_spread", () -> new RangedAttribute("apothic_compats:bullet_spread", ShotComponents.SPREAD.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("bullet_spread", () -> new RangedAttribute("apothic_compats:bullet_spread", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> FIRE_RATE =
-                    R.attribute("fire_rate", () -> new RangedAttribute("apothic_compats:fire_rate", ShotComponents.FIRE_RATE.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("fire_rate", () -> new RangedAttribute("apothic_compats:fire_rate", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> GUN_DAMAGE =
-                    R.attribute("gun_damage", () -> new RangedAttribute("apothic_compats:gun_damage", ShotComponents.DAMAGE.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("gun_damage", () -> new RangedAttribute("apothic_compats:gun_damage", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> BULLET_KNOCKBACK =
-                    R.attribute("bullet_knockback", () -> new RangedAttribute("apothic_compats:bullet_knockback", ShotComponents.KNOCKBACK.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("bullet_knockback", () -> new RangedAttribute("apothic_compats:bullet_knockback", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> RELOAD_SPEED =
-                    R.attribute("reload_speed", () -> new RangedAttribute("apothic_compats:reload_speed", ShotComponents.RELOAD_SPEED_MULTIPLIER.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("reload_speed", () -> new RangedAttribute("apothic_compats:reload_speed", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> BULLET_PIERCE =
-                    R.attribute("bullet_pierce", () -> new RangedAttribute("apothic_compats:bullet_pierce", ShotComponents.PIERCING.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("bullet_pierce", () -> new RangedAttribute("apothic_compats:bullet_pierce", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> LEECH =
-                    R.attribute("bullet_leech", () -> new RangedAttribute("apothic_compats:bullet_leech", ShotComponents.LEECH.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("bullet_leech", () -> new RangedAttribute("apothic_compats:bullet_leech", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> GUN_RECOIL =
-                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", ShotComponents.CAMERA_RECOIL_MULTIPLIER.provideDefaultValue().base(), 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", 0.0D, 0.0D, 2048.0D).setSyncable(true));
 
             public static void bootstrap() {}
         }

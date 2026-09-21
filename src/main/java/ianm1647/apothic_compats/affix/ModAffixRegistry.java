@@ -15,8 +15,5 @@ public class ModAffixRegistry {
             AffixRegistry.SERIALIZER.register(ApothicCompats.loc("double_shot"), MultiShotAffix.CODEC);
             AffixRegistry.SERIALIZER.register(ApothicCompats.loc("magic_bullet"), MagicalBulletAffix.CODEC);
         }
-
-
-
     }
 }

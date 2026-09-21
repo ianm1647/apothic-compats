@@ -19,12 +19,10 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
-import net.neoforged.neoforge.event.level.BlockDropsEvent;
 
 public class TelepathicGunAffix extends Affix {
 
@@ -48,9 +46,7 @@ public class TelepathicGunAffix extends Affix {
 
     @Override
     public MutableComponent getDescription(AffixInstance inst, AttributeTooltipContext ctx) {
-        LootCategory cat = LootCategory.forItem(inst.stack());
-        String type = Comp.LootCategories.Artifice.isGun(cat) ? "weapon" : "tool";
-        return Component.translatable("affix." + this.id() + ".desc." + type);
+        return Component.translatable("affix." + this.id() + ".desc");
     }
 
     @Override

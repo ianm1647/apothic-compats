@@ -8,30 +8,18 @@ import dev.shadowsoffire.apotheosis.affix.AffixHelper;
 import dev.shadowsoffire.apotheosis.affix.AffixInstance;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
-import dev.shadowsoffire.placebo.dynreg.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.apothic_compats.Comp;
 import io.redspace.irons_artifice.api.ComposeShotEvent;
-import io.redspace.irons_artifice.api.GunShootEvent;
-import io.redspace.irons_artifice.data.ShotComponentMap;
-import io.redspace.irons_artifice.data.ShotComponentTemplate;
 import io.redspace.irons_artifice.data.ShotComponents;
 import io.redspace.irons_artifice.data.ValueModifier;
-import io.redspace.irons_artifice.entity.Bullet;
 import io.redspace.irons_artifice.gun.ShotProfile;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.UseOnContext;
 import net.neoforged.neoforge.common.util.AttributeTooltipContext;
 
-import javax.annotation.Nullable;
 import java.util.Map;
-import java.util.stream.Stream;
 
 public class MultiShotAffix extends Affix {
     public static final Codec<MultiShotAffix> CODEC = RecordCodecBuilder.create(inst -> inst

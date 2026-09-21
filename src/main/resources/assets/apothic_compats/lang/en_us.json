@@ -1019,6 +1019,14 @@
   "apothic_compats:bullet_leech": "Leech",
   "apothic_compats:gun_recoil": "Gun Recoil",
 
+  "affix.apothic_compats:gun/telepathic": "Telepathic",
+  "affix.apothic_compats:gun/telepathic.suffix": "of Space and Time",
+  "affix.apothic_compats:gun/telepathic.desc": "Mob drops will teleport to you.",
+
+  "affix.apothic_compats:gun/ancient/telepathic": "Telepathic",
+  "affix.apothic_compats:gun/ancient/telepathic.suffix": "of Space and Time",
+  "affix.apothic_compats:gun/ancient/telepathic.desc": "Mob drops will teleport to you.",
+
   "affix.apothic_compats:gun/infinite": "Never-ending",
   "affix.apothic_compats:gun/infinite.suffix": "of Infinity",
   "affix.apothic_compats:gun/infinite.desc": "Your bullets are infinite.",

@@ -2,7 +2,6 @@ package ianm1647.apothic_compats.data.aether_ii;
 
 import com.aetherteam.aetherii.item.AetherIIItems;
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
-import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.HolderLookup.RegistryLookup;

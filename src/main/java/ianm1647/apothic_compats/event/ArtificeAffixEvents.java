@@ -6,7 +6,6 @@ import ianm1647.apothic_compats.affix.irons_artifice.MagicalBulletAffix;
 import ianm1647.apothic_compats.affix.irons_artifice.TelepathicGunAffix;
 import io.redspace.irons_artifice.api.AmmoEvent;
 import io.redspace.irons_artifice.api.ComposeShotEvent;
-import io.redspace.irons_artifice.api.GunShootEvent;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityInvulnerabilityCheckEvent;

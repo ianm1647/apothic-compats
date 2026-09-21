@@ -6,16 +6,10 @@ import java.util.Map;
 import java.util.Set;
 
 import dev.shadowsoffire.apotheosis.affix.*;
-import io.redspace.irons_artifice.api.GunShootEvent;
 import io.redspace.irons_artifice.data.*;
 import io.redspace.irons_artifice.entity.Bullet;
-import io.redspace.irons_artifice.gun.GunProfile;
-import io.redspace.irons_artifice.gun.ShotProfile;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.EventHooks;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 
 import com.mojang.serialization.Codec;

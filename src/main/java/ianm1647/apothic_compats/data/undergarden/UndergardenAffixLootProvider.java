@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data.undergarden;
 
-import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
@@ -16,8 +15,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
-import quek.undergarden.registry.UGArmorMaterials;
-import quek.undergarden.registry.UGItemTiers;
 import quek.undergarden.registry.UGItems;
 
 import java.util.Set;

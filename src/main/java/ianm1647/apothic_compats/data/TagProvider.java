@@ -8,12 +8,12 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
+import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
-import top.theillusivec4.curios.api.CuriosTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -81,5 +81,16 @@ public class TagProvider {
         }
     }
 
+    public static class Attributes extends IntrinsicHolderTagsProvider<Attribute> {
 
+        public Attributes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+            super(output, Registries.ATTRIBUTE, lookupProvider, a -> BuiltInRegistries.ATTRIBUTE.getResourceKey(a).orElseThrow(), ApothicCompats.MODID);
+        }
+
+        @Override
+        protected void addTags(HolderLookup.Provider provider) {
+//            Comp.R.getRegisteredObjects(Registries.ATTRIBUTE).forEach((a) ->
+//                    tag(ALObjects.Tags.DYNAMIC_BASE_ATTRIBUTES).add(a.value()));
+        }
+    }
 }

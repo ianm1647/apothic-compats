@@ -8,7 +8,6 @@ import dev.shadowsoffire.placebo.datagen.LegacyRecipeProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import net.allthemods.allthemodium.core.registry.ATMItems;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeOutput;

@@ -1,6 +1,5 @@
 package ianm1647.apothic_compats.data;
 
-import com.aetherteam.aetherii.item.AetherIIItems;
 import dev.shadowsoffire.apotheosis.Apoth;
 import dev.shadowsoffire.apotheosis.data.ApothDataMapProvider;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
@@ -15,10 +14,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
-import net.neoforged.neoforge.registries.datamaps.DataMapType;
 
 import java.util.Map;
 import java.util.Optional;

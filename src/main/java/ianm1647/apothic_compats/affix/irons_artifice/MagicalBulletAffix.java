@@ -16,7 +16,6 @@ import dev.shadowsoffire.placebo.codec.PlaceboCodecs;
 import ianm1647.apothic_compats.Comp;
 import io.redspace.irons_artifice.entity.Bullet;
 import net.minecraft.tags.DamageTypeTags;
-import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.entity.EntityInvulnerabilityCheckEvent;

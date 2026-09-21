@@ -65,6 +65,7 @@ public class ApothicCompats {
 
         generator.addProvider(true, new TagProvider.Items(output, lookupProvider));
         generator.addProvider(true, new TagProvider.Biomes(output, lookupProvider));
+        generator.addProvider(true, new TagProvider.Attributes(output, lookupProvider));
         generator.addProvider(true, new CuriosProvider(output, lookupProvider));
 
         DataGenBuilder.create(ApothicCompats.MODID)
