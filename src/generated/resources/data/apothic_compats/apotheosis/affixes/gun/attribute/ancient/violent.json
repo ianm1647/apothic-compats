@@ -3,6 +3,10 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "irons_artifice"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ancientreforging"
     }
   ],
   "type": "apotheosis:attribute",
@@ -20,25 +24,9 @@
   },
   "operation": "add_value",
   "values": {
-    "apotheosis:common": {
-      "min": 2.0,
-      "max": 3.0
-    },
-    "apotheosis:uncommon": {
-      "min": 4.0,
-      "max": 5.0
-    },
-    "apotheosis:rare": {
-      "min": 6.0,
-      "max": 7.0
-    },
-    "apotheosis:epic": {
-      "min": 8.0,
-      "max": 9.0
-    },
-    "apotheosis:mythic": {
-      "min": 10.0,
-      "max": 12.0
+    "ancientreforging:ancient": {
+      "min": 12.0,
+      "max": 20.0
     }
   }
 }

@@ -25,35 +25,6 @@ public class Comp {
 
     public static final DeferredHelper R = DeferredHelper.create(ApothicCompats.MODID);
 
-    public static class Attributes {
-        public static class Artifice {
-            public static final Holder<Attribute> BULLET_SPREAD =
-                    R.attribute("bullet_spread", () -> new RangedAttribute("apothic_compats:bullet_spread", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> FIRE_RATE =
-                    R.attribute("fire_rate", () -> new RangedAttribute("apothic_compats:fire_rate", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> GUN_DAMAGE =
-                    R.attribute("gun_damage", () -> new RangedAttribute("apothic_compats:gun_damage", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> BULLET_KNOCKBACK =
-                    R.attribute("bullet_knockback", () -> new RangedAttribute("apothic_compats:bullet_knockback", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> RELOAD_SPEED =
-                    R.attribute("reload_speed", () -> new RangedAttribute("apothic_compats:reload_speed", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> BULLET_PIERCE =
-                    R.attribute("bullet_pierce", () -> new RangedAttribute("apothic_compats:bullet_pierce", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> LEECH =
-                    R.attribute("bullet_leech", () -> new RangedAttribute("apothic_compats:bullet_leech", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-            public static final Holder<Attribute> GUN_RECOIL =
-                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", 0.0D, 0.0D, 2048.0D).setSyncable(true));
-
-            public static void bootstrap() {}
-        }
-
-        private static void bootstrap() {
-            if (ModList.get().isLoaded("irons_artifice")) {
-                Artifice.bootstrap();
-            }
-        }
-    }
-
     public static class Curios {
         public static final Holder<Item> BACK_PLATE = R.item("back_plate", ModCurioItem::new, p -> p.stacksTo(1));
         public static final Holder<Item> FLORID_BELT = R.item("florid_belt", ModCurioItem::new, p -> p.stacksTo(1));
@@ -170,7 +141,6 @@ public class Comp {
 
     public static void bootstrap(IEventBus bus) {
         bus.register(R);
-        Attributes.bootstrap();
         Curios.bootstrap();
         LootCategories.bootstrap();
         Slots.bootstrap();

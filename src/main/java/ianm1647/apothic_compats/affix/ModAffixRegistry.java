@@ -12,7 +12,6 @@ public class ModAffixRegistry {
             AffixRegistry.SERIALIZER.register(ApothicCompats.loc("bullet_mob_effect"), BulletModifierAffix.CODEC);
             AffixRegistry.SERIALIZER.register(ApothicCompats.loc("telepathic"), TelepathicGunAffix.CODEC);
             AffixRegistry.SERIALIZER.register(ApothicCompats.loc("infinite_ammo"), InfiniteAmmoAffix.CODEC);
-            AffixRegistry.SERIALIZER.register(ApothicCompats.loc("double_shot"), MultiShotAffix.CODEC);
             AffixRegistry.SERIALIZER.register(ApothicCompats.loc("magic_bullet"), MagicalBulletAffix.CODEC);
         }
     }

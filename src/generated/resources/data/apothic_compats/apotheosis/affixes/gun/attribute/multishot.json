@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_artifice"
+    }
+  ],
+  "type": "apotheosis:attribute",
+  "attribute": "irons_artifice:projectile_count",
+  "categories": [
+    "apothic_compats:gun"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "apotheosis:rare": 1.0,
+    "apotheosis:epic": 2.0,
+    "apotheosis:mythic": 3.0
+  }
+}

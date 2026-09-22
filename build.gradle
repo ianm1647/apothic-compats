@@ -21,8 +21,8 @@ sourceSets.main.resources {
 repositories {
     mavenLocal()
 
-    maven { url "https://code.redspace.io/snapshots"}
-    maven { url "https://code.redspace.io/releases"}
+    //maven { url "https://code.redspace.io/snapshots"}
+    //maven { url "https://code.redspace.io/releases"}
     maven { url "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
     maven { url "https://www.cursemaven.com" }
     maven { url "https://maven.blamejared.com/" }

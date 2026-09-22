@@ -9,16 +9,24 @@
       "modid": "ancientreforging"
     }
   ],
-  "type": "apothic_compats:double_shot",
+  "type": "apotheosis:attribute",
+  "attribute": "irons_artifice:fire_rate",
+  "categories": [
+    "apothic_compats:gun"
+  ],
   "definition": {
-    "affix_type": "ability",
+    "affix_type": "stat",
     "exclusive_set": [],
     "weights": {
       "quality": 0.1,
       "weight": 25
     }
   },
+  "operation": "add_multiplied_base",
   "values": {
-    "ancientreforging:ancient": 3.0
+    "ancientreforging:ancient": {
+      "min": 0.6,
+      "max": 0.8
+    }
   }
 }

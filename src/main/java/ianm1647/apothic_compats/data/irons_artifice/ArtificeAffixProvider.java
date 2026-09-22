@@ -16,6 +16,7 @@ import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.irons_artifice.*;
+import io.redspace.irons_artifice.registry.AttributeRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -53,16 +54,16 @@ public class ArtificeAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addAttribute("gun", "murderous", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAttribute("gun", "murderous", AttributeRegistry.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(common, 0.05F, 0.1F)
-                .value(uncommon, 0.15F, 0.2F)
-                .value(rare, 0.25F, 0.3F)
-                .value(epic, 0.35F,  0.4F)
-                .value(mythic, 0.45F, 0.5F));
+                .value(common, 0.1F, 0.2F)
+                .value(uncommon, 0.3F, 0.4F)
+                .value(rare, 0.5F, 0.6F)
+                .value(epic, 0.7F,  0.8F)
+                .value(mythic, 0.9F, 1.0F));
 
-        this.addAttribute("gun", "violent", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("gun", "violent", AttributeRegistry.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(common, 2, 3)
@@ -71,14 +72,21 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 8, 9)
                 .value(mythic, 10, 12));
 
-        this.addAttribute("gun", "agile", Comp.Attributes.Artifice.FIRE_RATE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAttribute("gun", "agile", AttributeRegistry.FIRE_RATE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(common,0.2f , 0.3f)
-                .value(uncommon, 0.3f, 0.4f)
-                .value(rare, 0.4f, 0.5f)
-                .value(epic, 0.5f, 0.6f)
-                .value(mythic, 0.6f, 0.7f));
+                .value(common,0.1f , 0.2f)
+                .value(uncommon, 0.2f, 0.3f)
+                .value(rare, 0.3f, 0.4f)
+                .value(epic, 0.4f, 0.5f)
+                .value(mythic, 0.5f, 0.6f));
+
+        this.addAttribute("gun", "multishot", AttributeRegistry.PROJECTILE_COUNT, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1)
+                .value(epic, 2)
+                .value(mythic, 3));
 
         this.addAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -208,23 +216,31 @@ public class ArtificeAffixProvider extends AffixProvider {
                         .build(),
                 linkedSet(rare, epic, mythic)), new ModLoadedCondition(mod));
 
-        this.addConditionally(ApothicCompats.loc("gun/multishot"),
-                AffixBuilder.simple(MultiShotAffix::new)
-                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(epic, 1)
-                        .value(mythic, 2)
-                        .build(), new ModLoadedCondition(mod));
-
         this.addConditionally(ApothicCompats.loc("gun/infinite"), new InfiniteAmmoAffix(
                 AffixDefinition.builder(AffixType.ABILITY)
                         .weights(TieredWeights.forAllTiers(5, DEFAULT_QUALITY))
                         .build(),
                 linkedSet(mythic)), new ModLoadedCondition(mod));
 
-        this.addAncientAttribute("gun", "elven", ALObjects.Attributes.PROJECTILE_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAncientAttribute("gun", "murderous", AttributeRegistry.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(ancient, 2.0F, 2.5F));
+                .value(ancient, 1.0F, 1.5F));
+
+        this.addAncientAttribute("gun", "violent", AttributeRegistry.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(ancient, 12, 20));
+
+        this.addAncientAttribute("gun", "agile", AttributeRegistry.FIRE_RATE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(ancient, 0.6f, 0.8f));
+
+        this.addAncientAttribute("gun", "multishot", AttributeRegistry.PROJECTILE_COUNT, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(ancient, 4));
 
         this.addAncientAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -316,12 +332,6 @@ public class ArtificeAffixProvider extends AffixProvider {
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .build(),
                 linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
-
-        this.addConditionally(ApothicCompats.loc("gun/ancient/multishot"),
-                AffixBuilder.simple(MultiShotAffix::new)
-                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(ancient, 3)
-                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("gun/ancient/infinite"), new InfiniteAmmoAffix(
                 AffixDefinition.builder(AffixType.ABILITY)
