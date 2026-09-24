@@ -10,7 +10,7 @@
     }
   ],
   "type": "apotheosis:attribute",
-  "attribute": "apothic_attributes:projectile_damage",
+  "attribute": "apothic_compats:gun_damage",
   "categories": [
     "apothic_compats:gun"
   ],
@@ -22,11 +22,11 @@
       "weight": 25
     }
   },
-  "operation": "add_multiplied_total",
+  "operation": "add_value",
   "values": {
     "ancientreforging:ancient": {
-      "min": 2.0,
-      "max": 2.5
+      "min": 12.0,
+      "max": 15.0
     }
   }
 }

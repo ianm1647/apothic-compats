@@ -64,6 +64,7 @@ public class ArtificeAttributeEvents {
                 addValue(profile, component, value);
             }
         }
+        fromGunToPlayer(attribute, component, profile, player);
     }
 
     private static void fromGunToPlayer(Holder<Attribute> attribute, ComponentType<Value> component, ShotProfile profile, Player player) {

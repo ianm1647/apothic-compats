@@ -71,15 +71,6 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 8, 9)
                 .value(mythic, 10, 12));
 
-        this.addAttribute("gun", "agile", Comp.Attributes.Artifice.FIRE_RATE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Artifice.GUN)
-                .value(common,0.2f , 0.3f)
-                .value(uncommon, 0.3f, 0.4f)
-                .value(rare, 0.4f, 0.5f)
-                .value(epic, 0.5f, 0.6f)
-                .value(mythic, 0.6f, 0.7f));
-
         this.addAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
@@ -221,10 +212,15 @@ public class ArtificeAffixProvider extends AffixProvider {
                         .build(),
                 linkedSet(mythic)), new ModLoadedCondition(mod));
 
-        this.addAncientAttribute("gun", "elven", ALObjects.Attributes.PROJECTILE_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+        this.addAncientAttribute("gun", "murderous", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(ancient, 2.0F, 2.5F));
+                .value(ancient, 0.6F, 0.75F));
+
+        this.addAncientAttribute("gun", "violent", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(ancient, 12, 15));
 
         this.addAncientAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

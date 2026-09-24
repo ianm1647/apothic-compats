@@ -19,7 +19,7 @@ sourceSets.main.resources {
 }
 
 repositories {
-    mavenLocal()
+    //mavenLocal()
 
     maven { url "https://code.redspace.io/snapshots"}
     maven { url "https://code.redspace.io/releases"}
@@ -83,7 +83,8 @@ dependencies {
 //    implementation "curse.maven:irons-artifice-1650193:$ironsartifice_version"
 
     //compat deps
-    implementation "com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    implementation "com.geckolib:geckolib-neoforge-$minecraft_version:$geckolib_version"
+    implementation "io.redspace:irons_lib:$minecraft_version-$ironslib_version"
 
 //    compileOnly "curse.maven:lodestone-616457:$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
