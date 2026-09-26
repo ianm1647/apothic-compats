@@ -3,6 +3,9 @@ package ianm1647.apothic_compats.data.eternal_starlight;
 import cn.leolezury.eternalstarlight.common.item.combat.ESItemTiers;
 import cn.leolezury.eternalstarlight.common.registry.ESArmorMaterials;
 import cn.leolezury.eternalstarlight.common.registry.ESItems;
+import com.aetherteam.aether.item.AetherItems;
+import com.aetherteam.aether.item.combat.AetherArmorMaterials;
+import com.aetherteam.aether.item.combat.AetherItemTiers;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
@@ -108,54 +111,72 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(ESArmorMaterials.ALCHEMIST.asHolder(), ALCHEMIST);
-        armorWeights.put(ESArmorMaterials.AIR_SAC.asHolder(), AIR_SAC);
-        armorWeights.put(ESArmorMaterials.AMARAMBER.asHolder(), AMARAMBER);
-        armorWeights.put(ESArmorMaterials.AETHERSENT.asHolder(), AETHERSENT);
-        armorWeights.put(ESArmorMaterials.DEEPSILVER.asHolder(), DEEPSILVER);
-        armorWeights.put(ESArmorMaterials.THERMAL_SPRINGSTONE.asHolder(), THERMAL);
-        armorWeights.put(ESArmorMaterials.GLACITE.asHolder(), GLACITE);
-
-        toolWeights.put(ESItemTiers.AMARAMBER, AMARAMBER);
-        toolWeights.put(ESItemTiers.AETHERSENT, AETHERSENT);
-        toolWeights.put(ESItemTiers.DEEPSILVER, DEEPSILVER);
-        toolWeights.put(ESItemTiers.MALARITE, MALARITE);
-        toolWeights.put(ESItemTiers.THERMAL_SPRINGSTONE, THERMAL);
-        toolWeights.put(ESItemTiers.PETAL, PETAL);
-        toolWeights.put(ESItemTiers.GLACITE, GLACITE);
-        toolWeights.put(ESItemTiers.STARLIT_DIAMOND, STARLIT_DIAMOND);
-        toolWeights.put(ESItemTiers.STARFIRE, STARFIRE);
-        toolWeights.put(ESItemTiers.FLOWGLAZE, FLOWGLAZE);
-
-        addEntry(WEAPONS, new ItemStack(ESItems.GLACITE_SHIELD.asHolder()));
-        addEntry(WEAPONS, new ItemStack(ESItems.CRESCENT_SPEAR.asHolder()));
-        addEntry(WEAPONS, new ItemStack(ESItems.CRYSTAL_CROSSBOW.asHolder()));
-        addEntry(WEAPONS, new ItemStack(ESItems.MECHANICAL_CROSSBOW.asHolder()));
-        addEntry(WEAPONS, new ItemStack(ESItems.MOONRING_BOW.asHolder()));
-        addEntry(WEAPONS, new ItemStack(ESItems.STARFALL_LONGBOW.asHolder()));
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+        AetherItems.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == ESItemTiers.AMARAMBER) {
+                    addTools(AMARAMBER, i);
                 }
-            } else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+                if (i.getTier() == ESItemTiers.AETHERSENT) {
+                    addTools(AETHERSENT, i);
+                }
+                if (i.getTier() == ESItemTiers.DEEPSILVER) {
+                    addTools(DEEPSILVER, i);
+                }
+                if (i.getTier() == ESItemTiers.MALARITE) {
+                    addTools(MALARITE, i);
+                }
+                if (i.getTier() == ESItemTiers.THERMAL_SPRINGSTONE) {
+                    addTools(THERMAL, i);
+                }
+                if (i.getTier() == ESItemTiers.PETAL) {
+                    addTools(PETAL, i);
+                }
+                if (i.getTier() == ESItemTiers.GLACITE) {
+                    addTools(GLACITE, i);
+                }
+                if (i.getTier() == ESItemTiers.STARLIT_DIAMOND) {
+                    addTools(STARLIT_DIAMOND, i);
+                }
+                if (i.getTier() == ESItemTiers.STARFIRE) {
+                    addTools(STARFIRE, i);
+                }
+                if (i.getTier() == ESItemTiers.FLOWGLAZE) {
+                    addTools(FLOWGLAZE, i);
                 }
             }
-        }
+
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == ESArmorMaterials.ALCHEMIST.asHolder()) {
+                    addArmor(ALCHEMIST, a);
+                }
+                if (a.getMaterial() == ESArmorMaterials.AIR_SAC.asHolder()) {
+                    addArmor(AIR_SAC, a);
+                }
+                if (a.getMaterial() == ESArmorMaterials.AMARAMBER.asHolder()) {
+                    addArmor(AMARAMBER, a);
+                }
+                if (a.getMaterial() == ESArmorMaterials.AETHERSENT.asHolder()) {
+                    addArmor(AETHERSENT, a);
+                }
+                if (a.getMaterial() == ESArmorMaterials.DEEPSILVER.asHolder()) {
+                    addArmor(DEEPSILVER, a);
+                }
+                if (a.getMaterial() == ESArmorMaterials.THERMAL_SPRINGSTONE.asHolder()) {
+                    addArmor(THERMAL, a);
+                }
+                if (a.getMaterial() == ESArmorMaterials.GLACITE.asHolder()) {
+                    addArmor(GLACITE, a);
+                }
+            }
+        });
+
+        addTools(WEAPONS, ESItems.GLACITE_SHIELD.get());
+        addTools(WEAPONS, ESItems.CRESCENT_SPEAR.get());
+        addTools(WEAPONS, ESItems.CRYSTAL_CROSSBOW.get());
+        addTools(WEAPONS, ESItems.MECHANICAL_CROSSBOW.get());
+        addTools(WEAPONS, ESItems.MOONRING_BOW.get());
+        addTools(WEAPONS, ESItems.STARFALL_LONGBOW.get());
+
     }
 
     @Override
@@ -163,9 +184,20 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
         return "Eternal Starlight Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(STARLIGHT), new ItemStack(tool), Set.of()));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(STARLIGHT), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(STARLIGHT), new ItemStack(piece), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

@@ -1,5 +1,8 @@
 package ianm1647.apothic_compats.data.deep_aether;
 
+import com.thevortex.allthemodium.material.ATMTier;
+import com.thevortex.allthemodium.registry.ArmorRegistries;
+import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
@@ -32,10 +35,6 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
 
     private static ResourceKey<Level> AETHER = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("aether:the_aether"));
 
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
-
     public DeepAetherAffixLootProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries);
     }
@@ -55,45 +54,34 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(DAArmorMaterials.SKYJADE, SKYJADE);
-        armorWeights.put(DAArmorMaterials.STRATUS, STRATUS);
-        armorWeights.put(DAArmorMaterials.STORMFORGED, STORMFORGED);
-
-        toolWeights.put(DATiers.SKYJADE, SKYJADE);
-        toolWeights.put(DATiers.STRATUS, STRATUS);
-        toolWeights.put(DATiers.STORM, STORMFORGED);
-
-        addEntry(STORMFORGED, DAItems.STORM_BOW.toStack());
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+        ModRegistry.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == DATiers.SKYJADE) {
+                    addTools(SKYJADE, i);
+                }
+                if (i.getTier() == DATiers.STRATUS) {
+                    addTools(STRATUS, i);
+                }
+                if (i.getTier() == DATiers.STORM) {
+                    addTools(STORMFORGED, i);
                 }
             }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == DAArmorMaterials.SKYJADE) {
+                    addArmor(SKYJADE, a);
+                }
+                if (a.getMaterial() == DAArmorMaterials.STRATUS) {
+                    addArmor(STRATUS, a);
+                }
+                if (a.getMaterial() == DAArmorMaterials.STORMFORGED) {
+                    addArmor(STORMFORGED, a);
                 }
             }
-            else if (i instanceof Item t) {
-                TieredWeights weights = itemWeights.get(t);
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-        }
+        });
+
+        addTools(STORMFORGED, DAItems.STORM_BOW.get());
+
     }
 
     @Override
@@ -101,9 +89,20 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
         return "Deep Aether Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(AETHER), new ItemStack(tool), Set.of()));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(AETHER), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(AETHER), new ItemStack(piece), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

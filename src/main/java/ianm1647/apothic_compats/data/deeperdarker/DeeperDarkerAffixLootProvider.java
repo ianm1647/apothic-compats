@@ -1,7 +1,9 @@
 package ianm1647.apothic_compats.data.deeperdarker;
 
+import com.kyanite.deeperdarker.content.DDItems;
 import com.kyanite.deeperdarker.util.DDArmorMaterials;
 import com.kyanite.deeperdarker.util.DDTiers;
+import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.loot.LootCategory;
@@ -9,6 +11,8 @@ import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
+import io.github.razordevs.deep_aether.init.DATiers;
+import io.github.razordevs.deep_aether.item.gear.DAArmorMaterials;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -31,10 +35,6 @@ public class DeeperDarkerAffixLootProvider extends AffixLootEntryProvider {
 
     private static ResourceKey<Level> OTHERSIDE = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("deeperdarker:otherside"));
 
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
-
     public DeeperDarkerAffixLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
@@ -51,34 +51,25 @@ public class DeeperDarkerAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(DDArmorMaterials.RESONARIUM, RESONARIUM);
-        armorWeights.put(DDArmorMaterials.WARDEN, WARDEN);
-
-        toolWeights.put(DDTiers.RESONARIUM, RESONARIUM);
-        toolWeights.put(DDTiers.WARDEN, WARDEN);
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+        DDItems.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == DDTiers.RESONARIUM) {
+                    addTools(RESONARIUM, i);
                 }
-            } else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+                if (i.getTier() == DDTiers.WARDEN) {
+                    addTools(WARDEN, i);
                 }
             }
-        }
+
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == DDArmorMaterials.RESONARIUM) {
+                    addArmor(RESONARIUM, a);
+                }
+                if (a.getMaterial() == DDArmorMaterials.WARDEN) {
+                    addArmor(WARDEN, a);
+                }
+            }
+        });
     }
 
     @Override
@@ -86,9 +77,20 @@ public class DeeperDarkerAffixLootProvider extends AffixLootEntryProvider {
         return "Deeper Darker Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(OTHERSIDE), new ItemStack(tool), Set.of()));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(OTHERSIDE), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(OTHERSIDE), new ItemStack(piece), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

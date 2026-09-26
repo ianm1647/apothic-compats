@@ -22,6 +22,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import java.util.function.Predicate;
 

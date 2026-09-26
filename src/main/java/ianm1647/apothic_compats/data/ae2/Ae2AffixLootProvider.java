@@ -1,6 +1,11 @@
 package ianm1647.apothic_compats.data.ae2;
 
 import appeng.core.definitions.AEItems;
+import appeng.items.tools.fluix.FluixToolType;
+import appeng.items.tools.quartz.QuartzToolType;
+import com.thevortex.allthemodium.material.ATMTier;
+import com.thevortex.allthemodium.registry.ArmorRegistries;
+import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
@@ -44,9 +49,19 @@ public class Ae2AffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        addTools(QUARTZ, AEItems.NETHER_QUARTZ_SWORD.get(), AEItems.NETHER_QUARTZ_AXE.get(), AEItems.NETHER_QUARTZ_PICK.get(), AEItems.NETHER_QUARTZ_SHOVEL.get());
-        addTools(CERTUS, AEItems.CERTUS_QUARTZ_SWORD.get(), AEItems.CERTUS_QUARTZ_AXE.get(), AEItems.CERTUS_QUARTZ_PICK.get(), AEItems.CERTUS_QUARTZ_SHOVEL.get());
-        addTools(FLUIX, AEItems.FLUIX_SWORD.get(), AEItems.FLUIX_AXE.get(), AEItems.FLUIX_PICK.get(), AEItems.FLUIX_SHOVEL.get());
+        AEItems.DR.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == QuartzToolType.NETHER.getToolTier()) {
+                    addTools(QUARTZ, i);
+                }
+                if (i.getTier() == QuartzToolType.CERTUS.getToolTier()) {
+                    addTools(CERTUS, i);
+                }
+                if (i.getTier() == FluixToolType.FLUIX.getToolTier()) {
+                    addTools(FLUIX, i);
+                }
+            }
+        });
     }
 
     @Override

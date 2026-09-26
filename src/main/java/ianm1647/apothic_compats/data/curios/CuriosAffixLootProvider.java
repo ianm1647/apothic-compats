@@ -10,6 +10,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
@@ -33,17 +34,17 @@ public class CuriosAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        addEntry(CURIOS, new ItemStack(Comp.Curios.BACK_PLATE));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.FLORID_BELT));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.BODY_CHAIN));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.FLASHY_BRACELET));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.FANCY_CHARM));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.EMBELLISHED_CURIO));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.ADORNED_BOOTS));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.SHOWY_GLOVES));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.HEAD_COVER));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.ORNAMENTED_NECKLACE));
-        addEntry(CURIOS, new ItemStack(Comp.Curios.ORNATE_RING));
+        addCurios(CURIOS, Comp.Curios.BACK_PLATE.value());
+        addCurios(CURIOS, Comp.Curios.FLORID_BELT.value());
+        addCurios(CURIOS, Comp.Curios.BODY_CHAIN.value());
+        addCurios(CURIOS, Comp.Curios.FLASHY_BRACELET.value());
+        addCurios(CURIOS, Comp.Curios.FANCY_CHARM.value());
+        addCurios(CURIOS, Comp.Curios.EMBELLISHED_CURIO.value());
+        addCurios(CURIOS, Comp.Curios.ADORNED_BOOTS.value());
+        addCurios(CURIOS, Comp.Curios.SHOWY_GLOVES.value());
+        addCurios(CURIOS, Comp.Curios.HEAD_COVER.value());
+        addCurios(CURIOS, Comp.Curios.ORNAMENTED_NECKLACE.value());
+        addCurios(CURIOS, Comp.Curios.ORNATE_RING.value());
     }
 
     @Override
@@ -51,9 +52,14 @@ public class CuriosAffixLootProvider extends AffixLootEntryProvider {
         return "Curios Affix Loot Entries";
     }
 
+    protected void addCurios(TieredWeights weights, Item... curios) {
+        for (Item curio : curios) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStack(curio)));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, stack), new ModLoadedCondition(mod));
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

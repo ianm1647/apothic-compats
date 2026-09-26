@@ -76,16 +76,15 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
         return "Allthemodium Loot Entries";
     }
 
-
     protected void addTools(TieredWeights weights, Item... tools) {
         for (Item tool : tools) {
-            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStack(tool), Set.of()));
+            this.addEntry(new AffixLootEntry(weights, new ItemStack(tool)));
         }
     }
 
     protected void addArmor(TieredWeights weights, Item... pieces) {
         for (Item piece : pieces) {
-            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStack(piece), Set.of()));
+            this.addEntry(new AffixLootEntry(weights, new ItemStack(piece)));
         }
     }
 

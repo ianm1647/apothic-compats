@@ -1,6 +1,10 @@
 package ianm1647.apothic_compats.data.ars_nouveau;
 
 import com.hollingsworth.arsnouveau.setup.registry.ItemsRegistry;
+import com.hollingsworth.arsnouveau.setup.registry.MaterialRegistry;
+import com.thevortex.allthemodium.material.ATMTier;
+import com.thevortex.allthemodium.registry.ArmorRegistries;
+import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
@@ -24,10 +28,6 @@ import java.util.concurrent.CompletableFuture;
 public class ArsAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "ars_nouveau";
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public ArsAffixLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -57,23 +57,21 @@ public class ArsAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        addEntry(SORCERER, new ItemStack(ItemsRegistry.SORCERER_HOOD));
-        addEntry(SORCERER, new ItemStack(ItemsRegistry.SORCERER_ROBES));
-        addEntry(SORCERER, new ItemStack(ItemsRegistry.SORCERER_LEGGINGS));
-        addEntry(SORCERER, new ItemStack(ItemsRegistry.SORCERER_BOOTS));
+        ItemsRegistry.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == MaterialRegistry.LIGHT) {
+                    addArmor(SORCERER, a);
+                }
+                if (a.getMaterial() == MaterialRegistry.MEDIUM) {
+                    addArmor(ARCANIST, a);
+                }
+                if (a.getMaterial() == MaterialRegistry.HEAVY) {
+                    addArmor(BATTLEMAGE, a);
+                }
+            }
+        });
 
-        addEntry(ARCANIST, new ItemStack(ItemsRegistry.ARCANIST_HOOD));
-        addEntry(ARCANIST, new ItemStack(ItemsRegistry.ARCANIST_ROBES));
-        addEntry(ARCANIST, new ItemStack(ItemsRegistry.ARCANIST_LEGGINGS));
-        addEntry(ARCANIST, new ItemStack(ItemsRegistry.ARCANIST_BOOTS));
-
-        addEntry(BATTLEMAGE, new ItemStack(ItemsRegistry.BATTLEMAGE_HOOD));
-        addEntry(BATTLEMAGE, new ItemStack(ItemsRegistry.BATTLEMAGE_ROBES));
-        addEntry(BATTLEMAGE, new ItemStack(ItemsRegistry.BATTLEMAGE_LEGGINGS));
-        addEntry(BATTLEMAGE, new ItemStack(ItemsRegistry.BATTLEMAGE_BOOTS));
-
-        addEntry(WEAPON, new ItemStack(ItemsRegistry.ENCHANTERS_SWORD));
-        addEntry(WEAPON, new ItemStack(ItemsRegistry.ENCHANTERS_SHIELD));
+        addTools(WEAPON, ItemsRegistry.ENCHANTERS_SWORD.get(), ItemsRegistry.ENCHANTERS_SHIELD.get());
     }
 
     @Override
@@ -82,8 +80,20 @@ public class ArsAffixLootProvider extends AffixLootEntryProvider {
     }
 
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStack(tool), Set.of()));
+        }
+    }
+
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStack(piece), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }
