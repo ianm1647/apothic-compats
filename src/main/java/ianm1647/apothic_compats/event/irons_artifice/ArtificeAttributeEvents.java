@@ -64,7 +64,7 @@ public class ArtificeAttributeEvents {
                 addValue(profile, component, value);
             }
         }
-        //fromGunToPlayer(attribute, component, profile, player);
+        fromGunToPlayer(attribute, component, profile, player);
     }
 
     private static void fromGunToPlayer(Holder<Attribute> attribute, ComponentType<Value> component, ShotProfile profile, Player player) {
@@ -72,9 +72,9 @@ public class ArtificeAttributeEvents {
         double componentValue = profile.peek(component).base();
         if (inst != null) {
             if (player.getMainHandItem().is(profile.itemStack().getItem())) {
-                inst.addOrUpdateTransientModifier(new AttributeModifier(ResourceLocation.parse(attribute.getRegisteredName()), componentValue, AttributeModifier.Operation.ADD_VALUE));
+                inst.setBaseValue(componentValue);
             } else {
-                inst.removeModifier(ResourceLocation.parse(attribute.getRegisteredName()));
+                inst.setBaseValue(0);
             }
         }
     }
