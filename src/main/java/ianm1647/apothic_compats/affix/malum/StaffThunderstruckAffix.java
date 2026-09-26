@@ -11,7 +11,7 @@ import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.util.DamageSourceExtension;
 import dev.shadowsoffire.apothic_attributes.ApothicAttributes;
 import dev.shadowsoffire.placebo.util.StepFunction;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.tags.DamageTypeTags;
@@ -59,7 +59,7 @@ public class StaffThunderstruckAffix extends Affix {
 
     @Override
     public boolean canApplyTo(ItemStack stack, LootCategory cat, LootRarity rarity) {
-        return ModLootCategories.isStaff(cat) && this.values.containsKey(rarity);
+        return Comp.LootCategories.Malum.isStaff(cat) && this.values.containsKey(rarity);
     }
 
     @Override

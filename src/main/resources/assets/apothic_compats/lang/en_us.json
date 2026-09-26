@@ -11,12 +11,12 @@
   "item.apothic_compats.ornamented_necklace": "Ornamented Necklace",
   "item.apothic_compats.ornate_ring": "Ornate Ring",
 
-
   "item.apotheosis.gem.apothic_compats:ars_nouveau/mana": "Mana Gem",
   "item.apotheosis.gem.apothic_compats:malum/soul_stained": "Soul Stained Gem",
   "item.apotheosis.gem.apothic_compats:malum/thief": "Thief Gem",
   "item.apotheosis.gem.apothic_compats:malum/etheric": "Etheric Gem",
 
+  "curios.modifiers.feet": "When on feet",
 
 
 
@@ -37,6 +37,10 @@
   "gem_class.staff": "Staves",
   "loot_category.apothic_compats.staff": "Staff",
   "loot_category.apothic_compats.staff.plural": "Staves",
+
+  "gem_class:gun": "Guns",
+  "loot_category.apothic_compats.gun": "Gun",
+  "loot_category.apothic_compats.gun.plural": "Guns",
 
   "gem_class.curios": "Curios",
   "loot_category.apothic_compats.head": "Head",
@@ -69,13 +73,7 @@
   "loot_category.apothic_compats.rune.plural": "Runes",
 
 
-
-
-
-
-
-
-
+  "affix_header":  "AFFIXES",
 
   "affix.apothic_compats:melee/bloodied": "Bloody",
   "affix.apothic_compats:melee/bloodied.suffix": "of Flesh",
@@ -222,209 +220,347 @@
 
 
 
-
+  "curios_header":  "CURIOS",
 
   "affix.apothic_compats:curios/attribute/mana": "Mana-Touched",
-  "affix.apothic_compats:curios/attribute/ancient/mana": "Mana-Touched",
   "affix.apothic_compats:curios/attribute/mana.suffix": "of Sorcery",
+  "affix.apothic_compats:curios/attribute/ancient/mana": "Mana-Touched",
   "affix.apothic_compats:curios/attribute/ancient/mana.suffix": "of Sorcery",
 
   "affix.apothic_compats:curios/attribute/spell_damaged": "Spell-Damaged",
-  "affix.apothic_compats:curios/attribute/ancient/spell_damaged": "Spell-Damaged",
   "affix.apothic_compats:curios/attribute/spell_damaged.suffix": "of Wizardry",
+  "affix.apothic_compats:curios/attribute/ancient/spell_damaged": "Spell-Damaged",
   "affix.apothic_compats:curios/attribute/ancient/spell_damaged.suffix": "of Wizardry",
 
   "affix.apothic_compats:curios/attribute/regenerative": "Regenerative",
-  "affix.apothic_compats:curios/attribute/ancient/regenerative": "Regenerative",
   "affix.apothic_compats:curios/attribute/regenerative.suffix": "of the Queen of Hearts",
+  "affix.apothic_compats:curios/attribute/ancient/regenerative": "Regenerative",
   "affix.apothic_compats:curios/attribute/ancient/regenerative.suffix": "of the Queen of Hearts",
 
   "affix.apothic_compats:curios/attribute/abjured": "Abjured",
-  "affix.apothic_compats:curios/attribute/ancient/abjured": "Abjured",
   "affix.apothic_compats:curios/attribute/abjured.suffix": "of Reluctance",
+  "affix.apothic_compats:curios/attribute/ancient/abjured": "Abjured",
   "affix.apothic_compats:curios/attribute/ancient/abjured.suffix": "of Reluctance",
 
   "affix.apothic_compats:curios/attribute/vandalous": "Vandalous",
-  "affix.apothic_compats:curios/attribute/ancient/vandalous": "Vandalous",
   "affix.apothic_compats:curios/attribute/vandalous.suffix": "of the Sly",
+  "affix.apothic_compats:curios/attribute/ancient/vandalous": "Vandalous",
   "affix.apothic_compats:curios/attribute/ancient/vandalous.suffix": "of the Sly",
 
   "affix.apothic_compats:curios/attribute/mystic": "Mystic",
-  "affix.apothic_compats:curios/attribute/ancient/mystic": "Mystic",
   "affix.apothic_compats:curios/attribute/mystic.suffix": "of Thaumaturgy",
+  "affix.apothic_compats:curios/attribute/ancient/mystic": "Mystic",
   "affix.apothic_compats:curios/attribute/ancient/mystic.suffix": "of Thaumaturgy",
 
   "affix.apothic_compats:curios/attribute/adept": "Adept",
-  "affix.apothic_compats:curios/attribute/ancient/adept": "Adept",
   "affix.apothic_compats:curios/attribute/adept.suffix": "of Skillfulness",
+  "affix.apothic_compats:curios/attribute/ancient/adept": "Adept",
   "affix.apothic_compats:curios/attribute/ancient/adept.suffix": "of Skillfulness",
 
   "affix.apothic_compats:curios/attribute/scythe_proficiency": "Reaping",
-  "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency": "Reaping",
   "affix.apothic_compats:curios/attribute/scythe_proficiency.suffix": "of the Spirit",
+  "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency": "Reaping",
   "affix.apothic_compats:curios/attribute/ancient/scythe_proficiency.suffix": "of the Spirit",
 
   "affix.apothic_compats:curios/attribute/lucky": "Lucky",
   "affix.apothic_compats:curios/attribute/lucky.suffix": "of the Serendipitous",
-
-  "affix.apothic_compats:curios/attribute/windswept": "Windswept",
-  "affix.apothic_compats:curios/attribute/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:curios/attribute/aquatic": "Aquatic",
-  "affix.apothic_compats:curios/attribute/aquatic.suffix": "of the Ocean",
-
-  "affix.apothic_compats:curios/attribute/blessed": "Blessed",
-  "affix.apothic_compats:curios/attribute/blessed.suffix": "of Health",
-
-  "affix.apothic_compats:curios/attribute/gravitational": "Gravitational",
-  "affix.apothic_compats:curios/attribute/gravitational.suffix": "of Gravity",
-
-  "affix.apothic_compats:curios/attribute/ironforged": "Ironforged",
-  "affix.apothic_compats:curios/attribute/ironforged.suffix": "of Iron",
-
-  "affix.apothic_compats:curios/attribute/spiritual": "Spiritual",
-  "affix.apothic_compats:curios/attribute/spiritual.suffix": "of the Witch Doctor",
-
-  "affix.apothic_compats:curios/attribute/stalwart": "Stalwart",
-  "affix.apothic_compats:curios/attribute/stalwart.suffix": "of Stubbornness",
-
-  "affix.apothic_compats:curios/attribute/fireproof": "Fireproof",
-  "affix.apothic_compats:curios/attribute/fireproof.suffix": "of Flaming Defense",
-
-  "affix.apothic_compats:curios/attribute/oxygenated": "Oxygenated",
-  "affix.apothic_compats:curios/attribute/oxygenated.suffix": "of the Diver",
-
-  "affix.apothic_compats:curios/attribute/experienced": "Experienced",
-  "affix.apothic_compats:curios/attribute/experienced.suffix": "of the Scholar",
-
-  "affix.apothic_compats:curios/attribute/submerged": "Submerged",
-  "affix.apothic_compats:curios/attribute/submerged.suffix": "of the Seaborn Miner",
-
-  "affix.apothic_compats:curios/attribute/adamantine": "Adamantine",
-  "affix.apothic_compats:curios/attribute/adamantine.suffix": "of Adamantine",
-
-  "affix.apothic_compats:curios/attribute/vampiric": "Vampiric",
-  "affix.apothic_compats:curios/attribute/vampiric.suffix": "of Bloodletting",
-
-  "affix.apothic_compats:curios/attribute/murderous": "Murderous",
-  "affix.apothic_compats:curios/attribute/murderous.suffix": "of the Minotaur",
-
-  "affix.apothic_compats:curios/attribute/intricate": "Intricate",
-  "affix.apothic_compats:curios/attribute/intricate.suffix": "of Critical Thinking",
-
-  "affix.apothic_compats:curios/attribute/lacerating": "Lacerating",
-  "affix.apothic_compats:curios/attribute/lacerating.suffix": "of Surgical Precision",
-
-  "affix.apothic_compats:curios/attribute/graceful": "Graceful",
-  "affix.apothic_compats:curios/attribute/graceful.suffix": "of the Duelist",
-
-  "affix.apothic_compats:curios/attribute/berserking": "Berserking",
-  "affix.apothic_compats:curios/attribute/berserking.suffix": "of the Berserker",
-
-  "affix.apothic_compats:curios/attribute/destructive": "Destructive",
-  "affix.apothic_compats:curios/attribute/destructive.suffix": "of Quarrying",
-
   "affix.apothic_compats:curios/attribute/ancient/lucky": "Lucky",
   "affix.apothic_compats:curios/attribute/ancient/lucky.suffix": "of the Serendipitous",
 
+  "affix.apothic_compats:curios/attribute/windswept": "Windswept",
+  "affix.apothic_compats:curios/attribute/windswept.suffix": "of the Current",
   "affix.apothic_compats:curios/attribute/ancient/windswept": "Windswept",
   "affix.apothic_compats:curios/attribute/ancient/windswept.suffix": "of the Current",
 
+  "affix.apothic_compats:curios/attribute/aquatic": "Aquatic",
+  "affix.apothic_compats:curios/attribute/aquatic.suffix": "of the Ocean",
   "affix.apothic_compats:curios/attribute/ancient/aquatic": "Aquatic",
   "affix.apothic_compats:curios/attribute/ancient/aquatic.suffix": "of the Ocean",
 
+  "affix.apothic_compats:curios/attribute/blessed": "Blessed",
+  "affix.apothic_compats:curios/attribute/blessed.suffix": "of Health",
   "affix.apothic_compats:curios/attribute/ancient/blessed": "Blessed",
   "affix.apothic_compats:curios/attribute/ancient/blessed.suffix": "of Health",
 
+  "affix.apothic_compats:curios/attribute/gravitational": "Gravitational",
+  "affix.apothic_compats:curios/attribute/gravitational.suffix": "of Gravity",
   "affix.apothic_compats:curios/attribute/ancient/gravitational": "Gravitational",
   "affix.apothic_compats:curios/attribute/ancient/gravitational.suffix": "of Gravity",
 
+  "affix.apothic_compats:curios/attribute/ironforged": "Ironforged",
+  "affix.apothic_compats:curios/attribute/ironforged.suffix": "of Iron",
   "affix.apothic_compats:curios/attribute/ancient/ironforged": "Ironforged",
   "affix.apothic_compats:curios/attribute/ancient/ironforged.suffix": "of Iron",
 
+  "affix.apothic_compats:curios/attribute/spiritual": "Spiritual",
+  "affix.apothic_compats:curios/attribute/spiritual.suffix": "of the Witch Doctor",
   "affix.apothic_compats:curios/attribute/ancient/spiritual": "Spiritual",
   "affix.apothic_compats:curios/attribute/ancient/spiritual.suffix": "of the Witch Doctor",
 
+  "affix.apothic_compats:curios/attribute/stalwart": "Stalwart",
+  "affix.apothic_compats:curios/attribute/stalwart.suffix": "of Stubbornness",
   "affix.apothic_compats:curios/attribute/ancient/stalwart": "Stalwart",
   "affix.apothic_compats:curios/attribute/ancient/stalwart.suffix": "of Stubbornness",
 
+  "affix.apothic_compats:curios/attribute/fireproof": "Fireproof",
+  "affix.apothic_compats:curios/attribute/fireproof.suffix": "of Flaming Defense",
   "affix.apothic_compats:curios/attribute/ancient/fireproof": "Fireproof",
   "affix.apothic_compats:curios/attribute/ancient/fireproof.suffix": "of Flaming Defense",
 
+  "affix.apothic_compats:curios/attribute/oxygenated": "Oxygenated",
+  "affix.apothic_compats:curios/attribute/oxygenated.suffix": "of the Diver",
   "affix.apothic_compats:curios/attribute/ancient/oxygenated": "Oxygenated",
   "affix.apothic_compats:curios/attribute/ancient/oxygenated.suffix": "of the Diver",
 
+  "affix.apothic_compats:curios/attribute/experienced": "Experienced",
+  "affix.apothic_compats:curios/attribute/experienced.suffix": "of the Scholar",
   "affix.apothic_compats:curios/attribute/ancient/experienced": "Experienced",
   "affix.apothic_compats:curios/attribute/ancient/experienced.suffix": "of the Scholar",
 
+  "affix.apothic_compats:curios/attribute/submerged": "Submerged",
+  "affix.apothic_compats:curios/attribute/submerged.suffix": "of the Seaborn Miner",
   "affix.apothic_compats:curios/attribute/ancient/submerged": "Submerged",
   "affix.apothic_compats:curios/attribute/ancient/submerged.suffix": "of the Seaborn Miner",
 
+  "affix.apothic_compats:curios/attribute/adamantine": "Adamantine",
+  "affix.apothic_compats:curios/attribute/adamantine.suffix": "of Adamantine",
   "affix.apothic_compats:curios/attribute/ancient/adamantine": "Adamantine",
   "affix.apothic_compats:curios/attribute/ancient/adamantine.suffix": "of Adamantine",
 
+  "affix.apothic_compats:curios/attribute/vampiric": "Vampiric",
+  "affix.apothic_compats:curios/attribute/vampiric.suffix": "of Bloodletting",
   "affix.apothic_compats:curios/attribute/ancient/vampiric": "Vampiric",
   "affix.apothic_compats:curios/attribute/ancient/vampiric.suffix": "of Bloodletting",
 
+  "affix.apothic_compats:curios/attribute/murderous": "Murderous",
+  "affix.apothic_compats:curios/attribute/murderous.suffix": "of the Minotaur",
   "affix.apothic_compats:curios/attribute/ancient/murderous": "Murderous",
   "affix.apothic_compats:curios/attribute/ancient/murderous.suffix": "of the Minotaur",
 
+  "affix.apothic_compats:curios/attribute/intricate": "Intricate",
+  "affix.apothic_compats:curios/attribute/intricate.suffix": "of Critical Thinking",
   "affix.apothic_compats:curios/attribute/ancient/intricate": "Intricate",
   "affix.apothic_compats:curios/attribute/ancient/intricate.suffix": "of Critical Thinking",
 
+  "affix.apothic_compats:curios/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:curios/attribute/lacerating.suffix": "of Surgical Precision",
   "affix.apothic_compats:curios/attribute/ancient/lacerating": "Lacerating",
   "affix.apothic_compats:curios/attribute/ancient/lacerating.suffix": "of Surgical Precision",
 
+  "affix.apothic_compats:curios/attribute/graceful": "Graceful",
+  "affix.apothic_compats:curios/attribute/graceful.suffix": "of the Duelist",
   "affix.apothic_compats:curios/attribute/ancient/graceful": "Graceful",
   "affix.apothic_compats:curios/attribute/ancient/graceful.suffix": "of the Duelist",
 
+  "affix.apothic_compats:curios/attribute/berserking": "Berserking",
+  "affix.apothic_compats:curios/attribute/berserking.suffix": "of the Berserker",
   "affix.apothic_compats:curios/attribute/ancient/berserking": "Berserking",
   "affix.apothic_compats:curios/attribute/ancient/berserking.suffix": "of the Berserker",
 
+  "affix.apothic_compats:curios/attribute/destructive": "Destructive",
+  "affix.apothic_compats:curios/attribute/destructive.suffix": "of Quarrying",
   "affix.apothic_compats:curios/attribute/ancient/destructive": "Destructive",
   "affix.apothic_compats:curios/attribute/ancient/destructive.suffix": "of Quarrying",
 
 
+  "dart_shooter_header":  "DART SHOOTER",
+
+  "affix.apothic_compats:dart_shooter/magical": "Magical",
+  "affix.apothic_compats:dart_shooter/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:dart_shooter/magical.desc": "Your darts deal magic damage.",
+
+  "affix.apothic_compats:dart_shooter/ancient/magical": "Magical",
+  "affix.apothic_compats:dart_shooter/ancient/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:dart_shooter/ancient/magical.desc": "Your darts deal magic damage.",
+
+  "affix.apothic_compats:dart_shooter/attribute/elven": "Elven",
+  "affix.apothic_compats:dart_shooter/attribute/elven.suffix": "of the First Archer",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/elven": "Elven",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/elven.suffix": "of the First Archer",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/blighted": "Blighted",
+  "affix.apothic_compats:dart_shooter/mob_effect/blighted.suffix": "of the Blighted Lands",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/blighted": "Blighted",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
+
+  "affix.apothic_compats:dart_shooter/attribute/streamlined": "Streamlined",
+  "affix.apothic_compats:dart_shooter/attribute/streamlined.suffix": "of the Sniper",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/streamlined": "Streamlined",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/streamlined.suffix": "of the Sniper",
+
+  "affix.apothic_compats:dart_shooter/attribute/windswept": "Windswept",
+  "affix.apothic_compats:dart_shooter/attribute/windswept.suffix": "of the Current",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:dart_shooter/attribute/agile": "Agile",
+  "affix.apothic_compats:dart_shooter/attribute/agile.suffix": "of Dexterity",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/agile": "Agile",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/agile.suffix": "of Dexterity",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ensnaring": "Ensnaring",
+  "affix.apothic_compats:dart_shooter/mob_effect/ensnaring.suffix": "of the Predator",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring": "Ensnaring",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring.suffix": "of the Predator",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/fleeting": "Fleeting",
+  "affix.apothic_compats:dart_shooter/mob_effect/fleeting.suffix": "of the Ranger",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/fleeting": "Fleeting",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/fleeting.suffix": "of the Ranger",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:dart_shooter/mob_effect/shulkers.suffix": "of Levitation",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/shulkers.suffix": "of Levitation",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:dart_shooter/mob_effect/ivy_laced.suffix": "of Natural Toxins",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/acidic": "Acidic",
+  "affix.apothic_compats:dart_shooter/mob_effect/acidic.suffix": "of Corrosion",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/acidic": "Acidic",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/acidic.suffix": "of Corrosion",
+
+  "affix.apothic_compats:dart_shooter/mob_effect/grievous": "Grievous",
+  "affix.apothic_compats:dart_shooter/mob_effect/grievous.suffix": "of Wounding",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/grievous": "Grievous",
+  "affix.apothic_compats:dart_shooter/mob_effect/ancient/grievous.suffix": "of Wounding",
+
+  "affix.apothic_compats:dart_shooter/enchantment/prosperous": "Prosperous",
+  "affix.apothic_compats:dart_shooter/enchantment/prosperous.suffix": "of the Treasure-Seeker",
+  "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous": "Prosperous",
+  "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous.suffix": "of the Treasure-Seeker",
 
 
+  "potato_cannon_header":  "POTATO CANNON",
+
+  "affix.apothic_compats:potato_cannon/magical": "Magical",
+  "affix.apothic_compats:potato_cannon/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:potato_cannon/magical.desc": "Your darts deal magic damage.",
+  "affix.apothic_compats:potato_cannon/ancient/magical": "Magical",
+  "affix.apothic_compats:potato_cannon/ancient/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:potato_cannon/ancient/magical.desc": "Your darts deal magic damage.",
+
+  "affix.apothic_compats:potato_cannon/attribute/elven": "Elven",
+  "affix.apothic_compats:potato_cannon/attribute/elven.suffix": "of the First Archer",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/elven": "Elven",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/elven.suffix": "of the First Archer",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/blighted": "Blighted",
+  "affix.apothic_compats:potato_cannon/mob_effect/blighted.suffix": "of the Blighted Lands",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted": "Blighted",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
+
+  "affix.apothic_compats:potato_cannon/attribute/streamlined": "Streamlined",
+  "affix.apothic_compats:potato_cannon/attribute/streamlined.suffix": "of the Sniper",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined": "Streamlined",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined.suffix": "of the Sniper",
+
+  "affix.apothic_compats:potato_cannon/attribute/windswept": "Windswept",
+  "affix.apothic_compats:potato_cannon/attribute/windswept.suffix": "of the Current",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:potato_cannon/attribute/agile": "Agile",
+  "affix.apothic_compats:potato_cannon/attribute/agile.suffix": "of Dexterity",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/agile": "Agile",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/agile.suffix": "of Dexterity",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring": "Ensnaring",
+  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring.suffix": "of the Predator",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring": "Ensnaring",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring.suffix": "of the Predator",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/fleeting": "Fleeting",
+  "affix.apothic_compats:potato_cannon/mob_effect/fleeting.suffix": "of the Ranger",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting": "Fleeting",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting.suffix": "of the Ranger",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:potato_cannon/mob_effect/shulkers.suffix": "of Levitation",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers.suffix": "of Levitation",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced.suffix": "of Natural Toxins",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/acidic": "Acidic",
+  "affix.apothic_compats:potato_cannon/mob_effect/acidic.suffix": "of Corrosion",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic": "Acidic",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic.suffix": "of Corrosion",
+
+  "affix.apothic_compats:potato_cannon/mob_effect/grievous": "Grievous",
+  "affix.apothic_compats:potato_cannon/mob_effect/grievous.suffix": "of Wounding",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous": "Grievous",
+  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous.suffix": "of Wounding",
+
+  "affix.apothic_compats:potato_cannon/enchantment/prosperous": "Prosperous",
+  "affix.apothic_compats:potato_cannon/enchantment/prosperous.suffix": "of the Treasure-Seeker",
+  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed": "Reclaimed",
+  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed.suffix": "of the Redeemer",
 
 
+  "staff_header_ranged":  "STAFF RANGED",
 
+  "affix.apothic_compats:staff/ranged/attribute/windswept": "Windswept",
+  "affix.apothic_compats:staff/ranged/attribute/windswept.suffix": "of the Current",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/windswept.suffix": "of the Current",
 
+  "affix.apothic_compats:staff/ranged/attribute/agile": "Agile",
+  "affix.apothic_compats:staff/ranged/attribute/agile.suffix": "of Dexterity",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/agile": "Agile",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/agile.suffix": "of Dexterity",
 
+  "affix.apothic_compats:staff/ranged/attribute/capacious": "Capacious",
+  "affix.apothic_compats:staff/ranged/attribute/capacious.suffix": "of Roominess",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious": "Capacious",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious.suffix": "of Roominess",
 
+  "affix.apothic_compats:staff/ranged/attribute/ample": "Ample",
+  "affix.apothic_compats:staff/ranged/attribute/ample.suffix": "of Capacity",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/ample": "Ample",
+  "affix.apothic_compats:staff/ranged/attribute/ancient/ample.suffix": "of Capacity",
 
-  "affix.apothic_compats:scythe/cleaving": "Cleaving",
-  "affix.apothic_compats:scythe/cleaving.suffix": "of the Butcher",
-  "affix.apothic_compats:scythe/cleaving.desc": "Attacks have a %s%% chance to also hit up to %s nearby enemies.",
+  "affix.apothic_compats:staff/ranged/mob_effect/ensnaring": "Ensnaring",
+  "affix.apothic_compats:staff/ranged/mob_effect/ensnaring.suffix": "of the Predator",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring": "Ensnaring",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring.suffix": "of the Predator",
 
-  "affix.apothic_compats:scythe/festive": "Festive",
-  "affix.apothic_compats:scythe/festive.suffix": "of Partying",
-  "affix.apothic_compats:scythe/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+  "affix.apothic_compats:staff/ranged/mob_effect/fleeting": "Fleeting",
+  "affix.apothic_compats:staff/ranged/mob_effect/fleeting.suffix": "of the Ranger",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/fleeting": "Fleeting",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/fleeting.suffix": "of the Ranger",
 
-  "affix.apothic_compats:scythe/executing": "Executing",
-  "affix.apothic_compats:scythe/executing.suffix": "of the Executioner",
-  "affix.apothic_compats:scythe/executing.desc": "Enemies below %s%% max health will be executed.",
+  "affix.apothic_compats:staff/ranged/mob_effect/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:staff/ranged/mob_effect/shulkers.suffix": "of Levitation",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/shulkers.suffix": "of Levitation",
 
-  "affix.apothic_compats:scythe/thunderstruck": "Thunderstruck",
-  "affix.apothic_compats:scythe/thunderstruck.suffix": "of the Storm",
-  "affix.apothic_compats:scythe/thunderstruck.desc": "Your attacks deal %s damage to nearby enemies.",
+  "affix.apothic_compats:staff/ranged/mob_effect/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:staff/ranged/mob_effect/ivy_laced.suffix": "of Natural Toxins",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
 
-  "affix.apothic_compats:scythe/ancient/cleaving": "Cleaving",
-  "affix.apothic_compats:scythe/ancient/cleaving.suffix": "of the Butcher",
-  "affix.apothic_compats:scythe/ancient/cleaving.desc": "Attacks have a %s%% chance to also hit up to %s nearby enemies.",
+  "affix.apothic_compats:staff/ranged/mob_effect/acidic": "Acidic",
+  "affix.apothic_compats:staff/ranged/mob_effect/acidic.suffix": "of Corrosion",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/acidic": "Acidic",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/acidic.suffix": "of Corrosion",
 
-  "affix.apothic_compats:scythe/ancient/festive": "Festive",
-  "affix.apothic_compats:scythe/ancient/festive.suffix": "of Partying",
-  "affix.apothic_compats:scythe/ancient/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+  "affix.apothic_compats:staff/ranged/mob_effect/grievous": "Grievous",
+  "affix.apothic_compats:staff/ranged/mob_effect/grievous.suffix": "of Wounding",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/grievous": "Grievous",
+  "affix.apothic_compats:staff/ranged/mob_effect/ancient/grievous.suffix": "of Wounding",
 
-  "affix.apothic_compats:scythe/ancient/executing": "Executing",
-  "affix.apothic_compats:scythe/ancient/executing.suffix": "of the Executioner",
-  "affix.apothic_compats:scythe/ancient/executing.desc": "Enemies below %s%% max health will be executed.",
+  "affix.apothic_compats:staff/ranged/enchantment/prosperous": "Prosperous",
+  "affix.apothic_compats:staff/ranged/enchantment/prosperous.suffix": "of the Treasure-Seeker",
+  "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous": "Prosperous",
+  "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous.suffix": "of the Treasure-Seeker",
 
-  "affix.apothic_compats:scythe/ancient/thunderstruck": "Thunderstruck",
-  "affix.apothic_compats:scythe/ancient/thunderstruck.suffix": "of the Storm",
-  "affix.apothic_compats:scythe/ancient/thunderstruck.desc": "Your attacks deal %s damage to nearby enemies.",
 
   "affix.apothic_compats:staff/cleaving": "Cleaving",
   "affix.apothic_compats:staff/cleaving.suffix": "of the Butcher",
@@ -459,170 +595,7 @@
   "affix.apothic_compats:staff/ancient/thunderstruck.desc": "Your attacks deal %s damage to nearby enemies.",
 
 
-
-  "affix.apothic_compats:dart_shooter/magical": "Magical",
-  "affix.apothic_compats:dart_shooter/magical.suffix": "of the Arcane",
-  "affix.apothic_compats:dart_shooter/magical.desc": "Your darts deal magic damage.",
-
-  "affix.apothic_compats:dart_shooter/ancient/magical": "Magical",
-  "affix.apothic_compats:dart_shooter/ancient/magical.suffix": "of the Arcane",
-  "affix.apothic_compats:dart_shooter/ancient/magical.desc": "Your darts deal magic damage.",
-
-  "affix.apothic_compats:dart_shooter/attribute/elven": "Elven",
-  "affix.apothic_compats:dart_shooter/attribute/elven.suffix": "of the First Archer",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/blighted": "Blighted",
-  "affix.apothic_compats:dart_shooter/mob_effect/blighted.suffix": "of the Blighted Lands",
-
-  "affix.apothic_compats:dart_shooter/attribute/streamlined": "Streamlined",
-  "affix.apothic_compats:dart_shooter/attribute/streamlined.suffix": "of the Sniper",
-
-  "affix.apothic_compats:dart_shooter/attribute/windswept": "Windswept",
-  "affix.apothic_compats:dart_shooter/attribute/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:dart_shooter/attribute/agile": "Agile",
-  "affix.apothic_compats:dart_shooter/attribute/agile.suffix": "of Dexterity",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ensnaring": "Ensnaring",
-  "affix.apothic_compats:dart_shooter/mob_effect/ensnaring.suffix": "of the Predator",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/fleeting": "Fleeting",
-  "affix.apothic_compats:dart_shooter/mob_effect/fleeting.suffix": "of the Ranger",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/shulkers": "Shulk-Touched",
-  "affix.apothic_compats:dart_shooter/mob_effect/shulkers.suffix": "of Levitation",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ivy_laced": "Ivy Laced",
-  "affix.apothic_compats:dart_shooter/mob_effect/ivy_laced.suffix": "of Natural Toxins",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/acidic": "Acidic",
-  "affix.apothic_compats:dart_shooter/mob_effect/acidic.suffix": "of Corrosion",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/grievous": "Grievous",
-  "affix.apothic_compats:dart_shooter/mob_effect/grievous.suffix": "of Wounding",
-
-  "affix.apothic_compats:dart_shooter/enchantment/prosperous": "Prosperous",
-  "affix.apothic_compats:dart_shooter/enchantment/prosperous.suffix": "of the Treasure-Seeker",
-
-  "affix.apothic_compats:dart_shooter/attribute/ancient/elven": "Elven",
-  "affix.apothic_compats:dart_shooter/attribute/ancient/elven.suffix": "of the First Archer",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/blighted": "Blighted",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
-
-  "affix.apothic_compats:dart_shooter/attribute/ancient/streamlined": "Streamlined",
-  "affix.apothic_compats:dart_shooter/attribute/ancient/streamlined.suffix": "of the Sniper",
-
-  "affix.apothic_compats:dart_shooter/attribute/ancient/windswept": "Windswept",
-  "affix.apothic_compats:dart_shooter/attribute/ancient/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:dart_shooter/attribute/ancient/agile": "Agile",
-  "affix.apothic_compats:dart_shooter/attribute/ancient/agile.suffix": "of Dexterity",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring": "Ensnaring",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring.suffix": "of the Predator",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/fleeting": "Fleeting",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/fleeting.suffix": "of the Ranger",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/shulkers": "Shulk-Touched",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/shulkers.suffix": "of Levitation",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ivy_laced": "Ivy Laced",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/acidic": "Acidic",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/acidic.suffix": "of Corrosion",
-
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/grievous": "Grievous",
-  "affix.apothic_compats:dart_shooter/mob_effect/ancient/grievous.suffix": "of Wounding",
-
-  "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous": "Prosperous",
-  "affix.apothic_compats:dart_shooter/enchantment/ancient/prosperous.suffix": "of the Treasure-Seeker",
-
-
-
-  "affix.apothic_compats:potato_cannon/magical": "Magical",
-  "affix.apothic_compats:potato_cannon/magical.suffix": "of the Arcane",
-  "affix.apothic_compats:potato_cannon/magical.desc": "Your darts deal magic damage.",
-
-  "affix.apothic_compats:potato_cannon/ancient/magical": "Magical",
-  "affix.apothic_compats:potato_cannon/ancient/magical.suffix": "of the Arcane",
-  "affix.apothic_compats:potato_cannon/ancient/magical.desc": "Your darts deal magic damage.",
-
-  "affix.apothic_compats:potato_cannon/attribute/elven": "Elven",
-  "affix.apothic_compats:potato_cannon/attribute/elven.suffix": "of the First Archer",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/blighted": "Blighted",
-  "affix.apothic_compats:potato_cannon/mob_effect/blighted.suffix": "of the Blighted Lands",
-
-  "affix.apothic_compats:potato_cannon/attribute/streamlined": "Streamlined",
-  "affix.apothic_compats:potato_cannon/attribute/streamlined.suffix": "of the Sniper",
-
-  "affix.apothic_compats:potato_cannon/attribute/windswept": "Windswept",
-  "affix.apothic_compats:potato_cannon/attribute/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:potato_cannon/attribute/agile": "Agile",
-  "affix.apothic_compats:potato_cannon/attribute/agile.suffix": "of Dexterity",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring": "Ensnaring",
-  "affix.apothic_compats:potato_cannon/mob_effect/ensnaring.suffix": "of the Predator",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/fleeting": "Fleeting",
-  "affix.apothic_compats:potato_cannon/mob_effect/fleeting.suffix": "of the Ranger",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/shulkers": "Shulk-Touched",
-  "affix.apothic_compats:potato_cannon/mob_effect/shulkers.suffix": "of Levitation",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced": "Ivy Laced",
-  "affix.apothic_compats:potato_cannon/mob_effect/ivy_laced.suffix": "of Natural Toxins",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/acidic": "Acidic",
-  "affix.apothic_compats:potato_cannon/mob_effect/acidic.suffix": "of Corrosion",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/grievous": "Grievous",
-  "affix.apothic_compats:potato_cannon/mob_effect/grievous.suffix": "of Wounding",
-
-  "affix.apothic_compats:potato_cannon/enchantment/prosperous": "Prosperous",
-  "affix.apothic_compats:potato_cannon/enchantment/prosperous.suffix": "of the Treasure-Seeker",
-
-  "affix.apothic_compats:potato_cannon/attribute/ancient/elven": "Elven",
-  "affix.apothic_compats:potato_cannon/attribute/ancient/elven.suffix": "of the First Archer",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted": "Blighted",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
-
-  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined": "Streamlined",
-  "affix.apothic_compats:potato_cannon/attribute/ancient/streamlined.suffix": "of the Sniper",
-
-  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept": "Windswept",
-  "affix.apothic_compats:potato_cannon/attribute/ancient/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:potato_cannon/attribute/ancient/agile": "Agile",
-  "affix.apothic_compats:potato_cannon/attribute/ancient/agile.suffix": "of Dexterity",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring": "Ensnaring",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ensnaring.suffix": "of the Predator",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting": "Fleeting",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/fleeting.suffix": "of the Ranger",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers": "Shulk-Touched",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/shulkers.suffix": "of Levitation",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced": "Ivy Laced",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic": "Acidic",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/acidic.suffix": "of Corrosion",
-
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous": "Grievous",
-  "affix.apothic_compats:potato_cannon/mob_effect/ancient/grievous.suffix": "of Wounding",
-
-  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed": "Reclaimed",
-  "affix.apothic_compats:potato_cannon/enchantment/ancient/reclaimed.suffix": "of the Redeemer",
-
-
+  "staff_header_melee":  "STAFF MELEE",
 
   "affix.apothic_compats:staff/melee/attribute/vandalous": "Vandalous",
   "affix.apothic_compats:staff/melee/attribute/ancient/vandalous": "Vandalous",
@@ -634,235 +607,143 @@
   "affix.apothic_compats:staff/melee/attribute/mystic.suffix": "of Thaumaturgy",
   "affix.apothic_compats:staff/melee/attribute/ancient/mystic.suffix": "of Thaumaturgy",
 
-  "affix.apothic_compats:staff/ranged/attribute/windswept": "Windswept",
-  "affix.apothic_compats:staff/ranged/attribute/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:staff/ranged/attribute/agile": "Agile",
-  "affix.apothic_compats:staff/ranged/attribute/agile.suffix": "of Dexterity",
-
-  "affix.apothic_compats:staff/ranged/attribute/capacious": "Capacious",
-  "affix.apothic_compats:staff/ranged/attribute/capacious.suffix": "of Roominess",
-
-  "affix.apothic_compats:staff/ranged/attribute/ample": "Ample",
-  "affix.apothic_compats:staff/ranged/attribute/ample.suffix": "of Capacity",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ensnaring": "Ensnaring",
-  "affix.apothic_compats:staff/ranged/mob_effect/ensnaring.suffix": "of the Predator",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/fleeting": "Fleeting",
-  "affix.apothic_compats:staff/ranged/mob_effect/fleeting.suffix": "of the Ranger",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/shulkers": "Shulk-Touched",
-  "affix.apothic_compats:staff/ranged/mob_effect/shulkers.suffix": "of Levitation",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ivy_laced": "Ivy Laced",
-  "affix.apothic_compats:staff/ranged/mob_effect/ivy_laced.suffix": "of Natural Toxins",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/acidic": "Acidic",
-  "affix.apothic_compats:staff/ranged/mob_effect/acidic.suffix": "of Corrosion",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/grievous": "Grievous",
-  "affix.apothic_compats:staff/ranged/mob_effect/grievous.suffix": "of Wounding",
-
-  "affix.apothic_compats:staff/ranged/enchantment/prosperous": "Prosperous",
-  "affix.apothic_compats:staff/ranged/enchantment/prosperous.suffix": "of the Treasure-Seeker",
-
-  "affix.apothic_compats:staff/ranged/attribute/ancient/windswept": "Windswept",
-  "affix.apothic_compats:staff/ranged/attribute/ancient/windswept.suffix": "of the Current",
-
-  "affix.apothic_compats:staff/ranged/attribute/ancient/agile": "Agile",
-  "affix.apothic_compats:staff/ranged/attribute/ancient/agile.suffix": "of Dexterity",
-
-  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious": "Capacious",
-  "affix.apothic_compats:staff/ranged/attribute/ancient/capacious.suffix": "of Roominess",
-
-  "affix.apothic_compats:staff/ranged/attribute/ancient/ample": "Ample",
-  "affix.apothic_compats:staff/ranged/attribute/ancient/ample.suffix": "of Capacity",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring": "Ensnaring",
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ensnaring.suffix": "of the Predator",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/fleeting": "Fleeting",
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/fleeting.suffix": "of the Ranger",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/shulkers": "Shulk-Touched",
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/shulkers.suffix": "of Levitation",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ivy_laced": "Ivy Laced",
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/acidic": "Acidic",
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/acidic.suffix": "of Corrosion",
-
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/grievous": "Grievous",
-  "affix.apothic_compats:staff/ranged/mob_effect/ancient/grievous.suffix": "of Wounding",
-
-  "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous": "Prosperous",
-  "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous.suffix": "of the Treasure-Seeker",
-
   "affix.apothic_compats:staff/melee/attribute/violent": "Violent",
   "affix.apothic_compats:staff/melee/attribute/violent.suffix": "of Slaying",
-
-  "affix.apothic_compats:staff/melee/attribute/wizarding": "Wizarding",
-  "affix.apothic_compats:staff/melee/attribute/wizarding.suffix": "of the Mage",
-
-  "affix.apothic_compats:staff/melee/attribute/magekilling": "Mage-Killing",
-  "affix.apothic_compats:staff/melee/attribute/magekilling.suffix": "of the Spellsword",
-
-  "affix.apothic_compats:staff/melee/attribute/graceful": "Graceful",
-  "affix.apothic_compats:staff/melee/attribute/graceful.suffix": "of the Duelist",
-
-  "affix.apothic_compats:staff/melee/attribute/forceful": "Forceful",
-  "affix.apothic_compats:staff/melee/attribute/forceful.suffix": "of the Bull",
-
-  "affix.apothic_compats:staff/melee/attribute/elongated": "Elongated",
-  "affix.apothic_compats:staff/melee/attribute/elongated.suffix": "of Distant Battles",
-
-  "affix.apothic_compats:staff/melee/attribute/intricate": "Intricate",
-  "affix.apothic_compats:staff/melee/attribute/intricate.suffix": "of Critical Thinking",
-
-  "affix.apothic_compats:staff/melee/attribute/lacerating": "Lacerating",
-  "affix.apothic_compats:staff/melee/attribute/lacerating.suffix": "of Surgical Precision",
-
-  "affix.apothic_compats:staff/melee/attribute/glacial": "Glacial",
-  "affix.apothic_compats:staff/melee/attribute/glacial.suffix": "of the Frostlands",
-
-  "affix.apothic_compats:staff/melee/attribute/infernal": "Infernal",
-  "affix.apothic_compats:staff/melee/attribute/infernal.suffix": "of the Sun",
-
-  "affix.apothic_compats:staff/melee/attribute/vampiric": "Vampiric",
-  "affix.apothic_compats:staff/melee/attribute/vampiric.suffix": "of Bloodletting",
-
-  "affix.apothic_compats:staff/melee/attribute/piercing": "Piercing",
-  "affix.apothic_compats:staff/melee/attribute/piercing.suffix": "of the Sunderer",
-
-  "affix.apothic_compats:staff/melee/attribute/shredding": "Shredding",
-  "affix.apothic_compats:staff/melee/attribute/shredding.suffix": "of Penetration",
-
-  "affix.apothic_compats:staff/melee/attribute/giant_slaying": "Giant Slaying",
-  "affix.apothic_compats:staff/melee/attribute/giant_slaying.suffix": "of Colossal Strikes",
-
-  "affix.apothic_compats:staff/melee/attribute/berserking": "Berserking",
-  "affix.apothic_compats:staff/melee/attribute/berserking.suffix": "of the Berserker",
-
-  "affix.apothic_compats:staff/melee/attribute/annihilating": "Annihilating",
-  "affix.apothic_compats:staff/melee/attribute/annihilating.suffix": "of the Titan",
-
-  "affix.apothic_compats:staff/melee/attribute/decimating": "Decimating",
-  "affix.apothic_compats:staff/melee/attribute/decimating.suffix": "of the God-King",
-
-  "affix.apothic_compats:staff/melee/attribute/murderous": "Murderous",
-  "affix.apothic_compats:staff/melee/attribute/murderous.suffix": "of the Minotaur",
-
-  "affix.apothic_compats:staff/melee/attribute/lengthy": "Lengthy",
-  "affix.apothic_compats:staff/melee/attribute/lengthy.suffix": "of Extreme Length",
-
-  "affix.apothic_compats:staff/melee/attribute/nullifying": "Nullifying",
-  "affix.apothic_compats:staff/melee/attribute/nullifying.suffix": "of the Magebreaker",
-
-  "affix.apothic_compats:staff/melee/attribute/spellbreaking": "Spellbreaking",
-  "affix.apothic_compats:staff/melee/attribute/spellbreaking.suffix": "of the Petricite Golem",
-
-  "affix.apothic_compats:staff/melee/mob_effect/omniscient": "Omniscient",
-  "affix.apothic_compats:staff/melee/mob_effect/omniscient.suffix": "of the Grand Sage",
-
-  "affix.apothic_compats:staff/melee/mob_effect/bloodletting": "Caustic",
-  "affix.apothic_compats:staff/melee/mob_effect/bloodletting.suffix": "of the Slayer",
-
-  "affix.apothic_compats:staff/melee/mob_effect/caustic": "Caustic",
-  "affix.apothic_compats:staff/melee/mob_effect/caustic.suffix": "of the Caustic Realm",
-
-  "affix.apothic_compats:staff/melee/mob_effect/sophisticated": "Sophisticated",
-  "affix.apothic_compats:staff/melee/mob_effect/sophisticated.suffix": "of the Ancient Library",
-
-  "affix.apothic_compats:staff/melee/mob_effect/elusive": "Elusive",
-  "affix.apothic_compats:staff/melee/mob_effect/elusive.suffix": "of Evasion",
-
-  "affix.apothic_compats:staff/melee/mob_effect/weakening": "Weakening",
-  "affix.apothic_compats:staff/melee/mob_effect/weakening.suffix": "of Weakness",
-
   "affix.apothic_compats:staff/melee/attribute/ancient/violent": "Violent",
   "affix.apothic_compats:staff/melee/attribute/ancient/violent.suffix": "of Slaying",
 
+  "affix.apothic_compats:staff/melee/attribute/wizarding": "Wizarding",
+  "affix.apothic_compats:staff/melee/attribute/wizarding.suffix": "of the Mage",
   "affix.apothic_compats:staff/melee/attribute/ancient/wizarding": "Wizarding",
   "affix.apothic_compats:staff/melee/attribute/ancient/wizarding.suffix": "of the Mage",
 
+  "affix.apothic_compats:staff/melee/attribute/magekilling": "Mage-Killing",
+  "affix.apothic_compats:staff/melee/attribute/magekilling.suffix": "of the Spellsword",
   "affix.apothic_compats:staff/melee/attribute/ancient/magekilling": "Mage-Killing",
   "affix.apothic_compats:staff/melee/attribute/ancient/magekilling.suffix": "of the Spellsword",
 
+  "affix.apothic_compats:staff/melee/attribute/graceful": "Graceful",
+  "affix.apothic_compats:staff/melee/attribute/graceful.suffix": "of the Duelist",
   "affix.apothic_compats:staff/melee/attribute/ancient/graceful": "Graceful",
   "affix.apothic_compats:staff/melee/attribute/ancient/graceful.suffix": "of the Duelist",
 
+  "affix.apothic_compats:staff/melee/attribute/forceful": "Forceful",
+  "affix.apothic_compats:staff/melee/attribute/forceful.suffix": "of the Bull",
   "affix.apothic_compats:staff/melee/attribute/ancient/forceful": "Forceful",
   "affix.apothic_compats:staff/melee/attribute/ancient/forceful.suffix": "of the Bull",
 
+  "affix.apothic_compats:staff/melee/attribute/elongated": "Elongated",
+  "affix.apothic_compats:staff/melee/attribute/elongated.suffix": "of Distant Battles",
   "affix.apothic_compats:staff/melee/attribute/ancient/elongated": "Elongated",
   "affix.apothic_compats:staff/melee/attribute/ancient/elongated.suffix": "of Distant Battles",
 
+  "affix.apothic_compats:staff/melee/attribute/intricate": "Intricate",
+  "affix.apothic_compats:staff/melee/attribute/intricate.suffix": "of Critical Thinking",
   "affix.apothic_compats:staff/melee/attribute/ancient/intricate": "Intricate",
   "affix.apothic_compats:staff/melee/attribute/ancient/intricate.suffix": "of Critical Thinking",
 
+  "affix.apothic_compats:staff/melee/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:staff/melee/attribute/lacerating.suffix": "of Surgical Precision",
   "affix.apothic_compats:staff/melee/attribute/ancient/lacerating": "Lacerating",
   "affix.apothic_compats:staff/melee/attribute/ancient/lacerating.suffix": "of Surgical Precision",
 
+  "affix.apothic_compats:staff/melee/attribute/glacial": "Glacial",
+  "affix.apothic_compats:staff/melee/attribute/glacial.suffix": "of the Frostlands",
   "affix.apothic_compats:staff/melee/attribute/ancient/glacial": "Glacial",
   "affix.apothic_compats:staff/melee/attribute/ancient/glacial.suffix": "of the Frostlands",
 
+  "affix.apothic_compats:staff/melee/attribute/infernal": "Infernal",
+  "affix.apothic_compats:staff/melee/attribute/infernal.suffix": "of the Sun",
   "affix.apothic_compats:staff/melee/attribute/ancient/infernal": "Infernal",
   "affix.apothic_compats:staff/melee/attribute/ancient/infernal.suffix": "of the Sun",
 
+  "affix.apothic_compats:staff/melee/attribute/vampiric": "Vampiric",
+  "affix.apothic_compats:staff/melee/attribute/vampiric.suffix": "of Bloodletting",
   "affix.apothic_compats:staff/melee/attribute/ancient/vampiric": "Vampiric",
   "affix.apothic_compats:staff/melee/attribute/ancient/vampiric.suffix": "of Bloodletting",
 
+  "affix.apothic_compats:staff/melee/attribute/piercing": "Piercing",
+  "affix.apothic_compats:staff/melee/attribute/piercing.suffix": "of the Sunderer",
   "affix.apothic_compats:staff/melee/attribute/ancient/piercing": "Piercing",
   "affix.apothic_compats:staff/melee/attribute/ancient/piercing.suffix": "of the Sunderer",
 
+  "affix.apothic_compats:staff/melee/attribute/shredding": "Shredding",
+  "affix.apothic_compats:staff/melee/attribute/shredding.suffix": "of Penetration",
   "affix.apothic_compats:staff/melee/attribute/ancient/shredding": "Shredding",
   "affix.apothic_compats:staff/melee/attribute/ancient/shredding.suffix": "of Penetration",
 
+  "affix.apothic_compats:staff/melee/attribute/giant_slaying": "Giant Slaying",
+  "affix.apothic_compats:staff/melee/attribute/giant_slaying.suffix": "of Colossal Strikes",
   "affix.apothic_compats:staff/melee/attribute/ancient/giant_slaying": "Giant Slaying",
   "affix.apothic_compats:staff/melee/attribute/ancient/giant_slaying.suffix": "of Colossal Strikes",
 
+  "affix.apothic_compats:staff/melee/attribute/berserking": "Berserking",
+  "affix.apothic_compats:staff/melee/attribute/berserking.suffix": "of the Berserker",
   "affix.apothic_compats:staff/melee/attribute/ancient/berserking": "Berserking",
   "affix.apothic_compats:staff/melee/attribute/ancient/berserking.suffix": "of the Berserker",
 
+  "affix.apothic_compats:staff/melee/attribute/annihilating": "Annihilating",
+  "affix.apothic_compats:staff/melee/attribute/annihilating.suffix": "of the Titan",
   "affix.apothic_compats:staff/melee/attribute/ancient/annihilating": "Annihilating",
   "affix.apothic_compats:staff/melee/attribute/ancient/annihilating.suffix": "of the Titan",
 
+  "affix.apothic_compats:staff/melee/attribute/decimating": "Decimating",
+  "affix.apothic_compats:staff/melee/attribute/decimating.suffix": "of the God-King",
   "affix.apothic_compats:staff/melee/attribute/ancient/decimating": "Decimating",
   "affix.apothic_compats:staff/melee/attribute/ancient/decimating.suffix": "of the God-King",
 
+  "affix.apothic_compats:staff/melee/attribute/murderous": "Murderous",
+  "affix.apothic_compats:staff/melee/attribute/murderous.suffix": "of the Minotaur",
   "affix.apothic_compats:staff/melee/attribute/ancient/murderous": "Murderous",
   "affix.apothic_compats:staff/melee/attribute/ancient/murderous.suffix": "of the Minotaur",
 
+  "affix.apothic_compats:staff/melee/attribute/lengthy": "Lengthy",
+  "affix.apothic_compats:staff/melee/attribute/lengthy.suffix": "of Extreme Length",
   "affix.apothic_compats:staff/melee/attribute/ancient/lengthy": "Lengthy",
   "affix.apothic_compats:staff/melee/attribute/ancient/lengthy.suffix": "of Extreme Length",
 
+  "affix.apothic_compats:staff/melee/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:staff/melee/attribute/nullifying.suffix": "of the Magebreaker",
   "affix.apothic_compats:staff/melee/attribute/ancient/nullifying": "Nullifying",
   "affix.apothic_compats:staff/melee/attribute/ancient/nullifying.suffix": "of the Magebreaker",
 
+  "affix.apothic_compats:staff/melee/attribute/spellbreaking": "Spellbreaking",
+  "affix.apothic_compats:staff/melee/attribute/spellbreaking.suffix": "of the Petricite Golem",
   "affix.apothic_compats:staff/melee/attribute/ancient/spellbreaking": "Spellbreaking",
   "affix.apothic_compats:staff/melee/attribute/ancient/spellbreaking.suffix": "of the Petricite Golem",
 
+  "affix.apothic_compats:staff/melee/mob_effect/omniscient": "Omniscient",
+  "affix.apothic_compats:staff/melee/mob_effect/omniscient.suffix": "of the Grand Sage",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/omniscient": "Omniscient",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/omniscient.suffix": "of the Grand Sage",
 
+  "affix.apothic_compats:staff/melee/mob_effect/bloodletting": "Caustic",
+  "affix.apothic_compats:staff/melee/mob_effect/bloodletting.suffix": "of the Slayer",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/bloodletting": "Caustic",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/bloodletting.suffix": "of the Slayer",
 
+  "affix.apothic_compats:staff/melee/mob_effect/caustic": "Caustic",
+  "affix.apothic_compats:staff/melee/mob_effect/caustic.suffix": "of the Caustic Realm",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/caustic": "Caustic",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/caustic.suffix": "of the Caustic Realm",
 
+  "affix.apothic_compats:staff/melee/mob_effect/sophisticated": "Sophisticated",
+  "affix.apothic_compats:staff/melee/mob_effect/sophisticated.suffix": "of the Ancient Library",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/sophisticated": "Sophisticated",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/sophisticated.suffix": "of the Ancient Library",
 
+  "affix.apothic_compats:staff/melee/mob_effect/elusive": "Elusive",
+  "affix.apothic_compats:staff/melee/mob_effect/elusive.suffix": "of Evasion",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/elusive": "Elusive",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/elusive.suffix": "of Evasion",
 
+  "affix.apothic_compats:staff/melee/mob_effect/weakening": "Weakening",
+  "affix.apothic_compats:staff/melee/mob_effect/weakening.suffix": "of Weakness",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/weakening": "Weakening",
   "affix.apothic_compats:staff/melee/mob_effect/ancient/weakening.suffix": "of Weakness",
 
 
+  "scythe_header":  "SCYTHE",
 
   "affix.apothic_compats:scythe/melee/attribute/vandalous": "Vandalous",
   "affix.apothic_compats:scythe/melee/attribute/ancient/vandalous": "Vandalous",
@@ -876,153 +757,277 @@
 
   "affix.apothic_compats:scythe/attribute/violent": "Violent",
   "affix.apothic_compats:scythe/attribute/violent.suffix": "of Slaying",
-
-  "affix.apothic_compats:scythe/attribute/graceful": "Graceful",
-  "affix.apothic_compats:scythe/attribute/graceful.suffix": "of the Duelist",
-
-  "affix.apothic_compats:scythe/attribute/forceful": "Forceful",
-  "affix.apothic_compats:scythe/attribute/forceful.suffix": "of the Bull",
-
-  "affix.apothic_compats:scythe/attribute/elongated": "Elongated",
-  "affix.apothic_compats:scythe/attribute/elongated.suffix": "of Distant Battles",
-
-  "affix.apothic_compats:scythe/attribute/intricate": "Intricate",
-  "affix.apothic_compats:scythe/attribute/intricate.suffix": "of Critical Thinking",
-
-  "affix.apothic_compats:scythe/attribute/lacerating": "Lacerating",
-  "affix.apothic_compats:scythe/attribute/lacerating.suffix": "of Surgical Precision",
-
-  "affix.apothic_compats:scythe/attribute/glacial": "Glacial",
-  "affix.apothic_compats:scythe/attribute/glacial.suffix": "of the Frostlands",
-
-  "affix.apothic_compats:scythe/attribute/infernal": "Infernal",
-  "affix.apothic_compats:scythe/attribute/infernal.suffix": "of the Sun",
-
-  "affix.apothic_compats:scythe/attribute/vampiric": "Vampiric",
-  "affix.apothic_compats:scythe/attribute/vampiric.suffix": "of Bloodletting",
-
-  "affix.apothic_compats:scythe/attribute/piercing": "Piercing",
-  "affix.apothic_compats:scythe/attribute/piercing.suffix": "of the Sunderer",
-
-  "affix.apothic_compats:scythe/attribute/shredding": "Shredding",
-  "affix.apothic_compats:scythe/attribute/shredding.suffix": "of Penetration",
-
-  "affix.apothic_compats:scythe/attribute/giant_slaying": "Giant Slaying",
-  "affix.apothic_compats:scythe/attribute/giant_slaying.suffix": "of Colossal Strikes",
-
-  "affix.apothic_compats:scythe/attribute/berserking": "Berserking",
-  "affix.apothic_compats:scythe/attribute/berserking.suffix": "of the Berserker",
-
-  "affix.apothic_compats:scythe/attribute/annihilating": "Annihilating",
-  "affix.apothic_compats:scythe/attribute/annihilating.suffix": "of the Titan",
-
-  "affix.apothic_compats:scythe/attribute/decimating": "Decimating",
-  "affix.apothic_compats:scythe/attribute/decimating.suffix": "of the God-King",
-
-  "affix.apothic_compats:scythe/attribute/murderous": "Murderous",
-  "affix.apothic_compats:scythe/attribute/murderous.suffix": "of the Minotaur",
-
-  "affix.apothic_compats:scythe/attribute/lengthy": "Lengthy",
-  "affix.apothic_compats:scythe/attribute/lengthy.suffix": "of Extreme Length",
-
-  "affix.apothic_compats:scythe/attribute/nullifying": "Nullifying",
-  "affix.apothic_compats:scythe/attribute/nullifying.suffix": "of the Magebreaker",
-
-  "affix.apothic_compats:scythe/attribute/spellbreaking": "Spellbreaking",
-  "affix.apothic_compats:scythe/attribute/spellbreaking.suffix": "of the Petricite Golem",
-
-  "affix.apothic_compats:scythe/mob_effect/omniscient": "Omniscient",
-  "affix.apothic_compats:scythe/mob_effect/omniscient.suffix": "of the Grand Sage",
-
-  "affix.apothic_compats:scythe/mob_effect/bloodletting": "Caustic",
-  "affix.apothic_compats:scythe/mob_effect/bloodletting.suffix": "of the Slayer",
-
-  "affix.apothic_compats:scythe/mob_effect/caustic": "Caustic",
-  "affix.apothic_compats:scythe/mob_effect/caustic.suffix": "of the Caustic Realm",
-
-  "affix.apothic_compats:scythe/mob_effect/sophisticated": "Sophisticated",
-  "affix.apothic_compats:scythe/mob_effect/sophisticated.suffix": "of the Ancient Library",
-
-  "affix.apothic_compats:scythe/mob_effect/elusive": "Elusive",
-  "affix.apothic_compats:scythe/mob_effect/elusive.suffix": "of Evasion",
-
-  "affix.apothic_compats:scythe/mob_effect/weakening": "Weakening",
-  "affix.apothic_compats:scythe/mob_effect/weakening.suffix": "of Weakness",
-
   "affix.apothic_compats:scythe/attribute/ancient/violent": "Violent",
   "affix.apothic_compats:scythe/attribute/ancient/violent.suffix": "of Slaying",
 
+  "affix.apothic_compats:scythe/attribute/graceful": "Graceful",
+  "affix.apothic_compats:scythe/attribute/graceful.suffix": "of the Duelist",
   "affix.apothic_compats:scythe/attribute/ancient/graceful": "Graceful",
   "affix.apothic_compats:scythe/attribute/ancient/graceful.suffix": "of the Duelist",
 
+  "affix.apothic_compats:scythe/attribute/forceful": "Forceful",
+  "affix.apothic_compats:scythe/attribute/forceful.suffix": "of the Bull",
   "affix.apothic_compats:scythe/attribute/ancient/forceful": "Forceful",
   "affix.apothic_compats:scythe/attribute/ancient/forceful.suffix": "of the Bull",
 
+  "affix.apothic_compats:scythe/attribute/elongated": "Elongated",
+  "affix.apothic_compats:scythe/attribute/elongated.suffix": "of Distant Battles",
   "affix.apothic_compats:scythe/attribute/ancient/elongated": "Elongated",
   "affix.apothic_compats:scythe/attribute/ancient/elongated.suffix": "of Distant Battles",
 
+  "affix.apothic_compats:scythe/attribute/intricate": "Intricate",
+  "affix.apothic_compats:scythe/attribute/intricate.suffix": "of Critical Thinking",
   "affix.apothic_compats:scythe/attribute/ancient/intricate": "Intricate",
   "affix.apothic_compats:scythe/attribute/ancient/intricate.suffix": "of Critical Thinking",
 
+  "affix.apothic_compats:scythe/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:scythe/attribute/lacerating.suffix": "of Surgical Precision",
   "affix.apothic_compats:scythe/attribute/ancient/lacerating": "Lacerating",
   "affix.apothic_compats:scythe/attribute/ancient/lacerating.suffix": "of Surgical Precision",
 
+  "affix.apothic_compats:scythe/attribute/glacial": "Glacial",
+  "affix.apothic_compats:scythe/attribute/glacial.suffix": "of the Frostlands",
   "affix.apothic_compats:scythe/attribute/ancient/glacial": "Glacial",
   "affix.apothic_compats:scythe/attribute/ancient/glacial.suffix": "of the Frostlands",
 
+  "affix.apothic_compats:scythe/attribute/infernal": "Infernal",
+  "affix.apothic_compats:scythe/attribute/infernal.suffix": "of the Sun",
   "affix.apothic_compats:scythe/attribute/ancient/infernal": "Infernal",
   "affix.apothic_compats:scythe/attribute/ancient/infernal.suffix": "of the Sun",
 
+  "affix.apothic_compats:scythe/attribute/vampiric": "Vampiric",
+  "affix.apothic_compats:scythe/attribute/vampiric.suffix": "of Bloodletting",
   "affix.apothic_compats:scythe/attribute/ancient/vampiric": "Vampiric",
   "affix.apothic_compats:scythe/attribute/ancient/vampiric.suffix": "of Bloodletting",
 
+  "affix.apothic_compats:scythe/attribute/piercing": "Piercing",
+  "affix.apothic_compats:scythe/attribute/piercing.suffix": "of the Sunderer",
   "affix.apothic_compats:scythe/attribute/ancient/piercing": "Piercing",
   "affix.apothic_compats:scythe/attribute/ancient/piercing.suffix": "of the Sunderer",
 
+  "affix.apothic_compats:scythe/attribute/shredding": "Shredding",
+  "affix.apothic_compats:scythe/attribute/shredding.suffix": "of Penetration",
   "affix.apothic_compats:scythe/attribute/ancient/shredding": "Shredding",
   "affix.apothic_compats:scythe/attribute/ancient/shredding.suffix": "of Penetration",
 
+  "affix.apothic_compats:scythe/attribute/giant_slaying": "Giant Slaying",
+  "affix.apothic_compats:scythe/attribute/giant_slaying.suffix": "of Colossal Strikes",
   "affix.apothic_compats:scythe/attribute/ancient/giant_slaying": "Giant Slaying",
   "affix.apothic_compats:scythe/attribute/ancient/giant_slaying.suffix": "of Colossal Strikes",
 
+  "affix.apothic_compats:scythe/attribute/berserking": "Berserking",
+  "affix.apothic_compats:scythe/attribute/berserking.suffix": "of the Berserker",
   "affix.apothic_compats:scythe/attribute/ancient/berserking": "Berserking",
   "affix.apothic_compats:scythe/attribute/ancient/berserking.suffix": "of the Berserker",
 
+  "affix.apothic_compats:scythe/attribute/annihilating": "Annihilating",
+  "affix.apothic_compats:scythe/attribute/annihilating.suffix": "of the Titan",
   "affix.apothic_compats:scythe/attribute/ancient/annihilating": "Annihilating",
   "affix.apothic_compats:scythe/attribute/ancient/annihilating.suffix": "of the Titan",
 
+  "affix.apothic_compats:scythe/attribute/decimating": "Decimating",
+  "affix.apothic_compats:scythe/attribute/decimating.suffix": "of the God-King",
   "affix.apothic_compats:scythe/attribute/ancient/decimating": "Decimating",
   "affix.apothic_compats:scythe/attribute/ancient/decimating.suffix": "of the God-King",
 
+  "affix.apothic_compats:scythe/attribute/murderous": "Murderous",
+  "affix.apothic_compats:scythe/attribute/murderous.suffix": "of the Minotaur",
   "affix.apothic_compats:scythe/attribute/ancient/murderous": "Murderous",
   "affix.apothic_compats:scythe/attribute/ancient/murderous.suffix": "of the Minotaur",
 
+  "affix.apothic_compats:scythe/attribute/lengthy": "Lengthy",
+  "affix.apothic_compats:scythe/attribute/lengthy.suffix": "of Extreme Length",
   "affix.apothic_compats:scythe/attribute/ancient/lengthy": "Lengthy",
   "affix.apothic_compats:scythe/attribute/ancient/lengthy.suffix": "of Extreme Length",
 
+  "affix.apothic_compats:scythe/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:scythe/attribute/nullifying.suffix": "of the Magebreaker",
   "affix.apothic_compats:scythe/attribute/ancient/nullifying": "Nullifying",
   "affix.apothic_compats:scythe/attribute/ancient/nullifying.suffix": "of the Magebreaker",
 
+  "affix.apothic_compats:scythe/attribute/spellbreaking": "Spellbreaking",
+  "affix.apothic_compats:scythe/attribute/spellbreaking.suffix": "of the Petricite Golem",
   "affix.apothic_compats:scythe/attribute/ancient/spellbreaking": "Spellbreaking",
   "affix.apothic_compats:scythe/attribute/ancient/spellbreaking.suffix": "of the Petricite Golem",
 
+  "affix.apothic_compats:scythe/mob_effect/omniscient": "Omniscient",
+  "affix.apothic_compats:scythe/mob_effect/omniscient.suffix": "of the Grand Sage",
   "affix.apothic_compats:scythe/mob_effect/ancient/omniscient": "Omniscient",
   "affix.apothic_compats:scythe/mob_effect/ancient/omniscient.suffix": "of the Grand Sage",
 
+  "affix.apothic_compats:scythe/mob_effect/bloodletting": "Caustic",
+  "affix.apothic_compats:scythe/mob_effect/bloodletting.suffix": "of the Slayer",
   "affix.apothic_compats:scythe/mob_effect/ancient/bloodletting": "Caustic",
   "affix.apothic_compats:scythe/mob_effect/ancient/bloodletting.suffix": "of the Slayer",
 
+  "affix.apothic_compats:scythe/mob_effect/caustic": "Caustic",
+  "affix.apothic_compats:scythe/mob_effect/caustic.suffix": "of the Caustic Realm",
   "affix.apothic_compats:scythe/mob_effect/ancient/caustic": "Caustic",
   "affix.apothic_compats:scythe/mob_effect/ancient/caustic.suffix": "of the Caustic Realm",
 
+  "affix.apothic_compats:scythe/mob_effect/sophisticated": "Sophisticated",
+  "affix.apothic_compats:scythe/mob_effect/sophisticated.suffix": "of the Ancient Library",
   "affix.apothic_compats:scythe/mob_effect/ancient/sophisticated": "Sophisticated",
   "affix.apothic_compats:scythe/mob_effect/ancient/sophisticated.suffix": "of the Ancient Library",
 
+  "affix.apothic_compats:scythe/mob_effect/elusive": "Elusive",
+  "affix.apothic_compats:scythe/mob_effect/elusive.suffix": "of Evasion",
   "affix.apothic_compats:scythe/mob_effect/ancient/elusive": "Elusive",
   "affix.apothic_compats:scythe/mob_effect/ancient/elusive.suffix": "of Evasion",
 
+  "affix.apothic_compats:scythe/mob_effect/weakening": "Weakening",
+  "affix.apothic_compats:scythe/mob_effect/weakening.suffix": "of Weakness",
   "affix.apothic_compats:scythe/mob_effect/ancient/weakening": "Weakening",
-  "affix.apothic_compats:scythe/mob_effect/ancient/weakening.suffix": "of Weakness"
+  "affix.apothic_compats:scythe/mob_effect/ancient/weakening.suffix": "of Weakness",
 
-  
+  "affix.apothic_compats:scythe/cleaving": "Cleaving",
+  "affix.apothic_compats:scythe/cleaving.suffix": "of the Butcher",
+  "affix.apothic_compats:scythe/cleaving.desc": "Attacks have a %s%% chance to also hit up to %s nearby enemies.",
+  "affix.apothic_compats:scythe/ancient/cleaving": "Cleaving",
+  "affix.apothic_compats:scythe/ancient/cleaving.suffix": "of the Butcher",
+  "affix.apothic_compats:scythe/ancient/cleaving.desc": "Attacks have a %s%% chance to also hit up to %s nearby enemies.",
+
+  "affix.apothic_compats:scythe/festive": "Festive",
+  "affix.apothic_compats:scythe/festive.suffix": "of Partying",
+  "affix.apothic_compats:scythe/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+  "affix.apothic_compats:scythe/ancient/festive": "Festive",
+  "affix.apothic_compats:scythe/ancient/festive.suffix": "of Partying",
+  "affix.apothic_compats:scythe/ancient/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+
+  "affix.apothic_compats:scythe/executing": "Executing",
+  "affix.apothic_compats:scythe/executing.suffix": "of the Executioner",
+  "affix.apothic_compats:scythe/executing.desc": "Enemies below %s%% max health will be executed.",
+  "affix.apothic_compats:scythe/ancient/executing": "Executing",
+  "affix.apothic_compats:scythe/ancient/executing.suffix": "of the Executioner",
+  "affix.apothic_compats:scythe/ancient/executing.desc": "Enemies below %s%% max health will be executed.",
+
+  "affix.apothic_compats:scythe/thunderstruck": "Thunderstruck",
+  "affix.apothic_compats:scythe/thunderstruck.suffix": "of the Storm",
+  "affix.apothic_compats:scythe/thunderstruck.desc": "Your attacks deal %s damage to nearby enemies.",
+  "affix.apothic_compats:scythe/ancient/thunderstruck": "Thunderstruck",
+  "affix.apothic_compats:scythe/ancient/thunderstruck.suffix": "of the Storm",
+  "affix.apothic_compats:scythe/ancient/thunderstruck.desc": "Your attacks deal %s damage to nearby enemies.",
+
+
+  "gun_header": "GUN",
+
+  "apothic_compats:bullet_spread": "Bullet Spread",
+  "apothic_compats:fire_rate": "Fire Rate",
+  "apothic_compats:gun_damage": "Gun Damage",
+  "apothic_compats:bullet_knockback": "Bullet Knockback",
+  "apothic_compats:reload_speed": "Reload Speed",
+  "apothic_compats:bullet_pierce": "Bullet Piercing",
+  "apothic_compats:bullet_leech": "Leech",
+  "apothic_compats:gun_recoil": "Gun Recoil",
+
+  "affix.apothic_compats:gun/telepathic": "Telepathic",
+  "affix.apothic_compats:gun/telepathic.suffix": "of Space and Time",
+  "affix.apothic_compats:gun/telepathic.desc": "Mob drops will teleport to you.",
+
+  "affix.apothic_compats:gun/ancient/telepathic": "Telepathic",
+  "affix.apothic_compats:gun/ancient/telepathic.suffix": "of Space and Time",
+  "affix.apothic_compats:gun/ancient/telepathic.desc": "Mob drops will teleport to you.",
+
+  "affix.apothic_compats:gun/infinite": "Never-ending",
+  "affix.apothic_compats:gun/infinite.suffix": "of Infinity",
+  "affix.apothic_compats:gun/infinite.desc": "Your bullets are infinite.",
+
+  "affix.apothic_compats:gun/ancient/infinite": "Never-ending",
+  "affix.apothic_compats:gun/ancient/infinite.suffix": "of Infinity",
+  "affix.apothic_compats:gun/ancient/infinite.desc": "Your bullets are infinite.",
+
+  "affix.apothic_compats:gun/festive": "Festive",
+  "affix.apothic_compats:gun/festive.suffix": "of Partying",
+  "affix.apothic_compats:gun/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+
+  "affix.apothic_compats:gun/ancient/festive": "Festive",
+  "affix.apothic_compats:gun/ancient/festive.suffix": "of Partying",
+  "affix.apothic_compats:gun/ancient/festive.desc": "Slain enemies have a %s%% chance to be a Loot Piñata",
+
+  "affix.apothic_compats:gun/magical": "Magical",
+  "affix.apothic_compats:gun/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:gun/magical.desc": "Your bullets deal magic damage.",
+
+  "affix.apothic_compats:gun/ancient/magical": "Magical",
+  "affix.apothic_compats:gun/ancient/magical.suffix": "of the Arcane",
+  "affix.apothic_compats:gun/ancient/magical.desc": "Your bullets deal magic damage.",
+
+  "affix.apothic_compats:gun/multishot": "Abundant",
+  "affix.apothic_compats:gun/multishot.suffix": "of Multiplied Bullets",
+  "affix.apothic_compats:gun/multishot.desc": "Your gun shoots %s extra bullets.",
+
+  "affix.apothic_compats:gun/ancient/multishot": "Abundant",
+  "affix.apothic_compats:gun/ancient/multishot.suffix": "of Multiplied Bullets",
+  "affix.apothic_compats:gun/ancient/multishot.desc": "Your gun shoots %s extra bullets.",
+
+  "affix.apothic_compats:gun/attribute/elven": "Elven",
+  "affix.apothic_compats:gun/attribute/elven.suffix": "of the First Archer",
+  "affix.apothic_compats:gun/attribute/ancient/elven": "Elven",
+  "affix.apothic_compats:gun/attribute/ancient/elven.suffix": "of the First Archer",
+
+  "affix.apothic_compats:gun/attribute/experienced": "Experienced",
+  "affix.apothic_compats:gun/attribute/experienced.suffix": "of the Scholar",
+  "affix.apothic_compats:gun/attribute/ancient/experienced": "Experienced",
+  "affix.apothic_compats:gun/attribute/ancient/experienced.suffix": "of the Scholar",
+
+  "affix.apothic_compats:gun/attribute/piercing": "Piercing",
+  "affix.apothic_compats:gun/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:gun/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:gun/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:gun/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:gun/attribute/lacerating.suffix": "of Surgical Precision",
+  "affix.apothic_compats:gun/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:gun/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:gun/attribute/intricate": "Intricate",
+  "affix.apothic_compats:gun/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:gun/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:gun/attribute/ancient/intricate.suffix": "of Critical Thinking",
+
+  "affix.apothic_compats:gun/attribute/windswept": "Windswept",
+  "affix.apothic_compats:gun/attribute/windswept.suffix": "of the Current",
+  "affix.apothic_compats:gun/attribute/ancient/windswept": "Windswept",
+  "affix.apothic_compats:gun/attribute/ancient/windswept.suffix": "of the Current",
+
+  "affix.apothic_compats:gun/mob_effect/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:gun/mob_effect/shulkers.suffix": "of Levitation",
+  "affix.apothic_compats:gun/mob_effect/ancient/shulkers": "Shulk-Touched",
+  "affix.apothic_compats:gun/mob_effect/ancient/shulkers.suffix": "of Levitation",
+
+  "affix.apothic_compats:gun/mob_effect/acidic": "Acidic",
+  "affix.apothic_compats:gun/mob_effect/acidic.suffix": "of Corrosion",
+  "affix.apothic_compats:gun/mob_effect/ancient/acidic": "Acidic",
+  "affix.apothic_compats:gun/mob_effect/ancient/acidic.suffix": "of Corrosion",
+
+  "affix.apothic_compats:gun/mob_effect/ensnaring": "Ensnaring",
+  "affix.apothic_compats:gun/mob_effect/ensnaring.suffix": "of the Predator",
+  "affix.apothic_compats:gun/mob_effect/ancient/ensnaring": "Ensnaring",
+  "affix.apothic_compats:gun/mob_effect/ancient/ensnaring.suffix": "of the Predator",
+
+  "affix.apothic_compats:gun/mob_effect/fleeting": "Fleeting",
+  "affix.apothic_compats:gun/mob_effect/fleeting.suffix": "of the Ranger",
+  "affix.apothic_compats:gun/mob_effect/ancient/fleeting": "Fleeting",
+  "affix.apothic_compats:gun/mob_effect/ancient/fleeting.suffix": "of the Ranger",
+
+  "affix.apothic_compats:gun/mob_effect/grievous": "Grievous",
+  "affix.apothic_compats:gun/mob_effect/grievous.suffix": "of Wounding",
+  "affix.apothic_compats:gun/mob_effect/ancient/grievous": "Grievous",
+  "affix.apothic_compats:gun/mob_effect/ancient/grievous.suffix": "of Wounding",
+
+  "affix.apothic_compats:gun/mob_effect/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:gun/mob_effect/ivy_laced.suffix": "of Natural Toxins",
+  "affix.apothic_compats:gun/mob_effect/ancient/ivy_laced": "Ivy Laced",
+  "affix.apothic_compats:gun/mob_effect/ancient/ivy_laced.suffix": "of Natural Toxins",
+
+  "affix.apothic_compats:gun/mob_effect/blighted": "Blighted",
+  "affix.apothic_compats:gun/mob_effect/blighted.suffix": "of the Blighted Lands",
+  "affix.apothic_compats:gun/mob_effect/ancient/blighted": "Blighted",
+  "affix.apothic_compats:gun/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
+
+  "affix.apotheosis:ranged/mob_effect/deathbound": "Deathbound",
+  "affix.apotheosis:ranged/mob_effect/deathbound.suffix": "of the Witherlord",
+  "affix.apotheosis:ranged/mob_effect/ancient/deathbound": "Deathbound",
+  "affix.apotheosis:ranged/mob_effect/ancient/deathbound.suffix": "of the Witherlord"
+
 }

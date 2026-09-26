@@ -17,8 +17,8 @@ import dev.shadowsoffire.placebo.reload.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
+import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.create.MagicalPotatoAffix;
-import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -63,7 +63,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addAttribute("potato_cannon", "agile", ALObjects.Attributes.DRAW_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(common, 0.2F, 0.4F)
                 .value(uncommon, 0.2F, 0.4F)
                 .value(rare, 0.3F, 0.5F)
@@ -72,7 +72,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addAttribute("potato_cannon", "elven", ALObjects.Attributes.PROJECTILE_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(common, 0.15F, 0.20F)
                 .value(uncommon, 0.15F, 0.25F)
                 .value(rare, 0.20F, 0.30F)
@@ -81,7 +81,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addAttribute("potato_cannon", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(common, 0.15F, 0.25F)
                 .value(uncommon, 0.15F, 0.3F)
                 .value(rare, 0.15F, 0.3F)
@@ -90,21 +90,21 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addMobEffect("potato_cannon", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(epic, 20, 80, StepFunction.fromBounds(0, 1, 0.25F), 140)
                 .value(mythic, 20, 100, StepFunction.fromBounds(0, 2, 0.25F), 140));
 
         this.addMobEffect("potato_cannon", "acidic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .stacking()
                 .limit(4)
                 .value(mythic, 80, 160, 0, 40));
 
         this.addMobEffect("potato_cannon", "ensnaring", MobEffects.MOVEMENT_SLOWDOWN, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(uncommon, 40, 80, 0, 160)
                 .value(rare, 40, 100, 0, 160)
                 .value(epic, 40, 120, StepFunction.fromBounds(0, 1, 0.25F), 160)
@@ -112,7 +112,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addMobEffect("potato_cannon", "fleeting", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.PROJECTILE_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(uncommon, 100, 200, 0, 0)
                 .value(rare, 100, 200, 0, 0)
                 .value(epic, 100, 200, StepFunction.fromBounds(0, 1, 0.25F), 0)
@@ -120,7 +120,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addMobEffect("potato_cannon", "grievous", ALObjects.MobEffects.GRIEVOUS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(uncommon, 200, 200, 0, 500)
                 .value(rare, 200, 300, 0, 500)
                 .value(epic, 200, 300, StepFunction.fromBounds(0, 1, 0.25F), 400)
@@ -128,7 +128,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addMobEffect("potato_cannon", "ivy_laced", MobEffects.POISON, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .stacking()
                 .limit(5)
                 .value(rare, 100, 160, 0, 40)
@@ -137,7 +137,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addMobEffect("potato_cannon", "blighted", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(epic, 160, 200, StepFunction.fromBounds(0, 1, 0.25F), 300)
                 .value(mythic, 160, 200, StepFunction.fromBounds(0, 3, 0.25F), 300));
 
@@ -145,7 +145,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("ranged/mob_effect/blighted")))
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .stacking()
                 .limit(4)
                 .value(mythic, 100, 200, 1, 40));
@@ -159,69 +159,69 @@ public class PotatoCannonAffixProvider extends AffixProvider {
         Holder<Enchantment> recovery = standaloneHolder(registries, AllEnchantments.POTATO_RECOVERY);
         this.addEnchantment("potato_cannon", "reclaimed", recovery, EnchantmentAffix.Mode.SINGLE, b -> b
                 .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .step(0.25F)
                 .value(epic, 6, 8)
                 .value(mythic, 8, 10));
 
         this.addAncientAttribute("potato_cannon", "agile", ALObjects.Attributes.DRAW_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 1F, 1.5F));
 
         this.addAncientAttribute("potato_cannon", "elven", ALObjects.Attributes.PROJECTILE_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 0.5F, 0.8F));
 
         this.addAncientAttribute("potato_cannon", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 0.4F, 0.8F));
 
         this.addAncientMobEffect("potato_cannon", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 40, 200, StepFunction.fromBounds(0, 3, 0.5F), 70));
 
         this.addAncientMobEffect("potato_cannon", "acidic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .stacking()
                 .value(ancient, 160, 320, 0, 30));
 
         this.addAncientMobEffect("potato_cannon", "ensnaring", MobEffects.MOVEMENT_SLOWDOWN, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 150, 350, StepFunction.fromBounds(0, 3, 0.25F), 80));
 
         this.addAncientMobEffect("potato_cannon", "fleeting", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.PROJECTILE_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 200, 500, StepFunction.fromBounds(0, 2, 0.25F), 0));
 
         this.addAncientMobEffect("potato_cannon", "grievous", ALObjects.MobEffects.GRIEVOUS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 400, 600, StepFunction.fromBounds(0, 3, 0.5F), 200));
 
         this.addAncientMobEffect("potato_cannon", "ivy_laced", MobEffects.POISON, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .stacking()
                 .value(ancient, 200, 400, StepFunction.fromBounds(0, 3, 0.5F), 20));
 
         this.addAncientMobEffect("potato_cannon", "blighted", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 320, 500, StepFunction.fromBounds(0, 4, 0.5F), 100));
 
         this.addAncientMobEffect("potato_cannon", "deathbound", MobEffects.WITHER, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("ranged/mob_effect/blighted")))
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .stacking()
                 .value(ancient, 200, 400, 2, 20));
 
@@ -233,7 +233,7 @@ public class PotatoCannonAffixProvider extends AffixProvider {
 
         this.addAncientEnchantment("potato_cannon", "reclaimed", recovery, EnchantmentAffix.Mode.SINGLE, b -> b
                 .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.POTATO_CANNON)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .step(0.25F)
                 .value(ancient, 10, 14));
 

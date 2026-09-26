@@ -1,7 +1,5 @@
 package ianm1647.apothic_compats.data;
 
-import com.github.alexmodguy.alexscaves.server.level.biome.ACBiomeRegistry;
-import com.hollingsworth.arsnouveau.common.datagen.ANCurioProvider;
 import com.sammy.malum.registry.common.MalumTags;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;

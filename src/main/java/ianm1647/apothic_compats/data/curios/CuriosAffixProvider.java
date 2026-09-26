@@ -18,7 +18,7 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.reload.DynamicHolder;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -37,9 +37,10 @@ public class CuriosAffixProvider extends AffixProvider {
     String mod = "curios";
 
     public static final LootCategory[] CURIOS = {
-            ModLootCategories.BACK, ModLootCategories.BELT, ModLootCategories.BODY, ModLootCategories.BRACELET, ModLootCategories.CHARM,
-            ModLootCategories.CURIO, ModLootCategories.FEET, ModLootCategories.HANDS, ModLootCategories.HEAD, ModLootCategories.NECKLACE,
-            ModLootCategories.RING, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
+            Comp.LootCategories.Curios.BACK, Comp.LootCategories.Curios.BELT, Comp.LootCategories.Curios.BODY, Comp.LootCategories.Curios.BRACELET,
+            Comp.LootCategories.Curios.CHARM, Comp.LootCategories.Curios.CURIO, Comp.LootCategories.Curios.FEET, Comp.LootCategories.Curios.HANDS,
+            Comp.LootCategories.Curios.HEAD, Comp.LootCategories.Curios.NECKLACE, Comp.LootCategories.Curios.RING, Comp.LootCategories.Curios.BROOCH,
+            Comp.LootCategories.Curios.RUNE, Comp.LootCategories.Curios.AN_FOCUS
     };
 
     public CuriosAffixProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

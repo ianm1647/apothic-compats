@@ -14,6 +14,7 @@ import ianm1647.apothic_compats.data.curios.CuriosAffixLootProvider;
 import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.curios.CuriosProvider;
 import ianm1647.apothic_compats.data.friendsandfoes.FAFInvaderProvider;
+import ianm1647.apothic_compats.data.irons_artifice.ArtificeAffixProvider;
 import ianm1647.apothic_compats.data.malum.MalumExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.ae2.*;
 import ianm1647.apothic_compats.data.aether.*;
@@ -33,8 +34,8 @@ import ianm1647.apothic_compats.data.twilight.*;
 import ianm1647.apothic_compats.data.undergarden.*;
 import ianm1647.apothic_compats.event.AffixEvents;
 import ianm1647.apothic_compats.event.AttributeEvents;
-import ianm1647.apothic_compats.loot.ModLootCategories;
-import ianm1647.apothic_compats.util.ModSlotGroups;
+import ianm1647.apothic_compats.event.irons_artifice.ArtificeAffixEvents;
+import ianm1647.apothic_compats.event.irons_artifice.ArtificeAttributeEvents;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -44,6 +45,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
@@ -65,11 +67,15 @@ public class ApothicCompats {
         NeoForge.EVENT_BUS.register(this);
         NeoForge.EVENT_BUS.register(new AffixEvents());
         NeoForge.EVENT_BUS.register(new AttributeEvents());
+        if (ModList.get().isLoaded("irons_artifice")) {
+            modEventBus.addListener(ArtificeAttributeEvents::applyAttribs);
+            NeoForge.EVENT_BUS.register(new ArtificeAffixEvents());
+            NeoForge.EVENT_BUS.register(new ArtificeAttributeEvents());
+        }
+
         modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_CONFIG);
 
-        Comp.register(modEventBus);
-        ModSlotGroups.register(modEventBus);
-        ModLootCategories.registerLootCategories(modEventBus);
+        Comp.bootstrap(modEventBus);
 
         ModAffixRegistry.registerAffixes();
         modEventBus.addListener(this::data);
@@ -106,6 +112,8 @@ public class ApothicCompats {
 
                 .provider(CavesInvaderProvider::new)
                 .provider(MobsInvaderProvider::new)
+
+                .provider(ArtificeAffixProvider::new)
 
                 .provider(ATMAffixLootProvider::new)
                 .provider(ATMGearSetProvider::new)

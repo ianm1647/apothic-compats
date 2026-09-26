@@ -11,6 +11,9 @@ group = mod_group_id
 repositories {
     mavenLocal()
 
+    maven { url "https://code.redspace.io/releases" }
+    maven { url "https://maven.ryanhcode.dev/releases" }
+    maven { url "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
     maven { url "https://www.cursemaven.com" }
     maven { url "https://maven.blamejared.com/" }
     maven { url "https://maven.shadowsoffire.dev/releases" }
@@ -40,6 +43,8 @@ dependencies {
     implementation "dev.architectury:architectury-neoforge:$architectury_version"
 
     //compats
+    implementation "io.redspace:irons_artifice:$minecraft_version-$artifice_version"
+
     implementation "curse.maven:malum-484064:$malum_version"
     implementation "curse.maven:amendments-896746:$amendments_version"
     implementation "curse.maven:supplementaries-412082:$supplementaries_version"
@@ -67,10 +72,13 @@ dependencies {
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
 
     //compat deps
+    implementation "software.bernie.geckolib:geckolib-neoforge-$minecraft_version:$geckolib_version"
+    implementation "curse.maven:sable-1312371:$sable_version"
+    implementation "dev.ryanhcode.sable-companion:sable-companion-common-$minecraft_version:[$sable_companion_version,)"
+
     implementation "curse.maven:lodestone-616457:$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
     implementation "curse.maven:owo-532610:$owo_version"
-    implementation "curse.maven:geckolib-388172:$geckolib_version"
     implementation "curse.maven:resourcefullib-570073:$resourcefullib_version"
     implementation "curse.maven:guideme-1173950:$guideme_version"
     implementation "curse.maven:lionfish-1001614:$lionfish_version"

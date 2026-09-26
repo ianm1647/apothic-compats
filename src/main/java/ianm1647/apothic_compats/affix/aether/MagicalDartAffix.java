@@ -10,7 +10,7 @@ import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apotheosis.util.DamageSourceExtension;
 import dev.shadowsoffire.placebo.codec.PlaceboCodecs;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -31,7 +31,7 @@ public class MagicalDartAffix extends Affix {
     }
 
     public boolean canApplyTo(ItemStack stack, LootCategory cat, LootRarity rarity) {
-        return ModLootCategories.isDartShooter(cat) && this.rarities.contains(rarity);
+        return Comp.LootCategories.Aether.isDartShooter(cat) && this.rarities.contains(rarity);
     }
 
     public static void modifyIncomingDamageTags(EntityInvulnerabilityCheckEvent e) {

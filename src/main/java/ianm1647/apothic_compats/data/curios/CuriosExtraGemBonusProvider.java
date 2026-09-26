@@ -15,7 +15,7 @@ import dev.shadowsoffire.apotheosis.socket.gem.bonus.special.AllStatsBonus;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -37,9 +37,10 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
     }
 
     public static final GemClass CURIOS = new GemClass("curios",
-            ModLootCategories.HANDS, ModLootCategories.BRACELET, ModLootCategories.RING, ModLootCategories.BODY, ModLootCategories.BACK,
-            ModLootCategories.BELT, ModLootCategories.FEET, ModLootCategories.HEAD, ModLootCategories.NECKLACE, ModLootCategories.CHARM,
-            ModLootCategories.CURIO, ModLootCategories.BROOCH, ModLootCategories.RUNE, ModLootCategories.AN_FOCUS
+            Comp.LootCategories.Curios.BACK, Comp.LootCategories.Curios.BELT, Comp.LootCategories.Curios.BODY, Comp.LootCategories.Curios.BRACELET,
+            Comp.LootCategories.Curios.CHARM, Comp.LootCategories.Curios.CURIO, Comp.LootCategories.Curios.FEET, Comp.LootCategories.Curios.HANDS,
+            Comp.LootCategories.Curios.HEAD, Comp.LootCategories.Curios.NECKLACE, Comp.LootCategories.Curios.RING, Comp.LootCategories.Curios.BROOCH,
+            Comp.LootCategories.Curios.RUNE, Comp.LootCategories.Curios.AN_FOCUS
     );
 
     @Override

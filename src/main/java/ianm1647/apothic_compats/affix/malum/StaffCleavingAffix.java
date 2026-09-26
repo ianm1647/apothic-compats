@@ -12,7 +12,7 @@ import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.loot.LootRarity;
 import dev.shadowsoffire.apothic_attributes.ApothicAttributes;
 import dev.shadowsoffire.placebo.util.StepFunction;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.Entity;
@@ -44,7 +44,7 @@ public class StaffCleavingAffix extends Affix {
     }
 
     public boolean canApplyTo(ItemStack stack, LootCategory cat, LootRarity rarity) {
-        return ModLootCategories.isStaff(cat) && this.values.containsKey(rarity);
+        return Comp.LootCategories.Malum.isStaff(cat) && this.values.containsKey(rarity);
     }
 
     public MutableComponent getDescription(AffixInstance inst, AttributeTooltipContext ctx) {

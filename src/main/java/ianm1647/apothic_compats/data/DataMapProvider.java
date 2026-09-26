@@ -18,7 +18,6 @@ import net.minecraft.world.level.dimension.DimensionType;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 public class DataMapProvider extends ApothDataMapProvider {

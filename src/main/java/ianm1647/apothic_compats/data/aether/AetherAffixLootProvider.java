@@ -21,6 +21,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -31,10 +32,6 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
     String mod = "aether";
 
     private static ResourceKey<Level> AETHER = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("aether:the_aether"));
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public AetherAffixLootProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries);
@@ -117,61 +114,67 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(AetherArmorMaterials.ZANITE, ZANITE);
-        armorWeights.put(AetherArmorMaterials.GRAVITITE, GRAVITITE);
-        armorWeights.put(AetherArmorMaterials.VALKYRIE, VALKYRIE);
-        armorWeights.put(AetherArmorMaterials.OBSIDIAN, OBSIDIAN);
-        armorWeights.put(AetherArmorMaterials.NEPTUNE, NEPTUNE);
-        armorWeights.put(AetherArmorMaterials.PHOENIX, PHOENIX);
-        armorWeights.put(AetherArmorMaterials.SENTRY, SENTRY);
-
-        toolWeights.put(AetherItemTiers.SKYROOT, SKYROOT);
-        toolWeights.put(AetherItemTiers.HOLYSTONE, HOLYSTONE);
-        toolWeights.put(AetherItemTiers.ZANITE, ZANITE);
-        toolWeights.put(AetherItemTiers.GRAVITITE, GRAVITITE);
-        toolWeights.put(AetherItemTiers.VALKYRIE, VALKYRIE);
-
-        toolWeights.put(AetherItemTiers.CANDY_CANE, CANDY_CANE);
-        toolWeights.put(AetherItemTiers.VAMPIRE, VAMPIRE);
-        toolWeights.put(AetherItemTiers.HOLY, HOLY);
-        toolWeights.put(AetherItemTiers.LIGHTNING, LIGHTNING);
-        toolWeights.put(AetherItemTiers.FLAMING, FLAMING);
-
-        itemWeights.put(AetherItems.PHOENIX_BOW.get(), BOWS);
-
-        addEntry(BOWS, new ItemStack(AetherItems.POISON_DART_SHOOTER.get()));
-        addEntry(BOWS, new ItemStack(AetherItems.ENCHANTED_DART_SHOOTER.get()));
-        addEntry(BOWS, new ItemStack(AetherItems.GOLDEN_DART_SHOOTER.get()));
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+        AetherItems.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == AetherItemTiers.SKYROOT) {
+                    addTools(SKYROOT, i);
+                }
+                if (i.getTier() == AetherItemTiers.HOLYSTONE) {
+                    addTools(HOLYSTONE, i);
+                }
+                if (i.getTier() == AetherItemTiers.ZANITE) {
+                    addTools(ZANITE, i);
+                }
+                if (i.getTier() == AetherItemTiers.GRAVITITE) {
+                    addTools(GRAVITITE, i);
+                }
+                if (i.getTier() == AetherItemTiers.VALKYRIE) {
+                    addTools(VALKYRIE, i);
+                }
+                if (i.getTier() == AetherItemTiers.CANDY_CANE) {
+                    addTools(CANDY_CANE, i);
+                }
+                if (i.getTier() == AetherItemTiers.VAMPIRE) {
+                    addTools(VAMPIRE, i);
+                }
+                if (i.getTier() == AetherItemTiers.HOLY) {
+                    addTools(HOLY, i);
+                }
+                if (i.getTier() == AetherItemTiers.LIGHTNING) {
+                    addTools(LIGHTNING, i);
+                }
+                if (i.getTier() == AetherItemTiers.FLAMING) {
+                    addTools(FLAMING, i);
                 }
             }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == AetherArmorMaterials.ZANITE) {
+                    addArmor(ZANITE, a);
+                }
+                if (a.getMaterial() == AetherArmorMaterials.GRAVITITE) {
+                    addArmor(GRAVITITE, a);
+                }
+                if (a.getMaterial() == AetherArmorMaterials.VALKYRIE) {
+                    addArmor(VALKYRIE, a);
+                }
+                if (a.getMaterial() == AetherArmorMaterials.OBSIDIAN) {
+                    addArmor(OBSIDIAN, a);
+                }
+                if (a.getMaterial() == AetherArmorMaterials.NEPTUNE) {
+                    addArmor(NEPTUNE, a);
+                }
+                if (a.getMaterial() == AetherArmorMaterials.PHOENIX) {
+                    addArmor(PHOENIX, a);
+                }
+                if (a.getMaterial() == AetherArmorMaterials.SENTRY) {
+                    addArmor(SENTRY, a);
                 }
             }
-            else if (i instanceof Item t) {
-                TieredWeights weights = itemWeights.get(t);
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-        }
+        });
+
+        addTools(BOWS, AetherItems.PHOENIX_BOW.get());
+
     }
 
     @Override
@@ -179,9 +182,20 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
         return "Aether Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(AETHER), new ItemStack(tool), Set.of()));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(AETHER), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(AETHER), new ItemStack(piece), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }
