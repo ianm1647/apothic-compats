@@ -2,27 +2,29 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
-            "modid": "farmersdelight"
+            "modid": "aether"
         }
     ],
     "type": "apotheosis:affix_loot_entry",
     "constraints": {
         "dimensions": [
-            "minecraft:the_nether"
+            "aether:the_aether"
         ]
     },
     "stack": {
         "count": 1,
-        "id": "farmersdelight:netherite_knife"
+        "id": "aether:holystone_hoe"
     },
     "weights": {
-        "summit": {
+        "frontier": {
             "quality": 1.0,
-            "weight": 5
-        },
-        "pinnacle": {
-            "quality": 2.0,
             "weight": 25
+        },
+        "ascent": {
+            "weight": 10
+        },
+        "summit": {
+            "weight": 5
         }
     }
 }

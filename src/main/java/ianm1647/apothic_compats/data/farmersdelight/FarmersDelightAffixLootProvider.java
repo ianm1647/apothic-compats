@@ -1,12 +1,10 @@
 package ianm1647.apothic_compats.data.farmersdelight;
 
-import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -15,17 +13,11 @@ import net.minecraft.world.item.*;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class FarmersDelightAffixLootProvider extends AffixLootEntryProvider {
 
     String mod = "farmersdelight";
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public FarmersDelightAffixLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -69,12 +61,6 @@ public class FarmersDelightAffixLootProvider extends AffixLootEntryProvider {
     protected void addTools(TieredWeights weights, Item... tools) {
         for (Item tool : tools) {
             this.addEntry(new AffixLootEntry(weights, new ItemStack(tool)));
-        }
-    }
-
-    protected void addArmor(TieredWeights weights, Item... pieces) {
-        for (Item piece : pieces) {
-            this.addEntry(new AffixLootEntry(weights, new ItemStack(piece)));
         }
     }
 

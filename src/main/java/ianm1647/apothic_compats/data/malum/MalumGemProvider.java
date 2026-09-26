@@ -16,7 +16,7 @@ import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -31,7 +31,7 @@ public class MalumGemProvider extends GemProvider {
         super(output, registries);
     }
 
-    public static final GemClass MALUM_WEAPON = new GemClass("malum_weapon", ModLootCategories.SCYTHE, ModLootCategories.STAFF);
+    public static final GemClass MALUM_WEAPON = new GemClass("malum_weapon", Comp.LootCategories.Malum.SCYTHE, Comp.LootCategories.Malum.STAFF);
 
     String mod = "malum";
 

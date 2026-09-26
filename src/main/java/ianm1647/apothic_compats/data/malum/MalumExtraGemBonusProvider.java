@@ -14,7 +14,7 @@ import dev.shadowsoffire.apotheosis.util.ApothMiscUtil;
 import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.apothic_compats.ApothicCompats;
-import ianm1647.apothic_compats.loot.ModLootCategories;
+import ianm1647.apothic_compats.Comp;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -36,7 +36,7 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
         super(output, registries, ExtraGemBonusRegistry.INSTANCE);
     }
 
-    public static final GemClass MALUM_WEAPON = new GemClass("malum_weapon", ModLootCategories.SCYTHE, ModLootCategories.STAFF);
+    public static final GemClass MALUM_WEAPON = new GemClass("malum_weapon", Comp.LootCategories.Malum.SCYTHE, Comp.LootCategories.Malum.STAFF);
 
     @Override
     public String getName() {
@@ -82,7 +82,7 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
                         .value(Purity.PERFECT, 0.40F)));
 
         addBonus(Apotheosis.loc("core/combatant"), c -> c
-                .bonus(ModLootCategories.STAFF, AttributeBonus.builder()
+                .bonus(Comp.LootCategories.Malum.STAFF, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.PROJECTILE_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, 0.1)
@@ -115,7 +115,7 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
                         .value(Purity.PERFECT, 6)));
 
         addBonus(Apotheosis.loc("core/slipstream"), c -> c
-                .bonus(ModLootCategories.STAFF, AttributeBonus.builder()
+                .bonus(Comp.LootCategories.Malum.STAFF, AttributeBonus.builder()
                         .attr(MalumAttributes.CHARGE_DURATION)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.CRACKED, -1)
@@ -124,7 +124,7 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
                         .value(Purity.NORMAL, -4)
                         .value(Purity.FLAWLESS, -5)
                         .value(Purity.PERFECT, -6))
-                .bonus(ModLootCategories.SCYTHE, AttributeBonus.builder()
+                .bonus(Comp.LootCategories.Malum.SCYTHE, AttributeBonus.builder()
                         .attr(Attributes.ATTACK_SPEED)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
                         .value(Purity.CRACKED, 0.10)
@@ -146,14 +146,14 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
                         .value(Purity.PERFECT, 0.5)));
 
         addBonus(Apotheosis.loc("overworld/earth"), b -> b
-                .bonus(ModLootCategories.SCYTHE, EnchantmentBonus.builder()
+                .bonus(Comp.LootCategories.Malum.SCYTHE, EnchantmentBonus.builder()
                         .enchantment(standaloneHolder(registries, EnchantmentKeys.REBOUND))
                         .mode(EnchantmentBonus.Mode.EXISTING)
                         .value(Purity.FLAWED, 1)
                         .value(Purity.NORMAL, 2)
                         .value(Purity.FLAWLESS, 3)
                         .value(Purity.PERFECT, 4))
-                .bonus(ModLootCategories.STAFF, EnchantmentBonus.builder()
+                .bonus(Comp.LootCategories.Malum.STAFF, EnchantmentBonus.builder()
                         .enchantment(standaloneHolder(registries, EnchantmentKeys.CAPACITOR))
                         .mode(EnchantmentBonus.Mode.EXISTING)
                         .value(Purity.FLAWED, 1)

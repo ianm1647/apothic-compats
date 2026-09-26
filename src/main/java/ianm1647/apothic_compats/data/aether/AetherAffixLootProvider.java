@@ -102,7 +102,7 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
             .build();
 
 
-    protected static final TieredWeights BOWS = TieredWeights.builder()
+    protected static final TieredWeights RANGED = TieredWeights.builder()
             .with(WorldTier.SUMMIT, 7, 1)
             .with(WorldTier.PINNACLE, 10, 1)
             .build();
@@ -173,7 +173,10 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
             }
         });
 
-        addTools(BOWS, AetherItems.PHOENIX_BOW.get());
+        addTools(RANGED, AetherItems.PHOENIX_BOW.get());
+        addTools(RANGED, AetherItems.ENCHANTED_DART_SHOOTER.get());
+        addTools(RANGED, AetherItems.GOLDEN_DART_SHOOTER.get());
+        addTools(RANGED, AetherItems.POISON_DART_SHOOTER.get());
 
     }
 

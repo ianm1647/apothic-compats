@@ -5,6 +5,7 @@ import com.thevortex.allthemodium.registry.ArmorRegistries;
 import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
+import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
@@ -13,8 +14,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ATMAffixLootProvider extends AffixLootEntryProvider {
@@ -62,6 +65,10 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
                 }
             }
         });
+
+        addTools(ALLTHEMODIUM, ModRegistry.ATM_MACE.get());
+        addTools(VIBRANIUM, ModRegistry.VIB_MACE.get());
+        addTools(UNOBTAINIUM, ModRegistry.UNO_MACE.get());
     }
 
     @Override
@@ -72,13 +79,13 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
 
     protected void addTools(TieredWeights weights, Item... tools) {
         for (Item tool : tools) {
-            this.addEntry(new AffixLootEntry(weights, new ItemStack(tool)));
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStack(tool), Set.of()));
         }
     }
 
     protected void addArmor(TieredWeights weights, Item... pieces) {
         for (Item piece : pieces) {
-            this.addEntry(new AffixLootEntry(weights, new ItemStack(piece)));
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(Level.OVERWORLD), new ItemStack(piece), Set.of()));
         }
     }
 

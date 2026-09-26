@@ -6,23 +6,18 @@
         }
     ],
     "type": "apotheosis:affix_loot_entry",
-    "constraints": {
-        "dimensions": [
-            "minecraft:the_nether"
-        ]
-    },
     "stack": {
         "count": 1,
-        "id": "farmersdelight:diamond_knife"
+        "id": "farmersdelight:golden_knife"
     },
     "weights": {
+        "haven": {
+            "weight": 5
+        },
+        "frontier": {
+            "weight": 10
+        },
         "ascent": {
-            "weight": 25
-        },
-        "summit": {
-            "weight": 25
-        },
-        "pinnacle": {
             "weight": 5
         }
     }

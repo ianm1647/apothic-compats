@@ -13,8 +13,8 @@ import dev.shadowsoffire.placebo.reload.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
+import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.malum.ScytheCleavingAffix;
-import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -54,7 +54,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(uncommon, 0.05F, 0.25F)
                 .value(rare, 0.15F, 0.35F)
                 .value(epic, 0.18F, 0.48F)
@@ -62,7 +62,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("curios", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(common, 1F, 3F)
                 .value(uncommon, 2F, 4F)
                 .value(rare, 3F, 5F)
@@ -73,7 +73,7 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/berserking")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(common, 0.15F, 0.20F)
                 .value(uncommon, 0.15F, 0.20F)
                 .value(rare, 0.15F, 0.25F)
@@ -82,14 +82,14 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(rare, 0.15F, 0.43F)
                 .value(epic, 0.18F, 0.48F)
                 .value(mythic, 0.25F, 0.55F));
 
         this.addAttribute("scythe", "violent", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(common, 2F, 3F)
                 .value(uncommon, 2F, 3F)
@@ -99,7 +99,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(common, 2F, 4F)
                 .value(uncommon, 2F, 4F)
@@ -109,7 +109,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(common, 0.10F, 0.20F)
                 .value(uncommon, 0.10F, 0.20F)
                 .value(rare, 0.15F, 0.25F)
@@ -118,7 +118,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(common, 0.10F, 0.20F)
                 .value(uncommon, 0.10F, 0.20F)
                 .value(rare, 0.10F, 0.25F)
@@ -129,7 +129,7 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/glacial")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(uncommon, 2F, 4F)
                 .value(rare, 2F, 5F)
@@ -138,7 +138,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(common, 0.15F, 0.25F)
                 .value(uncommon, 0.20F, 0.30F)
                 .value(rare, 0.20F, 0.35F)
@@ -149,7 +149,7 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/infernal")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(uncommon, 2F, 4F)
                 .value(rare, 2F, 5F)
@@ -158,7 +158,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "lengthy", Attributes.ENTITY_INTERACTION_RANGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(common, 0.5F, 1.5F)
                 .value(uncommon, 0.5F, 1.5F)
@@ -168,7 +168,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addAttribute("scythe", "forceful", Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(common, 0.5F, 1F)
                 .value(uncommon, 0.5F, 1.5F)
@@ -180,7 +180,7 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/vampiric")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(common, 0.10F, 0.20F)
                 .value(uncommon, 0.10F, 0.20F)
                 .value(rare, 0.15F, 0.25F)
@@ -190,13 +190,13 @@ public class ScytheAffixProvider extends AffixProvider {
         this.addAttribute("scythe", "giant_slaying", ALObjects.Attributes.CURRENT_HP_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 15, 2.5F)))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(epic, 0.10F, 0.20F)
                 .value(mythic, 0.10F, 0.25F));
 
         this.addMobEffect("scythe", "bloodletting", ALObjects.MobEffects.BLEEDING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 100, 100, 0, 80)
@@ -206,7 +206,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addMobEffect("scythe", "caustic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .limit(3)
                 .value(rare, 100, 180, 0, 60)
@@ -215,7 +215,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addMobEffect("scythe", "sophisticated", ALObjects.MobEffects.KNOWLEDGE, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 400, 600, 0, 400)
@@ -227,14 +227,14 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("scythe/mob_effect/sophisticated")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .limit(8)
                 .value(mythic, 100, 160, StepFunction.fromBounds(0, 1, 0.125F), 80));
 
         this.addMobEffect("scythe", "weakening", MobEffects.WEAKNESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(uncommon, 80, 140, 0, 300)
                 .value(rare, 80, 160, 0, 300)
                 .value(epic, 80, 180, StepFunction.fromBounds(0, 1, 0.25F), 300)
@@ -242,7 +242,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addMobEffect("scythe", "elusive", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 200, 400, 0, 300)
@@ -252,7 +252,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("scythe/festive"),
                 FestiveAffix.builder()
-                        .categories(ModLootCategories.SCYTHE)
+                        .categories(Comp.LootCategories.Malum.SCYTHE)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(epic, StepFunction.fromBounds(0.02F, 0.05F, 0.005F), 20)
                         .value(mythic, StepFunction.fromBounds(0.03F, 0.06F, 0.005F), 20)
@@ -261,7 +261,7 @@ public class ScytheAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc("scythe/thunderstruck"),
                 AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .categories(ModLootCategories.SCYTHE)
+                        .categories(Comp.LootCategories.Malum.SCYTHE)
                         .step(1)
                         .value(epic, 3, 6)
                         .value(mythic, 4, 8)
@@ -276,7 +276,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("scythe/executing"),
                 AffixBuilder.categorized(ExecutingAffix::new)
-                        .categories(ModLootCategories.SCYTHE)
+                        .categories(Comp.LootCategories.Malum.SCYTHE)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(epic, 0.10F, 0.20F)
                         .value(mythic, 0.15F, 0.25F)
@@ -284,7 +284,7 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("scythe/ancient/festive"),
                 FestiveAffix.builder()
-                        .categories(ModLootCategories.SCYTHE)
+                        .categories(Comp.LootCategories.Malum.SCYTHE)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
@@ -292,7 +292,7 @@ public class ScytheAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc("scythe/ancient/thunderstruck"),
                 AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .categories(ModLootCategories.SCYTHE)
+                        .categories(Comp.LootCategories.Malum.SCYTHE)
                         .step(1)
                         .value(ancient, 7, 11)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
@@ -305,85 +305,85 @@ public class ScytheAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("scythe/ancient/executing"),
                 AffixBuilder.categorized(ExecutingAffix::new)
-                        .categories(ModLootCategories.SCYTHE)
+                        .categories(Comp.LootCategories.Malum.SCYTHE)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, 0.35F, 0.6F)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addAncientAttribute("scythe", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.5F, 0.95F));
 
         this.addAncientAttribute("curios", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 6F, 9F));
 
         this.addAncientAttribute("scythe", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/berserking")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.5F, 0.8F));
 
         this.addAncientAttribute("scythe", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.5F, 1.15F));
 
         this.addAncientAttribute("scythe", "violent", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 10F, 16F));
 
         this.addAncientAttribute("scythe", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 10F, 24F));
 
         this.addAncientAttribute("scythe", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.5F, 0.8F));
 
         this.addAncientAttribute("scythe", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.5F, 1.15F));
 
         this.addAncientAttribute("scythe", "infernal", ALObjects.Attributes.FIRE_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/glacial")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 8F, 20F));
 
         this.addAncientAttribute("scythe", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.75F, 1.2F));
 
         this.addAncientAttribute("scythe", "glacial", ALObjects.Attributes.COLD_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/infernal")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 8F, 20F));
 
         this.addAncientAttribute("scythe", "lengthy", Attributes.ENTITY_INTERACTION_RANGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 3, 6));
 
         this.addAncientAttribute("scythe", "forceful", Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 3, 6));
 
@@ -391,30 +391,30 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("scythe/attribute/vampiric")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.4F, 0.9F));
 
         this.addAncientAttribute("scythe", "giant_slaying", ALObjects.Attributes.CURRENT_HP_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 0.3F, 0.7F));
 
         this.addAncientMobEffect("scythe", "bloodletting", ALObjects.MobEffects.BLEEDING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .value(ancient, 200, 400, StepFunction.fromBounds(0, 2, 0.25F), 40));
 
         this.addAncientMobEffect("scythe", "caustic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .value(ancient, 400, 800, StepFunction.fromBounds(0, 2, 0.5F), 150));
 
         this.addAncientMobEffect("scythe", "sophisticated", ALObjects.MobEffects.KNOWLEDGE, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .value(ancient, 600, 1500, StepFunction.fromBounds(0, 3, 0.5F), 600));
 
@@ -422,18 +422,18 @@ public class ScytheAffixProvider extends AffixProvider {
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("scythe/mob_effect/sophisticated")))
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .value(ancient, 250, 450, StepFunction.fromBounds(0, 2, 0.25F), 40));
 
         this.addAncientMobEffect("scythe", "weakening", MobEffects.WEAKNESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .value(ancient, 150, 450, StepFunction.fromBounds(0, 3, 0.25F), 150));
 
         this.addAncientMobEffect("scythe", "elusive", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.SCYTHE)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
                 .stacking()
                 .value(ancient, 400, 1200, StepFunction.fromBounds(0, 3, 0.5F), 300));
     }

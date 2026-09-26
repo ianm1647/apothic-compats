@@ -14,8 +14,8 @@ import dev.shadowsoffire.placebo.reload.DynamicHolder;
 import dev.shadowsoffire.placebo.util.StepFunction;
 import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
+import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.malum.*;
-import ianm1647.apothic_compats.loot.ModLootCategories;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -69,7 +69,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/ranged", "agile", MalumAttributes.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(-0.01F)
                 .value(common, -0.15f, -0.2f)
                 .value(uncommon, -0.2f, -0.25f)
@@ -79,7 +79,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/ranged", "capacious", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.1f, 0.2f)
                 .value(uncommon, 0.15f, 0.25f)
                 .value(rare, 0.2f, 0.3f)
@@ -88,7 +88,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/ranged", "ample", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 1, 2)
                 .value(uncommon, 2, 3)
                 .value(rare, 4, 6)
@@ -97,7 +97,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(uncommon, 0.05F, 0.25F)
                 .value(rare, 0.15F, 0.35F)
                 .value(epic, 0.18F, 0.48F)
@@ -105,7 +105,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 1F, 3F)
                 .value(uncommon, 2F, 4F)
                 .value(rare, 3F, 5F)
@@ -114,28 +114,28 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAncientAttribute("staff/ranged", "agile", MalumAttributes.CHARGE_DURATION, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(-0.01F)
                 .value(ancient, -0.6f, -0.65f));
 
         this.addAncientAttribute("staff/ranged", "capacious", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.45f, 0.55f));
 
         this.addAncientAttribute("staff/ranged", "ample", MalumAttributes.CHARGE_CAPACITY, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 12, 14));
 
         this.addAncientAttribute("staff/melee", "vandalous", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.5F, 0.95F));
 
         this.addAncientAttribute("staff/melee", "mystic", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 6F, 9F));
 
         /*
@@ -150,7 +150,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/ranged", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.15F, 0.25F)
                 .value(uncommon, 0.15F, 0.3F)
                 .value(rare, 0.15F, 0.3F)
@@ -159,21 +159,21 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/ranged", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(epic, 20, 80, StepFunction.fromBounds(0, 1, 0.25F), 140)
                 .value(mythic, 20, 100, StepFunction.fromBounds(0, 2, 0.25F), 140));
 
         this.addMobEffect("staff/ranged", "acidic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(4)
                 .value(mythic, 80, 160, 0, 40));
 
         this.addMobEffect("staff/ranged", "ensnaring", MobEffects.MOVEMENT_SLOWDOWN, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(uncommon, 40, 80, 0, 160)
                 .value(rare, 40, 100, 0, 160)
                 .value(epic, 40, 120, StepFunction.fromBounds(0, 1, 0.25F), 160)
@@ -181,7 +181,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/ranged", "fleeting", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.PROJECTILE_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(uncommon, 100, 200, 0, 0)
                 .value(rare, 100, 200, 0, 0)
                 .value(epic, 100, 200, StepFunction.fromBounds(0, 1, 0.25F), 0)
@@ -189,7 +189,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/ranged", "grievous", ALObjects.MobEffects.GRIEVOUS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(uncommon, 200, 200, 0, 500)
                 .value(rare, 200, 300, 0, 500)
                 .value(epic, 200, 300, StepFunction.fromBounds(0, 1, 0.25F), 400)
@@ -197,7 +197,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/ranged", "ivy_laced", MobEffects.POISON, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(5)
                 .value(rare, 100, 160, 0, 40)
@@ -207,52 +207,52 @@ public class StaffAffixProvider extends AffixProvider {
         Holder<Enchantment> looting = enchants.getOrThrow(Enchantments.LOOTING);
         this.addEnchantment("staff/ranged", "prosperous", looting, EnchantmentAffix.Mode.SINGLE, b -> b
                 .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(epic, 2, 3)
                 .value(mythic, 3, 4));
 
         this.addAncientAttribute("staff/ranged", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.4F, 0.8F));
 
         this.addAncientMobEffect("staff/ranged", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 40, 200, StepFunction.fromBounds(0, 3, 0.5F), 70));
 
         this.addAncientMobEffect("staff/ranged", "acidic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 160, 320, 0, 30));
 
         this.addAncientMobEffect("staff/ranged", "ensnaring", MobEffects.MOVEMENT_SLOWDOWN, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 150, 350, StepFunction.fromBounds(0, 3, 0.25F), 80));
 
         this.addAncientMobEffect("staff/ranged", "fleeting", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.PROJECTILE_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 200, 500, StepFunction.fromBounds(0, 2, 0.25F), 0));
 
         this.addAncientMobEffect("staff/ranged", "grievous", ALObjects.MobEffects.GRIEVOUS, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 400, 600, StepFunction.fromBounds(0, 3, 0.5F), 200));
 
         this.addAncientMobEffect("staff/ranged", "ivy_laced", MobEffects.POISON, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 200, 400, StepFunction.fromBounds(0, 3, 0.5F), 20));
 
         this.addAncientEnchantment("staff/ranged", "prosperous", looting, EnchantmentAffix.Mode.SINGLE, b -> b
                 .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(ancient, 4, 5));
 
@@ -270,7 +270,7 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("staff/melee/attribute/berserking")))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.15F, 0.20F)
                 .value(uncommon, 0.15F, 0.20F)
                 .value(rare, 0.15F, 0.25F)
@@ -279,14 +279,14 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(rare, 0.15F, 0.43F)
                 .value(epic, 0.18F, 0.48F)
                 .value(mythic, 0.25F, 0.55F));
 
         this.addAttribute("staff/melee", "violent", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(common, 1F, 2F)
                 .value(uncommon, 1F, 2F)
@@ -296,7 +296,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "wizarding", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.15F, 0.20F)
                 .value(uncommon, 0.15F, 0.25F)
                 .value(rare, 0.20F, 0.30F)
@@ -305,7 +305,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "magekilling", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 2F, 3F)
                 .value(uncommon, 2F, 3F)
                 .value(rare, 3F, 5F)
@@ -314,7 +314,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(common, 2F, 4F)
                 .value(uncommon, 2F, 4F)
@@ -324,7 +324,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.10F, 0.20F)
                 .value(uncommon, 0.10F, 0.20F)
                 .value(rare, 0.15F, 0.25F)
@@ -333,7 +333,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.10F, 0.20F)
                 .value(uncommon, 0.10F, 0.20F)
                 .value(rare, 0.10F, 0.25F)
@@ -342,7 +342,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.15F, 0.25F)
                 .value(uncommon, 0.20F, 0.30F)
                 .value(rare, 0.20F, 0.35F)
@@ -351,7 +351,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addAttribute("staff/melee", "forceful", Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(common, 0.5F, 1F)
                 .value(uncommon, 0.5F, 1.5F)
@@ -363,7 +363,7 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("staff/melee/attribute/vampiric")))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(common, 0.10F, 0.20F)
                 .value(uncommon, 0.10F, 0.20F)
                 .value(rare, 0.15F, 0.25F)
@@ -373,13 +373,13 @@ public class StaffAffixProvider extends AffixProvider {
         this.addAttribute("staff/melee", "giant_slaying", ALObjects.Attributes.CURRENT_HP_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 15, 2.5F)))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(epic, 0.10F, 0.20F)
                 .value(mythic, 0.10F, 0.25F));
 
         this.addMobEffect("staff/melee", "bloodletting", ALObjects.MobEffects.BLEEDING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 100, 100, 0, 80)
@@ -389,7 +389,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/melee", "caustic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(3)
                 .value(rare, 100, 180, 0, 60)
@@ -398,7 +398,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/melee", "sophisticated", ALObjects.MobEffects.KNOWLEDGE, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 400, 600, 0, 400)
@@ -410,14 +410,14 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("staff/melee/mob_effect/sophisticated")))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(8)
                 .value(mythic, 100, 160, StepFunction.fromBounds(0, 1, 0.125F), 80));
 
         this.addMobEffect("staff/melee", "weakening", MobEffects.WEAKNESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(uncommon, 80, 140, 0, 300)
                 .value(rare, 80, 160, 0, 300)
                 .value(epic, 80, 180, StepFunction.fromBounds(0, 1, 0.25F), 300)
@@ -425,7 +425,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addMobEffect("staff/melee", "elusive", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .limit(3)
                 .value(uncommon, 200, 400, 0, 300)
@@ -435,7 +435,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("staff/festive"),
                 FestiveAffix.builder()
-                        .categories(ModLootCategories.STAFF)
+                        .categories(Comp.LootCategories.Malum.STAFF)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(epic, StepFunction.fromBounds(0.02F, 0.05F, 0.005F), 20)
                         .value(mythic, StepFunction.fromBounds(0.03F, 0.06F, 0.005F), 20)
@@ -444,7 +444,7 @@ public class StaffAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc("staff/thunderstruck"),
                 AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .categories(ModLootCategories.STAFF)
+                        .categories(Comp.LootCategories.Malum.STAFF)
                         .step(1)
                         .value(epic, 3, 6)
                         .value(mythic, 4, 8)
@@ -459,7 +459,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("staff/executing"),
                 AffixBuilder.categorized(ExecutingAffix::new)
-                        .categories(ModLootCategories.STAFF)
+                        .categories(Comp.LootCategories.Malum.STAFF)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(epic, 0.10F, 0.20F)
                         .value(mythic, 0.15F, 0.25F)
@@ -467,7 +467,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/festive"),
                 FestiveAffix.builder()
-                        .categories(ModLootCategories.STAFF)
+                        .categories(Comp.LootCategories.Malum.STAFF)
                         .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
@@ -475,7 +475,7 @@ public class StaffAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),
                 AffixBuilder.categorized(ThunderstruckAffix::new)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .categories(ModLootCategories.STAFF)
+                        .categories(Comp.LootCategories.Malum.STAFF)
                         .step(1)
                         .value(ancient, 7, 11)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
@@ -488,7 +488,7 @@ public class StaffAffixProvider extends AffixProvider {
 
         this.addConditionally(ApothicCompats.loc("staff/ancient/executing"),
                 AffixBuilder.categorized(ExecutingAffix::new)
-                        .categories(ModLootCategories.STAFF)
+                        .categories(Comp.LootCategories.Malum.STAFF)
                         .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                         .value(ancient, 0.35F, 0.6F)
                         .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
@@ -497,54 +497,54 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("staff/melee/attribute/berserking")))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.5F, 0.8F));
 
         this.addAncientAttribute("staff/melee", "murderous", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.5F, 0.75F));
 
         this.addAncientAttribute("staff/melee", "violent", Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(ancient, 8F, 12F));
 
         this.addAncientAttribute("staff/melee", "wizarding", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.35F, 0.65F));
 
         this.addAncientAttribute("staff/melee", "magekilling", LodestoneAttributes.MAGIC_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 6F, 10F));
 
         this.addAncientAttribute("staff/melee", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(ancient, 10F, 24F));
 
         this.addAncientAttribute("staff/melee", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.5F, 0.8F));
 
         this.addAncientAttribute("staff/melee", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.5F, 1.15F));
 
         this.addAncientAttribute("staff/melee", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.75F, 1.2F));
 
         this.addAncientAttribute("staff/melee", "forceful", Attributes.ATTACK_KNOCKBACK, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .step(0.25F)
                 .value(ancient, 3, 6));
 
@@ -552,30 +552,30 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
                         .exclusiveWith(afx("staff/melee/attribute/vampiric")))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.4F, 0.9F));
 
         this.addAncientAttribute("staff/melee", "giant_slaying", ALObjects.Attributes.CURRENT_HP_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5)))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 0.3F, 0.7F));
 
         this.addAncientMobEffect("staff/melee", "bloodletting", ALObjects.MobEffects.BLEEDING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 200, 400, StepFunction.fromBounds(0, 2, 0.25F), 40));
 
         this.addAncientMobEffect("staff/melee", "caustic", ALObjects.MobEffects.SUNDERING, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 400, 800, StepFunction.fromBounds(0, 2, 0.5F), 150));
 
         this.addAncientMobEffect("staff/melee", "sophisticated", ALObjects.MobEffects.KNOWLEDGE, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 600, 1500, StepFunction.fromBounds(0, 3, 0.5F), 600));
 
@@ -583,18 +583,18 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.BASIC_EFFECT, d -> d
                         .weights(TieredWeights.onlyFor(WorldTier.PINNACLE, 20, 5))
                         .exclusiveWith(afx("staff/melee/mob_effect/sophisticated")))
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 250, 450, StepFunction.fromBounds(0, 2, 0.25F), 40));
 
         this.addAncientMobEffect("staff/melee", "weakening", MobEffects.WEAKNESS, MobEffectAffix.Target.ATTACK_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 150, 450, StepFunction.fromBounds(0, 3, 0.25F), 150));
 
         this.addAncientMobEffect("staff/melee", "elusive", MobEffects.MOVEMENT_SPEED, MobEffectAffix.Target.ATTACK_SELF, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(ModLootCategories.STAFF)
+                .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 400, 1200, StepFunction.fromBounds(0, 3, 0.5F), 300));
 

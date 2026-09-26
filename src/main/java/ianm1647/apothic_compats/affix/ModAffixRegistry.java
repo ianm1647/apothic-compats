@@ -25,9 +25,7 @@ public class ModAffixRegistry {
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("magic_bullet"), MagicalBulletAffix.CODEC);
         }
         if (ModList.get().isLoaded("malum")) {
-            AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("scythe_thunderstruck"), ScytheThunderstruckAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("scythe_cleaving"), ScytheCleavingAffix.CODEC);
-            AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("staff_thunderstruck"), StaffThunderstruckAffix.CODEC);
             AffixRegistry.INSTANCE.registerCodec(ApothicCompats.loc("staff_cleaving"), StaffCleavingAffix.CODEC);
         }
 
