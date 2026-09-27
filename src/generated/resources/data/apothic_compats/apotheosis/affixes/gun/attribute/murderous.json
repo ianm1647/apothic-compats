@@ -18,7 +18,7 @@
       "weight": 25
     }
   },
-  "operation": "add_multiplied_total",
+  "operation": "add_multiplied_base",
   "values": {
     "apotheosis:common": {
       "min": 0.05,

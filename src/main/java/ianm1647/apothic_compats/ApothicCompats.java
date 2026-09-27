@@ -80,6 +80,7 @@ public class ApothicCompats {
                 .provider(Ae2GearSetProvider::new)
 
                 .provider(ArtificeAffixProvider::new)
+                .provider(ArtificeExtraGemBonusProvider::new)
 
                 .provider(AetherIIAffixLootProvider::new)
                 .provider(AetherIIAffixProvider::new)
