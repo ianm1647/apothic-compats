@@ -72,9 +72,10 @@ dependencies {
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
 
     //compat deps
-    implementation "software.bernie.geckolib:geckolib-neoforge-$minecraft_version:$geckolib_version"
     implementation "curse.maven:sable-1312371:$sable_version"
     implementation "dev.ryanhcode.sable-companion:sable-companion-common-$minecraft_version:[$sable_companion_version,)"
+
+    implementation "software.bernie.geckolib:geckolib-neoforge-$minecraft_version:$geckolib_version"
 
     implementation "curse.maven:lodestone-616457:$lodestone_version"
     implementation "curse.maven:moonlight-499980:$moonlight_version"
