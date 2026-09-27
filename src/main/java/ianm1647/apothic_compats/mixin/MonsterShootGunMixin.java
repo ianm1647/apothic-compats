@@ -1,17 +1,13 @@
 package ianm1647.apothic_compats.mixin;
 
-import io.redspace.irons_artifice.entity.Illificer;
 import io.redspace.irons_artifice.entity.ai.RangedGunAttackGoal;
 import io.redspace.irons_artifice.registry.EntityRegistry;
-import io.redspace.irons_artifice.registry.ExtendedRaiderTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
-
-import java.util.Objects;
 
 @Mixin(Monster.class)
 public class MonsterShootGunMixin extends PathfinderMob implements Enemy {

@@ -75,7 +75,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(Items.IRON_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.IRON_LEGGINGS), 10)
                 .boots(new ItemStack(Items.IRON_BOOTS), 10)
-                .tag("frontier_ranged").tag("frontier_ranged").tag("frontier_gun"));
+                .tag("frontier_ranged").tag("frontier_melee").tag("frontier_gun"));
 
         addSet("frontier/irons_artifice/gun_gold", 25, 0, c -> c
                 .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
@@ -89,7 +89,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(buffedGoldItem(Items.GOLDEN_CHESTPLATE, enchants), 10)
                 .leggings(buffedGoldItem(Items.GOLDEN_LEGGINGS, enchants), 10)
                 .boots(buffedGoldItem(Items.GOLDEN_BOOTS, enchants), 10)
-                .tag("frontier_ranged").tag("frontier_ranged").tag("frontier_gun"));
+                .tag("frontier_ranged").tag("frontier_melee").tag("frontier_gun"));
 
         // Ascent Sets
         addSet("ascent/irons_artifice/gun_iron", 25, 0, c -> c
@@ -104,7 +104,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(buffedItem(Items.IRON_CHESTPLATE, enchants, 1F), 10)
                 .leggings(buffedItem(Items.IRON_LEGGINGS, enchants, 1F), 10)
                 .boots(buffedItem(Items.IRON_BOOTS, enchants, 1F), 10)
-                .tag("ascent_ranged").tag("ascent_ranged").tag("ascent_gun"));
+                .tag("ascent_ranged").tag("ascent_melee").tag("ascent_gun"));
 
         addSet("ascent/irons_artifice/gun_gold", 25, 0, c -> c
                 .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
@@ -118,7 +118,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(buffedGoldItem(Items.GOLDEN_CHESTPLATE, enchants), 10)
                 .leggings(buffedGoldItem(Items.GOLDEN_LEGGINGS, enchants), 10)
                 .boots(buffedGoldItem(Items.GOLDEN_BOOTS, enchants), 10)
-                .tag("ascent_ranged").tag("ascent_ranged").tag("ascent_gun"));
+                .tag("ascent_ranged").tag("ascent_melee").tag("ascent_gun"));
 
         addSet("ascent/irons_artifice/gun_diamond", 25, 0, c -> c
                 .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
@@ -132,7 +132,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(Items.DIAMOND_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.DIAMOND_LEGGINGS), 10)
                 .boots(new ItemStack(Items.DIAMOND_BOOTS), 10)
-                .tag("ascent_ranged").tag("ascent_ranged").tag("ascent_gun"));
+                .tag("ascent_ranged").tag("ascent_melee").tag("ascent_gun"));
 
         //Summit Sets
         addSet("summit/irons_artifice/gun_diamond", 25, 0, c -> c
@@ -147,7 +147,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(buffedItem(Items.DIAMOND_CHESTPLATE, enchants, 1F), 10)
                 .leggings(buffedItem(Items.DIAMOND_LEGGINGS, enchants, 1F), 10)
                 .boots(buffedItem(Items.DIAMOND_BOOTS, enchants, 1F), 10)
-                .tag("summit_ranged").tag("summit_ranged").tag("summit_gun"));
+                .tag("summit_ranged").tag("summit_melee").tag("summit_gun"));
 
         addSet("summit/irons_artifice/gun_netherite", 25, 0, c -> c
                 .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
@@ -161,10 +161,10 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(new ItemStack(Items.NETHERITE_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.NETHERITE_LEGGINGS), 10)
                 .boots(new ItemStack(Items.NETHERITE_BOOTS), 10)
-                .tag("summit_ranged").tag("summit_ranged").tag("summit_gun"));
+                .tag("summit_ranged").tag("summit_melee").tag("summit_gun"));
 
         //Pinnacle Sets
-        addSet("pinnacle/irons_artifice/gun_diamond", 25, 0, c -> c
+        addSet("pinnacle/irons_artifice/gun_diamond", 100, 0, c -> c
                 .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
                 .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
                 .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
@@ -176,9 +176,9 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(buffedItem(Items.DIAMOND_CHESTPLATE, enchants, 1F), 10)
                 .leggings(buffedItem(Items.DIAMOND_LEGGINGS, enchants, 1F), 10)
                 .boots(buffedItem(Items.DIAMOND_BOOTS, enchants, 1F), 10)
-                .tag("pinnacle_ranged").tag("pinnacle_ranged").tag("pinnacle_gun"));
+                .tag("pinnacle_ranged").tag("pinnacle_melee").tag("pinnacle_gun"));
 
-        addSet("pinnacle/irons_artifice/gun_netherite", 25, 0, c -> c
+        addSet("pinnacle/irons_artifice/gun_netherite", 100, 0, c -> c
                 .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
                 .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
                 .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
@@ -190,7 +190,7 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .chestplate(buffedItem(Items.NETHERITE_CHESTPLATE, enchants, 2F), 10)
                 .leggings(buffedItem(Items.NETHERITE_LEGGINGS, enchants, 2F), 10)
                 .boots(buffedItem(Items.NETHERITE_BOOTS, enchants, 2F), 10)
-                .tag("pinnacle_ranged").tag("pinnacle_ranged").tag("pinnacle_gun"));
+                .tag("pinnacle_ranged").tag("pinnacle_melee").tag("pinnacle_gun"));
     }
 
     @Override

@@ -127,6 +127,7 @@
     ],
     "tags": [
         "ascent_ranged",
+        "ascent_melee",
         "ascent_gun"
     ],
     "weight": 25

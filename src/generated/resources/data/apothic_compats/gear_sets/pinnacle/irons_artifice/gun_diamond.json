@@ -127,7 +127,8 @@
     ],
     "tags": [
         "pinnacle_ranged",
+        "pinnacle_melee",
         "pinnacle_gun"
     ],
-    "weight": 25
+    "weight": 100
 }
