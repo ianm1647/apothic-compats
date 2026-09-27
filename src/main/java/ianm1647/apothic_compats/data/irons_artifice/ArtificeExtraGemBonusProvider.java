@@ -26,6 +26,8 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
         super(output, registries, ExtraGemBonusRegistry.INSTANCE);
     }
 
+    String mod = "irons_artifice";
+
     @Override
     public @NotNull String getName() {
         return "Artifice Extra Gem Bonuses";
@@ -150,18 +152,18 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
     private void addBonus(Identifier gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"));
+        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod));
     }
 
     private void addTwilightBonus(Identifier gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition("twilightforest"));
+        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition("twilightforest"));
     }
 
     private void addModdedBonus(Identifier gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("irons_artifice/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc("irons_artifice/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition(this.mod), new ModLoadedCondition(mod));
     }
 }

@@ -34,6 +34,8 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
         super(output, registries, ExtraGemBonusRegistry.INSTANCE);
     }
 
+    String mod = "curios";
+
     public static final GemClass CURIOS = new GemClass("curios",
             Curios.BACK, Curios.BELT, Curios.BODY, Curios.BRACELET, Curios.CHARM,
             Curios.CURIO, Curios.FEET, Curios.HANDS, Curios.HEAD, Curios.NECKLACE,
@@ -361,18 +363,18 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
     private void addBonus(Identifier gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"));
+        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod));
     }
 
     private void addTwilightBonus(Identifier gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition("twilightforest"));
+        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition("twilightforest"));
     }
 
     private void addModdedBonus(Identifier gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc("curios/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition(this.mod), new ModLoadedCondition(mod));
     }
 }
