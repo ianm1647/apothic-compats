@@ -36,6 +36,8 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
         super(output, registries, ExtraGemBonusRegistry.INSTANCE);
     }
 
+    String mod = "curios";
+
     public static final GemClass CURIOS = new GemClass("curios",
             Comp.LootCategories.Curios.BACK, Comp.LootCategories.Curios.BELT, Comp.LootCategories.Curios.BODY, Comp.LootCategories.Curios.BRACELET,
             Comp.LootCategories.Curios.CHARM, Comp.LootCategories.Curios.CURIO, Comp.LootCategories.Curios.FEET, Comp.LootCategories.Curios.HANDS,
@@ -365,18 +367,18 @@ public class CuriosExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGe
     private void addBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"));
+        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod));
     }
 
     private void addTwilightBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition("twilightforest"));
+        this.addConditionally(ApothicCompats.loc("curios/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition("twilightforest"));
     }
 
     private void addModdedBonus(ResourceLocation gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("curios/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc("curios/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition(this.mod), new ModLoadedCondition(mod));
     }
 }

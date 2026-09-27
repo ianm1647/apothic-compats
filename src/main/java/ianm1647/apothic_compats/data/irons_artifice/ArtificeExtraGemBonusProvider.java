@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.data.irons_artifice;
 
+import com.sammy.malum.registry.common.MalumAttributes;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.socket.gem.ExtraGemBonusRegistry;
 import dev.shadowsoffire.apotheosis.socket.gem.GemRegistry;
@@ -16,6 +17,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.jetbrains.annotations.NotNull;
+import team.lodestar.lodestone.registry.common.LodestoneAttributes;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
@@ -25,6 +27,8 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
     public ArtificeExtraGemBonusProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, ExtraGemBonusRegistry.INSTANCE);
     }
+
+    String mod = "irons_artifice";
 
     @Override
     public @NotNull String getName() {
@@ -143,23 +147,41 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
                         .value(Purity.FLAWLESS, 0.2)
                         .value(Purity.PERFECT, 0.3)));
 
+        addTwilightBonus(Apotheosis.loc("twilight/forest"), b -> b
+                .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
+                        .attr(ALObjects.Attributes.ARMOR_SHRED)
+                        .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                        .value(Purity.FLAWED, 0.05f)
+                        .value(Purity.NORMAL, 0.1f)
+                        .value(Purity.FLAWLESS, 0.15f)
+                        .value(Purity.PERFECT, 0.2f)));
+
+        addModdedBonus(ApothicCompats.loc("malum/soul_stained"), "malum", b -> b
+                .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
+                        .attr(LodestoneAttributes.MAGIC_DAMAGE)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.FLAWED, 2)
+                        .value(Purity.NORMAL, 4)
+                        .value(Purity.FLAWLESS, 6)
+                        .value(Purity.PERFECT, 8)));
+
     }
 
     private void addBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"));
+        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod));
     }
 
     private void addTwilightBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition("twilightforest"));
+        this.addConditionally(ApothicCompats.loc("irons_artifice/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition("twilightforest"));
     }
 
     private void addModdedBonus(ResourceLocation gem, String mod, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("irons_artifice/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition("curios"), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc("irons_artifice/" + mod + "/" + gem.getPath().replace(mod + "/", "")), builder.build(), new ModLoadedCondition(this.mod), new ModLoadedCondition(mod));
     }
 }

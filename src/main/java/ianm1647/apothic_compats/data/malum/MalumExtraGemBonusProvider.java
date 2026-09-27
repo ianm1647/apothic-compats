@@ -38,6 +38,8 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
 
     public static final GemClass MALUM_WEAPON = new GemClass("malum_weapon", Comp.LootCategories.Malum.SCYTHE, Comp.LootCategories.Malum.STAFF);
 
+    String mod = "malum";
+
     @Override
     public String getName() {
         return "Malum Extra Gem Bonuses";
@@ -190,7 +192,7 @@ public class MalumExtraGemBonusProvider extends DynamicRegistryProvider<ExtraGem
     private void addBonus(ResourceLocation gem, UnaryOperator<ExtraGemBonusRegistry.ExtraGemBonus.Builder> config) {
         var builder = ExtraGemBonusRegistry.ExtraGemBonus.builder(GemRegistry.INSTANCE.holder(gem));
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc("malum/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition("malum"));
+        this.addConditionally(ApothicCompats.loc("malum/" + gem.getNamespace() + "/" + gem.getPath()), builder.build(), new ModLoadedCondition(mod));
     }
 
     private static <T> Holder.Reference<T> standaloneHolder(HolderLookup.Provider registries, ResourceKey<T> key) {
