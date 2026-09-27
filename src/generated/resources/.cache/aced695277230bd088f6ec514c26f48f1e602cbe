@@ -1,6 +1,5 @@
-// 1.21.1	2026-09-26T19:43:43.3162561	Cataclysm Affix Loot Entries
+// 1.21.1	2026-09-27T00:21:00.061934	Cataclysm Affix Loot Entries
 80909fd83e3a42d2d04590f9400849d22ce2e2b0 data/apothic_compats/affix_loot_entries/cataclysm/black_steel_axe.json
-895049e41d554d576af05dcbf639a90aa0aac4d0 data/apothic_compats/affix_loot_entries/cataclysm/black_steel_hoe.json
 e370831852acef5ac888b40ff31ced690600ab45 data/apothic_compats/affix_loot_entries/cataclysm/black_steel_pickaxe.json
 92a20a406243767cc1d008c2318cb6d0cceb4c86 data/apothic_compats/affix_loot_entries/cataclysm/black_steel_shovel.json
 62f90b286d7d9162a59513532b3fbf0d60f432db data/apothic_compats/affix_loot_entries/cataclysm/black_steel_sword.json

@@ -115,7 +115,8 @@ public class AetherAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         AetherItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == AetherItemTiers.SKYROOT) {
                     addTools(SKYROOT, i);
                 }

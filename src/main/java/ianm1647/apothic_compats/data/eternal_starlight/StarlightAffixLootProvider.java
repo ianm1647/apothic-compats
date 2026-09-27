@@ -112,7 +112,8 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         ESItems.ITEMS.registry().stream().forEach(item -> {
-            if (item instanceof TieredItem i) {
+            String name = item.getDescriptionId();
+            if (item instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == ESItemTiers.AMARAMBER) {
                     addTools(AMARAMBER, i);
                 }

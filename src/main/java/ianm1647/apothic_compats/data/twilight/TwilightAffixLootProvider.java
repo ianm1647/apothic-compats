@@ -62,7 +62,8 @@ public class TwilightAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         TFItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == TFToolMaterials.IRONWOOD) {
                     addTools(IRONWOOD, i);
                 }

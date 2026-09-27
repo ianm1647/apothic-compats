@@ -41,7 +41,8 @@ public class ATMAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         ModRegistry.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == ATMTier.ALLTHEMODIUM) {
                     addTools(ALLTHEMODIUM, i);
                 }

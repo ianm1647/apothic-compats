@@ -61,7 +61,8 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         UGItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == UGItemTiers.CLOGGRUM) {
                     addTools(CLOGGRUM, i);
                 }

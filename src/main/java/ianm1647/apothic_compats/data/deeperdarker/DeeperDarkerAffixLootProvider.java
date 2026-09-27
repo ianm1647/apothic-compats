@@ -52,7 +52,8 @@ public class DeeperDarkerAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         DDItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == DDTiers.RESONARIUM) {
                     addTools(RESONARIUM, i);
                 }

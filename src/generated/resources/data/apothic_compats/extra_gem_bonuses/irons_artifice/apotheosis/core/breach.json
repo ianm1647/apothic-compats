@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:core/breach",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "apothic_attributes:crit_chance",
+            "gem_class": "apothic_compats:gun",
+            "operation": "add_value",
+            "values": {
+                "flawed": 0.06,
+                "normal": 0.08,
+                "flawless": 0.1,
+                "perfect": 0.12
+            }
+        }
+    ]
+}

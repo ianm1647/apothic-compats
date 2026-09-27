@@ -1,0 +1,65 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "irons_artifice"
+        }
+    ],
+    "type": "placebo:gear_set",
+    "mainhands": [
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:flintlock"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:musket"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:blunderbuss"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:blackpowder_revolver"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:six_shooter"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:arquebus"
+            },
+            "weight": 10
+        },
+        {
+            "stack": {
+                "count": 1,
+                "id": "irons_artifice:clockwork_rifle"
+            },
+            "weight": 10
+        }
+    ],
+    "tags": [
+        "frontier_ranged",
+        "frontier_gun"
+    ],
+    "weight": 25
+}

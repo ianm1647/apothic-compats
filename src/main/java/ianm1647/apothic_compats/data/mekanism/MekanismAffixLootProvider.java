@@ -68,7 +68,8 @@ public class MekanismAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         ToolsItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == MekanismToolsConfig.materials.lapisLazuli) {
                     addTools(LAPIS, i);
                 }

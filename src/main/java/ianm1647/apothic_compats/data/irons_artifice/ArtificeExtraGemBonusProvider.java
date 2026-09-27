@@ -33,8 +33,6 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
 
     @Override
     public void generate() {
-        HolderLookup.Provider registries = this.lookupProvider.join();
-
         addBonus(Apotheosis.loc("core/ballast"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
                         .attr(ALObjects.Attributes.CRIT_DAMAGE)
@@ -118,13 +116,13 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
 
         addBonus(Apotheosis.loc("the_nether/blood_lord"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
-                        .attr(Attributes.BURNING_TIME)
-                        .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.CHIPPED, -0.025f)
-                        .value(Purity.FLAWED, -0.05f)
-                        .value(Purity.NORMAL, -0.075f)
-                        .value(Purity.FLAWLESS, -0.1f)
-                        .value(Purity.PERFECT, -0.125f)));
+                        .attr(ALObjects.Attributes.LIFE_STEAL)
+                        .op(AttributeModifier.Operation.ADD_VALUE)
+                        .value(Purity.CHIPPED, 0.1f)
+                        .value(Purity.FLAWED, 0.15f)
+                        .value(Purity.NORMAL, 0.2f)
+                        .value(Purity.FLAWLESS, 0.25f)
+                        .value(Purity.PERFECT, 0.3f)));
 
         addBonus(Apotheosis.loc("the_nether/inferno"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()

@@ -55,7 +55,8 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         DAItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == DATiers.SKYJADE) {
                     addTools(SKYJADE, i);
                 }

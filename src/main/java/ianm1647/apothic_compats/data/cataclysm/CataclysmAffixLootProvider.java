@@ -42,7 +42,8 @@ public class CataclysmAffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         ModItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == Tooltier.BLACK_STEEL) {
                     addTools(BLACK_STEEL, i);
                 }

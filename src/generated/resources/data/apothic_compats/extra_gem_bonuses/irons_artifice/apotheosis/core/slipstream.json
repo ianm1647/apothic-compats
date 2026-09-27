@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "curios"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:core/slipstream",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "minecraft:generic.luck",
+            "gem_class": "apothic_compats:gun",
+            "operation": "add_value",
+            "values": {
+                "flawed": 1.0,
+                "normal": 2.0,
+                "flawless": 3.0,
+                "perfect": 4.0
+            }
+        }
+    ]
+}

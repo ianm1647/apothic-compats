@@ -50,7 +50,8 @@ public class Ae2AffixLootProvider extends AffixLootEntryProvider {
     @Override
     public void generate() {
         AEItems.DR.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+            String name = item.getId().getPath();
+            if (item.get() instanceof TieredItem i && !name.contains("hoe")) {
                 if (i.getTier() == QuartzToolType.NETHER.getToolTier()) {
                     addTools(QUARTZ, i);
                 }
