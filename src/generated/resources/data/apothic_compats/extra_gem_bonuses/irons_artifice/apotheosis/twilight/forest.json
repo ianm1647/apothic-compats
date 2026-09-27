@@ -1,0 +1,28 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "irons_artifice"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightforest"
+        }
+    ],
+    "type": "apotheosis:extra_gem_bonus",
+    "gem": "apotheosis:twilight/forest",
+    "bonuses": [
+        {
+            "type": "apotheosis:attribute",
+            "attribute": "apothic_attributes:armor_shred",
+            "gem_class": "apothic_compats:gun",
+            "operation": "add_multiplied_base",
+            "values": {
+                "flawed": 0.05000000074505806,
+                "normal": 0.10000000149011612,
+                "flawless": 0.15000000596046448,
+                "perfect": 0.20000000298023224
+            }
+        }
+    ]
+}
