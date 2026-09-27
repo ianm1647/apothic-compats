@@ -66,6 +66,11 @@ public class ApothicCompats {
     public static final String MODID = "apothic_compats";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
+    /* TODO
+        - add iss apothic compat (ancient reforging)
+        - make iss apothic and artifice affixes
+     */
+
     public ApothicCompats(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
         NeoForge.EVENT_BUS.register(new AffixEvents());

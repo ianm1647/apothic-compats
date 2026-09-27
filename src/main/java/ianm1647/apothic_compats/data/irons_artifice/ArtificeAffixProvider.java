@@ -53,6 +53,10 @@ public class ArtificeAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
+        /*
+          BASE AFFIXES
+        */
+
         this.addAttribute("gun", "murderous", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
@@ -327,22 +331,16 @@ public class ArtificeAffixProvider extends AffixProvider {
 
     }
 
-    private void addEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
-        var builder = new EnchantmentAffix.Builder(enchantment, mode);
-        config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/enchantment/" + name), builder.build(), new ModLoadedCondition(mod));
-    }
-
     private void addMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
         var builder = new BulletModifierAffix.Builder(effect, target);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/mob_effect/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addDamageReduction(String type, String name, DamageReductionAffix.DamageType dType, UnaryOperator<DamageReductionAffix.Builder> config) {
-        var builder = new DamageReductionAffix.Builder(dType);
+    private void addModdedMobEffect(String type, String name, String modid, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
+        var builder = new BulletModifierAffix.Builder(effect, target);
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/dmg_reduction/" + name), builder.build(), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc(type + "/mob_effect/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(modid));
     }
 
     private void addAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
@@ -351,10 +349,10 @@ public class ArtificeAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc(type + "/attribute/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
-    private void addAncientEnchantment(String type, String name, Holder<Enchantment> enchantment, EnchantmentAffix.Mode mode, UnaryOperator<EnchantmentAffix.Builder> config) {
-        var builder = new EnchantmentAffix.Builder(enchantment, mode);
+    public void addModdedAttribute(String type, String name, String modid, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
+        var builder = new AttributeAffix.Builder(attribute, op);
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/enchantment/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+        this.addConditionally(ApothicCompats.loc(type + "/attribute/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(modid));
     }
 
     private void addAncientMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
@@ -363,16 +361,22 @@ public class ArtificeAffixProvider extends AffixProvider {
         this.addConditionally(ApothicCompats.loc(type + "/mob_effect/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
     }
 
-    private void addAncientDamageReduction(String type, String name, DamageReductionAffix.DamageType dType, UnaryOperator<DamageReductionAffix.Builder> config) {
-        var builder = new DamageReductionAffix.Builder(dType);
+    private void addModdedAncientMobEffect(String type, String name, String modid, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
+        var builder = new BulletModifierAffix.Builder(effect, target);
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/dmg_reduction/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+        this.addConditionally(ApothicCompats.loc(type + "/mob_effect/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(modid), new ModLoadedCondition(AncientReforging.MODID));
     }
 
     private void addAncientAttribute(String type, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
         var builder = new AttributeAffix.Builder(attribute, op);
         config.apply(builder);
         this.addConditionally(ApothicCompats.loc(type + "/attribute/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+    }
+
+    public void addModdedAncientAttribute(String type, String name, String modid, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {
+        var builder = new AttributeAffix.Builder(attribute, op);
+        config.apply(builder);
+        this.addConditionally(ApothicCompats.loc(type + "/attribute/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(modid), new ModLoadedCondition(AncientReforging.MODID));
     }
 
     private static DynamicHolder<Affix> afx(String path) {
