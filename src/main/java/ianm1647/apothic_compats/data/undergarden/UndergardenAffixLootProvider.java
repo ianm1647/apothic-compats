@@ -1,13 +1,12 @@
 package ianm1647.apothic_compats.data.undergarden;
 
+import com.thevortex.allthemodium.registry.ModRegistry;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -19,9 +18,8 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import quek.undergarden.registry.UGArmorMaterials;
 import quek.undergarden.registry.UGItemTiers;
+import quek.undergarden.registry.UGItems;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
@@ -30,10 +28,6 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
     String mod = "undergarden";
 
     private static ResourceKey<Level> UNDERGARDEN = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("undergarden:undergarden"));
-
-    public Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-    public Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-    public Map<Item, TieredWeights> itemWeights = new HashMap<>();
 
     public UndergardenAffixLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -66,39 +60,36 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(UGArmorMaterials.CLOGGRUM, CLOGGRUM);
-        armorWeights.put(UGArmorMaterials.ANCIENT, ANCIENT);
-        armorWeights.put(UGArmorMaterials.FROSTSTEEL, FROSTSTEEL);
-        armorWeights.put(UGArmorMaterials.UTHERIUM, UTHERIUM);
-
-        toolWeights.put(UGItemTiers.CLOGGRUM, CLOGGRUM);
-        toolWeights.put(UGItemTiers.FROSTSTEEL, FROSTSTEEL);
-        toolWeights.put(UGItemTiers.UTHERIUM, UTHERIUM);
-        toolWeights.put(UGItemTiers.FORGOTTEN, FORGOTTEN);
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+        UGItems.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == UGItemTiers.CLOGGRUM) {
+                    addTools(CLOGGRUM, i);
+                }
+                if (i.getTier() == UGItemTiers.FROSTSTEEL) {
+                    addTools(FROSTSTEEL, i);
+                }
+                if (i.getTier() == UGItemTiers.UTHERIUM) {
+                    addTools(UTHERIUM, i);
+                }
+                if (i.getTier() == UGItemTiers.FORGOTTEN) {
+                    addTools(FORGOTTEN, i);
                 }
             }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == UGArmorMaterials.CLOGGRUM) {
+                    addArmor(CLOGGRUM, a);
+                }
+                if (a.getMaterial() == UGArmorMaterials.ANCIENT) {
+                    addArmor(ANCIENT, a);
+                }
+                if (a.getMaterial() == UGArmorMaterials.FROSTSTEEL) {
+                    addArmor(FROSTSTEEL, a);
+                }
+                if (a.getMaterial() == UGArmorMaterials.UTHERIUM) {
+                    addArmor(UTHERIUM, a);
                 }
             }
-        }
+        });
     }
 
     @Override
@@ -106,9 +97,20 @@ public class UndergardenAffixLootProvider extends AffixLootEntryProvider {
         return "Undergarden Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(UNDERGARDEN), new ItemStack(tool), Set.of()));
+        }
+    }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(UNDERGARDEN), stack, Set.of()), new ModLoadedCondition(mod));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(UNDERGARDEN), new ItemStack(piece), Set.of()));
+        }
+    }
+
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition(mod));
     }
 }

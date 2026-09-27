@@ -15,6 +15,7 @@ import ianm1647.apothic_compats.data.curios.CuriosExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.curios.CuriosProvider;
 import ianm1647.apothic_compats.data.friendsandfoes.FAFInvaderProvider;
 import ianm1647.apothic_compats.data.irons_artifice.ArtificeAffixProvider;
+import ianm1647.apothic_compats.data.irons_artifice.ArtificeExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.malum.MalumExtraGemBonusProvider;
 import ianm1647.apothic_compats.data.ae2.*;
 import ianm1647.apothic_compats.data.aether.*;
@@ -114,6 +115,7 @@ public class ApothicCompats {
                 .provider(MobsInvaderProvider::new)
 
                 .provider(ArtificeAffixProvider::new)
+                .provider(ArtificeExtraGemBonusProvider::new)
 
                 .provider(ATMAffixLootProvider::new)
                 .provider(ATMGearSetProvider::new)

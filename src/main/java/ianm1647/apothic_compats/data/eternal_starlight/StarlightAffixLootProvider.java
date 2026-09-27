@@ -111,8 +111,8 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        AetherItems.ITEMS.getEntries().forEach(item -> {
-            if (item.get() instanceof TieredItem i) {
+        ESItems.ITEMS.registry().stream().forEach(item -> {
+            if (item instanceof TieredItem i) {
                 if (i.getTier() == ESItemTiers.AMARAMBER) {
                     addTools(AMARAMBER, i);
                 }
@@ -145,7 +145,7 @@ public class StarlightAffixLootProvider extends AffixLootEntryProvider {
                 }
             }
 
-            if (item.get() instanceof ArmorItem a) {
+            if (item instanceof ArmorItem a) {
                 if (a.getMaterial() == ESArmorMaterials.ALCHEMIST.asHolder()) {
                     addArmor(ALCHEMIST, a);
                 }

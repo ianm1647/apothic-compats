@@ -54,7 +54,7 @@ public class DeepAetherAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        ModRegistry.ITEMS.getEntries().forEach(item -> {
+        DAItems.ITEMS.getEntries().forEach(item -> {
             if (item.get() instanceof TieredItem i) {
                 if (i.getTier() == DATiers.SKYJADE) {
                     addTools(SKYJADE, i);

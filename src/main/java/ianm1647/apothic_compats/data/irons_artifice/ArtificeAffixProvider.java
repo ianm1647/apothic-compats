@@ -180,10 +180,10 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(mythic, 100, 200, 1, 40));
 
         this.addConditionally(ApothicCompats.loc("gun/telepathic"), new TelepathicGunAffix(
-                        AffixDefinition.builder(AffixType.BASIC_EFFECT)
-                                .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                                .build(),
-                        linkedSet(rare, epic, mythic)), new ModLoadedCondition(mod));
+                AffixDefinition.builder(AffixType.BASIC_EFFECT)
+                        .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .build(),
+                linkedSet(rare, epic, mythic)), new ModLoadedCondition(mod));
 
         this.addConditionally(ApothicCompats.loc("gun/festive"),
                 FestiveAffix.builder()
@@ -295,10 +295,10 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(ancient, 200, 400, 2, 20));
 
         this.addConditionally(ApothicCompats.loc("gun/ancient/telepathic"), new TelepathicGunAffix(
-                        AffixDefinition.builder(AffixType.BASIC_EFFECT)
-                                .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
-                                .build(),
-                        linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+                AffixDefinition.builder(AffixType.BASIC_EFFECT)
+                        .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
+                        .build(),
+                linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
         this.addConditionally(ApothicCompats.loc("gun/ancient/festive"),
                 FestiveAffix.builder()
@@ -391,3 +391,4 @@ public class ArtificeAffixProvider extends AffixProvider {
         return ApothMiscUtil.linkedSet(rarities);
     }
 }
+

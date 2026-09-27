@@ -2,7 +2,6 @@ package ianm1647.apothic_compats.data.mekanism;
 
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
 import ianm1647.apothic_compats.ApothicCompats;
@@ -68,50 +67,56 @@ public class MekanismAffixLootProvider extends AffixLootEntryProvider {
 
     @Override
     public void generate() {
-        armorWeights.put(ToolsArmorMaterials.LAPIS_LAZULI, LAPIS);
-        armorWeights.put(ToolsArmorMaterials.OSMIUM, OSMIUM);
-        armorWeights.put(ToolsArmorMaterials.BRONZE, BRONZE);
-        armorWeights.put(ToolsArmorMaterials.STEEL, STEEL);
-        armorWeights.put(ToolsArmorMaterials.REFINED_GLOWSTONE, GLOWSTONE);
-        armorWeights.put(ToolsArmorMaterials.REFINED_OBSIDIAN, OBSIDIAN);
-
-        toolWeights.put(MekanismToolsConfig.materials.lapisLazuli, LAPIS);
-        toolWeights.put(MekanismToolsConfig.materials.osmium, OSMIUM);
-        toolWeights.put(MekanismToolsConfig.materials.bronze, BRONZE);
-        toolWeights.put(MekanismToolsConfig.materials.steel, STEEL);
-        toolWeights.put(MekanismToolsConfig.materials.refinedGlowstone, GLOWSTONE);
-        toolWeights.put(MekanismToolsConfig.materials.refinedObsidian, OBSIDIAN);
-
-        addEntry(new AffixLootEntry(LAPIS, ToolsItems.LAPIS_LAZULI_SHIELD.asStack()));
-        addEntry(new AffixLootEntry(OSMIUM, ToolsItems.OSMIUM_SHIELD.asStack()));
-        addEntry(new AffixLootEntry(BRONZE, ToolsItems.BRONZE_SHIELD.asStack()));
-        addEntry(new AffixLootEntry(STEEL, ToolsItems.STEEL_SHIELD.asStack()));
-        addEntry(new AffixLootEntry(GLOWSTONE, ToolsItems.REFINED_GLOWSTONE_SHIELD.asStack()));
-        addEntry(new AffixLootEntry(OBSIDIAN, ToolsItems.REFINED_OBSIDIAN_SHIELD.asStack()));
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!mod.equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue;
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue;
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(new AffixLootEntry(weights, new ItemStack(i)));
+        ToolsItems.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == MekanismToolsConfig.materials.lapisLazuli) {
+                    addTools(LAPIS, i);
+                }
+                if (i.getTier() == MekanismToolsConfig.materials.osmium) {
+                    addTools(OSMIUM, i);
+                }
+                if (i.getTier() == MekanismToolsConfig.materials.bronze) {
+                    addTools(BRONZE, i);
+                }
+                if (i.getTier() == MekanismToolsConfig.materials.steel) {
+                    addTools(STEEL, i);
+                }
+                if (i.getTier() == MekanismToolsConfig.materials.refinedGlowstone) {
+                    addTools(GLOWSTONE, i);
+                }
+                if (i.getTier() == MekanismToolsConfig.materials.refinedObsidian) {
+                    addTools(OBSIDIAN, i);
                 }
             }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(new AffixLootEntry(weights, new ItemStack(i)));
+
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == ToolsArmorMaterials.LAPIS_LAZULI) {
+                    addArmor(LAPIS, a);
+                }
+                if (a.getMaterial() == ToolsArmorMaterials.OSMIUM) {
+                    addArmor(OSMIUM, a);
+                }
+                if (a.getMaterial() == ToolsArmorMaterials.BRONZE) {
+                    addArmor(BRONZE, a);
+                }
+                if (a.getMaterial() == ToolsArmorMaterials.STEEL) {
+                    addArmor(STEEL, a);
+                }
+                if (a.getMaterial() == ToolsArmorMaterials.REFINED_GLOWSTONE) {
+                    addArmor(GLOWSTONE, a);
+                }
+                if (a.getMaterial() == ToolsArmorMaterials.REFINED_OBSIDIAN) {
+                    addArmor(OBSIDIAN, a);
                 }
             }
-        }
+        });
+
+        addTools(LAPIS, ToolsItems.LAPIS_LAZULI_SHIELD.get());
+        addTools(OSMIUM, ToolsItems.OSMIUM_SHIELD.get());
+        addTools(BRONZE, ToolsItems.BRONZE_SHIELD.get());
+        addTools(STEEL, ToolsItems.STEEL_SHIELD.get());
+        addTools(GLOWSTONE, ToolsItems.REFINED_GLOWSTONE_SHIELD.get());
+        addTools(OBSIDIAN, ToolsItems.REFINED_OBSIDIAN_SHIELD.get());
     }
 
     @Override
@@ -119,6 +124,17 @@ public class MekanismAffixLootProvider extends AffixLootEntryProvider {
         return "Mekanism Affix Loot Entries";
     }
 
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStack(tool)));
+        }
+    }
+
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, new ItemStack(piece)));
+        }
+    }
 
     protected void addEntry(AffixLootEntry entry) {
         ResourceLocation key = ApothicCompats.loc(mod + "/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());

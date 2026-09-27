@@ -3,11 +3,9 @@ package ianm1647.apothic_compats.data.twilight;
 import dev.shadowsoffire.apotheosis.Apotheosis;
 import dev.shadowsoffire.apotheosis.data.AffixLootEntryProvider;
 import dev.shadowsoffire.apotheosis.loot.AffixLootEntry;
-import dev.shadowsoffire.apotheosis.loot.LootCategory;
 import dev.shadowsoffire.apotheosis.tiers.Constraints;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
 import dev.shadowsoffire.apotheosis.tiers.WorldTier;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -21,8 +19,6 @@ import twilightforest.init.TFArmorMaterials;
 import twilightforest.init.TFItems;
 import twilightforest.util.TFToolMaterials;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
@@ -64,64 +60,80 @@ public class TwilightAffixLootProvider extends AffixLootEntryProvider {
     }
 
     @Override
+    public void generate() {
+        TFItems.ITEMS.getEntries().forEach(item -> {
+            if (item.get() instanceof TieredItem i) {
+                if (i.getTier() == TFToolMaterials.IRONWOOD) {
+                    addTools(IRONWOOD, i);
+                }
+                if (i.getTier() == TFToolMaterials.STEELEAF) {
+                    addTools(STEELEAF, i);
+                }
+                if (i.getTier() == TFToolMaterials.KNIGHTMETAL) {
+                    addTools(KNIGHTMETAL, i);
+                }
+                if (i.getTier() == TFToolMaterials.ICE) {
+                    addTools(ARCTIC_FIERY, i);
+                }
+                if (i.getTier() == TFToolMaterials.FIERY) {
+                    addTools(ARCTIC_FIERY, i);
+                }
+                if (i.getTier() == TFToolMaterials.GIANT) {
+                    addTools(YETI, i);
+                }
+                if (i.getTier() == TFToolMaterials.GLASS) {
+                    addTools(YETI, i);
+                }
+            }
+            if (item.get() instanceof ArmorItem a) {
+                if (a.getMaterial() == TFArmorMaterials.IRONWOOD) {
+                    addArmor(IRONWOOD, a);
+                }
+                if (a.getMaterial() == TFArmorMaterials.STEELEAF) {
+                    addArmor(STEELEAF, a);
+                }
+                if (a.getMaterial() == TFArmorMaterials.KNIGHTMETAL) {
+                    addArmor(KNIGHTMETAL, a);
+                }
+                if (a.getMaterial() == TFArmorMaterials.ARCTIC) {
+                    addArmor(ARCTIC_FIERY, a);
+                }
+                if (a.getMaterial() == TFArmorMaterials.FIERY) {
+                    addArmor(ARCTIC_FIERY, a);
+                }
+                if (a.getMaterial() == TFArmorMaterials.YETI) {
+                    addArmor(YETI, a);
+                }
+            }
+        });
+
+        addTools(BOWS, TFItems.ENDER_BOW.get());
+        addTools(BOWS, TFItems.ICE_BOW.get());
+        addTools(BOWS, TFItems.SEEKER_BOW.get());
+        addTools(BOWS, TFItems.TRIPLE_BOW.get());
+        addTools(TieredWeights.forTiersAbove(WorldTier.ASCENT, 5, 1), TFItems.KNIGHTMETAL_SHIELD.get());
+
+    }
+
+    @Override
     public String getName() {
         return "Twilight Affix Loot Entries";
     }
 
-    @Override
-    public void generate() {
-        Map<Holder<ArmorMaterial>, TieredWeights> armorWeights = new HashMap<>();
-        armorWeights.put(TFArmorMaterials.IRONWOOD, IRONWOOD);
-        armorWeights.put(TFArmorMaterials.STEELEAF, STEELEAF);
-        armorWeights.put(TFArmorMaterials.KNIGHTMETAL, KNIGHTMETAL);
-        armorWeights.put(TFArmorMaterials.ARCTIC, ARCTIC_FIERY);
-        armorWeights.put(TFArmorMaterials.FIERY, ARCTIC_FIERY);
-        armorWeights.put(TFArmorMaterials.YETI, YETI);
-
-        Map<Tier, TieredWeights> toolWeights = new HashMap<>();
-        toolWeights.put(TFToolMaterials.IRONWOOD, IRONWOOD);
-        toolWeights.put(TFToolMaterials.STEELEAF, STEELEAF);
-        toolWeights.put(TFToolMaterials.KNIGHTMETAL, KNIGHTMETAL);
-        toolWeights.put(TFToolMaterials.ICE, ARCTIC_FIERY);
-        toolWeights.put(TFToolMaterials.FIERY, ARCTIC_FIERY);
-        toolWeights.put(TFToolMaterials.GIANT, YETI);
-        toolWeights.put(TFToolMaterials.GLASS, YETI);
-
-        for (Item i : BuiltInRegistries.ITEM) {
-            if (!"twilightforest".equals(BuiltInRegistries.ITEM.getKey(i).getNamespace())) {
-                continue; // This file only handles twilight forest compat.
-            }
-
-            LootCategory cat = LootCategory.forItem(i.getDefaultInstance());
-            if (cat.isNone()) {
-                continue; // Can't generate an ALE for non-affixable items.
-            }
-
-            if (i instanceof TieredItem t) {
-                TieredWeights weights = toolWeights.get(t.getTier());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
-            else if (i instanceof ArmorItem a && a.getType() != ArmorItem.Type.BODY) {
-                TieredWeights weights = armorWeights.get(a.getMaterial());
-                if (weights != null) {
-                    this.addEntry(weights, new ItemStack(i));
-                }
-            }
+    protected void addTools(TieredWeights weights, Item... tools) {
+        for (Item tool : tools) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(TWILIGHT), new ItemStack(tool), Set.of()));
         }
-
-        this.addEntry(BOWS, new ItemStack(TFItems.ENDER_BOW.get()));
-        this.addEntry(BOWS, new ItemStack(TFItems.ICE_BOW.get()));
-        this.addEntry(BOWS, new ItemStack(TFItems.SEEKER_BOW.get()));
-        this.addEntry(BOWS, new ItemStack(TFItems.TRIPLE_BOW.get()));
-        this.addEntry(TieredWeights.forTiersAbove(WorldTier.ASCENT, 5, 1), new ItemStack(TFItems.KNIGHTMETAL_SHIELD.get()));
-
     }
 
-    protected void addEntry(TieredWeights weights, ItemStack stack) {
-        ResourceLocation key = Apotheosis.loc("twilight/" + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath());
-        this.addConditionally(key, new AffixLootEntry(weights, Constraints.forDimension(TWILIGHT), stack, Set.of()), new ModLoadedCondition("twilightforest"));
+    protected void addArmor(TieredWeights weights, Item... pieces) {
+        for (Item piece : pieces) {
+            this.addEntry(new AffixLootEntry(weights, Constraints.forDimension(TWILIGHT), new ItemStack(piece), Set.of()));
+        }
     }
 
+    protected void addEntry(AffixLootEntry entry) {
+        ResourceLocation key = Apotheosis.loc("twilight/" + BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).getPath());
+        this.addConditionally(key, entry, new ModLoadedCondition("twilightforest"));
+    }
 }
