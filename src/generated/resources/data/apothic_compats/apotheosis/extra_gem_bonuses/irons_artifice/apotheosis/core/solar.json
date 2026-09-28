@@ -2,23 +2,23 @@
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "curios"
+      "modid": "irons_artifice"
     }
   ],
   "gem": "apotheosis:core/solar",
   "bonuses": [
     {
       "type": "apotheosis:attribute",
-      "attribute": "apothic_attributes:prot_pierce",
+      "attribute": "apothic_attributes:crit_damage",
       "gem_class": "apothic_compats:gun",
       "operation": "add_multiplied_base",
       "values": {
-        "cracked": 0.01,
-        "chipped": 0.02,
-        "flawed": 0.03,
-        "normal": 0.04,
-        "flawless": 0.05,
-        "perfect": 0.075
+        "cracked": 0.1,
+        "chipped": 0.2,
+        "flawed": 0.3,
+        "normal": 0.4,
+        "flawless": 0.5,
+        "perfect": 0.65
       }
     }
   ]
