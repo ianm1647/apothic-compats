@@ -312,34 +312,6 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 4F, 6F)
                 .value(mythic, 5F, 8F));
 
-        this.addAttribute("staff/melee", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Malum.STAFF)
-                .step(0.25F)
-                .value(common, 2F, 4F)
-                .value(uncommon, 2F, 4F)
-                .value(rare, 4F, 8F)
-                .value(epic, 5F, 10F)
-                .value(mythic, 5F, 12F));
-
-        this.addAttribute("staff/melee", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Malum.STAFF)
-                .value(common, 0.10F, 0.20F)
-                .value(uncommon, 0.10F, 0.20F)
-                .value(rare, 0.15F, 0.25F)
-                .value(epic, 0.15F, 0.25F)
-                .value(mythic, 0.25F, 0.40F));
-
-        this.addAttribute("staff/melee", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Malum.STAFF)
-                .value(common, 0.10F, 0.20F)
-                .value(uncommon, 0.10F, 0.20F)
-                .value(rare, 0.10F, 0.25F)
-                .value(epic, 0.15F, 0.35F)
-                .value(mythic, 0.25F, 0.55F));
-
         this.addAttribute("staff/melee", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Malum.STAFF)
@@ -433,6 +405,59 @@ public class StaffAffixProvider extends AffixProvider {
                 .value(epic, 200, 600, StepFunction.fromBounds(0, 1, 0.25F), 300)
                 .value(mythic, 200, 800, StepFunction.fromBounds(0, 2, 0.25F), 300));
 
+        this.addAttribute("staff", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .step(0.25F)
+                .value(common, 2F, 4F)
+                .value(uncommon, 2F, 4F)
+                .value(rare, 4F, 8F)
+                .value(epic, 5F, 10F)
+                .value(mythic, 5F, 12F));
+
+        this.addAttribute("staff", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.20F, 0.28F)
+                .value(mythic, 0.30F, 0.40F));
+
+        this.addAttribute("staff", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .step(0.5F)
+                .value(rare, 4F, 8F)
+                .value(epic, 5F, 10F)
+                .value(mythic, 5F, 12F));
+
+        this.addAttribute("staff", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .step(0.005F)
+                .value(rare, 0.10F, 0.15F)
+                .value(epic, 0.125F, 0.175F)
+                .value(mythic, 0.15F, 0.20F));
+
+        this.addAttribute("staff", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.15F, 0.25F)
+                .value(mythic, 0.25F, 0.40F));
+
+        this.addAttribute("staff", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.10F, 0.25F)
+                .value(epic, 0.15F, 0.35F)
+                .value(mythic, 0.25F, 0.55F));
+
         this.addConditionally(ApothicCompats.loc("staff/festive"),
                 FestiveAffix.builder()
                         .categories(Comp.LootCategories.Malum.STAFF)
@@ -465,34 +490,6 @@ public class StaffAffixProvider extends AffixProvider {
                         .value(mythic, 0.15F, 0.25F)
                         .build(), new ModLoadedCondition(mod));
 
-        this.addConditionally(ApothicCompats.loc("staff/ancient/festive"),
-                FestiveAffix.builder()
-                        .categories(Comp.LootCategories.Malum.STAFF)
-                        .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
-                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
-
-        this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),
-                AffixBuilder.categorized(ThunderstruckAffix::new)
-                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .categories(Comp.LootCategories.Malum.STAFF)
-                        .step(1)
-                        .value(ancient, 7, 11)
-                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
-
-        this.addConditionally(ApothicCompats.loc("staff/ancient/cleaving"),
-                new StaffCleavingAffix.Builder()
-                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(ancient, 0.8F, 1.0F, 3, 6)
-                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
-
-        this.addConditionally(ApothicCompats.loc("staff/ancient/executing"),
-                AffixBuilder.categorized(ExecutingAffix::new)
-                        .categories(Comp.LootCategories.Malum.STAFF)
-                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                        .value(ancient, 0.35F, 0.6F)
-                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
-
         this.addAncientAttribute("staff/melee", "vampiric", ALObjects.Attributes.LIFE_STEAL, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, d -> d
                         .weights(TieredWeights.forAllTiers(DEFAULT_WEIGHT, DEFAULT_QUALITY))
@@ -520,22 +517,6 @@ public class StaffAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Malum.STAFF)
                 .value(ancient, 6F, 10F));
-
-        this.addAncientAttribute("staff/melee", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Malum.STAFF)
-                .step(0.25F)
-                .value(ancient, 10F, 24F));
-
-        this.addAncientAttribute("staff/melee", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Malum.STAFF)
-                .value(ancient, 0.5F, 0.8F));
-
-        this.addAncientAttribute("staff/melee", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
-                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
-                .categories(Comp.LootCategories.Malum.STAFF)
-                .value(ancient, 0.5F, 1.15F));
 
         this.addAncientAttribute("staff/melee", "graceful", Attributes.ATTACK_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -597,6 +578,67 @@ public class StaffAffixProvider extends AffixProvider {
                 .categories(Comp.LootCategories.Malum.STAFF)
                 .stacking()
                 .value(ancient, 400, 1200, StepFunction.fromBounds(0, 3, 0.5F), 300));
+
+        this.addAncientAttribute("staff", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .step(0.25F)
+                .value(ancient, 10F, 24F));
+
+        this.addAncientAttribute("staff", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .value(ancient, 0.5F, 0.7F));
+
+        this.addAncientAttribute("staff", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .step(0.5F)
+                .value(ancient, 10F, 20F));
+
+        this.addAncientAttribute("staff", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .step(0.005F)
+                .value(ancient, 0.20F, 0.30F));
+
+        this.addAncientAttribute("staff", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .value(ancient, 0.5F, 0.8F));
+
+        this.addAncientAttribute("staff", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.STAFF)
+                .value(ancient, 0.5F, 1.15F));
+
+        this.addConditionally(ApothicCompats.loc("staff/ancient/festive"),
+                FestiveAffix.builder()
+                        .categories(Comp.LootCategories.Malum.STAFF)
+                        .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(ancient, StepFunction.fromBounds(0.05F, 0.12F, 0.005F), 20)
+                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("staff/ancient/thunderstruck"),
+                AffixBuilder.categorized(ThunderstruckAffix::new)
+                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .categories(Comp.LootCategories.Malum.STAFF)
+                        .step(1)
+                        .value(ancient, 7, 11)
+                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("staff/ancient/cleaving"),
+                new StaffCleavingAffix.Builder()
+                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(ancient, 0.8F, 1.0F, 3, 6)
+                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+
+        this.addConditionally(ApothicCompats.loc("staff/ancient/executing"),
+                AffixBuilder.categorized(ExecutingAffix::new)
+                        .categories(Comp.LootCategories.Malum.STAFF)
+                        .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                        .value(ancient, 0.35F, 0.6F)
+                        .build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
     }
 

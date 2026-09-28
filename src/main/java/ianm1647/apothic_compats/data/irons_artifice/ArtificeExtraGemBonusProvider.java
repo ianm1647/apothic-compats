@@ -90,14 +90,14 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
 
         addBonus(Apotheosis.loc("core/solar"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
-                        .attr(ALObjects.Attributes.PROT_PIERCE)
+                        .attr(ALObjects.Attributes.CRIT_DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-                        .value(Purity.CRACKED, 0.01)
-                        .value(Purity.CHIPPED, 0.02)
-                        .value(Purity.FLAWED, 0.03)
-                        .value(Purity.NORMAL, 0.04)
-                        .value(Purity.FLAWLESS, 0.05)
-                        .value(Purity.PERFECT, 0.075)));
+                        .value(Purity.CRACKED, 0.1)
+                        .value(Purity.CHIPPED, 0.2)
+                        .value(Purity.FLAWED, 0.3)
+                        .value(Purity.NORMAL, 0.4)
+                        .value(Purity.FLAWLESS, 0.5)
+                        .value(Purity.PERFECT, 0.65)));
 
         addBonus(Apotheosis.loc("core/warlord"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()

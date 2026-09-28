@@ -15,6 +15,7 @@ repositories {
     maven { url "https://maven.ryanhcode.dev/releases" }
     maven { url "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
     maven { url "https://www.cursemaven.com" }
+    maven { url "https://api.modrinth.com/maven" }
     maven { url "https://maven.blamejared.com/" }
     maven { url "https://maven.shadowsoffire.dev/releases" }
     maven { url "https://maven.theillusivec4.top/" }
@@ -70,6 +71,9 @@ dependencies {
     implementation "curse.maven:borninchaos-686437:$borninchaos_version"
     implementation "curse.maven:mowziesmobs-250498:$mowziesmobs_version"
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
+    implementation "curse.maven:legendary-monsters-944035:$legendarymonsters_version"
+    implementation "curse.maven:opposing-force-1051360:$opposingforce_version"
+    implementation "maven.modrinth:dangerous-mobs:$dangerousmobs_version"
 
     //compat deps
     implementation "curse.maven:sable-1312371:$sable_version"
@@ -85,6 +89,7 @@ dependencies {
     implementation "curse.maven:lionfish-1001614:$lionfish_version"
     implementation "curse.maven:codxlib-1633207:$codxlib_version"
     implementation "curse.maven:yacl-667299:$yacl_version"
+    implementation "curse.maven:sinew-1686754:$sinew_version"
 }
 
 base {

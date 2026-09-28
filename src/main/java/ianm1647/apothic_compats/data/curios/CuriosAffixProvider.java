@@ -311,6 +311,40 @@ public class CuriosAffixProvider extends AffixProvider {
                 .value(epic, 0.04F, 0.05F)
                 .value(mythic, 0.05F, 0.06F));
 
+        this.addAttribute("curios", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .value(common, 1F, 1F)
+                .value(uncommon, 1F, 2F)
+                .value(rare, 2F, 3F)
+                .value(epic, 2F, 3F)
+                .value(mythic, 3F, 4F));
+
+        this.addAttribute("curios", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .step(0.005F)
+                .value(common, 0.01F, 0.02F)
+                .value(uncommon, 0.015F, 0.025F)
+                .value(rare, 0.02F, 0.03F)
+                .value(epic, 0.025F, 0.035F)
+                .value(mythic, 0.03F, 0.04F));
+
+        this.addAttribute("curios", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .value(rare, 2F, 3F)
+                .value(epic, 3F, 4F)
+                .value(mythic, 4F, 5F));
+
+        this.addAttribute("curios", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .step(0.005F)
+                .value(rare, 0.01F, 0.015F)
+                .value(epic, 0.015F, 0.02F)
+                .value(mythic, 0.02F, 0.025F));
+
         this.addAttribute("curios", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
@@ -432,6 +466,28 @@ public class CuriosAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(CURIOS)
                 .value(ancient, 0.06f, 0.07f));
+
+        this.addAncientAttribute("curios", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .value(ancient, 4F, 6F));
+
+        this.addAncientAttribute("curios", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .step(0.005F)
+                .value(ancient, 0.035F, 0.05F));
+
+        this.addAncientAttribute("curios", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .value(ancient, 5F, 6F));
+
+        this.addAncientAttribute("curios", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(CURIOS)
+                .step(0.005F)
+                .value(ancient, 0.025F, 0.035F));
 
         this.addAncientAttribute("curios", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

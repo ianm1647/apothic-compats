@@ -2,7 +2,7 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
-            "modid": "irons_artifice"
+            "modid": "malum"
         },
         {
             "type": "neoforge:mod_loaded",
@@ -10,9 +10,9 @@
         }
     ],
     "type": "apotheosis:attribute",
-    "attribute": "apothic_attributes:crit_chance",
+    "attribute": "apothic_attributes:armor_shred",
     "categories": [
-        "apothic_compats:gun"
+        "apothic_compats:scythe"
     ],
     "definition": {
         "affix_type": "stat",
@@ -26,7 +26,7 @@
     "values": {
         "ancientreforging:ancient": {
             "min": 0.5,
-            "max": 1.15
+            "max": 0.7
         }
     }
 }

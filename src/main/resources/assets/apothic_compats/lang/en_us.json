@@ -401,6 +401,36 @@
   "affix.apothic_compats:dart_shooter/attribute/ancient/agile": "Agile",
   "affix.apothic_compats:dart_shooter/attribute/ancient/agile.suffix": "of Dexterity",
 
+  "affix.apothic_compats:dart_shooter/attribute/intricate": "Intricate",
+  "affix.apothic_compats:dart_shooter/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/intricate.suffix": "of Critical Thinking",
+
+  "affix.apothic_compats:dart_shooter/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:dart_shooter/attribute/lacerating.suffix": "of Surgical Precision",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:dart_shooter/attribute/piercing": "Piercing",
+  "affix.apothic_compats:dart_shooter/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:dart_shooter/attribute/shredding": "Shredding",
+  "affix.apothic_compats:dart_shooter/attribute/shredding.suffix": "of the Maelstrom",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/shredding": "Shredding",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/shredding.suffix": "of the Maelstrom",
+
+  "affix.apothic_compats:dart_shooter/attribute/runebreaking": "Runebreaking",
+  "affix.apothic_compats:dart_shooter/attribute/runebreaking.suffix": "of the Runebreaker",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/runebreaking": "Runebreaking",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/runebreaking.suffix": "of the Runebreaker",
+
+  "affix.apothic_compats:dart_shooter/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:dart_shooter/attribute/nullifying.suffix": "of Nullification",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/nullifying": "Nullifying",
+  "affix.apothic_compats:dart_shooter/attribute/ancient/nullifying.suffix": "of Nullification",
+
   "affix.apothic_compats:dart_shooter/mob_effect/ensnaring": "Ensnaring",
   "affix.apothic_compats:dart_shooter/mob_effect/ensnaring.suffix": "of the Predator",
   "affix.apothic_compats:dart_shooter/mob_effect/ancient/ensnaring": "Ensnaring",
@@ -470,6 +500,36 @@
   "affix.apothic_compats:potato_cannon/attribute/agile.suffix": "of Dexterity",
   "affix.apothic_compats:potato_cannon/attribute/ancient/agile": "Agile",
   "affix.apothic_compats:potato_cannon/attribute/ancient/agile.suffix": "of Dexterity",
+
+  "affix.apothic_compats:potato_cannon/attribute/intricate": "Intricate",
+  "affix.apothic_compats:potato_cannon/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/intricate.suffix": "of Critical Thinking",
+
+  "affix.apothic_compats:potato_cannon/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:potato_cannon/attribute/lacerating.suffix": "of Surgical Precision",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:potato_cannon/attribute/piercing": "Piercing",
+  "affix.apothic_compats:potato_cannon/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:potato_cannon/attribute/shredding": "Shredding",
+  "affix.apothic_compats:potato_cannon/attribute/shredding.suffix": "of the Maelstrom",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/shredding": "Shredding",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/shredding.suffix": "of the Maelstrom",
+
+  "affix.apothic_compats:potato_cannon/attribute/runebreaking": "Runebreaking",
+  "affix.apothic_compats:potato_cannon/attribute/runebreaking.suffix": "of the Runebreaker",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/runebreaking": "Runebreaking",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/runebreaking.suffix": "of the Runebreaker",
+
+  "affix.apothic_compats:potato_cannon/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:potato_cannon/attribute/nullifying.suffix": "of Nullification",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/nullifying": "Nullifying",
+  "affix.apothic_compats:potato_cannon/attribute/ancient/nullifying.suffix": "of Nullification",
 
   "affix.apothic_compats:potato_cannon/mob_effect/ensnaring": "Ensnaring",
   "affix.apothic_compats:potato_cannon/mob_effect/ensnaring.suffix": "of the Predator",
@@ -565,6 +625,37 @@
   "affix.apothic_compats:staff/ranged/enchantment/ancient/prosperous.suffix": "of the Treasure-Seeker",
 
 
+
+  "affix.apothic_compats:staff/attribute/intricate": "Intricate",
+  "affix.apothic_compats:staff/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:staff/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:staff/attribute/ancient/intricate.suffix": "of Critical Thinking",
+
+  "affix.apothic_compats:staff/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:staff/attribute/lacerating.suffix": "of Surgical Precision",
+  "affix.apothic_compats:staff/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:staff/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
+  "affix.apothic_compats:staff/attribute/piercing": "Piercing",
+  "affix.apothic_compats:staff/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:staff/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:staff/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:staff/attribute/shredding": "Shredding",
+  "affix.apothic_compats:staff/attribute/shredding.suffix": "of the Maelstrom",
+  "affix.apothic_compats:staff/attribute/ancient/shredding": "Shredding",
+  "affix.apothic_compats:staff/attribute/ancient/shredding.suffix": "of the Maelstrom",
+
+  "affix.apothic_compats:staff/attribute/runebreaking": "Runebreaking",
+  "affix.apothic_compats:staff/attribute/runebreaking.suffix": "of the Runebreaker",
+  "affix.apothic_compats:staff/attribute/ancient/runebreaking": "Runebreaking",
+  "affix.apothic_compats:staff/attribute/ancient/runebreaking.suffix": "of the Runebreaker",
+
+  "affix.apothic_compats:staff/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:staff/attribute/nullifying.suffix": "of Nullification",
+  "affix.apothic_compats:staff/attribute/ancient/nullifying": "Nullifying",
+  "affix.apothic_compats:staff/attribute/ancient/nullifying.suffix": "of Nullification",
+
   "affix.apothic_compats:staff/cleaving": "Cleaving",
   "affix.apothic_compats:staff/cleaving.suffix": "of the Butcher",
   "affix.apothic_compats:staff/cleaving.desc": "Attacks have a %s%% chance to also hit up to %s nearby enemies.",
@@ -640,16 +731,6 @@
   "affix.apothic_compats:staff/melee/attribute/ancient/elongated": "Elongated",
   "affix.apothic_compats:staff/melee/attribute/ancient/elongated.suffix": "of Distant Battles",
 
-  "affix.apothic_compats:staff/melee/attribute/intricate": "Intricate",
-  "affix.apothic_compats:staff/melee/attribute/intricate.suffix": "of Critical Thinking",
-  "affix.apothic_compats:staff/melee/attribute/ancient/intricate": "Intricate",
-  "affix.apothic_compats:staff/melee/attribute/ancient/intricate.suffix": "of Critical Thinking",
-
-  "affix.apothic_compats:staff/melee/attribute/lacerating": "Lacerating",
-  "affix.apothic_compats:staff/melee/attribute/lacerating.suffix": "of Surgical Precision",
-  "affix.apothic_compats:staff/melee/attribute/ancient/lacerating": "Lacerating",
-  "affix.apothic_compats:staff/melee/attribute/ancient/lacerating.suffix": "of Surgical Precision",
-
   "affix.apothic_compats:staff/melee/attribute/glacial": "Glacial",
   "affix.apothic_compats:staff/melee/attribute/glacial.suffix": "of the Frostlands",
   "affix.apothic_compats:staff/melee/attribute/ancient/glacial": "Glacial",
@@ -669,11 +750,6 @@
   "affix.apothic_compats:staff/melee/attribute/piercing.suffix": "of the Sunderer",
   "affix.apothic_compats:staff/melee/attribute/ancient/piercing": "Piercing",
   "affix.apothic_compats:staff/melee/attribute/ancient/piercing.suffix": "of the Sunderer",
-
-  "affix.apothic_compats:staff/melee/attribute/shredding": "Shredding",
-  "affix.apothic_compats:staff/melee/attribute/shredding.suffix": "of Penetration",
-  "affix.apothic_compats:staff/melee/attribute/ancient/shredding": "Shredding",
-  "affix.apothic_compats:staff/melee/attribute/ancient/shredding.suffix": "of Penetration",
 
   "affix.apothic_compats:staff/melee/attribute/giant_slaying": "Giant Slaying",
   "affix.apothic_compats:staff/melee/attribute/giant_slaying.suffix": "of Colossal Strikes",
@@ -778,16 +854,6 @@
   "affix.apothic_compats:scythe/attribute/ancient/elongated": "Elongated",
   "affix.apothic_compats:scythe/attribute/ancient/elongated.suffix": "of Distant Battles",
 
-  "affix.apothic_compats:scythe/attribute/intricate": "Intricate",
-  "affix.apothic_compats:scythe/attribute/intricate.suffix": "of Critical Thinking",
-  "affix.apothic_compats:scythe/attribute/ancient/intricate": "Intricate",
-  "affix.apothic_compats:scythe/attribute/ancient/intricate.suffix": "of Critical Thinking",
-
-  "affix.apothic_compats:scythe/attribute/lacerating": "Lacerating",
-  "affix.apothic_compats:scythe/attribute/lacerating.suffix": "of Surgical Precision",
-  "affix.apothic_compats:scythe/attribute/ancient/lacerating": "Lacerating",
-  "affix.apothic_compats:scythe/attribute/ancient/lacerating.suffix": "of Surgical Precision",
-
   "affix.apothic_compats:scythe/attribute/glacial": "Glacial",
   "affix.apothic_compats:scythe/attribute/glacial.suffix": "of the Frostlands",
   "affix.apothic_compats:scythe/attribute/ancient/glacial": "Glacial",
@@ -803,15 +869,35 @@
   "affix.apothic_compats:scythe/attribute/ancient/vampiric": "Vampiric",
   "affix.apothic_compats:scythe/attribute/ancient/vampiric.suffix": "of Bloodletting",
 
+  "affix.apothic_compats:scythe/attribute/intricate": "Intricate",
+  "affix.apothic_compats:scythe/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:scythe/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:scythe/attribute/ancient/intricate.suffix": "of Critical Thinking",
+
+  "affix.apothic_compats:scythe/attribute/lacerating": "Lacerating",
+  "affix.apothic_compats:scythe/attribute/lacerating.suffix": "of Surgical Precision",
+  "affix.apothic_compats:scythe/attribute/ancient/lacerating": "Lacerating",
+  "affix.apothic_compats:scythe/attribute/ancient/lacerating.suffix": "of Surgical Precision",
+
   "affix.apothic_compats:scythe/attribute/piercing": "Piercing",
   "affix.apothic_compats:scythe/attribute/piercing.suffix": "of the Sunderer",
   "affix.apothic_compats:scythe/attribute/ancient/piercing": "Piercing",
   "affix.apothic_compats:scythe/attribute/ancient/piercing.suffix": "of the Sunderer",
 
   "affix.apothic_compats:scythe/attribute/shredding": "Shredding",
-  "affix.apothic_compats:scythe/attribute/shredding.suffix": "of Penetration",
+  "affix.apothic_compats:scythe/attribute/shredding.suffix": "of the Maelstrom",
   "affix.apothic_compats:scythe/attribute/ancient/shredding": "Shredding",
-  "affix.apothic_compats:scythe/attribute/ancient/shredding.suffix": "of Penetration",
+  "affix.apothic_compats:scythe/attribute/ancient/shredding.suffix": "of the Maelstrom",
+
+  "affix.apothic_compats:scythe/attribute/runebreaking": "Runebreaking",
+  "affix.apothic_compats:scythe/attribute/runebreaking.suffix": "of the Runebreaker",
+  "affix.apothic_compats:scythe/attribute/ancient/runebreaking": "Runebreaking",
+  "affix.apothic_compats:scythe/attribute/ancient/runebreaking.suffix": "of the Runebreaker",
+
+  "affix.apothic_compats:scythe/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:scythe/attribute/nullifying.suffix": "of Nullification",
+  "affix.apothic_compats:scythe/attribute/ancient/nullifying": "Nullifying",
+  "affix.apothic_compats:scythe/attribute/ancient/nullifying.suffix": "of Nullification",
 
   "affix.apothic_compats:scythe/attribute/giant_slaying": "Giant Slaying",
   "affix.apothic_compats:scythe/attribute/giant_slaying.suffix": "of Colossal Strikes",
@@ -842,11 +928,6 @@
   "affix.apothic_compats:scythe/attribute/lengthy.suffix": "of Extreme Length",
   "affix.apothic_compats:scythe/attribute/ancient/lengthy": "Lengthy",
   "affix.apothic_compats:scythe/attribute/ancient/lengthy.suffix": "of Extreme Length",
-
-  "affix.apothic_compats:scythe/attribute/nullifying": "Nullifying",
-  "affix.apothic_compats:scythe/attribute/nullifying.suffix": "of the Magebreaker",
-  "affix.apothic_compats:scythe/attribute/ancient/nullifying": "Nullifying",
-  "affix.apothic_compats:scythe/attribute/ancient/nullifying.suffix": "of the Magebreaker",
 
   "affix.apothic_compats:scythe/attribute/spellbreaking": "Spellbreaking",
   "affix.apothic_compats:scythe/attribute/spellbreaking.suffix": "of the Petricite Golem",
@@ -983,20 +1064,35 @@
   "affix.apothic_compats:gun/attribute/ancient/experienced": "Experienced",
   "affix.apothic_compats:gun/attribute/ancient/experienced.suffix": "of the Scholar",
 
-  "affix.apothic_compats:gun/attribute/piercing": "Piercing",
-  "affix.apothic_compats:gun/attribute/piercing.suffix": "of the Sunderer",
-  "affix.apothic_compats:gun/attribute/ancient/piercing": "Piercing",
-  "affix.apothic_compats:gun/attribute/ancient/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:gun/attribute/intricate": "Intricate",
+  "affix.apothic_compats:gun/attribute/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:gun/attribute/ancient/intricate": "Intricate",
+  "affix.apothic_compats:gun/attribute/ancient/intricate.suffix": "of Critical Thinking",
 
   "affix.apothic_compats:gun/attribute/lacerating": "Lacerating",
   "affix.apothic_compats:gun/attribute/lacerating.suffix": "of Surgical Precision",
   "affix.apothic_compats:gun/attribute/ancient/lacerating": "Lacerating",
   "affix.apothic_compats:gun/attribute/ancient/lacerating.suffix": "of Surgical Precision",
 
-  "affix.apothic_compats:gun/attribute/intricate": "Intricate",
-  "affix.apothic_compats:gun/attribute/intricate.suffix": "of Critical Thinking",
-  "affix.apothic_compats:gun/attribute/ancient/intricate": "Intricate",
-  "affix.apothic_compats:gun/attribute/ancient/intricate.suffix": "of Critical Thinking",
+  "affix.apothic_compats:gun/attribute/piercing": "Piercing",
+  "affix.apothic_compats:gun/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:gun/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:gun/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:gun/attribute/shredding": "Shredding",
+  "affix.apothic_compats:gun/attribute/shredding.suffix": "of the Maelstrom",
+  "affix.apothic_compats:gun/attribute/ancient/shredding": "Shredding",
+  "affix.apothic_compats:gun/attribute/ancient/shredding.suffix": "of the Maelstrom",
+
+  "affix.apothic_compats:gun/attribute/runebreaking": "Runebreaking",
+  "affix.apothic_compats:gun/attribute/runebreaking.suffix": "of the Runebreaker",
+  "affix.apothic_compats:gun/attribute/ancient/runebreaking": "Runebreaking",
+  "affix.apothic_compats:gun/attribute/ancient/runebreaking.suffix": "of the Runebreaker",
+
+  "affix.apothic_compats:gun/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:gun/attribute/nullifying.suffix": "of Nullification",
+  "affix.apothic_compats:gun/attribute/ancient/nullifying": "Nullifying",
+  "affix.apothic_compats:gun/attribute/ancient/nullifying.suffix": "of Nullification",
 
   "affix.apothic_compats:gun/attribute/windswept": "Windswept",
   "affix.apothic_compats:gun/attribute/windswept.suffix": "of the Current",

@@ -2,7 +2,7 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
-            "modid": "irons_artifice"
+            "modid": "aether"
         },
         {
             "type": "neoforge:mod_loaded",
@@ -12,7 +12,7 @@
     "type": "apotheosis:attribute",
     "attribute": "apothic_attributes:crit_chance",
     "categories": [
-        "apothic_compats:gun"
+        "apothic_compats:dart_shooter"
     ],
     "definition": {
         "affix_type": "stat",

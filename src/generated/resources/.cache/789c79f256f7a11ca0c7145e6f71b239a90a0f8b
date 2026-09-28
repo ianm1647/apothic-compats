@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-04T12:53:39.7534535	Curios Affixes
+// 1.21.1	2026-09-27T20:00:57.3395718	Curios Affixes
 70195d7ac31b02e5e8cbab73aa207f7697afa4c5 data/apothic_compats/affixes/curios/attribute/abjured.json
 00ef5929a90c52bc006503701e8ba64cdb883325 data/apothic_compats/affixes/curios/attribute/adamantine.json
 c4b4b29bb2ac784524b3031161224d906b632fe7 data/apothic_compats/affixes/curios/attribute/adept.json
@@ -20,9 +20,13 @@ a1a8c6a0a8984c12bf59c045b1323e48e4b00097 data/apothic_compats/affixes/curios/att
 b4fa8a5cfecff7de3e3e7b185586b96f9c8fca8a data/apothic_compats/affixes/curios/attribute/ancient/mana.json
 38a25db09016c6396c6a58a34c66d166d65b8398 data/apothic_compats/affixes/curios/attribute/ancient/murderous.json
 fd0f14485547c9580bd337e12a12d794964fca74 data/apothic_compats/affixes/curios/attribute/ancient/mystic.json
+7da2423de226a64f9a681062b9a5d81b5a5606c4 data/apothic_compats/affixes/curios/attribute/ancient/nullifying.json
 e4d75856e417c09cc40f173597c99d39fd918dc5 data/apothic_compats/affixes/curios/attribute/ancient/oxygenated.json
+bea0d145c1b37e7e7b76728d592f3e01d5c1f911 data/apothic_compats/affixes/curios/attribute/ancient/piercing.json
 51b577d96ec4256cf946d260a427448a6a205a5f data/apothic_compats/affixes/curios/attribute/ancient/regenerative.json
+a6c5f39a8387e06e0a9224e8e9b812fe02d34e8c data/apothic_compats/affixes/curios/attribute/ancient/runebreaking.json
 17d1419fc52f4514e36a5870401418f48b131d56 data/apothic_compats/affixes/curios/attribute/ancient/scythe_proficiency.json
+b849b1424d03786f8ea61923785b1332b3bcf90f data/apothic_compats/affixes/curios/attribute/ancient/shredding.json
 07deb8879606a82106c0daf932a7d33586e662b8 data/apothic_compats/affixes/curios/attribute/ancient/spell_damaged.json
 0cf9fdb02d7d557aca090f412954fd8f0099b680 data/apothic_compats/affixes/curios/attribute/ancient/spiritual.json
 d00b165f90fa82314bce163ebe31f0bc08a16ca7 data/apothic_compats/affixes/curios/attribute/ancient/stalwart.json
@@ -45,9 +49,13 @@ f005d4d65f2c2688b23586ad93c603e6adb729b8 data/apothic_compats/affixes/curios/att
 8b6027cdeeaf8a94ef5ace04f2c8f28d642f095f data/apothic_compats/affixes/curios/attribute/mana.json
 7e63dc482693578d74bdcd5239f5604eb431f420 data/apothic_compats/affixes/curios/attribute/murderous.json
 273048cdbeddd2b444728838068f2707c3b3993d data/apothic_compats/affixes/curios/attribute/mystic.json
+c39d00aec5303ac233d42b1b5675d685ab5f34d9 data/apothic_compats/affixes/curios/attribute/nullifying.json
 9d36a95ca9179e2bfb6042d2ef6869e82a90e25b data/apothic_compats/affixes/curios/attribute/oxygenated.json
+01d2e317967709197431d5b2e41ccca87bc46959 data/apothic_compats/affixes/curios/attribute/piercing.json
 64e73a4acd675b13187038ebb4c10dc1b404ca5d data/apothic_compats/affixes/curios/attribute/regenerative.json
+e114b3fe41b86cc6de3f05f82f61372b460cd2c4 data/apothic_compats/affixes/curios/attribute/runebreaking.json
 e23f152b2610d4c88c27fb5a00b554ccb5001e01 data/apothic_compats/affixes/curios/attribute/scythe_proficiency.json
+ad448b2b262074708e6c15396fad65cf37f5251e data/apothic_compats/affixes/curios/attribute/shredding.json
 43ef2f1d004bcbdf2bd535cd72b34d1f0b5a2b7c data/apothic_compats/affixes/curios/attribute/spell_damaged.json
 2720ed64c6be804dc22aa2f5a3f22ab368855078 data/apothic_compats/affixes/curios/attribute/spiritual.json
 d449f585f7e768118ca5542a02617fd9a04843c8 data/apothic_compats/affixes/curios/attribute/stalwart.json

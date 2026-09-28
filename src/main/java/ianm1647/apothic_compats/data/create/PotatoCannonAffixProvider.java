@@ -88,6 +88,59 @@ public class PotatoCannonAffixProvider extends AffixProvider {
                 .value(epic, 0.15F, 0.35F)
                 .value(mythic, 0.2F, 0.4F));
 
+        this.addAttribute("potato_cannon", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .step(0.25F)
+                .value(common, 2F, 4F)
+                .value(uncommon, 2F, 4F)
+                .value(rare, 4F, 8F)
+                .value(epic, 5F, 10F)
+                .value(mythic, 5F, 12F));
+
+        this.addAttribute("potato_cannon", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.20F, 0.28F)
+                .value(mythic, 0.30F, 0.40F));
+
+        this.addAttribute("potato_cannon", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .step(0.5F)
+                .value(rare, 4F, 8F)
+                .value(epic, 5F, 10F)
+                .value(mythic, 5F, 12F));
+
+        this.addAttribute("potato_cannon", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .step(0.005F)
+                .value(rare, 0.10F, 0.15F)
+                .value(epic, 0.125F, 0.175F)
+                .value(mythic, 0.15F, 0.20F));
+
+        this.addAttribute("potato_cannon", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.15F, 0.25F)
+                .value(mythic, 0.25F, 0.40F));
+
+        this.addAttribute("potato_cannon", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.10F, 0.25F)
+                .value(epic, 0.15F, 0.35F)
+                .value(mythic, 0.25F, 0.55F));
+
         this.addMobEffect("potato_cannon", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Create.POTATO_CANNON)
@@ -178,6 +231,39 @@ public class PotatoCannonAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Create.POTATO_CANNON)
                 .value(ancient, 0.4F, 0.8F));
+
+        this.addAncientAttribute("potato_cannon", "piercing", ALObjects.Attributes.ARMOR_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .step(0.25F)
+                .value(ancient, 10F, 24F));
+
+        this.addAncientAttribute("potato_cannon", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .value(ancient, 0.5F, 0.7F));
+
+        this.addAncientAttribute("potato_cannon", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .step(0.5F)
+                .value(ancient, 10F, 20F));
+
+        this.addAncientAttribute("potato_cannon", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .step(0.005F)
+                .value(ancient, 0.20F, 0.30F));
+
+        this.addAncientAttribute("potato_cannon", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .value(ancient, 0.5F, 0.8F));
+
+        this.addAncientAttribute("potato_cannon", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Create.POTATO_CANNON)
+                .value(ancient, 0.5F, 1.15F));
 
         this.addAncientMobEffect("potato_cannon", "shulkers", MobEffects.LEVITATION, MobEffectAffix.Target.PROJECTILE_TARGET, b -> b
                 .definition(AffixType.BASIC_EFFECT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

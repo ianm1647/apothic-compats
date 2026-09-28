@@ -1,0 +1,39 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "malum"
+        }
+    ],
+    "type": "apotheosis:attribute",
+    "attribute": "apothic_attributes:prot_pierce",
+    "categories": [
+        "apothic_compats:staff"
+    ],
+    "definition": {
+        "affix_type": "stat",
+        "exclusive_set": [],
+        "weights": {
+            "quality": 0.1,
+            "weight": 25
+        }
+    },
+    "operation": "add_value",
+    "values": {
+        "apotheosis:rare": {
+            "min": 4.0,
+            "max": 8.0,
+            "step": 0.5
+        },
+        "apotheosis:epic": {
+            "min": 5.0,
+            "max": 10.0,
+            "step": 0.5
+        },
+        "apotheosis:mythic": {
+            "min": 5.0,
+            "max": 12.0,
+            "step": 0.5
+        }
+    }
+}

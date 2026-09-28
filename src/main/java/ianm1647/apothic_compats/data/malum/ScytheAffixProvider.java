@@ -107,6 +107,31 @@ public class ScytheAffixProvider extends AffixProvider {
                 .value(epic, 5F, 10F)
                 .value(mythic, 5F, 12F));
 
+        this.addAttribute("scythe", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.20F, 0.28F)
+                .value(mythic, 0.30F, 0.40F));
+
+        this.addAttribute("scythe", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
+                .step(0.5F)
+                .value(rare, 4F, 8F)
+                .value(epic, 5F, 10F)
+                .value(mythic, 5F, 12F));
+
+        this.addAttribute("scythe", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
+                .step(0.005F)
+                .value(rare, 0.10F, 0.15F)
+                .value(epic, 0.125F, 0.175F)
+                .value(mythic, 0.15F, 0.20F));
+
         this.addAttribute("scythe", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Malum.SCYTHE)
@@ -343,6 +368,23 @@ public class ScytheAffixProvider extends AffixProvider {
                 .categories(Comp.LootCategories.Malum.SCYTHE)
                 .step(0.25F)
                 .value(ancient, 10F, 24F));
+
+        this.addAncientAttribute("scythe", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
+                .value(ancient, 0.5F, 0.7F));
+
+        this.addAncientAttribute("scythe", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
+                .step(0.5F)
+                .value(ancient, 10F, 20F));
+
+        this.addAncientAttribute("scythe", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Malum.SCYTHE)
+                .step(0.005F)
+                .value(ancient, 0.20F, 0.30F));
 
         this.addAncientAttribute("scythe", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

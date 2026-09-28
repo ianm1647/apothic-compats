@@ -2,7 +2,7 @@
     "neoforge:conditions": [
         {
             "type": "neoforge:mod_loaded",
-            "modid": "irons_artifice"
+            "modid": "aether"
         },
         {
             "type": "neoforge:mod_loaded",
@@ -10,9 +10,9 @@
         }
     ],
     "type": "apotheosis:attribute",
-    "attribute": "apothic_attributes:crit_chance",
+    "attribute": "apothic_attributes:prot_shred",
     "categories": [
-        "apothic_compats:gun"
+        "apothic_compats:dart_shooter"
     ],
     "definition": {
         "affix_type": "stat",
@@ -25,8 +25,9 @@
     "operation": "add_value",
     "values": {
         "ancientreforging:ancient": {
-            "min": 0.5,
-            "max": 1.15
+            "min": 0.2,
+            "max": 0.3,
+            "step": 0.005
         }
     }
 }

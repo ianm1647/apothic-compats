@@ -94,6 +94,31 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 5F, 10F)
                 .value(mythic, 5F, 12F));
 
+        this.addAttribute("gun", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(common, 0.10F, 0.20F)
+                .value(uncommon, 0.10F, 0.20F)
+                .value(rare, 0.15F, 0.25F)
+                .value(epic, 0.20F, 0.28F)
+                .value(mythic, 0.30F, 0.40F));
+
+        this.addAttribute("gun", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.5F)
+                .value(rare, 4F, 8F)
+                .value(epic, 5F, 10F)
+                .value(mythic, 5F, 12F));
+
+        this.addAttribute("gun", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.005F)
+                .value(rare, 0.10F, 0.15F)
+                .value(epic, 0.125F, 0.175F)
+                .value(mythic, 0.15F, 0.20F));
+
         this.addAttribute("gun", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
@@ -237,15 +262,32 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .step(0.25F)
                 .value(ancient, 8F, 16F));
 
+        this.addAncientAttribute("gun", "shredding", ALObjects.Attributes.ARMOR_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(ancient, 0.5F, 0.7F));
+
+        this.addAncientAttribute("gun", "runebreaking", ALObjects.Attributes.PROT_PIERCE, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.5F)
+                .value(ancient, 10F, 20F));
+
+        this.addAncientAttribute("gun", "nullifying", ALObjects.Attributes.PROT_SHRED, AttributeModifier.Operation.ADD_VALUE, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.005F)
+                .value(ancient, 0.20F, 0.30F));
+
         this.addAncientAttribute("gun", "lacerating", ALObjects.Attributes.CRIT_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(ancient, 0.35F, 0.6F));
+                .value(ancient, 0.5F, 0.8F));
 
         this.addAncientAttribute("gun", "intricate", ALObjects.Attributes.CRIT_CHANCE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
-                .value(ancient, 0.3F, 0.65F));
+                .value(ancient, 0.5F, 1.15F));
 
         this.addAncientAttribute("gun", "windswept", Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

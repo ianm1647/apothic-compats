@@ -1,8 +1,20 @@
-// 1.21.1	2026-02-06T10:41:44.5015672	Malum Staff Affixes
+// 1.21.1	2026-09-27T19:56:30.9742088	Malum Staff Affixes
 02e2643068fc64371242dda98aed7318df445517 data/apothic_compats/affixes/staff/ancient/cleaving.json
 549e8aee938aab6ca168a4b27d65580e004f384f data/apothic_compats/affixes/staff/ancient/executing.json
 245a13d654ecf45a5de59d1b8a7ced22b6b3e1af data/apothic_compats/affixes/staff/ancient/festive.json
 803df5a5606b0a928bf87859e844df37878c7ebb data/apothic_compats/affixes/staff/ancient/thunderstruck.json
+ed6dbc9fe988c5e42647ef8882bc9a51476883ce data/apothic_compats/affixes/staff/attribute/ancient/intricate.json
+66603783c7f51c6eef71fd07744a600f0af310fc data/apothic_compats/affixes/staff/attribute/ancient/lacerating.json
+83064198611bd0878e19d98c898c38161ddbe0d4 data/apothic_compats/affixes/staff/attribute/ancient/nullifying.json
+392503377f1855529b882a8ac27a8abb23d6e385 data/apothic_compats/affixes/staff/attribute/ancient/piercing.json
+fd2df7568684ad8884a55592c923bc110dbf4377 data/apothic_compats/affixes/staff/attribute/ancient/runebreaking.json
+9685dc50d62ef4480679c935793c7453483636f1 data/apothic_compats/affixes/staff/attribute/ancient/shredding.json
+56e8f282cd71483eb87cb245b05b6026622ed789 data/apothic_compats/affixes/staff/attribute/intricate.json
+f22bda6942b5ce2696093c95cb6ceaf766e35d79 data/apothic_compats/affixes/staff/attribute/lacerating.json
+513f614fbf6c6cc7b9c2efda7f77db78edffc6ee data/apothic_compats/affixes/staff/attribute/nullifying.json
+54aee5a1432295f8cb0c1d941e375081d4103837 data/apothic_compats/affixes/staff/attribute/piercing.json
+8753f7147131a5bf785e58df7e0d095d14ef3e2c data/apothic_compats/affixes/staff/attribute/runebreaking.json
+5928b97ff08463675b95b8f8ed5a2e3cfde12771 data/apothic_compats/affixes/staff/attribute/shredding.json
 35b991aa43209cfabd66cec4916a697a39cc97c4 data/apothic_compats/affixes/staff/cleaving.json
 397eada221334601ddcb1c7fb8479c2dbf1a4d8a data/apothic_compats/affixes/staff/executing.json
 cc1930d5d468f98e0e842a6972b1777998e8db76 data/apothic_compats/affixes/staff/festive.json
@@ -10,12 +22,9 @@ cc1930d5d468f98e0e842a6972b1777998e8db76 data/apothic_compats/affixes/staff/fest
 cc21ddb680c1014b7c07a5312ec55ef099224ca3 data/apothic_compats/affixes/staff/melee/attribute/ancient/forceful.json
 d5bbf325bea262aa65ebca361bcaa06ec52d623e data/apothic_compats/affixes/staff/melee/attribute/ancient/giant_slaying.json
 6ced264eb9d9dc47b7702e74ac79faa3422e6304 data/apothic_compats/affixes/staff/melee/attribute/ancient/graceful.json
-ed6dbc9fe988c5e42647ef8882bc9a51476883ce data/apothic_compats/affixes/staff/melee/attribute/ancient/intricate.json
-66603783c7f51c6eef71fd07744a600f0af310fc data/apothic_compats/affixes/staff/melee/attribute/ancient/lacerating.json
 0d4daef62dc6de34dc322b87521f81e954b60bfe data/apothic_compats/affixes/staff/melee/attribute/ancient/magekilling.json
 01350c321ef56e15862f878009c7eded8f438450 data/apothic_compats/affixes/staff/melee/attribute/ancient/murderous.json
 51f4c1fb9dae91fbab5d39dd446b9420f00d4ae3 data/apothic_compats/affixes/staff/melee/attribute/ancient/mystic.json
-392503377f1855529b882a8ac27a8abb23d6e385 data/apothic_compats/affixes/staff/melee/attribute/ancient/piercing.json
 4be2a3bd9c72f337e931eeefb72d0e9edcd8b989 data/apothic_compats/affixes/staff/melee/attribute/ancient/vampiric.json
 6bec0679002c10e4d57010b300e59c85a6dace1c data/apothic_compats/affixes/staff/melee/attribute/ancient/vandalous.json
 4c885e20c44e792214ab67880307d01e7a3a6429 data/apothic_compats/affixes/staff/melee/attribute/ancient/violent.json
@@ -24,12 +33,9 @@ c1fc58104d6c0e6fbbb28e23e83f1c88c7388302 data/apothic_compats/affixes/staff/mele
 e7c889599c3a472b87ca1c484619f5a7606e3105 data/apothic_compats/affixes/staff/melee/attribute/forceful.json
 264d38b717878188cbddb907f771263df8270b29 data/apothic_compats/affixes/staff/melee/attribute/giant_slaying.json
 a4f0f5cf07852bb2a66c5abc5a98614451a02011 data/apothic_compats/affixes/staff/melee/attribute/graceful.json
-56e8f282cd71483eb87cb245b05b6026622ed789 data/apothic_compats/affixes/staff/melee/attribute/intricate.json
-f22bda6942b5ce2696093c95cb6ceaf766e35d79 data/apothic_compats/affixes/staff/melee/attribute/lacerating.json
 b23f84c3c08f9227ffcf15bf5d0f92576a860a20 data/apothic_compats/affixes/staff/melee/attribute/magekilling.json
 988d81b1f4114e4c82c0124f0f89eedaef5d5c10 data/apothic_compats/affixes/staff/melee/attribute/murderous.json
 e13ff6772705c079ab67d109f16e046fa179f190 data/apothic_compats/affixes/staff/melee/attribute/mystic.json
-54aee5a1432295f8cb0c1d941e375081d4103837 data/apothic_compats/affixes/staff/melee/attribute/piercing.json
 e30d11d3de64d9d76bc7ee07e3c7061c6bfe5306 data/apothic_compats/affixes/staff/melee/attribute/vampiric.json
 fede44ae40372897686c649d58578d87c24f3132 data/apothic_compats/affixes/staff/melee/attribute/vandalous.json
 f84486a4cd0c528422bf4006d2138d01a82b2e5c data/apothic_compats/affixes/staff/melee/attribute/violent.json
