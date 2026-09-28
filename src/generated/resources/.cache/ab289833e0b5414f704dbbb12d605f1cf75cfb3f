@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-27T19:56:30.9787397	Malum Scythe Affixes
+// 1.21.1	2026-09-27T20:23:05.1580816	Malum Scythe Affixes
 b0a51dfafffdd91949217cd71b029c5b1c416746 data/apothic_compats/affixes/curios/attribute/ancient/mystic.json
 94d7779391a48f3a2e405f85100192a58283b378 data/apothic_compats/affixes/curios/attribute/mystic.json
 55677a52680d0e5c39869f53ec05815dc0f33c84 data/apothic_compats/affixes/scythe/ancient/cleaving.json
@@ -28,6 +28,7 @@ b453b93bc49de1a3ab190ec9942a044be2ae8390 data/apothic_compats/affixes/scythe/att
 9d2226bd7b5b7cb455054c4ccc4984460b735e11 data/apothic_compats/affixes/scythe/attribute/glacial.json
 aa7264cef71c16c54f87c239d03067c20fc33b22 data/apothic_compats/affixes/scythe/attribute/graceful.json
 eef58898197f2d75ad9f4183b38c744f6066cc3c data/apothic_compats/affixes/scythe/attribute/infernal.json
+873dc458b317c280dde7519d02c5decda89b7a1a data/apothic_compats/affixes/scythe/attribute/intricate.json
 59f4d98f65667f7afbfbc8f490bc789965648241 data/apothic_compats/affixes/scythe/attribute/lacerating.json
 67d0c84aea23b14e7be7a361406acdcc5a62dd9a data/apothic_compats/affixes/scythe/attribute/lengthy.json
 94d381727b03b3e8e2547445ee2d66cab190846c data/apothic_compats/affixes/scythe/attribute/murderous.json
@@ -54,4 +55,3 @@ e826cf6800b22fafdf1e986954df81855217dc61 data/apothic_compats/affixes/scythe/mob
 32a0ae92d5edc1e09d5eaf7472161f7c7baf2221 data/apothic_compats/affixes/scythe/mob_effect/sophisticated.json
 44a068642df49f19ffeaa542e5cb0b737018b3bf data/apothic_compats/affixes/scythe/mob_effect/weakening.json
 c04312928414053dc3e504fd03ee84bf2c45463e data/apothic_compats/affixes/scythe/thunderstruck.json
-56e8f282cd71483eb87cb245b05b6026622ed789 data/apothic_compats/affixes/staff/attribute/intricate.json
