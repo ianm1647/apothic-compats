@@ -350,6 +350,26 @@
   "affix.apothic_compats:curios/attribute/ancient/lacerating": "Lacerating",
   "affix.apothic_compats:curios/attribute/ancient/lacerating.suffix": "of Surgical Precision",
 
+  "affix.apothic_compats:curios/attribute/piercing": "Piercing",
+  "affix.apothic_compats:curios/attribute/piercing.suffix": "of the Sunderer",
+  "affix.apothic_compats:curios/attribute/ancient/piercing": "Piercing",
+  "affix.apothic_compats:curios/attribute/ancient/piercing.suffix": "of the Sunderer",
+
+  "affix.apothic_compats:curios/attribute/shredding": "Shredding",
+  "affix.apothic_compats:curios/attribute/shredding.suffix": "of the Maelstrom",
+  "affix.apothic_compats:curios/attribute/ancient/shredding": "Shredding",
+  "affix.apothic_compats:curios/attribute/ancient/shredding.suffix": "of the Maelstrom",
+
+  "affix.apothic_compats:curios/attribute/runebreaking": "Runebreaking",
+  "affix.apothic_compats:curios/attribute/runebreaking.suffix": "of the Runebreaker",
+  "affix.apothic_compats:curios/attribute/ancient/runebreaking": "Runebreaking",
+  "affix.apothic_compats:curios/attribute/ancient/runebreaking.suffix": "of the Runebreaker",
+
+  "affix.apothic_compats:curios/attribute/nullifying": "Nullifying",
+  "affix.apothic_compats:curios/attribute/nullifying.suffix": "of Nullification",
+  "affix.apothic_compats:curios/attribute/ancient/nullifying": "Nullifying",
+  "affix.apothic_compats:curios/attribute/ancient/nullifying.suffix": "of Nullification",
+
   "affix.apothic_compats:curios/attribute/graceful": "Graceful",
   "affix.apothic_compats:curios/attribute/graceful.suffix": "of the Duelist",
   "affix.apothic_compats:curios/attribute/ancient/graceful": "Graceful",
