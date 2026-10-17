@@ -6,6 +6,7 @@
         }
     ],
     "type": "irons_apothic:spell_trigger",
+    "casting_slowdown": false,
     "definition": {
         "affix_type": "ability",
         "exclusive_set": [],
@@ -14,6 +15,7 @@
             "weight": 25
         }
     },
+    "player_animations": false,
     "spell": "irons_spellbooks:arrow_volley",
     "trigger": "projectile_hit",
     "types": [

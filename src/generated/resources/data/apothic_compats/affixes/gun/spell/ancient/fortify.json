@@ -3,9 +3,14 @@
         {
             "type": "neoforge:mod_loaded",
             "modid": "irons_artifice"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
         }
     ],
     "type": "irons_apothic:spell_trigger",
+    "casting_slowdown": false,
     "definition": {
         "affix_type": "ability",
         "exclusive_set": [],
@@ -14,34 +19,19 @@
             "weight": 25
         }
     },
-    "spell": "irons_spellbooks:oakskin",
+    "player_animations": false,
+    "spell": "irons_spellbooks:fortify",
     "target": "self",
     "trigger": "projectile_hit",
     "types": [
         "apothic_compats:gun"
     ],
     "values": {
-        "apotheosis:rare": {
-            "cooldown": 140,
+        "ancientreforging:ancient": {
+            "cooldown": 60,
             "level": {
-                "min": 1.0,
-                "max": 2.0,
-                "step": 1.0
-            }
-        },
-        "apotheosis:epic": {
-            "cooldown": 100,
-            "level": {
-                "min": 2.0,
-                "max": 3.0,
-                "step": 1.0
-            }
-        },
-        "apotheosis:mythic": {
-            "cooldown": 80,
-            "level": {
-                "min": 3.0,
-                "max": 4.0,
+                "min": 4.0,
+                "max": 5.0,
                 "step": 1.0
             }
         }

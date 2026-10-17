@@ -1,0 +1,38 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "irons_artifice"
+        },
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "ancientreforging"
+        }
+    ],
+    "type": "irons_apothic:spell_trigger",
+    "casting_slowdown": false,
+    "definition": {
+        "affix_type": "ability",
+        "exclusive_set": [],
+        "weights": {
+            "quality": 0.1,
+            "weight": 25
+        }
+    },
+    "player_animations": false,
+    "spell": "irons_spellbooks:starfall",
+    "trigger": "projectile_hit",
+    "types": [
+        "apothic_compats:gun"
+    ],
+    "values": {
+        "ancientreforging:ancient": {
+            "cooldown": 300,
+            "level": {
+                "min": 4.0,
+                "max": 5.0,
+                "step": 1.0
+            }
+        }
+    }
+}
