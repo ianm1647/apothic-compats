@@ -11,6 +11,8 @@ import dev.shadowsoffire.placebo.codec.PlaceboCodecs;
 import ianm1647.apothic_compats.Comp;
 import io.redspace.irons_artifice.api.AmmoEvent;
 import io.redspace.irons_artifice.data.PlayableSound;
+import io.redspace.irons_artifice.data.ShotComponents;
+import io.redspace.irons_artifice.data.ValueModifier;
 import io.redspace.irons_artifice.registry.SoundRegistry;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;

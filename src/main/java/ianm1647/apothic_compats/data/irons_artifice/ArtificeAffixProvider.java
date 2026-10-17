@@ -1,5 +1,6 @@
 package ianm1647.apothic_compats.data.irons_artifice;
 
+import dev.muon.irons_apothic.affix.SpellTriggerAffix;
 import dev.shadowsoffire.apotheosis.affix.*;
 import dev.shadowsoffire.apotheosis.affix.effect.*;
 import dev.shadowsoffire.apotheosis.tiers.TieredWeights;
@@ -16,6 +17,8 @@ import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.irons_artifice.*;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -24,7 +27,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import org.spongepowered.include.com.google.common.base.Preconditions;
 
@@ -52,6 +54,155 @@ public class ArtificeAffixProvider extends AffixProvider {
         LootRarity epic = rarity("epic");
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
+
+        /*
+
+        ISS AFFIXES
+
+        */
+
+        this.addSpellTriggerAffix("gun", "magic_arrow", SpellRegistry.MAGIC_ARROW_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "poison_arrow", SpellRegistry.POISON_ARROW_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "fire_arrow", SpellRegistry.FIRE_ARROW_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "missile", SpellRegistry.MAGIC_MISSILE_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "firecracker", SpellRegistry.FIRECRACKER_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "firebolt", SpellRegistry.FIREBOLT_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "guiding_bolt", SpellRegistry.GUIDING_BOLT_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "icicle", SpellRegistry.ICICLE_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 120)
+                .value(epic, 2,3, 80)
+                .value(mythic, 3, 4, 60));
+
+        this.addSpellTriggerAffix("gun", "sunbeam", SpellRegistry.SUNBEAM_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "chain_lightning", SpellRegistry.CHAIN_LIGHTNING_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "chain_creeper", SpellRegistry.CHAIN_CREEPER_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "scorch", SpellRegistry.SCORCH_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "root", SpellRegistry.ROOT_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "volley", SpellRegistry.ARROW_VOLLEY_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 160)
+                .value(epic, 2,3, 120)
+                .value(mythic, 3, 4, 100));
+
+        this.addSpellTriggerAffix("gun", "raise_hell", SpellRegistry.RAISE_HELL_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 300)
+                .value(epic, 2,3, 240)
+                .value(mythic, 3, 4, 180));
+
+        this.addSpellTriggerAffix("gun", "blizzard", SpellRegistry.BLIZZARD_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 300)
+                .value(epic, 2,3, 240)
+                .value(mythic, 3, 4, 180));
+
+        this.addSpellTriggerAffix("gun", "lightning_lance", SpellRegistry.LIGHTNING_LANCE_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .value(rare, 1, 2, 300)
+                .value(epic, 2,3, 240)
+                .value(mythic, 3, 4, 180));
+
+        this.addSpellTriggerAffix("gun", "oakskin", SpellRegistry.OAKSKIN_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .target(SpellTriggerAffix.TargetType.SELF)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "fortify", SpellRegistry.FORTIFY_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .target(SpellTriggerAffix.TargetType.SELF)
+                .value(rare, 1, 2, 140)
+                .value(epic, 2,3, 100)
+                .value(mythic, 3, 4, 80));
+
+        this.addSpellTriggerAffix("gun", "shockwave", SpellRegistry.SHOCKWAVE_SPELL.get(), SpellTriggerAffix.TriggerType.PROJECTILE_HIT, b -> b
+                .definition(AffixType.ABILITY, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .target(SpellTriggerAffix.TargetType.SELF)
+                .value(rare, 1, 2, 300)
+                .value(epic, 2,3, 240)
+                .value(mythic, 3, 4, 180));
 
         /*
           BASE AFFIXES
@@ -371,6 +522,12 @@ public class ArtificeAffixProvider extends AffixProvider {
                         .build(),
                 linkedSet(ancient)), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
 
+    }
+
+    private void addSpellTriggerAffix(String type, String name, AbstractSpell spell, SpellTriggerAffix.TriggerType trigger, UnaryOperator<SpellTriggerAffix.Builder> config) {
+        var builder = new SpellTriggerAffix.Builder(spell, trigger);
+        config.apply(builder);
+        this.addConditionally(ApothicCompats.loc(type + "/spell/" + name), builder.build(), new ModLoadedCondition(mod));
     }
 
     private void addMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {

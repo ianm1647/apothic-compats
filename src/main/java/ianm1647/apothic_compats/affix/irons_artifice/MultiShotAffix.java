@@ -45,11 +45,11 @@ public class MultiShotAffix extends Affix {
         ItemStack weapon = profile.itemStack();
         var inst = AffixHelper.getAffixes(weapon);
 
-        inst.values().forEach((a) -> {
+        for (AffixInstance a : inst.values()) {
             if (a.getAffix() instanceof MultiShotAffix affix) {
                 profile.components().modifyValue(ShotComponents.PROJECTILE_COUNT, new ValueModifier(affix.getTrueLevel(a.getRarity(), a.level()), ValueModifier.Operation.ADD, ValueModifier.Type.BENEFICIAL));
             }
-        });
+        }
     }
 
     private float getTrueLevel(LootRarity rarity, float level) {
