@@ -48,8 +48,6 @@ public class SpellbooksAffixProvider extends AffixProvider {
         LootRarity epic = rarity("epic");
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
-        
-
     }
 
     private void addSpellTriggerAffix(String type, String name, AbstractSpell spell, SpellTriggerAffix.TriggerType trigger, UnaryOperator<SpellTriggerAffix.Builder> config) {

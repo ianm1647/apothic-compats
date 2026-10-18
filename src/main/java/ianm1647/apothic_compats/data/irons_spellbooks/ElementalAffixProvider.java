@@ -45,9 +45,6 @@ public class ElementalAffixProvider extends AffixProvider {
         LootRarity epic = rarity("epic");
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
-
-
-
     }
 
     private void addElementalAttribute(String school, String name, Holder<Attribute> attribute, AttributeModifier.Operation op, UnaryOperator<AttributeAffix.Builder> config) {

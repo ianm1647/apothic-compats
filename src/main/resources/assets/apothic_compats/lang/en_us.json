@@ -1154,9 +1154,98 @@
   "affix.apothic_compats:gun/mob_effect/ancient/blighted": "Blighted",
   "affix.apothic_compats:gun/mob_effect/ancient/blighted.suffix": "of the Blighted Lands",
 
-  "affix.apotheosis:ranged/mob_effect/deathbound": "Deathbound",
-  "affix.apotheosis:ranged/mob_effect/deathbound.suffix": "of the Witherlord",
-  "affix.apotheosis:ranged/mob_effect/ancient/deathbound": "Deathbound",
-  "affix.apotheosis:ranged/mob_effect/ancient/deathbound.suffix": "of the Witherlord"
+  "affix.apotheosis:gun/mob_effect/deathbound": "Deathbound",
+  "affix.apotheosis:gun/mob_effect/deathbound.suffix": "of the Witherlord",
+  "affix.apotheosis:gun/mob_effect/ancient/deathbound": "Deathbound",
+  "affix.apotheosis:gun/mob_effect/ancient/deathbound.suffix": "of the Witherlord",
 
+  "affix.irons_apothic:gun/spell/fire_arrow": "Flaming",
+  "affix.irons_apothic:gun/spell/fire_arrow.suffix": "of Burning Impact",
+  "affix.irons_apothic:gun/spell/ancient/fire_arrow": "Flaming",
+  "affix.irons_apothic:gun/spell/ancient/fire_arrow.suffix": "of Burning Impact",
+
+  "affix.irons_apothic:gun/spell/magic_arrow": "Void-touched",
+  "affix.irons_apothic:gun/spell/magic_arrow.suffix": "of Ender Marks",
+  "affix.irons_apothic:gun/spell/ancient/magic_arrow": "Void-touched",
+  "affix.irons_apothic:gun/spell/ancient/magic_arrow.suffix": "of Ender Marks",
+
+  "affix.irons_apothic:gun/spell/poison_arrow": "Venomous",
+  "affix.irons_apothic:gun/spell/poison_arrow.suffix": "of Poisoned Volleys",
+  "affix.irons_apothic:gun/spell/ancient/poison_arrow": "Venomous",
+  "affix.irons_apothic:gun/spell/ancient/poison_arrow.suffix": "of Poisoned Volleys",
+
+  "affix.irons_apothic:gun/spell/sunbeam": "Heavenly",
+  "affix.irons_apothic:gun/spell/sunbeam.suffix": "of Sol Invictus",
+  "affix.irons_apothic:gun/spell/ancient/sunbeam": "Heavenly",
+  "affix.irons_apothic:gun/spell/ancient/sunbeam.suffix": "of Sol Invictus",
+
+  "affix.irons_apothic:gun/spell/volley": "Scattering",
+  "affix.irons_apothic:gun/spell/volley.suffix": "of Scattering Shots",
+  "affix.irons_apothic:gun/spell/ancient/volley": "Scattering",
+  "affix.irons_apothic:gun/spell/ancient/volley.suffix": "of Scattering Shots",
+
+  "affix.irons_apothic:gun/spell/missile": "Ballistic",
+  "affix.irons_apothic:gun/spell/missile.suffix": "of Honing",
+  "affix.irons_apothic:gun/spell/ancient/missile": "Ballistic",
+  "affix.irons_apothic:gun/spell/ancient/missile.suffix": "of Honing",
+
+  "affix.irons_apothic:gun/spell/firecracker": "Coruscating",
+  "affix.irons_apothic:gun/spell/firecracker.suffix": "of Fireworks",
+  "affix.irons_apothic:gun/spell/ancient/firecracker": "Coruscating",
+  "affix.irons_apothic:gun/spell/ancient/firecracker.suffix": "of Fireworks",
+
+  "affix.irons_apothic:gun/spell/guided_bolt": "Guided",
+  "affix.irons_apothic:gun/spell/guided_bolt.suffix": "of Holy Power",
+  "affix.irons_apothic:gun/spell/ancient/guided_bolt": "Guided",
+  "affix.irons_apothic:gun/spell/ancient/guided_bolt.suffix": "of Holy Power",
+
+  "affix.irons_apothic:gun/spell/firebolt": "Burning",
+  "affix.irons_apothic:gun/spell/firebolt.suffix": "of the Flame",
+  "affix.irons_apothic:gun/spell/ancient/firebolt": "Burning",
+  "affix.irons_apothic:gun/spell/ancient/firebolt.suffix": "of the Flame",
+
+  "affix.irons_apothic:gun/spell/icicle": "Iced",
+  "affix.irons_apothic:gun/spell/icicle.suffix": "of Frost",
+  "affix.irons_apothic:gun/spell/ancient/icicle": "Iced",
+  "affix.irons_apothic:gun/spell/ancient/icicle.suffix": "of Frost",
+
+  "affix.irons_apothic:gun/spell/chain_lightning": "Electrocuting",
+  "affix.irons_apothic:gun/spell/chain_lightning.suffix": "of the Current",
+  "affix.irons_apothic:gun/spell/ancient/chain_lightning": "Electrocuting",
+  "affix.irons_apothic:gun/spell/ancient/chain_lightning.suffix": "of the Current",
+
+  "affix.irons_apothic:gun/spell/chain_creeper": "Creeping",
+  "affix.irons_apothic:gun/spell/chain_creeper.suffix": "of Explosions",
+  "affix.irons_apothic:gun/spell/ancient/chain_creeper": "Creeping",
+  "affix.irons_apothic:gun/spell/ancient/chain_creeper.suffix": "of Explosions",
+
+  "affix.irons_apothic:gun/spell/root": "Rooted",
+  "affix.irons_apothic:gun/spell/root.suffix": "of the Immovable",
+  "affix.irons_apothic:gun/spell/ancient/root": "Rooted",
+  "affix.irons_apothic:gun/spell/ancient/root.suffix": "of the Immovable",
+
+  "affix.irons_apothic:gun/spell/starfall": "Astral",
+  "affix.irons_apothic:gun/spell/starfall.suffix": "of the Stars",
+  "affix.irons_apothic:gun/spell/ancient/starfall": "Astral",
+  "affix.irons_apothic:gun/spell/ancient/starfall.suffix": "of the Stars",
+
+  "affix.irons_apothic:gun/spell/blizzard": "Arctic",
+  "affix.irons_apothic:gun/spell/blizzard.suffix": "of Cold Winds",
+  "affix.irons_apothic:gun/spell/ancient/blizzard": "Arctic",
+  "affix.irons_apothic:gun/spell/ancient/blizzard.suffix": "of Cold Winds",
+
+  "affix.irons_apothic:gun/spell/lightning_lance": "Electrifying",
+  "affix.irons_apothic:gun/spell/lightning_lance.suffix": "of Lightning",
+  "affix.irons_apothic:gun/spell/ancient/lightning_lance": "Electrifying",
+  "affix.irons_apothic:gun/spell/ancient/lightning_lance.suffix": "of Lightning",
+
+  "affix.irons_apothic:gun/spell/fortify": "Fortified",
+  "affix.irons_apothic:gun/spell/fortify.suffix": "of Resilience",
+  "affix.irons_apothic:gun/spell/ancient/fortify": "Fortified",
+  "affix.irons_apothic:gun/spell/ancient/fortify.suffix": "of Resilience",
+
+  "affix.irons_apothic:gun/spell/shockwave": "Supersonic",
+  "affix.irons_apothic:gun/spell/shockwave.suffix": "of Power",
+  "affix.irons_apothic:gun/spell/ancient/shockwave": "Supersonic",
+  "affix.irons_apothic:gun/spell/ancient/shockwave.suffix": "of Power"
 }
