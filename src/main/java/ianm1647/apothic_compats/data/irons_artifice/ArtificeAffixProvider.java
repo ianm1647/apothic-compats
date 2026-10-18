@@ -36,6 +36,7 @@ import java.util.function.UnaryOperator;
 
 public class ArtificeAffixProvider extends AffixProvider {
     String mod = "irons_artifice";
+    String isa = "irons_apothic";
 
     public ArtificeAffixProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -676,7 +677,7 @@ public class ArtificeAffixProvider extends AffixProvider {
     private void addSpellTriggerAffix(String type, String name, AbstractSpell spell, SpellTriggerAffix.TriggerType trigger, UnaryOperator<SpellTriggerAffix.Builder> config) {
         var builder = new SpellTriggerAffix.Builder(spell, trigger);
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/spell/" + name), builder.build(), new ModLoadedCondition(mod));
+        this.addConditionally(ApothicCompats.loc(type + "/spell/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(isa));
     }
 
     private void addMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
@@ -706,7 +707,7 @@ public class ArtificeAffixProvider extends AffixProvider {
     private void addAncientSpellTriggerAffix(String type, String name, AbstractSpell spell, SpellTriggerAffix.TriggerType trigger, UnaryOperator<SpellTriggerAffix.Builder> config) {
         var builder = new SpellTriggerAffix.Builder(spell, trigger);
         config.apply(builder);
-        this.addConditionally(ApothicCompats.loc(type + "/spell/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(AncientReforging.MODID));
+        this.addConditionally(ApothicCompats.loc(type + "/spell/ancient/" + name), builder.build(), new ModLoadedCondition(mod), new ModLoadedCondition(isa), new ModLoadedCondition(AncientReforging.MODID));
     }
 
     private void addAncientMobEffect(String type, String name, Holder<MobEffect> effect, BulletModifierAffix.Target target, UnaryOperator<BulletModifierAffix.Builder> config) {
