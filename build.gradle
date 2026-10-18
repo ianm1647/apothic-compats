@@ -50,6 +50,8 @@ dependencies {
     implementation "io.redspace:irons_spellbooks:$minecraft_version-$spellbooks_version"
     implementation("dev.muon:irons-apothic:$iss_apoth_version+$minecraft_version")
 
+
+
     implementation "curse.maven:malum-484064:$malum_version"
     implementation "curse.maven:amendments-896746:$amendments_version"
     implementation "curse.maven:supplementaries-412082:$supplementaries_version"
@@ -77,7 +79,6 @@ dependencies {
     implementation "curse.maven:friendsandfoes-602059:$friendsandfoes_version"
     implementation "curse.maven:legendary-monsters-944035:$legendarymonsters_version"
     implementation "curse.maven:opposing-force-1051360:$opposingforce_version"
-    implementation "maven.modrinth:dangerous-mobs:$dangerousmobs_version"
 
     //compat deps
     implementation "curse.maven:sable-1312371:$sable_version"
