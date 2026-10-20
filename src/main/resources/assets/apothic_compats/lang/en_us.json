@@ -1074,6 +1074,16 @@
   "affix.apothic_compats:gun/attribute/ancient/violent": "Violent",
   "affix.apothic_compats:gun/attribute/ancient/violent.suffix": "of Slaying",
 
+  "affix.apothic_compats:gun/attribute/recoiled": "Recoiled",
+  "affix.apothic_compats:gun/attribute/recoiled.suffix": "of Control",
+  "affix.apothic_compats:gun/attribute/ancient/recoiled": "Recoiled",
+  "affix.apothic_compats:gun/attribute/ancient/recoiled.suffix": "of Control",
+
+  "affix.apothic_compats:gun/attribute/expeditious": "Expeditious",
+  "affix.apothic_compats:gun/attribute/expeditious.suffix": "of Fast Hands",
+  "affix.apothic_compats:gun/attribute/ancient/expeditious": "Expeditious",
+  "affix.apothic_compats:gun/attribute/ancient/expeditious.suffix": "of Fast Hands",
+
   "affix.apothic_compats:gun/attribute/elven": "Elven",
   "affix.apothic_compats:gun/attribute/elven.suffix": "of the First Archer",
   "affix.apothic_compats:gun/attribute/ancient/elven": "Elven",
@@ -1218,6 +1228,11 @@
   "affix.apothic_compats:gun/spell/chain_creeper.suffix": "of Explosions",
   "affix.apothic_compats:gun/spell/ancient/chain_creeper": "Creeping",
   "affix.apothic_compats:gun/spell/ancient/chain_creeper.suffix": "of Explosions",
+
+  "affix.apothic_compats:gun/spell/scorch": "Scorched",
+  "affix.apothic_compats:gun/spell/scorch.suffix": "of Embers",
+  "affix.apothic_compats:gun/spell/ancient/scorch": "Scorched",
+  "affix.apothic_compats:gun/spell/ancient/scorch.suffix": "of Embers",
 
   "affix.apothic_compats:gun/spell/root": "Rooted",
   "affix.apothic_compats:gun/spell/root.suffix": "of the Immovable",

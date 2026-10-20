@@ -246,6 +246,26 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 8, 9)
                 .value(mythic, 10, 12));
 
+        this.addAttribute("gun", "recoiled", Comp.Attributes.Artifice.GUN_RECOIL, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(-0.05f)
+                .value(common, -0.1f, -0.2f)
+                .value(uncommon, -0.15f, -0.25f)
+                .value(rare, -0.2f, -0.3f)
+                .value(epic, -0.25f, -0.35f)
+                .value(mythic, -0.3f, -0.4f));
+
+        this.addAttribute("gun", "expeditious", Comp.Attributes.Artifice.RELOAD_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.05f)
+                .value(common, 0.1f, 0.2f)
+                .value(uncommon, 0.15f, 0.25f)
+                .value(rare, 0.2f, 0.3f)
+                .value(epic, 0.25f, 0.35f)
+                .value(mythic, 0.3f, 0.4f));
+
         this.addAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
@@ -551,6 +571,18 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 12, 15));
+
+        this.addAncientAttribute("gun", "recoiled", Comp.Attributes.Artifice.GUN_RECOIL, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(-0.05f)
+                .value(ancient, -0.35f, -0.5f));
+
+        this.addAncientAttribute("gun", "expeditious", Comp.Attributes.Artifice.RELOAD_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.05f)
+                .value(ancient, 0.35f, 0.5f));
 
         this.addAncientAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)

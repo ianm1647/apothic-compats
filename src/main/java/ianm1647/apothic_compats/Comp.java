@@ -47,7 +47,7 @@ public class Comp {
             public static final Holder<Attribute> LEECH =
                     R.attribute("bullet_leech", () -> new RangedAttribute("apothic_compats:bullet_leech", 0.0D, 0.0D, 2048.0D).setSyncable(true));
             public static final Holder<Attribute> GUN_RECOIL =
-                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", 0.0D, 0.0D, 2048.0D).setSyncable(true));
+                    R.attribute("gun_recoil", () -> new RangedAttribute("apothic_compats:gun_recoil", 0.0D, 0.0D, 2048.0D).setSentiment(Attribute.Sentiment.NEGATIVE).setSyncable(true));
 
             public static void bootstrap() {}
         }
