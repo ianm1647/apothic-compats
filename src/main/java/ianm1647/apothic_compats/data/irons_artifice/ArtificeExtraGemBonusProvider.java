@@ -9,6 +9,7 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import dev.shadowsoffire.placebo.util.data.DynamicRegistryProvider;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
+import io.redspace.irons_artifice.registry.IronsArtificeAttributes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
@@ -70,7 +71,7 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
 
         addBonus(Apotheosis.loc("core/lightning"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
-                        .attr(Comp.Attributes.Artifice.GUN_DAMAGE)
+                        .attr(IronsArtificeAttributes.DAMAGE)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                         .value(Purity.CRACKED, 0.05)
                         .value(Purity.CHIPPED, 0.15)
@@ -101,7 +102,7 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
 
         addBonus(Apotheosis.loc("core/warlord"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
-                        .attr(Comp.Attributes.Artifice.GUN_RECOIL)
+                        .attr(IronsArtificeAttributes.CAMERA_RECOIL)
                         .op(AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
                         .value(Purity.CHIPPED, -0.05)
                         .value(Purity.FLAWED, -0.1)
@@ -111,7 +112,7 @@ public class ArtificeExtraGemBonusProvider extends DynamicRegistryProvider<Extra
 
         addBonus(Apotheosis.loc("overworld/earth"), b -> b
                 .bonus(Comp.LootCategories.Artifice.GUN, AttributeBonus.builder()
-                        .attr(Comp.Attributes.Artifice.BULLET_PIERCE)
+                        .attr(IronsArtificeAttributes.PIERCING)
                         .op(AttributeModifier.Operation.ADD_VALUE)
                         .value(Purity.FLAWED, 1)
                         .value(Purity.NORMAL, 2)

@@ -59,7 +59,7 @@
           }
         },
         {
-          "attribute": "apothic_compats:gun_damage",
+          "attribute": "irons_artifice:damage",
           "operation": "add_multiplied_base",
           "value": {
             "min": 0.2,
@@ -111,7 +111,7 @@
           }
         },
         {
-          "attribute": "apothic_compats:gun_damage",
+          "attribute": "irons_artifice:damage",
           "operation": "add_multiplied_base",
           "value": {
             "min": 0.3,
@@ -163,7 +163,7 @@
           }
         },
         {
-          "attribute": "apothic_compats:gun_damage",
+          "attribute": "irons_artifice:damage",
           "operation": "add_multiplied_base",
           "value": {
             "min": 0.45,
@@ -225,7 +225,7 @@
           }
         },
         {
-          "attribute": "apothic_compats:gun_damage",
+          "attribute": "irons_artifice:damage",
           "operation": "add_multiplied_base",
           "value": {
             "min": 0.75,

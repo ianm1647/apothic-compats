@@ -15,7 +15,6 @@ import ianm1647.apothic_compats.data.friendsandfoes.*;
 import ianm1647.apothic_compats.data.irons_artifice.*;
 import ianm1647.apothic_compats.data.undergarden.*;
 import ianm1647.apothic_compats.event.ArtificeAffixEvents;
-import ianm1647.apothic_compats.event.ArtificeAttributeEvents;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -51,9 +50,7 @@ public class ApothicCompats {
         modEventBus.register(this);
 
         if (ModList.get().isLoaded("irons_artifice")) {
-            modEventBus.addListener(ArtificeAttributeEvents::applyAttribs);
             NeoForge.EVENT_BUS.register(new ArtificeAffixEvents());
-            NeoForge.EVENT_BUS.register(new ArtificeAttributeEvents());
         }
     }
 

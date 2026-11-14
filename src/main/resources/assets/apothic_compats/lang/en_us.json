@@ -973,6 +973,16 @@
   "affix.apothic_compats:melee/attribute/ancient/violent": "Violent",
   "affix.apothic_compats:melee/attribute/ancient/violent.suffix": "of Slaying",
 
+  "affix.apothic_compats:gun/attribute/recoiled": "Recoiled",
+  "affix.apothic_compats:gun/attribute/recoiled.suffix": "of Control",
+  "affix.apothic_compats:gun/attribute/ancient/recoiled": "Recoiled",
+  "affix.apothic_compats:gun/attribute/ancient/recoiled.suffix": "of Control",
+
+  "affix.apothic_compats:gun/attribute/expeditious": "Expeditious",
+  "affix.apothic_compats:gun/attribute/expeditious.suffix": "of Fast Hands",
+  "affix.apothic_compats:gun/attribute/ancient/expeditious": "Expeditious",
+  "affix.apothic_compats:gun/attribute/ancient/expeditious.suffix": "of Fast Hands",
+
   "affix.apothic_compats:gun/attribute/elven": "Elven",
   "affix.apothic_compats:gun/attribute/elven.suffix": "of the First Archer",
   "affix.apothic_compats:gun/attribute/ancient/elven": "Elven",

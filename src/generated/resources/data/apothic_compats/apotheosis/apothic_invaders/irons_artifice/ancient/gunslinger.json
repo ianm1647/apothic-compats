@@ -59,7 +59,7 @@
           }
         },
         {
-          "attribute": "apothic_compats:gun_damage",
+          "attribute": "irons_artifice:damage",
           "operation": "add_multiplied_base",
           "value": {
             "min": 0.9,

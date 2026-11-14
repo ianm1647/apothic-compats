@@ -16,6 +16,7 @@ import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import ianm1647.apothic_compats.affix.irons_artifice.*;
+import io.redspace.irons_artifice.registry.IronsArtificeAttributes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -53,7 +54,7 @@ public class ArtificeAffixProvider extends AffixProvider {
         LootRarity mythic = rarity("mythic");
         LootRarity ancient = ancientRarity("ancient");
 
-        this.addAttribute("gun", "murderous", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAttribute("gun", "murderous", IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(common, 0.05F, 0.1F)
@@ -62,7 +63,7 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(epic, 0.35F,  0.4F)
                 .value(mythic, 0.45F, 0.5F));
 
-        this.addAttribute("gun", "violent", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAttribute("gun", "violent", IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(common, 2, 3)
@@ -70,6 +71,26 @@ public class ArtificeAffixProvider extends AffixProvider {
                 .value(rare, 6, 7)
                 .value(epic, 8, 9)
                 .value(mythic, 10, 12));
+
+        this.addAttribute("gun", "recoiled", IronsArtificeAttributes.CAMERA_RECOIL, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(-0.05f)
+                .value(common, -0.1f, -0.2f)
+                .value(uncommon, -0.15f, -0.25f)
+                .value(rare, -0.2f, -0.3f)
+                .value(epic, -0.25f, -0.35f)
+                .value(mythic, -0.3f, -0.4f));
+
+        this.addAttribute("gun", "expeditious", IronsArtificeAttributes.RELOAD_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.05f)
+                .value(common, 0.1f, 0.2f)
+                .value(uncommon, 0.15f, 0.25f)
+                .value(rare, 0.2f, 0.3f)
+                .value(epic, 0.25f, 0.35f)
+                .value(mythic, 0.3f, 0.4f));
 
         this.addAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
@@ -212,15 +233,27 @@ public class ArtificeAffixProvider extends AffixProvider {
                         .build(),
                 linkedSet(mythic)), new ModLoadedCondition(mod));
 
-        this.addAncientAttribute("gun", "murderous", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
+        this.addAncientAttribute("gun", "murderous", IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 0.6F, 0.75F));
 
-        this.addAncientAttribute("gun", "violent", Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
+        this.addAncientAttribute("gun", "violent", IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_VALUE, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
                 .categories(Comp.LootCategories.Artifice.GUN)
                 .value(ancient, 12, 15));
+
+        this.addAncientAttribute("gun", "recoiled", IronsArtificeAttributes.CAMERA_RECOIL, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(-0.05f)
+                .value(ancient, -0.35f, -0.5f));
+
+        this.addAncientAttribute("gun", "expeditious", IronsArtificeAttributes.RELOAD_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
+                .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
+                .categories(Comp.LootCategories.Artifice.GUN)
+                .step(0.05f)
+                .value(ancient, 0.35f, 0.5f));
 
         this.addAncientAttribute("gun", "experienced", ALObjects.Attributes.EXPERIENCE_GAINED, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, b -> b
                 .definition(AffixType.STAT, DEFAULT_WEIGHT, DEFAULT_QUALITY)
