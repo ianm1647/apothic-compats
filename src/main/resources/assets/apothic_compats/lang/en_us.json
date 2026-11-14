@@ -963,15 +963,15 @@
   "affix.apothic_compats:gun/ancient/multishot.suffix": "of Multiplied Bullets",
   "affix.apothic_compats:gun/ancient/multishot.desc": "Your gun shoots %s extra bullets.",
 
-  "affix.apothic_compats:melee/attribute/murderous": "Murderous",
-  "affix.apothic_compats:melee/attribute/murderous.suffix": "of the Minotaur",
-  "affix.apothic_compats:melee/attribute/ancient/murderous": "Murderous",
-  "affix.apothic_compats:melee/attribute/ancient/murderous.suffix": "of the Minotaur",
+  "affix.apothic_compats:gun/attribute/murderous": "Murderous",
+  "affix.apothic_compats:gun/attribute/murderous.suffix": "of the Minotaur",
+  "affix.apothic_compats:gun/attribute/ancient/murderous": "Murderous",
+  "affix.apothic_compats:gun/attribute/ancient/murderous.suffix": "of the Minotaur",
 
-  "affix.apothic_compats:melee/attribute/violent": "Violent",
-  "affix.apothic_compats:melee/attribute/violent.suffix": "of Slaying",
-  "affix.apothic_compats:melee/attribute/ancient/violent": "Violent",
-  "affix.apothic_compats:melee/attribute/ancient/violent.suffix": "of Slaying",
+  "affix.apothic_compats:gun/attribute/violent": "Violent",
+  "affix.apothic_compats:gun/attribute/violent.suffix": "of Slaying",
+  "affix.apothic_compats:gun/attribute/ancient/violent": "Violent",
+  "affix.apothic_compats:gun/attribute/ancient/violent.suffix": "of Slaying",
 
   "affix.apothic_compats:gun/attribute/recoiled": "Recoiled",
   "affix.apothic_compats:gun/attribute/recoiled.suffix": "of Control",
