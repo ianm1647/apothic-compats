@@ -10,7 +10,7 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "apothic_compats:gun_damage",
+            "attribute": "irons_artifice:damage",
             "gem_class": "apothic_compats:gun",
             "operation": "add_multiplied_total",
             "values": {

@@ -10,7 +10,7 @@
         }
     ],
     "type": "apotheosis:attribute",
-    "attribute": "apothic_compats:gun_recoil",
+    "attribute": "irons_artifice:camera_recoil_multiplier",
     "categories": [
         "apothic_compats:gun"
     ],

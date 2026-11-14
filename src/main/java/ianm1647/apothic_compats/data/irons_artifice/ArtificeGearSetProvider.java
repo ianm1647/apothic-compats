@@ -2,7 +2,7 @@ package ianm1647.apothic_compats.data.irons_artifice;
 
 import dev.shadowsoffire.apotheosis.data.GearSetProvider;
 import ianm1647.apothic_compats.ApothicCompats;
-import io.redspace.irons_artifice.registry.ItemRegistry;
+import io.redspace.irons_artifice.registry.IronsArtificeItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -35,13 +35,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
 
         // Haven Sets
         addSet("haven/irons_artifice/gun_chainmail", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(new ItemStack(Items.CHAINMAIL_HELMET), 10)
                 .chestplate(new ItemStack(Items.CHAINMAIL_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.CHAINMAIL_LEGGINGS), 10)
@@ -49,13 +49,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .tag("haven_ranged").tag("haven_melee").tag("haven_gun"));
 
         addSet("haven/irons_artifice/gun_iron", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(new ItemStack(Items.IRON_HELMET), 10)
                 .chestplate(new ItemStack(Items.IRON_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.IRON_LEGGINGS), 10)
@@ -64,13 +64,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
 
         // Frontier Sets
         addSet("frontier/irons_artifice/gun_iron", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(new ItemStack(Items.IRON_HELMET), 10)
                 .chestplate(new ItemStack(Items.IRON_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.IRON_LEGGINGS), 10)
@@ -78,13 +78,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .tag("frontier_ranged").tag("frontier_melee").tag("frontier_gun"));
 
         addSet("frontier/irons_artifice/gun_gold", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(buffedGoldItem(Items.GOLDEN_HELMET, enchants), 10)
                 .chestplate(buffedGoldItem(Items.GOLDEN_CHESTPLATE, enchants), 10)
                 .leggings(buffedGoldItem(Items.GOLDEN_LEGGINGS, enchants), 10)
@@ -93,13 +93,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
 
         // Ascent Sets
         addSet("ascent/irons_artifice/gun_iron", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(buffedItem(Items.IRON_HELMET, enchants, 1F), 10)
                 .chestplate(buffedItem(Items.IRON_CHESTPLATE, enchants, 1F), 10)
                 .leggings(buffedItem(Items.IRON_LEGGINGS, enchants, 1F), 10)
@@ -107,13 +107,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .tag("ascent_ranged").tag("ascent_melee").tag("ascent_gun"));
 
         addSet("ascent/irons_artifice/gun_gold", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(buffedGoldItem(Items.GOLDEN_HELMET, enchants), 10)
                 .chestplate(buffedGoldItem(Items.GOLDEN_CHESTPLATE, enchants), 10)
                 .leggings(buffedGoldItem(Items.GOLDEN_LEGGINGS, enchants), 10)
@@ -121,13 +121,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .tag("ascent_ranged").tag("ascent_melee").tag("ascent_gun"));
 
         addSet("ascent/irons_artifice/gun_diamond", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(new ItemStack(Items.DIAMOND_HELMET), 10)
                 .chestplate(new ItemStack(Items.DIAMOND_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.DIAMOND_LEGGINGS), 10)
@@ -136,13 +136,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
 
         //Summit Sets
         addSet("summit/irons_artifice/gun_diamond", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(buffedItem(Items.DIAMOND_HELMET, enchants, 1F), 10)
                 .chestplate(buffedItem(Items.DIAMOND_CHESTPLATE, enchants, 1F), 10)
                 .leggings(buffedItem(Items.DIAMOND_LEGGINGS, enchants, 1F), 10)
@@ -150,13 +150,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .tag("summit_ranged").tag("summit_melee").tag("summit_gun"));
 
         addSet("summit/irons_artifice/gun_netherite", 25, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(new ItemStack(Items.NETHERITE_HELMET), 10)
                 .chestplate(new ItemStack(Items.NETHERITE_CHESTPLATE), 10)
                 .leggings(new ItemStack(Items.NETHERITE_LEGGINGS), 10)
@@ -165,13 +165,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
 
         //Pinnacle Sets
         addSet("pinnacle/irons_artifice/gun_diamond", 100, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(buffedItem(Items.DIAMOND_HELMET, enchants, 1F), 10)
                 .chestplate(buffedItem(Items.DIAMOND_CHESTPLATE, enchants, 1F), 10)
                 .leggings(buffedItem(Items.DIAMOND_LEGGINGS, enchants, 1F), 10)
@@ -179,13 +179,13 @@ public class ArtificeGearSetProvider extends GearSetProvider {
                 .tag("pinnacle_ranged").tag("pinnacle_melee").tag("pinnacle_gun"));
 
         addSet("pinnacle/irons_artifice/gun_netherite", 100, 0, c -> c
-                .mainhand(new ItemStack(ItemRegistry.FLINTLOCK_PISTOL.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.MUSKET.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLUNDERBUSS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.BLACKPOWDER_REVOLVER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.SIX_SHOOTER.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.ARQUEBUS.get()), 10)
-                .mainhand(new ItemStack(ItemRegistry.CLOCKWORK_RIFLE.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.FLINTLOCK_PISTOL.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.MUSKET.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLUNDERBUSS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.BLACKPOWDER_REVOLVER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.SIX_SHOOTER.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.ARQUEBUS.get()), 10)
+                .mainhand(new ItemStack(IronsArtificeItems.CLOCKWORK_RIFLE.get()), 10)
                 .helmet(buffedItem(Items.NETHERITE_HELMET, enchants, 2F), 10)
                 .chestplate(buffedItem(Items.NETHERITE_CHESTPLATE, enchants, 2F), 10)
                 .leggings(buffedItem(Items.NETHERITE_LEGGINGS, enchants, 2F), 10)

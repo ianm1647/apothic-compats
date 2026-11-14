@@ -14,6 +14,8 @@ import ianm1647.ancientreforging.AncientReforging;
 import ianm1647.apothic_compats.ApothicCompats;
 import ianm1647.apothic_compats.Comp;
 import io.redspace.irons_artifice.registry.EntityRegistry;
+import io.redspace.irons_artifice.registry.IronsArtificeAttributes;
+import io.redspace.irons_artifice.registry.IronsArtificeEntities;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
@@ -42,7 +44,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
     @Override
     public void generate() {
         addBoss("gunslinger", b -> basicGunStats(b)
-                .entity(EntityRegistry.GUNSLINGER.get())
+                .entity(IronsArtificeEntities.GUNSLINGER.get())
                 .basicData(c -> gunGear(c)
                         .name(Component.literal(BasicBossData.NAME_GEN))
                         .weights(TieredWeights.forTiersAbove(WorldTier.ASCENT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
@@ -50,7 +52,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
 
         addBoss("illificer", b -> basicGunStats(b)
-                .entity(EntityRegistry.ILLIFICER.get())
+                .entity(IronsArtificeEntities.ILLIFICER.get())
                 .basicData(c -> gunGear(c)
                         .name(Component.literal(BasicBossData.NAME_GEN))
                         .weights(TieredWeights.forTiersAbove(WorldTier.SUMMIT, DEFAULT_WEIGHT, DEFAULT_QUALITY))
@@ -60,7 +62,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
         //TODO: ANCIENT
 
         addAncientBoss("gunslinger", b -> ancientGunStats(b)
-                .entity(EntityRegistry.GUNSLINGER.get())
+                .entity(IronsArtificeEntities.GUNSLINGER.get())
                 .basicData(c -> gunGear(c)
                         .name(Component.literal(BasicBossData.NAME_GEN))
                         .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
@@ -68,7 +70,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .bonusLoot(Apoth.LootTables.BONUS_BOSS_DROPS, Apoth.LootTables.BONUS_RARE_BOSS_DROPS)));
 
         addAncientBoss("illificer", b -> ancientGunStats(b)
-                .entity(EntityRegistry.ILLIFICER.get())
+                .entity(IronsArtificeEntities.ILLIFICER.get())
                 .basicData(c -> gunGear(c)
                         .name(Component.literal(BasicBossData.NAME_GEN))
                         .weights(TieredWeights.forTiersAbove(WorldTier.PINNACLE, 10, DEFAULT_QUALITY))
@@ -89,7 +91,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .effect(1, MobEffects.FIRE_RESISTANCE)
                         .modifier(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, 20, 50)
                         .modifier(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.05F, 0.10F)
-                        .modifier(Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.2F, 0.4F)
+                        .modifier(IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.2F, 0.4F)
                         .modifier(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(0.25F))
                         .modifier(Attributes.SCALE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, -0.15F, 0.25F))
                 .stats(rare, c -> c
@@ -98,7 +100,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .effect(1, MobEffects.FIRE_RESISTANCE)
                         .modifier(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, 45, 70)
                         .modifier(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.15F, 0.25F)
-                        .modifier(Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.3F, 0.55F)
+                        .modifier(IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.3F, 0.55F)
                         .modifier(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(0.4F))
                         .modifier(Attributes.SCALE, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, -0.15F, 0.25F))
                 .stats(epic, c -> c
@@ -107,7 +109,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .effect(1, MobEffects.FIRE_RESISTANCE)
                         .modifier(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, 95, 120)
                         .modifier(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.25F, 0.40F)
-                        .modifier(Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.45F, 0.65F)
+                        .modifier(IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.45F, 0.65F)
                         .modifier(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(0.5F))
                         .modifier(Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(4F))
                         .modifier(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(10F))
@@ -118,7 +120,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .effect(1, MobEffects.FIRE_RESISTANCE)
                         .modifier(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, 125, 150)
                         .modifier(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.3F, 0.65F)
-                        .modifier(Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.75F, 1.2F)
+                        .modifier(IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.75F, 1.2F)
                         .modifier(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(0.8F))
                         .modifier(Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(10F))
                         .modifier(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(20F))
@@ -134,7 +136,7 @@ public class ArtificeInvaderProvider extends InvaderProvider {
                         .effect(1, MobEffects.FIRE_RESISTANCE)
                         .modifier(Attributes.MAX_HEALTH, AttributeModifier.Operation.ADD_VALUE, 220, 450)
                         .modifier(Attributes.MOVEMENT_SPEED, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.5F, 0.8F)
-                        .modifier(Comp.Attributes.Artifice.GUN_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.9F, 1.8F)
+                        .modifier(IronsArtificeAttributes.DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, 0.9F, 1.8F)
                         .modifier(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(1F))
                         .modifier(Attributes.ARMOR, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(20F))
                         .modifier(Attributes.ARMOR_TOUGHNESS, AttributeModifier.Operation.ADD_VALUE, StepFunction.constant(25F))

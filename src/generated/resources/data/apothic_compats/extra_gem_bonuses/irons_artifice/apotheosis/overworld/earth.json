@@ -10,7 +10,7 @@
     "bonuses": [
         {
             "type": "apotheosis:attribute",
-            "attribute": "apothic_compats:bullet_pierce",
+            "attribute": "irons_artifice:piercing",
             "gem_class": "apothic_compats:gun",
             "operation": "add_value",
             "values": {

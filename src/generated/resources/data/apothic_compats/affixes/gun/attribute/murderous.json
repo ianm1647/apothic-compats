@@ -6,7 +6,7 @@
         }
     ],
     "type": "apotheosis:attribute",
-    "attribute": "apothic_compats:gun_damage",
+    "attribute": "irons_artifice:damage",
     "categories": [
         "apothic_compats:gun"
     ],

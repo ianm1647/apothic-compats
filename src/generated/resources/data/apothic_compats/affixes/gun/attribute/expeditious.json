@@ -6,7 +6,7 @@
         }
     ],
     "type": "apotheosis:attribute",
-    "attribute": "apothic_compats:reload_speed",
+    "attribute": "irons_artifice:reload_speed_multiplier",
     "categories": [
         "apothic_compats:gun"
     ],
